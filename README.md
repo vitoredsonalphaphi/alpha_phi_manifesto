@@ -1,6 +1,8 @@
 # alpha_phi_manifesto
 alpha_phi_manifesto philosophical_technical AI Alignment Protocol. Vitor Edson Florianópolis  2026
-  Aqui está o texto limpo para copiar e colar diretamente no GitHub — sem tradução automática:
+
+
+
 # 🏛️ Manifesto Alpha-Phi — Notebooks de Verificação
 **Vitor Edson Delavi · Florianópolis · 2026**
 
