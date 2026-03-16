@@ -1,4 +1,7 @@
-
+# NOTA: Este é o protótipo original — versão histórica.
+# Seed fixo np.random.seed(137) — substituído por seeds aleatórios.
+# Versão corrigida: AlphaPhi_Original_RobustezEstrutura.ipynb
+# Vitor Edson Delavi · Florianópolis · 2026
 """
 ALPHA PHI — Protótipo Experimental
 Vitor Edson · Florianópolis · 2026
