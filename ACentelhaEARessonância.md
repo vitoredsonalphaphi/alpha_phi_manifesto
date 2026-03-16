@@ -1,4 +1,4 @@
-
+A Centelha,  A Senha,  e a 
 Ressonância — Sobre a Vibração que Precede Toda Ideia
 Vitor Edson Delavi · Florianópolis · 2026
 I. A Centelha
