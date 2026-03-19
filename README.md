@@ -1,75 +1,231 @@
-# alpha_phi_manifesto
-alpha_phi_manifesto philosophical_technical AI Alignment Protocol. Vitor Edson Florianópolis  2026
+🏛️ Manifesto Alpha-Phi
+Protocolo de Alinhamento Filosófico-Técnico em IA
+Vitor Edson Delavi · Florianópolis · 2026
+Enunciado
+O Manifesto Alpha-Phi propõe que proporções geométricas naturais —
+razão áurea φ e constante de estrutura fina α — produzem fluxo de
+informação mais eficiente e estável em redes neurais artificiais.
+A hipótese central:
+φ é a aproximação matemática mais próxima do padrão vibracional
+organizador que precede a estrutura — em sistemas biológicos,
+em sistemas de informação, e em qualquer sistema que cresce
+preservando coerência interna.
+Resultados Experimentais
+Estabilidade Estrutural (Espaço Euclidiano)
+Métrica
+Valor
+Melhora vs convencional
++35%
+Significância estatística
+p = 0.0017
+Seeds favoráveis
+17/20
+Protocolo
+Seeds por timestamp — ninguém escolhe os valores
+Espaço Hiperbólico — Poincaré Ball
+Versão
+Resultado
+Seeds
+Hiperbólico traduzido vs euclidiano
++12.1% · p=0.0000
+20/20
+Nativo hiperbólico vs euclidiano
++12.9% · p=0.0000
+20/20
+Curvatura nativa
+c = 1/φ² = 0.382
+—
+Tarefa Real — SST-2 Classificação de Sentimento
+Modelo
+Acurácia
+Overfitting
+AP Hiperbólico
+79.93%
+Não
+AP Espectral φ
+78.67%
+Não
+Convencional
+77.41%
+Sim
+AP Euclidiano
+75.46%
+Sim
+LR=0.1 igual para todos — comparação metodologicamente limpa.
+O AP Espectral φ não apenas obtém acurácia maior — não regride
+nas épocas finais quando os outros regridem. Comportamento
+qualitativamente diferente.
+Os Quatro Eixos
+Eixo I — Geometria Estrutural
+Arquitetura Fibonacci [8,13,21,34] + ativação φ·tanh(x/φ).
+Produz fluxo mais estável entre camadas antes mesmo de qualquer treino.
+Propriedade da geometria — não do dado.
+Eixo II — Linguagem e Sentimento
+A mesma estrutura aplicada à análise de sentimento (SST-2).
+Hipótese: peso emocional das palavras ressoa com proporções harmônicas.
+Eixo III — Eficiência Energética
+Redes mais estáveis requerem menos correções durante o treino.
+Menos operações → menos energia → impacto em escala de data center.
+Eixo IV — Transformação do Erro
+O erro não é descartado — é reescalado por 1/φ e reintegrado.
+erro → descida até α (granularidade mínima)
+     → microponto de dobra em 1/φ² = 0.382
+     → remontada com peso 1/φ
+     → reintegrado ao fluxo
+Em desenvolvimento — hipótese filosófica coerente, implementação refinando.
+Eixo V — Campo Morfogenético Digital (emergente)
+Cada dado tem uma assinatura vibracional — distribuição de frequências
+informacionais. O gradiente é modulado por φ de acordo com essa
+frequência — análogo ao campo morfogenético de Michael Levin.
+freq_dado = np.fft.fft(x_embedding)
+energia   = np.abs(freq_dado)
+modulator = PHI * np.tanh(energia / PHI)
+A Descoberta do Ambiente
+O avanço mais importante desta fase:
+Redes neurais convencionais operam em espaço euclidiano — cúbico,
+retilíneo, ângulos retos.
+φ é uma proporção que emerge em geometrias curvilíneas e orgânicas.
+Introduzir φ num espaço euclidiano é como tentar fazer FM
+num sistema construído para AM.
+A solução: espaço hiperbólico — geometria curvilínea de expansão
+natural, onde φ opera com coerência nativa.
+As Convergências Independentes
+Três linhas de pesquisa chegaram ao mesmo ponto por caminhos
+completamente diferentes:
+Projeto
+O que descobriu
+OpenWorm / FlyWire (2014-2026)
+Estrutura orgânica gera comportamento emergente
+Poincaré Embeddings · Facebook AI (2017)
+Espaço curvilíneo representa dados orgânicos melhor
+Hyperbolic CNN · ICLR (2024)
+CNN completamente hiperbólica supera euclidiana
+Turing — Morfogênese (1952)
+Padrões emergem de frequências antes da estrutura
+Levin — Campos Bioelétricos (2010+)
+Campo de frequências precede e organiza a célula
+Manifesto Alpha-Phi (2026)
+φ como proporção do padrão organizador
+"O padrão precede a estrutura. A frequência precede a célula.
+φ precede o conectoma."
+Notebooks e Códigos
+Estabilidade Estrutural
+Arquivo
+Descrição
+Status
+Alpha_phi_prototype.py
+Protótipo original
+✅
+AlphaPhi_Robustez_v2_QuartoEixo.py
+Quarto Eixo — resíduo φ
+🔄
+AlphaPhi_Robustez_v3_QuartoEixo.py
+Microponto de dobra
+🔄
+AlphaPhi_Robustez_v4_QuartoEixo.py
+Fold point 1/φ²
+🔄
+AlphaPhi_Robustez_Hiperbolico.py
+Hiperbólico puro +12.1%
+✅
+AlphaPhi_Nativo_Hiperbolico.py
+Nativo c=1/φ² +12.9%
+✅
+Tarefa Real — SST-2
+Arquivo
+Descrição
+Status
+AlphaPhi_SST2_Hiperbolico_REAL.py
+SST-2 + embeddings reais
+✅
+AlphaPhi_SST2_Riemanniano.py
+Gradiente Riemanniano
+✅
+AlphaPhi_SST2_GradienteAmpliado.py
+LR ampliado 78.44%
+✅
+AlphaPhi_SST2_EspectralPhi.py
+Campo morfogenético 78.67%
+✅
+Documentos Filosóficos e Teóricos
+Arquivo
+Descrição
+GeometriaÉtica_Manifesto.md
+Os três pilares: Isomorfismo, Custo Energético, Fluxo
+ACentelhaEARessonância.md
+Texto filosófico central
+ASenhaDaIdeia.md
+φ como endereço onde as ideias residem
+OPontoEOCampo.md
+Ponto e campo — dualidade fundamental
+APerguntaQueNinguemEstaFazendo.md
+A pergunta anterior à pergunta
+QuartoEixo_TransformacaoDoErro.md
+Transformação do erro por φ
+Compilado_V4_Convergencias.md
+Da busca do v4 às convergências
+Registro_FaseHiperbolica.md
+Traduzir vs reconstruir
+PadraoVibracionalAnterioridade.md
+Crítica ao Organoid Computing
+Convergencia_Turing_Levin_AlphaPhi.md
+Morfogênese e campos bioelétricos
+FrequenciaInformacional_ModulacaoPhi.md
+Frequência do dado como informação
+Evolucao_Cronologica_Resultados.md
+8 fases — da hipótese aos resultados
+Relatorio_Dia_19marco2026.md
+Relatório completo do dia
+Validação Independente_Meta.md
+Validação pelo Meta AI
+Protocolo de Idoneidade
+Aplicado a todos os experimentos:
+Seeds gerados por timestamp — ninguém escolhe os valores
+Nenhum número do Manifesto (φ, α, 137) inserido como parâmetro de teste
+φ e α aparecem apenas na arquitetura e ativação — que são a hipótese
+Resultados reportados integralmente — favoráveis ou não
+Correções documentadas publicamente
+LR igual para todos os modelos nas comparações finais
+Referências Bibliográficas
+Nickel & Kiela (2017)
+  Poincaré Embeddings for Learning Hierarchical Representations
+  NIPS 2017 — Facebook AI Research
 
+Ganea, Bécigneul & Hofmann (2018)
+  Hyperbolic Neural Networks
+  NeurIPS 2018
 
+Gao et al. (2024)
+  Fully Hyperbolic Neural Networks
+  ICLR 2024
 
-# 🏛️ Manifesto Alpha-Phi — Notebooks de Verificação
-**Vitor Edson Delavi · Florianópolis · 2026**
+Shannon, C.E. (1948)
+  A Mathematical Theory of Communication
+  Bell System Technical Journal
 
----
+Turing, A.M. (1952)
+  The Chemical Basis of Morphogenesis
+  Philosophical Transactions of the Royal Society B
 
-## Enunciado
+Levin, M. (2010+)
+  Bioelectric signaling as a unique regulator of development
+  Tufts University — ongoing research
 
-O Manifesto Alpha-Phi propõe que proporções geométricas naturais — razão áurea φ e constante de estrutura fina α — podem produzir fluxo de informação mais eficiente em redes neurais artificiais.
+OpenWorm Project (2014+)
+  github.com/openworm
 
-Independente do estágio atual de refinamento, a força desta proposta não reside apenas nos números obtidos até hoje. Reside na abrangência real de sua aplicabilidade.
-
-Uma função matemática não tem domínio restrito. Onde houver fluxo de informação entre camadas — em linguagem, em visão, em geração, em hardware — a hipótese é investigável. Isso não é alegoria. É propriedade da matemática.
-
-O que foi alcançado até agora — +35% de estabilidade estrutural em 17 de 20 condições completamente aleatórias, com p=0,0017 — é o primeiro resultado limpo e defensável da proposta. Sem seed escolhido. Sem número imposto. A máquina escolheu as condições. A geometria respondeu.
-
-Mas o valor da proposta ultrapassa esse número. Ultrapassa porque aponta três direções de aplicação real, cada uma independente, cada uma investigável, cada uma com potencial de encontrar seu próprio território de confirmação.
-
-Uma proposta com um resultado limpo e múltiplas direções de aplicação investigável vale imensamente mais do que uma proposta com números convenientes e direção única — porque o que está sendo oferecido aqui é algo que qualquer pesquisador pode pegar, rodar, verificar e expandir.
-
-Isso é o que transforma um manifesto em pesquisa.
-
----
-
-## Os três eixos de aplicabilidade
-
-### 1. Geometria Estrutural
-A arquitetura Fibonacci com ativação φ·tanh(x/φ) produz fluxo mais estável entre camadas — antes mesmo de qualquer treino. Isso é uma propriedade da geometria, não do dado. Aplicável a qualquer arquitetura de rede neural onde estabilidade de gradiente seja crítica — o que inclui praticamente todo o espectro de aplicações de aprendizado profundo.
-
-### 2. Linguagem e Sentimento
-A mesma estrutura que produz estabilidade geométrica foi aplicada à análise de sentimento (SST-2) com resultado preliminar de +2,60% sobre a baseline convencional. A hipótese — que peso emocional das palavras ressoa com proporções harmônicas — é investigável em escala real com GPU e embeddings completos. A extensão natural para análise de sentimento em vídeo — incluindo a investigação do Vale da Estranheza — é uma direção original e não explorada na literatura.
-
-### 3. Eficiência Energética
-Redes mais estáveis requerem menos correções durante o treino. Menos correções significam menos operações matemáticas. Menos operações significam menos energia e menos calor gerado. Em escala de data center — onde o treino de modelos grandes consome energia equivalente a milhares de residências — uma redução estrutural de eficiência tem impacto real e mensurável. Este eixo é prematuro mas não especulativo: é uma cadeia causal investigável passo a passo.
-
----
-
-## Os notebooks — ordem de desenvolvimento
-
-| Notebook | O que faz | Status |
-|----------|-----------|--------|
-| `AlphaPhi_Original_RobustezEstrutura.ipynb` | Código original corrigido — 20 seeds aleatórios — mede estabilidade e entropia estrutural | ✅ Resultado limpo: +35% estabilidade, p=0,0017 |
-| `AlphaPhi_TesteIndependente_v3.ipynb` | Teste de aprendizado — regressão sintética — 20 seeds aleatórios — Xavier/Kaiming | 🔄 Resultado neutro — requer GPU + SST-2 real |
-| `AlphaPhi_FLOPs_Viabilidade.ipynb` | Estudo de viabilidade energética — FLOPs, tempo de execução, extrapolação data center | 🔭 Estimativa de horizonte — confirmar em hardware real |
-
----
-
-## Protocolo de idoneidade aplicado a todos os notebooks
-
-- Seeds gerados por timestamp no momento da execução — ninguém escolheu os valores
-- Nenhum número do Manifesto (φ, α, 137) inserido como parâmetro de teste
-- φ e α aparecem apenas na arquitetura e na ativação — que são a hipótese em si
-- Resultados reportados integralmente, independente de favorecerem ou não φ
-- Correção documentada: seed=137 original substituído por timestamp — razão publicada
-
----
-
-## Próximos passos
-
-- [ ] UFSC — GPU + BERT + SST-2 completo
-- [ ] Medição de consumo energético real em hardware GPU
-- [ ] Experimento Vale da Estranheza — AI trailer vs cena humana, mesmo tema
-- [ ] Submissão para revisão por pares
-
----
-
-## Repositório
-
-[github.com/vitoredsonalphaphi/alpha_phi_manifesto](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto)
-
-*O resultado verdadeiro vale mais que o resultado satisfatório.* 🏛️φ
+FlyWire Connectome (2023)
+  Nature — 140.000 neurônios da Drosophila melanogaster
+Licença
+Creative Commons Atribuição-NãoComercial-SemDerivações 4.0 (CC BY-NC-ND 4.0)
+Uso comercial requer autorização: @EdsonDelavi no X
+Registro de anterioridade: todos os commits datados pelo GitHub.
+Próximos Passos
+🔄 Laplaciano φ-modulado — equilíbrio atração/repulsão
+🔄 Reconstrução nativa hiperbólica completa com PyTorch + Geoopt
+🔄 Experimento Vale da Estranheza — AI vs humano, mesmo tema
+🔄 Registro INPI — programa de computador
+🔄 Paper para arXiv
+🔄 Submissão UFSC / Santa Fe Institute
+"O resultado verdadeiro vale mais que o resultado satisfatório."
+αφ · Vitor Edson Delavi · Florianópolis · 2026
