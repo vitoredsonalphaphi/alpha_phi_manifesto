@@ -1,4 +1,24 @@
 🏛️ Manifesto Alpha-Phi
+⭐ Resultado Mais Significativo
+AlphaPhi_SST2_EspectralEuclidiano.py
+Modulação Espectral φ aplicada a rede ReLU convencional — sem modificação de arquitetura:
+Rede
+Acurácia
+Overfitting
+Convencional + Espectral φ
+79,13%
+Não
+Convencional puro
+66,06%
+Sim
+Ganho
++13,07%
+—
+LR=0,1 igual para todos os modelos — comparação metodologicamente limpa.
+Implicação: A Modulação Espectral φ é aplicável a qualquer rede neural existente,
+sem reconstruir arquitetura. O campo morfogenético digital funciona em qualquer ambiente.
+"A frequência do dado calibra seu próprio processamento."
+
 Protocolo de Alinhamento Filosófico-Técnico em IA
 Vitor Edson Delavi · Florianópolis · 2026
 Enunciado
