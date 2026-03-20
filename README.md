@@ -17,7 +17,7 @@ Ganho
 LR=0,1 igual para todos os modelos — comparação metodologicamente limpa.
 Implicação: A Modulação Espectral φ é aplicável a qualquer rede neural existente,
 sem reconstruir arquitetura. O campo morfogenético digital funciona em qualquer ambiente.
-"A frequência do dado calibra seu próprio processamento."
+"A frequência do dado calibra seu próprio processamento." (em verificação)
 
 Protocolo de Alinhamento Filosófico-Técnico em IA
 Vitor Edson Delavi · Florianópolis · 2026
