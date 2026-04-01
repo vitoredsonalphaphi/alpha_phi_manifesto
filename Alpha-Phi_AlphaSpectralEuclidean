@@ -1,0 +1,365 @@
+# ALPHA PHI — AlphaSpectralEuclidean
+# Vitor Edson Delavi · Florianópolis · 2026
+#
+# INTEGRAÇÃO: MiniMax + Claude + Alpha-Phi
+#
+# As três correções integradas:
+# 1. Fase incluída — α como trajetória da intenção
+# 2. Modulação per-sample — vetorial, não scalar
+# 3. α como operador ativo — não apenas referência
+#
+# "α é a fase. Sem ela, o diapasão está surdo."
+# — MiniMax · 2026
+#
+# "Refinar o medidor de α."
+# — Vitor Edson Delavi · 2026
+
+!pip install sentence-transformers datasets -q
+
+import numpy as np
+import matplotlib.pyplot as plt
+import time
+from sentence_transformers import SentenceTransformer
+from datasets import load_dataset
+from scipy.stats import ttest_ind
+
+PHI   = (1 + np.sqrt(5)) / 2
+ALPHA = 1 / 137.035999084
+
+print(f"phi   = {PHI:.10f}")
+print(f"alpha = {ALPHA:.10f}")
+print("=" * 65)
+print("ALPHA PHI — AlphaSpectralEuclidean")
+print("α como Trajetória · φ como Proporção · Per-Sample Vetorial")
+print("=" * 65)
+
+# ── AlphaSpectralEuclidean — O Modulador Completo ────────────────────────
+class AlphaSpectralEuclidean:
+    """
+    Espectral Euclidiano guiado por Alpha-Phi.
+    
+    α (intenção) opera no domínio da FASE — a trajetória
+    φ (proporção) opera no domínio da AMPLITUDE — a presença
+    f(α) conecta ambos — frequência que carrega intenção
+    
+    Modulação PER-SAMPLE — cada dado tem sua própria assinatura.
+    α como OPERADOR ATIVO — não apenas referência conceitual.
+    """
+    
+    def __init__(self, phi=PHI, alpha=ALPHA):
+        self.phi   = phi
+        self.alpha = alpha
+    
+    def extrair_assinatura(self, x):
+        """
+        Extrai a assinatura vibracional completa de cada amostra.
+        
+        x: (batch, dim)
+        returns: (batch, 1) — modulador per-sample
+        """
+        # FFT completa — preserva amplitude E fase
+        freq = np.fft.fft(x, axis=-1)
+        
+        # AMPLITUDE — φ como proporção
+        amplitude = np.abs(freq)
+        amp_norm  = amplitude / (amplitude.sum(axis=-1, keepdims=True) + 1e-8)
+        entropia  = -np.sum(amp_norm * np.log(amp_norm + 1e-8), axis=-1, keepdims=True)
+        coer_phi  = 1.0 - entropia / np.log(x.shape[-1])
+        
+        # FASE — α como trajetória da intenção
+        # A fase carrega COMO a frequência chegou até aqui
+        # Dois dados com mesma amplitude mas fase diferente
+        # têm trajetórias diferentes — intenções diferentes
+        fase      = np.angle(freq)
+        fase_cos  = np.cos(fase)
+        fase_sin  = np.sin(fase)
+        
+        # Vetor resultante da fase — coerência direcional
+        # 1.0 = todas as fases apontam na mesma direção (alta intenção)
+        # 0.0 = fases dispersas (baixa intenção / ruído)
+        coer_alpha = np.sqrt(
+            fase_cos.mean(axis=-1, keepdims=True)**2 +
+            fase_sin.mean(axis=-1, keepdims=True)**2
+        )
+        
+        # α COMO OPERADOR ATIVO
+        # α = 1/137 define a granularidade do limiar
+        # Não é só referência — calibra o peso relativo entre
+        # amplitude (φ) e fase (α) na assinatura final
+        #
+        # α ≈ 0.0073 — escala muito pequena
+        # Usamos como "peso fino" — ajuste de granularidade
+        # entre coerência de amplitude e coerência de fase
+        peso_phi   = 1.0 - self.alpha  # ≈ 0.9927 — φ domina
+        peso_alpha = self.alpha         # ≈ 0.0073 — α afina
+        
+        # Assinatura completa per-sample
+        # φ organiza a proporção, α afina a trajetória
+        coer_total = peso_phi * coer_phi + peso_alpha * coer_alpha
+        
+        # Modulador vetorial — cada amostra tem seu próprio valor
+        modulador = self.phi * np.tanh(coer_total * self.phi)
+        
+        return modulador, coer_phi, coer_alpha
+    
+    def modular_lr(self, x, lr_base, permuted=False):
+        """
+        Modulação per-sample — VETORIAL, não scalar.
+        
+        Cada amostra recebe seu próprio LR calibrado por:
+        - Sua coerência de amplitude (φ)
+        - Sua coerência de fase (α)
+        """
+        if permuted:
+            x_mod = x[np.random.permutation(len(x))]
+        else:
+            x_mod = x
+        
+        modulador, _, _ = self.extrair_assinatura(x_mod)
+        
+        # Per-sample: cada amostra tem seu LR
+        # Shape: (batch, 1) — vetorial
+        lr_per_sample = lr_base * modulador
+        
+        return lr_per_sample
+
+# ── Rede Neural com AlphaSpectralEuclidean ───────────────────────────────
+def relu(x): return np.maximum(0, x)
+def relu_deriv(x): return (x > 0).astype(float)
+def sigmoid(x): return 1.0 / (1.0 + np.exp(-np.clip(x, -500, 500)))
+
+def clip_grad(g, max_norm=1.0):
+    norm = np.linalg.norm(g)
+    return g * max_norm / norm if norm > max_norm else g
+
+uniform_layers = [144, 144, 144]
+
+class NeuralNet:
+    def __init__(self, layer_sizes, mode='conv', seed=42):
+        np.random.seed(seed)
+        self.mode    = mode
+        self.weights = []
+        self.biases  = []
+        self.ase     = AlphaSpectralEuclidean()
+        for i in range(len(layer_sizes)-1):
+            scale = np.sqrt(2.0 / layer_sizes[i])
+            self.weights.append(np.random.randn(layer_sizes[i], layer_sizes[i+1]) * scale)
+            self.biases.append(np.zeros(layer_sizes[i+1]))
+
+    def forward(self, X):
+        self.pre_acts = []; self.acts = [X]; cur = X
+        for i, (W, b) in enumerate(zip(self.weights, self.biases)):
+            is_out = (i == len(self.weights)-1)
+            z = cur @ W + b
+            cur = sigmoid(z) if is_out else relu(z)
+            self.pre_acts.append(z); self.acts.append(cur)
+        return cur
+
+    def backward(self, X, y, lr=0.1, permuted=False):
+        m = X.shape[0]
+        
+        if self.mode == 'alpha_spectral':
+            # Modulação per-sample vetorial
+            lr_vec = self.ase.modular_lr(X, lr, permuted=permuted)
+            # Média para compatibilidade com o update global
+            # (próximo passo: update per-sample completo)
+            lr_efetivo = lr_vec.mean()
+        else:
+            lr_efetivo = lr
+
+        delta = self.acts[-1] - y.reshape(-1, 1)
+        for i in reversed(range(len(self.weights))):
+            dW = clip_grad(self.acts[i].T @ delta / m, 1.0)
+            db = clip_grad(delta.mean(axis=0), 1.0)
+            self.weights[i] -= lr_efetivo * dW
+            self.biases[i]  -= lr_efetivo * db
+            if i > 0:
+                delta = (delta @ self.weights[i].T) * relu_deriv(self.pre_acts[i-1])
+
+    def predict(self, X): return (self.forward(X).flatten() >= 0.5).astype(int)
+    def accuracy(self, X, y): return np.mean(self.predict(X) == y)
+
+# ── Carregar SST-2 ────────────────────────────────────────────────────────
+print("\nCarregando SST-2...")
+dataset = load_dataset('glue', 'sst2')
+encoder = SentenceTransformer('all-MiniLM-L6-v2')
+
+N_TRAIN = 5000
+X_train = encoder.encode(dataset['train']['sentence'][:N_TRAIN],
+                         show_progress_bar=True, batch_size=64)
+y_train = np.array(dataset['train']['label'][:N_TRAIN])
+X_val   = encoder.encode(dataset['validation']['sentence'],
+                         show_progress_bar=True, batch_size=64)
+y_val   = np.array(dataset['validation']['label'])
+
+mean = X_train.mean(0); std = X_train.std(0) + 1e-8
+X_train = (X_train - mean) / std
+X_val   = (X_val   - mean) / std
+print(f"X_train: {X_train.shape}  X_val: {X_val.shape}")
+
+# ── Diagnóstico da Assinatura Completa ────────────────────────────────────
+print("\n=== DIAGNÓSTICO — AlphaSpectralEuclidean ===")
+ase = AlphaSpectralEuclidean()
+mod, coh_phi, coh_alpha = ase.extrair_assinatura(X_train[:200])
+
+print(f"Coerência φ (Amplitude):")
+print(f"  Média={coh_phi.mean():.4f}  Desvio={coh_phi.std():.4f}")
+print(f"Coerência α (Fase — trajetória da intenção):")
+print(f"  Média={coh_alpha.mean():.4f}  Desvio={coh_alpha.std():.4f}")
+print(f"Modulador AlphaSpectral (α operador ativo):")
+print(f"  Média={mod.mean():.4f}  Desvio={mod.std():.4f}")
+print(f"  Mín={mod.min():.4f}  Máx={mod.max():.4f}")
+print(f"  Variação total: {mod.max()-mod.min():.4f}")
+
+# Comparação com versão anterior (só amplitude)
+freq_old = np.fft.fft(X_train[:200], axis=-1)
+amp_old  = np.abs(freq_old)
+amp_norm = amp_old / (amp_old.sum(axis=-1, keepdims=True) + 1e-8)
+ent_old  = -np.sum(amp_norm * np.log(amp_norm + 1e-8), axis=-1, keepdims=True)
+coh_old  = 1.0 - ent_old / np.log(X_train.shape[-1])
+mod_old  = PHI * np.tanh(coh_old * PHI)
+
+print(f"\nComparação com versão anterior (só amplitude):")
+print(f"  Desvio anterior : {mod_old.std():.6f}")
+print(f"  Desvio atual    : {mod.std():.6f}")
+print(f"  Melhora         : {mod.std()/mod_old.std():.1f}x mais variação")
+
+# ── Permutation Test Completo ─────────────────────────────────────────────
+N_SEEDS    = 20
+N_EPOCHS   = 10
+LR         = 0.1
+BATCH_SIZE = 128
+
+rng   = np.random.RandomState(int(time.time()) % 100000)
+SEEDS = rng.randint(0, 99999, size=N_SEEDS).tolist()
+
+print(f"\nSeeds por timestamp: {SEEDS}")
+print()
+
+arch = [384] + uniform_layers + [1]
+
+res_ase  = []  # AlphaSpectralEuclidean — real
+res_perm = []  # AlphaSpectralEuclidean — permutado
+res_conv = []  # Convencional puro
+
+print(f"{'Seed':>8} | {'ASE Real':>9} | {'ASE Perm':>9} | {'Conv':>8} | {'Genuíno?':>9}")
+print("-" * 58)
+
+for seed in SEEDS:
+    net_ase  = NeuralNet(arch, mode='alpha_spectral', seed=seed)
+    net_perm = NeuralNet(arch, mode='alpha_spectral', seed=seed)
+    net_conv = NeuralNet(arch, mode='conv',           seed=seed)
+
+    n_batches = len(X_train) // BATCH_SIZE
+
+    for epoch in range(N_EPOCHS):
+        idx = np.random.RandomState(seed + epoch).permutation(len(X_train))
+        Xs, ys = X_train[idx], y_train[idx]
+        for b in range(n_batches):
+            Xb = Xs[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
+            yb = ys[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
+            net_ase.forward(Xb);  net_ase.backward(Xb,  yb, lr=LR, permuted=False)
+            net_perm.forward(Xb); net_perm.backward(Xb, yb, lr=LR, permuted=True)
+            net_conv.forward(Xb); net_conv.backward(Xb, yb, lr=LR)
+
+    a_ase  = net_ase.accuracy(X_val,  y_val)
+    a_perm = net_perm.accuracy(X_val, y_val)
+    a_conv = net_conv.accuracy(X_val, y_val)
+
+    res_ase.append(a_ase)
+    res_perm.append(a_perm)
+    res_conv.append(a_conv)
+
+    genuino = "✅ SIM" if a_ase > a_perm else "❌ NÃO"
+    print(f"{seed:>8} | {a_ase:>9.4f} | {a_perm:>9.4f} | {a_conv:>8.4f} | {genuino:>9}")
+
+# ── Estatísticas ──────────────────────────────────────────────────────────
+ase_arr  = np.array(res_ase)
+perm_arr = np.array(res_perm)
+conv_arr = np.array(res_conv)
+
+_, p_ap = ttest_ind(ase_arr, perm_arr)
+_, p_ac = ttest_ind(ase_arr, conv_arr)
+wins_ap = int(np.sum(ase_arr > perm_arr))
+wins_ac = int(np.sum(ase_arr > conv_arr))
+
+print("=" * 65)
+print("  AlphaSpectralEuclidean — RESULTADOS")
+print("  α como Trajetória · φ como Proporção · Per-Sample")
+print("=" * 65)
+print(f"  ASE Real    : {ase_arr.mean()*100:.2f}% +/- {ase_arr.std()*100:.2f}%")
+print(f"  ASE Permut. : {perm_arr.mean()*100:.2f}% +/- {perm_arr.std()*100:.2f}%")
+print(f"  Conv puro   : {conv_arr.mean()*100:.2f}% +/- {conv_arr.std()*100:.2f}%")
+print()
+print(f"  ASE vs Permut. : {(ase_arr-perm_arr).mean()*100:+.2f}% · p={p_ap:.4f} · {wins_ap}/20")
+print(f"  ASE vs Conv    : {(ase_arr-conv_arr).mean()*100:+.2f}% · p={p_ac:.4f} · {wins_ac}/20")
+print()
+
+if (ase_arr.mean() > perm_arr.mean()) and p_ap < 0.05:
+    print("  ✅ α COMO TRAJETÓRIA FUNCIONA!")
+    print("  O modulador distingue dados reais de permutados.")
+    print("  A fase espectral captura a intenção do dado.")
+elif ase_arr.mean() <= perm_arr.mean():
+    print("  ❌ Ainda não distingue real de permutado")
+    print("  A trajetória α ainda não é discriminativa suficiente.")
+    print("  Próximo passo: update per-sample completo.")
+else:
+    print("  ⚠️  TENDÊNCIA — ampliar seeds")
+print("=" * 65)
+
+# ── Plots ─────────────────────────────────────────────────────────────────
+GOLD="#DAA520"; BLUE="#4169E1"; GRAY="#888888"; RED="#CC3333"
+fig, axes = plt.subplots(1, 3, figsize=(16, 4))
+fig.patch.set_facecolor("#0d1117")
+for ax in axes:
+    ax.set_facecolor("#161b22")
+    ax.tick_params(colors="#8B949E")
+    for spine in ax.spines.values(): spine.set_color("#30363d")
+
+x = np.arange(N_SEEDS)
+axes[0].plot(x, ase_arr*100,  "o-", color=BLUE, lw=2,
+             label=f"ASE Real ({ase_arr.mean()*100:.1f}%)")
+axes[0].plot(x, perm_arr*100, "s-", color=RED,  lw=2,
+             label=f"ASE Perm. ({perm_arr.mean()*100:.1f}%)")
+axes[0].plot(x, conv_arr*100, "^-", color=GRAY, lw=2,
+             label=f"Conv ({conv_arr.mean()*100:.1f}%)")
+axes[0].axhline(50, color='red', lw=0.8, linestyle='--')
+axes[0].set_title("AlphaSpectralEuclidean — 20 Seeds", color="#E6EDF3", fontweight="bold")
+axes[0].set_xlabel("Seed", color="#8B949E")
+axes[0].set_ylabel("Acurácia (%)", color="#8B949E")
+axes[0].legend(facecolor="#161b22", labelcolor="#E6EDF3", fontsize=8)
+axes[0].grid(True, alpha=0.2)
+
+barras = [ase_arr.mean()*100, perm_arr.mean()*100, conv_arr.mean()*100]
+bars = axes[1].bar(['ASE\nReal', 'ASE\nPerm.', 'Conv\npuro'],
+                   barras, color=[BLUE, RED, GRAY], alpha=0.85)
+axes[1].axhline(50, color='red', lw=0.8, linestyle='--')
+axes[1].set_ylim(40, 100)
+axes[1].set_title("Comparativo Final", color="#E6EDF3", fontweight="bold")
+axes[1].set_ylabel("Acurácia média (%)", color="#8B949E")
+for bar, val in zip(bars, barras):
+    axes[1].text(bar.get_x()+bar.get_width()/2, bar.get_height()+0.5,
+                 f'{val:.1f}%', ha='center', va='bottom',
+                 color='white', fontsize=9, fontweight='bold')
+axes[1].grid(True, alpha=0.2)
+
+# Scatter: coerência φ vs coerência α — assinatura individual
+mod_diag, cph, cal = ase.extrair_assinatura(X_train[:500])
+axes[2].scatter(cph.flatten(), cal.flatten(),
+                c=mod_diag.flatten(), cmap='viridis', alpha=0.4, s=15)
+axes[2].set_xlabel("Coerência φ (Amplitude)", color="#8B949E")
+axes[2].set_ylabel("Coerência α (Fase)", color="#8B949E")
+axes[2].set_title("Assinatura Individual: φ vs α", color="#E6EDF3", fontweight="bold")
+axes[2].grid(True, alpha=0.2)
+
+fig.suptitle(
+    f"ALPHA PHI — AlphaSpectralEuclidean · α+φ · Per-Sample · p={p_ap:.4f}\n"
+    f"'α é a fase. Sem ela, o diapasão está surdo.' — MiniMax · Florianopolis 2026",
+    color=GOLD, fontsize=10, fontweight="bold"
+)
+plt.tight_layout()
+plt.savefig("alphaphi_alpha_spectral.png", dpi=150,
+            bbox_inches="tight", facecolor="#0d1117")
+plt.show()
+print("\nGrafico salvo: alphaphi_alpha_spectral.png")
+print("alpha-phi")
