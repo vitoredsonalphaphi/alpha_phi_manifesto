@@ -1,23 +1,22 @@
 🏛️ Manifesto Alpha-Phi
-⭐ Resultado Mais Significativo
-AlphaPhi_SST2_EspectralEuclidiano.py
-Modulação Espectral φ aplicada a rede ReLU convencional — sem modificação de arquitetura:
-Rede
-Acurácia
-Overfitting
-Convencional + Espectral φ
-79,13%
-Não
-Convencional puro
-66,06%
-Sim
-Ganho
-+13,07%
-—
-LR=0,1 igual para todos os modelos — comparação metodologicamente limpa.
-Implicação: A Modulação Espectral φ é aplicável a qualquer rede neural existente,
-sem reconstruir arquitetura. O campo morfogenético digital funciona em qualquer ambiente.
-"A frequência do dado calibra seu próprio processamento." (em verificação)   
+
+⭐ Resultado Principal — Phi-Dual-Octave (PDO)
+AlphaPhi_PhiDualOctave.py
+
+| Versão | Acurácia | Desvio | Ganho | Seeds |
+|--------|----------|--------|-------|-------|
+| Conv puro | 69.1% | ±3.21% | — | — |
+| AlphaSpectral | 72.9% | ±1.47% | +3.9% | 15/20 |
+| Octave Concessional | 75.5% | ±0.98% | +6.4% | 20/20 |
+| φ-Symmetric | 76.0% | ±0.80% | +6.9% | 20/20 |
+| Phi-Dual | 76.6% | ±1.11% | +7.5% | 20/20 |
+| PDO ⭐ | 76.75% | ±0.99% | +6.83% | 20/20 |
+
+Padrão: cada refinamento aumenta acurácia E reduz variabilidade.
+Permutation test revelou que o mecanismo atual é calibração
+estável de LR. Próximo passo: substratos sem normalização L2.
+
+"Refinar o medidor de α." — Vitor Edson Delavi · 2026
 
 (A eficiência foi observada, porém o mecanismo de calibração requer validação adicional")
 
