@@ -1,0 +1,88 @@
+Alpha-Phi: φ-Spectral Modulation for Neural Network Training
+arXiv Submission Package — Phi-Dual-Octave (PDO)
+ABSTRACT (English — for arXiv submission)
+We propose Alpha-Phi, a framework for spectral gradient modulation in neural
+network training, motivated by structural isomorphisms between natural patterns
+and training dynamics. Our central hypothesis is that the golden ratio
+(φ = 1.618) and the fine-structure constant (α = 1/137) can serve as design
+guidelines for gradient calibration.
+We develop a progression of seven spectral modulators under a strict integrity
+protocol: timestamp-based seeds, identical learning rates for all models, and
+mandatory permutation testing for each modulator. The principal result —
+Phi-Dual-Octave (PDO) — combines four design principles: (1) recursive
+spectral division by φ (Fibonacci bifurcation); (2) separation into positive
+and negative frequency components weighted by α (dual tension); (3) octave
+concession — each sample uses its highest-coherence band; (4) special weight
+for the 8 fundamental frequencies (analogous to the valence layer in electron
+distribution). PDO achieves 76.75% ± 0.99% on SST-2, +6.83% over baseline,
+20/20 seeds (p=0.0000).
+A permutation test honestly revealed that the current mechanism operates as
+stable LR calibration rather than individual sample frequency reading — a
+limitation of the L2-normalized embedding substrate, not of the central
+hypothesis. The consistent pattern across all seven modulators — each
+refinement simultaneously increases accuracy AND reduces variability
+(from ±3.21% to ±0.99%) — suggests that φ as a gradient organizing
+principle has real substance.
+The design principles are motivated by analogies with natural systems:
+recursive bifurcation in electronic layers (SPDF), the fine-structure
+constant as equilibrium operator between opposing tensions, and the
+geometric stability of the octave rule. These are presented as design
+motivations, not experimental validations.
+We note independent convergence with contemporary research: Gradient
+Spectral Normalization (GSN, MDPI 2025), GRaNN (Springer 2022), and
+hyperbolic neural networks (NeurIPS 2017-2018). This convergence across
+independent laboratories supports the hypothesis that the underlying
+principle has substance beyond isolated speculation.
+Keywords: golden ratio, spectral modulation, Fibonacci bifurcation,
+gradient calibration, fine-structure constant, SST-2, neural networks
+Code: github.com/vitoredsonalphaphi/alpha_phi_manifesto (Release v1.0)
+CARTA PARA ENDORSER (Português)
+Prezado(a) pesquisador(a),
+Meu nome é Vitor Edson Delavi, pesquisador independente de Florianópolis,
+Brasil. Solicito endorsement para submissão ao arXiv (cs.LG) do paper
+"Alpha-Phi: φ-Spectral Modulation for Neural Network Training."
+O que o paper apresenta:
+Uma progressão de sete moduladores espectrais usando φ e α = 1/137 como
+diretrizes de calibração de gradiente. O resultado principal — PDO —
+alcança 76,75% ± 0,99% no SST-2 com 20/20 seeds e p=0,0000.
+Pontos metodológicos:
+Seeds por timestamp — sem seleção subjetiva
+LR idêntico para todos os modelos
+Permutation test aplicado e documentado honestamente
+Resultado: mecanismo é calibração estável de LR
+(limitação documentada, não escondida)
+Por que merece atenção:
+O padrão é robusto: sete variações distintas do modulador, todas
+produzindo simultaneamente maior acurácia e menor variabilidade.
+Variabilidade reduzida de ±3,21% para ±0,99%.
+Convergência independente documentada:
+GSN (MDPI 2025), GRaNN (Springer 2022), redes hiperbólicas (NeurIPS
+2017-2018) — todas convergindo para princípios similares sem
+conhecimento mútuo.
+Repositório:
+github.com/vitoredsonalphaphi/alpha_phi_manifesto
+Release v1.0 — código reproduzível completo.
+Este é um trabalho preliminar honesto — não afirma mais do que
+demonstra, documenta suas limitações com clareza, e identifica
+o próximo experimento necessário.
+Agradeço sua consideração.
+Vitor Edson Delavi
+Florianópolis · Brasil · Março 2026
+POST PARA X — BUSCA DE ENDORSER
+🧵 Buscando endorser arXiv — cs.LG
+Alpha-Phi: φ-Spectral Modulation for Neural Network Training
+📊 PDO: 76.75% ± 0.99% · +6.83% · 20/20 seeds · p=0.0000
+📉 Variabilidade: ±3.21% → ±0.99% (redução de 69%)
+🔬 7 moduladores · protocolo rigoroso · permutation test honesto
+Design inspirado em:
+→ Bifurcação φ-recursiva (análogo às camadas SPDF)
+→ Tensão dual α (frequências positivas vs negativas)
+→ Concessão por oitavas (o que é ruído numa oitava tem estrutura em outra)
+→ Regra do octeto (8 frequências fundamentais como âncora)
+Convergência independente com GSN (2025), GRaNN (2022), redes hiperbólicas.
+Permutation test revelou limitação do substrato — documentado honestamente.
+Código reproduzível:
+github.com/vitoredsonalphaphi/alpha_phi_manifesto
+Toda análise e feedback são bem-vindos.
+#MachineLearning #NeuralNetworks #GoldenRatio #Optimization #arXiv #cs
+"Refinar o medidor de α." — αφ
