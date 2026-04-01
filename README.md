@@ -1,6 +1,6 @@
 🏛️ Manifesto Alpha-Phi
 
-⭐ Resultado Principal — Phi-Dual-Octave (PDO)
+⭐Resultado Principal — Phi-Dual-Octave (PDO)
 AlphaPhi_PhiDualOctave.py
 
 | Versão | Acurácia | Desvio | Ganho | Seeds |
