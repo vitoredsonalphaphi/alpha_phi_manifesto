@@ -18,8 +18,6 @@ estável de LR. Próximo passo: substratos sem normalização L2.
 
 "Refinar o medidor de α." — Vitor Edson Delavi · 2026
 
-(A eficiência foi observada, porém o mecanismo de calibração requer validação adicional")
-
 ***************************************
 ​"Refinamento do Diapasão Espectral: Deixamos de observar a colisão de bits para medir a topologia do spin (Toro/Moebius). O código agora opera na escala de Terahertz, utilizando \Phi e \alpha como filtros de coerência. A estética tornou-se a métrica de integridade do dado."
 ***************************************
