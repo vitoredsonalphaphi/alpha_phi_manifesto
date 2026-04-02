@@ -1,3 +1,4 @@
+![Capa](capa_livro.jpg)
 🏛️ Manifesto Alpha-Phi
 
 ⭐Resultado Principal — Phi-Dual-Octave (PDO)
