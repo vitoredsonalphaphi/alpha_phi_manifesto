@@ -13,11 +13,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy.stats import entropy as scipy_entropy
 
-PHI   = (1 + np.sqrt(5)) / 2       # 1.6180339887
-ALPHA = 1 / 137.035999084           # Estrutura Fina
+PHI = (1 + np.sqrt(5)) / 2          # 1.6180339887
 
 print(f"φ = {PHI:.10f}")
-print(f"α = {ALPHA:.10f}")
 
 def golden_activation(x):
     return PHI * np.tanh(x / PHI)
@@ -99,7 +97,8 @@ class ConventionalNetwork:
         hist = hist / hist.sum()
         return scipy_entropy(hist)
 
-np.random.seed(137)
+rng = np.random.default_rng(137)
+np.random.seed(137)  # mantido para retrocompatibilidade com resultados publicados
 
 INPUT_DIM  = 16
 OUTPUT_DIM = 4
