@@ -2,8 +2,7 @@
   <img src="1775593114753.png" alt="Manifesto Alpha-Phi" width="400">
 </p>
 ___
-![Capa](Screenshot_20260402_060455_X.jpg)
-🏛️ Manifesto Alpha-Phi
+
 
 ⭐Resultado Principal — Phi-Dual-Octave (PDO)
 AlphaPhi_PhiDualOctave.py
