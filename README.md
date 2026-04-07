@@ -1,3 +1,4 @@
+![Manifesto Alpha-Phi](1000005313.png)
 ![Capa](Screenshot_20260402_060455_X.jpg)
 🏛️ Manifesto Alpha-Phi
 
