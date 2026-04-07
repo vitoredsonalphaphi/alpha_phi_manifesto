@@ -8,67 +8,41 @@
 # Se sim: aplicação imediata em qualquer rede existente.
 # Sem precisar reconstruir nada.
 
-!pip install sentence-transformers datasets -q
-
+import logging
 import numpy as np
 import matplotlib.pyplot as plt
-from sentence_transformers import SentenceTransformer
-from datasets import load_dataset
 
-PHI   = (1 + np.sqrt(5)) / 2
-ALPHA = 1 / 137.035999084
+from utils_phi import (
+    PHI, ALPHA,
+    phi_spectral_modulator,
+    golden_activation, golden_activation_deriv,
+    relu, relu_deriv, sigmoid, clip_grad,
+    fibonacci_sequence,
+    PLOT_COLORS, apply_dark_style,
+)
+
+logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
+
+try:
+    from sentence_transformers import SentenceTransformer
+except ImportError as e:
+    raise ImportError(
+        "sentence-transformers não instalado. Execute: pip install sentence-transformers"
+    ) from e
+
+try:
+    from datasets import load_dataset
+except ImportError as e:
+    raise ImportError(
+        "datasets não instalado. Execute: pip install datasets"
+    ) from e
 
 print(f"phi   = {PHI:.10f}")
-print(f"alpha = {ALPHA:.10f}")
+print(f"alpha = {ALPHA:.10f}  (constante de estrutura fina — 1/137)")
 print("=" * 60)
 print("SST-2 — Modulação Espectral φ no Espaço Euclidiano")
 print("Pergunta: φ-espectral melhora redes convencionais?")
 print("=" * 60)
-
-# ── Modulador Espectral φ ─────────────────────────────────────────────────
-def phi_spectral_modulator(x, phi=PHI):
-    """
-    Assinatura vibracional do dado.
-    Frequência informacional — independente do substrato físico.
-    Análogo ao campo morfogenético de Levin aplicado ao dado.
-    """
-    freq         = np.fft.fft(x, axis=-1)
-    energia      = np.abs(freq)
-    energia_norm = energia / (energia.sum(axis=-1, keepdims=True) + 1e-8)
-    entropia     = -np.sum(energia_norm * np.log(energia_norm + 1e-8), axis=-1, keepdims=True)
-    entropia_norm = entropia / np.log(x.shape[-1])
-    coerencia    = 1.0 - entropia_norm
-    return PHI * np.tanh(coerencia * PHI)
-
-# ── Ativações ─────────────────────────────────────────────────────────────
-def golden_activation(x):
-    return PHI * np.tanh(x / PHI)
-
-def golden_activation_deriv(x):
-    return 1.0 - np.tanh(x / PHI)**2
-
-def relu(x):
-    return np.maximum(0, x)
-
-def relu_deriv(x):
-    return (x > 0).astype(float)
-
-def sigmoid(x):
-    return 1.0 / (1.0 + np.exp(-np.clip(x, -500, 500)))
-
-def clip_grad(g, max_norm=1.0):
-    norm = np.linalg.norm(g)
-    if norm > max_norm:
-        g = g * max_norm / norm
-    return g
-
-def fibonacci_sequence(n_terms, start=55):
-    fibs = [start]
-    a, b = start, int(round(start * PHI))
-    for _ in range(n_terms - 1):
-        fibs.append(b)
-        a, b = b, int(a + b)
-    return fibs
 
 fib_layers     = fibonacci_sequence(3, start=55)
 uniform_layers = [144, 144, 144]
@@ -151,8 +125,19 @@ class NeuralNet:
 
 # ── Carregar SST-2 ────────────────────────────────────────────────────────
 print("\nCarregando SST-2...")
-dataset = load_dataset('glue', 'sst2')
-encoder = SentenceTransformer('all-MiniLM-L6-v2')
+try:
+    dataset = load_dataset('glue', 'sst2')
+except Exception as e:
+    raise RuntimeError(
+        "Falha ao carregar SST-2. Verifique conexão com a internet ou cache HuggingFace."
+    ) from e
+
+try:
+    encoder = SentenceTransformer('all-MiniLM-L6-v2')
+except Exception as e:
+    raise RuntimeError(
+        "Falha ao carregar SentenceTransformer. Verifique conexão ou memória disponível."
+    ) from e
 
 N_TRAIN = 5000
 print(f"Gerando embeddings ({N_TRAIN} amostras)...")
@@ -192,7 +177,7 @@ net_conv_sp  = NeuralNet(arch_uni, mode='phi_spectral', seed=SEED)  # conv + esp
 net_conv     = NeuralNet(arch_uni, mode='conventional', seed=SEED)  # conv puro
 
 hist = {'phi_spec':[], 'phi':[], 'conv_sp':[], 'conv':[]}
-n_batches = len(X_train) // BATCH_SIZE
+n_batches = max(1, len(X_train) // BATCH_SIZE)
 
 print(f"\n{'Época':>5} | {'φ+Espectral':>11} | {'φ Puro':>8} | {'Conv+Esp':>9} | {'Conv':>7}")
 print("-" * 52)
@@ -200,9 +185,7 @@ print("-" * 52)
 for epoch in range(1, N_EPOCHS+1):
     idx = np.random.permutation(len(X_train))
     Xs, ys = X_train[idx], y_train[idx]
-    for b in range(n_batches):
-        Xb = Xs[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
-        yb = ys[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
+    for Xb, yb in zip(np.array_split(Xs, n_batches), np.array_split(ys, n_batches)):
         net_phi_spec.forward(Xb); net_phi_spec.backward(Xb, yb, lr=LR)
         net_phi.forward(Xb);      net_phi.backward(Xb,      yb, lr=LR)
         net_conv_sp.forward(Xb);  net_conv_sp.backward(Xb,  yb, lr=LR)
@@ -245,14 +228,36 @@ else:
     print("\n  Modulação espectral φ não melhora redes convencionais")
     print("  → Benefício específico para arquiteturas φ-nativas")
 
+# ── Exportação JSON ───────────────────────────────────────────────────────
+import json, datetime
+resultados = {
+    "experimento": "AlphaPhi_SST2_EspectralEuclidiano",
+    "data": datetime.datetime.now().isoformat(),
+    "hiperparametros": {"n_epochs": N_EPOCHS, "lr": LR, "batch_size": BATCH_SIZE, "seed": SEED},
+    "acuracia_final": {
+        "phi_fibonacci_espectral": round(f1, 6),
+        "phi_fibonacci_puro": round(f2, 6),
+        "convencional_espectral": round(f3, 6),
+        "convencional_puro": round(f4, 6),
+    },
+    "historico": {k: [round(v, 6) for v in vs] for k, vs in hist.items()},
+}
+json_path = "alphaphi_sst2_espectral_euclidiano.json"
+try:
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(resultados, f, ensure_ascii=False, indent=2)
+    print(f"Resultados salvos: {json_path}")
+except OSError as e:
+    logging.warning("Falha ao salvar JSON: %s", e)
+
 # ── Plots ─────────────────────────────────────────────────────────────────
-GOLD="#DAA520"; GOLD2="#FF8C00"; BLUE="#4169E1"; GRAY="#888888"
+GOLD  = PLOT_COLORS["gold"]
+GOLD2 = PLOT_COLORS["gold2"]
+BLUE  = PLOT_COLORS["blue"]
+GRAY  = PLOT_COLORS["gray"]
+
 fig, axes = plt.subplots(1, 2, figsize=(13, 4))
-fig.patch.set_facecolor("#0d1117")
-for ax in axes:
-    ax.set_facecolor("#161b22")
-    ax.tick_params(colors="#8B949E")
-    for spine in ax.spines.values(): spine.set_color("#30363d")
+apply_dark_style(fig, axes)
 
 epochs_x = np.arange(1, N_EPOCHS+1)
 axes[0].plot(epochs_x, [v*100 for v in hist['phi_spec']],
@@ -264,10 +269,10 @@ axes[0].plot(epochs_x, [v*100 for v in hist['conv_sp']],
 axes[0].plot(epochs_x, [v*100 for v in hist['conv']],
              "v-", color=GRAY,  lw=1.5, label=f"Conv puro ({f4*100:.1f}%)")
 axes[0].axhline(50, color='red', lw=0.8, linestyle='--')
-axes[0].set_xlabel("Época", color="#8B949E")
-axes[0].set_ylabel("Acurácia (%)", color="#8B949E")
-axes[0].set_title("SST-2 — Espectral φ Euclidiano", color="#E6EDF3", fontweight="bold")
-axes[0].legend(facecolor="#161b22", labelcolor="#E6EDF3", fontsize=7)
+axes[0].set_xlabel("Época", color=PLOT_COLORS["text"])
+axes[0].set_ylabel("Acurácia (%)", color=PLOT_COLORS["text"])
+axes[0].set_title("SST-2 — Espectral φ Euclidiano", color=PLOT_COLORS["title"], fontweight="bold")
+axes[0].legend(facecolor=PLOT_COLORS["panel"], labelcolor=PLOT_COLORS["title"], fontsize=7)
 axes[0].grid(True, alpha=0.2)
 
 barras = [f1*100, f2*100, f3*100, f4*100]
@@ -276,8 +281,8 @@ labels = ['φ Fib\n+Espectral','φ Fib\npuro','Conv\n+Espectral','Conv\npuro']
 bars   = axes[1].bar(labels, barras, color=cores, alpha=0.85)
 axes[1].axhline(50, color='red', lw=0.8, linestyle='--')
 axes[1].set_ylim(40, 100)
-axes[1].set_ylabel("Acurácia (%)", color="#8B949E")
-axes[1].set_title("Comparativo Final", color="#E6EDF3", fontweight="bold")
+axes[1].set_ylabel("Acurácia (%)", color=PLOT_COLORS["text"])
+axes[1].set_title("Comparativo Final", color=PLOT_COLORS["title"], fontweight="bold")
 for bar, val in zip(bars, barras):
     axes[1].text(bar.get_x()+bar.get_width()/2, bar.get_height()+0.5,
                  f'{val:.1f}%', ha='center', va='bottom',
@@ -290,8 +295,11 @@ fig.suptitle(
     color=GOLD, fontsize=10, fontweight="bold"
 )
 plt.tight_layout()
-plt.savefig("alphaphi_sst2_espectral_euclidiano.png", dpi=150,
-            bbox_inches="tight", facecolor="#0d1117")
+png_path = "alphaphi_sst2_espectral_euclidiano.png"
+try:
+    plt.savefig(png_path, dpi=150, bbox_inches="tight", facecolor=PLOT_COLORS["bg"])
+    print(f"Grafico salvo: {png_path}")
+except OSError as e:
+    logging.warning("Falha ao salvar gráfico: %s", e)
 plt.show()
-print("\nGrafico salvo: alphaphi_sst2_espectral_euclidiano.png")
 print("alpha-phi")
