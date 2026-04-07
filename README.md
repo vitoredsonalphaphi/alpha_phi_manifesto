@@ -1,4 +1,7 @@
-![Manifesto_Alpha_Phi]_(1775593114753.png)
+<p align="center">
+  <img src="1775593114753.png" alt="Manifesto Alpha-Phi" width="400">
+</p>
+
 ![Capa](Screenshot_20260402_060455_X.jpg)
 🏛️ Manifesto Alpha-Phi
 
