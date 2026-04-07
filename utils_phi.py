@@ -3,8 +3,19 @@
 
 import numpy as np
 
-PHI   = (1 + np.sqrt(5)) / 2       # 1.6180339887
-C_PHI = 1.0 / PHI**2               # curvatura hiperbólica
+# ── Constantes fundamentais — núcleo do projeto αφ ───────────────────────
+PHI   = (1 + np.sqrt(5)) / 2       # 1.6180339887... — razão áurea
+                                    # Proporção do padrão organizador que precede a estrutura.
+                                    # Operador de coerência. Substrato de φ·tanh(x/φ).
+
+ALPHA = 1 / 137.035999084          # 0.00729735... — constante de estrutura fina
+                                    # Granularidade mínima da interação.
+                                    # Regula a penalidade de coerência: L = CE + α·H(φ)
+                                    # Taxa de perturbação mínima natural no Quarto Eixo.
+                                    # α e φ juntos: a dupla que nomeia e fundamenta o projeto.
+
+C_PHI = 1.0 / PHI**2               # 0.3820... — curvatura hiperbólica natural
+                                    # Ponto de dobra do microponto do Quarto Eixo.
 
 # ── Modulador Espectral φ ─────────────────────────────────────────────────
 def phi_spectral_modulator(x, phi=PHI):

@@ -13,9 +13,12 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy.stats import entropy as scipy_entropy
 
-PHI = (1 + np.sqrt(5)) / 2          # 1.6180339887
+PHI   = (1 + np.sqrt(5)) / 2        # 1.6180339887... — razão áurea
+ALPHA = 1 / 137.035999084           # 0.00729735... — constante de estrutura fina
+                                     # Granularidade mínima. Metade do nome do projeto.
 
 print(f"φ = {PHI:.10f}")
+print(f"α = {ALPHA:.10f}")
 
 def golden_activation(x):
     return PHI * np.tanh(x / PHI)

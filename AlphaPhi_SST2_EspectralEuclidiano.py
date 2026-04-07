@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from utils_phi import (
-    PHI,
+    PHI, ALPHA,
     phi_spectral_modulator,
     golden_activation, golden_activation_deriv,
     relu, relu_deriv, sigmoid, clip_grad,
@@ -38,6 +38,7 @@ except ImportError as e:
     ) from e
 
 print(f"phi   = {PHI:.10f}")
+print(f"alpha = {ALPHA:.10f}  (constante de estrutura fina — 1/137)")
 print("=" * 60)
 print("SST-2 — Modulação Espectral φ no Espaço Euclidiano")
 print("Pergunta: φ-espectral melhora redes convencionais?")

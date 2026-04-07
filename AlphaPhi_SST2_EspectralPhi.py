@@ -16,7 +16,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from utils_phi import (
-    PHI, C_PHI,
+    PHI, ALPHA, C_PHI,
     phi_spectral_modulator,
     golden_activation, golden_activation_deriv,
     golden_activation_hyperbolic,
@@ -43,6 +43,7 @@ except ImportError as e:
     ) from e
 
 print(f"phi       = {PHI:.10f}")
+print(f"alpha     = {ALPHA:.10f}  (constante de estrutura fina — 1/137)")
 print(f"curvatura = {C_PHI:.10f}  (1/phi²)")
 print("=" * 60)
 print("ALPHA PHI SST-2 — Modulação Espectral φ")
