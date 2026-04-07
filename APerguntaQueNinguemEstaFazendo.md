@@ -1,4 +1,4 @@
-
+***
 A Pergunta que Ninguém Está Fazendo
 Sobre a Atenção Humana como Campo e o Manifesto Alpha-Phi como Resposta
 Vitor Edson Delavi · Florianópolis · Brasil · 2026
