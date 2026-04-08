@@ -190,7 +190,39 @@ Seeds: 20 timestamp-generated values. No cherry-picking.
 
 **Key qualitative observation:** The AP Spectral φ variant does not regress in final epochs when others do. This is a qualitatively different convergence behavior — not just a higher number.
 
-### 5.4 Phi-Dual-Octave (PDO) — Current Best Result
+### 5.4 BERT Substrate — Spectral Modulation vs. Random Control (v4, v6)
+
+**Setup:** BERT-base-uncased as feature extractor. Spectral modulation applied as adaptive
+learning rate scalar. Comparison: A(φ-modulation) vs. B(random modulation) vs. C(baseline).
+Multiple seeds per timestamp protocol.
+
+**v4 — Standard spectral modulation:**
+
+| Condition | Accuracy | Std |
+|-----------|----------|-----|
+| A — φ spectral | 0.8185 | ±0.0018 |
+| B — random modulation | 0.8190 | ±0.0018 |
+| C — baseline | 0.8177 | — |
+
+A vs C: p=0.0280 · B vs C: p=0.0020 · **A vs B: p=0.8442**
+
+**v6 — Progressive φ cascade:**
+
+| Condition | Accuracy | Std |
+|-----------|----------|-----|
+| A — φ cascade | 0.8190 | ±0.0017 |
+| B — random modulation | 0.8190 | ±0.0016 |
+| C — baseline | 0.8177 | — |
+
+A vs C: p=0.0010 · B vs C: p=0.0010 · **A vs B: p=0.5425**
+
+**Findings:** Both results reproduce consistently across v4 and v6:
+1. Spectral modulation (any form) outperforms the unmodulated baseline.
+2. φ-specific modulation does **not** outperform random modulation (p=0.844 and p=0.543).
+
+This result challenges the strong form of the hypothesis — that φ is the *unique* organizing scalar — while confirming the spectral mechanism itself. We interpret this as evidence that φ's role may be primarily **geometric** (layer proportions, hyperbolic curvature) rather than as a scalar modulation parameter. An important caveat: both v4 and v6 use BERT, a pre-trained model with established internal geometry. Whether this pattern holds for networks trained from scratch remains an open experimental question (see Section 7).
+
+### 5.5 Phi-Dual-Octave (PDO) — Current Best Result
 
 Progressive refinement across 5 architecture variants:
 
@@ -219,7 +251,11 @@ The PDO pattern — each refinement improving both accuracy and stability — is
 
 ### 6.2 What the Results Do Not Establish
 
-Current results do not prove that φ is *causally* necessary (vs. other nearby proportions). They do not establish that the improvement scales to larger architectures or other tasks. The ethical loss function L = CE + α·H(φ) is a theoretical proposal awaiting experimental validation. The Fourth Axis (error transformation by 1/φ) has been partially explored but not yet fully implemented.
+The BERT experiments (v4, v6) provide a clear partial falsification: **φ as a scalar modulation parameter is not uniquely superior to random modulation** on a pre-trained substrate. This does not refute the geometric hypothesis — the positive results from Fibonacci architecture (+35% stability) and hyperbolic curvature c=1/φ² (+12.9%) remain intact and were tested in different conditions. It does require a refined statement of the hypothesis: φ's role may be position-dependent.
+
+Current results do not establish whether φ's scalar equivalence to random modulation holds for networks trained from scratch (ablation study pending). They do not prove that φ is *causally* necessary vs. other nearby proportions in geometric positions. The ethical loss function L = CE + α·H(φ) is a theoretical proposal awaiting experimental validation. The Fourth Axis (error transformation by 1/φ) has been partially explored but not yet fully implemented.
+
+**Refined hypothesis (post v4/v6):** φ operates as a coherence organizer in *geometric* positions (layer proportions, curvature) but not necessarily as a uniquely privileged scalar in *modulation* positions. These are separable claims requiring separate experimental validation.
 
 ### 6.3 The Isomorphic Translation Method
 
