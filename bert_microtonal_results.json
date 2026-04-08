@@ -1,0 +1,62 @@
+{
+  "experimento": "BERT_Microtonal",
+  "substrato": "bert-base-uncased",
+  "bert_frozen": true,
+  "n_seeds": 20,
+  "n_epochs": 25,
+  "n_train": 500,
+  "n_test": 200,
+  "timestamp": 1775649273,
+  "seeds": [
+    1775649273, 1775649410, 1775649547, 1775649684, 1775649821,
+    1775649958, 1775650095, 1775650232, 1775650369, 1775650506,
+    1775650643, 1775650780, 1775650917, 1775651054, 1775651191,
+    1775651328, 1775651465, 1775651602, 1775651739, 1775651876
+  ],
+  "resultados": {
+    "G": {
+      "mean": 0.8078,
+      "std": 0.0066,
+      "values": [0.8050,0.8000,0.7950,0.8150,0.8100,0.8150,0.8050,0.8100,
+                 0.8000,0.8100,0.8050,0.8100,0.8100,0.8050,0.8050,0.8050,
+                 0.8250,0.8000,0.8100,0.8150]
+    },
+    "E": {
+      "mean": 0.8075,
+      "std": 0.0096,
+      "values": [0.8250,0.8050,0.8100,0.8150,0.8000,0.8150,0.8100,0.8100,
+                 0.8200,0.8050,0.8000,0.8000,0.7950,0.8000,0.8100,0.8050,
+                 0.7850,0.8250,0.8100,0.8050]
+    },
+    "E_M": {
+      "mean": 0.7165,
+      "std": 0.1133,
+      "values": [0.7650,0.6250,0.8200,0.7800,0.8100,0.7500,0.7900,0.7450,
+                 0.8600,0.7850,0.8050,0.5350,0.5350,0.7850,0.5350,0.5350,
+                 0.7900,0.7950,0.7500,0.5350]
+    }
+  },
+  "testes": {
+    "E_M_vs_G": {"delta": -0.0912, "p_value": 0.0025},
+    "E_M_vs_E": {"delta": -0.0910, "p_value": 0.0020},
+    "E_vs_G":   {"delta": -0.0002, "p_value": 0.9388}
+  },
+  "diagnostico": {
+    "colapso": "5 seeds → 0.5350 exato (acurácia classe majoritária). Modelo parou de aprender.",
+    "causa": "Fator conformal λ_c = 2/(1-c‖x‖²) explode próximo à borda da bola de Poincaré. 6 camadas compostas amplificam a instabilidade. Alguns seeds colapsam, outros sobrevivem.",
+    "variancia": "11.33% — confirma instabilidade numérica, não sinal.",
+    "hipotese_rejeitada": "Conformal factor como mecanismo de habitação do espaço hiperbólico."
+  },
+  "conclusao_geral_bert": {
+    "E_neutro": "E consistentemente neutro (Δ≈0, p>0.15) em 3 experimentos independentes.",
+    "substrato_robusto": "A geometria pré-treinada do BERT é robusta à curvatura externa c=1/φ².",
+    "confirmacao_scratch": "Curvatura ajuda redes nascentes (ablation scratch p=0.0000) mas não BERT.",
+    "interpretacao": "Não é falha de implementação — é o substrato. φ organiza geometria emergente, não pré-estabelecida."
+  },
+  "historico_bert_completo": {
+    "v4_v6_modulacao_phi": "φ ≈ random p=0.844",
+    "E_hard_expmap0_exp1": "E: +0.37% p=0.156 ns",
+    "E_T_blend_linear":    "E: +0.30% p=0.333 ns",
+    "E_M_conformal_x6":    "E: -0.02% p=0.939 ns | E_M: COLAPSO p=0.002 pior"
+  }
+}
