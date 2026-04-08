@@ -101,16 +101,17 @@ def golden_activation_hyperbolic(x, c=C_PHI, phi=PHI):
     novo_raio = np.clip(novo_raio, 1e-8, max_norm)
     return novo_raio * x / x_norm
 
-# ── Campo Transtorno — transição suave Euclidiano → Hiperbólico ──────────
+# ── Campo Transmorfo — metamorfose geométrica Euclidiano → Hiperbólico ───
 #
 # Isomorfismo do bordado:
 #   lattice central (malha de losangos) → espaço euclidiano    c ≈ 0
 #   laços de transição (figura-∞)       → zona de curvatura emergente
 #   espirais externas                   → espaço hiperbólico pleno  c = C_PHI
 #
-# O fio é contínuo — sem corte. A transição deve ser progressiva.
+# "Transmorfo": o espaço muda de forma — não é perturbação, é metamorfose.
+# O fio é contínuo — sem corte. A transição é progressiva.
 # expmap0 direto = corte abrupto = quebra de gradiente = obstáculo BERT.
-# campo_transtorno = fio contínuo = gradiente preservado.
+# campo_transmorfo = fio contínuo = gradiente preservado.
 
 def curvatura_progressiva(layer_idx, total_layers, c_target=C_PHI, phi=PHI):
     """
@@ -125,7 +126,7 @@ def curvatura_progressiva(layer_idx, total_layers, c_target=C_PHI, phi=PHI):
     return c_target * t_phi
 
 
-def campo_transtorno(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
+def campo_transmorfo(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
     """
     Transição suave de um ponto x do espaço euclidiano ao hiperbólico.
 
@@ -151,10 +152,10 @@ def campo_transtorno(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
     return x_out, c
 
 
-def campo_transtorno_inverso(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
+def campo_transmorfo_inverso(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
     """
     Retorno do espaço hiperbólico ao euclidiano (para backprop ou leitura).
-    Inverso de campo_transtorno: logmap0 com curvatura progressiva.
+    Inverso de campo_transmorfo: logmap0 com curvatura progressiva.
     """
     c = curvatura_progressiva(layer_idx, total_layers, c_target, phi)
 
