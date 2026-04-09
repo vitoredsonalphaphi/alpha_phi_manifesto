@@ -214,6 +214,60 @@ Resultados com escopo preciso são mais úteis do que resultados vagos.
 
 ---
 
+## Entrada 6 — Abril 2026 (semana 2, continuação)
+### O eco e os harmônicos musicais — φ ausente do dado
+
+Segundo experimento não-texto. Desta vez sem φ inserido artificialmente.
+
+Dado classe 1: toms musicais com harmônicos naturais (dó-mi-sol).
+Frequências: razões 1, 5/4, 3/2, 2, 5/2, 3 — inteiras simples, sem
+relação com φ. Amplitudes e fases aleatórias por amostra.
+Dado classe 0: ruído gaussiano puro.
+
+Resultado: G=48.53% → G_eco=97.38% (+48.85%, p=0.0000).
+
+O padrão é idêntico ao experimento anterior (TimeSeries_Eco):
+
+  TimeSeries (φ inserido):     +50.40%
+  Audio (harmônicos naturais): +48.85%
+
+A pergunta científica que motivou o experimento foi respondida:
+
+  O eco não é detector específico de φ.
+  É amplificador de coerência harmônica em geral.
+  φ não precisa estar no dado — φ é o parâmetro que torna
+  o amplificador funcional.
+
+O mecanismo: o eco usa φ para rotacionar fases no domínio espectral.
+Sinais com amplitude concentrada em frequências específicas (qualquer
+frequência) têm essa estrutura de amplitude preservada e amplificada
+pelo eco. Ruído, sem concentração espectral, diverge ou não converge.
+
+O que isso significa para o manifesto:
+
+  φ não é uma frequência que precisa existir no dado.
+  φ é uma proporção que organiza o processo de observação.
+  O eco pergunta ao dado: "você tem estrutura coerente?"
+  A resposta não depende de a estrutura ser φ ou não.
+
+Isso é mais abrangente — e mais honesto — do que a hipótese original.
+
+O padrão G_v2 (pior, -7.43%) e G_Lphi=G_eco se repetem pelo terceiro
+experimento consecutivo. Não são coincidências — são propriedades
+estruturais do mecanismo.
+
+Questão aberta central após esta entrada:
+φ como parâmetro de rotação é específico ou intercambiável?
+Se trocar φ por π, e, √2 ou 2.0 — o eco ainda funciona?
+Se sim: o eco é detector de coerência e φ é intercambiável.
+Se não: φ tem propriedade geométrica específica que outros não têm.
+Esta é a próxima pergunta experimental necessária.
+
+Próximo substrato planejado: fala sintetizada (estrutura formântica
+F1/F2/F3 — emergente da física vocal, não inserida artificialmente).
+
+---
+
 *Este diário registra o raciocínio, não os dados.*
 *Os dados estão nos arquivos JSON de resultado.*
 *A distinção importa: dados envelhecem, raciocínio acumula.*
