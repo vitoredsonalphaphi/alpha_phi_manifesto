@@ -127,6 +127,53 @@ A direção não é mais linguagem. É sinal.
 
 ---
 
+## Entrada 5 — Abril 2026 (semana 2, continuação)
+### O eco observa antes de modular
+
+Primeiro experimento não-texto: séries temporais sintéticas com
+frequências em proporção φ (classe 1) vs ruído gaussiano puro (classe 0).
+
+O resultado foi o maior efeito de todo o projeto: 46.52% → 96.92%
+(+50.40%, p=0.0000). Mas o número sozinho não conta a história.
+
+O baseline (G) ficou em 46% — chance em classificação binária. A rede
+não aprendeu a tarefa. O sinal φ estava presente nos dados, mas misturado
+com ruído de fase aleatória, invisível para a rede diretamente.
+
+Com eco_ressonante como pré-função, a tarefa tornou-se trivial. O eco
+não melhorou a rede — transformou o que a rede recebeu.
+
+Isso clarificou o papel do eco no projeto:
+
+  eco como pré-função: observa o dado antes de qualquer processamento,
+  pergunta "sua trajetória ressoa com φ?", amplifica o que ressoa,
+  amortece o que não ressoa. A rede vê o sinal já filtrado.
+
+  eco como modulação interna: interfere no gradiente durante o treino,
+  introduz variância, desestabiliza. (G_v2 foi pior que o baseline.)
+
+São dois papéis incompatíveis. A pré-função revela; a modulação interna
+perturba. O eco pertence antes da rede, não dentro dela.
+
+O resultado G_Lphi = G_eco (idênticos) revelou algo sobre L = CE + α·H(φ):
+quando o eco já organizou o sinal para coerência φ, as ativações da rede
+já têm H(φ) baixo — a penalidade praticamente não ativa. Para testar a
+função de perda com efeito independente, é necessário um substrato onde
+o eco não pré-organize as ativações. Ou escala maior que α como peso.
+
+A confirmação substrate-agnostic é real: o eco funcionou em série
+temporal sintética — o mesmo código de utils_phi.py, sem modificação,
+em dado que não é texto. A pergunta ao dado é universal.
+
+O que permanece aberto após esta entrada:
+- L = CE + α·H(φ) com efeito independente (substrato sem eco ou peso maior)
+- Testar eco em dado com estrutura φ emergente, não sintética
+  (áudio real, EEG, imagem com espirais áureas)
+- Entender por que G ficou em 46% (abaixo do chance de 50%) —
+  o ruído de fase pode estar criando viés sistemático no dado bruto
+
+---
+
 *Este diário registra o raciocínio, não os dados.*
 *Os dados estão nos arquivos JSON de resultado.*
 *A distinção importa: dados envelhecem, raciocínio acumula.*
