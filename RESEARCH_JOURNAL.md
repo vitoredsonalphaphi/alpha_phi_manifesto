@@ -194,6 +194,24 @@ gaussiano puro pode criar sinais com estrutura espúria que confunde
 a rede sem eco. Não é problema do experimento — é característica do
 dado bruto que o eco resolve.
 
+Ressalva de escopo (Tia, 2026-04-09):
+
+Este é um resultado em condições controladas. O dado classe 1 foi
+gerado artificialmente com estrutura φ. O eco foi projetado para
+amplificar exatamente essa estrutura. A tarefa era, portanto, detectar
+o que foi inserido intencionalmente.
+
+O que o resultado prova: quando estrutura φ existe no dado, o eco
+consegue revelá-la à rede. A pergunta "sua trajetória ressoa com φ?"
+tem resposta correta 97.5% das vezes neste substrato.
+
+O que o resultado não prova: que φ está presente em dados reais
+arbitrários, ou que o eco sempre amplifica sinal útil. A validação
+em dado com estrutura φ emergente (não sintética) permanece aberta.
+
+A ressalva não diminui o resultado — delimita seu escopo legítimo.
+Resultados com escopo preciso são mais úteis do que resultados vagos.
+
 ---
 
 *Este diário registra o raciocínio, não os dados.*
