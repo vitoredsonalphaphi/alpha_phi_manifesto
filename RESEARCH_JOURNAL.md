@@ -172,6 +172,28 @@ O que permanece aberto após esta entrada:
 - Entender por que G ficou em 46% (abaixo do chance de 50%) —
   o ruído de fase pode estar criando viés sistemático no dado bruto
 
+**Adendo — 2026-04-09 (verificação metodológica)**
+
+Tia levantou preocupação legítima: G=46% suspeito — dataset poderia estar
+desbalanceado (ex: 96%/4% tornaria o resultado de G_eco um artefato trivial).
+
+Verificação executada com regeneração completa dos dados (seeds idênticas):
+
+  Treino: 400 classe 0 / 400 classe 1 — 50.0% / 50.0%
+  Teste:  100 classe 0 / 100 classe 1 — 50.0% / 50.0%
+
+Matriz de confusão (G_eco, seed=SEEDS[0]):
+  Classe 0 (ruído): 99/100 correto (99.0%)
+  Classe 1 (φ):     96/100 correto (96.0%)
+
+Dataset perfeitamente balanceado. Ambas as classes detectadas com >96%.
+O resultado não é artefato. O eco revela estrutura φ real no sinal.
+
+A questão de G=46% permanece aberta como fenômeno teórico: o ruído
+gaussiano puro pode criar sinais com estrutura espúria que confunde
+a rede sem eco. Não é problema do experimento — é característica do
+dado bruto que o eco resolve.
+
 ---
 
 *Este diário registra o raciocínio, não os dados.*

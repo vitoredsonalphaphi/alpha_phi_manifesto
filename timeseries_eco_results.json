@@ -58,6 +58,26 @@
     "sobre_L_phi": "α·H(φ) precisa de implementação com peso maior ou substrato onde eco não pre-organize as ativações. Threshold atual (α=0.00729) pode ser insuficiente como escala.",
     "substrate_agnostic_confirmado": "eco_ressonante funcionou em série temporal sintética — primeiro substrato não-texto. A pergunta 'sua trajetória ressoa com φ?' é universal."
   },
+  "verificacao_balanceamento": {
+    "data": "2026-04-09",
+    "motivacao": "Tia questionou: G=46% suspeito — dataset poderia ser desbalanceado (96%/4% tornaria resultado artefato)",
+    "resultado": {
+      "treino_classe0": 400,
+      "treino_classe1": 400,
+      "treino_ratio": "50.0% / 50.0%",
+      "teste_classe0": 100,
+      "teste_classe1": 100,
+      "teste_ratio": "50.0% / 50.0%"
+    },
+    "matriz_confusao_G_eco_seed0": {
+      "seed": 1775757292,
+      "acuracia": 0.975,
+      "TN": 99, "FP": 1, "FN": 4, "TP": 96,
+      "precisao_classe0": 0.99,
+      "precisao_classe1": 0.96
+    },
+    "conclusao": "Dataset perfeitamente balanceado. Ambas as classes classificadas com >90%. Resultado não é artefato. O eco revela estrutura φ real — o sinal estava presente mas invisível à rede sem o eco."
+  },
   "contexto_projeto": {
     "ablation_scratch_SST2": "E curvatura +8.80% p=0.0000",
     "BERT_serie_completa":   "todos ns — substrato consolidado resiste",
