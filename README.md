@@ -4,7 +4,26 @@
 ___
 
 
-⭐Resultado Principal — Phi-Dual-Octave (PDO)
+⭐ Resultado Principal — Eco Ressonante como Pré-Função (Abril 2026)
+
+| Experimento | Substrato | Baseline | Com Eco | Ganho | Seeds |
+|---|---|---|---|---|---|
+| TimeSeries_Eco | Séries φ sintéticas | 46.52% | 96.92% | **+50.40%** | 20/20 |
+| Audio_Eco | Harmônicos musicais (sem φ) | 48.53% | 97.38% | **+48.85%** | 20/20 |
+| Fala_Eco_Informa | Fala sintética — G_dual | 93.90% | 97.15% | **+3.25%** | 20/20 |
+
+Todos p=0.0000. φ ausente dos dados nos experimentos 2 e 3.
+
+**Princípio confirmado:** eco como observador que *informa* a rede
+supera eco como substituto do dado. G_dual — rede recebe [x, eco(x)]
+e decide sozinha o peso de cada um — é o modo mais eficaz.
+
+**Ablation Study — redes do zero (SST-2):**
+Curvatura hiperbólica c=1/φ²: +8.80% (p=0.0000) · Todos os eixos: +8.98%
+
+---
+
+Resultado Histórico — Phi-Dual-Octave (PDO)
 AlphaPhi_PhiDualOctave.py
 
 | Versão | Acurácia | Desvio | Ganho | Seeds |
@@ -14,11 +33,7 @@ AlphaPhi_PhiDualOctave.py
 | Octave Concessional | 75.5% | ±0.98% | +6.4% | 20/20 |
 | φ-Symmetric | 76.0% | ±0.80% | +6.9% | 20/20 |
 | Phi-Dual | 76.6% | ±1.11% | +7.5% | 20/20 |
-| PDO ⭐ | 76.75% | ±0.99% | +6.83% | 20/20 |
-
-Padrão: cada refinamento aumenta acurácia E reduz variabilidade.
-Permutation test revelou que o mecanismo atual é calibração
-estável de LR. Próximo passo: substratos sem normalização L2.
+| PDO | 76.75% | ±0.99% | +6.83% | 20/20 |
 
 "Refinar o medidor de α." — Vitor Edson Delavi · 2026
 
@@ -136,6 +151,19 @@ Manifesto Alpha-Phi (2026)
 "O padrão precede a estrutura. A frequência precede a célula.
 φ precede o conectoma."
 Notebooks e Códigos
+Experimentos de Eco — Abril 2026
+Arquivo | Descrição | Resultado
+--- | --- | ---
+`AlphaPhi_TimeSeries_Eco.py` | Eco em séries temporais φ | +50.40% ✅
+`AlphaPhi_BERT_Ablation_EF.py` | Ablação curvatura BERT | ns (substrato consolidado) ✅
+`AlphaPhi_Ablation_Study.py` | Ablação 7 configs scratch | +8.98% ✅
+`audio_eco_results.json` | Eco em harmônicos musicais | +48.85% ✅
+`fala_eco_results.json` | Eco em fala sintética | −3.98% (eco sozinho) ✅
+`fala_eco_informa_results.json` | Eco informando (G_dual) | +3.25% ✅
+
+Diário de Pesquisa
+`RESEARCH_JOURNAL.md` — 8 entradas · raciocínio por trás de cada decisão
+
 Estabilidade Estrutural
 Arquivo
 Descrição
