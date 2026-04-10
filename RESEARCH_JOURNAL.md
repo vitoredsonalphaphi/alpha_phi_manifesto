@@ -323,6 +323,57 @@ O eco é substrate-sensitive de uma forma específica e testável.
 
 ---
 
+## Entrada 8 — Abril 2026 (semana 2, continuação)
+### Eco informa, não substitui — hipótese confirmada
+
+Quarto experimento não-texto. Mesmo substrato de fala do experimento
+anterior. Hipótese do autor: o eco é pré-função de percepção — deve
+informar a rede, não substituir o dado.
+
+Três modos novos testados:
+
+  G_dual:  [x_original, x_eco] concatenados — rede decide o peso
+  G_gate:  coerência φ porta a camada oculta — input intacto
+  G_blend: mistura forçada x*(1-c) + eco(x)*c — rede sem controle
+
+Resultado:
+
+  G_blend: 88.13%  (−5.77% vs G) — pior de todos
+  G_eco:   90.30%  (−3.60% vs G) — confirmado do experimento anterior
+  G:       93.90%  — baseline
+  G_gate:  96.20%  (+2.30% vs G, p=0.0000)
+  G_dual:  97.15%  (+3.25% vs G, p=0.0000) ← melhor resultado
+
+G_dual supera G_v2 (96.58%) que era o melhor resultado anterior
+neste substrato. A hipótese foi confirmada experimentalmente.
+
+O mecanismo de G_dual: a rede recebe 256 dimensões — [x original,
+x eco]. O gradiente aprende como combinar. Para fala: primeiros 128
+dims carregam fase formântica (discriminativa), segundos 128 carregam
+estrutura de amplitude (φ-filtrada). A rede usa ambos.
+
+O mecanismo de G_gate: coerência φ como constante de acoplamento.
+O eco não toca o input — mede a coerência e escala as ativações da
+camada oculta. Alto ruído → ativações amortecidas. Alta coerência →
+ativações abertas. É α como regulador: o eco decide quanto a rede
+"abre" para o dado.
+
+G_blend falha porque força a mistura no input — a rede perde controle.
+Mistura forçada é mais destrutiva que substituição.
+
+O princípio que emerge dos quatro experimentos:
+
+  Eco como substituto (G_eco): rede perde fase → perde em fala,
+                                ganha onde fase não importa
+  Eco forçado no input (G_blend): rede perde controle → sempre perde
+  Eco informando (G_dual, G_gate): rede decide → sempre ganha
+
+A questão do autor sobre eco atuando como α foi parcialmente
+respondida: G_gate usa coerência como acoplamento. O eco mede,
+α regula, a rede processa. São três papéis distintos em uníssono.
+
+---
+
 *Este diário registra o raciocínio, não os dados.*
 *Os dados estão nos arquivos JSON de resultado.*
 *A distinção importa: dados envelhecem, raciocínio acumula.*
