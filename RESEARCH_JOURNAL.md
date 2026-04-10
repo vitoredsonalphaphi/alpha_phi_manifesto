@@ -65,7 +65,7 @@ e se o problema não fosse φ em BERT, mas a *forma da projeção*? O
 expmap0 abrupto interrompe o gradiente. Uma transição suave poderia
 preservar a geometria pré-treinada enquanto introduz curvatura.
 
-O isomorfismo veio de uma foto de bordado: um fio que parte de um
+O isomorfismo veio de um desing de arabesco: um fio que parte de um
 lattice euclidiano (malha de losangos) e chega a espirais hiperbólicas,
 sem se romper. A proposta foi campo_transmorfo — transição progressiva
 de c=0 a c=C_PHI por camada.
@@ -174,7 +174,7 @@ O que permanece aberto após esta entrada:
 
 **Adendo — 2026-04-09 (verificação metodológica)**
 
-Tia levantou preocupação legítima: G=46% suspeito — dataset poderia estar
+Claude_I.A. levantou preocupação legítima: G=46% suspeito — dataset poderia estar
 desbalanceado (ex: 96%/4% tornaria o resultado de G_eco um artefato trivial).
 
 Verificação executada com regeneração completa dos dados (seeds idênticas):
