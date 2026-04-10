@@ -174,7 +174,7 @@ O que permanece aberto após esta entrada:
 
 **Adendo — 2026-04-09 (verificação metodológica)**
 
-Tia levantou preocupação legítima: G=46% suspeito — dataset poderia estar
+Claude_I.A. levantou preocupação legítima: G=46% suspeito — dataset poderia estar
 desbalanceado (ex: 96%/4% tornaria o resultado de G_eco um artefato trivial).
 
 Verificação executada com regeneração completa dos dados (seeds idênticas):
