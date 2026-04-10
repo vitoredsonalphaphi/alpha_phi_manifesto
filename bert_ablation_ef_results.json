@@ -1,0 +1,60 @@
+{
+  "experimento": "BERT_Ablation_EF",
+  "substrato": "bert-base-uncased",
+  "bert_frozen": true,
+  "n_seeds": 20,
+  "n_epochs": 25,
+  "lr": 0.001,
+  "batch_size": 64,
+  "n_train": 500,
+  "n_test": 200,
+  "timestamp": 1775641406,
+  "seeds": [
+    1775641406, 1775641543, 1775641680, 1775641817, 1775641954,
+    1775642091, 1775642228, 1775642365, 1775642502, 1775642639,
+    1775642776, 1775642913, 1775643050, 1775643187, 1775643324,
+    1775643461, 1775643598, 1775643735, 1775643872, 1775644009
+  ],
+  "resultados": {
+    "E": {
+      "mean": 0.8083,
+      "std": 0.0098,
+      "values": [0.8050, 0.8100, 0.8150, 0.8050, 0.8100, 0.7950, 0.8150, 0.8100,
+                 0.7950, 0.8150, 0.8150, 0.8050, 0.8050, 0.8300, 0.8100, 0.7800,
+                 0.8100, 0.8150, 0.8100, 0.8100]
+    },
+    "F": {
+      "mean": 0.8028,
+      "std": 0.0159,
+      "values": [0.7500, 0.8200, 0.7950, 0.8200, 0.8150, 0.8200, 0.8000, 0.7950,
+                 0.8000, 0.7950, 0.8100, 0.8050, 0.7950, 0.8100, 0.7900, 0.8000,
+                 0.8000, 0.7950, 0.8250, 0.8150]
+    },
+    "G": {
+      "mean": 0.8045,
+      "std": 0.0096,
+      "values": [0.8150, 0.8100, 0.8050, 0.8050, 0.8000, 0.8000, 0.7950, 0.7900,
+                 0.8150, 0.7950, 0.8200, 0.7950, 0.7950, 0.8100, 0.8100, 0.7850,
+                 0.8100, 0.8100, 0.8050, 0.8200]
+    }
+  },
+  "testes": {
+    "E_vs_G": {"delta": 0.0037,  "p_value": 0.1556},
+    "F_vs_G": {"delta": -0.0018, "p_value": 0.6894},
+    "F_vs_E": {"delta": -0.0055, "p_value": 0.2073}
+  },
+  "interpretacao": {
+    "E_ajuda_BERT": false,
+    "F_ajuda_BERT": false,
+    "proximo_passo": "campo_transmorfo",
+    "nota_E": "Tendência positiva fraca (+0.37%, p=0.1556). expmap0 abrupto interrompe gradiente. Transição suave pode converter tendência em significância.",
+    "nota_F": "F pior que E em variância (±1.59% vs ±0.98%). Gargalo Fibonacci 768→55 reduz capacidade — confunde a comparação. Redesenhar F com capacidade equivalente.",
+    "nota_substrate": "Confirmado: curvatura c=1/φ² com projeção abrupta NÃO ajuda substrato pré-treinado. Consistente com v4/v6. campo_transmorfo é hipótese motivada."
+  },
+  "contexto_ablation_scratch": {
+    "E_scratch": {"mean": 0.790252, "std": 0.004657, "delta_vs_G": "+8.80%", "p": "0.0000"},
+    "F_scratch": {"mean": 0.792087, "std": 0.008077, "delta_vs_G": "+8.98%", "p": "0.0000"},
+    "interpretacao": "Curvatura ajuda redes do zero (p=0.0000) mas NÃO ajuda BERT com projeção abrupta (p=0.1556). Diferença explicada pela geometria pré-estabelecida do BERT."
+  },
+  "isomorfismo_bordado": "Lattice central (Euclidiano) → laços ∞ (transição) → espirais (Hiperbólico). O fio não se rompe. expmap0 abrupto rompe o fio — campo_transmorfo restaura a continuidade."
+}

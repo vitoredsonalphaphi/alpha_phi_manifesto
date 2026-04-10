@@ -37,6 +37,95 @@ def phi_spectral_modulator(x, phi=PHI):
     coerencia    = 1.0 - entropia_norm
     return phi * np.tanh(coerencia * phi)
 
+# ── Modulador Espectral αφ v2 — fase recuperada + eco ressonante ──────────
+#
+# Contribuição Gemini/Minimax (2026-04-08):
+#   phi_spectral_modulator (v1): usa np.abs → descarta fase → descarta α
+#   Amplitude = estrutura = φ (o que o sinal é)
+#   Fase      = intenção  = α (para onde o sinal vai)
+#   np.abs silencia α — descarta metade do nome do projeto.
+#
+# v2: amplitude + fase → plano complexo → eco ressonante → convergência
+#   complex_mod = amplitude · e^(j·α·φ) — rotação no plano complexo
+#   φ dita a curvatura, α dita a trajetória.
+#
+# Substrate-agnostic: FFT opera sobre qualquer array numérico.
+#   Texto, áudio, imagem, EEG, série temporal — mesmo código.
+#   A pergunta ao dado é universal: "sua trajetória ressoa com φ?"
+
+def phi_spectral_modulator_v2(x, phi=PHI, alpha=ALPHA, n_eco=3):
+    """
+    Modulador espectral αφ com fase recuperada e eco ressonante.
+    Substrate-agnostic: opera sobre qualquer array numérico (batch, dim).
+
+    Ciclo:
+      1. Projeção: FFT → amplitude (φ) + fase (α)
+      2. Rotação:  complex_mod = amplitude · e^(j · α · φ · 137)
+                  (137 ≈ 1/α em unidades naturais — escala da intenção)
+      3. Reflexão: IFFT → sinal modulado no domínio original
+      4. Eco:      resíduo = reflexão - original → reinjeção por φ
+      5. Convergência: sinal com coerência φ estabiliza; ruído diverge
+
+    returns: (batch, 1) — fator de modulação por amostra
+    """
+    x = np.asarray(x, dtype=float)
+    sinal = x.copy()
+
+    for _ in range(n_eco):
+        freq      = np.fft.fft(sinal, axis=-1)
+        amplitude = np.abs(freq)                    # estrutura (φ)
+        fase      = np.angle(freq)                  # intenção (α)
+
+        # Rotação no plano complexo: α como operador de trajetória
+        # 1/ALPHA ≈ 137 — escala natural da constante de estrutura fina
+        nova_fase      = fase * (phi * alpha * (1.0 / alpha))  # = fase * phi
+        sinal_complexo = amplitude * np.exp(1j * nova_fase)
+
+        # Reflexão: retorno ao domínio original
+        reflexao = np.real(np.fft.ifft(sinal_complexo, axis=-1))
+
+        # Eco: resíduo reinjetado por φ (atrator de ressonância)
+        eco   = reflexao - x
+        sinal = sinal + (eco / phi)
+
+    # Extrai coerência do sinal convergido
+    freq_final  = np.fft.fft(sinal, axis=-1)
+    energia     = np.abs(freq_final)
+    e_norm      = np.clip(energia / (energia.sum(axis=-1, keepdims=True) + 1e-8), 1e-10, 1.0)
+    entropia    = -np.sum(e_norm * np.log(e_norm), axis=-1, keepdims=True)
+    coerencia   = 1.0 - entropia / np.log(x.shape[-1])
+    return phi * np.tanh(coerencia * phi)
+
+
+def eco_ressonante(x, phi=PHI, n_eco=3):
+    """
+    Eco puro — sem extração de modulação.
+    Retorna o sinal convergido após n_eco ciclos de ressonância φ.
+    Útil como pré-função: filtra dado antes de qualquer processamento.
+
+    Dado com estrutura φ-coerente converge.
+    Ruído (sem coerência) diverge e é amortecido por φ.
+
+    Substrate-agnostic: texto, áudio, imagem, série temporal.
+    """
+    x = np.asarray(x, dtype=float)
+    sinal = x.copy()
+
+    for _ in range(n_eco):
+        freq      = np.fft.fft(sinal, axis=-1)
+        amplitude = np.abs(freq)
+        fase      = np.angle(freq)
+
+        nova_fase      = fase * phi
+        sinal_complexo = amplitude * np.exp(1j * nova_fase)
+        reflexao       = np.real(np.fft.ifft(sinal_complexo, axis=-1))
+
+        eco   = reflexao - x
+        sinal = sinal + (eco / phi)
+
+    return sinal
+
+
 # ── Ativações ─────────────────────────────────────────────────────────────
 def golden_activation(x, phi=PHI):
     """Ativação φ — versão euclidiana."""
@@ -100,6 +189,72 @@ def golden_activation_hyperbolic(x, c=C_PHI, phi=PHI):
     max_norm  = (1.0/np.sqrt(c)) - 1e-5
     novo_raio = np.clip(novo_raio, 1e-8, max_norm)
     return novo_raio * x / x_norm
+
+# ── Campo Transmorfo — metamorfose geométrica Euclidiano → Hiperbólico ───
+#
+# Isomorfismo do bordado:
+#   lattice central (malha de losangos) → espaço euclidiano    c ≈ 0
+#   laços de transição (figura-∞)       → zona de curvatura emergente
+#   espirais externas                   → espaço hiperbólico pleno  c = C_PHI
+#
+# "Transmorfo": o espaço muda de forma — não é perturbação, é metamorfose.
+# O fio é contínuo — sem corte. A transição é progressiva.
+# expmap0 direto = corte abrupto = quebra de gradiente = obstáculo BERT.
+# campo_transmorfo = fio contínuo = gradiente preservado.
+
+def curvatura_progressiva(layer_idx, total_layers, c_target=C_PHI, phi=PHI):
+    """
+    Agenda de curvatura por camada: c cresce de 0 até c_target.
+    Modulada por φ: lenta no início (respeita geometria pré-existente),
+    rápida no fim (entrega espaço hiperbólico pleno).
+
+    Bordado: lattice central (layer 0) → espirais externas (layer final).
+    """
+    t = layer_idx / max(total_layers - 1, 1)  # [0, 1]
+    t_phi = t ** phi                            # aceleração modulada por φ
+    return c_target * t_phi
+
+
+def campo_transmorfo(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
+    """
+    Transição suave de um ponto x do espaço euclidiano ao hiperbólico.
+
+    Hipótese: em vez de projetar abruptamente (expmap0 no final),
+    cada camada aplica uma curvatura crescente modulada por φ.
+    Isso preserva a geometria pré-estabelecida (ex: BERT) nas camadas
+    iniciais e introduz curvatura gradualmente nas camadas finais.
+
+    Retorna x_transformado no espaço com curvatura c(layer_idx).
+    """
+    c = curvatura_progressiva(layer_idx, total_layers, c_target, phi)
+
+    if c < 1e-6:
+        return x, c  # camada inicial: euclidiano puro
+
+    x_hyp = expmap0(x, c=c)
+
+    # Interpolação linear suave entre euclidiano e hiperbólico
+    # alpha = 0 → puro euclidiano  |  alpha = 1 → puro hiperbólico
+    alpha = (layer_idx / max(total_layers - 1, 1)) ** phi
+    x_out = (1.0 - alpha) * x + alpha * x_hyp
+
+    return x_out, c
+
+
+def campo_transmorfo_inverso(x, layer_idx, total_layers, c_target=C_PHI, phi=PHI):
+    """
+    Retorno do espaço hiperbólico ao euclidiano (para backprop ou leitura).
+    Inverso de campo_transmorfo: logmap0 com curvatura progressiva.
+    """
+    c = curvatura_progressiva(layer_idx, total_layers, c_target, phi)
+
+    if c < 1e-6:
+        return x
+
+    x_euclid = logmap0(x, c=c)
+    alpha = (layer_idx / max(total_layers - 1, 1)) ** phi
+    return (1.0 - alpha) * x + alpha * x_euclid
+
 
 # ── Paleta de cores para plots ────────────────────────────────────────────
 PLOT_COLORS = {

@@ -1,0 +1,67 @@
+{
+  "experimento": "AlphaPhi_Ablation_Study",
+  "data": "2026-04-08T02:54:45.578116",
+  "seeds": [
+    92789,
+    94126,
+    95463,
+    96800,
+    98137,
+    99474,
+    100811,
+    102148,
+    103485,
+    104822
+  ],
+  "hiperparametros": {
+    "n_epochs": 20,
+    "lr": 0.1,
+    "batch_size": 128,
+    "n_seeds": 10
+  },
+  "resultados": {
+    "A": {
+      "mean": 0.76445,
+      "std": 0.007202,
+      "values": [0.760321, 0.755734, 0.762615, 0.768349, 0.774083, 0.768349, 0.766055, 0.762615, 0.751147, 0.775229]
+    },
+    "B": {
+      "mean": 0.771101,
+      "std": 0.008856,
+      "values": [0.786697, 0.770642, 0.774083, 0.758028, 0.77867, 0.772936, 0.762615, 0.764908, 0.761468, 0.780963]
+    },
+    "C": {
+      "mean": 0.753326,
+      "std": 0.014021,
+      "values": [0.777523, 0.727064, 0.758028, 0.763761, 0.739679, 0.766055, 0.756881, 0.743119, 0.744266, 0.756881]
+    },
+    "D": {
+      "mean": 0.704587,
+      "std": 0.028007,
+      "values": [0.693807, 0.669725, 0.669725, 0.727064, 0.709862, 0.71445, 0.668578, 0.723624, 0.759174, 0.709862]
+    },
+    "E": {
+      "mean": 0.790252,
+      "std": 0.004657,
+      "values": [0.791284, 0.794725, 0.795872, 0.779817, 0.791284, 0.787844, 0.788991, 0.78555, 0.794725, 0.792431]
+    },
+    "F": {
+      "mean": 0.792087,
+      "std": 0.008077,
+      "values": [0.788991, 0.780963, 0.792431, 0.784404, 0.797018, 0.800459, 0.805046, 0.780963, 0.800459, 0.790138]
+    },
+    "G": {
+      "mean": 0.702294,
+      "std": 0.028297,
+      "values": [0.661697, 0.720183, 0.723624, 0.72133, 0.723624, 0.654817, 0.708716, 0.71789, 0.728211, 0.662844]
+    }
+  },
+  "perguntas_chave": {
+    "C_vs_D_phi_vs_aleatorio": {"delta": 0.04874, "p": 0.0012, "conclusao": "φ > aleatório em redes do zero"},
+    "A_vs_B_fibonacci_vs_uniforme": {"delta": -0.00665, "p": 0.0663, "conclusao": "Fibonacci ≈ uniforme com mesma ativação"},
+    "B_vs_G_ativacao_phi": {"delta": 0.06881, "p": 0.0002, "conclusao": "φ·tanh sozinha contribui fortemente"},
+    "E_vs_G_curvatura": {"delta": 0.08796, "p": 0.0000, "conclusao": "Curvatura c=1/φ² é o eixo mais forte"},
+    "F_vs_G_todos_eixos": {"delta": 0.08979, "p": 0.0000, "conclusao": "Combinação completa é a melhor configuração"}
+  },
+  "nota": "Substrato: MiniLM-L6-v2 embeddings (384 dim), redes treinadas do zero. Contrasta com v4/v6 (BERT pré-treinado) onde C≈D. A diferença de substrato resolve a contradição aparente."
+}

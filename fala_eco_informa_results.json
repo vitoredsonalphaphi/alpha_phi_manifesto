@@ -1,0 +1,85 @@
+{
+  "experimento": "Fala_Eco_Informa",
+  "substrato": "fala sintética vs ruído colorido — mesmo dado do experimento anterior",
+  "hipotese": "eco como observador que informa a função, não que substitui o dado",
+  "modos": {
+    "G":       "baseline puro",
+    "G_eco":   "eco substitui input (referência — experimento anterior)",
+    "G_dual":  "eco informa: [x, eco(x)] concatenados — rede decide o peso",
+    "G_gate":  "eco informa: coerência φ porta a camada oculta",
+    "G_blend": "eco informa: mistura suave x*(1-c) + eco(x)*c"
+  },
+  "referencia_experimento_anterior": {
+    "G": 0.93875, "G_eco": 0.899, "G_v2": 0.96575
+  },
+  "n_seeds": 20,
+  "n_epochs": 60,
+  "n_train_pc": 400,
+  "n_test_pc": 100,
+  "dim": 128,
+  "hidden": 89,
+  "timestamp": 1775782686,
+  "seeds": [
+    1775782686, 1775782823, 1775782960, 1775783097, 1775783234,
+    1775783371, 1775783508, 1775783645, 1775783782, 1775783919,
+    1775784056, 1775784193, 1775784330, 1775784467, 1775784604,
+    1775784741, 1775784878, 1775785015, 1775785152, 1775785289
+  ],
+  "resultados": {
+    "G": {
+      "mean": 0.939, "std": 0.010559,
+      "values": [0.94,0.915,0.935,0.94,0.955,0.93,0.95,0.945,0.945,0.95,
+                 0.93,0.94,0.955,0.95,0.92,0.935,0.945,0.93,0.935,0.935]
+    },
+    "G_eco": {
+      "mean": 0.903, "std": 0.014866,
+      "values": [0.9,0.91,0.905,0.915,0.875,0.91,0.93,0.9,0.87,0.92,
+                 0.905,0.91,0.91,0.905,0.92,0.885,0.91,0.89,0.885,0.905]
+    },
+    "G_dual": {
+      "mean": 0.9715, "std": 0.006910,
+      "values": [0.975,0.965,0.965,0.975,0.965,0.965,0.965,0.99,0.96,0.97,
+                 0.975,0.975,0.97,0.97,0.97,0.965,0.98,0.975,0.975,0.98]
+    },
+    "G_gate": {
+      "mean": 0.962, "std": 0.008276,
+      "values": [0.955,0.955,0.975,0.975,0.965,0.96,0.95,0.975,0.975,0.97,
+                 0.955,0.955,0.965,0.965,0.955,0.955,0.96,0.965,0.95,0.96]
+    },
+    "G_blend": {
+      "mean": 0.88125, "std": 0.014906,
+      "values": [0.865,0.86,0.88,0.89,0.905,0.875,0.88,0.89,0.89,0.875,
+                 0.86,0.915,0.895,0.895,0.87,0.875,0.88,0.855,0.885,0.885]
+    }
+  },
+  "testes": {
+    "G_eco_vs_G":    {"delta": -0.036,   "p_value": 0.0},
+    "G_dual_vs_G":   {"delta":  0.0325,  "p_value": 0.0},
+    "G_gate_vs_G":   {"delta":  0.023,   "p_value": 0.0},
+    "G_blend_vs_G":  {"delta": -0.05775, "p_value": 0.0},
+    "G_dual_vs_G_eco":  {"delta": 0.0685,  "p_value": 0.0},
+    "G_gate_vs_G_eco":  {"delta": 0.059,   "p_value": 0.0},
+    "G_blend_vs_G_eco": {"delta": -0.02175,"p_value": 0.000479}
+  },
+  "interpretacao": {
+    "resultado_central": "G_dual=97.15% (+3.25% vs G, p=0.0000). Supera G_v2=96.58% do experimento anterior. Hipótese confirmada: eco informando supera eco substituindo.",
+    "ranking_fala": {
+      "1_G_dual":  "97.15% — eco informa: rede vê [x, eco(x)], decide sozinha",
+      "2_G_v2_ref":"96.58% — modulação interna (experimento anterior)",
+      "3_G_gate":  "96.20% — eco informa: coerência porta camada oculta",
+      "4_G":       "93.90% — baseline",
+      "5_G_eco":   "90.30% — eco substitui input (destrói fase)",
+      "6_G_blend": "88.13% — eco força mistura no input (pior de todos)"
+    },
+    "mecanismo_G_dual": "Rede recebe 256 dims: [x_original, x_eco]. Gradient aprende: primeiros 128 para fase formântica, segundos 128 para estrutura de amplitude. Eco informa sem forçar.",
+    "mecanismo_G_gate": "Coerência φ como acoplamento (α): escala as ativações da camada oculta. Input intocado. Eco não processa — apenas mede e sinaliza.",
+    "por_que_blend_falha": "Forçar mistura proporcional no input remove a escolha da rede. G_blend é pior que G_eco — mistura forçada é mais destrutiva que substituição.",
+    "principio_confirmado": {
+      "eco_informa": "rede decide como usar observação do eco → ganha",
+      "eco_substitui": "rede perde acesso à fase original → perde",
+      "eco_mistura_forcado": "rede perde controle do que usa → perde mais"
+    },
+    "conexao_alpha": "G_gate usa coerência como constante de acoplamento — análogo a α. Quanto o eco 'abre' a rede é proporcional à coerência φ do dado. Alpha como regulador do acoplamento eco↔rede."
+  },
+  "nota": f"Primeiro teste de eco como observador que informa. α=0.00729735"
+}

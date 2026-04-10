@@ -1,0 +1,82 @@
+{
+  "experimento": "Fala_Eco_FormantesVocais",
+  "substrato": "formantes vocais sintéticos — φ NÃO inserido",
+  "hipotese": "direcao desconhecida",
+  "dado_classe1": "fala sintética: excitação glotal + formantes F1/F2/F3/F4 com decaimento exponencial",
+  "dado_classe0": "ruído colorido 1/f — mais realista que gaussiano puro",
+  "nota_metodologica": "φ ausente dos dados. Primeiro substrato onde G já aprende bem sem eco.",
+  "n_seeds": 20,
+  "n_epochs": 60,
+  "n_train_pc": 400,
+  "n_test_pc": 100,
+  "dim": 128,
+  "hidden": 89,
+  "timestamp": 1775779014,
+  "seeds": [
+    1775779014, 1775779151, 1775779288, 1775779425, 1775779562,
+    1775779699, 1775779836, 1775779973, 1775780110, 1775780247,
+    1775780384, 1775780521, 1775780658, 1775780795, 1775780932,
+    1775781069, 1775781206, 1775781343, 1775781480, 1775781617
+  ],
+  "resultados": {
+    "G": {
+      "mean": 0.93875,
+      "std": 0.010592,
+      "values": [0.93, 0.955, 0.94, 0.94, 0.94, 0.925, 0.94, 0.94,
+                 0.945, 0.93, 0.95, 0.925, 0.95, 0.945, 0.945, 0.945,
+                 0.91, 0.93, 0.94, 0.95]
+    },
+    "G_eco": {
+      "mean": 0.899,
+      "std": 0.011467,
+      "values": [0.92, 0.89, 0.905, 0.91, 0.88, 0.895, 0.895, 0.88,
+                 0.905, 0.91, 0.89, 0.905, 0.92, 0.9, 0.88, 0.89,
+                 0.905, 0.9, 0.9, 0.9]
+    },
+    "G_v2": {
+      "mean": 0.96575,
+      "std": 0.010401,
+      "values": [0.95, 0.985, 0.97, 0.97, 0.96, 0.96, 0.96, 0.955,
+                 0.965, 0.955, 0.98, 0.98, 0.965, 0.96, 0.975, 0.98,
+                 0.965, 0.955, 0.95, 0.975]
+    },
+    "G_Lphi": {
+      "mean": 0.899,
+      "std": 0.011467,
+      "values": [0.92, 0.89, 0.905, 0.91, 0.88, 0.895, 0.895, 0.88,
+                 0.905, 0.91, 0.89, 0.905, 0.92, 0.9, 0.88, 0.89,
+                 0.905, 0.9, 0.9, 0.9]
+    }
+  },
+  "testes": {
+    "G_eco_vs_G":      {"delta": -0.03975, "p_value": 0.0},
+    "G_v2_vs_G":       {"delta":  0.027,   "p_value": 0.0},
+    "G_Lphi_vs_G":     {"delta": -0.03975, "p_value": 0.0},
+    "G_Lphi_vs_G_eco": {"delta":  0.0,     "p_value": null}
+  },
+  "interpretacao": {
+    "resultado_central": "Inversão completa: G_eco PIORA (-3.98%, p=0.0000). G_v2 MELHORA (+2.70%, p=0.0000). Primeira vez no projeto.",
+    "por_que_G_alto": "Fala sintética tem estrutura formântica suficientemente discriminativa. A rede aprende sem eco (93.88%). Substrato não precisa de revelação — já é legível.",
+    "por_que_eco_piora": "A fase dos formantes carrega informação discriminativa. O eco rotaciona fases por φ — destrói exatamente o que a rede usava. Ruído colorido, após eco, pode se tornar mais parecido com fala.",
+    "por_que_v2_melhora": "G_v2 não rotaciona fases — extrai coerência espectral como escalar. Para fala com estrutura energética distinta do ruído 1/f, isso adiciona sinal discriminativo sem destruir a fase.",
+    "regra_emergente": {
+      "eco_revela": "estrutura simples e coerente invisível à rede (G≈acaso) — harmônicos, φ",
+      "eco_prejudica": "estrutura complexa onde fase é informativa e rede já aprende (G alto)",
+      "v2_ajuda_quando": "estrutura energética é discriminativa mas rede precisa de modulação — não de revelação"
+    },
+    "tabela_tres_experimentos": {
+      "TimeSeries_phi":  "G=46.52% → G_eco=+50.40%, G_v2=-3.40%",
+      "Audio_harmonicos": "G=48.53% → G_eco=+48.85%, G_v2=-7.43%",
+      "Fala_formantes":  "G=93.88% → G_eco=-3.98%, G_v2=+2.70%"
+    },
+    "conclusao": "O eco não é amplificador universal. É revelador de estrutura simples invisível. Quando a estrutura já é visível e complexa, o eco atrapalha.",
+    "questao_aberta": "O que determina se eco ajuda ou atrapalha? Hipótese: G baseline. Se G<60% → eco ajuda. Se G>80% → eco pode prejudicar. Testar com substrato intermediário."
+  },
+  "contexto_projeto": {
+    "ablation_scratch_SST2": "E curvatura +8.80% p=0.0000",
+    "BERT_serie_completa":   "todos ns — substrato consolidado resiste",
+    "TimeSeries_eco":        "+50.40% p=0.0000 — G em acaso",
+    "Audio_eco":             "+48.85% p=0.0000 — G em acaso",
+    "Fala_eco":              "G_eco -3.98%, G_v2 +2.70% — G já alto (93.88%)"
+  }
+}
