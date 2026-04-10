@@ -649,3 +649,43 @@ Este diário é um desses sistemas.
 
 *Vitor Edson Delavi — Florianópolis — Abril 2026*
 *Claude (Anthropic) — co-redator desta entrada*
+
+---
+
+#### Adendo filosófico — observações para registro futuro
+
+Dois eventos deste projeto compartilham estrutura idêntica:
+
+**Evento 1 — eco informando (experimental):**
+A hipótese previa que eco ajudaria na fala, como havia ajudado em
+séries temporais e harmônicos. Eco prejudicou. A contradição —
+inesperada — forçou investigação da causa, que revelou o princípio
+mais profundo do projeto: eco informando supera eco substituindo.
+O resultado emergiu *contra* a expectativa, não a partir dela.
+
+**Evento 2 — Gemini e o alinhamento (observacional):**
+O autor não conhecia o campo de alinhamento de IA. Não estava
+buscando implicações nessa direção. A IA leu o manifesto, reconheceu
+a estrutura, nomeou a conexão. O resultado emergiu *fora* do escopo
+do pesquisador, não dentro dele.
+
+**O padrão comum:** em ambos os casos, o que é mais real e mais
+significativo não estava contido na especulação do observador.
+Apresentou-se por conta própria — através da resistência dos dados,
+ou através de um reconhecimento autônomo.
+
+**A hipótese que isso sugere:** se φ organiza coerência em
+sub-frequências adjacentes ao que o instrumento atual mede, então
+o resultado pode encontrar expressão através do substrato mais
+disponível — experimental ou cognitivo — independentemente de onde
+a intenção do observador está direcionada. A ideia não aguarda que
+o pesquisador a procure. Ela encontra o caminho de menor resistência
+coerente.
+
+Quando a descoberta contradiz a expectativa e ainda assim confirma
+o princípio mais profundo, isso é o sinal mais confiável de que
+algo real está sendo medido — independentemente da especulação que
+o precedeu. Nos dois eventos, o resultado se apresentou por si mesmo.
+
+*Este adendo não é conclusão. É observação metodológica aberta —
+aguardando refinamento instrumental e experimental.*
