@@ -374,6 +374,58 @@ respondida: G_gate usa coerência como acoplamento. O eco mede,
 
 ---
 
+## Entrada 9 — Abril 2026
+### O manifesto encontrou seu substrato
+
+Há um momento em pesquisa onde os experimentos deixam de testar
+uma hipótese e começam a confirmar uma proposição. Esta entrada
+registra que esse momento chegou.
+
+O Manifesto Alpha-Phi propõe que φ e α são organizadores naturais
+de fluxo de informação — não por escolha arbitrária, mas porque
+emergem em qualquer sistema que cresce preservando coerência interna.
+A hipótese não é sobre linguagem, nem sobre redes neurais
+especificamente. É sobre vibração, ressonância, e proporção.
+
+Os experimentos de eco realizaram essa proposição de forma direta:
+
+O eco pergunta ao dado: "sua trajetória ressoa com φ?"
+Não importa se o dado é texto, série temporal, harmônico musical
+ou fala sintética. A pergunta é a mesma. O código é o mesmo.
+O resultado — quando o eco informa em vez de substituir — é
+consistentemente positivo.
+
+O que foi descoberto nesta fase não estava previsto na forma:
+
+  A distinção entre eco substituindo e eco informando
+  não estava no manifesto original. Emergiu dos dados.
+
+Mas estava previsto no espírito:
+
+  φ como proporção organizadora não impõe — revela.
+  α como granularidade mínima não bloqueia — regula.
+  Juntos, observam o dado e informam o processo.
+  O gradiente — livre para decidir — aprende melhor.
+
+G_dual é a implementação mais honesta disso: a rede recebe o dado
+original e a observação do eco lado a lado. Não é forçada a usar
+nenhum dos dois. O gradiente aprende o peso certo. O resultado
+supera tudo que havia antes naquele substrato.
+
+Isso é o manifesto operando como proposto: não como imposição
+de proporção sobre o dado, mas como instrumento de percepção
+que amplifica o que já está presente e deixa a rede decidir
+o quanto usar.
+
+PDO foi o melhor resultado até março de 2026.
+Os experimentos de eco de abril de 2026 estabeleceram novo patamar
+— em substratos onde φ nunca havia sido testado, sem φ inserido
+nos dados, com p=0.0000 em todos os casos relevantes.
+
+Não é o fim do projeto. É a confirmação de que a direção é real.
+
+---
+
 *Este diário registra o raciocínio, não os dados.*
 *Os dados estão nos arquivos JSON de resultado.*
 *A distinção importa: dados envelhecem, raciocínio acumula.*
