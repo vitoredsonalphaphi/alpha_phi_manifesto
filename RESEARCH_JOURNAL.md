@@ -268,6 +268,61 @@ F1/F2/F3 — emergente da física vocal, não inserida artificialmente).
 
 ---
 
+## Entrada 7 — Abril 2026 (semana 2, continuação)
+### A fala inverte o padrão — o eco não é universal
+
+Terceiro experimento não-texto. Substrato: fala sintética com formantes
+vocais (F1/F2/F3/F4 com decaimento exponencial) vs ruído colorido 1/f.
+φ ausente dos dados. Hipótese: direção desconhecida.
+
+Resultado:
+  G:      93.88% ± 1.06%   ← rede aprende bem sem eco
+  G_eco:  89.90% ± 1.15%   ← pior que G (−3.98%, p=0.0000)
+  G_v2:   96.58% ± 1.04%   ← melhor que G (+2.70%, p=0.0000)
+  G_Lphi: 89.90%            ← idêntico a G_eco (padrão consistente)
+
+Três inversões simultâneas em relação aos experimentos anteriores.
+
+A primeira inversão é a mais importante: G = 93.88%. A rede aprende
+a tarefa sem ajuda. Nos experimentos anteriores, G ficava em ~48%
+(acaso) — a rede não via nada. Aqui, a estrutura formântica da fala
+é discriminativa o suficiente para ser aprendida diretamente.
+
+A segunda inversão: eco prejudica. O eco rotaciona fases por φ. Para
+harmônicos simples (experimentos anteriores), a fase era livre —
+rotacionar não destruía informação útil. Para fala, a fase dos
+formantes carrega informação. O eco a apaga. Resultado: a fala, após
+eco, torna-se mais similar ao ruído colorido.
+
+A terceira inversão: G_v2 melhora pela primeira vez. O modulador v2
+não rotaciona fases — extrai coerência espectral como escalar. Para
+fala, a distribuição energética é distinta do ruído 1/f. O v2 captura
+essa distinção sem destruir a estrutura de fase.
+
+O que o projeto aprendeu com os três experimentos juntos:
+
+  Substrato onde G≈acaso (estrutura invisível à rede):
+    eco como pré-função revela → +48% a +50%
+    v2 interno atrapalha → −3% a −8%
+
+  Substrato onde G já é alto (estrutura visível à rede):
+    eco como pré-função atrapalha → −4%
+    v2 interno melhora → +3%
+
+O eco não é amplificador universal. É revelador de estrutura simples
+que a rede não consegue ver sozinha. Quando a estrutura já é visível
+— e especialmente quando a fase é informativa — o eco destrói em vez
+de revelar.
+
+Hipótese para o próximo experimento: o comportamento do eco é
+predito pelo G baseline. Se G < 60%, eco ajuda. Se G > 80%, eco
+pode prejudicar. A fronteira está entre esses valores.
+
+Isso é mais preciso e mais útil do que "eco é substrate-agnostic".
+O eco é substrate-sensitive de uma forma específica e testável.
+
+---
+
 *Este diário registra o raciocínio, não os dados.*
 *Os dados estão nos arquivos JSON de resultado.*
 *A distinção importa: dados envelhecem, raciocínio acumula.*
