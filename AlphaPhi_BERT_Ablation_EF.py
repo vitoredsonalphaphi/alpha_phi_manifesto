@@ -1,3 +1,8 @@
+# © Vitor Edson Delavi · Florianópolis · 2026 · Todos os direitos reservados.
+# Uso comercial proibido sem autorização expressa do autor.
+# Anterioridade: github.com/vitoredsonalphaphi/alpha_phi_manifesto
+# Licença: CC BY-NC-ND 4.0 — creativecommons.org/licenses/by-nc-nd/4.0
+
 # AlphaPhi_BERT_Ablation_EF.py
 # Teste de E (curvatura c=1/φ²) e F (todos os eixos) no bert-base-uncased
 # 20 seeds — etapa necessária antes de testar campo_transmorfo
