@@ -1,3 +1,8 @@
+# © Vitor Edson Delavi · Florianópolis · 2026 · Todos os direitos reservados.
+# Uso comercial proibido sem autorização expressa do autor.
+# Anterioridade: github.com/vitoredsonalphaphi/alpha_phi_manifesto
+# Licença: CC BY-NC-ND 4.0 — creativecommons.org/licenses/by-nc-nd/4.0
+
 # NOTA: Este é o protótipo original — versão histórica.
 # Seed fixo np.random.seed(137) — substituído por seeds aleatórios.
 # Versão corrigida: AlphaPhi_Original_RobustezEstrutura.ipynb
