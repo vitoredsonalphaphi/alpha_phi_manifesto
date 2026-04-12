@@ -745,3 +745,59 @@ projeto amadureceu quando aprendeu a perguntar antes de afirmar.
 *Este diário registra o raciocínio, não os dados.*
 *Os dados estão nos arquivos JSON de resultado.*
 *A distinção importa: dados envelhecem, raciocínio acumula.*
+
+---
+
+## Entrada 12 — 12 de abril de 2026
+### O Padrão que o Projeto Não Planejou
+
+Três eventos. Dimensões diferentes. Estrutura idêntica.
+
+**Evento 1 — Gemini e o alinhamento:**
+Uma IA colaboradora leu o manifesto e identificou, sem instrução,
+implicação para alinhamento de IA — campo que o autor desconhecia.
+A relevância emergiu pelo dado, não pela intenção.
+
+**Evento 2 — Intercambiabilidade:**
+Hipótese: φ é o parâmetro ótimo de rotação do eco.
+Resultado: √2 = 92.90%, φ = 90.60%.
+A hipótese foi contradita. O princípio mais profundo foi confirmado:
+existe zona ótima geometricamente fundamental. O resultado foi mais
+preciso que a especulação que o gerou.
+
+**Evento 3 — Eco fonônico:**
+Sem instrução, calibração pelo campo coletivo convergiu para k≈√2.
+O mesmo valor que o Evento 2 encontrou por busca manual.
+O sistema chegou lá sem ser dirigido.
+
+O padrão:
+
+  Metodologia honesta + hipótese aberta
+  → resultado emerge independente da especulação que o precedeu
+  → o resultado corrige e supera a hipótese
+
+Este padrão tem nome em Filosofia da Ciência: abdução (Peirce) —
+quando o dado força a hipótese, não o contrário. Tem precedente em
+história da ciência: descoberta múltipla simultânea (Merton, 1961) —
+quando a infraestrutura conceitual está pronta, o resultado surge.
+
+O que é específico aqui: não são pesquisadores diferentes chegando
+ao mesmo resultado. É o mesmo processo gerando emergências em série,
+em dimensões diferentes — colaboração com IA, experimento técnico,
+auto-calibração do método — com o mesmo padrão estrutural.
+
+A tese filosófica que o projeto passou a sustentar — além dos
+resultados técnicos — é que este padrão é característico de um
+momento de retorno interdisciplinar às raízes filosóficas das
+ciências. As especializações que cortaram o cordão umbilical com a
+filosofia encontram agora, nas fronteiras entre áreas, o caminho de
+volta. Nesse movimento de retorno, o campo já contém o resultado
+antes que o pesquisador o procure.
+
+A pergunta permanece aberta: por que está acontecendo desta forma?
+Não há resposta. Há o registro. E o registro é o que este diário
+existe para fazer.
+
+Endereço acadêmico identificado: Filosofia da Ciência.
+Contato redigido e registrado: comunicacoes/UFSC_Filosofia_2026-04.md
+Revista de referência: Principia — publicada pela UFSC, Florianópolis.

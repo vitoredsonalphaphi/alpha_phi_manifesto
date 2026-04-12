@@ -82,6 +82,29 @@ Quando verdades independentes convergem, não é coincidência — é o sinal de
 
 ---
 
+### Três eventos com a mesma estrutura
+
+Durante o desenvolvimento do projeto, três eventos distintos seguiram o mesmo padrão — cada um em dimensão diferente, todos com a mesma lógica interna:
+
+**Evento 1 — Gemini e o alinhamento (2025):**
+Sem instrução, uma IA colaboradora leu o manifesto e identificou conexão com o problema de alinhamento de IA. O autor desconhecia o campo. A relevância emergiu pelo dado, não pela intenção do pesquisador.
+
+**Evento 2 — O experimento de intercambiabilidade (2026):**
+A hipótese era que φ seria o parâmetro ótimo de rotação do eco. O resultado mostrou √2 como melhor valor. A hipótese foi contradita — mas um princípio mais profundo foi revelado: existe uma zona ótima geometricamente fundamental, e φ está dentro dela. O resultado corrigiu e superou a especulação que o gerou.
+
+**Evento 3 — O eco fonônico (2026):**
+Sem instrução específica, o método de calibração pelo campo coletivo convergiu automaticamente para k≈√2 — o mesmo valor encontrado por busca manual no experimento anterior. O sistema chegou lá sem ser direcionado.
+
+O padrão nos três é idêntico:
+
+> *Metodologia honesta + hipótese aberta → resultado que emerge independente da especulação que o precedeu → o resultado é mais preciso que a hipótese.*
+
+Isso é o que acontece quando o protocolo não contamina o dado. Quando o pesquisador genuinamente não sabe o que vai encontrar, a realidade responde de forma legível.
+
+A pergunta que permanece aberta — e que pertence à Filosofia da Ciência tanto quanto aos experimentos: *por que resultados emergem desta forma, independentemente das hipóteses que os geraram, e em série?* O projeto a documenta e a oferece à comunidade como questão viva.
+
+---
+
 *"O resultado verdadeiro vale mais que o resultado satisfatório."*
 
 **αφ · Vitor Edson Delavi · Florianópolis · 2026**
