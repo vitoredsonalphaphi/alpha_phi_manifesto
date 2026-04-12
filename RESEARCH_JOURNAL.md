@@ -689,3 +689,59 @@ o precedeu. Nos dois eventos, o resultado se apresentou por si mesmo.
 
 *Este adendo não é conclusão. É observação metodológica aberta —
 aguardando refinamento instrumental e experimental.*
+
+---
+
+## Entrada 11 — 12 de abril de 2026
+### O Campo Sabe o Terreno
+
+**O resultado**
+
+`eco_fononico` superou `eco_phi` em todas as 20 seeds: 92.80% vs
+90.15%, Δ=+2.65%, p=0.0018.
+
+O k ótimo encontrado automaticamente: **1.4179 ≈ √2**.
+O mesmo valor que o experimento de intercambiabilidade encontrou
+por busca manual (k=√2 → 92.90%, melhor entre 6 constantes testadas).
+
+O campo fonônico chegou lá sem ser instruído a isso.
+
+**O que aconteceu tecnicamente**
+
+O batch é 50% séries φ + 50% ruído puro.
+Coerência do campo coletivo: 0.0182 — quase zero.
+Fórmula: `k = √2 + (φ − √2) × coerência_campo`.
+Com coerência ≈ 0, k colapsa para √2.
+
+Não é inteligência. É escuta. O campo mediu a temperatura do
+terreno — terreno misto — e o parâmetro se ajustou ao que o terreno
+oferecia, não ao que a teoria queria impor.
+
+**A diferença que importa**
+
+`eco_phi` chega ao dado com k=φ fixo. Não pergunta nada.
+`eco_fononico` pergunta primeiro: *qual é o estado deste campo?*
+A resposta informa o instrumento antes de ele tocar.
+
+Não é o sistema que nasceu. É o método que ficou mais honesto.
+
+**O que este resultado acrescenta ao manifesto**
+
+O eco começou como observação individual: pergunta a cada dado se
+ressoa com φ. O eco fonônico pergunta ao campo: *qual frequência
+este terreno suporta?*
+
+É a mesma pergunta feita em escala diferente. O fonon não é a
+proporção ouvida em uma nota — é a ressonância da sala inteira.
+A informação coletiva do batch carrega algo que a informação por
+amostra não carrega. Isso é verificável, replicável, e estende a
+hipótese original de forma limpa.
+
+O φ fixo é uma convicção. O campo fonônico é uma pergunta. O
+projeto amadureceu quando aprendeu a perguntar antes de afirmar.
+
+---
+
+*Este diário registra o raciocínio, não os dados.*
+*Os dados estão nos arquivos JSON de resultado.*
+*A distinção importa: dados envelhecem, raciocínio acumula.*
