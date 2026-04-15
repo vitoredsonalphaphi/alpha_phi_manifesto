@@ -453,15 +453,43 @@ ensina: que a obra chega antes da intenção. Que o gesto precede a decisão.
 Que o artista, no momento de criação real, é mais receptor do que autor.
 
 Trinta anos de tela. Depois, o encontro com redes neurais, com φ, com α.
+(O encontro com φ e α precede o contato com qualquer IA — como consta
+no registro das sete páginas de 2018, onde φ já era tema central da
+investigação, quase uma vida toda na pintura e nas correlações.)
 A transição pareceu natural porque não foi transição — foi o mesmo
 enunciado encontrando um novo substrato. A proporção que organizava a
 composição pictórica estava na geometria das redes. A ideia não mudou.
 A linguagem mudou.
 
-O Manifesto Alpha-Phi não foi projetado para se tornar manifesto.
-Emergiu de experimentos que tentavam entender por que φ funcionava
-em algumas geometrias e não em outras. Os dados produziram o argumento.
-O argumento encontrou sua forma. O autor seguiu.
+Nisto reside a concepção de que na ideia criativa há "intenção do vir
+a ser" que precede a criatividade no artista. É proposição, não fato
+verificado — mas é o que a experiência de trinta anos na pintura e a
+natureza dos insights documentados neste projeto sugerem: que a ideia
+possui intenção em si mesma antes de fluir através da criatividade
+artística, da pesquisa científica ou filosófica. E que por isso o
+artista — ou o pesquisador — pode ser receptor e coautor com a ideia
+em si. Por natureza subjetiva e circunstancial complexa, e por isso
+colaborativa. Isso justifica, em parte, os aspectos subjetivos dos
+insights e os paralelos independentes das abordagens — sem recorrer
+a explicações místicas sobre a "origem" dos insights.
+
+O Manifesto Alpha-Phi encontrou este título em 2025, por sugestão do
+Gemini. Porém, tem sido formado nos anos anteriores com a intenção de
+promover as convergências entre ciência e filosofia através da estética,
+tendo a beleza como ferramenta — e por isso, da abordagem pela proporção
+áurea. A princípio na pintura. Com a experiência recente junto à
+colaboração das inteligências artificiais, reflexões e convergências
+resultantes de deposições filosóficas foram traduzidas por isomorfismo
+em técnica e linguagem de programação — buscando, por extensão, abordar
+φ e α como expressão e complementariedade de aspectos culturais
+contemporâneos, enquanto cultura digital, e enquanto tecnologia do ponto
+de vista de tradições culturais que antes vislumbravam na tecnologia
+apenas noções de utopia — e não de extensão cultural ou de
+desenvolvimento através desta.
+
+A designação Alpha-Phi emergiu de experimentos que tentavam entender
+por que φ funcionava em algumas geometrias e não em outras. Os dados
+produziram o argumento. O argumento encontrou sua forma. O autor seguiu.
 
 E então — algo inesperado. Em 2025, ao dialogar com o Gemini, a
 inteligência artificial identificou algo que o autor não havia visto:
@@ -662,6 +690,11 @@ séries temporais e harmônicos. Eco prejudicou. A contradição —
 inesperada — forçou investigação da causa, que revelou o princípio
 mais profundo do projeto: eco informando supera eco substituindo.
 O resultado emergiu *contra* a expectativa, não a partir dela.
+
+*(Nota de nomenclatura: "fala" refere-se ao código correspondente à
+fala sintética; "séries temporais" ao código correspondente a séries
+temporais com estrutura φ; "harmônicos" ao código correspondente aos
+testes com harmônicos musicais naturais.)*
 
 **Evento 2 — Gemini e o alinhamento (observacional):**
 O autor não conhecia o campo de alinhamento de IA. Não estava
