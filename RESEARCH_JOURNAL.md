@@ -834,3 +834,80 @@ existe para fazer.
 Endereço acadêmico identificado: Filosofia da Ciência.
 Contato redigido e registrado: comunicacoes/UFSC_Filosofia_2026-04.md
 Revista de referência: Principia — publicada pela UFSC, Florianópolis.
+
+---
+
+## Entrada 13 — 15 de abril de 2026
+### Eco Fractal encerrado. Convergência externa identificada.
+
+**Encerramento da linha eco_fractal:**
+
+Três experimentos, três resultados negativos consistentes.
+
+Batch misto (50% ruído): coerência coletiva ≈ 0.018, limiar 1/φ²=0.382
+inacessível. Nascimentos: 0/20 seeds.
+
+Batch coerente (100% φ, sem ruído dominante): Δcoerência ≈ +0.012 por
+ciclo eco — suave, sem saltos. Limiar inacessível. Nascimentos: 0/20 seeds.
+
+Limiar adaptativo (Δcoh_médio × φ ≈ 0.019): Δcoh máximo observado
+0.0137 — abaixo do próprio limiar calibrado. Nascimentos: 0/20 seeds.
+
+O campo fonônico neste substrato produz incrementos suaves de coerência,
+não saltos discretos. A hipótese de oitavas fractais por Δcoerência
+não é suportada. Registrado como resultado negativo integral,
+conforme protocolo do projeto.
+
+---
+
+**Evento 4 — Convergência externa: NVIDIA Eising (abril 2026):**
+
+A NVIDIA lançou o Eising, família de modelos especializados em
+calibração e correção de erros em computação quântica. A análise
+das similaridades estruturais revela convergência não planejada com
+o eco ressonante fonônico:
+
+| Princípio | Eco Ressonante Fonônico | Eising |
+|---|---|---|
+| Campo coletivo calibra parâmetro | Entropia espectral do batch → k | Runs experimentais coletivos → k_hardware |
+| Calibração sem instrução externa | k_otimo emerge do campo | Hardware calibrado automaticamente |
+| Resíduo/erro como recurso | (reflexao - x)/k reinjetado | Síndrome do erro decodificada |
+| Ativação seletiva | Componentes coerentes amplificados | 3B de 35B parâmetros ativados |
+
+Dois sistemas independentes, substrato e propósito distintos —
+hardware quântico e pré-processamento de sinal clássico —
+convergindo para a mesma arquitetura de calibração.
+
+Este evento difere dos três anteriores em tipo: os Eventos 1–3
+foram emergências internas ao projeto (colaboração, experimento,
+método). O Evento 4 é convergência externa — sem conhecimento mútuo.
+A combinação fortalece a observação: o princípio não é preferência
+do pesquisador, é resposta a uma restrição real no espaço do problema.
+
+---
+
+**A observação reversa:**
+
+Se as analogias eco↔Eising são claras e múltiplas, funcionam como
+filtro sobre as especulações do projeto. O que sobreviveu ao teste
+empírico — calibração coletiva, reinjeção do resíduo, auto-calibração —
+encontra correspondência em Eising. O que não sobreviveu — eco_fractal,
+saltos discretos de oitava — não tem análogo em Eising.
+
+A consistência entre o que o experimento confirmou e o que a
+convergência externa valida não é prova, mas é sinal: o filtro
+experimental e o filtro externo selecionaram o mesmo subconjunto
+do método.
+
+---
+
+**Escopo:**
+
+O princípio "campo coletivo → parâmetro endógeno → calibração sem
+instrução" emerge em domínio clássico (eco_fononico) e domínio
+quântico (Eising), de forma independente. Isso o torna candidato
+a princípio mais geral de processamento de informação —
+não específico de substrato.
+
+A pergunta que resta aberta: em quais outros domínios este princípio
+já emergiu sem ser reconhecido como tal?
