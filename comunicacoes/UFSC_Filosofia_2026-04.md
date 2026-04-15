@@ -8,8 +8,8 @@
 
 Boa tarde,
 
-Meu nome é Vitor Edson Delavi, sou pesquisador independente e artista
-plástico em Florianópolis. Desenvolvo desde 2025 um projeto —
+Meu nome é Vitor Edson Delavi, sou artista plástico e pesquisador
+independente em Florianópolis. Desenvolvo desde 2025 um projeto —
 Manifesto Alpha-Phi — na interseção entre filosofia, ciência
 computacional e arte.
 
