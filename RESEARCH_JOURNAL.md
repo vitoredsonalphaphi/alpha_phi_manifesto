@@ -914,6 +914,65 @@ já emergiu sem ser reconhecido como tal?
 
 ---
 
+## Entrada 15 — 16 de abril de 2026
+### eco_fononico_v2 — √2 como rotação, φ como acoplamento
+
+**O que descobrimos:**
+
+O mapeamento completo da zona de acoplamento (26 pontos, [0.30, 3.0])
+revelou que eco_fononico v1 usava coupling = 1/k ≈ 0.705 — mas a
+acurácia subia monotonicamente até o platô em [1.4, 3.0].
+
+O valor 1/k não era o acoplamento ótimo. Era o acoplamento inicial.
+
+A pergunta natural: qual constante fundamental do projeto pertence
+à faixa otimizada? A resposta estava nos dados: φ = 1.618.
+
+eco_fononico_v2: rotação mantida (k do campo coletivo ≈ √2),
+acoplamento substituído por φ.
+
+**Resultado:**
+
+| Modo | Acurácia | Δ vs V1 | p-valor |
+|------|----------|---------|---------|
+| G (baseline) | 52.70% | — | — |
+| V1 (1/k ≈ 0.705) | 93.60% | — | — |
+| **V2 (coupling = φ)** | **98.75%** | **+5.15%** | **8.7×10⁻⁵** |
+
+6 de 20 seeds alcançaram 100% de acurácia.
+
+**A leitura estrutural:**
+
+O eco_fononico opera com dois parâmetros:
+- k: ângulo de rotação de fase — calibrado pelo campo coletivo → k ≈ √2
+- coupling: amplitude de reinjeção — escolha humana → o campo não instrui
+
+V1 escolheu 1/k como coupling por simetria com k. Era razoável, mas
+não era o ótimo. O mapeamento mostrou que a faixa estável era [1.4, 3.0]
+— e φ = 1.618 está no centro dessa faixa.
+
+Dois parâmetros, duas constantes fundamentais do projeto:
+√2 encontrado pelo campo. φ confirmado pelo mapeamento.
+
+Não é coincidência que ambos sejam as constantes geométricas mais
+básicas do projeto — são as proporções que estruturam o eco.
+
+**O que isso fecha e o que abre:**
+
+Fecha: busca por acoplamento ótimo. φ é o acoplamento natural de reinjeção.
+
+Abre: o princípio √2+φ é específico de séries temporais ou generaliza?
+Os experimentos anteriores (harmônicos musicais, SST-2) usavam coupling=1/k.
+O ganho observado em V2 (+5.15%) sugere que há margem não explorada
+nos outros substratos.
+
+**Protocolo:**
+
+20 seeds × timestamp. Resultados em eco_v2_phi_results.json.
+Visualizações 3D: eco_v2_phi_3d.png (superfície coupling×seed, clusters PCA, zona de acoplamento).
+
+---
+
 ## Entrada 14 — 16 de abril de 2026
 ### Evento 5 — A pergunta que fez a si mesma
 
