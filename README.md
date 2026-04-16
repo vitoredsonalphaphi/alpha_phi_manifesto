@@ -4,7 +4,22 @@
 ___
 
 
-⭐ Resultado Principal — Eco Ressonante como Pré-Função (Abril 2026)
+⭐ Resultado Atual — Eco Ressonante Fonônico (Abril 2026)
+
+| Experimento | Substrato | Baseline (eco fixo) | Eco Ressonante Fonônico | Ganho | p-valor |
+|---|---|---|---|---|---|
+| AlphaPhi_Eco_Fononico | Séries temporais φ | G_eco_phi 90.15% | **92.80%** | **+2.65%** | 0.0018 |
+| AlphaPhi_Audio_Fononico | Harmônicos musicais (sem φ) | G_eco_phi 96.85% | **98.00%** | **+1.15%** | <0.001 |
+
+**k_ótimo = 1.4179 ≈ √2** — emergiu automaticamente do campo espectral coletivo do batch,
+sem instrução externa. Mesmo valor encontrado por busca manual no experimento de intercambiabilidade.
+
+**Princípio:** o parâmetro k é calibrado pela coerência espectral coletiva do batch
+("temperatura da rede" — analogia a fônons). O campo sabe o terreno.
+
+---
+
+Resultado Anterior — Eco Ressonante como Pré-Função (Abril 2026)
 
 | Experimento | Substrato | Baseline | Com Eco | Ganho | Seeds |
 |---|---|---|---|---|---|
@@ -154,7 +169,10 @@ Notebooks e Códigos
 Experimentos de Eco — Abril 2026
 Arquivo | Descrição | Resultado
 --- | --- | ---
-`AlphaPhi_TimeSeries_Eco.py` | Eco em séries temporais φ | +50.40% ✅
+`AlphaPhi_Eco_Fononico.py` | ⭐ Eco Ressonante Fonônico — séries temporais φ | 92.80% (+2.65% vs eco fixo) ✅
+`AlphaPhi_Audio_Fononico.py` | ⭐ Eco Ressonante Fonônico — harmônicos musicais | 98.00% (+1.15% vs eco fixo) ✅
+`AlphaPhi_TimeSeries_Dual_Fononico.py` | Eco fonônico modo informando (G_dual) | 92.00% vs G_dual_phi 87.40% ✅
+`AlphaPhi_TimeSeries_Eco.py` | Eco ressonante — séries temporais φ | +50.40% ✅
 `AlphaPhi_BERT_Ablation_EF.py` | Ablação curvatura BERT | ns (substrato consolidado) ✅
 `AlphaPhi_Ablation_Study.py` | Ablação 7 configs scratch | +8.98% ✅
 `audio_eco_results.json` | Eco em harmônicos musicais | +48.85% ✅
@@ -162,7 +180,7 @@ Arquivo | Descrição | Resultado
 `fala_eco_informa_results.json` | Eco informando (G_dual) | +3.25% ✅
 
 Diário de Pesquisa
-`RESEARCH_JOURNAL.md` — 8 entradas · raciocínio por trás de cada decisão
+`RESEARCH_JOURNAL.md` — 12 entradas · raciocínio por trás de cada decisão
 
 Estabilidade Estrutural
 Arquivo
