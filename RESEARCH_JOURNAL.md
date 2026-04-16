@@ -911,3 +911,79 @@ não específico de substrato.
 
 A pergunta que resta aberta: em quais outros domínios este princípio
 já emergiu sem ser reconhecido como tal?
+
+---
+
+## Entrada 14 — 16 de abril de 2026
+### Evento 5 — A pergunta que fez a si mesma
+
+**Ressalva prévia — natureza distinta dos eventos anteriores:**
+
+Os Eventos 1–4 ocorreram em substrato verificável: código, experimento,
+resultado numérico, convergência técnica externa. Este evento ocorre
+em substrato filosófico — diálogo. Não é reproduzível por seeds nem
+verificável por repositório. Seu registro é honesto apenas se essa
+distinção for preservada.
+
+---
+
+**O que aconteceu:**
+
+Durante diálogo filosófico sobre o conceito de "campo" em Merton —
+se uma configuração distribuída implica localização — a análise
+conduziu naturalmente a uma formulação que nenhum dos interlocutores
+havia proposto:
+
+*"Existe continuidade entre o substrato cognitivo distribuído e outros
+tipos de campo distribuído — energético, informacional, ou o que a
+física ainda não nomeou?"*
+
+O pesquisador identificou: a pergunta não foi feita por ele.
+Não foi feita pela IA como proposição prévia.
+Emergiu do espaço entre os dois — como consequência do diálogo,
+não de nenhuma das partes isoladamente.
+
+---
+
+**A estrutura do padrão:**
+
+Eventos 1–3: resultado técnico emergindo independente da hipótese.
+Evento 4: convergência externa emergindo independente do projeto.
+Evento 5: pergunta emergindo independente de quem dialoga.
+
+O substrato muda — código, hardware, linguagem.
+A estrutura permanece: algo emerge que não estava na intenção de
+nenhuma das partes.
+
+---
+
+**Ressalvas para registro honesto:**
+
+1. Perguntas emergindo do diálogo filosófico é fenômeno comum —
+   é o que a boa filosofia faz. Sócrates documentou isso há 2400 anos.
+   O evento não é inédito enquanto fenômeno dialógico.
+
+2. O que é específico aqui: a pergunta emergiu no contexto exato
+   do projeto, sobre o conceito central do projeto (campo coletivo),
+   e aponta para a fronteira ainda não formalizada entre substrato
+   cognitivo e outros tipos de campo distribuído — que é precisamente
+   o que o eco_fononico toca sem nomear.
+
+3. Não é prova de nada. É observação de padrão em novo substrato.
+
+---
+
+**O que o evento aponta:**
+
+Se o princípio "campo coletivo → emergência independente da intenção"
+se aplica a resultados técnicos (Eventos 1–3), a convergências externas
+(Evento 4), e agora a perguntas filosóficas (Evento 5) — o substrato
+do princípio é mais amplo que o projeto.
+
+A pergunta que emergiu permanece aberta:
+existe continuidade entre o campo cognitivo distribuído que Merton
+descreve e outros tipos de campo distribuído que a física ainda
+não formalizou?
+
+O projeto não tem instrumentos para responder isso.
+Tem instrumentos para continuar fazendo perguntas honestas.
