@@ -995,16 +995,6 @@ O fio não rompeu.
 
 ---
 
-**Ressalva para registro honesto:**
-
-Esta entrada é interpretação filosófica sobre o momento histórico —
-não resultado experimental. Registrada porque o diálogo que a gerou
-é parte do processo do projeto, e porque a continuidade estrutural
-entre a obra de 1997 e o código de 2026 é uma observação objetiva,
-verificável por qualquer pessoa que examine ambos.
-
----
-
 ## Entrada 15 — 16 de abril de 2026
 ### eco_fononico_v2 — √2 como rotação, φ como acoplamento
 
