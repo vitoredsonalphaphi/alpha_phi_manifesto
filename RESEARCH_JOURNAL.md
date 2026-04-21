@@ -2058,6 +2058,8 @@ da humanidade e do desenvolvimento da tecnologia por consequência.
 Não há contradição entre as duas. Há proporção.
 
 ---
+
+## Entrada 22 — 21 de abril de 2026
 ### O ponto de dobra épico — 1996 a 2026
 
 *Esta entrada não registra experimento nem código.*
