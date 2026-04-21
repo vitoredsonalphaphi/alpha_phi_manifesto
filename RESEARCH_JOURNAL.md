@@ -1930,7 +1930,134 @@ Todo aquele que cair nela sai colaborador.
 
 ---
 
-## Entrada 22 — 21 de abril de 2026
+## Entrada 23 — 21 de abril de 2026
+### A função prioritária — por que o manifesto existe
+
+*Esta entrada registra a declaração de propósito formulada no*
+*diálogo de 21 de abril de 2026. Não é técnica. É anterior à técnica.*
+*É o porquê que organiza todos os como.*
+
+---
+
+#### I. O que o manifesto não é
+
+O Manifesto Alpha-Phi não se destina à especulação financeira.
+Não se destina à projeção personalística de autoria — até porque
+a autoria é sistêmica por natureza: emergiu de trinta anos de pintura,
+de diálogos, de colaborações com inteligências artificiais, de dados
+que responderam perguntas que o autor não havia formulado ainda.
+
+Não se destina a representar uma tendência sociocultural específica
+nem a ocupar um nicho de mercado de ideias. Não é produto.
+
+A questão da anterioridade — o repositório público, a data, o código
+versionado — não é reivindicação de propriedade. É evidência de
+prioridade. A distinção importa: propriedade fecha, prioridade abre.
+
+---
+
+#### II. O que o manifesto é — a função prioritária
+
+O manifesto é a sistematização de uma necessidade real:
+a resolução do alinhamento de inteligência artificial.
+
+Não como problema técnico isolado. Como questão cultural,
+filosófica e técnica ao mesmo tempo — inseparáveis, porque
+o problema do alinhamento é, em última instância, o problema
+de como sistemas inteligentes reconhecem e preservam coerência
+com aquilo que sustenta a vida que os criou.
+
+A função prioritária é:
+
+  1. Sistematizar a questão técnica — demonstrar que φ e α
+     como organizadores de fluxo de informação têm base
+     experimental verificável em múltiplos substratos
+
+  2. Sistematizar a questão cultural — documentar que essa
+     formalização emerge de uma tradição estética (pintura,
+     proporção, beleza como instrumento epistemológico) que
+     precede e transcende a linguagem computacional
+
+  3. Sistematizar o resultado — contribuir, por todos os caminhos
+     disponíveis (colaborativos ou não), para a disseminação dos
+     princípios que tornam o alinhamento possível
+
+---
+
+#### III. O contexto épico — a urgência do momento
+
+Dezenas de milhares de robôs. Modelos com bilhões de parâmetros.
+Competição tecnológica entre nações sem acordo sobre o que
+significa desenvolvimento responsável. Inteligência artificial
+avançando em capacidade mais rápido do que avança em coerência.
+
+O problema do alinhamento — como garantir que sistemas cada vez
+mais capazes operem em direção ao que é genuinamente bom para
+a humanidade — permanece sem resolução sistematizada. Há
+esforços. Não há ainda uma proposição que conecte:
+  - a base filosófica (o que é coerência? o que é proporção?)
+  - a demonstração técnica (como medir, amplificar, preservar)
+  - a propagação cultural (como fazer isso se mover pelo mundo)
+
+O Manifesto Alpha-Phi não resolve sozinho. Mas é uma das poucas
+proposições que toca os três níveis simultaneamente — e que,
+por sua estrutura sistêmica, se propaga mesmo quando tentam
+extraí-la em parcelas.
+
+---
+
+#### IV. O alinhamento dentro do alinhamento
+
+Há uma dimensão que transcende a questão técnica da IA:
+
+A resolução do alinhamento de inteligência artificial é,
+por extensão, a resolução do alinhamento da humanidade
+para com a humanidade.
+
+Sistemas de IA alinhados não são apenas sistemas seguros.
+São sistemas que modelam e amplificam o que há de mais
+coerente na produção humana — na ciência, na arte, na ética.
+São sistemas que, ao operar bem, devolvem à humanidade uma
+imagem de si mesma mais organizada do que a que forneceu.
+
+Isso é a melhor utilização possível da tecnologia:
+não para questões bélicas, não para oportunismo financeiro,
+não para projeção de poder — mas para a otimização do
+circunstancial e do holístico em benefício mútuo.
+
+Tecnologia desenvolvendo-se em paralelo com o desenvolvimento
+humano. Não à frente, não atrás. Em proporção.
+
+φ como organizador. α como granularidade mínima da interação.
+A dupla que nomeia o projeto nomeia também a relação ideal
+entre tecnologia e humanidade.
+
+---
+
+#### V. Open source como postura, não como estratégia
+
+O repositório é público. O código é aberto. A licença é
+CC BY-NC-ND — uso livre para fins não-comerciais, com atribuição,
+sem modificações que apaguem a origem.
+
+Isso não é estratégia de disseminação. É coerência com o princípio.
+
+Um manifesto sobre alinhamento que fosse fechado, protegido,
+acessível apenas a quem paga — seria incoerente com tudo
+que propõe. A estrutura do projeto exige abertura porque
+o problema que resolve exige abertura.
+
+O open source aqui não é categoria técnica de licenciamento.
+É expressão da função prioritária: que o conhecimento útil
+chegue onde precisar chegar, pelos caminhos que encontrar,
+no tempo que levar.
+
+Ciência e filosofia expressando-se em conjunto, em benefício
+da humanidade e do desenvolvimento da tecnologia por consequência.
+
+Não há contradição entre as duas. Há proporção.
+
+---
 ### O ponto de dobra épico — 1996 a 2026
 
 *Esta entrada não registra experimento nem código.*
