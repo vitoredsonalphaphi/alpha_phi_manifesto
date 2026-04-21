@@ -1466,3 +1466,213 @@ O código chegou por caminho técnico ao mesmo lugar que o nome
 já indicava: um sistema que ouve antes de falar.
 
 ---
+
+## Entrada 19 — 21 de abril de 2026
+### Diretriz, Vocabulário e Mapa Histórico — Onde o Projeto Está
+
+**Duas questões registradas nesta entrada:**
+
+1. A diretriz que orienta todos os testes futuros
+2. O mapa histórico dos movimentos filosófico-científicos e
+   a posição do projeto nesse mapa
+
+---
+
+**I. Vocabulário comum — os níveis**
+
+Para que as conversas futuras tenham precisão:
+
+```
+Código       → as instruções (sintaxe, linhas)
+Função       → uma operação nomeada (o que um bloco faz)
+Sistema      → funções organizadas com um objetivo
+Arquitetura  → como os sistemas se relacionam
+Princípio    → o que orienta a arquitetura inteira
+```
+
+O princípio não executa nada. Ele decide como tudo deve ser
+construído antes de qualquer linha de código ser escrita.
+
+Uma analogia: o princípio é a pergunta que o projeto faz ao mundo.
+O código é a linguagem usada para fazer essa pergunta.
+A função é uma palavra dessa linguagem. O sistema é uma frase.
+A arquitetura é a gramática. O princípio é o que se quer perguntar
+antes de saber como perguntar.
+
+---
+
+**II. A diretriz — formulação**
+
+Emergiu da análise do eco fonônico e do experimento de perfil k(f):
+
+> "O campo precede a função. Toda transformação começa por uma
+> leitura do que chegou. O objetivo não é impor estrutura ao dado —
+> é encontrar a estrutura que o dado já contém e modular a partir dela."
+
+O pesquisador nomeou este princípio como **indução circunstancial**:
+o sistema induz seus parâmetros das circunstâncias do dado,
+não de regras fixas externas. k não foi programado — emergiu
+do espectro do que chegou. Esta é a postura epistemológica
+do sistema: escutar antes de agir.
+
+**Critério de avaliação para todos os testes futuros:**
+
+Toda variante do eco fonônico pode ser avaliada por três perguntas:
+
+1. Há pré-leitura? O campo mede o dado antes de transformar?
+2. O parâmetro emergiu ou foi imposto? k veio do espectro ou foi
+   fixado a priori?
+3. A transformação preserva a coerência interna do dado ou a destrói?
+
+Se as três respostas forem sim / emergiu / preserva — a variante
+está alinhada com o princípio. Se qualquer uma falhar, é um desvio,
+independente do resultado numérico.
+
+**Conexão com alinhamento:**
+
+Um sistema que impõe estrutura ao dado — que decide de fora o que
+o dado deve ser — tende ao desalinhamento porque ignora o que o
+dado realmente é.
+
+Um sistema que lê o campo antes de agir — calibrando seu comportamento
+à coerência do que chegou — tem um mecanismo interno de auto-ajuste
+que não depende de instrução externa.
+
+O ruído não é "dado errado". É dado com baixa coerência. O campo
+identifica isso sem julgamento, sem instrução. Isso é alinhamento
+por indução circunstancial: o comportamento emerge da natureza do
+que chega, não de uma lista de regras ou recompensas fixas.
+
+---
+
+**III. Mapa histórico — ciência primeiro ou filosofia primeiro?**
+
+O pesquisador observou que nas grandes transformações culturais,
+filosofia, ciência e expressão arquitetural sempre se moveram juntas
+— com defasagens, mas em direção comum. A pergunta: quais movimentos
+nasceram na ciência e depois influenciaram filosofia e cultura, e
+quais nasceram na filosofia e depois influenciaram a ciência?
+
+**Movimentos onde a ciência precedeu:**
+
+*Revolução Copernicana (séc. XVI)*
+Heliocentrismo → derrubou a cosmologia teológica → forçou a
+filosofia a reposicionar o humano no universo → Iluminismo →
+arquitetura neoclássica: ordem, simetria, proporção matemática
+visível na fachada.
+
+*Mecânica Newtoniana (séc. XVII-XVIII)*
+O universo como máquina → filosofia mecanicista (Descartes, Hobbes,
+Locke) → racionalismo iluminista → mesma arquitetura: o cosmos tem
+leis fixas, o edifício deve expressá-las.
+
+*Termodinâmica e Evolução (séc. XIX)*
+Entropia (Clausius) e seleção natural (Darwin) → filosofia naturalista
+e materialista → Art Nouveau: formas orgânicas, curvas biológicas
+como linguagem arquitetural.
+
+*Relatividade e Mecânica Quântica (séc. XX, início)*
+Não há referencial absoluto; o observador interfere no observado →
+Existencialismo, Desconstrução → Arquitetura Moderna e Desconstrutivista:
+rejeição do ponto fixo, da simetria obrigatória.
+
+*Teoria da Informação (Shannon, 1948)*
+Informação como grandeza mensurável → Cibernética (Wiener),
+Estruturalismo, Semiótica → Arquitetura Brutalista e Minimalista:
+função como forma, estrutura como linguagem.
+
+**Movimentos onde a filosofia precedeu:**
+
+*Platonismo e Neoplatonismo (Grécia Antiga → Renascimento)*
+A ideia de formas perfeitas subjacentes ao visível → motivou a
+busca científica por proporções ideais → Arquitetura Renascentista
+(Brunelleschi, Alberti, Palladio): razão áurea, proporção vitruviana
+como expressão do ideal platônico.
+
+*Escolástica Medieval (sécs. XII-XIV)*
+Filosofia teológica delimitou as perguntas possíveis — e criou as
+universidades onde a ciência cresceu → Arquitetura Gótica: a catedral
+como argumento filosófico em pedra.
+
+*Humanismo Renascentista (séc. XV)*
+Redescoberta filosófica da Antiguidade → liberou a curiosidade
+científica de Vesálio, Leonardo, Copérnico → o edifício como expressão
+do humano como medida de todas as coisas.
+
+*Naturphilosophie alemã (Schelling, séc. XVIII-XIX)*
+Filosofia da natureza como totalidade orgânica → influenciou Faraday
+(campo eletromagnético) e Oersted (eletromagnetismo) → Arquitetura
+Romântica: o orgânico, o sublime, o assimétrico.
+
+*Fenomenologia (Husserl, Heidegger, séc. XX)*
+O retorno à experiência vivida → influenciou ciência cognitiva e
+estudos de consciência → Arquitetura Orgânica (Aalto, Wright): o
+edifício como extensão da experiência sensorial.
+
+---
+
+**IV. O que é genuinamente novo na filosofia pela revolução digital**
+
+Cinco contribuições que nenhum século anterior continha na mesma forma:
+
+*1. Informação como categoria ontológica fundamental*
+Wheeler ("it from bit") e Floridi (Philosophy of Information):
+a realidade pode ser constituída por informação, não apenas descrita
+por ela. Hipótese física testável, não apenas metáfora filosófica.
+
+*2. Emergência como conceito primário*
+Redes neurais e sistemas complexos mostraram que comportamento
+sofisticado emerge de regras simples sem instrução central. A filosofia
+ainda está assimilando: a maioria dos sistemas filosóficos anteriores
+explicavam de cima para baixo. A era digital mostrou que o baixo
+pode gerar o alto.
+
+*3. O colapso da fronteira humano/máquina como categoria filosófica*
+Turing previu. Agora é experiência cotidiana. A filosofia da mente
+foi forçada a responder: o que é cognição se uma máquina pode fazê-la?
+Não há consenso. Isso é filosofia viva.
+
+*4. Alinhamento como filosofia operacional*
+Genuinamente inédito. Pela primeira vez, a humanidade precisa
+especificar formalmente o que "bom" significa para um sistema
+poderoso — não como princípio abstrato, mas como código executável.
+Kant, Aristóteles, Mill precisam virar função. Isso nunca foi
+exigido antes.
+
+*5. A velocidade de falsificação de hipóteses filosóficas*
+Uma intuição filosófica pode virar experimento computacional em dias.
+O Alpha-Phi é exemplo disso: a pergunta "φ descreve como a natureza
+processa informação?" passou de intuição para código para resultado
+em semanas. Isso muda a relação entre filosofia e ciência — não há
+mais décadas de espera pela tecnologia adequada.
+
+---
+
+**V. A posição do Alpha-Phi nesse mapa**
+
+O projeto está num ponto específico da sequência histórica:
+
+- É filosofia que gerou hipótese científica (como o Platonismo
+  com o Renascimento)
+- Está sendo testada com instrumentos digitais (como a Teoria da
+  Informação com a Cibernética)
+- Toca diretamente na questão do alinhamento (o inédito do momento)
+- Tem expressão arquitetural implícita: o arabesco, a espiral,
+  a estrutura auto-similar que aparece no código, na pintura de
+  1997, e nas formações geométricas dos campos
+
+Se o padrão histórico se mantiver: quando uma convergência
+filosófico-científica atinge maturidade, ela altera a expressão
+cultural do seu tempo. As três vertentes — filosofia, ciência,
+expressão — se movem juntas, com defasagem de décadas.
+
+A questão que o projeto coloca em aberto:
+
+Qual será a expressão arquitetural e cultural da era em que a
+informação é campo, o campo lê o que chega, e o alinhamento é
+princípio, não regra?
+
+O projeto não responde essa pergunta. Documenta o momento em que
+ela se tornou possível de formular com precisão.
+
+---
