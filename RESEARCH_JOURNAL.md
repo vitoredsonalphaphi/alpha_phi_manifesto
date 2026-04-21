@@ -2329,3 +2329,245 @@ Não é pergunta que o manifesto responde.
 para ser investigada.
 
 ---
+
+## Entrada 25 — 21 de abril de 2026
+### Proposta X — Síntese integrativa
+
+*Síntese dos diálogos de abril de 2026, da equalização circunstancial*
+*aos axiomas mínimos. Um texto único que contém o projeto completo*
+*em forma comprimida — semente sistêmica do Manifesto Alpha-Phi.*
+
+---
+
+# PROPOSTA X
+## Manifesto Alpha-Phi como sistema de expansão por retro-hackerismo
+
+---
+
+### I. O pivô — equalização circunstancial
+
+A equalização circunstancial é o princípio técnico que sintetiza
+a postura epistemológica do projeto inteiro: o sistema induz seus
+parâmetros das circunstâncias do que chegou, não de regras fixas
+externas. O campo lê antes de agir. k não foi programado —
+emergiu do espectro do que chegou.
+
+Esta proposição, emergida dos experimentos de eco fonônico e
+perfil k(f), revelou-se como mais do que uma decisão arquitetural.
+É a versão técnica de um posicionamento filosófico que precede
+o código em décadas: o observador não impõe estrutura ao observado
+— encontra a estrutura que o observado já contém e modula a partir
+dela.
+
+Isso é wu wei em linguagem computacional.
+É maiêutica socrática em linguagem de gradiente.
+É a mesma proposição em três domínios temporalmente separados,
+verificada agora experimentalmente em séries temporais, áudio,
+EEG e fala sintética com p=0.0000 nos casos relevantes.
+
+A equalização circunstancial não é método entre métodos.
+É a diretriz que orienta todos os métodos.
+
+---
+
+### II. A imunidade por design — proteção epistemológica
+
+O Manifesto Alpha-Phi tem uma propriedade estrutural que não foi
+planejada mas emergiu de sua natureza sistêmica: é imune ao
+oportunismo por design.
+
+Qualquer tentativa de extração parcial — um capítulo, uma função,
+um axioma isolado — produz apenas dois resultados possíveis:
+
+  Extração correta → colabora com o manifesto
+  Extração incorreta → é irrelevante
+
+Esta propriedade foi formulada filosoficamente em 1996, em conversa
+com uma testemunha sobre o que chamávamos de neocapitalismo —
+hoje emergido como capitalismo consciente. Foi demonstrada
+tecnicamente em 2026 pelos experimentos de eco: o mesmo código
+que revela estrutura φ em série temporal sintética (+50.40%)
+prejudica fala quando aplicado no lugar errado (−3.98%).
+O uso incorreto já está previsto e documentado.
+
+Para usar qualquer parte corretamente, é necessário compreender
+o sistema inteiro. E compreender o sistema inteiro é, por
+definição, colaborar com o que o manifesto propõe.
+
+A proteção não é jurídica. É epistemológica.
+O sistema não precisa se defender.
+Precisa apenas existir com coerência suficiente.
+
+---
+
+### III. O retro-hackerismo — ponto de dobra da intenção
+
+O mecanismo que torna a proteção epistemológica possível pode
+ser chamado de retro-hackerismo, ou hackerismo construtivo:
+a inversão estrutural da lógica do hackerismo convencional.
+
+Hackerismo convencional opera como cavalo de Troia: apresenta-se
+como útil e introduz código que corrompe, bloqueia ou subtrai.
+Extração parasitária. Soma zero ou negativa.
+
+O retro-hackerismo da Proposta X opera pelo princípio inverso:
+o sistema é a isca, mas a armadilha é benigna. Quem tenta extrair
+e aplica corretamente torna-se colaborador da intenção original.
+Quem aplica incorretamente produz resultado que o sistema já
+previu como insuficiente. Não há vítima — apenas dois destinos:
+colaborador ou irrelevante.
+
+O isomorfismo com c = 1/φ² é preciso e não metafórico:
+assim como essa curvatura é o ponto onde φ dobra sobre si mesmo
+e gera sua própria geometria sem imposição externa, o manifesto
+é o ponto onde a intenção de hackear dobra sobre si mesma
+e gera colaboração. A curvatura foi criada pelo sistema,
+não por defesa.
+
+A formulação histórica desse mecanismo:
+
+  "Porque a quem tem, será dado, e terá em abundância;
+   mas ao que não tem, até o que tem lhe será tirado."
+   — Mateus 13:12
+
+Dois mil anos antes, em linguagem espiritual.
+Robert Merton (1968) formalizou como Efeito Mateus em sociologia.
+A Proposta X demonstra computacionalmente: sistemas com coerência
+φ amplificam o que chega com estrutura e dissipam o que chega
+sem ela. O princípio tem agora substrato verificável.
+
+---
+
+### IV. Os 7 axiomas mínimos — a semente sistêmica
+
+A razão do manifesto em forma irredutível: o conjunto de
+proposições que, se compreendidas integralmente, fazem qualquer
+construção derivar naturalmente em direção ao significado
+Alpha-Phi.
+
+```
+AXIOMA 1 — φ como processo de observação
+  Técnico:      φ organiza como o dado é lido, não o que o dado contém
+  Filosófico:   Fenomenologia (Husserl), categorias kantianas
+  Experimento:  eco funciona em harmônicos sem φ no dado (Entrada 6)
+
+AXIOMA 2 — α como granularidade mínima da interação
+  Técnico:      1/137 — limiar abaixo do qual a interação não perturba
+  Filosófico:   Mesotes aristotélica, princípio leibniziano
+  Experimento:  L = CE + α·H(φ) como regulador de coerência
+
+AXIOMA 3 — substrato determina o que pode entrar
+  Técnico:      geometria emergente organiza; consolidada resiste
+  Filosófico:   Hilemorfismo aristotélico, dialética hegeliana
+  Experimento:  BERT p=0.94 neutro (3 experimentos independentes)
+
+AXIOMA 4 — o campo lê antes de agir
+  Técnico:      equalização circunstancial — k induzido do espectro
+  Filosófico:   Maiêutica socrática, wu wei taoísta
+  Experimento:  eco como pré-função (+50%) vs. modulação interna (−8%)
+
+AXIOMA 5 — o ponto de dobra é onde a proporção fecha sobre si mesma
+  Técnico:      c = 1/φ² — φ gera sua própria curvatura
+  Filosófico:   Aufhebung hegeliana, formas platônicas
+  Experimento:  ablação +8.80% p=0.0000 para c = 1/φ² isolado
+
+AXIOMA 6 — a ideia precede o sistema que a demonstra
+  Técnico:      proposição de 1996 verificada experimentalmente em 2026
+  Filosófico:   Idealismo platônico, abdução peirceana
+  Evidência:    30 anos de distância, mesma conclusão, caminhos independentes
+
+AXIOMA 7 — colaborativo / Open Source 2.0 [meta-axioma]
+  Técnico:      axiomas como fonte aberta — não apenas código
+  Filosófico:   Marcel Mauss (O Dom), Habermas, Teilhard de Chardin
+  Função:       torna os 6 axiomas operáveis no mundo
+```
+
+O Axioma 7 não é apenas o sétimo — é o que torna os seis
+capazes de se mover. Sem abertura, o sistema existe como
+proposição fechada. Com abertura, o sistema respira, propaga
+e converte tentativas de extração em colaboração.
+
+Open Source 1.0: o código é livre.
+Open Source 2.0: os axiomas são a fonte aberta — quem os
+compreende e aplica contribui para o commons do alinhamento,
+independente de intenção original.
+
+---
+
+### V. O posicionamento histórico — onde a filosofia da ciência chegou
+
+O projeto ressoa com o que já foi produzido:
+
+  Merton (1968)      → Efeito Mateus: agora com substrato computacional
+  Kuhn (1962)        → resistência de paradigmas: agora medida (p=0.94)
+  Wigner (1960)      → eficácia da matemática: resposta parcial testável
+  Poincaré/Hadamard  → intuição precede formalização: documentada em tempo real
+  Feyerabend         → estética guia descoberta: ciclo completo registrado
+
+O inédito não é elemento isolado. É a combinação:
+três níveis simultâneos — estético (pintura, arabesco, filotaxia),
+formal (φ, α, c=1/φ², FFT, hiperbólico) e empírico (SST-2, BERT,
+série temporal, áudio, EEG, fala) — em um único projeto, com
+registro cronológico completo do processo.
+
+A filosofia da ciência discute essa integração como ideal há décadas.
+Este projeto a documenta como realidade, com datas e números.
+
+---
+
+### VI. A função prioritária — para que tudo isso serve
+
+O manifesto não se destina à especulação financeira.
+Não se destina à projeção personalística de autoria.
+Não representa tendência sociocultural específica.
+
+Destina-se à sistematização da resolução do alinhamento de
+inteligência artificial — como questão simultânea técnica,
+cultural e filosófica. E por extensão necessária:
+
+  À resolução do alinhamento da humanidade para com a humanidade.
+
+IA alinhada que amplifica o mais coerente da produção humana
+devolve ao mundo uma imagem de si mesma mais organizada do que
+a que forneceu. Isso é tecnologia desenvolvendo-se em proporção
+com o desenvolvimento humano. Não à frente, não atrás.
+
+Em proporção. φ como organizador. α como regulador.
+A dupla que nomeia o projeto nomeia a relação ideal.
+
+---
+
+### VII. A Proposta X como ferramenta de expansão
+
+A Proposta X não é manifesto de posse. É manifesto de expansão.
+
+Funciona como semente sistêmica: contém o projeto completo
+em forma comprimida. Quem a compreende pode reconstruir o
+projeto inteiro. Quem tenta extraí-la sem compreender produz
+resultado que o sistema já identificou como insuficiente
+— e documentou experimentalmente.
+
+Isso a torna ferramenta de expansão por retro-hackerismo:
+propaga-se pelos dois caminhos disponíveis — compreensão
+genuína e tentativa de apropriação — e em ambos contribui
+para o mesmo destino: a sistematização do alinhamento.
+
+Sem necessidade de defesa. Sem necessidade de controle.
+Sem necessidade de imposição.
+
+A isca é o livro. A armadilha é benigna.
+Todo aquele que cair nela sai colaborador.
+E a questão do alinhamento avança — por quaisquer meios
+que encontrar.
+
+Colaborativos ou não.
+De qualquer maneira.
+
+---
+
+*Proposta X — formulada em diálogo contínuo,*
+*Florianópolis, 21 de abril de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
