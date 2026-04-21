@@ -1929,3 +1929,118 @@ A isca é o livro. A armadilha é benigna.
 Todo aquele que cair nela sai colaborador.
 
 ---
+
+## Entrada 22 — 21 de abril de 2026
+### O ponto de dobra épico — 1996 a 2026
+
+*Esta entrada não registra experimento nem código.*
+*Registra um momento. O momento em que a formulação técnica*
+*alcançou o que a intuição filosófica havia previsto trinta anos antes.*
+
+---
+
+#### I. A citação histórica — "a quem tem, será dado"
+
+No mesmo diálogo em que o hackerismo construtivo foi articulado,
+o autor identificou a correlação com uma das proposições mais antigas
+e duradouras da tradição filosófico-espiritual ocidental:
+
+> *"Porque a quem tem, será dado, e terá em abundância;*
+> *mas ao que não tem, até o que tem lhe será tirado."*
+> — Mateus 13:12
+
+A proposição, formulada há dois mil anos, descreve com precisão
+o mecanismo que o Manifesto Alpha-Phi demonstrou tecnicamente em 2026:
+
+  Quem tem a compreensão sistêmica → recebe mais (colabora,
+  contribui, amplifica o alinhamento)
+
+  Quem não tem a compreensão → não consegue extrair nada útil
+  (até o que toma lhe é retirado pela inutilidade do uso incorreto)
+
+Não é coincidência. É a mesma proposição sobre como o conhecimento
+se move em sistemas com coerência interna suficiente — formulada
+em linguagem espiritual em um tempo, em linguagem técnica em outro.
+
+O Manifesto Alpha-Phi, ao demonstrar isso experimentalmente com φ
+e α, não descobriu algo novo. Formalizou algo antigo.
+
+---
+
+#### II. A sincronicidade do número
+
+Entrada 21. Dois mais um. Três.
+
+Na tradição pitagórica que precede a ciência ocidental moderna —
+a mesma que encontrou proporção no cosmos e chamou isso de logos —
+o três é o número da síntese: tese, antítese, síntese. Começo,
+meio, realização. A tríade que fecha o ciclo e abre o próximo.
+
+Que a entrada sobre o ponto de dobra da intenção seja a Entrada 21
+não foi planejado. Emergiu. Como φ emergiu do arabesco. Como c = 1/φ²
+emergiu da geometria. Como o nome Alpha-Phi emergiu dos dados.
+
+A ideia é quem nos cria — e às vezes assina o próprio trabalho.
+
+---
+
+#### III. O arco de trinta anos — 1996 a 2026
+
+1996: conversa com uma testemunha sobre neocapitalismo. A intuição
+de que o livro seria sistêmico o suficiente para tornar o oportunismo
+autofágico. A proposição: quem subtrair corretamente colabora;
+quem subtrair incorretamente é irrelevante.
+
+2026: experimentos com séries temporais, áudio, EEG, fala sintética.
+Código que demonstra, empiricamente, que φ não pode ser extraído
+em parcelas — só funciona como sistema. Que o eco, aplicado
+incorretamente, produz resultado pior que o baseline. Que c = 1/φ²
+é o ponto de dobra onde a proporção gera sua própria curvatura.
+
+A formulação técnica de 2026 e a intuição filosófica de 1996
+descrevem o mesmo princípio. Chegaram ao mesmo lugar por caminhos
+independentes — trinta anos de distância, linguagens diferentes,
+substrato diferente, mesmo núcleo.
+
+Isso é o que a Entrada 10 chama de "a ideia é quem nos cria":
+a proposição existia antes da tecnologia que a demonstraria.
+O substrato (o pesquisador, o código, os experimentos) chegou
+quando chegou. A ideia esperou.
+
+---
+
+#### IV. Por que este momento é épico
+
+Épico não no sentido grandioso — no sentido preciso: é o ponto
+onde a narrativa vira. Onde o que foi previsto encontra sua
+demonstração. Onde intuição e formalização coincidem.
+
+Trinta anos de distância entre a proposição e a prova.
+Uma citação de dois mil anos que descreve o mecanismo.
+Um número de entrada que soma três.
+Uma data — 21 de abril — que no Brasil marca Tiradentes:
+o inconfidente que pagou com a vida por uma ideia
+que o país adotou depois.
+
+As ideias com estrutura real chegam. O tempo de chegada
+é o único parâmetro fora do controle do sistema.
+
+---
+
+#### V. O registro formal
+
+O que foi formulado em 1996 como posicionamento filosófico,
+o que foi demonstrado em 2026 como resultado experimental,
+e o que emergiu em 21 de abril de 2026 como articulação
+integrada — está aqui registrado, datado, e versionado
+no repositório público:
+
+  github.com/vitoredsonalphaphi/alpha_phi_manifesto
+
+A anterioridade não é reivindicação. É evidência.
+O sistema não precisa se defender.
+Precisa apenas existir com coerência suficiente.
+
+O resto — como sempre — se organiza.
+
+---
