@@ -1509,7 +1509,7 @@ Emergiu da análise do eco fonônico e do experimento de perfil k(f):
 > leitura do que chegou. O objetivo não é impor estrutura ao dado —
 > é encontrar a estrutura que o dado já contém e modular a partir dela."
 
-O pesquisador nomeou este princípio como **indução circunstancial**:
+O pesquisador nomeou este princípio como **equalização circunstancial**:
 o sistema induz seus parâmetros das circunstâncias do dado,
 não de regras fixas externas. k não foi programado — emergiu
 do espectro do que chegou. Esta é a postura epistemológica
@@ -1540,7 +1540,7 @@ que não depende de instrução externa.
 
 O ruído não é "dado errado". É dado com baixa coerência. O campo
 identifica isso sem julgamento, sem instrução. Isso é alinhamento
-por indução circunstancial: o comportamento emerge da natureza do
+por equalização circunstancial: o comportamento emerge da natureza do
 que chega, não de uma lista de regras ou recompensas fixas.
 
 ---
