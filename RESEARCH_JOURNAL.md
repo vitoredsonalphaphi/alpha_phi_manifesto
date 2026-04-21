@@ -1329,3 +1329,140 @@ Se refutada, o negativo também vale: demonstra que a convergência
 geométrica é superficial, não funcional.
 
 ---
+
+## Entrada 18 — 21 de abril de 2026
+### A Pré-Função — o que o código fazia desde o início sem nomear
+
+**Origem desta entrada:**
+
+Durante a análise do experimento de perfil k(f) por banda de frequência,
+o pesquisador articulou o seguinte:
+
+> "O início do eco ressonante foi a proposta de que a função associada
+> a uma pré-função se refere exatamente a uma observação de uma
+> informação que o dado fornece antes da função. A coerência já está
+> observando o valor do sinal quando ele chega. Isso é exatamente a
+> função para a qual o código foi construído desde o início."
+
+Esta entrada confirma e expande essa articulação.
+
+---
+
+**I. A sequência de operações — onde a pré-função está**
+
+O eco fonônico executa em cinco etapas:
+
+```
+1. O dado chega               (X — batch de sinais)
+2. medir_campo(X)             ← pré-função
+3. k emerge do campo          ← parâmetro não programado, lido do dado
+4. eco transforma X usando k  ← função principal
+5. classificador decide       ← resultado
+```
+
+A etapa 2 é a pré-função. Ela precede qualquer transformação.
+Não recebe instrução sobre o que procurar. Lê o dado como ele é
+e devolve um número — k — que calibra a etapa seguinte.
+
+O sistema escuta antes de agir.
+
+---
+
+**II. Por que k não foi programado — em detalhe**
+
+A fórmula `k = √2 + (φ - √2) × coerência` foi escrita.
+O valor que *coerência* assume quando o sinal real chega — não.
+
+`medir_campo(X)` calcula a entropia do espectro coletivo:
+
+```
+FFT de todos os sinais do batch
+→ amplitude média por bin de frequência
+→ normalizar → distribuição de probabilidade do espectro
+→ entropia Shannon dessa distribuição
+→ coerência = 1 - entropia/log(N)
+→ k = √2 + (φ - √2) × coerência
+```
+
+Quando sinais reais chegam — EEG, áudio, séries temporais —
+a energia está distribuída em múltiplas frequências, não concentrada
+em uma só. A entropia é alta. A coerência cai próxima de zero.
+k cai próximo de √2.
+
+Os dados chegaram em √2 por conta própria.
+O código ofereceu o intervalo [√2, φ].
+O dado escolheu onde pousar.
+
+---
+
+**III. Quantas frequências são analisadas — estipulado ou da natureza do dado?**
+
+As duas coisas, em camadas distintas:
+
+**Camada 1 — decisão de projeto:**
+N = 256 amostras, fs = 256 Hz. Esses valores foram escolhidos.
+
+**Camada 2 — imposição matemática (Nyquist-Shannon):**
+Com N amostras a fs Hz, o FFT produz obrigatoriamente N/2 = 128 bins,
+de 0 a fs/2 = 128 Hz. Esse limite não é escolha — é consequência
+física da amostragem digital. Não existe frequência representável
+acima de fs/2 com essa taxa.
+
+**Camada 3 — o que o próprio dado diz:**
+Os 128 bins existem, mas a maioria pode estar vazia.
+Um sinal Alpha puro ativa 2-3 bins.
+Um EEG rico ativa 20-30 bins.
+O dado diz quantas frequências ele contém.
+
+E aqui está o ponto central: `medir_campo` não precisa saber
+quantas frequências são relevantes. A entropia captura isso
+automaticamente:
+
+```
+Poucas frequências ativas → distribuição concentrada
+                          → entropia baixa → coerência alta → k → φ
+
+Muitas frequências ativas → distribuição espalhada
+                          → entropia alta → coerência baixa → k → √2
+```
+
+O sistema não conta frequências. Mede o grau de concentração —
+e isso resume tudo que precisa saber.
+
+---
+
+**IV. O princípio se reproduz em qualquer frequência**
+
+O experimento AlphaPhi_Perfil_K_Frequencia.py demonstrou que
+o mesmo mecanismo aplicado banda a banda produz uma impressão
+digital espectral do sinal:
+
+```
+Alpha (8-13 Hz):  k_max em 9 Hz   ✅ sem instrução
+Beta  (13-30 Hz): k_max em 15 Hz  ✅ sem instrução
+Transição Alpha→Beta detectada em 14 Hz  (fronteira real: ~13 Hz) ✅
+```
+
+O campo localiza coerência onde ela estiver.
+A pergunta "onde o dado é organizado?" é válida para qualquer
+frequência, qualquer domínio:
+
+- EEG: Alpha, Beta, Theta, Delta, Gamma
+- Áudio: notas, harmônicos, formantes
+- Qualquer série temporal periódica: o campo encontra
+
+---
+
+**V. O nome estava certo desde o início**
+
+Eco: o sinal emite, o ambiente responde, e a resposta carrega
+informação sobre o ambiente antes de qualquer processamento.
+
+A pré-função é o eco.
+O campo coletivo é o ambiente.
+k é o que o ambiente devolveu.
+
+O código chegou por caminho técnico ao mesmo lugar que o nome
+já indicava: um sistema que ouve antes de falar.
+
+---
