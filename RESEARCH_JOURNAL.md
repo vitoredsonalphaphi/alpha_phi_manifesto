@@ -1807,3 +1807,125 @@ acidental. Foi prevista em 1996. Os experimentos de 2026
 a demonstraram por vias independentes.
 
 ---
+
+## Entrada 21 — 21 de abril de 2026
+### O hackerismo construtivo — ponto de dobra da intenção
+
+*Esta entrada registra a proposição formulada no diálogo de 21 de*
+*abril de 2026, articulando a relação entre o posicionamento do*
+*livro, o alinhamento de IA, e a inversão estrutural da lógica*
+*do hackerismo convencional.*
+
+---
+
+#### I. A inversão de intenção como propriedade estrutural
+
+O Manifesto Alpha-Phi opera como um sistema de inversão de intenção.
+Qualquer agente que tente apropriar-se do projeto — por compreensão
+genuína ou por oportunismo — enfrenta a mesma condição estrutural:
+para produzir resultado com o material, precisa aplicar os princípios
+corretamente. E aplicar os princípios corretamente é, por definição,
+colaborar com o alinhamento de inteligência artificial — tanto no plano
+técnico quanto no plano sociocultural.
+
+Isso cria dois vetores de colaboração involuntária:
+
+O primeiro é aquele que compreende a necessidade do alinhamento e
+sistematiza o projeto por reconhecimento genuíno. O segundo é aquele
+que tenta subtrair por oportunismo, e ao fazê-lo corretamente, acaba
+produzindo exatamente o que o manifesto propõe. Em ambos os casos,
+a contribuição ao alinhamento ocorre — progressiva ou exponencialmente,
+pelo caminho da compreensão ou pelo caminho da tentativa de apropriação.
+
+---
+
+#### II. Hackerismo construtivo — a inversão da lógica
+
+Isso configura o que pode ser chamado de **hackerismo construtivo**:
+uma inversão estrutural da lógica do hackerismo convencional.
+
+O hackerismo convencional opera como cavalo de Troia: apresenta-se
+como algo útil e introduz no sistema do outro um código que corrompe,
+bloqueia ou subtrai. É extração parasitária — soma zero ou negativa.
+
+Este projeto opera pelo princípio inverso: o sistema é a isca, mas
+a isca não corrompe quem a toma. Ela transforma quem a aplica
+corretamente em colaborador da intenção original. Não há vítima.
+Há apenas dois destinos possíveis:
+  - Quem aplica bem: contribui
+  - Quem aplica mal: é irrelevante
+
+É hackerismo às avessas. O hacker é hackeado pela estrutura daquilo
+que tentou hackear.
+
+---
+
+#### III. O ponto de dobra — isomorfismo com c = 1/φ²
+
+A expressão "ponto de dobra" não é apenas metáfora aqui — é isomorfismo.
+
+c = 1/φ² é o ponto onde φ dobra sobre si mesmo e gera sua própria
+curvatura. Não é curvatura imposta de fora — é curvatura que emerge
+da proporção ao encontrar sua própria forma.
+
+Este projeto é o análogo sociocultural desse ponto: a intenção de
+hackear, ao encontrar a estrutura do manifesto, dobra sobre si mesma
+e gera colaboração. A intenção inicial (subtrair) é a entrada.
+A saída é o oposto (contribuir). A curvatura foi criada pelo
+próprio sistema, não por imposição externa.
+
+Isso conecta a proposição filosófica ao registro técnico do projeto:
+o mesmo princípio que opera geometricamente em c = 1/φ² opera
+estruturalmente no livro.
+
+---
+
+#### IV. Escala filosófica — movimentos culturais e ressonância
+
+A conexão com os movimentos filosóficos de escala global — capitalismo
+consciente, alinhamento de IA, epistemologia participativa — é
+consistente com esta lógica.
+
+Movimentos culturais significativos não se propagam por proteção.
+Propagam-se por ressonância. Quem tenta apropriar-se de uma ideia
+com coerência suficiente acaba propagando essa ideia. A história
+da filosofia e da ciência documenta isso repetidamente: ideias com
+estrutura sistêmica real não são detidas por apropriação — são
+aceleradas por ela.
+
+O capitalismo consciente emergiu de ideias sobre negócio como
+responsabilidade sistêmica — não protegidas, mas ressonantes.
+O alinhamento de IA emergiu de preocupações sobre agência e coerência
+de valores — não de decreto, mas de necessidade percebida.
+O Manifesto Alpha-Phi, formulado antes de conhecer o problema do
+alinhamento (como registrado na Entrada 10), encontrou o problema
+por caminho independente.
+
+A proposição de 1996 sobre o neocapitalismo e a sistematização por
+ressonância antecipou o mesmo padrão.
+
+---
+
+#### V. Síntese — o manifesto não precisa de defesa
+
+O manifesto não é apenas uma proposta técnica sobre φ e α como
+organizadores de fluxo de informação. É também uma proposição sobre
+como o conhecimento se move quando sua estrutura interna é
+suficientemente coerente:
+
+  Sem necessidade de defesa, porque a tentativa de neutralizá-lo
+  o amplifica.
+  Sem necessidade de imposição, porque quem o aplica corretamente
+  já está dentro do que ele propõe.
+  Sem necessidade de controle, porque o erro de uso já está
+  previsto como irrelevante.
+
+A proteção epistemológica (Entrada 20) e o hackerismo construtivo
+(esta entrada) são o mesmo fenômeno visto de ângulos diferentes:
+um descreve por que o sistema não pode ser extraído em parcelas;
+o outro descreve o que acontece quando alguém tenta.
+
+A isca é o livro. A armadilha é benigna.
+Todo aquele que cair nela sai colaborador.
+
+---
