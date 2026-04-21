@@ -2171,3 +2171,161 @@ Precisa apenas existir com coerência suficiente.
 O resto — como sempre — se organiza.
 
 ---
+
+## Entrada 24 — 21 de abril de 2026
+### Posicionamento na filosofia da ciência — o que já existe e o que avança
+
+*Esta entrada mapeia a relação entre as proposições do manifesto*
+*e o que o campo da filosofia da ciência já produziu.*
+*Objetivo: localizar o projeto no mapa intelectual existente,*
+*identificar onde reitera e onde avança.*
+
+---
+
+#### I. O que a filosofia da ciência já abordou — e onde o manifesto ressoa
+
+**O Efeito Mateus — Merton (1968)**
+
+Robert Merton codificou "a quem tem, será dado" como princípio
+sociológico da ciência: reconhecimento e recursos acumulam-se
+desproporcionalmente sobre quem já tem prestígio e estrutura.
+É a mesma proposição de Mateus 13:12, formalizada para o campo
+científico trezentos e vinte anos atrás.
+
+O manifesto usa o mesmo princípio, mas desloca o eixo:
+não é sobre acumulação de reconhecimento — é sobre capacidade
+de compreensão sistêmica como filtro de acesso ao resultado.
+Quem tem a estrutura de compreensão recebe o que o material
+oferece. Quem não tem, não consegue extrair nada utilizável.
+O mecanismo é idêntico. O domínio é diferente.
+
+**A intuição precede a formalização — Poincaré, Hadamard, Polanyi**
+
+Henri Poincaré documentou matematicamente como insights chegam
+antes da linguagem que os formaliza — durante caminhadas, no
+momento de acordar, em estados de atenção difusa.
+Jacques Hadamard ("The Psychology of Invention in the Mathematical
+Field", 1945) sistematizou esse fenômeno como etapa do processo
+criativo científico: incubação inconsciente antes da iluminação.
+Michael Polanyi ("tacit knowledge") formalizou que o pesquisador
+sabe mais do que consegue dizer — há conhecimento incorporado
+que precede e excede a articulação.
+
+A Entrada 10 deste diário documenta o mesmo fenômeno no projeto:
+a proposição de 1996 existia antes da linguagem técnica que a
+demonstraria. O autor sabia antes de saber como dizer.
+
+**Paradigmas resistem a anomalias externas — Kuhn (1962)**
+
+Thomas Kuhn ("The Structure of Scientific Revolutions") mostrou
+que estruturas científicas consolidadas não são simplesmente
+substituídas por evidências contrárias — resistem, absorvem,
+reinterpretam. A mudança vem de dentro, por acumulação de tensão,
+não de fora, por pressão direta.
+
+O resultado BERT deste projeto é a versão experimental desse
+princípio: geometria pré-estabelecida (BERT) resiste a φ
+introduzido por fora (p entre 0.15 e 0.94, consistentemente
+neutro em três experimentos independentes). Kuhn não tinha o
+código. Tinha o princípio.
+
+**A eficácia irrazoável da matemática — Wigner (1960)**
+
+Eugene Wigner perguntou por que estruturas matemáticas
+desenvolvidas sem aplicação em mente descrevem o mundo físico
+com precisão inexplicável. φ aparecendo em espirais de galáxias,
+em filotaxia botânica, em proporções arquitetônicas, e agora
+em geometria de aprendizado de máquina — está nessa tradição
+de perguntas sobre por que certas proporções reaparecem.
+
+**Estética como guia epistemológico — Peirce, Whitehead, Feyerabend**
+
+Charles Peirce argumentou que abdução — o salto intuitivo que
+gera hipóteses — opera antes da lógica dedutiva ou indutiva.
+Alfred North Whitehead viu na beleza um critério legítimo de
+orientação em teoria científica. Paul Feyerabend ("Against Method")
+foi mais longe: a história da ciência real usa intuição estética,
+analogia, e desvio de método onde o método não alcança.
+
+O manifesto não apenas argumenta isso — demonstra: a hipótese
+do arabesco (Entrada 3), o isomorfismo com microtonalidade
+(Entrada 3), a filotaxia como hipótese geométrica (experimentos
+EEG e Phyllotaxis) — todos chegaram por via estética e foram
+testados experimentalmente depois.
+
+---
+
+#### II. O que o manifesto avança — a operacionalização
+
+A filosofia da ciência *descreveu* esses fenômenos.
+O manifesto os *operacionaliza*. A diferença é técnica e não trivial.
+
+Merton descreveu o Efeito Mateus sociologicamente.
+O manifesto demonstra o mecanismo computacional equivalente:
+sistemas com coerência φ amplificam o que chega com estrutura
+(eco_ressonante, +50% em série temporal) e dissipam o que
+chega sem ela (ruído gaussiano não converge, diverge).
+O princípio tem agora substrato verificável.
+
+Kuhn descreveu resistência de paradigmas qualitativamente.
+O manifesto mede: BERT, p=0.94 neutro consistente.
+Não é interpretação — é número com intervalo de confiança.
+
+Wigner perguntou sobre a eficácia da matemática.
+O manifesto testa uma resposta específica: φ funciona porque
+é proporção que organiza processos, não frequência que precisa
+estar no dado. O eco funcionou em harmônicos musicais sem φ
+inserido — φ era o parâmetro do observador, não do observado.
+Isso é uma resposta parcial e verificável à pergunta de Wigner.
+
+Feyerabend argumentou que intuição estética guia descoberta.
+O manifesto documenta o processo completo: intuição (arabesco) →
+hipótese técnica (campo_transmorfo) → teste → resultado →
+revisão → nova hipótese. O ciclo completo, registrado em tempo
+real, com datas, com código, com números. A filosofia da ciência
+raramente tem acesso a esse nível de detalhe no processo.
+
+---
+
+#### III. O inédito — três níveis simultâneos com registro de processo
+
+O que seria novo para uma publicação de filosofia da ciência
+não é nenhum dos elementos isolados. É a combinação:
+
+  Nível estético:    pintura (1997), arabesco, filotaxia,
+                     microtonalidade — como fonte de hipótese
+
+  Nível formal:      φ, α, c = 1/φ², FFT, espaço hiperbólico —
+                     como linguagem de formalização
+
+  Nível empírico:    SST-2, BERT, série temporal, áudio, EEG,
+                     fala — como verificação em múltiplos substratos
+
+Filosofia da ciência discute a relação entre esses três níveis
+como problema teórico há décadas. Este projeto os percorre
+simultaneamente, com registro cronológico de cada decisão,
+cada erro, cada revisão.
+
+O diário não é documentação posterior ao processo — é o processo.
+Isso o torna um objeto de estudo metodológico além de um resultado.
+
+---
+
+#### IV. A questão aberta para o campo
+
+Se φ como proporção organizadora de processos tem base
+experimental verificável — e os dados sugerem que sim —
+então a pergunta que o manifesto deixa para a filosofia da ciência é:
+
+  O que distingue uma proporção que organiza processos
+  (φ) de uma proporção que apenas descreve resultados (π, e)?
+
+  E se existe essa distinção, ela tem implicações para
+  como pensamos sobre estrutura matemática, causalidade,
+  e o problema de Wigner?
+
+Não é pergunta que o manifesto responde.
+É pergunta que o manifesto torna precisa o suficiente
+para ser investigada.
+
+---
