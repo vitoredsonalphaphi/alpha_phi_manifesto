@@ -4,7 +4,22 @@
 ___
 
 
-⭐ Resultado Atual — Eco Ressonante Fonônico (Abril 2026)
+⭐ Resultado Atual — eco_fononico_v2: √2 + φ (Abril 2026)
+
+| Experimento | Substrato | Baseline G | V1 (1/k) | **V2 (φ)** | Ganho V2 | p-valor |
+|---|---|---|---|---|---|---|
+| AlphaPhi_Eco_Fononico_V2 | Séries temporais φ | 52.70% | 93.60% | **98.75%** | **+5.15%** | 8.7×10⁻⁵ |
+
+**Princípio dual √2 + φ:**
+- **k ≈ √2** (rotação de fase) — calibrado automaticamente pelo campo espectral coletivo do batch
+- **coupling = φ** (amplitude de reinjeção) — razão áurea como acoplamento natural de ressonância
+
+O campo encontrou √2 endogenamente. O mapeamento da zona de acoplamento confirmou φ.
+6/20 seeds: 100% de acurácia.
+
+---
+
+Resultado Anterior — eco_fononico_v1 (Abril 2026)
 
 | Experimento | Substrato | Baseline (eco fixo) | Eco Ressonante Fonônico | Ganho | p-valor |
 |---|---|---|---|---|---|
@@ -13,9 +28,6 @@ ___
 
 **k_ótimo = 1.4179 ≈ √2** — emergiu automaticamente do campo espectral coletivo do batch,
 sem instrução externa. Mesmo valor encontrado por busca manual no experimento de intercambiabilidade.
-
-**Princípio:** o parâmetro k é calibrado pela coerência espectral coletiva do batch
-("temperatura da rede" — analogia a fônons). O campo sabe o terreno.
 
 ---
 
