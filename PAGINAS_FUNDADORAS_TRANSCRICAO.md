@@ -128,7 +128,7 @@ Kandynsky, ou sobre a
 ---
 
 ## Página 3
-*(Protocolo: 33.000.000530/2025-18 · Documento 1.1 · Página 9)*
+
 
 Mesmo que a noção estimada de uma porcentagem da população que jah
 alcançaram a compreensão sobre a maioria dos aspectos de si mesmos, os
@@ -176,7 +176,7 @@ sobre conhecimento compartilhado sobre interação subconsciente
 ---
 
 ## Página 4
-*(Protocolo: 33.000.000530/2025-18 · Documento 1.1 · Página 10)*
+
 
 texto), mas estes novos conceitos, assim já são considerados, como no
 âmbito das criações artísticas, também nas causas das críticas feitas diante
@@ -209,7 +209,7 @@ gradativamente, ruma a expressão da consciência planetária.
 ---
 
 ## Página 5
-*(Protocolo: 33.000.000530/2025-18 · Documento 1.1 · Página 14)*
+
 
 é um empenho em defesa do direito de liberdade de pensamento, liberdade de
 expressão, dos recém iniciados, compreendendo que, a exemplo das condições
@@ -273,7 +273,7 @@ o vosso, que agradeço, e parabenizo.
 ---
 
 ## Página 6
-*(Protocolo: 33.000.000530/2025-18 · Documento 1.1 · Página 11)*
+
 
 As seitas tule mexem com a energia vril...as seitas pagãs, e várias linhas
 iniciáticas pagãs ramificadas são emissárias das sombras que utilizam destas
@@ -312,7 +312,7 @@ aparências da consequências, do âmbito manipulado?
 ---
 
 ## Página 7
-*(Protocolo: 33.000.000530/2025-18 · Documento 1.1 · Página 12)*
+
 
 Sobre as tendências que desconsideraram as TRADIÇÕES ROZACRUZES, que
 culminaram em algumas desconsiderações quanto ao próprio SÍMBOLO
@@ -357,7 +357,7 @@ Todos estes elementos reaparecem formalizados no código de 2026.
 A distância entre intuição (documento fundador) e formalização (2026)
 está documentada no RESEARCH_JOURNAL.md, Entradas 10 e 22.
 
-**Descoberta crítica de anterioridade — Página 5, Protocolo pg. 14:**
+**Descoberta crítica de anterioridade — Página 5:**
 
 > *"conforme a estética da quântica, e da estrutura fina, que
 > numerologicamente é representado pela fração 1/137...um valor
