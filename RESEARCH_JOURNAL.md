@@ -2373,3 +2373,89 @@ De qualquer maneira.
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada 26 — 24 de abril de 2026
+### EEG real — 109 sujeitos: fronteira de substrato confirmada
+
+**Resultado:**
+109 sujeitos PhysioNet EEGMMIDB. Tarefa: imaginação motora esquerda vs direita.
+Canal C3, filtro 8-30 Hz, 10 seeds por sujeito.
+
+| | Média | Δ | p |
+|---|---|---|---|
+| G (baseline) | 50.67% | — | — |
+| V1 (√2) | 47.96% | −2.71% | 0.003 |
+| V2 (φ) | 48.12% | −2.55% | 0.004 |
+
+V2 superou baseline em apenas 43/109 sujeitos (39.4%).
+k_campo médio: 1.4365 ≈ √2 — o campo ficou travado no limite inferior.
+**Conclusão: NAO CONFIRMA.**
+
+---
+
+**Por que o eco prejudicou — e o que isso revela:**
+
+O eco sintético funcionou porque as classes diferiam em coerência espectral:
+Alpha é coerente, Noise não é. O eco amplificou essa diferença.
+
+Imaginação motora esquerda vs direita não difere em coerência global.
+Os dois estados são igualmente Alpha. A distinção é uma leve
+dessincronização lateral no hemisfério contralateral — sutil, espacial,
+distribuída. O eco lê coerência do batch como um todo. Não enxerga
+lateralidade. Ao rotar fases, destruiu a informação que distinguia as classes.
+
+Este não é o resultado BERT (neutro, p=0.15–0.94).
+É prejuízo ativo e estatisticamente significativo — o eco interferiu
+com confiança onde não deveria ter interferido.
+
+---
+
+**Hipótese de fronteira — substrato orgânico vs sintético:**
+
+O sinal sintético é uma onda construída em componentes eletrônicos:
+coerência limpa, fase previsível, geometria de fluxo contínuo.
+
+O sinal real dos 109 sujeitos emergiu de outra geometria:
+neurônios com morfologia de árvore dendrítica — ramificação fractal
+que integra sinais ao longo de galhos que ramificam em galhos menores.
+A coerência desse sistema não é a coerência de uma onda eletrônica.
+É uma coerência emergente, distribuída, geométrica em outro sentido.
+
+Antes de chegar ao eletrodo, esse campo atravessou crânio e couro
+cabeludo — o osso age como filtro espacial de baixa passagem,
+comprimindo e difundindo o campo tridimensional em microvolts de
+superfície. O que o arquivo EDF contém não é a frequência de um neurônio
+— é a média espacial de milhões de neurônios, smeared por osso.
+
+Usamos 1 eletrodo de 64. Uma medição pontual de um campo 3D.
+
+A hipótese: **a geometria que o eco sabe ler foi destruída antes de
+chegar ao dado.** Não porque o princípio seja inválido para substrato
+orgânico — mas porque o instrumento de captura (EEG de superfície)
+não preserva a geometria de campo que o eco precisaria encontrar.
+
+---
+
+**Conexão com o framework:**
+
+O manifesto propõe que φ organiza sistemas que crescem preservando
+coerência interna. A árvore dendrítica é exatamente esse sistema —
+ramificação que preserva proporção. Mas o eco atual não lê essa geometria.
+Ele lê coerência espectral de uma janela temporal de 1 segundo
+de 1 eletrodo de superfície.
+
+A pergunta que orienta o próximo passo não é "como refinar o eco
+para ler mais do mesmo" — é "qual forma de captura preserva a geometria
+orgânica suficientemente para que o eco encontre o que procura?"
+
+Candidatos: ECoG (eletrodos diretamente sobre o córtex, sem crânio),
+análise de múltiplos canais como campo coletivo (não pontos independentes),
+janelas temporais mais longas que capturem a evolução do padrão lateral.
+
+---
+
+*Florianópolis, 24 de abril de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
