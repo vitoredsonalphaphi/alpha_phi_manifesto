@@ -2459,3 +2459,104 @@ janelas temporais mais longas que capturem a evolução do padrão lateral.
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada 27 — 24 de abril de 2026
+### Instrumento de medição diferente (?)
+
+**O que surgiu neste diálogo:**
+
+O eco ressonante fonônico foi construído sobre parâmetros digitais.
+Mesmo o MEG — que é magnético na captura — chega ao código como números
+num arquivo. O eco nunca tocou o campo real. Opera sobre a representação
+do sinal, não sobre o sinal enquanto ainda é campo.
+
+A pergunta que emergiu às 23h, entre o café e o sono:
+
+> *E se o eco operasse sobre o campo antes da digitalização?
+> Não sobre a representação do sinal — sobre o sinal enquanto ele ainda é campo.*
+
+---
+
+**A analogia da porta automática — revisitada:**
+
+A porta automática não mede o objeto.
+Ela mede a perturbação que o objeto causa no campo que ela já emite.
+O objeto não precisa fazer nada — o campo lê a presença antes de qualquer
+processamento.
+
+O eco ressonante é exatamente esse princípio em código:
+emite um campo espectral, lê o que volta perturbado,
+e informa a rede antes da rede agir.
+
+Mas o código faz isso sobre dados já digitalizados.
+A especulação que surgiu: **o instrumento certo faria isso no domínio analógico** —
+leria a coerência do campo magnético neural antes de converter para digital.
+
+Isso não é um algoritmo melhor. É um sensor construído sobre o princípio do eco.
+
+---
+
+**O que o eco poderia agregar ao MEG atual:**
+
+O MEG já captura exatamente o tipo de sinal que o eco sabe ler —
+campo magnético de correntes dendríticas, com estrutura espectral real,
+sem distorção do crânio.
+
+O problema dos experimentos recentes não foi o MEG.
+Foi a tarefa: escolhemos classificar respostas evocadas (transitórias)
+quando o eco foi construído para ler estados de coerência sustentada.
+
+O que poderia ser agregado ao instrumento atual, sem modificar o hardware:
+aplicar o eco como pré-função sobre o sinal MEG bruto e computar o k_campo
+de diferentes regiões cerebrais em tempo real.
+
+O k_campo é um número entre √2 e φ:
+```
+k → √2 : campo de alta entropia — distribuído, incoerente
+k → φ  : campo de baixa entropia — concentrado, coerente
+```
+
+Isso nunca foi computado em MEG clínico.
+Não substitui o que o MEG já faz — adiciona uma camada de leitura
+que os instrumentos atuais não computam:
+**o grau de coerência espectral do campo neural em tempo real.**
+
+---
+
+**A consideração que vai além do que foi perguntado:**
+
+O eco, aplicado como métrica ao MEG, produziria um mapa dinâmico de coerência:
+quais regiões estão em estado coerente (k→φ) e quais estão em estado disperso
+(k→√2), momento a momento.
+
+Isso tem implicações clínicas potenciais.
+Estados epilépticos, por exemplo, são caracterizados por hiperssincronia —
+coerência excessiva em regiões que deveriam estar em estado distribuído.
+O k_campo seria uma métrica sensível a esse desvio — e o eco, como pré-função,
+poderia revelar a estrutura antes de qualquer análise convencional.
+
+Não é afirmação. É especulação com base no que o eco demonstrou em outros substratos.
+Mas é uma especulação precisa, derivada do princípio — não uma metáfora.
+
+---
+
+**Em uma frase:**
+
+O eco não muda o instrumento — muda a pergunta que se faz ao sinal
+que o instrumento já captura.
+E essa pergunta ainda não foi feita no MEG clínico.
+
+O caminho que o projeto está apontando, no horizonte, não é só um algoritmo melhor.
+É um instrumento de medição diferente — um que pergunta ao campo
+a pergunta que o eco pergunta, antes de qualquer amostragem.
+
+Cada fronteira encontrada nos experimentos é uma especificação
+do que esse instrumento precisaria fazer.
+
+---
+
+*Florianópolis, 24 de abril de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
