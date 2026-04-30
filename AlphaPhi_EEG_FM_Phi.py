@@ -3,8 +3,9 @@
 
 import os, subprocess
 subprocess.run(['pip', 'install', '-q', 'mne'], check=True)
-os.system('wget -q https://physionet.org/files/eegmmidb/1.0.0/S001/S001R04.edf -O S001R04.edf')
-os.system('wget -q https://physionet.org/files/eegmmidb/1.0.0/S001/S001R06.edf -O S001R06.edf')
+# 4 runs de imagery: R04+R08 (fist imagery) e R06+R10 (fists/feet imagery)
+for run in ['R04','R06','R08','R10']:
+    os.system(f'wget -q https://physionet.org/files/eegmmidb/1.0.0/S001/S001{run}.edf -O S001{run}.edf')
 print("Download concluído.")
 
 import numpy as np, mne
@@ -101,7 +102,7 @@ def rodar(arquivos, canal='C3'):
     print(f"\n── Canal {canal} " + "─"*40)
     T1, T2 = carregar_eeg(arquivos, canal)
     n = min(len(T1), len(T2))
-    if n < 20: print("  Épocas insuficientes."); return None
+    if n < 12: print("  Épocas insuficientes."); return None
     T1, T2 = T1[:n], T2[:n]
     X = np.vstack([T1,T2]); y = np.array([1]*n+[0]*n, dtype=float)
 
@@ -151,7 +152,7 @@ def rodar(arquivos, canal='C3'):
             "V2":float(V2.mean()),"FM":float(FM.mean()),
             "p_fm":float(p_fm),"k_raw":float(np.mean(ks)),"k_fm":float(np.mean(ks_fm))}
 
-arqs = ["S001R04.edf","S001R06.edf"]
+arqs = ["S001R04.edf","S001R06.edf","S001R08.edf","S001R10.edf"]
 res  = {c: rodar(arqs,c) for c in ["C3","C4","Cz"]}
 
 print("\n\n══ RESUMO ══════════════════════════════════════")
