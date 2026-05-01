@@ -1,0 +1,249 @@
+"""
+AlphaPhi Audio — Eco φ Multibanda
+Célula única para Google Colab.
+
+Primeira camada de adaptação EQ→eco-φ:
+  Bandas φ-proporcionais: cada banda é φ× mais larga que a anterior.
+  Cada banda tem sua própria coerência, seu próprio k, seu próprio envelope.
+  Controle beta ∈ {0,1,2,3}: escala o envelope em potências de φ.
+
+Comparação:
+  cas_mono — eco φ original (coerência global, uma só medida)
+  cas_mb1  — multibanda β=φ¹ (resolução por banda, escala φ)
+  cas_mb2  — multibanda β=φ² (idem, envelope mais agressivo)
+"""
+
+import numpy as np
+from scipy.io import wavfile
+from IPython.display import Audio, display
+
+PHI     = (1 + np.sqrt(5)) / 2
+K_MIN   = np.sqrt(2)
+FS      = 44100
+DURACAO = 1.5
+N_STEPS = 5
+F_C     = 220.0
+F_M     = F_C / PHI    # ≈ 135.9 Hz
+
+# ── bandas φ-proporcionais ────────────────────────────────────────────────────
+def gerar_bandas_phi(f_min=20.0, f_max=22050.0):
+    """Bandas de largura crescente: cada banda é φ× mais larga que a anterior."""
+    bandas = []
+    f = f_min
+    while f < f_max:
+        f_next = min(f * PHI, f_max)
+        bandas.append((f, f_next))
+        if f_next >= f_max:
+            break
+        f = f_next
+    return bandas
+
+def bandas_para_bins(bandas, n_samples):
+    resultado = []
+    for f_low, f_high in bandas:
+        b_low  = max(int(np.floor(f_low  * n_samples / FS)), 0)
+        b_high = min(int(np.ceil(f_high  * n_samples / FS)), n_samples // 2 + 1)
+        if b_high - b_low >= 3:          # banda com pelo menos 3 bins
+            resultado.append((b_low, b_high, f_low, f_high))
+    return resultado
+
+# ── eco mono (original, coerência global) ─────────────────────────────────────
+def medir_k(x):
+    fb = np.fft.fft(x)
+    am = np.abs(fb)
+    an = np.clip(am / (am.sum() + 1e-8), 1e-10, 1.0)
+    e  = -np.sum(an * np.log(an))
+    c  = float(1.0 - e / np.log(len(x)))
+    return K_MIN + (PHI - K_MIN) * c, c
+
+def eco_mono(x):
+    k, coh = medir_k(x)
+    F     = np.fft.rfft(x)
+    n_idx = np.arange(len(F))
+    env   = np.clip(1.0 + coh * np.cos(2.0 * np.pi * n_idx / PHI), 0.05, None)
+    F_eco = (np.abs(F) * env) * np.exp(1j * np.angle(F) * k)
+    return np.fft.irfft(F_eco, n=len(x)), k, coh
+
+# ── eco multibanda (coerência local por banda φ) ──────────────────────────────
+def eco_multiband(x, bins_phi, beta=1.0):
+    """
+    Cada banda φ mede sua própria coerência e aplica envelope independente.
+    beta: potência de φ que escala o envelope
+      0 → φ⁰ = 1.0  (neutro, só k varia)
+      1 → φ¹ = 1.618 (padrão)
+      2 → φ² = 2.618 (amplificação maior)
+      3 → φ³ = 4.236 (máximo)
+    """
+    N     = len(x)
+    F     = np.fft.rfft(x)
+    F_out = F.copy()
+    cohs, ks = [], []
+
+    for b_low, b_high, _, _ in bins_phi:
+        F_band = F[b_low:b_high]
+        mag    = np.abs(F_band)
+        phase  = np.angle(F_band)
+
+        # coerência local da banda
+        an  = np.clip(mag / (mag.sum() + 1e-8), 1e-10, 1.0)
+        e   = -np.sum(an * np.log(an))
+        coh = float(1.0 - e / np.log(max(len(an), 2)))
+        k   = K_MIN + (PHI - K_MIN) * coh
+
+        # envelope φ com escala beta — índices locais à banda
+        n_idx = np.arange(len(F_band))
+        env   = 1.0 + (coh * PHI**beta) * np.cos(2.0 * np.pi * n_idx / PHI)
+        env   = np.clip(env, 0.05, None)
+
+        F_out[b_low:b_high] = (mag * env) * np.exp(1j * phase * k)
+        cohs.append(coh); ks.append(k)
+
+    resultado = np.fft.irfft(F_out, n=N)
+    return (resultado / (np.max(np.abs(resultado)) + 1e-10),
+            float(np.mean(ks)), float(np.mean(cohs)))
+
+# ── síntese e utilitários ─────────────────────────────────────────────────────
+def gerar_fm():
+    t = np.linspace(0, DURACAO, int(FS * DURACAO), endpoint=False)
+    s = np.sin(2*np.pi*F_C*t + PHI * np.sin(2*np.pi*F_M*t))
+    return s / np.max(np.abs(s))
+
+def normalizar(s):
+    m = np.max(np.abs(s)); return s / m if m > 1e-12 else s
+
+def crossfade(a, b, fade=2000):
+    t = np.linspace(0, 1, fade)
+    return np.concatenate([a[:-fade], a[-fade:]*(1-t) + b[:fade]*t, b[fade:]])
+
+def concatenar(seq):
+    out = seq[0].copy()
+    for sig in seq[1:]: out = crossfade(out, sig)
+    return normalizar(out)
+
+def salvar_wav(s, nome):
+    wavfile.write(nome, FS, np.int16(np.clip(s, -1.0, 1.0) * 32767))
+
+# ── configuração ──────────────────────────────────────────────────────────────
+N_SINAL  = int(FS * DURACAO)
+sinal_fm = gerar_fm()
+BANDAS   = gerar_bandas_phi()
+BINS_PHI = bandas_para_bins(BANDAS, N_SINAL)
+
+# mapa de bandas
+MARCAS_F = {51.9:"51.9", 84.0:"84", 188.0:"188", 220.0:"220★",
+            324.0:"324", 356.0:"356★", 460.0:"460", 492.0:"492"}
+
+print(f"FM-φ:  f_c={F_C:.0f}Hz  f_m={F_M:.1f}Hz  β=φ={PHI:.3f}")
+print(f"\nBandas φ-proporcionais ({len(BINS_PHI)} bandas audíveis):")
+print(f"  {'#':>3}  {'f_low':>8}  {'f_high':>8}  {'n_bins':>7}  conteúdo")
+for i, (b_low, b_high, f_low, f_high) in enumerate(BINS_PHI):
+    marcas = [nome for f, nome in MARCAS_F.items() if f_low <= f < f_high]
+    mark = "  ← " + ", ".join(marcas) if marcas else ""
+    print(f"  {i+1:>3}  {f_low:>8.1f}  {f_high:>8.1f}  {b_high-b_low:>7}{mark}")
+
+# ── cascatas ──────────────────────────────────────────────────────────────────
+def cascata_mono():
+    cas = [sinal_fm]; s = sinal_fm.copy()
+    ks, cohs = [], []
+    for _ in range(N_STEPS):
+        s_e, k, coh = eco_mono(s)
+        s_e = normalizar(s_e)
+        cas.append(s_e); s = s_e.copy()
+        ks.append(k); cohs.append(coh)
+    print(f"  {'Mono (global)':<30}: k={ks[-1]:.5f}  coh={cohs[-1]:.4f}")
+    return cas
+
+def cascata_multi(beta):
+    cas = [sinal_fm]; s = sinal_fm.copy()
+    ks, cohs = [], []
+    for _ in range(N_STEPS):
+        s_e, k, coh = eco_multiband(s, BINS_PHI, beta=beta)
+        s_e = normalizar(s_e)
+        cas.append(s_e); s = s_e.copy()
+        ks.append(k); cohs.append(coh)
+    label = f"Multibanda β=φ^{int(beta)} ({'neutro' if beta==0 else f'×{PHI**beta:.3f}'})"
+    print(f"  {label:<30}: k={ks[-1]:.5f}  coh={cohs[-1]:.4f}")
+    return cas
+
+print("\nGerando cascatas...")
+cas_mono = cascata_mono()
+cas_mb0  = cascata_multi(0)
+cas_mb1  = cascata_multi(1)
+cas_mb2  = cascata_multi(2)
+
+# ── tabela de parciais ────────────────────────────────────────────────────────
+ref    = np.abs(np.fft.rfft(sinal_fm))
+vistos, parciais = set(), []
+for n in range(6):
+    for f in [abs(F_C + n*F_M), abs(F_C - n*F_M)]:
+        f = round(f, 1)
+        if 20 < f < FS/2 and f not in vistos:
+            vistos.add(f); parciais.append(f)
+parciais = sorted(parciais)[:8]
+
+def tabela(cas, titulo):
+    print(f"\n{titulo}")
+    print(f"{'':>6}", end="")
+    for f in parciais: print(f"  {f:>6.1f}Hz", end="")
+    print()
+    for i, sig in enumerate(cas):
+        F_sig = np.fft.rfft(sig)
+        label = "orig  " if i == 0 else f"eco×{i} "
+        print(label, end="")
+        for f in parciais:
+            b = round(f * N_SINAL / FS)
+            r = np.abs(F_sig[b]) / (ref[b] + 1e-12) if b < len(F_sig) else 0.0
+            print(f"  {r:>6.3f}", end="")
+        print()
+
+tabela(cas_mono, "── MONO φ (original, coerência global) ─────────────")
+tabela(cas_mb1,  "── MULTIBANDA φ¹ (coerência local por banda) ───────")
+tabela(cas_mb2,  "── MULTIBANDA φ² (envelope amplificado) ────────────")
+
+# ── coerência por banda no eco×5 ─────────────────────────────────────────────
+print("\nCoerência por banda φ — eco×5 multibanda β=φ¹:")
+sig5 = cas_mb1[-1]
+F5   = np.fft.rfft(sig5)
+print(f"  {'#':>3}  {'f_low':>8}  {'f_high':>8}  {'coh':>8}  {'k':>8}  gráfico")
+for i, (b_low, b_high, f_low, f_high) in enumerate(BINS_PHI):
+    F_band = F5[b_low:b_high]
+    mag    = np.abs(F_band)
+    an     = np.clip(mag / (mag.sum() + 1e-8), 1e-10, 1.0)
+    e      = -np.sum(an * np.log(an))
+    coh    = float(1.0 - e / np.log(max(len(an), 2)))
+    k      = K_MIN + (PHI - K_MIN) * coh
+    bar    = "█" * int(coh * 30)
+    marcas = [nome for f, nome in MARCAS_F.items() if f_low <= f < f_high]
+    mark   = " ← " + ", ".join(marcas) if marcas else ""
+    print(f"  {i+1:>3}  {f_low:>8.1f}  {f_high:>8.1f}  {coh:>8.4f}  {k:>8.5f}  {bar}{mark}")
+
+# ── par φ no eco×5 ────────────────────────────────────────────────────────────
+print("\n── Par φ no eco×5 ───────────────────────────────────")
+print(f"  {'':>28}  {'220Hz':>8}  {'356Hz':>8}  {'razão':>8}")
+b220 = round(220.0 * N_SINAL / FS)
+b356 = round(356.0 * N_SINAL / FS)
+for cas, label in [(cas_mono,"Mono"), (cas_mb0,"Multi β=φ⁰"),
+                   (cas_mb1,"Multi β=φ¹"), (cas_mb2,"Multi β=φ²")]:
+    sig   = cas[-1]
+    F_sig = np.fft.rfft(sig)
+    r220  = np.abs(F_sig[b220]) / (ref[b220] + 1e-12)
+    r356  = np.abs(F_sig[b356]) / (ref[b356] + 1e-12)
+    razao = r356 / (r220 + 1e-12)
+    dom   = "356★" if razao > 1 else "220★"
+    print(f"  {label:<28}  {r220:>8.4f}  {r356:>8.4f}  {razao:>8.4f}  {dom}")
+
+# ── áudio ─────────────────────────────────────────────────────────────────────
+salvar_wav(concatenar(cas_mono),        "mb_mono.wav")
+salvar_wav(concatenar(cas_mb1),         "mb_phi1_desc.wav")
+salvar_wav(concatenar(cas_mb1[::-1]),   "mb_phi1_asc.wav")
+salvar_wav(concatenar(cas_mb2),         "mb_phi2_desc.wav")
+salvar_wav(concatenar(cas_mb2[::-1]),   "mb_phi2_asc.wav")
+
+print("\n── MONO φ (referência) ───────────────────────────────")
+display(Audio("mb_mono.wav"))
+print("\n── MULTIBANDA β=φ¹ ───────────────────────────────────")
+print("Descendente:"); display(Audio("mb_phi1_desc.wav"))
+print("Ascendente:");  display(Audio("mb_phi1_asc.wav"))
+print("\n── MULTIBANDA β=φ² ───────────────────────────────────")
+print("Descendente:"); display(Audio("mb_phi2_desc.wav"))
+print("Ascendente:");  display(Audio("mb_phi2_asc.wav"))
