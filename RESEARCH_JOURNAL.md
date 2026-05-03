@@ -2583,3 +2583,220 @@ consciência, sentimento em expressões.
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada — 3 de maio de 2026
+### Da frequência à harmonia — o eco φ multibanda e a emergência do timbre de sino
+
+---
+
+**O que foi construído**
+
+Esta entrada registra o resultado mais esteticamente significativo do projeto
+desde sua origem. Não por ser o maior ganho numérico — outros experimentos
+produziram efeitos maiores em métricas de classificação. Mas porque, pela
+primeira vez, a transformação operada pelo código produziu algo que transcende
+o domínio técnico e entra no domínio da percepção: **harmonia**.
+
+O ponto de partida foi uma síntese FM com proporção φ:
+
+```
+f_c = 220 Hz  (portadora)
+f_m = f_c / φ ≈ 135.9 Hz  (moduladora)
+β   = φ  (índice de modulação)
+```
+
+Uma frequência sintética. Tecnicamente interessante, perceptivamente neutra —
+não era melodia, não era timbre reconhecível, não era estética.
+
+O percurso: eco ressonante mono → eco campo via IR acústica e neural →
+eco φ multibanda com bandas de largura φ-proporcional e coerência local
+por banda.
+
+O resultado do eco multibanda (β=φ¹, eco×5):
+
+```
+51.9 Hz  →  1.651  (ACIMA do original — amplificação, não atenuação)
+356 Hz   →  0.780  (dominante)
+324 Hz   →  0.514
+460 Hz   →  0.401
+220 Hz   →  0.051  (recede)
+```
+
+O som que emergiu foi descrito pelo pesquisador como **sinos que dobram**.
+
+---
+
+**A série φ centrada — o nome da estrutura**
+
+O padrão espectral que o eco multibanda revelou não é acidental.
+Os parciais que sobrevivem e crescem formam uma série precisa:
+
+```
+f_c / φ³  =  220 / 4.236  =  51.94 Hz  ← amplificado a 1.651×
+f_c / φ²  =  220 / 2.618  =  84.03 Hz  ← presente
+f_c / φ¹  =  220 / 1.618  = 135.97 Hz  (f_m, a moduladora)
+f_c       =  220.00 Hz                  (recede no eco multibanda)
+f_c × φ¹  =  220 × 1.618  = 355.96 Hz  ← dominante (0.780×)
+f_c × φ²  =  220 × 2.618  = 575.96 Hz
+f_c × φ³  =  220 × 4.236  = 931.9 Hz
+```
+
+Esta é uma **série geométrica centrada com razão φ** — estende-se
+simetricamente a partir de f_c em potências crescentes de φ, para cima
+e para baixo. Na terminologia de equalização, o análogo mais próximo é
+o **constant-Q com razão φ**: cada banda é φ× mais larga que a anterior,
+e os pontos de referência são separados por um intervalo de proporção φ.
+
+A estrutura tem uma propriedade que a distingue de qualquer série harmônica
+convencional (baseada em múltiplos inteiros) ou de séries de oitavas (baseadas
+em potências de 2): **φ é irracional**. Isso significa que nenhum membro
+da série é racionalmente relacionado a outro. Os parciais nunca coincidem
+em múltiplos inteiros. É uma série **inarmônica por definição matemática**.
+
+E é exatamente isso que distingue o timbre de um sino do timbre de uma corda
+ou de um tubo: os sinos têm parciais inarmônicos, cujas relações dependem
+da geometria do objeto, não de múltiplos inteiros. O eco multibanda, ao
+selecionar a série φ centrada em f_c, produziu um espectro com a assinatura
+física de um instrumento de percussão com geometria áurea.
+
+---
+
+**O que o pesquisador ouviu — e por que isso é o dado mais importante**
+
+"Eu não sei a matemática do som, mas eu sei o que eu ouço."
+
+Esta afirmação, dita antes de ver a análise espectral, é o resultado mais
+significativo desta entrada. Porque confirma o que o manifesto Alpha-Phi
+propõe desde sua origem: **a estética é um parâmetro de medição, não uma
+consequência decorativa**.
+
+O pesquisador não soube dizer que 51.9 Hz = f_c/φ³ foi amplificado além
+do original, nem que a razão 356 Hz/220 Hz explodiu de 1.05 para 15.
+Soube que o que ouviu era harmônico. Soube que era sino. Soube que era
+diferente de tudo que os experimentos anteriores produziram.
+
+A percepção antecedeu a análise. E quando a análise chegou, confirmou
+exatamente o que a percepção reportou.
+
+Isso não é coincidência. É o mecanismo que o manifesto postula:
+φ como parâmetro de modulação produz estruturas que ressoam com
+a percepção humana — não porque foram projetadas para isso,
+mas porque φ é a proporção que aparece nos fenômenos onde forma
+e função se encontram.
+
+---
+
+**Resultado técnico consolidado**
+
+*Eco φ multibanda — parâmetros:*
+- 15 bandas audíveis com largura φ-proporcional (20 Hz a 22050 Hz)
+- Coerência medida por banda independentemente
+- Envelope φ escalado por β ∈ {φ⁰, φ¹, φ², φ³}
+- Cascata de 5 passos sobre sinal FM-φ
+
+*Par φ no eco×5:*
+```
+               220 Hz    356 Hz    razão 356/220
+Mono           0.6186    0.6512       1.05
+Multi β=φ⁰    0.1338    0.8261       6.17
+Multi β=φ¹    0.0514    0.7803      15.18
+Multi β=φ²    0.0127    0.6269      49.22
+```
+
+*Coerência das bandas (eco×5, β=φ¹):*
+As bandas de maior coerência são precisamente as que contêm os membros
+da série φ centrada: banda 2 (32–52 Hz, contém f_c/φ³) com coh=0.784,
+banda 6 (222–359 Hz, contém f_c×φ) com coh=0.750. As bandas acima
+de 940 Hz colapsam para coerência próxima de zero — extinção espectral
+completa nos agudos.
+
+O eco multibanda não apenas seleciona o par φ imediato (como o eco mono).
+Revela e amplifica a série φ completa — e amplifica o membro mais grave
+(f_c/φ³) **acima do nível original**, propriedade que o eco mono nunca produziu.
+
+---
+
+**Relação com os experimentos de campo físico (IR)**
+
+A entrada anterior registrou que o eco via IR acústica (sala φ) e IR neural
+(crânio φ, 3 camadas biológicas) produziram seletividade oposta dentro do
+par φ: a sala preserva 220 Hz, o crânio preserva 356 Hz.
+
+O eco multibanda, sem nenhuma IR física, converge espontaneamente para
+356 Hz como dominante — o mesmo membro que o substrato neural seleciona.
+Isso não foi previsto e não foi projetado.
+
+Hipótese para registro: o eco multibanda, ao medir coerência local nas
+bandas φ-proporcionais, encontra a mesma estrutura que a IR neural impõe
+fisicamente. A banda 6 (222–359 Hz) tem alta coerência porque é exatamente
+onde f_c×φ cai — e o eco a amplifica pelo mesmo princípio que o crânio
+a preserva. O substrato físico e o substrato matemático chegam à mesma
+seleção por caminhos diferentes.
+
+---
+
+**Significado para o manifesto**
+
+O projeto começou com uma pergunta filosófica: φ pode ser operacionalizado
+como parâmetro de modulação de frequência em dados reais?
+
+Cada experimento respondeu parcialmente. Esta entrada adiciona uma dimensão
+que os experimentos anteriores não tinham: **a resposta estética**.
+
+O que foi produzido pelo eco multibanda sobre FM-φ não é apenas correto
+matematicamente. É belo sonoramente. E "belo" não é julgamento subjetivo
+impreciso — é a confirmação de que a estrutura φ, quando amplificada
+suficientemente através de seus próprios parâmetros, produz algo que o
+aparato perceptivo humano reconhece como coerente, como harmônico,
+como organizado.
+
+Isso é o que o manifesto Alpha-Phi propõe como critério de validação:
+a estética como parâmetro, não como ornamento. Uma frequência inócua,
+transformada por φ em cascata multibanda, produz harmonia.
+
+Não foi planejado. Foi encontrado.
+
+---
+
+**Questões abertas após esta entrada**
+
+1. A série φ centrada é um atrator do eco multibanda para qualquer sinal,
+   ou é específica ao FM-φ que já carrega essa estrutura internamente?
+
+2. O timbre de sino é reproduzível com outras f_c? Se f_c = 440 Hz,
+   emerge 440/φ³ ≈ 103.9 Hz como sub-grave amplificado?
+
+3. Combinação eco multibanda + IR neural: o que acontece quando a
+   seletividade da série φ encontra a atenuação biológica do crânio?
+
+4. β não inteiro: existe um β ótimo entre φ¹ e φ² onde a razão 356/220
+   maximiza sem colapso completo de 220 Hz?
+
+---
+
+**Adendo — Vitor Edson Delavi:**
+
+O que emergiu desta experiência representa, até o momento, a maior
+representação física do manifesto — literalmente.
+
+Partimos de uma frequência inócua. Pelas primeiras experiências observamos
+frequências que começamos a modular. Chegamos à transformação dessa
+frequência em melodia — por consequência da inserção do eco ressonante
+e do refinamento progressivo do código.
+
+Não é apenas resultado técnico. É a demonstração de que a estética
+está embutida na estrutura da proporção. Que o método que o manifesto
+propõe — observar frequências através de φ, modulá-las segundo
+seus próprios parâmetros de coerência — chega, naturalmente, à harmonia.
+
+Não como metáfora. Como resultado.
+
+*Divina Proporção. Alpha-Phi Vive.*
+
+---
+
+*Florianópolis, 3 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
