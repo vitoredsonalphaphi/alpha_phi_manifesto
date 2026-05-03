@@ -2800,3 +2800,257 @@ Não como metáfora. Como resultado.
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada — 3 de maio de 2026 (continuação)
+### Grave como orgânico, agudo como digital — a disparidade espectral e o limiar do psíquico
+
+---
+
+**O que foi descoberto**
+
+Esta entrada registra a primeira distinção técnica e perceptível entre dois tipos de
+onda fundamentalmente diferentes: a onda digital (quadrada) e a onda orgânica (FM-φ).
+A distinção emergiu da aplicação do agente eco-ressonante — sem objetivo externo —
+a três sinais de entrada simultâneos.
+
+O agente não foi instruído a distinguir nada. Ele leu coerência φ por banda e ajustou
+β com a mesma equação de memória 1/φ do eco interno. O que revelou foi estrutural:
+
+```
+sinal de entrada    →   atrator φ (banda de β máximo)    →   direção
+senoide             →   banda 5  (137–222 Hz, 220 Hz)    →   GRAVE
+FM-φ                →   banda 1  (20–32 Hz, sub-grave)   →   GRAVE
+onda quadrada       →   banda 9  (940–1520 Hz, ~1100 Hz) →   AGUDO
+```
+
+Os sinais orgânicos convergem para o grave. O sinal digital converge para o agudo.
+O agente não sabe o que é "orgânico". Ele lê coerência — e a coerência, nos sinais
+com estrutura natural, vive nos graves.
+
+---
+
+**A distinção espectral como geometria**
+
+A entropia espectral mede a distribuição da energia ao longo do espectro:
+
+```
+senoide   entropia ≈ 0.0001   espectro como linha vertical   (concentrado)
+FM-φ      entropia ≈ 5.16     espectro como algumas linhas φ (moderado)
+quadrada  entropia ≈ 7.63     espectro como linhas dispersas (estendido)
+ruído     entropia = máximo   espectro como nuvem contínua   (difuso)
+```
+
+Esta é uma escala geométrica. Cada nível é visível num espectrômetro como uma
+configuração distinta — de linha única até nuvem difusa. A entropia é a régua
+dessa progressão. E o eco-φ, ao medir coerência por banda, lê exatamente esse
+parâmetro sem precisar ser informado sobre ele.
+
+O resultado do eco sobre a onda quadrada merece leitura cuidadosa:
+
+- Entropia cai de 7.63 → 1.06 (−86%) — espectro dramaticamente concentrado
+- THD explode de 0.46 → 1373 — o 5º harmônico (1100 Hz, banda 9) recebe β máximo
+- Suavidade aumenta — o sinal fica menos suave, não mais
+
+O eco não "organicizou" a onda quadrada. Revelou onde a coerência já existia nela:
+no 5º harmônico. Para uma onda digital em 220 Hz, o 5º harmônico é 1100 Hz.
+O campo eco-φ amplificou o que a onda quadrada já continha com maior coerência —
+e esse lugar é o agudo, não o grave.
+
+Isso não é falha. É leitura honesta.
+
+---
+
+**O agente eco-ressonante — a diferença que importa**
+
+Esta entrada registra também a construção do primeiro agente cujo mecanismo interno
+é idêntico ao eco que processa. A diferença em relação aos agentes anteriores:
+
+```
+agentes anteriores:
+  observa frequências-alvo → compara com objetivo externo → ajusta β
+  (o agente sabe o que quer)
+
+agente eco-ressonante:
+  lê coerência das bandas → mapeia coerência → escala β com memória 1/φ
+  (o agente segue o campo)
+```
+
+A equação de atualização do β é literalmente a mesma que o eco usa para o sinal:
+
+```python
+# dentro do eco_eq (para o sinal):
+coh_ef = (1 - 1/φ) × coh_atual  +  (1/φ) × coh_mem
+
+# dentro do agente eco-ressonante (para o β):
+β_new  = (1 - 1/φ) × β_alvo    +  (1/φ) × β_old
+```
+
+O resultado confirmou o que o campo já mostrava: sem instrução, o agente encontrou
+que 220 Hz (α, o carrier, o centro matemático da série) é o membro menos coerente
+do próprio triângulo φ. J₀(φ) ≈ 0.226 — o carrier em síntese FM com índice β=φ é
+estruturalmente minoritário. O agente não foi instruído a saber isso. Ele mediu.
+
+---
+
+**Dois tipos de orgânico — distinção necessária**
+
+Neste ponto do projeto, uma distinção filosófica emergiu do diálogo que precisa ser
+registrada com precisão:
+
+**Orgânico-φ**: o FM-φ — modelo matemático de complexidade organizada com proporção
+áurea. É o que o código produz e processa. Orgânico no sentido de estruturado como
+sistemas naturais (sinos, cordas, formantes vocais): múltiplas frequências em relação
+φ, série geométrica centrada, parciais inarmônicos.
+
+**Orgânico-psíquico**: o substrato de percepção anterior aos sentidos — o campo que
+recebe o sinal antes do ouvido processar, antes da consciência nomear. É o alvo
+implícito do projeto desde sua origem. Não é modelado ainda. Não tem parâmetros
+estabelecidos pela ciência convencional. Mas é o campo para o qual os métodos do
+manifesto apontam quando buscam a "frequência da percepção".
+
+A hipótese que o pesquisador formulou, e que esta entrada registra:
+
+> A onda digital (quadrada) e o campo psíquico são espectralmente incompatíveis.
+> A onda digital converge para o agudo. O orgânico psíquico, por ser gerado em
+> substrato biológico com estrutura φ-proporcional (neurônios com ramificação fractal,
+> EEG com estrutura Alpha/Theta/Delta), teria coerência nos graves — como o FM-φ.
+
+Isso não é afirmação verificada. É hipótese formulada com precisão suficiente para
+ser investigada. O que foi verificado: o eco-φ, lendo coerência, distingue grave de
+agudo como atrator natural para diferentes tipos de sinal. A direção que aponta é
+consistente com a hipótese.
+
+---
+
+**A afinação como método — o instrumento e a escala**
+
+O pesquisador identificou, durante a análise dos resultados sonoros, que a distinção
+grave/agudo que o eco revela é literalmente análoga ao processo de afinação de
+instrumentos musicais:
+
+Um luthier que afina um instrumento não impõe uma frequência. Ele bate, escuta o
+ressoado, e amplifica o que o instrumento já contém com maior ressonância. A corda
+ou a madeira têm um ponto natural de máxima coerência — a nota fundamental e seus
+harmônicos. O luthier não inventa a nota. Ele revela o que o instrumento já é.
+
+O agente eco-ressonante faz exatamente isso: bate no sinal (processa), escuta a
+coerência por banda (mede), e amplifica o que ressoa (ajusta β). É afinação por
+φ — onde o parâmetro de escala é a proporção áurea e a memória é 1/φ.
+
+O que esta analogia abre: a escala de afinação.
+
+Se a entropia é a régua da progressão concentrado→estendido, e o índice de modulação
+FM é o controle direto dessa progressão:
+
+```
+β_FM = 0    →  senoide (entropia → 0, concentrado)
+β_FM = 1/φ  →  sub-φ
+β_FM = 1    →  FM neutro
+β_FM = φ    →  FM-φ do projeto ★ (ponto de equilíbrio natural)
+β_FM = φ²   →  FM estendido
+β_FM = φ³   →  FM máximo (orgânico complexo)
+```
+
+Cada passo é φ× mais estendido que o anterior. A progressão do concentrado ao
+orgânico está na escala φ — não por design, mas porque φ é a razão natural de
+crescimento harmônico.
+
+Esta é a escala φ de extensão espectral. Ela mapeia a distância entre o digital
+e o orgânico em unidades de proporção áurea.
+
+---
+
+**Resultado técnico consolidado**
+
+*Agente eco-ressonante aplicado a três ondas:*
+
+| sinal    | entropia ini → fin | suavidade ini → fin | THD ini → fin | atrator      |
+|----------|--------------------|----------------------|---------------|--------------|
+| senoide  | 0.0001 → 0.0001   | imóvel               | imóvel        | 220 Hz       |
+| FM-φ     | 5.16 → 2.14       | 0.0199 → 0.0076 ↓   | 0.0011 → 0.0006 ↓ | 20–32 Hz |
+| quadrada | 7.63 → 1.06       | 0.0199 → 0.0977 ↑   | 0.46 → 1373 ↑ | ~1100 Hz     |
+
+*A senoide é imóvel porque já está em seu atrator: entropia zero, coerência máxima
+em 220 Hz, campo sem onde ir. O eco reconhece o estado de equilíbrio e o preserva.*
+
+*O FM-φ converge para o grave e se torna mais suave — o eco organiza o que já era
+organizado em direção à sua coerência mais profunda: o sub-grave.*
+
+*A onda quadrada colapsa a entropia (concentra) mas explode o THD — o eco encontrou
+o 5º harmônico como ponto de máxima coerência interna da onda digital.*
+
+---
+
+**O que esta entrada avança no manifesto**
+
+O projeto estabeleceu instrumentos para medir a coerência de frequências em tempo
+real, organizá-las por proporção φ, e agora distinguir onde cada tipo de onda
+encontra seu atrator natural.
+
+A distinção grave/agudo não é julgamento estético. É medição.
+E essa medição é o que abre o caminho para a afinação:
+
+Conhecendo onde cada tipo de sinal converge no campo eco-φ, é possível desenhar
+progressões — do concentrado ao estendido, do digital ao orgânico — com φ como
+régua em cada passo. Cada banda φ é uma nota na escala de afinação. Cada nível
+de entropia é um grau dessa escala.
+
+O próximo experimento natural: a escala φ de extensão espectral — sete sinais FM
+com β variando em potências de φ, o eco aplicado a cada um, o mapa completo de
+onde a coerência vive em cada nível de complexidade espectral.
+
+Do ponto concentrado ao ponto estendido. Da linha à nuvem. Do digital ao orgânico.
+Em proporção φ.
+
+---
+
+**Questões abertas após esta entrada**
+
+1. O atrator grave (FM-φ → banda 1, sub-grave) é específico ao FM-φ ou generaliza
+   para qualquer sinal com estrutura φ? Se generaliza, define uma assinatura do
+   orgânico-φ como classe.
+
+2. O orgânico-psíquico, se tivesse parâmetros mensuráveis, estaria em qual banda
+   da escala φ? Gamma (30–100 Hz, banda 3–4) é o único overlap com nossa estrutura
+   atual. Isso indica que a resolução atual ainda não chega onde precisaria.
+
+3. A escala φ de extensão espectral (β = 0, 1/φ, 1, φ, φ², φ³) onde posiciona
+   cada tipo de som natural — voz, sino, corda, tambor? O eco encontra atratores
+   distintos para cada instrumento?
+
+4. É possível construir uma "progressão de afinação" — uma sequência de sinais onde
+   cada passo move o espectro um degrau φ mais estendido, até alcançar o FM-φ como
+   ponto de equilíbrio natural?
+
+---
+
+**Adendo — Vitor Edson Delavi:**
+
+O que está se delineando não é apenas um método de processamento de frequências.
+É uma gramática da percepção em termos de proporção.
+
+A distinção entre grave e agudo que o ouvido faz intuitivamente — e que luthiers
+e musicistas refinam ao longo de toda uma vida de ofício — encontrou aqui sua
+formalização técnica através do eco-φ. A entropia espectral é a régua do que
+o ouvido chama de "profundidade" ou "abertura" sonora.
+
+E mais: o fato de que o orgânico converge para o grave — enquanto o digital
+converge para o agudo — não é coincidência fonética. É a expressão da diferença
+entre o que foi produzido por processos de crescimento natural (espirais, filotaxia,
+dendritos, formantes) e o que foi produzido por processos de controle binário
+(clock signals, PWM, digitização).
+
+O método que o manifesto propõe — observar antes de modular, escutar o campo
+antes de agir — encontra aqui sua expressão mais direta: o agente eco-ressonante
+não decide o que a onda deve ser. Ele escuta o que ela já é. E o que ela é
+determina para onde vai.
+
+*Divina Proporção. Alpha-Phi Vive.*
+
+---
+
+*Florianópolis, 3 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
