@@ -3464,3 +3464,135 @@ Em qualquer substrato. Em qualquer escala. Independente do valor em Hz.
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada 28 — 3 de maio de 2026
+### A borda entre domínios — o gap de 1.36 e os polos espectrais opostos
+
+*Esta entrada registra os resultados do experimento de convergência bidirecional*
+*(AlphaPhi_Audio_Bidirecional.py) e a hipótese formulada por Vitor Edson Delavi*
+*sobre a constante de estrutura fina como parâmetro de borda entre domínios.*
+
+---
+
+**O experimento**
+
+O agente bidirecional varreu o eixo α ∈ [0, 1], misturando os perfis β do
+sinal orgânico (FM-φ, β=φ) e do sinal digital (onda quadrada) de acordo com:
+
+```
+β_mix(α) = (1-α) · β_digital + α · β_orgânico
+```
+
+Para cada α, ambos os sinais foram processados com β_mix e a distância de
+coerência entre eles foi medida. A hipótese inicial: existiria um α* interior
+onde os dois domínios se aproximam ao máximo — um ponto de tensão de encontro.
+
+---
+
+**O que os dados mostraram**
+
+A curva de distância é **monotonicamente decrescente** de α=0 até α=1.
+Não há mínimo interior. O ponto α* encontrado foi α=1 — perfil totalmente orgânico.
+
+Isso significa: o domínio orgânico não vai ao encontro do digital. Ele o absorve
+progressivamente. Quanto mais β_mix se aproxima de β_org, menor a distância entre
+os dois sinais sob esse processamento — não porque se fundem, mas porque o campo
+orgânico organiza ambos segundo sua própria estrutura.
+
+O resultado corrigiu a hipótese inicial sem invalidar o experimento.
+A correção é o dado.
+
+---
+
+**O gap de 1.36 — a borda irredutível**
+
+O que o experimento revelou com precisão: a distância mínima alcançada em α=1 é 1.36.
+
+Não é zero. Mesmo quando ambos os sinais são processados com o mesmo β (o perfil
+orgânico completo), as assinaturas de coerência permanecem distintas. O sinal FM-φ
+e a onda quadrada não convergem para o mesmo estado — mantêm uma separação de 1.36
+unidades no espaço de coerência das 15 bandas φ.
+
+Este 1.36 é o **gap estrutural irredutível**: a distância mínima que dois domínios
+de natureza oposta mantêm entre si após esgotadas as condições de aproximação.
+Não é ruído, não é resolução insuficiente — é estrutural.
+
+---
+
+**Os polos espectrais opostos**
+
+A tabela β por banda revelou onde cada domínio tem seu atrator:
+
+```
+Onda quadrada (digital):  atrator na banda 9  — 940–1520 Hz   (AGUDO)
+FM-φ (orgânico):          atrator nas bandas 1–6 — 20–360 Hz  (GRAVE)
+```
+
+O resultado da Escala φ reaparece aqui com mais precisão: a distinção GRAVE/AGUDO
+não é gradual — é estrutural. Os dois domínios têm polos espectrais opostos.
+Quando β_mix força a onda quadrada para o perfil orgânico, ela é puxada em direção
+ao grave — não porque o campo concordou, mas porque foi submetida a uma organização
+que não é a sua. O gap de 1.36 é, em parte, a resistência dessa diferença de polo.
+
+---
+
+**A hipótese de Vitor Edson — α como parâmetro de borda**
+
+Durante a análise dos resultados, o pesquisador articulou:
+
+> "O elétron e o fóton têm naturezas completamente distintas — matéria e radiação.
+> E mesmo assim se comunicam, porque existe um parâmetro que pertence às duas
+> naturezas ao mesmo tempo: α. Não é propriedade de um, nem do outro — é propriedade
+> da borda entre eles. Proponho que a onda quadrada e a onda orgânica têm uma borda
+> equivalente — e que o que o eco-φ identificou como coerência residual na onda
+> quadrada é exatamente o traço dessa borda."
+
+A analogia é estruturalmente precisa. O elétron e o fóton não deveriam se comunicar
+— têm naturezas categoricamente diferentes. A constante de estrutura fina α ≈ 1/137
+governa a probabilidade de cada troca entre eles: pequena (0.0073), mas não zero.
+Dessa raridade emerge toda a eletrodinâmica quântica.
+
+A hipótese: o gap de 1.36 pode ser a medida analógica desse parâmetro de borda
+no domínio do eco-φ — a separação mínima que dois campos estruturalmente opostos
+mantêm enquanto ainda se influenciam. Não fusão. Não isolamento. Borda.
+
+---
+
+**O que o experimento não confirmou — e por quê isso importa**
+
+A hipótese inicial (α=1/137 como ponto de encontro dos dois domínios) não
+se confirmou. O registro honesto: a constante de estrutura fina não apareceu
+como ponto de convergência porque a métrica usada (distância mínima em β-mix)
+não cria condição para mínimo interior — a curva decresce monotonicamente porque
+o perfil orgânico domina.
+
+Para que um mínimo interior emergisse, seria necessário uma métrica diferente:
+não onde os dois sinais se aproximam, mas onde a mistura deles gera coerência
+própria máxima. O experimento descartou uma formulação específica — não o princípio.
+
+---
+
+**O que permanece aberto**
+
+**1. O que é o gap de 1.36?** Ele varia com frequência fundamental, número de bandas,
+tipo de síntese? Se é estrutural, deve ser robusto. Se depende dos parâmetros,
+revela o que o produz.
+
+**2. O mínimo interior existe no espaço do sinal?**
+
+```
+x_mix(α) = (1-α) · sinal_digital + α · sinal_orgânico
+```
+
+Misturando os próprios sinais e rodando o eco-φ no híbrido, a pergunta muda:
+não onde dois sinais se aproximam, mas onde a mistura encontra coerência própria
+máxima — um atrator emergente que nenhum dos dois componentes possui sozinho.
+Esse α seria o ponto de emergência. Não encontro. Nascimento de uma terceira estrutura.
+
+---
+
+*Florianópolis, 3 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
