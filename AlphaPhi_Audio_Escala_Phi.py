@@ -209,10 +209,15 @@ for _, label, _, _, f_atrator, direcao in resultados:
     print(f"  {label:<20}  {f_atrator:>7.0f}Hz  {direcao:<6}  {barra}")
 
 # ── áudio da progressão ───────────────────────────────────────────────────────
+def slug(label):
+    s = label[:8].strip()
+    for c in ' /=φ²³★': s = s.replace(c, '_')
+    return s.strip('_')
+
 wavs = []
 for sig, label, _, cas, _, _ in resultados:
-    nome_orig = f"escala_{label[:8].strip().replace(' ','_')}_orig.wav"
-    nome_eco  = f"escala_{label[:8].strip().replace(' ','_')}_eco.wav"
+    nome_orig = f"escala_{slug(label)}_orig.wav"
+    nome_eco  = f"escala_{slug(label)}_eco.wav"
     salvar_wav(sig,             nome_orig)
     salvar_wav(concatenar(cas), nome_eco)
     wavs.append((nome_orig, nome_eco, label))
