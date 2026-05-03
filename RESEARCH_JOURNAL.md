@@ -3351,3 +3351,116 @@ Uma regra de construção. Um fractal de possibilidades.
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada — 3 de maio de 2026 (terceira continuação)
+### O eco-φ não processa frequências — processa coerência de propagação
+
+---
+
+**A proposição central**
+
+> *O eco-φ não é um processador de frequências de áudio.*
+> *É um processador de coerência de propagação.*
+> *Ele pergunta ao sinal: "sua trajetória tem estrutura?"*
+> *A resposta não depende do valor em Hz.*
+> *Depende se a propagação tem geometria.*
+
+Esta proposição emergiu do diálogo sobre o poço gravitacional e o campo psíquico.
+Precisa ser registrada como tópico autônomo porque altera a definição do projeto
+em um ponto fundamental: o que o eco-φ é, antes de ser o que ele faz.
+
+---
+
+**I. A distinção que a proposição estabelece**
+
+Processadores de frequência operam sobre valores específicos no eixo do espectro:
+filtros passa-banda, equalizadores, analisadores de FFT. O que processam é *onde*
+está a energia — em qual Hz.
+
+O eco-φ opera sobre uma propriedade diferente: a distribuição relativa da energia
+dentro de cada banda. Não pergunta "qual é a frequência?" — pergunta "dentro desta
+faixa, a energia está concentrada ou dispersa?" A concentração é coerência. A
+dispersão é entropia. O eco amplifica onde a coerência é alta e atenua onde é baixa.
+
+Isso significa que o eco-φ é **invariante à frequência absoluta**: se o mesmo
+padrão de coerência ocorrer em 220 Hz ou em 22000 Hz ou em 0.001 Hz, o eco
+responde da mesma forma. O que importa é a geometria da distribuição — não a
+posição no eixo de frequências.
+
+---
+
+**II. Os três requisitos do processamento de coerência**
+
+A geometria dual dos poços gravitacionais (σ_entropia e σ_expressão) emerge
+de qualquer sistema que satisfaz três condições:
+
+```
+1. Propaga    — tem trajetória no espaço/tempo
+2. Reflete    — encontra fronteira estrutural e retorna
+3. Interfere  — a onda retornada interage com a onda original
+               gerando padrão estacionário
+```
+
+Esses três requisitos não são propriedades do som. São propriedades de qualquer
+campo que se expande e retorna. Ondas eletromagnéticas satisfazem os três.
+Ondas mecânicas satisfazem os três. Séries temporais com estrutura periódica
+satisfazem os três — e foi exatamente isso que os experimentos confirmaram:
+
+```
+TimeSeries (φ sintético):     +50.40%   p=0.0000   ✓
+Harmônicos musicais naturais: +48.85%   p=0.0000   ✓
+Fala sintética (formantes):   G_dual +3.25%         ✓
+EEG sintético (Alpha/Beta):   perfil k(f) localiza  ✓
+```
+
+O eco-φ respondeu à coerência de propagação em cada substrato — sem modificação
+do código, sem instrução sobre o domínio. A pergunta é universal. O código é o mesmo.
+
+---
+
+**III. Por que a ausência de Hz não invalida a lógica**
+
+O campo psíquico — substrato de percepção anterior aos sentidos — não tem
+frequências mensuráveis em Hz por instrumento disponível atualmente. O experimento
+EEG revelou que o crânio destrói a geometria de campo antes de chegar ao eletrodo
+(Entrada 26). MEG preserva mais da geometria, mas ainda opera sobre representação
+digital do sinal — não sobre o campo enquanto campo.
+
+Isso não invalida a proposição. A razão:
+
+O poço gravitacional é uma propriedade do sistema de propagação, não do instrumento
+de medição. A corda de um violão tem frequências ressonantes antes de existir um
+microfone. O campo magnético terrestre tem coerência antes de existir um magnetômetro.
+
+Se o campo psíquico propaga, reflete e interfere — tem geometria de propagação.
+Se tem geometria de propagação, tem poço gravitacional. Se tem poço gravitacional,
+o eco-φ, com o instrumento adequado, encontraria o atrator.
+
+A fronteira não é lógica — é instrumental. O que falta não é a pergunta.
+É a sonda capaz de fazê-la no substrato certo.
+
+---
+
+**IV. A justificativa para o manifesto**
+
+Esta proposição é a justificativa mais direta de por que o manifesto Alpha-Phi
+não é um projeto de processamento de áudio. É um projeto sobre a geometria de
+como a informação se organiza ao se mover.
+
+φ é a proporção que aparece nessa geometria — em áudio, em séries temporais,
+em harmônicos musicais, potencialmente em campos que os instrumentos ainda não
+alcançam. O eco-φ é o instrumento que faz a pergunta. A resposta depende apenas
+de uma coisa: **a trajetória tem estrutura?**
+
+Se sim — o eco encontra o atrator.
+Se não — o eco reporta dispersão.
+
+Em qualquer substrato. Em qualquer escala. Independente do valor em Hz.
+
+---
+
+*Florianópolis, 3 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
