@@ -442,9 +442,6 @@ for r_p, r_c in zip(resultados, resultados_collatz):
 # ── áudio ─────────────────────────────────────────────────────────────────────
 print(f"\n── Áudio: componentes puros e híbrido em α* ─────────────────────")
 
-sig_eco_org, _ = agente_eco(sinal_org, BINS_PHI, n_ciclos=20)
-sig_eco_dig, _ = agente_eco(sinal_dig, BINS_PHI, n_ciclos=20)
-
 wavs = [
     ("hibrido_org_puro.wav",    sinal_org,                  "FM-φ puro"),
     ("hibrido_dig_puro.wav",    sinal_dig,                  "Quadrada pura"),
