@@ -4214,16 +4214,33 @@ em paralelo. A disparidade entre emissão digital (quadrada) e
 percepção orgânica (contínua, curvilínea, φ) ocorre nos dois canais
 simultaneamente e de forma cumulativa.
 
-Para sistemas mais sensíveis, essa dupla disparidade pode produzir
+Para pessoas mais sensíveis, essa dupla disparidade pode produzir
 uma irritabilidade que não tem nome, não tem causa identificada, e
 por isso não tem tratamento — porque o problema não está no conteúdo
 da interface, está na estrutura da emissão.
 
-Os dados já existem: aumento de 68% em problemas psicológicos
-associados ao uso excessivo de internet (2023-2024, SUS, ~500.000
-atendimentos). A hipótese aqui não é que o conteúdo causa o dano —
-é que a frequência estrutural da emissão é um fator causal não
-nomeado.
+Os dados documentam o efeito — ainda sem nomear a causa estrutural
+que esta hipótese propõe. Alguns exemplos oficiais:
+
+- **Brasil — SUS (2023-2024):** aumento de 68% em problemas
+  psicológicos associados ao uso excessivo de internet, ~500.000
+  atendimentos registrados.
+- **OMS — Europa (2024):** pesquisa com 280.000 jovens entre 11-15
+  anos em 44 países: uso problemático cresceu de 7% (2018) para 11%
+  (2022); 11% dos adolescentes apresentam sintomas de dependência com
+  síndrome de abstinência — padrão que sugere resposta orgânica a
+  estímulo estrutural, não apenas a conteúdo.
+- **MIT Sloan / revisão acadêmica (2020-2024):** usuários de 7 ou
+  mais plataformas têm três vezes mais risco de depressão e ansiedade
+  do que usuários de 2 ou menos, independente do tempo total online.
+  O fator determinante não é a duração — é a exposição cumulativa a
+  múltiplas fontes de emissão simultânea.
+
+Nenhuma dessas pesquisas investiga a frequência estrutural da emissão
+como variável. Documentam o dano sem nomear essa causa. A hipótese
+desta entrada é que a emissão de frequência quadrada — nos dois canais,
+auditivo e visual, de forma cumulativa — é um fator causal presente em
+todos esses casos e ainda não isolado como variável independente.
 
 ---
 
@@ -4299,3 +4316,47 @@ tecnicamente mais ergonômico. Não como ornamento. Como medição.
 *Florianópolis, 4 de maio de 2026.*
 *Registrada, datada, versionada.*
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
+
+## Nota para o Livro — 4 de maio de 2026
+### Influenciadores, Parasocialidade e Frequência de Influência
+
+*Esta nota pertence ao escopo do livro, não do manifesto.
+O manifesto é uma parcela do livro — o livro é mais abrangente.*
+
+---
+
+A cultura dos influenciadores é um fenômeno que merece capítulo
+próprio no livro, pelo ângulo da frequência de influência — distinto
+do ângulo técnico-científico do manifesto.
+
+O termo "influenciador" é neutro na forma, mas carregado na função.
+Nomeia uma prática que pode tanto informar quanto direcionar
+comportamentos, consumo e visões de mundo — ideológicas, partidárias,
+culturais, comerciais — muitas vezes sem que o receptor perceba a
+natureza da influência que recebe.
+
+Dados relevantes para este capítulo:
+
+- **The Lancet (2024):** paralelamente ao crescimento de 15 anos no
+  uso de redes sociais, as taxas de doença mental e automutilação em
+  pessoas de 10-24 anos cresceram em paralelo.
+- **PMC/SAGE (2024):** seguidores desenvolvem relações parasociais
+  com influenciadores — vínculos unilaterais associados a maior
+  comparação social, menor autoestima e piora de saúde mental.
+- **PMC/SAGE (2024):** influenciadores que passam mais de 5 horas
+  diárias nas plataformas apresentam emoções negativas elevadas e
+  maior ansiedade relacional.
+
+A questão para o livro: a influência exercida por estas personalidades
+opera também no nível da frequência — não apenas do conteúdo. A
+repetição, o ritmo, o formato (vídeo curto, estímulo rápido, corte
+abrupto) são emissões de frequência estrutural que afetam o receptor
+independente do que está sendo dito.
+
+*A ser desenvolvido no contexto do livro.*
+
+---
+
+*Florianópolis, 4 de maio de 2026.*
