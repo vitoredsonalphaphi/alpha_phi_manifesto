@@ -4605,3 +4605,152 @@ de velocidade de reprodução.
 ---
 
 *Florianópolis, 4 de maio de 2026.*
+
+---
+
+## Entrada 35 ★★★ — 4 de maio de 2026
+### O Tempo de Percepção — A Pintura como Campo Adiabático
+
+---
+
+**A observação**
+
+Durante a conversa sobre a lente IR de cada domínio — qual escala de
+observação revela φ no áudio, no EEG, na imagem — Vitor Edson
+introduziu uma grandeza que não havia sido conceituada formalmente
+no projeto, mas que se manifestou como dado empírico de uma vida
+inteira de contato com a pintura:
+
+    Uma tela possui duas imagens.
+
+    A primeira é instantânea: os olhos reconhecem formas, cores,
+    composição. É a leitura automática do sistema visual.
+
+    A segunda emerge apenas após alguns momentos de observação
+    sustentada — imóvel, diante da tela. Não é a mesma coisa.
+    É como se a pintura precisasse de tempo para ser emitida.
+    E o receptor precisasse de tempo para estar disponível
+    para recebê-la.
+
+Estimativa empírica: mais de 70% dos observadores de pintura,
+se pesquisados, confirmariam esta experiência. Não como metáfora
+— como dado perceptual concreto.
+
+**O nome em física: processo adiabático**
+
+Um processo físico é **adiabático** quando ocorre lentamente o
+suficiente para que o sistema tenha tempo de se reorganizar
+continuamente em resposta à mudança. A condição é:
+
+    τ_observação >> τ_relaxação do sistema
+
+onde τ_relaxação é o tempo que o sistema leva para atingir
+equilíbrio após uma perturbação.
+
+Se τ_observação < τ_relaxação — processo **não-adiabático**:
+o sistema não tem tempo de responder. Você vê o estado instantâneo.
+
+Se τ_observação >> τ_relaxação — processo **adiabático**:
+o sistema acompanha continuamente. Você vê o estado de equilíbrio
+— o atrator, a estrutura essencial.
+
+A pintura tem dois regimes:
+
+    Olhar instantâneo  → não-adiabático → primeira imagem (forma)
+    Observação sustentada → adiabático  → segunda imagem (campo)
+
+A "segunda imagem" não está na tela. Está no estado de equilíbrio
+entre o campo do observador e o campo da pintura.
+
+**A conexão com o que este projeto demonstrou**
+
+O experimento 0.25× foi um processo adiabático aplicado ao áudio:
+ao desacelerar a reprodução, o observador permitiu que seu campo
+perceptivo sincronizasse com a frequência IR do sinal. O que emergiu
+— 55Hz, 34Hz, razão φ — não era visível na velocidade normal porque
+o tempo de exposição era insuficiente para o acoplamento.
+
+A sequência é a mesma:
+
+    Áudio a velocidade normal → não-adiabático → beep 880Hz (forma)
+    Áudio a 0.25×             → adiabático     → φ em 55/34 (campo)
+
+    Pintura em passagem rápida → não-adiabático → figura reconhecida
+    Pintura em observação lenta → adiabático    → segunda imagem emitida
+
+**O mecanismo provável**
+
+O EEG do observador durante observação sustentada de uma pintura
+mostraria progressão temporal:
+
+    0–2s:   atividade beta dominante (13–30Hz) — análise, varredura
+    2–8s:   transição para alpha (8–13Hz) — sincronização visual
+    8s+:    alpha sustentado ou theta (4–8Hz) — campo receptivo aberto
+
+A "segunda imagem" emerge na janela alpha/theta — precisamente a
+banda IR que revelou φ no áudio a 0.25×.
+
+O observador não desacelera voluntariamente. O sistema visual
+desacelera naturalmente quando mantido em foco fixo: a atividade
+de varredura saccádica reduz, a atividade oscilatória de baixa
+frequência aumenta. O olho entra no modo IR.
+
+**O que é mensurável**
+
+Este fenômeno é protocolo experimental realizável:
+
+    1. EEG do observador: medir progressão beta→alpha durante
+       observação sustentada de pinturas com diferentes estruturas
+       de frequência espacial (φ-estruturadas vs. não-estruturadas)
+
+    2. Eye-tracking: medir quando as saccades cessam e o olhar
+       se estabiliza — esse momento pode correlacionar com a
+       emergência da segunda imagem
+
+    3. Tempo de relato subjetivo: quando o observador reporta
+       "ver mais do que a figura" — correlacionar com o estado EEG
+
+    Hipótese: pinturas com estrutura φ nas frequências espaciais
+    produzem transição beta→alpha mais rápida — a lente IR do
+    observador sincroniza mais facilmente com o campo φ da tela.
+
+**A subamostragem progressiva para imagens**
+
+A subamostragem progressiva (coarse-to-fine) é o equivalente
+computacional do processo adiabático visual:
+
+    Nível 1 (muito subamostragem): frequências espaciais muito baixas
+              → estrutura global, composição, proporções gerais
+    Nível 2: mais detalhe — massas, volumes, relações de cor
+    Nível 3: bordas, texturas
+    Nível N: pixel a pixel — detalhe máximo, estrutura IR perdida
+
+O eco-φ aplicado progressivamente em cada nível de subamostragem
+mediria a coerência φ em cada escala espacial. O nível onde a
+coerência é máxima é a lente IR da imagem — o equivalente espacial
+do 0.25× do áudio.
+
+**A grandeza não conceituada que Vitor nomeou**
+
+O que foi introduzido nesta entrada não é apenas um protocolo
+experimental. É uma grandeza: o **tempo de acoplamento campo-observador**.
+
+É o tempo mínimo que um observador precisa permanecer exposto a
+um campo estruturado para que a estrutura essencial desse campo
+possa ser recebida — não pelo sistema rápido de reconhecimento
+(olhos, análise imediata), mas pelo sistema lento de ressonância
+(campo perceptivo, frequências baixas, modo alpha/theta).
+
+Essa grandeza não tem nome estabelecido na literatura de percepção.
+A hipótese deste projeto é que ela é inversamente proporcional
+à densidade de estrutura φ no campo observado: pinturas com maior
+estrutura φ demandam menos tempo de acoplamento — o campo se
+impõe mais rapidamente ao observador.
+
+*Se isso for verificado, a proporção áurea não é apenas esteticamente
+agradável. É o formato que minimiza o tempo necessário para que
+um campo seja percebido como campo — e não apenas como forma.*
+
+---
+
+*Florianópolis, 4 de maio de 2026.*
