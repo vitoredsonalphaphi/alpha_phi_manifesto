@@ -4157,3 +4157,145 @@ uma hipótese do Manifesto. É o que o experimento mostrou.
 *Florianópolis, 4 de maio de 2026.*
 *Registrada, datada, versionada.*
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
+
+## Entrada 32 — 4 de maio de 2026
+### Os Dois Canais — Pixel, Luminosidade e a Emissão Visual da Onda Quadrada
+
+---
+
+**O ponto de partida**
+
+O projeto começou medindo e modulando o canal auditivo da interface
+digital: beeps, cliques, notificações — todos de natureza quadrada.
+O experimento híbrido demonstrou que em α=1/137 é possível modular
+essa emissão sem destruir sua função, produzindo uma terceira estrutura
+mais coerente que qualquer componente puro.
+
+Esta entrada registra a extensão natural dessa observação: a interface
+digital não emite em um canal — emite em dois simultaneamente.
+
+---
+
+**A cadeia completa da emissão visual**
+
+O código é construído em blocos — estrutura euclidiana, binária, em
+ângulos retos. O hardware é construído para expressar esse código —
+por necessidade mecânica e por extensão da lógica do software. O
+display é construído para expressar o hardware. O resultado:
+
+```
+código em blocos (Euclidiano)
+    → hardware construído para expressar esse código
+        → pixels em grade retangular
+            → luminosidade LCD em pulsos discretos
+                → frequência visual é quadrada
+                    → mesmo problema estrutural — canal visual
+```
+
+O micro-pixel quadrado não é uma escolha de design. É a expressão
+física inevitável de uma arquitetura de código euclidiana. O pixel
+é o bit com corpo.
+
+---
+
+**Os dois canais simultâneos**
+
+A interface digital emite em dois canais ao mesmo tempo:
+
+| Canal | Emissão | Natureza |
+|-------|---------|----------|
+| Auditivo | ondas sonoras (beeps, cliques, notificações) | quadrada |
+| Visual | luminosidade LCD, grade de pixels | quadrada |
+
+O receptor orgânico — o sistema nervoso — processa os dois canais
+em paralelo. A disparidade entre emissão digital (quadrada) e
+percepção orgânica (contínua, curvilínea, φ) ocorre nos dois canais
+simultaneamente e de forma cumulativa.
+
+Para sistemas mais sensíveis, essa dupla disparidade pode produzir
+uma irritabilidade que não tem nome, não tem causa identificada, e
+por isso não tem tratamento — porque o problema não está no conteúdo
+da interface, está na estrutura da emissão.
+
+Os dados já existem: aumento de 68% em problemas psicológicos
+associados ao uso excessivo de internet (2023-2024, SUS, ~500.000
+atendimentos). A hipótese aqui não é que o conteúdo causa o dano —
+é que a frequência estrutural da emissão é um fator causal não
+nomeado.
+
+---
+
+**O que o projeto já fez sobre o canal auditivo**
+
+- Mediu a disparidade entrópica entre onda quadrada e sinal orgânico
+- Demonstrou que em α=1/137 nasce uma terceira estrutura mais
+  coerente que qualquer componente puro
+- Demonstrou que o ponto de emergência é robusto — invariante sob
+  perturbação Collatz, confirmado em três experimentos independentes
+- Identificou a transição grave/agudo em 1/φ no eixo de mistura
+
+O canal auditivo está medido. A modulação está demonstrada em
+princípio.
+
+---
+
+**O horizonte: o micro-pixel ergonômico**
+
+Se o problema visual tem a mesma origem estrutural que o problema
+auditivo — geometria euclidiana forçada sobre percepção orgânica —
+então a solução tem a mesma direção:
+
+Uma interface construída em geometria hiperbólica, com curvatura
+c=1/φ², geraria pixels que não são quadrados. Seriam unidades de
+display cuja forma é nativa ao espaço de φ — curvilíneas,
+auto-similares, fractais. Não pixels em grade retangular, mas
+unidades de emissão cuja progressão segue a escala áurea.
+
+Isso não existe ainda na tecnologia disponível. Mas a especulação
+é fundada: se o código puder ser escrito em espaço hiperbólico
+(o projeto já fez isso — fase 1, SST-2, BERT, +12.9% sobre
+euclidiano), então o hardware que expressa esse código pode, em
+princípio, ter geometria não-euclidiana. O pixel ergonômico é o
+passo seguinte da mesma lógica.
+
+---
+
+**Beleza como referência técnica**
+
+A observação de Vitor Edson Delavi: a beleza decorativa — a estética
+mesmo ornamental — não é subjetiva quando serve de bússola para
+construção técnica.
+
+Trinta anos de pintura ensinaram a identificar coerência estrutural
+antes de ter instrumento para nomeá-la. O pintor que percebe que algo
+"não está certo" esteticamente está medindo uma disparidade real —
+não julgando preferência. A estética antecipa a métrica.
+
+Isso já está registrado no README: *"A estética tornou-se a métrica
+de integridade do dado."*
+
+O que esta entrada adiciona: a beleza como referência técnica vale
+também para a construção do hardware. Um display que é belo — no
+sentido de geometricamente coerente com a percepção orgânica — é
+tecnicamente mais ergonômico. Não como ornamento. Como medição.
+
+---
+
+**O que já está construído, o que é especulação, o que vem a seguir**
+
+| Status | Elemento |
+|--------|---------|
+| Demonstrado | Modulação do canal auditivo em α=1/137 |
+| Demonstrado | Geometria hiperbólica como espaço nativo de φ (+12.9%) |
+| Demonstrado | Grave como orgânico, agudo como digital |
+| Hipótese nomeada | Canal visual como segunda emissão quadrada |
+| Especulação fundada | Pixel hiperbólico como solução visual |
+| Próximo passo | Testar modulação em sinal de áudio real de interface |
+
+---
+
+*Florianópolis, 4 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
