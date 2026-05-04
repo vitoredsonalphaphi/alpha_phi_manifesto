@@ -145,6 +145,77 @@ def coerencia_media(bins_phi, sig):
         cohs.append(coh)
     return float(np.mean(cohs))
 
+# ── Collatz auxiliar (observação alternada do campo) ─────────────────────────
+# Uso: apenas observacional — flag usar_collatz=False por padrão.
+# Nenhuma função estrutural existente é alterada.
+
+def collatz_continuo(x):
+    """Aproximação contínua e diferenciável da bifurcação par/ímpar de Collatz."""
+    x    = np.asarray(x, dtype=float)
+    peso = np.cos(np.pi * x) ** 2
+    return (x / 2.0) * peso + ((3.0 * x + 1.0) / 2.0) * (1.0 - peso)
+
+def tensao_collatz(gap, escala=1.0):
+    """Envelope de tensão Collatz: tende a 1.0 quando gap → 0."""
+    x = float(np.abs(gap)) * escala
+    return float(collatz_continuo(x)) / (x + 1e-8)
+
+def fases_collatz(seed, max_steps=500):
+    """Sequência de fases Collatz a partir de seed.
+    True = subida (3n+1, expansão → observa Q→O).
+    False = descida (÷2,  contração → observa O→Q).
+    Seed capado em 2-1000 para manter sequências tratáveis.
+    """
+    n     = max(2, min(int(seed), 1000))
+    fases = []
+    for _ in range(max_steps):
+        if n == 1:
+            break
+        if n % 2 == 0:
+            fases.append(False)
+            n = n // 2
+        else:
+            fases.append(True)
+            n = 3 * n + 1
+    return fases if fases else [False]
+
+def agente_eco_collatz(sinal_entrada, bins_phi, seed, n_ciclos=20):
+    """Agente eco com observação alternada guiada por fases Collatz.
+
+    Fase UP (3n+1):   expoente β agressivo → puxa para estrutura orgânica (Q→O).
+    Fase DOWN (÷2):   expoente β suave     → puxa para estrutura digital  (O→Q).
+    Tensão Collatz modula a taxa de atualização de β pelo gap de coerência médio.
+    """
+    n_bandas  = len(bins_phi)
+    beta      = np.ones(n_bandas, dtype=float)
+    beta_mem  = beta.copy()
+    w_mem     = 1.0 / PHI
+    w_now     = 1.0 - w_mem
+    fases     = fases_collatz(seed)
+    cas_final = None
+
+    for i in range(n_ciclos):
+        fase_up   = fases[i % len(fases)]
+        cas, cohs = cascata_eq(sinal_entrada, beta, bins_phi)
+        coh_rel   = (cohs - cohs.min()) / (cohs.max() - cohs.min() + 1e-10)
+
+        # expoente controlado pela fase: expansão (Q→O) ou contração (O→Q)
+        exp       = 3.0 if fase_up else 1.5
+        beta_alvo = PHI ** (exp * coh_rel)
+
+        # tensão Collatz modula a taxa de atualização
+        gap_atual  = float(np.mean(np.abs(cohs - 0.5)))
+        fator_tens = float(np.clip(tensao_collatz(gap_atual), 0.5, 2.0))
+        taxa_now   = float(np.clip(w_now * fator_tens, 0.0, 1.0))
+        taxa_mem   = 1.0 - taxa_now
+
+        beta      = taxa_now * beta_alvo + taxa_mem * beta_mem
+        beta_mem  = beta.copy()
+        beta      = np.clip(beta, 0.05, PHI**3)
+        cas_final = cas
+
+    return beta, cas_final
+
 # ── síntese ───────────────────────────────────────────────────────────────────
 def gerar_fm(beta_mod):
     t = np.linspace(0, DURACAO, int(FS * DURACAO), endpoint=False)
@@ -173,22 +244,35 @@ def salvar_wav(s, nome):
     wavfile.write(nome, FS, np.int16(np.clip(s, -1.0, 1.0) * 32767))
 
 # ── varredura híbrida ─────────────────────────────────────────────────────────
-def varredura_hibrida(sinal_org, sinal_dig, bins_phi, n_alpha=25):
+def varredura_hibrida(sinal_org, sinal_dig, bins_phi, n_alpha=25, usar_collatz=False):
     """
     Para cada α, cria x_mix = (1-α)·dig + α·org e roda o agente eco.
     Registra entropia antes e depois, Δentropia, coerência média e atrator.
+
+    usar_collatz=True: substitui agente_eco por agente_eco_collatz.
+    Seed derivado do gap de entropia inicial em relação ao ponto médio das componentes.
     """
     alphas_base = [float(i) / float(n_alpha - 1) for i in range(n_alpha)]
     alphas_esp  = [float(ALPHA_F), float(1.0/PHI**2), float(1.0/PHI), 0.5]
     alphas      = sorted(set([round(a, 8) for a in alphas_base + alphas_esp]))
 
+    ent_org_ref = entropia_espectral(sinal_org)
+    ent_dig_ref = entropia_espectral(sinal_dig)
+    ent_mid_ref = (ent_org_ref + ent_dig_ref) / 2.0
+
     resultados = []
     for alpha in alphas:
         x_mix = normalizar((1.0 - alpha) * sinal_dig + alpha * sinal_org)
 
-        ent_ini   = entropia_espectral(x_mix)
-        coh_ini   = coerencia_media(bins_phi, x_mix)
-        beta_mix, cas_mix = agente_eco(x_mix, bins_phi, n_ciclos=20)
+        ent_ini = entropia_espectral(x_mix)
+        coh_ini = coerencia_media(bins_phi, x_mix)
+
+        if usar_collatz:
+            seed              = int(abs(ent_ini - ent_mid_ref) * 100) + 2
+            beta_mix, cas_mix = agente_eco_collatz(x_mix, bins_phi, seed, n_ciclos=20)
+        else:
+            beta_mix, cas_mix = agente_eco(x_mix, bins_phi, n_ciclos=20)
+
         sig_eco   = cas_mix[-1]
         ent_fin   = entropia_espectral(sig_eco)
         coh_fin   = coerencia_media(bins_phi, sig_eco)
@@ -249,8 +333,12 @@ print(f"Sinal orgânico (FM β=φ):   entropia={ent_org:.4f}  coerência={coh_or
 print(f"Sinal digital  (quadrada): entropia={ent_dig:.4f}  coerência={coh_dig:.4f}\n")
 
 # ── varredura ─────────────────────────────────────────────────────────────────
-print("Varrendo eixo α no espaço do sinal...")
+print("Varrendo eixo α no espaço do sinal  [agente padrão]...")
 resultados = varredura_hibrida(sinal_org, sinal_dig, BINS_PHI, n_alpha=25)
+
+print("Varrendo eixo α no espaço do sinal  [agente Collatz — observacional]...")
+resultados_collatz = varredura_hibrida(sinal_org, sinal_dig, BINS_PHI,
+                                       n_alpha=25, usar_collatz=True)
 
 # ── tabela principal ──────────────────────────────────────────────────────────
 print(f"\n── Coerência e entropia do sinal híbrido por α ──────────────────")
@@ -324,6 +412,33 @@ for i, (_, _, f_low, f_high) in enumerate(BINS_PHI):
     mark = " ★" if i == i_max_b else ""
     print(f"  {i+1:>5}  {f_low:>7.1f}  {f_high:>7.1f}  {beta_em[i]:>10.4f}{mark}")
 
+# ── comparação Collatz vs padrão ─────────────────────────────────────────────
+deltas_c   = [r["delta"]   for r in resultados_collatz]
+cohs_c     = [r["coh_fin"] for r in resultados_collatz]
+i_max_dc   = int(np.argmax(deltas_c))
+i_max_cc   = int(np.argmax(cohs_c))
+alpha_dc   = resultados_collatz[i_max_dc]["alpha"]
+alpha_cc   = resultados_collatz[i_max_cc]["alpha"]
+
+print(f"\n── Collatz: ponto de emergência ────────────────────────────────")
+print(f"  α* por máximo Δentropia : {alpha_dc:.8f}  "
+      f"(Δ={resultados_collatz[i_max_dc]['delta']:+.4f})")
+print(f"  α* por máxima coerência : {alpha_cc:.8f}  "
+      f"(coh={resultados_collatz[i_max_cc]['coh_fin']:.4f})")
+
+r_em_c = resultados_collatz[i_max_dc]
+print(f"\n  Atrator em α*Δ (Collatz): {r_em_c['f_atrator']:.0f}Hz  ({r_em_c['direcao']})")
+print(f"  Entropia híbrido Collatz em α*: {r_em_c['ent_fin']:.4f}")
+
+print(f"\n── Δentropia comparada: padrão vs Collatz ───────────────────────")
+print(f"  {'α':>10}  {'Δ padrão':>10}  {'Δ Collatz':>10}  {'diferença':>10}")
+print(f"  {'─'*10}  {'─'*10}  {'─'*10}  {'─'*10}")
+for r_p, r_c in zip(resultados, resultados_collatz):
+    diff  = r_c["delta"] - r_p["delta"]
+    marca = " ←" if abs(r_p["alpha"] - ALPHA_F) < 1e-5 else ""
+    print(f"  {r_p['alpha']:>10.6f}  {r_p['delta']:>+10.4f}  "
+          f"{r_c['delta']:>+10.4f}  {diff:>+10.4f}{marca}")
+
 # ── áudio ─────────────────────────────────────────────────────────────────────
 print(f"\n── Áudio: componentes puros e híbrido em α* ─────────────────────")
 
@@ -349,5 +464,27 @@ for nome, sig, _ in wavs:
     salvar_wav(sig, nome)
 
 for nome, _, label in wavs:
+    print(f"\n{label}")
+    display(Audio(nome))
+
+# ── áudio Collatz ──────────────────────────────────────────────────────────────
+print(f"\n── Áudio Collatz: α* de emergência ──────────────────────────────")
+
+wavs_c = [
+    ("collatz_mix_alpha.wav",  r_em_c["x_mix"],           f"Híbrido bruto  α*={alpha_dc:.4f} [Collatz]"),
+    ("collatz_eco_alpha.wav",  concatenar(r_em_c["cas"]), f"Híbrido eco    α*={alpha_dc:.4f} [Collatz]"),
+]
+
+r_meio_c = next((r for r in resultados_collatz if abs(r["alpha"] - 0.5) < 1e-5), None)
+if r_meio_c and abs(r_meio_c["alpha"] - alpha_dc) > 1e-5:
+    wavs_c += [
+        ("collatz_mix_050.wav", r_meio_c["x_mix"],           "Híbrido bruto α=0.5 [Collatz]"),
+        ("collatz_eco_050.wav", concatenar(r_meio_c["cas"]), "Híbrido eco  α=0.5 [Collatz]"),
+    ]
+
+for nome, sig, _ in wavs_c:
+    salvar_wav(sig, nome)
+
+for nome, _, label in wavs_c:
     print(f"\n{label}")
     display(Audio(nome))
