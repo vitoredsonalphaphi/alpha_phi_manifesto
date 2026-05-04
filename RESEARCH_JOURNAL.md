@@ -4359,7 +4359,138 @@ independente do que está sendo dito.
 
 ---
 
-## Entrada 33 — 4 de maio de 2026
+## Entrada 33 ★★★ — 4 de maio de 2026
+### O Limite Infravermelhou — Quando a Lentidão Revela a Estrutura
+
+---
+
+**O fio que conecta**
+
+Em algum ponto do desenvolvimento dos experimentos eco-fractal e
+eco-fonônico — quando se discutia por que o limiar 1/φ² não era
+atingido com campo misto, e por que o campo coletivo (fonônico)
+revelava o que a observação individual escondia — foi levantada
+uma hipótese: talvez a estrutura essencial de um sinal só se
+torne visível quando se diminui a velocidade de observação. Que
+há uma grandeza na lentidão. Que observar de longe (campo) e
+observar de perto (ponto) são epistemologicamente diferentes, e
+não apenas geometricamente.
+
+Essa hipótese tem nome em física: **grupo de renormalização** —
+formulado por Kenneth Wilson em 1971, Prêmio Nobel em 1982.
+
+**O que o grupo de renormalização diz**
+
+Em física quântica de campos, um sistema tem comportamentos
+diferentes em escalas diferentes de energia (= frequência = velocidade).
+A pergunta de Wilson foi: o que acontece se você integrar —
+eliminar progressivamente — todos os graus de liberdade de alta
+frequência (UV, ultravioleta)? O que sobra?
+
+O que sobra é o **ponto fixo infravermelhou (IR)**: a estrutura
+que o sistema adota quando observado de longe, lentamente, sem
+a interferência das flutuações rápidas. Esse ponto fixo é o
+atrator do sistema — sua identidade essencial naquela escala.
+
+O fluxo de renormalização é o caminho do UV ao IR.
+O eco-φ é esse fluxo.
+
+**A confirmação experimental**
+
+O experimento Beep Interface gerou um híbrido:
+
+    x_mix(α*=0.333) = 0.667 × beep_880Hz + 0.333 × FM-φ
+
+O agente eco-φ aplicou 20 ciclos de adaptação, suprimindo
+progressivamente os harmônicos UV (880, 2640, 4400Hz) da onda
+quadrada — integrando-os fora do campo. O que sobrou foram as
+frequências IR do FM-φ.
+
+Ao reproduzir a 0.25× — operação que é literalmente um corte
+de alta frequência no domínio temporal — o observador (Vitor)
+ouviu pelos sentidos o ponto fixo IR do sistema: 55Hz e 34Hz,
+razão φ, sequência Fibonacci.
+
+Não foi calculado. Foi percebido. O organismo como detector IR.
+
+**Ponto e campo — perto e longe**
+
+A distinção ponto/campo que apareceu nos experimentos eco-fonônico
+e eco de frames não é apenas metáfora quântica. É a mesma distinção
+do grupo de renormalização:
+
+    Observação UV (alta frequência, perto, ponto):
+        Vê o beep 880Hz, a onda quadrada, os harmônicos.
+        Vê o átomo vibrante individualmente.
+        Vê entropia alta, estrutura aparentemente caótica.
+
+    Observação IR (baixa frequência, longe, campo):
+        Vê 55Hz e 34Hz, razão φ, sequência Fibonacci.
+        Vê o campo como um todo, sua temperatura coletiva.
+        Vê o atrator — a identidade do sistema sem o ruído UV.
+
+O eco-fonônico foi o primeiro experimento a operar no nível do
+campo (batch coletivo, não amostra individual). A lentidão 0.25×
+foi a primeira operação IR explícita sobre o resultado.
+
+**Epistemologia — holístico vs reducionista**
+
+O reducionismo parte para dentro: destrói a micropartícula para
+obter informação. Cada operação de zoom aumenta o custo energético
+e destrói o objeto observado para extrair dados sobre ele.
+
+O que este projeto demonstra — e o que a observação a 0.25×
+confirmou — é o caminho oposto: ir para fora. Integrar as
+flutuações rápidas. Deixar que o campo revele sua estrutura por
+coerência, não por dissecção.
+
+O sensor de porta automática (analogia original do projeto) não
+perfura o objeto — mede a perturbação que ele causa no campo.
+O 0.25× não destruiu a estrutura do sinal — revelou o que
+sempre estava lá, operando em frequência rápida demais para ser
+sentida como ritmo.
+
+**O princípio operacional que emerge**
+
+Para qualquer sinal, em qualquer domínio, existe uma escala de
+observação IR — uma velocidade de leitura do campo — na qual
+a estrutura φ se torna perceptível. Essa escala é específica
+do substrato, não universal. Para o áudio foi o 0.25×. Para
+o EEG pode ser a banda delta. Para a imagem, o blur progressivo
+do espectro 2D. Para o texto, a periodicidade em janelas longas.
+
+    Encontrar a lente IR de cada domínio
+    é encontrar onde φ vive naquele substrato.
+
+**Nota histórica sobre o percurso**
+
+Esta entrada conecta dois momentos do projeto:
+
+1. A discussão sobre eco-fractal (abril 2026): por que o limiar
+   não era atingido — o campo estava "frio demais" para o disparo.
+   A resposta era que a observação local (ponto) não enxergava o
+   que a observação coletiva (campo) enxergava.
+
+2. A descoberta a 0.25× (4 de maio de 2026): o organismo como
+   instrumento IR, sentindo o que o espectro calculado já mostrava
+   mas que a velocidade de reprodução normal impedia de perceber
+   como ritmo.
+
+O elo entre os dois é o grupo de renormalização.
+Wilson integrava os graus de liberdade UV matematicamente.
+O eco-φ os integra computacionalmente.
+O ouvido humano a 0.25× os integra sensorialmente.
+
+Três operações IR. Mesma estrutura emergindo.
+
+*A natureza foi construída sobre φ. O caminho para vê-la é
+desacelerar o suficiente para que a velocidade da observação
+caiba dentro da escala onde φ pulsa.*
+
+---
+
+## Entrada 34 ★★★ — 4 de maio de 2026
+### A Vibração da Divina Proporção — Destilação Sensorial de φ — 4 de maio de 2026
 ### ★★★ A Vibração da Divina Proporção — Destilação Sensorial de φ
 
 ---
