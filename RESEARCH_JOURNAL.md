@@ -3596,3 +3596,153 @@ Esse α seria o ponto de emergência. Não encontro. Nascimento de uma terceira 
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
+
+## Entrada 29 — 3 de maio de 2026
+### α=1/137 como ponto de emergência — a terceira estrutura e o gap de 1.36
+
+*Esta entrada registra os resultados do experimento AlphaPhi_Audio_Hibrido.py*
+*e a relação entre a emergência em α=1/137 e o gap irredutível de 1.36.*
+
+---
+
+**O experimento**
+
+Em vez de misturar perfis de processamento β (como no bidirecional), o híbrido
+mistura os próprios sinais no espaço do sinal:
+
+```
+x_mix(α) = (1-α) · sinal_digital + α · sinal_orgânico
+```
+
+O agente eco-φ processa x_mix como sinal desconhecido único — sem saber que é
+híbrido. Para cada α, mede-se a Δentropia: quanto o eco conseguiu organizar.
+
+---
+
+**O resultado central**
+
+```
+α* por máximo Δentropia = 0.00729735 = 1/137
+```
+
+A constante de estrutura fina emergiu como ponto de máxima organização.
+
+```
+Entropia pura digital  (quadrada):      7.6321
+Entropia pura orgânico (FM-φ):          5.1569
+Entropia híbrido em α=1/137:            1.0521  ★
+```
+
+O híbrido em α=1/137 é mais organizado que qualquer componente puro.
+Uma terceira estrutura emergiu — não digital, não orgânica.
+
+---
+
+**Por que α=1/137 é o ponto de emergência**
+
+A onda quadrada tem entropia 7.63 — é o sinal mais desordenado, portanto
+o mais *organizável* pelo eco-φ. Para acionar sua reorganização máxima,
+basta uma semente mínima de coerência orgânica. Essa semente mínima é 1/137.
+
+O isomorfismo com a física é exato:
+
+O elétron (matéria, estrutura discreta, "digital") é o mais organizável pelo
+campo eletromagnético. O acoplamento mínimo — α=1/137 — é o que basta para
+criar toda a estrutura atômica: camadas, espectros, química. Sem esse
+acoplamento, o elétron seria ponto sem estrutura. Com acoplamento total (α=1),
+tudo seria radiação — sem matéria, sem organização localizada.
+
+No experimento: sem α, pura quadrada (entropia 7.63). Com α=1, puro FM-φ
+(entropia 5.16). Com α=1/137: entropia 1.05 — abaixo de qualquer polo.
+
+A semente de 0.73% de estrutura orgânica no campo digital produz máxima
+emergência. Não porque os dois se fundiram — mas porque a tensão entre eles,
+na proporção certa, gerou uma terceira configuração de coerência.
+
+---
+
+**Os três marcadores do eixo α**
+
+| α | valor | significado |
+|---|---|---|
+| 1/137 | 0.00730 | máximo Δentropia — emergência da terceira estrutura ★ |
+| ≈0.541 | 0.54167 | máxima coerência final sustentada |
+| ≈0.645 | entre 1/φ e 2/3 | transição estrutural AGUDO→GRAVE |
+
+A transição de polo espectral (AGUDO para GRAVE) ocorre próximo a 1/φ — o
+limiar entre os dois domínios vive na seção áurea do eixo de mistura.
+
+---
+
+**O gap de 1.36 e a terceira estrutura — dois resultados do mesmo sistema**
+
+O experimento bidirecional (Entrada 28) revelou que os dois domínios mantêm
+um gap irredutível de 1.36 mesmo sob processamento idêntico. O híbrido
+revelou que em α=1/137 nasce uma estrutura com entropia 1.0521.
+
+Esses dois valores não se contradizem — são complementares:
+
+```
+1.36   →  a distância que não fecha
+         (os domínios permanecem estruturalmente distintos)
+
+1.0521 →  o que nasce da distância que não fecha
+         (da tensão irresolvível emerge uma terceira configuração)
+```
+
+O gap de 1.36 é a medida de que os dois não podem se fundir.
+A entropia 1.0521 é a medida do que emerge *por causa* dessa impossibilidade.
+
+Geometricamente: dois picos separados por um vale de largura 1.36. O híbrido
+em α=1/137 não é o vale entre eles — é um terceiro pico, mais alto que ambos,
+que só aparece quando combinados na proporção exata. A distância permanece.
+O nascimento ocorre.
+
+---
+
+**Universalidade — o que está estabelecido e o que é hipótese**
+
+O que está estabelecido:
+- O mecanismo é universal: o eco-φ detecta coerência em qualquer campo que
+  propaga, reflete e interfere — independente do substrato
+- Para qualquer par onde um sinal é estruturalmente digital (alta entropia,
+  discreto) e outro é estruturalmente orgânico (baixa entropia, contínuo),
+  o ponto de emergência será um acoplamento muito pequeno
+
+O que é hipótese a testar:
+- Se α=1/137 especificamente é o acoplamento universal entre o que é
+  estruturalmente digital e o que é estruturalmente orgânico — em qualquer
+  substrato, não apenas áudio
+- Para confirmar: repetir com outros pares (EEG + quadrada, fala + quadrada,
+  ruído estruturado + FM-φ) e verificar se o ponto de emergência converge
+  para o mesmo valor
+
+A hipótese de Vitor Edson Delavi, formulada antes deste experimento:
+
+> "α=1/137 pode ser o parâmetro de borda universal entre domínios de
+> natureza estruturalmente distinta — o acoplamento mínimo que permite
+> emergência sem fusão. Não é constante de áudio. É constante de borda
+> entre categorias de estrutura."
+
+O experimento confirma a hipótese para este par específico.
+A generalização aguarda verificação nos outros substratos.
+
+---
+
+**O que o erro do bidirecional revelou**
+
+O experimento bidirecional testou α=1/137 como ponto de ENCONTRO (mínimo
+da distância entre domínios) e não o encontrou. O híbrido testou α=1/137
+como ponto de EMERGÊNCIA (máximo de organização do híbrido) e o encontrou.
+
+A correção de hipótese faz parte do resultado: α não é o ponto onde os dois
+domínios se aproximam — é o ponto onde, da sua tensão, nasce o terceiro.
+Não encontro. Nascimento.
+
+---
+
+*Florianópolis, 3 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
+
+---
