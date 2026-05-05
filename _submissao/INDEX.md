@@ -24,6 +24,7 @@
 | `abrir APRESENTACAO` | Apresentação do manifesto | `Apresentacao_Manifesto_AlphaPhi.pdf` |
 | `abrir CONVERGENCIAS` | Compilado v4 convergências | `Compilado_v4_Convergências.md` |
 | `abrir AXIOMAS` | Axiomas do projeto | `AXIOMAS.md` |
+| `abrir UDESC` | Registro autoral EDA/UDESC (versão corrigida) | `_submissao/UDESC_registro_autoral.md` |
 | `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
 
 ---
@@ -32,8 +33,9 @@
 
 | Comando | Status | Descrição |
 |---|---|---|
-| `abrir INPI` | **PENDENTE** | Descrição funcional 1–2 páginas para registro INPI |
-| `abrir PRINCIPIA` | **PENDENTE** | Abstract + estrutura para Principia UFSC |
+| `abrir INPI` | **PRONTO** | Descrição funcional 1–2 páginas para registro INPI |
+| `abrir PRINCIPIA` | **PRONTO** | Abstract + estrutura para Principia UFSC |
+| `abrir UDESC` | **PRONTO** | Registro autoral EDA/UDESC — versão corrigida |
 | `abrir CRONOLOGIA` | **PENDENTE** | Cronologia dos 48 códigos por fase |
 
 ---
