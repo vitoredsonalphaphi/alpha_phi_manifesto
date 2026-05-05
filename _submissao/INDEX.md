@@ -1,0 +1,63 @@
+# _submissao — Índice de Recuperação
+# Alpha-Phi · Vitor Edson Delavi · Florianópolis · 2026
+#
+# COMO USAR:
+# Em qualquer sessão futura, cite o COMANDO DE RECUPERAÇÃO abaixo.
+# O assistente localizará e abrirá o documento correto.
+
+---
+
+## SENHAS DE RECUPERAÇÃO
+
+| Comando | Documento | Caminho |
+|---|---|---|
+| `abrir INPI` | Descrição funcional para registro INPI | `_submissao/INPI_descricao_funcional.md` |
+| `abrir PRINCIPIA` | Abstract + estrutura para revista Principia UFSC | `_submissao/Principia_artigo.md` |
+| `abrir ARXIV` | Draft artigo arXiv (já existe) | `paper_arxiv_draft.md` |
+| `abrir ARXIV_EN` | Abstract inglês + carta endorser + post X | `AlphaPhi_arXiv_PDO.md` |
+| `abrir MANIFESTO PDF` | Manifesto completo em PDF | `MANIFESTO_ALPHAPHI_COMPLETO.pdf` |
+| `abrir JOURNAL PDF` | Research Journal completo em PDF | `RESEARCH_JOURNAL_COMPLETO.pdf` |
+| `abrir ANTERIORIDADE PDF` | Documento de anterioridade 2019–2025 | `Anterioridade_AlphaPhi_2019_2025.pdf` |
+| `abrir ZIP` | Pacote ZIP para Zenodo/submissão | `AlphaPhi_Manifesto_Software_v1.zip` |
+| `abrir JOURNAL` | Research Journal completo (fonte) | `RESEARCH_JOURNAL.md` |
+| `abrir CRONOLOGIA` | Cronologia dos 48 códigos por fase | `_submissao/CRONOLOGIA_CODIGO.md` *(a criar)* |
+| `abrir APRESENTACAO` | Apresentação do manifesto | `Apresentacao_Manifesto_AlphaPhi.pdf` |
+| `abrir CONVERGENCIAS` | Compilado v4 convergências | `Compilado_v4_Convergências.md` |
+| `abrir AXIOMAS` | Axiomas do projeto | `AXIOMAS.md` |
+| `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
+
+---
+
+## DOCUMENTOS A CRIAR (pendentes)
+
+| Comando | Status | Descrição |
+|---|---|---|
+| `abrir INPI` | **PENDENTE** | Descrição funcional 1–2 páginas para registro INPI |
+| `abrir PRINCIPIA` | **PENDENTE** | Abstract + estrutura para Principia UFSC |
+| `abrir CRONOLOGIA` | **PENDENTE** | Cronologia dos 48 códigos por fase |
+
+---
+
+## DOCUMENTOS JÁ PRONTOS
+
+- `MANIFESTO_ALPHAPHI_COMPLETO.pdf` — manifesto integral
+- `RESEARCH_JOURNAL_COMPLETO.pdf` — diário completo (entradas 1–36)
+- `Anterioridade_AlphaPhi_2019_2025.pdf` — registro de anterioridade
+- `paper_arxiv_draft.md` — rascunho artigo arXiv
+- `AlphaPhi_arXiv_PDO.md` — abstract inglês + carta endorser
+- `AlphaPhi_Manifesto_Software_v1.zip` — pacote Zenodo
+- `Apresentacao_Manifesto_AlphaPhi.pdf` — apresentação
+
+---
+
+## ESTADO DO REPOSITÓRIO
+
+- Branch de desenvolvimento: `claude/good-morning-N6f3S`
+- Commits de hoje (4 mai 2026): 8 novos commits
+- Arquivos Python: 51 (48 experimentos + 3 áudio ergonômico)
+- Entradas no Journal: 36 (última: β→φ³ convergência)
+- Último resultado: beep880 pós-dobra — coh_med=0.984, β=φ³
+
+---
+
+*Atualizado: 4 de maio de 2026*
