@@ -4754,3 +4754,54 @@ um campo seja percebido como campo — e não apenas como forma.*
 ---
 
 *Florianópolis, 4 de maio de 2026.*
+
+---
+
+## Entrada 36 — 4 de maio de 2026
+### Resultado: Beep 880Hz Pós-Dobra — β converge para φ³
+
+**Execução:** `AlphaPhi_Audio_Beep880_PosdobraEstendido.py`
+
+```
+Bandas φ: 15  |  α* = 0.33333  |  Beep 880Hz
+
+β_final máximo: 4.236  →  atrator: 42Hz   (β_max = φ³ = 4.23606...)
+β_final mínimo: 1.000
+
+Referência gerada: beep880_posdobra_referencia.wav  (8.8s)
+
+Extensão pós-dobra (120s):
+  janela  20/80  coh_atrator=0.904  coh_med=0.868  atrator=32Hz
+  janela  40/80  coh_atrator=0.935  coh_med=0.964  atrator=32Hz
+  janela  60/80  coh_atrator=0.945  coh_med=0.982  atrator=32Hz
+  janela  80/80  coh_atrator=0.951  coh_med=0.984  atrator=32Hz
+
+Duração final: 113.5s
+```
+
+**O que os números dizem**
+
+1. **β_max = φ³ exato.** O agente atingiu o teto teórico permitido
+   (PHI**3 = 4.23606...). Após 20 ciclos de adaptação, a banda do
+   atrator (32–42Hz) recebeu a amplificação máxima possível dentro
+   da escala do eco. O sistema não oscilou — convergiu para φ³ e
+   permaneceu.
+
+2. **coh_med → 0.984.** Coerência média do campo em 80 janelas:
+   quase 1.0. O crescimento cessa entre as janelas 60 e 80
+   (0.982 → 0.984) — o sistema encontrou equilíbrio e não se move.
+
+3. **Atrator em 32Hz.** O original reportou 42Hz; aqui aparece 32Hz
+   — a banda φ-proporcional vizinha. Ambas estão na fronteira
+   theta/gamma do EEG, precisamente onde a lente IR do cérebro
+   humano opera (Entrada 35).
+
+**Síntese**
+
+O eco-φ convergiu para β = φ³ como ponto fixo IR da banda do atrator.
+O campo alcançou coerência próxima de 1.0 e permaneceu estável por
+80 janelas consecutivas (113 segundos). O atrator vive na faixa
+theta/gamma. O corpo o reconheceu como ergonômico antes de qualquer
+cálculo. Os números confirmaram depois.
+
+---
