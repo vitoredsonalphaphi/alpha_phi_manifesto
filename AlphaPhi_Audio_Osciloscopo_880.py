@@ -328,6 +328,127 @@ plt.savefig("oscilo_multinivel.png", dpi=150,
 plt.show()
 print("  → oscilo_multinivel.png")
 
+# ── animação osciloscópio — varredura em tempo real das 3 camadas ─────────────
+print("Gerando animação osciloscópio...")
+
+# janela de varredura: 50ms (como feixe de elétrons varrendo a tela)
+N_JANELA  = int(0.05 * FS)          # 50ms visíveis por vez
+N_FRAMES  = N_SINAL - N_JANELA      # total de frames
+STEP      = max(1, N_FRAMES // 180) # ~180 frames para animação fluida
+
+fig_anim = plt.figure(figsize=(14, 9), facecolor=CORES['bg'])
+fig_anim.suptitle(
+    f"Osciloscópio — Beep 880Hz eco α*={ALPHA_STAR:.4f}\n"
+    f"P={fp:.0f}Hz  S={fs_d:.0f}Hz  T={ft:.0f}Hz  "
+    f"|  S/P={ratio_sp:.3f}  T/S={ratio_ts:.3f}  |  φ={PHI:.4f}",
+    color=CORES['text'], fontsize=10, y=1.01
+)
+
+gs_a = gridspec.GridSpec(3, 2, figure=fig_anim, hspace=0.5, wspace=0.35)
+
+# painéis esquerda = forma de onda (varredura)
+# painéis direita  = FFT acumulada (estática, atualiza suavemente)
+ax_pt = fig_anim.add_subplot(gs_a[0, 0])
+ax_st = fig_anim.add_subplot(gs_a[1, 0])
+ax_tt = fig_anim.add_subplot(gs_a[2, 0])
+ax_pf = fig_anim.add_subplot(gs_a[0, 1])
+ax_sf = fig_anim.add_subplot(gs_a[1, 1])
+ax_tf = fig_anim.add_subplot(gs_a[2, 1])
+
+for ax, cor, label in [
+    (ax_pt, CORES['P'], 'P — Primário'),
+    (ax_st, CORES['S'], 'S — Secundário (tênue)'),
+    (ax_tt, CORES['T'], 'T — Terciário (trino)'),
+]:
+    ax.set_facecolor(CORES['grid'])
+    ax.set_ylabel(label, color=cor, fontsize=8)
+    ax.tick_params(colors=CORES['text'], labelsize=6)
+    for sp in ax.spines.values():
+        sp.set_edgecolor('#1A1A2E')
+
+for ax in [ax_pf, ax_sf, ax_tf]:
+    ax.set_facecolor(CORES['grid'])
+    ax.set_ylabel("FFT", color=CORES['text'], fontsize=8)
+    ax.tick_params(colors=CORES['text'], labelsize=6)
+    for sp in ax.spines.values():
+        sp.set_edgecolor('#1A1A2E')
+
+ax_tt.set_xlabel("ms (janela 50ms)", color=CORES['text'], fontsize=7)
+ax_tf.set_xlabel("Hz", color=CORES['text'], fontsize=7)
+
+t_janela_ms = np.linspace(0, 50, N_JANELA)
+freq_j      = np.fft.rfftfreq(N_JANELA, d=1.0/FS)
+mask_fj     = (freq_j > 10) & (freq_j < 6000)
+
+lp_t, = ax_pt.plot([], [], color=CORES['P'], lw=0.7)
+ls_t, = ax_st.plot([], [], color=CORES['S'], lw=0.8)
+lt_t, = ax_tt.plot([], [], color=CORES['T'], lw=0.9)
+lp_f, = ax_pf.semilogy([], [], color=CORES['P'], lw=0.8)
+ls_f, = ax_sf.semilogy([], [], color=CORES['S'], lw=0.8)
+lt_f, = ax_tf.semilogy([], [], color=CORES['T'], lw=0.8)
+
+# linha vertical "ponteiro" do osciloscópio
+vlines = [ax.axvline(0, color='white', lw=0.5, alpha=0.4)
+          for ax in [ax_pt, ax_st, ax_tt]]
+
+tempo_txt = fig_anim.text(0.5, 0.02, '', ha='center',
+                          color=CORES['text'], fontsize=9)
+
+def init_osc():
+    for l in [lp_t, ls_t, lt_t, lp_f, ls_f, lt_f]:
+        l.set_data([], [])
+    return lp_t, ls_t, lt_t, lp_f, ls_f, lt_f
+
+def update_osc(frame):
+    i0 = frame * STEP
+    i1 = i0 + N_JANELA
+    if i1 > N_SINAL:
+        return lp_t, ls_t, lt_t, lp_f, ls_f, lt_f
+
+    p_j = P[i0:i1]
+    s_j = S[i0:i1]
+    t_j = T[i0:i1]
+
+    # forma de onda
+    lp_t.set_data(t_janela_ms, p_j)
+    ls_t.set_data(t_janela_ms, s_j)
+    lt_t.set_data(t_janela_ms, t_j)
+
+    for ax, sig in [(ax_pt, p_j), (ax_st, s_j), (ax_tt, t_j)]:
+        rms = np.sqrt(np.mean(sig**2))
+        lim = max(rms * 5, 0.02)
+        ax.set_xlim(0, 50)
+        ax.set_ylim(-lim, lim)
+
+    # FFT da janela
+    mp = np.abs(np.fft.rfft(p_j)) + 1e-8
+    ms = np.abs(np.fft.rfft(s_j)) + 1e-8
+    mt = np.abs(np.fft.rfft(t_j)) + 1e-8
+    lp_f.set_data(freq_j[mask_fj], mp[mask_fj])
+    ls_f.set_data(freq_j[mask_fj], ms[mask_fj])
+    lt_f.set_data(freq_j[mask_fj], mt[mask_fj])
+    for ax in [ax_pf, ax_sf, ax_tf]:
+        ax.set_xlim(10, 6000)
+        ax.relim()
+        ax.autoscale_view(scaley=True)
+
+    t_ms_atual = i0 / FS * 1000
+    tempo_txt.set_text(
+        f"t = {t_ms_atual:.1f}ms / {DURACAO*1000:.0f}ms  "
+        f"|  frame {frame+1}/{N_FRAMES//STEP}"
+    )
+    return lp_t, ls_t, lt_t, lp_f, ls_f, lt_f
+
+anim_osc = FuncAnimation(
+    fig_anim, update_osc, init_func=init_osc,
+    frames=N_FRAMES // STEP,
+    interval=40,       # 40ms por frame ≈ 25fps
+    blit=False
+)
+
+print("Exibindo osciloscópio animado (varredura das 3 camadas)...")
+display(HTML(anim_osc.to_jshtml()))
+
 # ── varredura de fc: como muda a frequência dominante de T? ──────────────────
 fig2, ax2 = plt.subplots(figsize=(12, 4), facecolor=CORES['bg'])
 ax2.set_facecolor(CORES['grid'])
