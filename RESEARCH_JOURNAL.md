@@ -4805,3 +4805,269 @@ theta/gamma. O corpo o reconheceu como ergonômico antes de qualquer
 cálculo. Os números confirmaram depois.
 
 ---
+
+## Entrada 37 ★★★ — OBJETIVO PRINCIPIA
+# COMANDO DE RECUPERAÇÃO: abrir OBJETIVO_PRINCIPIA
+*Florianópolis, 6 de maio de 2026*
+
+Esta entrada é documento de trabalho para o artigo da revista
+**Principia: An International Journal of Epistemology (UFSC)**.
+Agrega: (1) estrutura do artigo, (2) linhagem cronológica do eco-φ,
+(3) tese epistemológica central. Recuperar com: `abrir OBJETIVO_PRINCIPIA`.
+
+---
+
+### TÍTULO DO ARTIGO
+
+**A Percepção como Instrumento de Medição: Emergência da Proporção Áurea
+por Campo de Coerência Espectral**
+
+*(Inglês: "Perception as Measurement Instrument:
+Emergence of the Golden Ratio through Spectral Coherence Field")*
+
+---
+
+### TESE CENTRAL
+
+O percurso deste projeto inverteu a ordem habitual da ciência:
+a confirmação sensorial **precedeu** a análise formal em múltiplos
+experimentos. O organismo do pesquisador reconheceu a estrutura
+emergente antes de qualquer cálculo identificá-la.
+
+Isso não é anedota — está documentado entrada por entrada neste journal:
+- A sensação ergonômica a 0,25× (Entrada 33) antecedeu a demonstração
+  de que as frequências são Fibonacci puros (21·34·55·89 Hz).
+- O α = 1/137 emergiu na varredura sem ser programado como destino
+  — o pesquisador tinha "apenas uma vaga noção" da constante na época.
+- O β convergiu para φ³ antes de o pesquisador saber que φ³ era o limite.
+
+Argumentamos que este trajeto constitui **evidência de que a percepção
+holística detecta estruturas que o método redutivo não produz** —
+e que, quando a percepção antecede e prediz a confirmação analítica,
+ela constitui dado científico legítimo.
+
+---
+
+### ABSTRACT (português)
+
+Este artigo descreve um processo computacional — o eco-φ — que organiza
+sinais digitais incoerentes em representações coerentes utilizando
+φ (razão áurea) e α (constante de estrutura fina) como parâmetros
+estruturantes. O resultado central não é técnico: é epistemológico.
+Em múltiplos experimentos, a confirmação sensorial precedeu a análise
+formal — o organismo do pesquisador reconheceu a estrutura emergente
+antes de qualquer cálculo identificá-la. Argumentamos que este percurso
+constitui evidência de que a percepção holística — observação do campo
+como totalidade — detecta estruturas que o método redutivo não produz.
+O processo é análogo ao grupo de renormalização de Wilson: eliminar
+progressivamente os graus de liberdade de alta frequência (UV) revela
+o ponto fixo infravermelho (IR) do sistema — que, em todos os substratos
+testados (séries temporais, EEG, áudio), converge para valores expressos
+em termos de φ. A proporção áurea não foi inserida como destino: emergiu
+como atrator.
+
+**Palavras-chave:** proporção áurea, coerência espectral, epistemologia
+da percepção, renormalização, campo morfogenético computacional,
+emergência, φ, α=1/137
+
+---
+
+### ABSTRACT (inglês)
+
+This paper describes a computational process — the eco-φ agent — that
+organizes incoherent digital signals into coherent representations using
+φ (golden ratio) and α (fine-structure constant) as structural parameters.
+The central result is not technical: it is epistemological. Across multiple
+experiments, sensory confirmation preceded formal analysis — the
+researcher's organism recognized the emergent structure before any
+calculation identified it. We argue that this trajectory constitutes
+evidence that holistic perception — observing the field as a totality —
+detects structures that reductive methods do not produce. The process
+is analogous to Wilson's renormalization group: progressively integrating
+out high-frequency (UV) degrees of freedom reveals the system's infrared
+(IR) fixed point — which, across all substrates tested (time series, EEG,
+audio), converges to values expressed in terms of φ. The golden ratio
+was not inserted as a target: it emerged as an attractor.
+
+**Keywords:** golden ratio, spectral coherence, epistemology of perception,
+renormalization, computational morphogenetic field, emergence, φ, α=1/137
+
+---
+
+### LINHAGEM CRONOLÓGICA DO ECO-φ
+*(material para Seção 2 do artigo)*
+
+A seguir, a destilação estrutural de cada geração do agente —
+da semente ao fruto, em dois meses.
+
+**Geração 0 — A Medição (março 2026)**
+`phi_spectral_modulator` — a pergunta fundamental.
+
+    FFT(sinal) → energia por frequência
+    coerência = 1 − entropia_de_Shannon / log(N)
+    retorna: φ × tanh(coerência × φ)
+
+Grandezas: φ (atrator), entropia de Shannon (desordem), FFT.
+Nada é modificado. Só observado.
+
+**Geração 1 — O Eco Ressonante (abril 2026)**
+`eco_ressonante` — o reflexo que converge.
+
+    FFT → amplitude (estrutura) + fase (intenção)
+    nova_fase = fase × φ
+    reflexão = IFFT(amplitude × e^{j × nova_fase})
+    sinal = sinal + (reflexão − original) / φ
+    *(repetido n=3 vezes)*
+
+Inovação: fase recuperada torna α visível.
+Sinal coerente converge. Ruído diverge e é amortecido.
+Contribuição Gemini: "np.abs silencia α — descarta metade do nome."
+
+**Geração 2 — O Campo Fonônico (abril 2026)**
+`eco_fononico` — do indivíduo ao campo coletivo.
+
+    k_otimo = √2 + (φ − √2) × coerência_do_campo_coletivo
+
+Zona ótima descoberta: [√2, φ].
+Campo incoerente → k tende a √2. Campo coerente → k tende a φ.
+O fonon é vibração coletiva — temperatura da rede, não do átomo.
+
+**Geração 3 — O Envelope φ-Bandas (abril–maio 2026)**
+`eco_eq` — a dobra que revela o ponto fixo.
+
+    env = 1 + (coerência × φ^β) × cos(2π × n / φ)
+
+Inovação: modifica magnitude por banda φ-proporcional.
+As dobras = zeros do cosseno conforme β cresce = colapsos harmônicos.
+Memória de coerência com peso 1/φ.
+
+**Geração 4 — A Cascata (maio 2026)**
+`cascata_eq` — saída vira entrada.
+
+    s₀ → eco_eq → s₁ → eco_eq → s₂ → ... → s₅
+
+Cada passo herda a memória do anterior.
+As dobras ouvidas nos segundos 4–8 são colapsos entre gerações.
+
+**Geração 5 — O Agente Adaptativo (maio 2026)**
+`agente_eco` — β como aprendiz autônomo.
+
+    β_alvo = φ^(3 × coerência_relativa_da_banda)
+    β_novo = (1 − 1/φ) × β_alvo + (1/φ) × β_anterior
+    *(20 ciclos, β ∈ [0.05, φ³])*
+
+φ³ = 4,236 como teto e atrator.
+Resultado: coh_med → 0,984. Convergência sem instrução.
+
+**Geração 6 — A Varredura α (maio 2026)**
+`varredura_hibrida` — descoberta de α = 1/137.
+
+    x_mix = (1 − α) × beep + α × FM_orgânico
+    varredura α ∈ [0, 1] → mede Δentropia e coerência
+
+440Hz → máximo em α = 1/137. 880Hz → máximo em α* = 1/3.
+Não programado. Emergiu.
+
+**Geração 7 — O Domínio 0,25× (maio 2026)**
+`AlphaPhi_Audio_Beep880_Ergonomico` — o limite infravermelho sensorial.
+
+    F_BEEP = 880/4 = 220Hz
+    F_ORG  = 220/4 =  55Hz  (Fibonacci)
+    F_M    =  55/φ ≈  34Hz  (Fibonacci)
+    razão  = 55/34 = φ      (exato)
+    batimentos: 21 · 34 · 55 · 89 Hz — Fibonacci puro
+
+O organismo como instrumento de medição do ponto fixo IR.
+
+**Estrutura essencial — invariante em todas as gerações:**
+
+    MEDIR coerência do campo
+    AMPLIFICAR o que já é coerente
+    SUPRIMIR o que não ressoa
+    REALIMENTAR com peso 1/φ
+    REPETIR até convergência
+
+---
+
+### ESTRUTURA DO ARTIGO (7 seções)
+
+**1. Introdução — A pergunta epistemológica**
+O reducionismo parte para dentro: destrói o objeto para obter dados.
+Este projeto percorreu o caminho oposto: observou o campo como
+totalidade e deixou a estrutura emergir. A questão é se esse caminho
+é metodologicamente válido — e em que condições a percepção sensorial
+constitui dado científico.
+
+**2. O processo eco-φ — linhagem e estrutura**
+Destilação cronológica das 7 gerações do agente (ver seção acima).
+A estrutura essencial invariante: medir → amplificar → suprimir →
+realimentar por 1/φ → repetir. Substrate-agnostic: o mesmo código
+opera sobre texto, EEG, áudio, séries temporais.
+
+**3. Resultados experimentais**
+- +50,40% em séries temporais (p < 0,0001, 20 seeds)
+- 98,75% em classificação SST-2 com acoplamento φ (p = 8,7×10⁻⁵)
+- α = 1/137 emergindo como ponto de máxima organização (440Hz)
+- β convergindo para φ³ = 4,236 como ponto fixo IR
+- coh_med → 0,984 (quase unitária) após 80 janelas
+- Confirmação sensorial (0,25×) precedendo cálculo em todos os casos
+
+**4. A analogia com o grupo de renormalização**
+Wilson (1971, Nobel 1982): integrar os graus UV revela o ponto fixo IR.
+O eco-φ como operador de renormalização computacional.
+O 0,25× como operador IR sensorial.
+Três operações IR independentes (matemática, computação, percepção)
+convergindo para a mesma estrutura.
+
+**5. O tempo de percepção — processo adiabático**
+A pintura como campo: observação instantânea vs. observação adiabática.
+O tempo de acoplamento campo-observador como grandeza mensurável.
+Hipótese: estruturas φ minimizam o tempo de acoplamento.
+Protocolo experimental proposto: EEG + eye-tracking.
+
+**6. Holístico vs. reducionista — implicações metodológicas**
+O sensor de porta automática como modelo: mede perturbação no campo,
+não o objeto diretamente. A epistemologia do campo como alternativa
+complementar ao reducionismo experimental.
+A ideia que precede o formulador: α = 1/137 emergiu antes de o
+pesquisador conhecer a constante. O que isso implica sobre a natureza
+do conhecimento?
+
+**7. Conclusão**
+A proporção áurea como formato que minimiza o tempo de acoplamento
+entre um campo e seu observador. A percepção como instrumento legítimo
+de medição quando antecede e prediz a confirmação analítica.
+
+---
+
+### REFERÊNCIAS PRELIMINARES
+
+- Wilson, K.G. (1971). Renormalization group and critical phenomena.
+  Physical Review B, 4(9), 3174–3183.
+- Chowning, J.M. (1973). The synthesis of complex audio spectra by
+  means of frequency modulation. Journal of the Audio Engineering Society.
+- Shannon, C.E. (1948). A mathematical theory of communication.
+  Bell System Technical Journal, 27, 379–423.
+- Levin, M. (2021). Bioelectric signaling: Reprogrammable circuits
+  underlying embryogenesis, regeneration, and cancer. Cell, 184(8).
+- Livio, M. (2002). The Golden Ratio. Broadway Books.
+- Penrose, R. (1989). The Emperor's New Mind. Oxford University Press.
+
+*(referências a completar na versão final — extensão alvo: 6.000–10.000 palavras)*
+
+---
+
+### INFORMAÇÕES PARA SUBMISSÃO
+
+**Revista:** Principia: An International Journal of Epistemology
+**Editora:** Universidade Federal de Santa Catarina (UFSC)
+**Idioma:** Português ou Inglês
+**Extensão:** 6.000–10.000 palavras
+**Tipo:** Artigo original
+
+---
+
+*Florianópolis, 6 de maio de 2026.*
+*Vitor Edson Delavi*
+
+---

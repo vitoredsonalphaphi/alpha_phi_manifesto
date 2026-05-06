@@ -13,6 +13,7 @@
 |---|---|---|
 | `abrir INPI` | Descrição funcional para registro INPI | `_submissao/INPI_descricao_funcional.md` |
 | `abrir PRINCIPIA` | Abstract + estrutura para revista Principia UFSC | `_submissao/Principia_artigo.md` |
+| `abrir OBJETIVO_PRINCIPIA` | Entrada 37 do Journal — material completo para o artigo Principia | `RESEARCH_JOURNAL.md` → Entrada 37 |
 | `abrir ARXIV` | Draft artigo arXiv (já existe) | `paper_arxiv_draft.md` |
 | `abrir ARXIV_EN` | Abstract inglês + carta endorser + post X | `AlphaPhi_arXiv_PDO.md` |
 | `abrir MANIFESTO PDF` | Manifesto completo em PDF | `MANIFESTO_ALPHAPHI_COMPLETO.pdf` |
