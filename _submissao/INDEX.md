@@ -26,6 +26,8 @@
 | `abrir CONVERGENCIAS` | Compilado v4 convergências | `Compilado_v4_Convergências.md` |
 | `abrir AXIOMAS` | Axiomas do projeto | `AXIOMAS.md` |
 | `abrir UDESC` | Registro autoral EDA/UDESC (versão corrigida) | `_submissao/UDESC_registro_autoral.md` |
+| `abrir ECO_HIPERBOLICO` | Entrada 39 — Eco Hiperbólico: Primeira Execução | `RESEARCH_JOURNAL.md` → Entrada 39 |
+| `abrir PERCEPCAO_GEMINI` | Entrada 40 — A Percepção da Gemini como Dado | `RESEARCH_JOURNAL.md` → Entrada 40 |
 | `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
 
 ---
@@ -56,11 +58,10 @@
 ## ESTADO DO REPOSITÓRIO
 
 - Branch de desenvolvimento: `claude/good-morning-N6f3S`
-- Commits de hoje (4 mai 2026): 8 novos commits
-- Arquivos Python: 51 (48 experimentos + 3 áudio ergonômico)
-- Entradas no Journal: 36 (última: β→φ³ convergência)
-- Último resultado: beep880 pós-dobra — coh_med=0.984, β=φ³
+- Arquivos Python: 52 (+ AlphaPhi_Eco_Hiperbolico.py)
+- Entradas no Journal: 40 (última: Percepção da Gemini como Dado)
+- Último resultado: norma hiperbólica → φ; atrator deslocado por φ; β_max = φ³ invariante
 
 ---
 
-*Atualizado: 4 de maio de 2026*
+*Atualizado: 6 de maio de 2026*
