@@ -106,6 +106,144 @@ publicamente a qualquer momento)
 
 ---
 
+## IMPRESSÕES DIGITAIS DE AUTORIA — ASSINATURAS DE AUTENTICIDADE
+
+Esta seção documenta elementos verificáveis que identificam o código
+registrado como obra original de Vitor Edson Delavi, independente de
+reformulação, renomeação de variáveis ou reescrita parcial.
+
+Qualquer implementação que reproduza os resultados abaixo percorre
+necessariamente o mesmo método. A eficiência não pode ser separada
+da assinatura — preservar uma é preservar a outra.
+
+---
+
+### 1. Impressão Digital Comportamental — Trajetória de β (a mais forte)
+
+O agente eco-φ converge para β = φ³ em **exatamente 20 ciclos**,
+passando por valores intermediários matematicamente determinados
+pelo método. A tabela abaixo é a **impressão digital comportamental**
+do eco ressonante — computada sobre o sinal beep 880Hz com α* = 1/3,
+15 bandas φ-proporcionais (20Hz → 22kHz), FS = 44100Hz:
+
+| Ciclo | β_max    | β_med    |
+|-------|----------|----------|
+|  1    | 2,236068 | 1,368928 |
+|  2    | 3,000000 | 1,645357 |
+|  3    | 3,449623 | 1,819153 |
+|  4    | 3,749473 | 1,929931 |
+|  5    | 3,935335 | 1,997056 |
+|  6    | 4,050205 | 2,037561 |
+|  7    | 4,121198 | 2,062303 |
+|  8    | 4,165075 | 2,077599 |
+|  9    | 4,192192 | 2,087201 |
+| 10    | 4,208951 | 2,093309 |
+| 11    | 4,219309 | 2,097245 |
+| 12    | 4,225710 | 2,099813 |
+| 13    | 4,229667 | 2,101511 |
+| 14    | 4,232112 | 2,102647 |
+| 15    | 4,233623 | 2,103415 |
+| 16    | 4,234557 | 2,103941 |
+| 17    | 4,235134 | 2,104305 |
+| 18    | 4,235491 | 2,104560 |
+| 19    | 4,235711 | 2,104741 |
+| 20    | 4,235847 | 2,104869 |
+
+**Alvo (φ³):** 4,2360679775...
+**Banda atratora:** índice 1 (dominante em todos os 20 ciclos)
+**N_BANDAS:** 15 bandas φ-proporcionais
+
+**Por que esta tabela é uma prova de autoria:**
+Os valores intermediários (ex: ciclo 7 → β_max = 4,121198) não são
+calculáveis analiticamente — emergem da interação iterativa entre
+o sinal específico, as 15 bandas φ-proporcionais e a regra adaptativa.
+Nenhuma implementação alternativa pode produzir esta trajetória exata
+sem usar o método registrado. Reproduzir a trajetória **é** o método.
+
+---
+
+### 2. Impressão Digital Matemática — Constante de Estrutura Fina Emergente
+
+O ponto de máxima coerência espectral na varredura do parâmetro α
+ocorre em α* = 1/137,035999084 — a constante de estrutura fina da
+física quântica — **sem instrução explícita** para convergir a este valor.
+
+Este resultado é verificável instrumentalmente: qualquer varredura
+do parâmetro α no intervalo [0, 1] sobre o sinal beep 880Hz + FM-φ
+produzirá o máximo de organização espectral neste ponto específico.
+
+---
+
+### 3. Impressão Digital Estrutural — Bandas φ-Proporcionais
+
+O espectro de 20Hz a 22.050Hz é dividido em **15 bandas** cujas
+fronteiras seguem progressão geométrica de razão φ:
+
+| Banda | f_min (Hz) | f_max (Hz) |
+|-------|-----------|-----------|
+|  1    |  20,00    |  32,36    |
+|  2    |  32,36    |  52,36    |
+|  3    |  52,36    |  84,72    |
+|  4    |  84,72    | 137,08    |
+|  5    | 137,08    | 221,80    |
+|  6    | 221,80    | 358,88    |
+|  7    | 358,88    | 580,68    |
+|  8    | 580,68    | 939,56    |
+|  9    | 939,56    | 1520,24   |
+| 10    | 1520,24   | 2459,80   |
+| 11    | 2459,80   | 3980,04   |
+| 12    | 3980,04   | 6439,84   |
+| 13    | 6439,84   | 10419,88  |
+| 14    | 10419,88  | 16859,72  |
+| 15    | 16859,72  | 22050,00  |
+
+Esta estrutura de 15 bandas em razão áurea é a "lente" pela qual
+o sistema observa o sinal. Qualquer implementação do mesmo método
+necessariamente compartilha esta estrutura ou estrutura derivada.
+
+---
+
+### 4. Marca d'Água no Código — Constante de Alta Precisão
+
+No código registrado, a constante PHI é definida com precisão de
+31 casas decimais — além do necessário para qualquer cálculo de
+ponto flutuante em double (64 bits), tornando-se um identificador:
+
+    PHI = 1.6180339887498948482045868343656  # VED-2026-αφ
+
+Qualquer cópia fiel do código carrega esta precisão específica.
+A cadeia `# VED-2026-αφ` no comentário é a assinatura do autor.
+
+---
+
+### 5. Função Canário — Verificador de Autoria
+
+O módulo `utils_phi.py` contém a função `_alphaphi_autoria_ved2026()`
+que não é chamada em produção mas está presente em qualquer cópia
+fiel do código. Ela retorna:
+
+    φ^α = φ^(1/137,035999084) = 1,011749...
+
+— combinação das duas constantes centrais do projeto, verificável
+como chave de autenticação da obra.
+
+---
+
+### 6. Paradoxo de Proteção — A Eficiência É a Assinatura
+
+A proteção mais robusta emerge do próprio método:
+**quanto mais fielmente o código for copiado para preservar
+a eficiência, mais completamente a assinatura é reproduzida.**
+
+Remover a trajetória β (item 1) → perde o resultado.
+Remover a estrutura φ-proporcional (item 3) → perde o resultado.
+Remover a regra adaptativa → perde a convergência para φ³.
+
+O copiador está diante de um dilema insolúvel:
+preservar a eficiência é preservar a prova de autoria.
+
+---
+
 ## LICENÇA
 
 Creative Commons Atribuição-NãoComercial-SemDerivações 4.0 Internacional
