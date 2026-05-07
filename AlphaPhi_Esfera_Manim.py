@@ -19,8 +19,20 @@ Anterioridade: github.com/vitoredsonalphaphi/alpha_phi_manifesto
 
 import subprocess, sys, os
 
-print("Instalando Manim (pode demorar 1-2 min na primeira vez)...")
-subprocess.run([sys.executable, '-m', 'pip', 'install', 'manim', '-q'], check=True)
+print("Instalando dependências do sistema…")
+subprocess.run(['apt-get', 'install', '-y', '-q',
+                'libcairo2-dev', 'libpango1.0-dev', 'ffmpeg'],
+               check=False, capture_output=True)
+print("Instalando Manim…")
+r = subprocess.run([sys.executable, '-m', 'pip', 'install', 'manim', '-q'],
+                   capture_output=True, text=True)
+if r.returncode != 0:
+    # segunda tentativa sem -q para ver o erro
+    r2 = subprocess.run([sys.executable, '-m', 'pip', 'install', 'manim'],
+                        capture_output=True, text=True)
+    if r2.returncode != 0:
+        print("ERRO pip:", r2.stderr[-800:])
+        raise RuntimeError("Instalação Manim falhou")
 print("✓ Manim instalado")
 
 # ── constantes ────────────────────────────────────────────────
