@@ -30,6 +30,7 @@
 | `abrir PERCEPCAO_GEMINI` | Entrada 40 — A Percepção da Gemini como Dado | `RESEARCH_JOURNAL.md` → Entrada 40 |
 | `abrir CIENCIA_HOLISTICA` | Entrada 41 — A Ciência Confirmando o que Descartava | `RESEARCH_JOURNAL.md` → Entrada 41 |
 | `abrir CAMPO_OBSERVANDO` | Entrada 42 — O Campo Observando o Campo | `RESEARCH_JOURNAL.md` → Entrada 42 |
+| `abrir PHI_SUBSTRATO` | Entrada 43 — φ como Substrato, Atrator e a Beleza que Precede a Criatividade | `RESEARCH_JOURNAL.md` → Entrada 43 |
 | `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
 
 ---
@@ -61,8 +62,8 @@
 
 - Branch de desenvolvimento: `claude/good-morning-N6f3S`
 - Arquivos Python: 52 (+ AlphaPhi_Eco_Hiperbolico.py)
-- Entradas no Journal: 42 (última: O Campo Observando o Campo)
-- Último resultado: norma hiperbólica → φ; atrator deslocado por φ; β_max = φ³ invariante
+- Entradas no Journal: 43 (última: φ como Substrato, Atrator e a Beleza que Precede a Criatividade)
+- Último resultado: φ como origem e destino — substrato e atrator, o mesmo ponto visto de lados opostos do tempo
 
 ---
 
