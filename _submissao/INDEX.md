@@ -29,6 +29,7 @@
 | `abrir ECO_HIPERBOLICO` | Entrada 39 — Eco Hiperbólico: Primeira Execução | `RESEARCH_JOURNAL.md` → Entrada 39 |
 | `abrir PERCEPCAO_GEMINI` | Entrada 40 — A Percepção da Gemini como Dado | `RESEARCH_JOURNAL.md` → Entrada 40 |
 | `abrir CIENCIA_HOLISTICA` | Entrada 41 — A Ciência Confirmando o que Descartava | `RESEARCH_JOURNAL.md` → Entrada 41 |
+| `abrir CAMPO_OBSERVANDO` | Entrada 42 — O Campo Observando o Campo | `RESEARCH_JOURNAL.md` → Entrada 42 |
 | `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
 
 ---
@@ -60,7 +61,7 @@
 
 - Branch de desenvolvimento: `claude/good-morning-N6f3S`
 - Arquivos Python: 52 (+ AlphaPhi_Eco_Hiperbolico.py)
-- Entradas no Journal: 41 (última: A Ciência Confirmando o que Descartava)
+- Entradas no Journal: 42 (última: O Campo Observando o Campo)
 - Último resultado: norma hiperbólica → φ; atrator deslocado por φ; β_max = φ³ invariante
 
 ---
