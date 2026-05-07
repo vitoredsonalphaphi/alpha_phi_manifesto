@@ -283,9 +283,9 @@ class EsferaAlphaPhi(ThreeDScene):
             rings.append(rng)
 
         # ── eixo central (coluna de luz) ─────────────────────
-        eixo = Line3D(start=[0,0,-2.2], end=[0,0,2.2],
-                      radius=0.015, color=WHITE)
-        eixo.set_opacity(0.18)
+        eixo = Line(start=np.array([0,0,-2.2]), end=np.array([0,0,2.2]),
+                    color=WHITE)
+        eixo.set_stroke(width=0.8, opacity=0.18)
 
         # ── trajetória β (base, 2D fixo na câmera) ──────────
         axes_b = Axes(
