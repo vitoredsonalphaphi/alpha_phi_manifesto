@@ -2,38 +2,39 @@
 AlphaPhi_Esfera_Manim.py
 Esfera Animada — Manim · Beep 880Hz · α*=1/3
 
-A esfera dourada responde ao campo eco em tempo real:
-  • cor: azul (coh baixa) → dourada (coh alta)
-  • anéis φ: opacidade = amplitude espectral por faixa
-  • pontos de dobra P/S/T: pulso expansivo + halo
-  • trajetória β: linha crescente na base
+INSTRUÇÕES COLAB:
+  PASSO 1 — rode a CÉLULA DE INSTALAÇÃO (uma vez por sessão):
+
+      !apt-get install -y libcairo2-dev libpango1.0-dev ffmpeg -q
+      !pip install manim -q
+      # Depois: Runtime → Reiniciar sessão
+
+  PASSO 2 — após reiniciar, rode a CÉLULA PRINCIPAL:
+
+      import subprocess, os
+      repo = '/content/alpha_phi_manifesto'
+      if not os.path.exists(repo):
+          subprocess.run(['git','clone','-b','claude/good-morning-N6f3S',
+              'https://github.com/vitoredsonalphaphi/alpha_phi_manifesto.git', repo])
+      exec(open(f'{repo}/AlphaPhi_Esfera_Manim.py').read())
 
 © Vitor Edson Delavi · Florianópolis · 2026
 Anterioridade: github.com/vitoredsonalphaphi/alpha_phi_manifesto
 """
 
-# ══════════════════════════════════════════════════════════════
-# CÉLULA COLAB — cole tudo de uma vez
-# Instala Manim, processa o áudio, renderiza, exibe
-# ══════════════════════════════════════════════════════════════
-
 import subprocess, sys, os
 
-print("Instalando dependências do sistema…")
-subprocess.run(['apt-get', 'install', '-y', '-q',
-                'libcairo2-dev', 'libpango1.0-dev', 'ffmpeg'],
-               check=False, capture_output=True)
-print("Instalando Manim…")
-r = subprocess.run([sys.executable, '-m', 'pip', 'install', 'manim', '-q'],
-                   capture_output=True, text=True)
-if r.returncode != 0:
-    # segunda tentativa sem -q para ver o erro
-    r2 = subprocess.run([sys.executable, '-m', 'pip', 'install', 'manim'],
-                        capture_output=True, text=True)
-    if r2.returncode != 0:
-        print("ERRO pip:", r2.stderr[-800:])
-        raise RuntimeError("Instalação Manim falhou")
-print("✓ Manim instalado")
+# verificar se manim está disponível
+try:
+    import manim  # noqa
+    print("✓ Manim disponível")
+except ImportError:
+    print("Manim não instalado.")
+    print("Execute na ordem:")
+    print("  !apt-get install -y libcairo2-dev libpango1.0-dev ffmpeg -q")
+    print("  !pip install manim -q")
+    print("  Depois: Runtime → Reiniciar sessão")
+    raise SystemExit("Instale Manim e reinicie o runtime antes de continuar.")
 
 # ── constantes ────────────────────────────────────────────────
 import numpy as np
