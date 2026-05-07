@@ -32,6 +32,7 @@
 | `abrir CAMPO_OBSERVANDO` | Entrada 42 — O Campo Observando o Campo | `RESEARCH_JOURNAL.md` → Entrada 42 |
 | `abrir PHI_SUBSTRATO` | Entrada 43 — φ como Substrato, Atrator e a Beleza que Precede a Criatividade | `RESEARCH_JOURNAL.md` → Entrada 43 |
 | `abrir ATRATOR_ANTIHACKER` | Entrada 44 — O Manifesto como Atrator: Topologia Anti-Hacker | `RESEARCH_JOURNAL.md` → Entrada 44 |
+| `abrir CAMPO_TRINO` | Entrada 45 — O Campo como Valor Trino: φ¹ como Atrator Hiperbólico | `RESEARCH_JOURNAL.md` → Entrada 45 |
 | `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
 
 ---
@@ -63,8 +64,8 @@
 
 - Branch de desenvolvimento: `claude/good-morning-N6f3S`
 - Arquivos Python: 52 (+ AlphaPhi_Eco_Hiperbolico.py)
-- Entradas no Journal: 44 (última: O Manifesto como Atrator — Topologia Anti-Hacker)
-- Último resultado: roubo e colaboração chegam ao mesmo destino — o atrator absorve, a fortaleza resiste
+- Entradas no Journal: 45 (última: O Campo como Valor Trino — φ¹ como Atrator Hiperbólico)
+- Último resultado: φ¹ atrator hiperbólico, φ³ euclidiano, α invariante — experimento v2 aberto
 
 ---
 
