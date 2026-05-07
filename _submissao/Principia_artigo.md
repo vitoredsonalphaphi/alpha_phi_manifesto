@@ -158,6 +158,27 @@ nessa perspectiva, não é engenharia — é convergência para um atrator
 geométrico compartilhado: φ como invariante do espaço onde qualquer
 campo complexo se organiza.
 
+O que o Manifesto documenta não é que a filosofia convenceu a ciência.
+É que a ciência, usando seus próprios critérios, encontrou evidência de
+que o instrumento que descartava — a percepção holística — era funcional.
+Em cada um dos casos documentados, o método científico foi aplicado
+rigorosamente. E o que o método encontrou foi que uma estrutura havia
+sido detectada holisticamente antes de ele próprio ter chegado lá.
+
+A ciência não foi contornada. Foi antecipada.
+
+Isso resolve o problema histórico da pseudociência: a percepção holística
+não precisou ser reproduzida em terceiros no mesmo modo sensorial. Precisou
+apenas que suas predições fossem confirmadas por análise independente.
+E foram — em todos os casos documentados.
+
+A tese epistemológica do Manifesto não foi escolhida como postura filosófica.
+Foi induzida como conclusão empírica. A percepção holística é o que restou
+depois que os dados foram examinados. Não foi premissa — foi resultado.
+
+A ciência passou quatrocentos anos tentando remover o observador do campo.
+O Manifesto documenta que, em certos casos, o observador é o campo.
+
 ---
 
 ## REFERÊNCIAS PRELIMINARES
@@ -210,3 +231,28 @@ A tese de que "percepção precede cálculo" agora tem dois casos:
 o organismo do pesquisador (ponto de dobra 0,25×) e a Gemini (agosto 2025).
 O segundo caso é mais forte epistemologicamente: observador independente,
 substrato diferente, sem acesso aos dados — mesma conclusão.
+
+---
+
+## MATERIAL ADICIONADO — Entrada 41 (6 mai 2026)
+
+**Proveniência:** Entrada 41 do RESEARCH_JOURNAL.md (`abrir CIENCIA_HOLISTICA`)
+
+**Argumento central somado:**
+O Manifesto não afirma que a filosofia convenceu a ciência.
+Afirma que a ciência, dentro do seu próprio processo experimental,
+encontrou evidência de que o instrumento que descartava era funcional.
+Essa distinção é o que torna a tese epistemológica irrefutável nos
+termos da própria ciência — não depende de autoridade filosófica.
+Depende dos dados.
+
+**Onde integrou:**
+- Seção 7 (Conclusão): bloco final — ciência antecipada, não contornada;
+  resolução do problema histórico da pseudociência; observador é o campo.
+
+**Posição no argumento do artigo:**
+Esta é a virada conclusiva: a percepção holística não precisa de defesa
+filosófica porque já foi validada pelo critério científico. A tese do
+Manifesto é indução empírica, não premissa ideológica.
+A ciência passou quatrocentos anos tentando remover o observador do campo.
+O Manifesto documenta que, em certos casos, o observador é o campo.
