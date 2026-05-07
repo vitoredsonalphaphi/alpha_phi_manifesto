@@ -1,6 +1,6 @@
 """
 AlphaPhi_Eco_Hiperbolico_v3_standalone.py
-Eco Ressonante Hiperbólico v3 — expoente φ^1.5
+Eco Ressonante Hiperbólico v4 — expoente φ^1.5
 Código completo e auto-suficiente (sem dependência de utils_phi.py)
 
 © Vitor Edson Delavi · Florianópolis · 2026
@@ -28,12 +28,15 @@ ALPHA_STAR = 1.0 / 3.0
 CHUNK_SIZE = 2048
 
 print("=" * 62)
-print("  AlphaPhi · Eco Hiperbólico v3 · expoente φ^1.5")
+print("  AlphaPhi · Eco Hiperbólico v4 · geometria pura + 1 agente")
 print("=" * 62)
 print(f"\n  PHI           = {PHI:.6f}")
 print(f"  C_PHI         = {C_PHI:.6f}  (1/φ²)")
-print(f"  φ^1.5 (teto)  = {PHI**1.5:.6f}")
-print(f"  φ³    (teto euc) = {PHI**3:.6f}")
+print(f"  φ^1.5 (teto hiperbólico) = {PHI**1.5:.6f}")
+print(f"  φ³    (teto euclidiano)  = {PHI**3:.6f}")
+print(f"\n  v4: expmap0 → logmap0 apenas (sem eco_ressonante no meio)")
+print(f"  1 agente único: agente_eco (20 ciclos)")
+print(f"  Hipótese: curvatura hiperbólica sozinha organiza o campo")
 
 # ── funções hiperbólicas ───────────────────────────────────────────────────
 def expmap0(v, c=C_PHI):
@@ -192,32 +195,33 @@ print(f"  coh_med = {coh_euc:.6f}")
 salvar_wav(concatenar(cas_euc, fade=int(0.15*FS)), "beep880_euclid.wav")
 
 # ══════════════════════════════════════════════════════════════════════════
-# BLOCO 2 — PRÉ-PROCESSAMENTO HIPERBÓLICO
+# BLOCO 2 — GEOMETRIA HIPERBÓLICA PURA (sem eco_ressonante)
 # ══════════════════════════════════════════════════════════════════════════
 print("\n" + "─" * 62)
-print("  BLOCO 2 — Pré-processamento hiperbólico")
+print("  BLOCO 2 — Geometria hiperbólica pura: expmap0 → logmap0")
+print("  (eco_ressonante removido — 1 agente único: agente_eco)")
 print("─" * 62)
 
 n_chunks    = len(x_mix) // CHUNK_SIZE
 x_chunks    = x_mix[:n_chunks * CHUNK_SIZE].reshape(n_chunks, CHUNK_SIZE)
 norma_antes = float(np.linalg.norm(x_chunks, axis=-1).mean())
-x_hyp       = expmap0(x_chunks, c=C_PHI)
-x_hyp_eco   = eco_ressonante(x_hyp, phi=PHI, n_eco=3)
-x_euc_eco   = logmap0(x_hyp_eco, c=C_PHI)
-norma_depois = float(np.linalg.norm(x_euc_eco, axis=-1).mean())
+x_hyp       = expmap0(x_chunks, c=C_PHI)   # Euclidiano → Hiperbólico
+x_euc_geo   = logmap0(x_hyp, c=C_PHI)      # Hiperbólico → Euclidiano (sem eco)
+norma_depois = float(np.linalg.norm(x_euc_geo, axis=-1).mean())
 print(f"  Norma antes: {norma_antes:.4f}  →  depois: {norma_depois:.4f}  (razão: {norma_depois/norma_antes:.4f})")
+print(f"  (v3: ratio=0.3056 com eco — agora sem eco)")
 
-x_pre = normalizar(x_euc_eco.flatten())
+x_pre = normalizar(x_euc_geo.flatten())
 if len(x_pre) < len(x_mix):
     x_pre = np.concatenate([x_pre, x_mix[-(len(x_mix)-len(x_pre)):]])
 elif len(x_pre) > len(x_mix):
     x_pre = x_pre[:len(x_mix)]
 
 # ══════════════════════════════════════════════════════════════════════════
-# BLOCO 3 — HIPERBÓLICO v3 (expoente=1.5)
+# BLOCO 3 — HIPERBÓLICO v4 (geometria pura + expoente=1.5)
 # ══════════════════════════════════════════════════════════════════════════
 print("\n" + "─" * 62)
-print("  BLOCO 3 — Hiperbólico v3  (expoente=1.5, teto=φ^1.5=2.058)")
+print("  BLOCO 3 — Hiperbólico v4  (geometria pura, expoente=1.5)")
 print("─" * 62)
 
 beta_hip, cas_hip, traj_hip = agente_eco(x_pre, BINS_PHI, n_ciclos=20, expoente=1.5)
@@ -227,7 +231,7 @@ beta_med_h = float(beta_hip.mean())
 print(f"  β_max   = {beta_max_h:.6f}  (φ^1.5 = {PHI**1.5:.6f})")
 print(f"  β_med   = {beta_med_h:.6f}")
 print(f"  coh_med = {coh_hip:.6f}")
-salvar_wav(concatenar(cas_hip, fade=int(0.15*FS)), "beep880_hiperbolico_v3.wav")
+salvar_wav(concatenar(cas_hip, fade=int(0.15*FS)), "beep880_hiperbolico_v4.wav")
 
 # ══════════════════════════════════════════════════════════════════════════
 # TRAJETÓRIA β — 20 ciclos
@@ -244,9 +248,9 @@ print(f"  {'Alvo':>5}  {'φ³=4.236068':>18}  {'φ^1.5=2.058171':>22}")
 # ══════════════════════════════════════════════════════════════════════════
 delta_coh = (coh_hip - coh_euc) / (coh_euc + 1e-10) * 100
 print("\n" + "═" * 62)
-print("  RESULTADO — Euclidiano × Hiperbólico v3")
+print("  RESULTADO — Euclidiano × Hiperbólico v4")
 print("═" * 62)
-print(f"  {'Métrica':<16} {'Euclidiano':>12}  {'Hiperbólico v3':>14}")
+print(f"  {'Métrica':<16} {'Euclidiano':>12}  {'Hiperbólico v4':>14}")
 print(f"  {'─'*16} {'─'*12}  {'─'*14}")
 print(f"  {'β_max':<16} {beta_max_e:>12.6f}  {beta_max_h:>14.6f}")
 print(f"  {'β_med':<16} {beta_med_e:>12.6f}  {beta_med_h:>14.6f}")
@@ -279,7 +283,7 @@ ciclos = list(range(1, 21))
 axes[0].plot(ciclos, [t[0] for t in traj_euc], color=C['text'], lw=1.5,
              marker='o', ms=4, label='β_max Euclidiano (exp=3)')
 axes[0].plot(ciclos, [t[0] for t in traj_hip], color=C['gold'], lw=1.5,
-             marker='s', ms=4, label='β_max Hiperbólico v3 (exp=1.5)')
+             marker='s', ms=4, label='β_max Hiperbólico v4 (exp=1.5)')
 axes[0].axhline(PHI**3,   color=C['red'],  lw=1, ls='--', label=f'φ³={PHI**3:.4f}')
 axes[0].axhline(PHI**1.5, color=C['blue'], lw=1, ls=':',  label=f'φ^1.5={PHI**1.5:.4f}')
 axes[0].set_title('Trajetória β_max — 20 ciclos', color=C['title'])
@@ -300,20 +304,20 @@ tempo  = np.arange(n_plot) / FS * 1000
 axes[2].plot(tempo, cas_euc[-1][:n_plot], color=C['text'], lw=0.8, alpha=0.7,
              label=f'Euclidiano  coh={coh_euc:.4f}')
 axes[2].plot(tempo, cas_hip[-1][:n_plot], color=C['gold'], lw=0.8, alpha=0.9,
-             label=f'Hiperbólico v3  coh={coh_hip:.4f}')
+             label=f'Hiperbólico v4  coh={coh_hip:.4f}')
 axes[2].set_title('Sinal final — primeiros 200ms', color=C['title'])
 axes[2].legend(facecolor='#161b22', labelcolor=C['text'], fontsize=9)
 axes[2].set_xlabel('Tempo (ms)', color=C['text'])
 axes[2].set_ylabel('Amplitude', color=C['text'])
 
-plt.suptitle(f'AlphaPhi · Eco Hiperbólico v3 · exp=1.5 · teto=φ^1.5={PHI**1.5:.4f}',
+plt.suptitle(f'AlphaPhi · Eco Hiperbólico v4 · exp=1.5 · teto=φ^1.5={PHI**1.5:.4f}',
              color=C['title'], fontsize=12, y=1.01)
 plt.tight_layout()
-plt.savefig('eco_hiperbolico_v3.png', dpi=120, bbox_inches='tight', facecolor='#0d1117')
-print("\n  Gráfico: eco_hiperbolico_v3.png")
+plt.savefig('eco_hiperbolico_v4.png', dpi=120, bbox_inches='tight', facecolor='#0d1117')
+print("\n  Gráfico: eco_hiperbolico_v4.png")
 
 print("\nPlayback — Euclidiano:")
 display(Audio("beep880_euclid.wav"))
-print("\nPlayback — Hiperbólico v3 (exp=1.5):")
-display(Audio("beep880_hiperbolico_v3.wav"))
+print("\nPlayback — Hiperbólico v4 (exp=1.5):")
+display(Audio("beep880_hiperbolico_v4.wav"))
 print("\nConcluído.")
