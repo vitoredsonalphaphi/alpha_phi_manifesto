@@ -39,7 +39,7 @@
 
 | Comando | Status | Descrição |
 |---|---|---|
-| `abrir INPI` | **PRONTO** | Descrição funcional 1–2 páginas para registro INPI |
+| `abrir INPI` | **ATUALIZADO** | Programa de Computador + Patente de Processo (reivindicações rascunhadas) |
 | `abrir PRINCIPIA` | **PRONTO** | Abstract + estrutura para Principia UFSC |
 | `abrir UDESC` | **PRONTO** | Registro autoral EDA/UDESC — versão corrigida |
 | `abrir CRONOLOGIA` | **PENDENTE** | Cronologia dos 48 códigos por fase |
