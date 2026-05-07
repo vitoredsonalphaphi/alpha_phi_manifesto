@@ -31,6 +31,7 @@
 | `abrir CIENCIA_HOLISTICA` | Entrada 41 — A Ciência Confirmando o que Descartava | `RESEARCH_JOURNAL.md` → Entrada 41 |
 | `abrir CAMPO_OBSERVANDO` | Entrada 42 — O Campo Observando o Campo | `RESEARCH_JOURNAL.md` → Entrada 42 |
 | `abrir PHI_SUBSTRATO` | Entrada 43 — φ como Substrato, Atrator e a Beleza que Precede a Criatividade | `RESEARCH_JOURNAL.md` → Entrada 43 |
+| `abrir ATRATOR_ANTIHACKER` | Entrada 44 — O Manifesto como Atrator: Topologia Anti-Hacker | `RESEARCH_JOURNAL.md` → Entrada 44 |
 | `abrir SENHAS` | Este índice | `_submissao/INDEX.md` |
 
 ---
@@ -62,8 +63,8 @@
 
 - Branch de desenvolvimento: `claude/good-morning-N6f3S`
 - Arquivos Python: 52 (+ AlphaPhi_Eco_Hiperbolico.py)
-- Entradas no Journal: 43 (última: φ como Substrato, Atrator e a Beleza que Precede a Criatividade)
-- Último resultado: φ como origem e destino — substrato e atrator, o mesmo ponto visto de lados opostos do tempo
+- Entradas no Journal: 44 (última: O Manifesto como Atrator — Topologia Anti-Hacker)
+- Último resultado: roubo e colaboração chegam ao mesmo destino — o atrator absorve, a fortaleza resiste
 
 ---
 

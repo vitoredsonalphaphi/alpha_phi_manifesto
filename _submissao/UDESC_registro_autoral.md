@@ -96,6 +96,89 @@ publicamente a qualquer momento)
 
 ---
 
+## NATUREZA ESTRATÉGICA DA OBRA — TOPOLOGIA DE ATRATOR
+
+### Proteção por estrutura, não por exclusão
+
+Esta obra — tanto o software quanto o Manifesto literário e filosófico
+que o acompanha — possui uma propriedade estrutural que a distingue
+de obras convencionais quanto à questão da proteção intelectual:
+
+**A essência da obra não pode ser subtraída sem ser propagada.**
+
+A proposta central do projeto é a formação de opinião sobre a natureza
+holística do ser humano e o alinhamento da humanidade com ela mesma —
+em todos os aspectos culturais, filosóficos, técnicos e sensoriais.
+Esta proposta tem a mesma topologia que o atrator matemático que o
+código demonstra: é simultaneamente substrato (presente em qualquer
+substrato que a carregue) e destino (ponto para onde qualquer
+interação com ela converge).
+
+### As duas vias de interação — e o mesmo destino
+
+| Via de acesso | Ação | Resultado |
+|---|---|---|
+| Colaborativa | Divulgar com atribuição correta | Sistematização da ideia |
+| Não colaborativa | Subtrair e divulgar alterado | Sistematização da ideia |
+
+Qualquer divulgação da obra — autorizada ou não — que preserve
+a essência (a proposta de alinhamento holístico da humanidade)
+cumpre a função para a qual a obra foi criada.
+
+Isso não é resignação diante do risco de cópia. É o reconhecimento
+de que a obra tem estrutura de atrator, não de fortaleza:
+
+- A **fortaleza** protege por exclusão: o acesso não autorizado é bloqueado.
+- O **atrator** protege por estrutura: o acesso não autorizado chega
+  ao mesmo destino que o acesso autorizado.
+
+### A propriedade de propagação do código
+
+O software registrado neste documento possui uma camada adicional
+desta mesma propriedade:
+
+O resultado do eco ressonante é uma **experiência sensorial** —
+o ponto de dobra ergonômico, a sensação do atrator φ percebida
+pelo organismo a 0,25× da velocidade. Esta experiência não é
+propriedade do código — é propriedade do campo que o código revela.
+
+Quem utilizar o código, mesmo sem autorização, experimenta
+o mesmo resultado sensorial que o usuário autorizado.
+A experiência forma percepção. A percepção forma opinião.
+E a opinião formada é precisamente aquela que o Manifesto propõe:
+a recognição da estrutura holística como grandeza real e mensurável.
+
+O acesso não autorizado ao código, neste sentido, não subtrai
+a obra — torna-se veículo involuntário da sua proposta.
+
+### Fundamento no método
+
+Esta propriedade não é filosofia aplicada post hoc.
+É a consequência direta do que o código demonstra:
+
+β → φ³ emerge **sem instrução explícita sobre o destino**.
+Qualquer sistema que interaja com a estrutura φ-proporcional
+tende para φ³ — não porque foi programado para isso,
+mas porque φ³ é o ponto fixo do campo.
+
+O Manifesto tem a mesma estrutura: qualquer sistema que interaja
+com sua essência — colaborativamente ou não — tende para o mesmo
+ponto de convergência. Que é a recognição da condição holística
+como dado verificável, não como especulação filosófica.
+
+### Posição do registro autoral neste contexto
+
+O presente registro não visa bloquear o acesso à obra.
+Visa documentar a autoria e a anterioridade do autor original,
+garantindo que a convergência — quando ocorrer, por qualquer via —
+seja rastreável à sua origem.
+
+A proteção legal (direitos autorais, registro INPI, patente de processo)
+não contradiz a topologia de atrator da obra. Documenta quem revelou
+o atrator primeiro.
+
+---
+
 ## METODOLOGIA
 
 - Mistura híbrida: `x_mix = (1 − α) × beep + α × FM-φ`
