@@ -231,16 +231,16 @@ elif len(x_pre) > len(x_mix):
 # BLOCO 3 — HIPERBÓLICO v2  (expoente=1, teto=φ¹)
 # ══════════════════════════════════════════════════════════════════════════
 print("\n" + "─" * 62)
-print("  BLOCO 3 — Hiperbólico v2  (expoente β = 1, teto = φ¹ = 1.618)")
-print("  Hipótese: geometria entrega φ², modulador busca apenas φ¹")
+print("  BLOCO 3 — Hiperbólico v3  (expoente β = 1.5, teto = φ^1.5 = 2.058)")
+print("  Hipótese: ponto de equilíbrio entre φ¹ e φ³")
 print("─" * 62)
 
-beta_hip, cas_hip, traj_hip = agente_eco(x_pre, BINS_PHI, n_ciclos=20, expoente=1)
+beta_hip, cas_hip, traj_hip = agente_eco(x_pre, BINS_PHI, n_ciclos=20, expoente=1.5)
 coh_hip    = medir_coh_sinal(cas_hip[-1], BINS_PHI)
 beta_med_h = float(beta_hip.mean())
 beta_max_h = float(beta_hip.max())
 
-print(f"  β_max   = {beta_max_h:.6f}  (φ¹ = {PHI**1:.6f})")
+print(f"  β_max   = {beta_max_h:.6f}  (φ^1.5 = {PHI**1.5:.6f})")
 print(f"  β_med   = {beta_med_h:.6f}")
 print(f"  coh_med = {coh_hip:.6f}")
 
@@ -278,11 +278,11 @@ print("═" * 62)
 
 # Diagnóstico
 print()
-if abs(beta_max_h - PHI) < 0.05:
-    print(f"  ★ β_max hiperbólico converge para φ¹ = {PHI:.4f}")
-    print(f"    Hipótese confirmada: φ¹ é o atrator hiperbólico.")
+if abs(beta_max_h - PHI**1.5) < 0.05:
+    print(f"  ★ β_max hiperbólico converge para φ^1.5 = {PHI**1.5:.4f}")
+    print(f"    Equilíbrio encontrado entre φ¹ e φ³.")
 else:
-    print(f"  → β_max hiperbólico = {beta_max_h:.4f}  (φ¹ = {PHI:.4f})")
+    print(f"  → β_max hiperbólico = {beta_max_h:.4f}  (φ^1.5 = {PHI**1.5:.4f})")
 
 if coh_hip >= coh_euc:
     print(f"  ★ Coerência hiperbólica ≥ euclidiana (+{delta_coh:.2f}%)")
@@ -363,7 +363,7 @@ display(Audio("beep880_hiperbolico_v2.wav"))
 
 print("\nConcluído.")
 print(f"\n  Hipótese Entrada 45:")
-print(f"  φ¹ = {PHI:.6f} — atrator hiperbólico")
-print(f"  φ³ = {PHI**3:.6f} — atrator euclidiano")
+print(f"  φ^1.5 = {PHI**1.5:.6f} — teto hiperbólico v3")
+print(f"  φ³    = {PHI**3:.6f} — atrator euclidiano")
 print(f"  Geometria hiperbólica entrega φ² = {PHI**2:.6f} de amplificação.")
 print(f"  α = 1/137.035999084 — invariante nos dois campos.")
