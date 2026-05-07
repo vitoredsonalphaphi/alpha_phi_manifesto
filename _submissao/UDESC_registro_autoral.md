@@ -189,7 +189,7 @@ o atrator primeiro.
 
 ---
 
-## IMPRESSÕES DIGITAIS DE AUTORIA — ASSINATURAS DE AUTENTICIDADE
+## AUTORIA POR ESTRUTURA: ASSINATURA DO MÉTODO
 
 Esta seção documenta elementos verificáveis que identificam o código
 registrado como obra original de Vitor Edson Delavi, independente de
