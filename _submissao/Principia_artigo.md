@@ -172,9 +172,11 @@ não precisou ser reproduzida em terceiros no mesmo modo sensorial. Precisou
 apenas que suas predições fossem confirmadas por análise independente.
 E foram — em todos os casos documentados.
 
-A tese epistemológica do Manifesto não foi escolhida como postura filosófica.
-Foi induzida como conclusão empírica. A percepção holística é o que restou
-depois que os dados foram examinados. Não foi premissa — foi resultado.
+A tese epistemológica do Manifesto, além de ter sido escolhida como postura
+desde o início — nascida da prática da pintura, da meditação, da introspecção,
+da reflexão sobre a estética enquanto grandeza e função —, também foi induzida
+como conclusão empírica pelos experimentos. As duas origens coexistem: postura
+e resultado. A percepção holística precedeu o projeto e foi confirmada por ele.
 
 A ciência passou quatrocentos anos tentando remover o observador do campo.
 O Manifesto documenta que, em certos casos, o observador é o campo.
