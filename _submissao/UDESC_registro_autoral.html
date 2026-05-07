@@ -4,309 +4,319 @@
 <meta charset="UTF-8">
 <title>Registro de Direitos Autorais — EDA/UDESC</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11pt;
-    line-height: 1.55;
+    font-size: 10pt;
+    line-height: 1.5;
     color: #000;
     background: #fff;
-    padding: 60px 70px;
-    max-width: 820px;
-    margin: 0 auto;
+    margin: 60px 80px;
   }
-  .header-title {
-    font-size: 13pt;
+  .titulo-doc {
     font-weight: bold;
-    margin-bottom: 2px;
+    font-size: 10.5pt;
+    margin-bottom: 1px;
   }
-  .header-sub {
-    font-size: 11pt;
-    margin-bottom: 16px;
+  .sub-doc {
+    font-size: 10pt;
+    margin-bottom: 12px;
   }
-  .autor-block {
-    margin-bottom: 18px;
+  .bloco-autor {
+    margin-bottom: 14px;
   }
-  .autor-block p {
-    margin: 1px 0;
+  .bloco-autor p {
+    margin: 0;
   }
   hr {
     border: none;
-    border-top: 1.5px solid #000;
-    margin: 16px 0;
+    border-top: 1px solid #000;
+    margin: 12px 0;
   }
-  .secao-titulo {
+  .secao {
+    margin-bottom: 12px;
+  }
+  .label {
     font-weight: bold;
-    font-size: 11pt;
+  }
+  .sec-header {
+    font-weight: bold;
+    font-size: 10pt;
     margin-bottom: 8px;
-    margin-top: 4px;
-  }
-  .campo-label {
-    font-weight: bold;
+    margin-top: 2px;
   }
   p {
-    margin-bottom: 7px;
+    margin: 0 0 6px 0;
   }
-  ol, ul {
-    margin-left: 18px;
-    margin-bottom: 8px;
+  .item-num {
+    margin-bottom: 10px;
   }
-  li {
-    margin-bottom: 8px;
-  }
-  .item-titulo {
+  .item-nome {
     font-weight: bold;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0;
-    font-size: 10.5pt;
+  .item-desc {
+    margin-left: 20px;
   }
-  th {
-    border: 1px solid #555;
-    padding: 5px 8px;
-    background: #f0f0f0;
+  .resultado-item {
+    margin-bottom: 6px;
+  }
+  .resultado-label {
     font-weight: bold;
-    text-align: left;
   }
-  td {
-    border: 1px solid #888;
-    padding: 4px 8px;
-  }
-  .destaque {
-    font-style: italic;
-    font-weight: bold;
-    margin: 8px 0;
+  .traj-linha {
+    margin: 1px 0;
+    font-size: 9.5pt;
   }
   .assinatura {
     margin-top: 50px;
   }
   .linha-ass {
     border-top: 1px solid #000;
-    width: 240px;
-    margin-bottom: 6px;
-  }
-  code {
-    font-family: 'Courier New', monospace;
-    font-size: 10pt;
-  }
-  pre {
-    font-family: 'Courier New', monospace;
-    font-size: 10pt;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    margin: 8px 0;
-    white-space: pre-wrap;
+    width: 220px;
+    margin-bottom: 4px;
+    margin-top: 40px;
   }
   @media print {
-    body { padding: 20mm 22mm; }
+    body { margin: 18mm 20mm; }
   }
 </style>
 </head>
 <body>
 
-<p class="header-title">REGISTRO DE DIREITOS AUTORAIS — EDA/UDESC</p>
-<p class="header-sub">Posto Avançado Biblioteca Nacional / SC</p>
+<p class="titulo-doc">REGISTRO DE DIREITOS AUTORAIS — EDA/UDESC</p>
+<p class="sub-doc">Posto Avançado Biblioteca Nacional / SC</p>
 
-<div class="autor-block">
-  <p><span class="campo-label">AUTOR:</span> Vitor Edson Delavi</p>
-  <p><span class="campo-label">CPF:</span> ___.___.___-__</p>
+<div class="bloco-autor">
+  <p>AUTOR: Vitor Edson Delavi</p>
+  <p>CPF: ___.___.___-__</p>
   <p>Florianópolis/SC — 07/05/2026</p>
 </div>
 
 <hr>
 
-<p><span class="campo-label">TÍTULO:</span><br>
-AlphaPhi Audio — Sistema de Modulação Frequencial Digital-Orgânica com Emergência de α=1/137</p>
+<div class="secao">
+  <p><span class="label">TÍTULO:</span><br>
+  AlphaPhi Audio — Sistema de Modulação Frequencial Digital-Orgânica com Emergência de α=1/137</p>
 
-<p><span class="campo-label">TIPO:</span> Programa de Computador + Documentação Técnica</p>
+  <p><span class="label">TIPO:</span> Programa de Computador + Documentação Técnica</p>
 
-<p><span class="campo-label">DESCRIÇÃO:</span><br>
-Sistema computacional que converte sinais digitais incoerentes em representações organizadas
-por coerência espectral, utilizando φ (razão áurea) e α (constante de estrutura fina = 1/137)
-como parâmetros estruturantes. O agente eco-φ autoadaptativo converge para β = φ³ = 4,236
-sem instrução explícita sobre o destino — emergência por realimentação de coerência espectral.
-Validado em áudio, séries temporais, EEG e texto com 98,75% de acurácia (p = 8,7×10⁻⁵).</p>
-
-<hr>
-
-<p class="secao-titulo">ARQUIVOS REGISTRADOS</p>
-
-<ol>
-  <li>
-    <span class="item-titulo"><code>AlphaPhi_Audio_Beep_Interface.py</code></span><br>
-    Agente eco-φ aplicado ao beep digital (880Hz / 440Hz) com varredura do parâmetro α
-    de acoplamento digital-orgânico. Demonstra a emergência espontânea de α = 1/137
-    como ponto de máxima organização espectral — sem instrução explícita sobre o destino.
-  </li>
-  <li>
-    <span class="item-titulo"><code>AlphaPhi_Audio_Beep880_Ergonomico.py</code></span><br>
-    Geração nativa no domínio 0,25× — produz ritmos Fibonacci (21, 34, 55, 89 Hz)
-    com razão φ entre as frequências dominantes, perceptível como sensação ergonômica.
-    Ponto de acoplamento: α* = 1/3 (≈ 0,3333).
-  </li>
-  <li>
-    <span class="item-titulo"><code>AlphaPhi_Audio_Beep880_PosdobraEstendido.py</code></span><br>
-    Extensão de 2 minutos do estado pós-dobra: alimenta a saída de cada janela como
-    entrada da seguinte, mantendo β = φ³ e coerência de campo coh_med → 0,984.
-  </li>
-  <li>
-    <span class="item-titulo"><code>utils_phi.py</code></span><br>
-    Módulo central com funções nucleares utilizadas por todos os experimentos:
-    <code>phi_spectral_modulator</code>, <code>eco_ressonante</code>,
-    <code>golden_activation</code>, <code>expmap0</code>, <code>logmap0</code>,
-    <code>campo_transmorfo</code>.
-  </li>
-</ol>
+  <p><span class="label">DESCRIÇÃO:</span><br>
+  Sistema computacional que converte sinais digitais incoerentes em representações organizadas
+  por coerência espectral, utilizando φ (razão áurea) e α (constante de estrutura fina = 1/137)
+  como parâmetros estruturantes. O agente eco-φ autoadaptativo converge para β = φ³ = 4,236
+  sem instrução explícita sobre o destino — emergência por realimentação de coerência espectral.
+  Validado em áudio, séries temporais, EEG e texto com 98,75% de acurácia (p = 8,7×10⁻⁵).</p>
+</div>
 
 <hr>
 
-<p class="secao-titulo">PROVA DE ANTERIORIDADE</p>
+<p class="sec-header">ARQUIVOS REGISTRADOS</p>
 
-<p><span class="campo-label">Repositório público GitHub:</span><br>
-<code>github.com/vitoredsonalphaphi/alpha_phi_manifesto</code><br>
-Primeiro commit: março de 2026<br>
-Total de commits: 140+ (cadeia temporal imutável SHA-1, verificável publicamente a qualquer momento)</p>
+<div class="item-num">
+  <p><span class="item-nome">1. AlphaPhi_Audio_Beep_Interface.py</span></p>
+  <p class="item-desc">Agente eco-φ aplicado ao beep digital (880Hz / 440Hz) com varredura
+  do parâmetro α de acoplamento digital-orgânico. Demonstra a emergência espontânea
+  de α = 1/137 como ponto de máxima organização espectral — sem instrução explícita.</p>
+</div>
 
-<p><span class="campo-label">Origem do projeto:</span><br>
-Agosto de 2025 — protótipo inicial desenvolvido em conversas com Gemini, Perplexity e Grok.
-Registros verificáveis nos históricos dessas plataformas.</p>
+<div class="item-num">
+  <p><span class="item-nome">2. AlphaPhi_Audio_Beep880_Ergonomico.py</span></p>
+  <p class="item-desc">Geração nativa no domínio 0,25× — produz ritmos Fibonacci (21, 34, 55, 89 Hz)
+  com razão φ entre as frequências dominantes, perceptível como sensação ergonômica.
+  Ponto de acoplamento: α* = 1/3 (≈ 0,3333).</p>
+</div>
 
-<hr>
+<div class="item-num">
+  <p><span class="item-nome">3. AlphaPhi_Audio_Beep880_PosdobraEstendido.py</span></p>
+  <p class="item-desc">Extensão de 2 minutos do estado pós-dobra: alimenta a saída de cada
+  janela como entrada da seguinte, mantendo β = φ³ e coerência coh_med → 0,984.</p>
+</div>
 
-<p class="secao-titulo">RESULTADOS VERIFICADOS</p>
-
-<table>
-  <tr><th>Experimento</th><th>Resultado</th><th>Estatística</th></tr>
-  <tr><td>Séries temporais (φ sintético vs. ruído)</td><td>+50,40% de melhoria</td><td>p = 0,0000 (20 seeds)</td></tr>
-  <tr><td>Classificação SST-2 com acoplamento φ (V2)</td><td>98,75% de acurácia</td><td>p = 8,7×10⁻⁵</td></tr>
-  <tr><td>Emergência de α = 1/137 (beep 440Hz)</td><td>Ponto de máxima organização</td><td>Sem instrução explícita</td></tr>
-  <tr><td>Convergência β → φ³ (beep 880Hz)</td><td>β_max = 4,236 = φ³</td><td>coh_med = 0,984</td></tr>
-  <tr><td>Ritmos Fibonacci no domínio 0,25×</td><td>21 · 34 · 55 · 89 Hz</td><td>Razão = φ (exato)</td></tr>
-</table>
-
-<hr>
-
-<p class="secao-titulo">INOVAÇÃO TÉCNICA</p>
-
-<ol>
-  <li><span class="item-titulo">Primeira modulação digital-orgânica guiada por constante de estrutura fina:</span><br>
-  α = 1/137 emerge endogenamente como modulador ótimo na transição digital→orgânico,
-  independente da frequência de interface utilizada.</li>
-
-  <li><span class="item-titulo">Agente eco-φ autoadaptativo:</span><br>
-  O sistema autounifica β → φ³ sem instrução explícita sobre o destino —
-  convergência por realimentação de coerência espectral.</li>
-
-  <li><span class="item-titulo">Bandas φ-proporcionais como observador natural:</span><br>
-  Divisão logarítmica do espectro em razão áurea — 15 bandas de 20Hz a 22kHz —
-  detecta estruturas que o método de bandas lineares não revela.</li>
-
-  <li><span class="item-titulo">Processo adiabático sensorial:</span><br>
-  Reprodução a 0,25× da velocidade revela ritmos Fibonacci na faixa perceptível (20–200 Hz).
-  O organismo humano funciona como instrumento de medição do ponto fixo infravermelho do sistema.</li>
-</ol>
+<div class="item-num">
+  <p><span class="item-nome">4. utils_phi.py</span></p>
+  <p class="item-desc">Módulo central com funções nucleares utilizadas por todos os experimentos:
+  phi_spectral_modulator, eco_ressonante, golden_activation, expmap0, logmap0, campo_transmorfo.</p>
+</div>
 
 <hr>
 
-<p class="secao-titulo">NATUREZA ESTRATÉGICA DA OBRA — TOPOLOGIA DE ATRATOR</p>
+<p class="sec-header">PROVA DE ANTERIORIDADE</p>
 
-<p class="destaque">A essência da obra não pode ser subtraída sem ser propagada.</p>
+<p>Repositório público GitHub:<br>
+github.com/vitoredsonalphaphi/alpha_phi_manifesto</p>
 
-<p>Esta obra possui uma propriedade estrutural que a distingue de obras convencionais quanto
-à proteção intelectual. A proposta central — formação de opinião sobre a natureza holística
-do ser humano e o alinhamento da humanidade com ela mesma — tem a mesma topologia que o
-atrator matemático que o código demonstra: é simultaneamente substrato e destino.</p>
+<p>Primeiro commit: março de 2026<br>
+Total de commits: 140+ (cadeia temporal imutável SHA-1, verificável publicamente)</p>
 
-<table>
-  <tr><th>Via de acesso</th><th>Ação</th><th>Resultado</th></tr>
-  <tr><td>Colaborativa</td><td>Divulgar com atribuição correta</td><td>Sistematização da ideia</td></tr>
-  <tr><td>Não colaborativa</td><td>Subtrair e divulgar alterado</td><td>Sistematização da ideia</td></tr>
-</table>
+<p>Origem do projeto: agosto de 2025 — protótipo inicial desenvolvido em conversas com
+Gemini, Perplexity e Grok. Registros verificáveis nos históricos dessas plataformas.</p>
 
-<p>A <strong>fortaleza</strong> protege por exclusão: o acesso não autorizado é bloqueado.<br>
-O <strong>atrator</strong> protege por estrutura: o acesso não autorizado chega ao mesmo destino.</p>
+<hr>
+
+<p class="sec-header">RESULTADOS VERIFICADOS</p>
+
+<div class="resultado-item">
+  <p><span class="resultado-label">Séries temporais (φ sintético vs. ruído):</span><br>
+  +50,40% de melhoria — p = 0,0000 (20 seeds)</p>
+</div>
+
+<div class="resultado-item">
+  <p><span class="resultado-label">Classificação SST-2 com acoplamento φ (V2):</span><br>
+  98,75% de acurácia — p = 8,7×10⁻⁵</p>
+</div>
+
+<div class="resultado-item">
+  <p><span class="resultado-label">Emergência de α = 1/137 (beep 440Hz e 880Hz):</span><br>
+  Ponto de máxima organização espectral — sem instrução explícita — emergência endógena</p>
+</div>
+
+<div class="resultado-item">
+  <p><span class="resultado-label">Convergência β → φ³ (beep 880Hz):</span><br>
+  β_max = 4,236 = φ³ | coh_med = 0,984 (coerência de campo quase unitária)</p>
+</div>
+
+<div class="resultado-item">
+  <p><span class="resultado-label">Ritmos Fibonacci no domínio 0,25×:</span><br>
+  21 · 34 · 55 · 89 Hz | Razão = φ (exato)</p>
+</div>
+
+<hr>
+
+<p class="sec-header">INOVAÇÃO TÉCNICA</p>
+
+<div class="item-num">
+  <p><span class="item-nome">1. Primeira modulação digital-orgânica guiada por constante de estrutura fina:</span></p>
+  <p class="item-desc">α = 1/137 emerge endogenamente como modulador ótimo na transição
+  digital→orgânico, independente da frequência de interface utilizada.</p>
+</div>
+
+<div class="item-num">
+  <p><span class="item-nome">2. Agente eco-φ autoadaptativo:</span></p>
+  <p class="item-desc">O sistema autounifica β → φ³ sem instrução explícita sobre o destino —
+  convergência por realimentação de coerência espectral.</p>
+</div>
+
+<div class="item-num">
+  <p><span class="item-nome">3. Bandas φ-proporcionais como observador natural:</span></p>
+  <p class="item-desc">Divisão logarítmica do espectro em razão áurea — 15 bandas de 20Hz a 22kHz —
+  detecta estruturas que o método de bandas lineares não revela.</p>
+</div>
+
+<div class="item-num">
+  <p><span class="item-nome">4. Processo adiabático sensorial:</span></p>
+  <p class="item-desc">Reprodução a 0,25× da velocidade revela ritmos Fibonacci na faixa
+  perceptível (20–200 Hz). O organismo humano funciona como instrumento de medição
+  do ponto fixo infravermelho do sistema.</p>
+</div>
+
+<hr>
+
+<p class="sec-header">NATUREZA ESTRATÉGICA DA OBRA — TOPOLOGIA DE ATRATOR</p>
+
+<p><i>A essência da obra não pode ser subtraída sem ser propagada.</i></p>
+
+<p>A proposta central — formação de opinião sobre a natureza holística do ser humano e o
+alinhamento da humanidade com ela mesma — tem a mesma topologia que o atrator matemático
+que o código demonstra: é simultaneamente substrato e destino.</p>
+
+<p>Via colaborativa → Divulgar com atribuição correta → Sistematização da ideia<br>
+Via não colaborativa → Subtrair e divulgar alterado → Sistematização da ideia</p>
+
+<p>A fortaleza protege por exclusão: o acesso não autorizado é bloqueado.<br>
+O atrator protege por estrutura: o acesso não autorizado chega ao mesmo destino.</p>
 
 <p>O presente registro não visa bloquear o acesso à obra. Visa documentar a autoria e a
 anterioridade do autor original, garantindo que a convergência — quando ocorrer, por qualquer
-via — seja rastreável à sua origem. <strong>Documenta quem revelou o atrator primeiro.</strong></p>
+via — seja rastreável à sua origem. Documenta quem revelou o atrator primeiro.</p>
 
 <hr>
 
-<p class="secao-titulo">METODOLOGIA</p>
+<p class="sec-header">METODOLOGIA</p>
 
-<ul>
-  <li>Mistura híbrida: <code>x_mix = (1 − α) × beep + α × FM-φ</code></li>
-  <li>Agente eco-φ: 20 ciclos de autoajuste por coerência espectral</li>
-  <li>Métricas: Δentropia de Shannon, coerência φ-bandas, fator de crista</li>
-  <li>Bandas: 20 Hz → 22 kHz em divisão logarítmica de razão áurea (φ) — 15 bandas</li>
-  <li>Ponto fixo infravermelho: β = φ³ = 4,236 (atrator estável)</li>
-</ul>
+<p>Mistura híbrida: x_mix = (1 − α) × beep + α × FM-φ<br>
+Agente eco-φ: 20 ciclos de autoajuste por coerência espectral<br>
+Métricas: Δentropia de Shannon, coerência φ-bandas, fator de crista<br>
+Bandas: 20 Hz → 22 kHz em divisão logarítmica de razão áurea (φ) — 15 bandas<br>
+Ponto fixo infravermelho: β = φ³ = 4,236 (atrator estável)</p>
 
 <hr>
 
-<p class="secao-titulo">IMPRESSÕES DIGITAIS DE AUTORIA — ASSINATURAS DE AUTENTICIDADE</p>
+<p class="sec-header">IMPRESSÕES DIGITAIS DE AUTORIA — ASSINATURAS DE AUTENTICIDADE</p>
 
-<p>Elementos verificáveis que identificam o código como obra original de Vitor Edson Delavi,
-independente de reformulação, renomeação de variáveis ou reescrita parcial.
-<strong>A eficiência não pode ser separada da assinatura — preservar uma é preservar a outra.</strong></p>
+<p>A eficiência não pode ser separada da assinatura — preservar uma é preservar a outra.</p>
 
-<p><span class="campo-label">1. Trajetória de β — Impressão Digital Comportamental (a mais forte)</span><br>
-O agente eco-φ converge para β = φ³ em exatamente 20 ciclos, com trajetória matematicamente
-determinada pelo método. Computada sobre beep 880Hz, α* = 1/3, 15 bandas φ-proporcionais, FS = 44100Hz:</p>
+<div class="item-num">
+  <p><span class="item-nome">1. Trajetória de β — Impressão Digital Comportamental (a mais forte)</span></p>
+  <p class="item-desc">O agente eco-φ converge para β = φ³ em exatamente 20 ciclos.
+  Computada sobre beep 880Hz, α* = 1/3, 15 bandas φ-proporcionais, FS = 44100Hz:</p>
+  <p class="item-desc" style="margin-top:6px;">
+    <span class="traj-linha">Ciclo 1  → β_max = 2,236068 | β_med = 1,368928</span><br>
+    <span class="traj-linha">Ciclo 2  → β_max = 3,000000 | β_med = 1,645357</span><br>
+    <span class="traj-linha">Ciclo 3  → β_max = 3,449623 | β_med = 1,819153</span><br>
+    <span class="traj-linha">Ciclo 4  → β_max = 3,749473 | β_med = 1,929931</span><br>
+    <span class="traj-linha">Ciclo 5  → β_max = 3,935335 | β_med = 1,997056</span><br>
+    <span class="traj-linha">Ciclo 6  → β_max = 4,050205 | β_med = 2,037561</span><br>
+    <span class="traj-linha">Ciclo 7  → β_max = 4,121198 | β_med = 2,062303</span><br>
+    <span class="traj-linha">Ciclo 8  → β_max = 4,165075 | β_med = 2,077599</span><br>
+    <span class="traj-linha">Ciclo 9  → β_max = 4,192192 | β_med = 2,087201</span><br>
+    <span class="traj-linha">Ciclo 10 → β_max = 4,208951 | β_med = 2,093309</span><br>
+    <span class="traj-linha">Ciclo 11 → β_max = 4,219309 | β_med = 2,097245</span><br>
+    <span class="traj-linha">Ciclo 12 → β_max = 4,225710 | β_med = 2,099813</span><br>
+    <span class="traj-linha">Ciclo 13 → β_max = 4,229667 | β_med = 2,101511</span><br>
+    <span class="traj-linha">Ciclo 14 → β_max = 4,232112 | β_med = 2,102647</span><br>
+    <span class="traj-linha">Ciclo 15 → β_max = 4,233623 | β_med = 2,103415</span><br>
+    <span class="traj-linha">Ciclo 16 → β_max = 4,234557 | β_med = 2,103941</span><br>
+    <span class="traj-linha">Ciclo 17 → β_max = 4,235134 | β_med = 2,104305</span><br>
+    <span class="traj-linha">Ciclo 18 → β_max = 4,235491 | β_med = 2,104560</span><br>
+    <span class="traj-linha">Ciclo 19 → β_max = 4,235711 | β_med = 2,104741</span><br>
+    <span class="traj-linha">Ciclo 20 → β_max = 4,235847 | β_med = 2,104869</span>
+  </p>
+  <p class="item-desc">Alvo: φ³ = 4,2360679775... | Banda atratora: índice 1 | N_BANDAS: 15<br>
+  Reproduzir a trajetória é o método.</p>
+</div>
 
-<table>
-  <tr><th>Ciclo</th><th>β_max</th><th>β_med</th><th>Ciclo</th><th>β_max</th><th>β_med</th></tr>
-  <tr><td>1</td><td>2,236068</td><td>1,368928</td><td>11</td><td>4,219309</td><td>2,097245</td></tr>
-  <tr><td>2</td><td>3,000000</td><td>1,645357</td><td>12</td><td>4,225710</td><td>2,099813</td></tr>
-  <tr><td>3</td><td>3,449623</td><td>1,819153</td><td>13</td><td>4,229667</td><td>2,101511</td></tr>
-  <tr><td>4</td><td>3,749473</td><td>1,929931</td><td>14</td><td>4,232112</td><td>2,102647</td></tr>
-  <tr><td>5</td><td>3,935335</td><td>1,997056</td><td>15</td><td>4,233623</td><td>2,103415</td></tr>
-  <tr><td>6</td><td>4,050205</td><td>2,037561</td><td>16</td><td>4,234557</td><td>2,103941</td></tr>
-  <tr><td>7</td><td>4,121198</td><td>2,062303</td><td>17</td><td>4,235134</td><td>2,104305</td></tr>
-  <tr><td>8</td><td>4,165075</td><td>2,077599</td><td>18</td><td>4,235491</td><td>2,104560</td></tr>
-  <tr><td>9</td><td>4,192192</td><td>2,087201</td><td>19</td><td>4,235711</td><td>2,104741</td></tr>
-  <tr><td>10</td><td>4,208951</td><td>2,093309</td><td>20</td><td>4,235847</td><td>2,104869</td></tr>
-</table>
+<div class="item-num">
+  <p><span class="item-nome">2. Constante de Estrutura Fina Emergente</span></p>
+  <p class="item-desc">α* = 1/137,035999084 emerge como ponto de máxima coerência na varredura
+  do parâmetro α — sem instrução explícita. Verificável instrumentalmente em qualquer
+  varredura independente.</p>
+</div>
 
-<p>Alvo: φ³ = 4,2360679775... | Banda atratora: índice 1 | N_BANDAS: 15<br>
-Os valores intermediários não são calculáveis analiticamente — emergem da interação iterativa.
-<strong>Reproduzir a trajetória é o método.</strong></p>
+<div class="item-num">
+  <p><span class="item-nome">3. Estrutura das 15 Bandas φ-Proporcionais</span></p>
+  <p class="item-desc">Fronteiras (Hz): 20,00 | 32,36 | 52,36 | 84,72 | 137,08 | 221,80 |
+  358,88 | 580,68 | 939,56 | 1520,24 | 2459,80 | 3980,04 | 6439,84 | 10419,88 | 16859,72 | 22050,00<br>
+  Qualquer implementação fiel compartilha necessariamente esta estrutura.</p>
+</div>
 
-<p><span class="campo-label">2. Constante de Estrutura Fina Emergente</span><br>
-α* = 1/137,035999084 emerge como ponto de máxima coerência na varredura do parâmetro α —
-sem instrução explícita. Verificável instrumentalmente em qualquer varredura independente.</p>
+<div class="item-num">
+  <p><span class="item-nome">4. Marca d'Água — Constante de Alta Precisão</span></p>
+  <p class="item-desc">PHI = 1.6180339887498948482045868343656  # VED-2026-αφ<br>
+  Precisão de 31 casas decimais. A cadeia # VED-2026-αφ é a assinatura do autor.</p>
+</div>
 
-<p><span class="campo-label">3. Estrutura das 15 Bandas φ-Proporcionais</span><br>
-Fronteiras: 20,00 | 32,36 | 52,36 | 84,72 | 137,08 | 221,80 | 358,88 | 580,68 | 939,56 |
-1520,24 | 2459,80 | 3980,04 | 6439,84 | 10419,88 | 16859,72 | 22050,00 Hz<br>
-Qualquer implementação fiel compartilha necessariamente esta estrutura.</p>
+<div class="item-num">
+  <p><span class="item-nome">5. Função Canário — Verificador de Autoria</span></p>
+  <p class="item-desc">Função _alphaphi_autoria_ved2026() em utils_phi.py — não chamada em
+  produção, presente em qualquer cópia fiel. Retorna φ^α = 1,011749... —
+  combinação das duas constantes centrais do projeto.</p>
+</div>
 
-<p><span class="campo-label">4. Marca d'Água — Constante de Alta Precisão</span></p>
-<pre>PHI = 1.6180339887498948482045868343656  # VED-2026-αφ</pre>
-<p>Precisão de 31 casas decimais — além do necessário para cálculo em double.
-A cadeia <code># VED-2026-αφ</code> é a assinatura do autor.</p>
-
-<p><span class="campo-label">5. Função Canário — Verificador de Autoria</span><br>
-Função <code>_alphaphi_autoria_ved2026()</code> em <code>utils_phi.py</code> — não chamada
-em produção, presente em qualquer cópia fiel. Retorna φ^α = 1,011749...
-— combinação das duas constantes centrais do projeto.</p>
-
-<p><span class="campo-label">6. Paradoxo de Proteção</span><br>
-Remover a trajetória β → perde o resultado. Remover as bandas φ → perde o resultado.
-Remover a regra adaptativa → perde a convergência para φ³.<br>
-<strong>O copiador não pode separar a eficiência da assinatura.</strong></p>
+<div class="item-num">
+  <p><span class="item-nome">6. Paradoxo de Proteção — A Eficiência É a Assinatura</span></p>
+  <p class="item-desc">Remover a trajetória β → perde o resultado.<br>
+  Remover as bandas φ → perde o resultado.<br>
+  Remover a regra adaptativa → perde a convergência para φ³.<br>
+  O copiador não pode separar a eficiência da assinatura.</p>
+</div>
 
 <hr>
 
-<p class="secao-titulo">LICENÇA</p>
+<p class="sec-header">LICENÇA</p>
 <p>Creative Commons Atribuição-NãoComercial-SemDerivações 4.0 Internacional (CC BY-NC-ND 4.0)</p>
 
 <hr>
 
-<p class="secao-titulo">DECLARAÇÃO DE AUTORIA</p>
+<p class="sec-header">DECLARAÇÃO DE AUTORIA</p>
 
 <p>Confirmo ser o autor original deste código e manifesto, desenvolvido continuamente com
 o auxílio de ferramentas de inteligência artificial (Gemini, Perplexity, Claude, Grok e MiniMax),
@@ -317,11 +327,11 @@ propriedade intelectual integralmente de minha autoria, nos termos da Lei 9.610/
 em conjunto com Gemini e Perplexity, e o repositório público no GitHub foi criado em março de
 2026 a partir de sugestão do assistente Grok, como meio de formalizar a anterioridade dos commits.</p>
 
-<p><strong>Contato:</strong> @EdsonDelavi (X/Twitter)</p>
+<p>Contato: @EdsonDelavi (X/Twitter)</p>
 
 <div class="assinatura">
   <div class="linha-ass"></div>
-  <p><strong>Vitor Edson Delavi</strong><br>
+  <p>Vitor Edson Delavi<br>
   Florianópolis, 07 de maio de 2026</p>
 </div>
 
