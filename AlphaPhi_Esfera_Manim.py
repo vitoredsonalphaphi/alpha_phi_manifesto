@@ -120,9 +120,11 @@ sinais_ciclos, betas_ciclos = agente_eco_full(x_mix, BINS_PHI, N_CICLOS)
 eco    = sinais_ciclos[-1]
 print(f"✓ {N_CICLOS} ciclos processados")
 
-s16 = np.int16(np.clip(normalizar(eco), -1, 1)*32767)
+# repetir 4x para cobrir toda a animação (~6s)
+eco_longo = np.tile(eco, 4)
+s16 = np.int16(np.clip(normalizar(eco_longo), -1, 1)*32767)
 wavfile.write('/content/beep880_eco_final.wav', FS, s16)
-print("✓ beep880_eco_final.wav")
+print(f"✓ beep880_eco_final.wav  ({len(eco_longo)/FS:.1f}s)")
 
 # ── camadas P/S/T ──────────────────────────────────────────────
 def blp(s, c, o=4):
@@ -215,6 +217,9 @@ class EsferaAlphaPhi(ThreeDScene):
     def construct(self):
         self.camera.background_color = BG
         self.set_camera_orientation(phi=70*DEGREES, theta=-50*DEGREES)
+
+        # áudio sincronizado — começa junto com a intro
+        self.add_sound('/content/beep880_eco_final.wav', time_offset=0)
 
         # ── tracker de tempo ────────────────────────────────
         tr = ValueTracker(0)
