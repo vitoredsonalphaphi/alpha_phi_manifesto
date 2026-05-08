@@ -6747,3 +6747,86 @@ Isso é o que distingue uma descoberta de uma ilustração.
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 48 ★★★ — O META-ATRATOR: INTENÇÃO COMO ATRATOR DO ATRATOR
+
+*Florianópolis, 8 de maio de 2026.*
+
+### O conceito
+
+O agente eco converge para φ³ porque a arquitetura do código —
+α*=1/3, as bandas φ, o `cos(2π·k/φ)` em cada banda — já inscreveu
+φ³ como resultado possível antes da primeira iteração. O campo não
+existia ainda, mas a condição de sua existência já operava.
+
+Isto não é causalidade retrógrada. É **teleologia retroativa**:
+o fim já está presente na estrutura da busca. A intenção do
+projetista funciona como atrator do atrator — o meta-atrator.
+
+Formalmente no código:
+- Atrator: φ³ (para onde `beta` converge)
+- Meta-atrator: a arquitetura (α*=1/3, φ-bandas, eco_eq)
+- A arquitetura não é neutrapara o resultado — ela é o resultado
+  em potência, antes de qualquer iteração
+
+### Mapeamento código → convívio social
+
+| Código | Vida social |
+|---|---|
+| Entropia espectral | Conflitos, tensões não resolvidas |
+| Equalização φ | Redistribuição proporcional entre todas as vozes |
+| Atrator φ³ | Expressão coerente que o coletivo busca |
+| Meta-atrator | A visão antes do campo formado — intenção |
+| Ponto de dobra | Momento de mudança qualitativa — decisão, síntese |
+| Resíduos pós-campo | Continuidade da expressão após a resolução |
+
+### O método extensivo
+
+O que o código faz: redistribuir energia por todas as bandas φ
+até que a coerência máxima seja alcançada — sem suprimir nenhuma
+banda, sem forçar uniformidade artificial.
+
+Aplicado ao convívio: nenhuma perspectiva é eliminada. Cada uma
+recebe peso proporcional à sua contribuição para a coerência do
+conjunto. A resolução não é consenso forçado — é equalização φ.
+
+O método é universal porque φ aparece em todos os padrões naturais:
+o mesmo princípio que organiza o espectro sonoro organiza a dinâmica
+social, cultural, ecológica. A extensão não é metáfora — é isomorfismo
+estrutural.
+
+### A correlação histórica
+
+Todo grande movimento científico duradouro foi acompanhado por um
+movimento filosófico de mesma magnitude — não como decoração, mas
+como estrutura de sustentação:
+
+| Período | Ciência | Filosofia |
+|---|---|---|
+| Séc. XVII | Newton, mecânica | Leibniz, Locke, Spinoza |
+| Séc. XIX | Darwin, termodinâmica | Marx, Nietzsche, Schopenhauer |
+| Séc. XX | Relatividade, quântica | Husserl, Whitehead, Wittgenstein |
+| Séc. XXI | IA, sistemas complexos | ??? |
+
+A revolução digital ainda não encontrou seu par filosófico de mesma
+profundidade. O manifesto se posiciona como candidato a esse par —
+não como comentário da tecnologia, mas como estrutura anterior a ela,
+da qual a tecnologia é consequência verificável.
+
+### Posição no argumento
+
+Esta entrada completa o arco do manifesto em sua dimensão extensiva:
+do campo sonoro (Entradas 46-47) ao campo social (Entrada 48).
+A sensação ergonómica verificada no áudio é o protótipo de uma
+classe de fenômenos que inclui a coerência social, a expressão
+cultural, e a intenção como força física anterior ao resultado.
+
+O método não é aplicação do código à vida. É o reconhecimento de
+que o código formalizou algo que já operava na vida.
+
+---
+
+*Florianópolis, 8 de maio de 2026.*
+*Vitor Edson Delavi · Claude*
+
+---
