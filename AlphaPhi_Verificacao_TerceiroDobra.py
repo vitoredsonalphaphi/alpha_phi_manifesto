@@ -165,7 +165,7 @@ T = normalizar(T - T.mean())
 t_eixo = np.arange(len(P)) / FS  # eixo de tempo em segundos
 
 # ── localizar os 3 pontos de dobra ───────────────────────────
-print("\n  Localizando pontos de dobra (mínimo variância local)…")
+print(f"\n  Localizando pontos de dobra (mínimo variância local)…")
 idx_P, var_P, idx_P_arr = ponto_dobra_local(P, janela_ms=150, step_ms=10)
 idx_S, var_S, idx_S_arr = ponto_dobra_local(S, janela_ms=300, step_ms=10)
 idx_T, var_T, idx_T_arr = ponto_dobra_local(T, janela_ms=500, step_ms=10)
@@ -174,20 +174,29 @@ t_dobra_P = idx_P / FS
 t_dobra_S = idx_S / FS
 t_dobra_T = idx_T / FS
 
-print(f"\n  ┌─────────────────────────────────────────┐")
-print(f"  │  PONTOS DE DOBRA — sinal {dur_total:.2f}s         │")
-print(f"  ├─────────────────────────────────────────┤")
-print(f"  │  P (primário)   : {t_dobra_P:.3f}s               │")
-print(f"  │  S (secundário) : {t_dobra_S:.3f}s               │")
-print(f"  │  T (terciário)  : {t_dobra_T:.3f}s  ← 3º dobra  │")
-print(f"  ├─────────────────────────────────────────┤")
-print(f"  │  Duração total  : {dur_total:.2f}s               │")
-print(f"  └─────────────────────────────────────────┘")
+# posições observadas por escuta (Vitor Edson Delavi, 8 mai 2026)
+OBS_P = (3.8, 4.4)   # logo após 4s
+OBS_S = (5.0, 6.0)   # ~5.5s
+OBS_T = (7.0, 7.6)   # logo após 7s
 
-# verificação da hipótese
-entre_6_e_8 = 6.0 <= t_dobra_T <= 8.5
-print(f"\n  Terceiro ponto de dobra entre 6s e 8.5s: {'✓ CONFIRMADO' if entre_6_e_8 else '✗ fora do intervalo'}")
-print(f"  t_T = {t_dobra_T:.3f}s  (hipótese: entre 6s e 8s)")
+print(f"\n  ┌──────────────────────────────────────────────────────┐")
+print(f"  │  PONTOS DE DOBRA — sinal {dur_total:.2f}s                    │")
+print(f"  ├──────────────────────────────────────────────────────┤")
+print(f"  │  P  computado: {t_dobra_P:.3f}s   observado: ~4.1s          │")
+print(f"  │  S  computado: {t_dobra_S:.3f}s   observado: ~5.5s          │")
+print(f"  │  T  computado: {t_dobra_T:.3f}s   observado: ~7.1s  ← 3º   │")
+print(f"  ├──────────────────────────────────────────────────────┤")
+print(f"  │  Duração total: {dur_total:.2f}s                            │")
+print(f"  └──────────────────────────────────────────────────────┘")
+
+# verificação das 3 posições
+ok_P = OBS_P[0] <= t_dobra_P <= OBS_P[1]
+ok_S = OBS_S[0] <= t_dobra_S <= OBS_S[1]
+ok_T = OBS_T[0] <= t_dobra_T <= OBS_T[1]
+print(f"\n  P dentro do intervalo observado {OBS_P}: {'✓' if ok_P else '✗'}")
+print(f"  S dentro do intervalo observado {OBS_S}: {'✓' if ok_S else '✗'}")
+print(f"  T dentro do intervalo observado {OBS_T}: {'✓' if ok_T else '✗'}")
+entre_6_e_8 = ok_T  # atualizar flag para resultado final
 
 # ── visualização ──────────────────────────────────────────────
 print("\n  Gerando visualização…")
