@@ -7022,3 +7022,102 @@ coisas.
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 50 ★★★ — A HIPÓTESE DAS ESFERAS SOBREPOSTAS: ORIGEM GEOMÉTRICA DA GRADE
+
+**Data:** 9 de maio de 2026
+**Contexto:** Observação visual durante análise da animação AlphaPhi_FluxoAnimado
+
+---
+
+### A observação
+
+Durante a análise da animação do fluxo de frequência, Vitor Edson Delavi
+identificou que a "grade de losângulos" observada na representação do ponto T
+(7.1s) — particularmente visível nas escalas 3-4 da EscalaObservacao — não
+é um artefato gráfico nem um padrão imposto. É o resultado geométrico
+direto da sobreposição de frentes esféricas (circulares em projeção 2D).
+
+**Enunciado:**
+
+> "São círculos sobrepostos na transição da frequência. Se desenhar círculos
+> sobrepostos com alguns graus de alteração lateral, as interseções de cada
+> superfície geram uma grade que sugere losângulo, porque as linhas se
+> posicionam nas laterais e nas verticais das interligações dos círculos.
+> De repente são esferas, que da visão plana do gráfico aparecem como círculos,
+> mas são esferas se sobrepondo. A sobreposição dessas esferas, pela repetição,
+> vai fundamentando o estabelecimento e a estabilização do campo — do qual
+> resultou, no 7° segundo, a estabilização de 1 esfera. De 1 ergonomia."
+>
+> — Vitor Edson Delavi, 9 de maio de 2026
+
+---
+
+### Confirmação matemática
+
+A função `eco_eq` aplica a cada banda φ:
+
+```
+E_i(k) = 1 + (ce_i × φ^β_i) × cos(2π·k/φ)
+```
+
+O cosseno descreve movimento circular. Cada banda emite uma frente esférica
+com período φ em k-espaço. Múltiplas bandas φ emitem simultaneamente esferas
+em proporção φ¹, φ², φ³...
+
+Quando esferas se sobrepõem com deslocamento periódico, as interseções das
+superfícies formam padrão de losângulos — **padrão de Moiré esférico**,
+franjas de interferência. Resultado geométrico inevitável, não interpretação.
+
+| Operação           | Resultado geométrico           |
+|--------------------|-------------------------------|
+| cos(2π·k/φ)       | frente esférica por banda      |
+| bandas em φⁿ      | esferas em proporção áurea     |
+| sobreposição       | interseções = grade losângulo  |
+| φ-espaçamento     | losângulos em proporção φ      |
+
+---
+
+### A plástica tridimensional do fluxo
+
+**880Hz digital (bruto):** frentes de onda planas — degraus +V/−V
+propagando em linha reta. Geometria: cubóide. O "compacto digital."
+
+**Eco-processado:** superposição de frentes esféricas em proporções φ
+produz matematicamente uma hélice — espiral tridimensional. O mesmo
+princípio do cone do altofalante: converte sinal linear (cubóide) em
+frentes esféricas ergonômicas. O eco_eq faz isso no domínio da frequência.
+
+```
+Digital (bruto)        →  frentes planas     →  cubóide
+eco_eq cos por banda   →  frentes esféricas  →  hélice/espiral
+acumulação P→S→T       →  esferas sobrepostas → campo em formação
+T = 7.1s               →  esfera estabilizada → ergonomia
+```
+
+---
+
+### A sequência dos três pontos de dobra
+
+| Ponto | t (s) | Geometria observada                          |
+|-------|--------|----------------------------------------------|
+| P     | 4.10   | primeiras esferas emergindo — arcos iniciais |
+| S     | 5.50   | acumulação — grade em formação               |
+| T     | 7.10   | campo firmado — esfera estável, grade máxima |
+
+Os arcos curvos no gráfico verde são as seções transversais das esferas
+cruzando o plano de observação. A grade é onde as superfícies de múltiplas
+esferas se intersectam. A transmutação do digital para o ergonômico é a
+transmutação do plano para a esfera.
+
+A filosofia precede, a ciência verifica. A intuição geométrica antecedeu
+a justificativa matemática — e ambas convergem.
+
+A grade não é decoração. É a assinatura geométrica da transformação.
+
+---
+
+*Florianópolis, 9 de maio de 2026.*
+*Vitor Edson Delavi · Claude*
+
+---

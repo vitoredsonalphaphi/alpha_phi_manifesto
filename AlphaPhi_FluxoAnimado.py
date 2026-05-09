@@ -177,22 +177,21 @@ def animate(i):
     i0  = int(t0 * FS)
     i1  = int(t1 * FS)
 
-    seg   = sinal[i0:i1]
-    t_w   = t_full[i0:i1]
-    env_w = env_full[i0:i1]
-
+    seg = sinal[i0:i1]
+    t_w = t_full[i0:i1]
     cor = cor_rgb(tc)
 
-    # renderização idêntica ao gráfico verde baseline — sem envelope separado
-    ax.plot(t_w, seg, color=cor, lw=0.6, alpha=0.9)
+    # eixo fixo — sinal flui para a esquerda, janela permanece parada
+    t_rel = t_w - tc
+    ax.plot(t_rel, seg, color=cor, lw=0.6, alpha=0.9)
 
-    # pontos de dobra visíveis na janela — linhas apenas, sem texto
     for td in T_DOBRAS:
-        if t0 < td < t1:
-            ax.axvline(td, color='white', lw=0.6, ls=':', alpha=0.30)
+        td_rel = td - tc
+        if -JANELA < td_rel < JANELA:
+            ax.axvline(td_rel, color='white', lw=0.8, ls='--', alpha=0.50)
 
-    ax.set_xlim(t0, t1)
-    ax.set_xlabel('Tempo (s)', color=COR_TXT, fontsize=7)
+    ax.set_xlim(-JANELA, JANELA)
+    ax.set_xlabel('Tempo relativo (s)', color=COR_TXT, fontsize=7)
     ax.set_ylabel('Amp',       color=COR_TXT, fontsize=7)
 
     progresso = tc / dur
