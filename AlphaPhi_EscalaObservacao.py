@@ -184,9 +184,10 @@ for d in DOBRAS:
         ax.plot(t_w,  env_w, color=cor, lw=1.0, alpha=0.60)
         ax.plot(t_w, -env_w, color=cor, lw=1.0, alpha=0.60)
 
-        # sinal bruto — lw adaptado à escala para manter legibilidade
-        lw_sig = max(0.15, 0.6 - row * 0.08)
-        ax.plot(t_w, seg, color=cor, lw=lw_sig, alpha=0.88)
+        # sinal bruto — lw adaptado à escala: fino no zoom amplo, espesso no zoom fino
+        lw_tab = [0.4, 0.35, 0.45, 0.60, 1.0, 1.4]
+        lw_sig = lw_tab[row]
+        ax.plot(t_w, seg, color=cor, lw=lw_sig, alpha=0.92)
 
         # marcador do ponto de dobra
         ax.axvline(tc, color='white', lw=0.7, ls=':', alpha=0.35)
