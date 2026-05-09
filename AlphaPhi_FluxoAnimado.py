@@ -1,12 +1,14 @@
 """
 AlphaPhi_FluxoAnimado.py
-Animação — O Sinal Se Desenhando
+Animação — O Sinal em Movimento
 
-O mesmo gráfico verde, animado progressivamente.
-Eixo completo (0–8.25s) sempre visível e fixo.
-A linha cresce da esquerda para a direita, revelando
-cada fase e cada ponto de dobra conforme os alcança.
-Mesma renderização do baseline: lw=0.6, alpha=0.9, #00FF88.
+O sinal completo existe desde o primeiro frame — tênue.
+O presente percorre da esquerda para a direita.
+A parte percorrida ilumina ao nível do gráfico verde baseline.
+O futuro existe, mas espera.
+
+Nenhuma câmera. Nenhum plotter. O sinal está lá.
+O que se move é o tempo dentro dele.
 
 © Vitor Edson Delavi · Florianópolis · 2026
 """
@@ -16,7 +18,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from scipy.signal import hilbert, butter, filtfilt
+from scipy.signal import butter, filtfilt
 from IPython.display import display, Video
 
 # ── constantes ORIGINAIS — não modificar ─────────────────────
@@ -34,7 +36,7 @@ FADE       = int(0.15 * FS)
 
 print("=" * 60)
 print("  AlphaPhi · Fluxo Animado")
-print("  Sinal se desenhando · gráfico verde progressivo")
+print("  O sinal em movimento — cursor percorre o gráfico verde")
 print("=" * 60)
 
 # ── funções eco originais ─────────────────────────────────────
@@ -129,11 +131,10 @@ print(f"  {dur:.2f}s  β_max={beta_f.max():.4f}  φ³={PHI**3:.4f}")
 
 # ── parâmetros da animação ────────────────────────────────────
 FPS      = 24
-DUR_ANIM = 33    # 33s = velocidade 0.25x do áudio (8.25 ÷ 0.25)
-
+DUR_ANIM = 33    # 33s = 0.25x do áudio (8.25 ÷ 0.25)
 N_FRAMES = int(FPS * DUR_ANIM)
 
-# pontos de dobra — mesmos do gráfico verde baseline
+# pontos de dobra
 DOBRAS = [
     (4.10, 'P  4.1s', '#00FF88'),
     (5.50, 'S  5.5s', '#FFB800'),
@@ -144,59 +145,70 @@ COR_BG  = '#0D0D1A'
 COR_TXT = '#CCCCDD'
 COR_GRD = '#22223A'
 
-print(f"\n  Montando animação…")
-print(f"  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s")
-print(f"  Sinal se desenha progressivamente: 0 → {dur:.2f}s")
+print(f"\n  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s (0.25× áudio)")
+print(f"  Sinal completo visível · cursor percorre 0 → {dur:.2f}s")
 
-# ── figura — mesmas dimensões do gráfico verde baseline ──────
+# ── figura — mesmas dimensões do gráfico verde ────────────────
 fig, ax = plt.subplots(figsize=(14, 4))
 fig.patch.set_facecolor('#080810')
 
+# pré-computar linha de fundo (não muda) ─────────────────────
+# plotada uma vez fora do loop para eficiência
+_bg_line, = ax.plot([], [], color='#00FF88', lw=0.6, alpha=0.18)
+_fg_line, = ax.plot([], [], color='#00FF88', lw=0.6, alpha=0.92)
+_cursor   = ax.axvline(0, color='#FFFFFF', lw=0.9, alpha=0.45)
+_vlines   = [ax.axvline(0, color=c, lw=1.2, ls='--', alpha=0.0)
+             for _, _, c in DOBRAS]
+
+ax.set_facecolor(COR_BG)
+ax.set_xlim(0, dur)
+ax.set_ylim(-1.05, 1.05)
+for sp in ax.spines.values(): sp.set_color(COR_GRD)
+ax.tick_params(colors=COR_TXT, labelsize=8)
+ax.set_xlabel('Tempo (s)', color=COR_TXT, fontsize=9)
+ax.set_ylabel('Amplitude', color=COR_TXT, fontsize=9)
+
+# sinal completo — sempre visível, tênue (o "potencial")
+_bg_line.set_data(t_full, sinal)
+
+_title = ax.set_title('', color=COR_TXT, fontsize=9)
+
 def animate(i):
-    ax.cla()
-    ax.set_facecolor(COR_BG)
-    ax.set_xlim(0, dur)
-    ax.set_ylim(-1.05, 1.05)
-    for sp in ax.spines.values(): sp.set_color(COR_GRD)
-    ax.tick_params(colors=COR_TXT, labelsize=8)
-
-    # quanto do sinal já foi desenhado
     t_atual = dur * (i + 1) / N_FRAMES
-    i_atual = min(int(t_atual * FS), len(sinal))
+    i_now   = min(int(t_atual * FS), len(sinal))
 
-    # sinal desenhado até agora — idêntico ao gráfico verde
-    ax.plot(t_full[:i_atual], sinal[:i_atual],
-            color='#00FF88', lw=0.6, alpha=0.9)
+    # porção percorrida — plena luminosidade (= gráfico verde)
+    _fg_line.set_data(t_full[:i_now], sinal[:i_now])
 
-    # pontos de dobra aparecem quando a linha os alcança
-    for t_d, label, cor in DOBRAS:
+    # cursor — posição atual
+    _cursor.set_xdata([t_atual, t_atual])
+
+    # pontos de dobra — surgem quando o cursor os alcança
+    for k, (t_d, label, cor) in enumerate(DOBRAS):
         if t_atual >= t_d:
-            ax.axvline(t_d, color=cor, lw=1.2, ls='--',
-                       alpha=0.70, label=label)
+            _vlines[k].set_xdata([t_d, t_d])
+            _vlines[k].set_alpha(0.65)
+        # label
+        # (texto via set_title para simplicidade)
 
-    ax.set_xlabel('Tempo (s)', color=COR_TXT, fontsize=9)
-    ax.set_ylabel('Amplitude', color=COR_TXT, fontsize=9)
-    ax.legend(fontsize=8, facecolor='#111', labelcolor='#CCCCDD',
-              loc='upper left', framealpha=0.7)
-    ax.set_title(
-        f'AlphaPhi · Beep {F_BEEP:.0f}Hz · α*=1/3 · '
-        f't = {t_atual:.2f}s / {dur:.2f}s',
-        color=COR_TXT, fontsize=9
+    _title.set_text(
+        f'AlphaPhi · {F_BEEP:.0f}Hz · α*=1/3 · '
+        f't = {t_atual:.2f}s / {dur:.2f}s'
     )
-    return []
+    return [_fg_line, _cursor, _title] + _vlines
 
 anim = animation.FuncAnimation(
     fig, animate, frames=N_FRAMES,
-    interval=1000/FPS, blit=False
+    interval=1000/FPS, blit=True
 )
 
 # ── salvar ────────────────────────────────────────────────────
 fname = '/content/alphaphi_fluxo.mp4'
 writer = animation.FFMpegWriter(
-    fps=FPS, bitrate=2400,
+    fps=FPS, bitrate=3000,
     extra_args=['-vcodec', 'libx264', '-pix_fmt', 'yuv420p']
 )
-print("  Renderizando… (pode demorar alguns minutos)")
+print("\n  Renderizando…")
 anim.save(fname, writer=writer, dpi=150,
           savefig_kwargs={'facecolor': '#080810'})
 plt.close()
@@ -205,7 +217,7 @@ print(f"  → alphaphi_fluxo.mp4  ({DUR_ANIM}s · {N_FRAMES} frames)")
 display(Video(fname, embed=True, width=960))
 
 print(f"\n{'='*60}")
-print(f"  Gráfico verde animado — sinal se desenhando")
-print(f"  {dur:.2f}s de sinal em {DUR_ANIM}s de animação (0.25x)")
-print(f"  P=4.1s · S=5.5s · T=7.1s revelados progressivamente")
+print(f"  Sinal completo visível desde o frame 1 — tênue")
+print(f"  Cursor percorre: 0 → {dur:.2f}s em {DUR_ANIM}s (0.25×)")
+print(f"  P={DOBRAS[0][0]}s  S={DOBRAS[1][0]}s  T={DOBRAS[2][0]}s")
 print(f"{'='*60}")
