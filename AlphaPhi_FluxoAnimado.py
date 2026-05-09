@@ -143,7 +143,7 @@ def cor_rgb(t):
     else:         return c2
 
 # ── parâmetros da animação ────────────────────────────────────
-JANELA   = 1.5     # meia-janela (±1.5 s — envelope + arcos + campo visíveis)
+JANELA   = 0.060   # meia-janela (±60 ms — ciclos de 880Hz visíveis fluindo)
 FPS      = 24
 DUR_ANIM = 24      # segundos de animação
 
@@ -183,10 +183,10 @@ def animate(i):
 
     cor = cor_rgb(tc)
 
-    ax.fill_between(t_w, -env_w, env_w, color=cor, alpha=0.18)
-    ax.plot(t_w,  env_w, color=cor, lw=1.8, alpha=0.80)
-    ax.plot(t_w, -env_w, color=cor, lw=1.8, alpha=0.80)
-    ax.plot(t_w, seg,    color=cor, lw=0.12, alpha=0.65)
+    ax.fill_between(t_w, -env_w, env_w, color=cor, alpha=0.15)
+    ax.plot(t_w,  env_w, color=cor, lw=1.6, alpha=0.85)
+    ax.plot(t_w, -env_w, color=cor, lw=1.6, alpha=0.85)
+    ax.plot(t_w, seg,    color=cor, lw=0.35, alpha=0.88)
 
     # pontos de dobra visíveis na janela — linhas apenas, sem texto
     for td in T_DOBRAS:
@@ -226,7 +226,7 @@ display(Video(fname, embed=True, width=900))
 
 print(f"\n{'='*60}")
 print(f"  Fluxo animado gerado.")
-print(f"  Janela: ±{JANELA:.1f} s")
+print(f"  Janela: ±{int(JANELA*1000)} ms")
 print(f"  Cor: P=#00FF88 → S=#FFB800 → T=#FF4466 (interpolada)")
 print(f"  Observe a grade emergindo ao aproximar do T (7.1s)")
 print(f"{'='*60}")
