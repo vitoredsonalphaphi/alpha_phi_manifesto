@@ -143,7 +143,7 @@ def cor_rgb(t):
     else:         return c2
 
 # ── parâmetros da animação ────────────────────────────────────
-JANELA   = 0.060   # meia-janela (±60 ms — ciclos de 880Hz visíveis fluindo)
+JANELA   = 1.5     # meia-janela (±1.5 s — textura de barras + arcos visíveis)
 FPS      = 24
 DUR_ANIM = 24      # segundos de animação
 
@@ -183,10 +183,8 @@ def animate(i):
 
     cor = cor_rgb(tc)
 
-    ax.fill_between(t_w, -env_w, env_w, color=cor, alpha=0.15)
-    ax.plot(t_w,  env_w, color=cor, lw=1.6, alpha=0.85)
-    ax.plot(t_w, -env_w, color=cor, lw=1.6, alpha=0.85)
-    ax.plot(t_w, seg,    color=cor, lw=0.35, alpha=0.88)
+    # renderização idêntica ao gráfico verde baseline — sem envelope separado
+    ax.plot(t_w, seg, color=cor, lw=0.6, alpha=0.9)
 
     # pontos de dobra visíveis na janela — linhas apenas, sem texto
     for td in T_DOBRAS:
