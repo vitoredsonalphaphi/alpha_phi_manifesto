@@ -1,11 +1,12 @@
 """
 AlphaPhi_FluxoAnimado.py
-Animação — Fluxo da Frequência em Observação
+Animação — O Sinal Se Desenhando
 
-Janela deslizante (±250 ms) sobre o sinal completo (8.25 s).
-Cor transita P→S→T conforme posição temporal.
-Mesmo sinal. Mesmo espaço (tempo × amplitude).
-Nenhuma forma desenhada. O que emergir é o que está lá.
+O mesmo gráfico verde, animado progressivamente.
+Eixo completo (0–8.25s) sempre visível e fixo.
+A linha cresce da esquerda para a direita, revelando
+cada fase e cada ponto de dobra conforme os alcança.
+Mesma renderização do baseline: lw=0.6, alpha=0.9, #00FF88.
 
 © Vitor Edson Delavi · Florianópolis · 2026
 """
@@ -33,7 +34,7 @@ FADE       = int(0.15 * FS)
 
 print("=" * 60)
 print("  AlphaPhi · Fluxo Animado")
-print("  Janela deslizante · transição P→S→T")
+print("  Sinal se desenhando · gráfico verde progressivo")
 print("=" * 60)
 
 # ── funções eco originais ─────────────────────────────────────
@@ -124,81 +125,63 @@ beta_f, cas = agente_eco(x_mix, BINS_PHI, N_CICLOS)
 sinal    = concatenar(cas)
 dur      = len(sinal) / FS
 t_full   = np.arange(len(sinal)) / FS
-env_full = lowpass(np.abs(hilbert(sinal)), 200.0)
 print(f"  {dur:.2f}s  β_max={beta_f.max():.4f}  φ³={PHI**3:.4f}")
 
-# ── cor transitando P→S→T ────────────────────────────────────
-_C = {
-    'P': np.array([0.0,   1.0,   0.533]),   # #00FF88
-    'S': np.array([1.0,   0.722, 0.0  ]),   # #FFB800
-    'T': np.array([1.0,   0.267, 0.400]),   # #FF4466
-}
-_PT = [(4.10, _C['P']), (5.50, _C['S']), (7.10, _C['T'])]
-
-def cor_rgb(t):
-    (t0, c0), (t1, c1), (t2, c2) = _PT
-    if t <= t0:   return c0
-    elif t <= t1: return (1-(t-t0)/(t1-t0))*c0 + ((t-t0)/(t1-t0))*c1
-    elif t <= t2: return (1-(t-t1)/(t2-t1))*c1 + ((t-t1)/(t2-t1))*c2
-    else:         return c2
-
 # ── parâmetros da animação ────────────────────────────────────
-JANELA   = 1.5     # meia-janela (±1.5 s — textura de barras + arcos visíveis)
 FPS      = 24
-DUR_ANIM = 24      # segundos de animação
+DUR_ANIM = 33    # 33s = velocidade 0.25x do áudio (8.25 ÷ 0.25)
 
-N_FRAMES   = int(FPS * DUR_ANIM)
-t_centers  = np.linspace(JANELA, dur - JANELA, N_FRAMES)
+N_FRAMES = int(FPS * DUR_ANIM)
+
+# pontos de dobra — mesmos do gráfico verde baseline
+DOBRAS = [
+    (4.10, 'P  4.1s', '#00FF88'),
+    (5.50, 'S  5.5s', '#FFB800'),
+    (7.10, 'T  7.1s', '#FF4466'),
+]
 
 COR_BG  = '#0D0D1A'
 COR_TXT = '#CCCCDD'
 COR_GRD = '#22223A'
 
-# posições dos pontos de dobra para marcação sutil
-T_DOBRAS = [4.10, 5.50, 7.10]
+print(f"\n  Montando animação…")
+print(f"  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s")
+print(f"  Sinal se desenha progressivamente: 0 → {dur:.2f}s")
 
-# ── montar animação ───────────────────────────────────────────
-print("\n  Montando animação…")
-print(f"  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s · janela ±{JANELA:.1f}s")
-
-fig, ax = plt.subplots(figsize=(13, 3.8))
+# ── figura — mesmas dimensões do gráfico verde baseline ──────
+fig, ax = plt.subplots(figsize=(14, 4))
 fig.patch.set_facecolor('#080810')
 
 def animate(i):
     ax.cla()
     ax.set_facecolor(COR_BG)
-    ax.set_ylim(-1.08, 1.08)
+    ax.set_xlim(0, dur)
+    ax.set_ylim(-1.05, 1.05)
     for sp in ax.spines.values(): sp.set_color(COR_GRD)
-    ax.tick_params(colors=COR_TXT, labelsize=7)
+    ax.tick_params(colors=COR_TXT, labelsize=8)
 
-    tc  = t_centers[i]
-    t0  = tc - JANELA
-    t1  = tc + JANELA
-    i0  = int(t0 * FS)
-    i1  = int(t1 * FS)
+    # quanto do sinal já foi desenhado
+    t_atual = dur * (i + 1) / N_FRAMES
+    i_atual = min(int(t_atual * FS), len(sinal))
 
-    seg = sinal[i0:i1]
-    t_w = t_full[i0:i1]
-    cor = cor_rgb(tc)
+    # sinal desenhado até agora — idêntico ao gráfico verde
+    ax.plot(t_full[:i_atual], sinal[:i_atual],
+            color='#00FF88', lw=0.6, alpha=0.9)
 
-    # eixo fixo — sinal flui para a esquerda, janela permanece parada
-    t_rel = t_w - tc
-    ax.plot(t_rel, seg, color=cor, lw=0.6, alpha=0.9)
+    # pontos de dobra aparecem quando a linha os alcança
+    for t_d, label, cor in DOBRAS:
+        if t_atual >= t_d:
+            ax.axvline(t_d, color=cor, lw=1.2, ls='--',
+                       alpha=0.70, label=label)
 
-    for td in T_DOBRAS:
-        td_rel = td - tc
-        if -JANELA < td_rel < JANELA:
-            ax.axvline(td_rel, color='white', lw=0.8, ls='--', alpha=0.50)
-
-    ax.set_xlim(-JANELA, JANELA)
-    ax.set_xlabel('Tempo relativo (s)', color=COR_TXT, fontsize=7)
-    ax.set_ylabel('Amp',       color=COR_TXT, fontsize=7)
-
-    progresso = tc / dur
+    ax.set_xlabel('Tempo (s)', color=COR_TXT, fontsize=9)
+    ax.set_ylabel('Amplitude', color=COR_TXT, fontsize=9)
+    ax.legend(fontsize=8, facecolor='#111', labelcolor='#CCCCDD',
+              loc='upper left', framealpha=0.7)
     ax.set_title(
-        f'AlphaPhi · Fluxo  —  t = {tc:.3f}s  '
-        f'({int(progresso*100)}%  do sinal)',
-        color=COR_TXT, fontsize=8
+        f'AlphaPhi · Beep {F_BEEP:.0f}Hz · α*=1/3 · '
+        f't = {t_atual:.2f}s / {dur:.2f}s',
+        color=COR_TXT, fontsize=9
     )
     return []
 
@@ -214,16 +197,15 @@ writer = animation.FFMpegWriter(
     extra_args=['-vcodec', 'libx264', '-pix_fmt', 'yuv420p']
 )
 print("  Renderizando… (pode demorar alguns minutos)")
-anim.save(fname, writer=writer, dpi=110,
+anim.save(fname, writer=writer, dpi=150,
           savefig_kwargs={'facecolor': '#080810'})
 plt.close()
 print(f"  → alphaphi_fluxo.mp4  ({DUR_ANIM}s · {N_FRAMES} frames)")
 
-display(Video(fname, embed=True, width=900))
+display(Video(fname, embed=True, width=960))
 
 print(f"\n{'='*60}")
-print(f"  Fluxo animado gerado.")
-print(f"  Janela: ±{int(JANELA*1000)} ms")
-print(f"  Cor: P=#00FF88 → S=#FFB800 → T=#FF4466 (interpolada)")
-print(f"  Observe a grade emergindo ao aproximar do T (7.1s)")
+print(f"  Gráfico verde animado — sinal se desenhando")
+print(f"  {dur:.2f}s de sinal em {DUR_ANIM}s de animação (0.25x)")
+print(f"  P=4.1s · S=5.5s · T=7.1s revelados progressivamente")
 print(f"{'='*60}")
