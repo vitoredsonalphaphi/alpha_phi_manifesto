@@ -143,9 +143,9 @@ def cor_rgb(t):
     else:         return c2
 
 # ── parâmetros da animação ────────────────────────────────────
-JANELA   = 0.250   # meia-janela (±250 ms — escala 3: arcos + grade visíveis)
+JANELA   = 1.5     # meia-janela (±1.5 s — envelope + arcos + campo visíveis)
 FPS      = 24
-DUR_ANIM = 16      # segundos de animação
+DUR_ANIM = 24      # segundos de animação
 
 N_FRAMES   = int(FPS * DUR_ANIM)
 t_centers  = np.linspace(JANELA, dur - JANELA, N_FRAMES)
@@ -159,7 +159,7 @@ T_DOBRAS = [4.10, 5.50, 7.10]
 
 # ── montar animação ───────────────────────────────────────────
 print("\n  Montando animação…")
-print(f"  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s · janela ±{int(JANELA*1000)}ms")
+print(f"  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s · janela ±{JANELA:.1f}s")
 
 fig, ax = plt.subplots(figsize=(13, 3.8))
 fig.patch.set_facecolor('#080810')
@@ -183,10 +183,10 @@ def animate(i):
 
     cor = cor_rgb(tc)
 
-    ax.fill_between(t_w, -env_w, env_w, color=cor, alpha=0.12)
-    ax.plot(t_w,  env_w, color=cor, lw=1.0, alpha=0.55)
-    ax.plot(t_w, -env_w, color=cor, lw=1.0, alpha=0.55)
-    ax.plot(t_w, seg,    color=cor, lw=0.50, alpha=0.90)
+    ax.fill_between(t_w, -env_w, env_w, color=cor, alpha=0.18)
+    ax.plot(t_w,  env_w, color=cor, lw=1.8, alpha=0.80)
+    ax.plot(t_w, -env_w, color=cor, lw=1.8, alpha=0.80)
+    ax.plot(t_w, seg,    color=cor, lw=0.12, alpha=0.65)
 
     # pontos de dobra visíveis na janela — linhas apenas, sem texto
     for td in T_DOBRAS:
@@ -226,7 +226,7 @@ display(Video(fname, embed=True, width=900))
 
 print(f"\n{'='*60}")
 print(f"  Fluxo animado gerado.")
-print(f"  Janela: ±{int(JANELA*1000)} ms")
+print(f"  Janela: ±{JANELA:.1f} s")
 print(f"  Cor: P=#00FF88 → S=#FFB800 → T=#FF4466 (interpolada)")
 print(f"  Observe a grade emergindo ao aproximar do T (7.1s)")
 print(f"{'='*60}")
