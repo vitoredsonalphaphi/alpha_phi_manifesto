@@ -1,21 +1,21 @@
 """
 AlphaPhi_Quaternio.py
-Trajetória 3D — Componentes no Espaço de Fase
+Atrator do Envelope — Embedding de Atraso
 
-Três componentes extraídos do próprio sinal eco,
-pelas mesmas bandas φ que o agente usa:
+Três coordenadas extraídas do próprio envelope do sinal:
+  x = env(t)
+  y = env(t + τ)      τ = 250 ms
+  z = env(t + 2τ)
 
-  x = banda F_M     ≈ 135.8 Hz  → [84.7 Hz, 137.1 Hz]
-  y = banda F_ORG   = 220.0 Hz  → [137.1 Hz, 221.8 Hz]
-  z = banda F_BEEP  = 880.0 Hz  → [580.7 Hz, 939.6 Hz]
+O envelope é a resposta ao hilbert transform do sinal completo.
+Nenhuma informação externa adicionada — apenas o sinal observado
+em três momentos separados por τ.
 
-Nada adicionado. Nenhuma escala ajustada para parecer com algo.
-O sinal já contém esses três componentes desde a geração.
-O espaço de fase apenas os separa para observação simultânea.
+O atrator resultante muda de forma nos pontos de dobra:
+fase digital → desenvolvimento dos arcos → campo estabilizado.
 
-Se emergir uma hélice, estava lá.
-Se emergir um atrator, estava lá.
-Se emergir uma bifurcação em P/S/T, estava lá.
+τ = 250ms foi escolhido por ser da ordem da duração de um segmento
+de transição visível no gráfico verde (arcos do envelope).
 
 © Vitor Edson Delavi · Florianópolis · 2026
 """
@@ -27,14 +27,14 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from mpl_toolkits.mplot3d import Axes3D
 from scipy.signal import butter, filtfilt, hilbert
-from IPython.display import display, Video
+from IPython.display import display, Video, Image
 
 # ── constantes ORIGINAIS — não modificar ─────────────────────
 PHI        = (1 + np.sqrt(5)) / 2
 FS         = 44100
 F_BEEP     = 880.0
 F_ORG      = 220.0
-F_M        = F_ORG / PHI          # ≈ 135.8 Hz
+F_M        = F_ORG / PHI
 BETA_FM    = PHI
 ALPHA_STAR = 1.0 / 3.0
 DURACAO    = 1.5
@@ -43,8 +43,8 @@ N_CICLOS   = 20
 FADE       = int(0.15 * FS)
 
 print("=" * 60)
-print("  AlphaPhi · Trajetória 3D")
-print("  Componentes F_M / F_ORG / F_BEEP no espaço de fase")
+print("  AlphaPhi · Atrator do Envelope")
+print("  Embedding de atraso — env(t) × env(t+τ) × env(t+2τ)")
 print("=" * 60)
 
 # ── funções eco originais ─────────────────────────────────────
@@ -120,6 +120,10 @@ def concatenar(cas):
         out = np.concatenate([out, s[fade_n:]])
     return normalizar(out)
 
+def lowpass(s, fc, fs=FS, order=4):
+    b, a = butter(order, fc/(fs/2), btype='low')
+    return filtfilt(b, a, s)
+
 # ── gerar sinal ───────────────────────────────────────────────
 print("\n  Gerando sinal…")
 t_seg = np.linspace(0, DURACAO, N_SINAL, endpoint=False)
@@ -133,64 +137,39 @@ dur      = len(sinal) / FS
 t_full   = np.arange(len(sinal)) / FS
 print(f"  {dur:.2f}s  β_max={beta_f.max():.4f}  φ³={PHI**3:.4f}")
 
-# ── identificar bandas φ que contêm cada frequência ──────────
-# as mesmas bandas do agente_eco — nenhuma nova estrutura
-bandas_full = gerar_bandas_phi()
-def banda_de(freq):
-    for f_lo, f_hi in bandas_full:
-        if f_lo <= freq < f_hi:
-            return f_lo, f_hi
-    return bandas_full[-1]
+# ── envelope suavizado ────────────────────────────────────────
+env_full = lowpass(np.abs(hilbert(sinal)), 50.0)   # 50 Hz → suave
+env_full = env_full / (env_full.max() + 1e-10)
 
-b_fm   = banda_de(F_M)      # banda de F_M   ≈ 135.8 Hz
-b_org  = banda_de(F_ORG)    # banda de F_ORG = 220.0 Hz
-b_beep = banda_de(F_BEEP)   # banda de F_BEEP = 880.0 Hz
+# subamostrar a 200 Hz
+SS       = FS // 200
+env_sub  = env_full[::SS]
+t_sub    = t_full[::SS]
+N_env    = len(env_sub)
 
-print(f"\n  Bandas φ identificadas (mesmas do eco):")
-print(f"  F_M   ≈{F_M:.1f}Hz  → [{b_fm[0]:.1f}, {b_fm[1]:.1f}] Hz")
-print(f"  F_ORG = {F_ORG:.1f}Hz → [{b_org[0]:.1f}, {b_org[1]:.1f}] Hz")
-print(f"  F_BEEP= {F_BEEP:.1f}Hz → [{b_beep[0]:.1f}, {b_beep[1]:.1f}] Hz")
+# ── embedding de atraso — τ = 250 ms = 50 passos a 200 Hz ────
+TAU      = 50   # 250 ms
+N_TRAJ   = N_env - 2 * TAU
 
-# ── extrair cada componente via bandpass nas bordas φ ─────────
-def bp_envelope(sig, f_lo, f_hi, fs=FS, order=4):
-    nyq = fs / 2.0
-    lo  = max(f_lo / nyq, 1e-4)
-    hi  = min(f_hi / nyq, 0.9999)
-    b, a = butter(order, [lo, hi], btype='band')
-    filt = filtfilt(b, a, sig)
-    env  = np.abs(hilbert(filt))
-    return filt, env
+x_traj = env_sub[:N_TRAJ]
+y_traj = env_sub[TAU : N_TRAJ + TAU]
+z_traj = env_sub[2*TAU : N_TRAJ + 2*TAU]
+t_traj = t_sub[:N_TRAJ]
 
-print("\n  Extraindo componentes…")
-_, env_fm   = bp_envelope(sinal, *b_fm)
-_, env_org  = bp_envelope(sinal, *b_org)
-_, env_beep = bp_envelope(sinal, *b_beep)
+print(f"\n  Atrator: {N_TRAJ} pontos")
+print(f"  τ = {TAU * (1/200)*1000:.0f} ms")
+print(f"  Amplitude: [{x_traj.min():.3f}, {x_traj.max():.3f}]")
 
-# normalizar cada envelope ao seu próprio máximo
-env_fm   = env_fm   / (env_fm.max()   + 1e-10)
-env_org  = env_org  / (env_org.max()  + 1e-10)
-env_beep = env_beep / (env_beep.max() + 1e-10)
-
-# subamostrar para visualização (200 Hz → ~1650 pontos)
-SUBSAMPLE = FS // 200
-x_traj = env_fm[::SUBSAMPLE]
-y_traj = env_org[::SUBSAMPLE]
-z_traj = env_beep[::SUBSAMPLE]
-t_traj = t_full[::SUBSAMPLE]
-N_TRAJ = len(t_traj)
-
-print(f"  Trajetória: {N_TRAJ} pontos ({200} Hz efetivo)")
-
-# ── mapear cores ao longo do tempo (P→S→T) ───────────────────
+# ── cores por fase ────────────────────────────────────────────
 T_P, T_S, T_T = 4.10, 5.50, 7.10
-COR_P = np.array([0.0,  1.0,  0.533])   # #00FF88
-COR_S = np.array([1.0,  0.722, 0.0  ])  # #FFB800
-COR_T = np.array([1.0,  0.267, 0.400])  # #FF4466
-COR_0 = np.array([0.2,  0.2,  0.3  ])   # fase inicial — azul escuro
+COR_P = np.array([0.0,  1.0,  0.533])
+COR_S = np.array([1.0,  0.722, 0.0  ])
+COR_T = np.array([1.0,  0.267, 0.400])
+COR_0 = np.array([0.15, 0.15, 0.35 ])
 
 def cor_fase(t):
     if t < T_P:
-        r = np.clip((t / T_P), 0, 1)
+        r = np.clip(t / T_P, 0, 1)
         return (1-r)*COR_0 + r*COR_P
     elif t < T_S:
         r = (t - T_P) / (T_S - T_P)
@@ -203,40 +182,31 @@ def cor_fase(t):
 
 cores = np.array([cor_fase(t) for t in t_traj])
 
-# ── parâmetros da animação ────────────────────────────────────
-FPS      = 24
-DUR_ANIM = 33    # 0.25× do áudio
-N_FRAMES = int(FPS * DUR_ANIM)
-TAIL     = int(N_TRAJ * 1.0)   # trajetória inteira visível (tênue)
-
-print(f"\n  Animação: {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s")
-
 COR_BG  = '#080810'
 COR_TXT = '#CCCCDD'
 
-# ── imagem estática diagnóstica — 4 ângulos ──────────────────
-print("\n  Gerando imagem estática (4 ângulos)…")
+# ── imagem estática — 4 ângulos ───────────────────────────────
+print("\n  Imagem estática (4 ângulos)…")
 fig_s, axes_s = plt.subplots(1, 4, figsize=(18, 5),
                               subplot_kw={'projection': '3d'})
 fig_s.patch.set_facecolor(COR_BG)
 for ax_s, azim in zip(axes_s, [30, 80, 130, 180]):
     ax_s.set_facecolor(COR_BG)
-    # segmentos coloridos por fase
-    seg_size = max(1, N_TRAJ // 50)
-    for k in range(0, N_TRAJ - seg_size, seg_size):
-        cor = cores[k]
-        ax_s.plot(x_traj[k:k+seg_size+1],
-                  y_traj[k:k+seg_size+1],
-                  z_traj[k:k+seg_size+1],
-                  color=cor, lw=1.0, alpha=0.85)
-    # pontos de dobra
+    seg = max(1, N_TRAJ // 60)
+    for k in range(0, N_TRAJ - seg, seg):
+        ax_s.plot(x_traj[k:k+seg+1],
+                  y_traj[k:k+seg+1],
+                  z_traj[k:k+seg+1],
+                  color=cores[k], lw=1.0, alpha=0.85)
     for t_d, lbl, cor in [(T_P,'P','#00FF88'),(T_S,'S','#FFB800'),(T_T,'T','#FF4466')]:
         idx = np.argmin(np.abs(t_traj - t_d))
-        ax_s.scatter([x_traj[idx]],[y_traj[idx]],[z_traj[idx]],
+        ax_s.scatter([x_traj[idx]], [y_traj[idx]], [z_traj[idx]],
                      c=cor, s=60, zorder=5)
-    ax_s.set_xlabel(f'F_M {F_M:.0f}Hz', color=COR_TXT, fontsize=7)
-    ax_s.set_ylabel(f'F_ORG {F_ORG:.0f}Hz', color=COR_TXT, fontsize=7)
-    ax_s.set_zlabel(f'F_BEEP {F_BEEP:.0f}Hz', color=COR_TXT, fontsize=7)
+        ax_s.text(x_traj[idx], y_traj[idx], z_traj[idx],
+                  f' {lbl}', color=cor, fontsize=8)
+    ax_s.set_xlabel('env(t)', color=COR_TXT, fontsize=7)
+    ax_s.set_ylabel('env(t+τ)', color=COR_TXT, fontsize=7)
+    ax_s.set_zlabel('env(t+2τ)', color=COR_TXT, fontsize=7)
     ax_s.tick_params(colors=COR_TXT, labelsize=5)
     for pane in [ax_s.xaxis.pane, ax_s.yaxis.pane, ax_s.zaxis.pane]:
         pane.fill = False; pane.set_edgecolor('#22223A')
@@ -244,23 +214,28 @@ for ax_s, azim in zip(axes_s, [30, 80, 130, 180]):
     ax_s.set_title(f'azim={azim}°', color=COR_TXT, fontsize=8)
 
 fig_s.suptitle(
-    f'AlphaPhi · Trajetória 3D completa — F_M×F_ORG×F_BEEP\n'
-    f'verde=antes de P · âmbar=P→S · vermelho=S→T · após T',
+    f'AlphaPhi · Atrator do Envelope  τ=250ms\n'
+    f'azul→verde=antes P · verde→âmbar=P→S · âmbar→vermelho=S→T',
     color=COR_TXT, fontsize=9)
 plt.tight_layout()
-fname_s = '/content/alphaphi_quaternio_estatico.png'
+fname_s = '/content/alphaphi_atrator_estatico.png'
 plt.savefig(fname_s, dpi=130, bbox_inches='tight', facecolor=COR_BG)
 plt.close()
-print(f"  → alphaphi_quaternio_estatico.png")
-from IPython.display import Image
+print(f"  → alphaphi_atrator_estatico.png")
 display(Image(fname_s))
 
-# ── animação — ax.cla() a cada frame (3D seguro) ─────────────
+# ── animação ──────────────────────────────────────────────────
+FPS      = 24
+DUR_ANIM = 33
+N_FRAMES = int(FPS * DUR_ANIM)
+
 DOBRAS_3D = [
     (T_P, 'P', '#00FF88'),
     (T_S, 'S', '#FFB800'),
     (T_T, 'T', '#FF4466'),
 ]
+
+print(f"\n  Animação: {N_FRAMES} frames · {FPS}fps · {DUR_ANIM}s")
 
 fig = plt.figure(figsize=(9, 7))
 fig.patch.set_facecolor(COR_BG)
@@ -275,44 +250,42 @@ def animate(i):
 
     # trajetória completa — tênue
     ax.plot(x_traj, y_traj, z_traj,
-            color='#223322', lw=0.5, alpha=0.20)
+            color='#1a2a1a', lw=0.5, alpha=0.30)
 
     # trajetória percorrida — colorida por fase
     if i_now > 1:
-        seg = max(1, i_now // 40)
+        seg = max(1, i_now // 50)
         for k in range(0, i_now - seg, seg):
-            cor = cores[k]
             ax.plot(x_traj[k:k+seg+1],
                     y_traj[k:k+seg+1],
                     z_traj[k:k+seg+1],
-                    color=cor, lw=1.1, alpha=0.88)
+                    color=cores[k], lw=1.0, alpha=0.85)
 
     # ponto atual
     cor_now = cores[min(i_now, len(cores)-1)]
     ax.scatter([x_traj[i_now]], [y_traj[i_now]], [z_traj[i_now]],
-               c=[cor_now], s=35, zorder=5)
+               c=[cor_now], s=30, zorder=5)
 
-    # pontos de dobra surgem quando alcançados
+    # dobras
     for t_d, lbl, cor in DOBRAS_3D:
         if t_atual >= t_d:
             idx = np.argmin(np.abs(t_traj - t_d))
             ax.scatter([x_traj[idx]], [y_traj[idx]], [z_traj[idx]],
-                       c=cor, s=70, zorder=6)
+                       c=cor, s=60, zorder=6)
             ax.text(x_traj[idx], y_traj[idx], z_traj[idx],
                     f' {lbl}', color=cor, fontsize=8)
 
-    ax.set_xlabel(f'F_M {F_M:.0f}Hz', color=COR_TXT, fontsize=7, labelpad=4)
-    ax.set_ylabel(f'F_ORG {F_ORG:.0f}Hz', color=COR_TXT, fontsize=7, labelpad=4)
-    ax.set_zlabel(f'F_BEEP {F_BEEP:.0f}Hz', color=COR_TXT, fontsize=7, labelpad=4)
+    ax.set_xlabel('env(t)', color=COR_TXT, fontsize=7, labelpad=3)
+    ax.set_ylabel('env(t+τ)', color=COR_TXT, fontsize=7, labelpad=3)
+    ax.set_zlabel('env(t+2τ)', color=COR_TXT, fontsize=7, labelpad=3)
     ax.tick_params(colors=COR_TXT, labelsize=5)
     for pane in [ax.xaxis.pane, ax.yaxis.pane, ax.zaxis.pane]:
         pane.fill = False; pane.set_edgecolor('#22223A')
 
-    az = 30 + (i / N_FRAMES) * 120
-    ax.view_init(elev=25, azim=az)
+    ax.view_init(elev=25, azim=30 + (i / N_FRAMES) * 120)
     ax.set_title(
-        f'AlphaPhi · Espaço de Fase  ·  t={t_atual:.2f}s / {dur:.2f}s\n'
-        f'F_M × F_ORG × F_BEEP  —  bandas φ',
+        f'AlphaPhi · Atrator  t={t_atual:.2f}s/{dur:.2f}s  τ=250ms\n'
+        f'env(t) × env(t+τ) × env(t+2τ)',
         color=COR_TXT, fontsize=8, pad=8)
     return []
 
@@ -321,24 +294,21 @@ anim = animation.FuncAnimation(
     interval=1000/FPS, blit=False
 )
 
-# ── salvar ────────────────────────────────────────────────────
-fname = '/content/alphaphi_quaternio.mp4'
+fname = '/content/alphaphi_atrator.mp4'
 writer = animation.FFMpegWriter(
     fps=FPS, bitrate=3000,
     extra_args=['-vcodec', 'libx264', '-pix_fmt', 'yuv420p']
 )
-print("\n  Renderizando…")
+print("  Renderizando…")
 anim.save(fname, writer=writer, dpi=120,
           savefig_kwargs={'facecolor': COR_BG})
 plt.close()
-print(f"  → alphaphi_quaternio.mp4  ({DUR_ANIM}s · {N_FRAMES} frames)")
+print(f"  → alphaphi_atrator.mp4  ({DUR_ANIM}s · {N_FRAMES} frames)")
 
 display(Video(fname, embed=True, width=800))
 
 print(f"\n{'='*60}")
-print(f"  Trajetória 3D — espaço de fase")
-print(f"  x = F_M  {F_M:.1f}Hz  (banda φ [{b_fm[0]:.0f}–{b_fm[1]:.0f}])")
-print(f"  y = F_ORG {F_ORG:.0f}Hz  (banda φ [{b_org[0]:.0f}–{b_org[1]:.0f}])")
-print(f"  z = F_BEEP {F_BEEP:.0f}Hz (banda φ [{b_beep[0]:.0f}–{b_beep[1]:.0f}])")
+print(f"  Atrator do envelope — embedding de atraso τ=250ms")
 print(f"  P={T_P}s  S={T_S}s  T={T_T}s")
+print(f"  β_max={beta_f.max():.4f}  φ³={PHI**3:.4f}")
 print(f"{'='*60}")
