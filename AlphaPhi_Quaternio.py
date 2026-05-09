@@ -214,80 +214,107 @@ print(f"\n  Animação: {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s")
 COR_BG  = '#080810'
 COR_TXT = '#CCCCDD'
 
-# ── figura 3D ─────────────────────────────────────────────────
-fig = plt.figure(figsize=(10, 8))
-fig.patch.set_facecolor(COR_BG)
-ax  = fig.add_subplot(111, projection='3d')
-ax.set_facecolor(COR_BG)
+# ── imagem estática diagnóstica — 4 ângulos ──────────────────
+print("\n  Gerando imagem estática (4 ângulos)…")
+fig_s, axes_s = plt.subplots(1, 4, figsize=(18, 5),
+                              subplot_kw={'projection': '3d'})
+fig_s.patch.set_facecolor(COR_BG)
+for ax_s, azim in zip(axes_s, [30, 80, 130, 180]):
+    ax_s.set_facecolor(COR_BG)
+    # segmentos coloridos por fase
+    seg_size = max(1, N_TRAJ // 50)
+    for k in range(0, N_TRAJ - seg_size, seg_size):
+        cor = cores[k]
+        ax_s.plot(x_traj[k:k+seg_size+1],
+                  y_traj[k:k+seg_size+1],
+                  z_traj[k:k+seg_size+1],
+                  color=cor, lw=1.0, alpha=0.85)
+    # pontos de dobra
+    for t_d, lbl, cor in [(T_P,'P','#00FF88'),(T_S,'S','#FFB800'),(T_T,'T','#FF4466')]:
+        idx = np.argmin(np.abs(t_traj - t_d))
+        ax_s.scatter([x_traj[idx]],[y_traj[idx]],[z_traj[idx]],
+                     c=cor, s=60, zorder=5)
+    ax_s.set_xlabel(f'F_M {F_M:.0f}Hz', color=COR_TXT, fontsize=7)
+    ax_s.set_ylabel(f'F_ORG {F_ORG:.0f}Hz', color=COR_TXT, fontsize=7)
+    ax_s.set_zlabel(f'F_BEEP {F_BEEP:.0f}Hz', color=COR_TXT, fontsize=7)
+    ax_s.tick_params(colors=COR_TXT, labelsize=5)
+    for pane in [ax_s.xaxis.pane, ax_s.yaxis.pane, ax_s.zaxis.pane]:
+        pane.fill = False; pane.set_edgecolor('#22223A')
+    ax_s.view_init(elev=25, azim=azim)
+    ax_s.set_title(f'azim={azim}°', color=COR_TXT, fontsize=8)
 
-# trajetória completa — tênue (o "potencial")
-ax.plot(x_traj, y_traj, z_traj,
-        color='#334433', lw=0.5, alpha=0.25, zorder=1)
+fig_s.suptitle(
+    f'AlphaPhi · Trajetória 3D completa — F_M×F_ORG×F_BEEP\n'
+    f'verde=antes de P · âmbar=P→S · vermelho=S→T · após T',
+    color=COR_TXT, fontsize=9)
+plt.tight_layout()
+fname_s = '/content/alphaphi_quaternio_estatico.png'
+plt.savefig(fname_s, dpi=130, bbox_inches='tight', facecolor=COR_BG)
+plt.close()
+print(f"  → alphaphi_quaternio_estatico.png")
+from IPython.display import Image
+display(Image(fname_s))
 
-# linha ativa (atualizada a cada frame)
-_line, = ax.plot([], [], [], lw=1.2, alpha=0.90, zorder=3)
-_dot,  = ax.plot([], [], [], 'o', ms=5, zorder=4)
-
-# marcadores de dobra
+# ── animação — ax.cla() a cada frame (3D seguro) ─────────────
 DOBRAS_3D = [
     (T_P, 'P', '#00FF88'),
     (T_S, 'S', '#FFB800'),
     (T_T, 'T', '#FF4466'),
 ]
-_dobra_dots = []
-for t_d, lbl, cor in DOBRAS_3D:
-    idx = np.argmin(np.abs(t_traj - t_d))
-    xd, yd, zd = x_traj[idx], y_traj[idx], z_traj[idx]
-    dot, = ax.plot([xd], [yd], [zd], 'o', ms=8,
-                   color=cor, alpha=0.0, zorder=5)
-    _dobra_dots.append((t_d, dot, xd, yd, zd, lbl, cor))
 
-# estética
-ax.set_xlabel(f'F_M {F_M:.0f}Hz', color=COR_TXT, fontsize=8, labelpad=6)
-ax.set_ylabel(f'F_ORG {F_ORG:.0f}Hz', color=COR_TXT, fontsize=8, labelpad=6)
-ax.set_zlabel(f'F_BEEP {F_BEEP:.0f}Hz', color=COR_TXT, fontsize=8, labelpad=6)
-ax.tick_params(colors=COR_TXT, labelsize=6)
-for pane in [ax.xaxis.pane, ax.yaxis.pane, ax.zaxis.pane]:
-    pane.fill = False
-    pane.set_edgecolor('#22223A')
-ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.set_zlim(0, 1)
-
-_title = ax.set_title('', color=COR_TXT, fontsize=9, pad=10)
+fig = plt.figure(figsize=(9, 7))
+fig.patch.set_facecolor(COR_BG)
 
 def animate(i):
+    fig.clear()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.set_facecolor(COR_BG)
+
     t_atual = dur * (i + 1) / N_FRAMES
-    i_now   = min(int(t_atual / (1/200)), N_TRAJ - 1)
+    i_now   = min(int(t_atual * 200), N_TRAJ - 1)
+
+    # trajetória completa — tênue
+    ax.plot(x_traj, y_traj, z_traj,
+            color='#223322', lw=0.5, alpha=0.20)
 
     # trajetória percorrida — colorida por fase
     if i_now > 1:
-        xs = x_traj[:i_now]
-        ys = y_traj[:i_now]
-        zs = z_traj[:i_now]
-        # cor da porção mais recente (última cor da fase)
-        cor_atual = cores[max(0, i_now-1)]
-        _line.set_data_3d(xs, ys, zs)
-        _line.set_color(cor_atual)
+        seg = max(1, i_now // 40)
+        for k in range(0, i_now - seg, seg):
+            cor = cores[k]
+            ax.plot(x_traj[k:k+seg+1],
+                    y_traj[k:k+seg+1],
+                    z_traj[k:k+seg+1],
+                    color=cor, lw=1.1, alpha=0.88)
 
     # ponto atual
-    if i_now >= 0:
-        cor_atual = cores[min(i_now, len(cores)-1)]
-        _dot.set_data_3d([x_traj[i_now]], [y_traj[i_now]], [z_traj[i_now]])
-        _dot.set_color(cor_atual)
+    cor_now = cores[min(i_now, len(cores)-1)]
+    ax.scatter([x_traj[i_now]], [y_traj[i_now]], [z_traj[i_now]],
+               c=[cor_now], s=35, zorder=5)
 
     # pontos de dobra surgem quando alcançados
-    for t_d, dot, xd, yd, zd, lbl, cor in _dobra_dots:
+    for t_d, lbl, cor in DOBRAS_3D:
         if t_atual >= t_d:
-            dot.set_alpha(0.90)
+            idx = np.argmin(np.abs(t_traj - t_d))
+            ax.scatter([x_traj[idx]], [y_traj[idx]], [z_traj[idx]],
+                       c=cor, s=70, zorder=6)
+            ax.text(x_traj[idx], y_traj[idx], z_traj[idx],
+                    f' {lbl}', color=cor, fontsize=8)
 
-    # rotação lenta — revela a forma 3D progressivamente
-    az = 30 + (i / N_FRAMES) * 120   # 30° → 150°
+    ax.set_xlabel(f'F_M {F_M:.0f}Hz', color=COR_TXT, fontsize=7, labelpad=4)
+    ax.set_ylabel(f'F_ORG {F_ORG:.0f}Hz', color=COR_TXT, fontsize=7, labelpad=4)
+    ax.set_zlabel(f'F_BEEP {F_BEEP:.0f}Hz', color=COR_TXT, fontsize=7, labelpad=4)
+    ax.tick_params(colors=COR_TXT, labelsize=5)
+    for pane in [ax.xaxis.pane, ax.yaxis.pane, ax.zaxis.pane]:
+        pane.fill = False; pane.set_edgecolor('#22223A')
+
+    az = 30 + (i / N_FRAMES) * 120
     ax.view_init(elev=25, azim=az)
-
-    _title.set_text(
-        f'AlphaPhi · Espaço de Fase  ·  t = {t_atual:.2f}s / {dur:.2f}s\n'
-        f'F_M × F_ORG × F_BEEP  —  bandas φ do eco'
-    )
-    return [_line, _dot, _title] + [d[1] for d in _dobra_dots]
+    ax.set_title(
+        f'AlphaPhi · Espaço de Fase  ·  t={t_atual:.2f}s / {dur:.2f}s\n'
+        f'F_M × F_ORG × F_BEEP  —  bandas φ',
+        color=COR_TXT, fontsize=8, pad=8)
+    return []
 
 anim = animation.FuncAnimation(
     fig, animate, frames=N_FRAMES,
