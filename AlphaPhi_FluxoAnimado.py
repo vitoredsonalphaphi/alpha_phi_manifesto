@@ -1,14 +1,11 @@
 """
 AlphaPhi_FluxoAnimado.py
-Animação — O Sinal em Movimento
+Osciloscópio com Persistência — Frequência em Movimento
 
-O sinal completo existe desde o primeiro frame — tênue.
-O presente percorre da esquerda para a direita.
-A parte percorrida ilumina ao nível do gráfico verde baseline.
-O futuro existe, mas espera.
-
-Nenhuma câmera. Nenhum plotter. O sinal está lá.
-O que se move é o tempo dentro dele.
+O sinal chega na borda direita. O passado recede para a esquerda.
+O presente é sempre o ponto mais brilhante.
+Nenhuma imagem estática. Nenhuma câmera.
+A frequência produz a imagem enquanto se move.
 
 © Vitor Edson Delavi · Florianópolis · 2026
 """
@@ -35,11 +32,10 @@ N_CICLOS   = 20
 FADE       = int(0.15 * FS)
 
 print("=" * 60)
-print("  AlphaPhi · Fluxo Animado")
-print("  O sinal em movimento — cursor percorre o gráfico verde")
+print("  AlphaPhi · Frequência em Movimento")
+print("  Osciloscópio com persistência · 880Hz · α*=1/3")
 print("=" * 60)
 
-# ── funções eco originais ─────────────────────────────────────
 def normalizar(s):
     m = np.max(np.abs(s)); return s / m if m > 1e-12 else s
 
@@ -112,10 +108,6 @@ def concatenar(cas):
         out = np.concatenate([out, s[fade_n:]])
     return normalizar(out)
 
-def lowpass(s, fc, fs=FS, order=4):
-    b, a = butter(order, fc/(fs/2), btype='low')
-    return filtfilt(b, a, s)
-
 # ── gerar sinal ───────────────────────────────────────────────
 print("\n  Gerando sinal…")
 t_seg = np.linspace(0, DURACAO, N_SINAL, endpoint=False)
@@ -129,81 +121,95 @@ dur      = len(sinal) / FS
 t_full   = np.arange(len(sinal)) / FS
 print(f"  {dur:.2f}s  β_max={beta_f.max():.4f}  φ³={PHI**3:.4f}")
 
-# ── parâmetros da animação ────────────────────────────────────
+# ── parâmetros ────────────────────────────────────────────────
+WINDOW   = DURACAO    # 1.5s — exatamente 1 segmento do eco
 FPS      = 24
-DUR_ANIM = 33    # 33s = 0.25x do áudio (8.25 ÷ 0.25)
+DUR_ANIM = 33         # 0.25× do áudio
 N_FRAMES = int(FPS * DUR_ANIM)
+N_FADE   = 16         # camadas de persistência
 
 # pontos de dobra
-DOBRAS = [
-    (4.10, 'P  4.1s', '#00FF88'),
-    (5.50, 'S  5.5s', '#FFB800'),
-    (7.10, 'T  7.1s', '#FF4466'),
-]
+DOBRAS = [(4.10, 'P', '#00FF88'), (5.50, 'S', '#FFB800'), (7.10, 'T', '#FF4466')]
 
 COR_BG  = '#0D0D1A'
 COR_TXT = '#CCCCDD'
 COR_GRD = '#22223A'
 
-print(f"\n  {N_FRAMES} frames · {FPS} fps · {DUR_ANIM}s (0.25× áudio)")
-print(f"  Sinal completo visível · cursor percorre 0 → {dur:.2f}s")
+print(f"\n  {N_FRAMES} frames · {FPS}fps · {DUR_ANIM}s")
+print(f"  Janela: {WINDOW:.1f}s · {N_FADE} camadas de persistência")
 
-# ── figura — mesmas dimensões do gráfico verde ────────────────
 fig, ax = plt.subplots(figsize=(14, 4))
 fig.patch.set_facecolor('#080810')
 
-# pré-computar linha de fundo (não muda) ─────────────────────
-# plotada uma vez fora do loop para eficiência
-_bg_line, = ax.plot([], [], color='#00FF88', lw=0.6, alpha=0.18)
-_fg_line, = ax.plot([], [], color='#00FF88', lw=0.6, alpha=0.92)
-_cursor   = ax.axvline(0, color='#FFFFFF', lw=0.9, alpha=0.45)
-_vlines   = [ax.axvline(0, color=c, lw=1.2, ls='--', alpha=0.0)
-             for _, _, c in DOBRAS]
-
-ax.set_facecolor(COR_BG)
-ax.set_xlim(0, dur)
-ax.set_ylim(-1.05, 1.05)
-for sp in ax.spines.values(): sp.set_color(COR_GRD)
-ax.tick_params(colors=COR_TXT, labelsize=8)
-ax.set_xlabel('Tempo (s)', color=COR_TXT, fontsize=9)
-ax.set_ylabel('Amplitude', color=COR_TXT, fontsize=9)
-
-# sinal completo — sempre visível, tênue (o "potencial")
-_bg_line.set_data(t_full, sinal)
-
-_title = ax.set_title('', color=COR_TXT, fontsize=9)
-
 def animate(i):
-    t_atual = dur * (i + 1) / N_FRAMES
-    i_now   = min(int(t_atual * FS), len(sinal))
+    ax.cla()
+    ax.set_facecolor(COR_BG)
+    ax.set_ylim(-1.05, 1.05)
+    ax.set_xlim(0, WINDOW)
+    for sp in ax.spines.values(): sp.set_color(COR_GRD)
+    ax.tick_params(colors=COR_TXT, labelsize=7)
 
-    # porção percorrida — plena luminosidade (= gráfico verde)
-    _fg_line.set_data(t_full[:i_now], sinal[:i_now])
+    t_now   = dur * (i + 1) / N_FRAMES
+    t_start = max(0.0, t_now - WINDOW)
+    i0      = int(t_start * FS)
+    i1      = min(len(sinal), int(t_now * FS))
+    n       = i1 - i0
 
-    # cursor — posição atual
-    _cursor.set_xdata([t_atual, t_atual])
+    if n < 2:
+        return []
 
-    # pontos de dobra — surgem quando o cursor os alcança
-    for k, (t_d, label, cor) in enumerate(DOBRAS):
-        if t_atual >= t_d:
-            _vlines[k].set_xdata([t_d, t_d])
-            _vlines[k].set_alpha(0.65)
-        # label
-        # (texto via set_title para simplicidade)
+    seg    = sinal[i0:i1]
+    # x = 0 (mais antigo visível) → WINDOW (presente)
+    t_disp = np.linspace(0, t_now - t_start, n)
 
-    _title.set_text(
-        f'AlphaPhi · {F_BEEP:.0f}Hz · α*=1/3 · '
-        f't = {t_atual:.2f}s / {dur:.2f}s'
+    # persistência em camadas — do mais antigo (esmaecido) ao mais novo (vivo)
+    layer  = max(1, n // N_FADE)
+    for k in range(N_FADE):
+        i_s = k * layer
+        i_e = min(n, (k + 1) * layer + 1)
+        if i_s >= n:
+            break
+        progress = (k + 1) / N_FADE        # 0 → 1 (antigo → novo)
+        alpha = 0.06 + 0.88 * progress
+        lw    = 0.30 + 0.30 * progress
+        ax.plot(t_disp[i_s:i_e], seg[i_s:i_e],
+                color='#00FF88', lw=lw, alpha=alpha)
+
+    # pontos de dobra — surgem como marcadores de texto quando o presente os alcança
+    for t_d, lbl, cor in DOBRAS:
+        if t_start <= t_d <= t_now:
+            t_rel = t_d - t_start          # posição na janela visível
+            ax.axvline(t_rel, color=cor, lw=0.8, ls=':', alpha=0.55)
+            ax.text(t_rel + 0.02, 0.88, lbl,
+                    color=cor, fontsize=9, va='top', ha='left',
+                    transform=ax.get_xaxis_transform())
+
+    ax.set_ylabel('Amplitude', color=COR_TXT, fontsize=8)
+    ax.set_xlabel('← passado · · · presente →', color=COR_TXT, fontsize=8)
+
+    # fase do sinal
+    if t_now < 4.10:
+        fase = 'digital compacto'
+    elif t_now < 5.50:
+        fase = 'P — onset'
+    elif t_now < 7.10:
+        fase = 'S — encorpando'
+    else:
+        fase = 'T — campo'
+
+    ax.set_title(
+        f'AlphaPhi · {F_BEEP:.0f}Hz · α*=1/3 · {fase}  '
+        f'[t={t_now:.2f}s]',
+        color=COR_TXT, fontsize=9
     )
-    return [_fg_line, _cursor, _title] + _vlines
+    return []
 
 anim = animation.FuncAnimation(
     fig, animate, frames=N_FRAMES,
-    interval=1000/FPS, blit=True
+    interval=1000/FPS, blit=False
 )
 
-# ── salvar ────────────────────────────────────────────────────
-fname = '/content/alphaphi_fluxo.mp4'
+fname  = '/content/alphaphi_fluxo.mp4'
 writer = animation.FFMpegWriter(
     fps=FPS, bitrate=3000,
     extra_args=['-vcodec', 'libx264', '-pix_fmt', 'yuv420p']
@@ -217,7 +223,7 @@ print(f"  → alphaphi_fluxo.mp4  ({DUR_ANIM}s · {N_FRAMES} frames)")
 display(Video(fname, embed=True, width=960))
 
 print(f"\n{'='*60}")
-print(f"  Sinal completo visível desde o frame 1 — tênue")
-print(f"  Cursor percorre: 0 → {dur:.2f}s em {DUR_ANIM}s (0.25×)")
-print(f"  P={DOBRAS[0][0]}s  S={DOBRAS[1][0]}s  T={DOBRAS[2][0]}s")
+print(f"  Frequência em movimento — osciloscópio com persistência")
+print(f"  Janela: {WINDOW:.1f}s · passado esmaece · presente vivo")
+print(f"  P=4.1s · S=5.5s · T=7.1s")
 print(f"{'='*60}")
