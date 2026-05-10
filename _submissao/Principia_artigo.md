@@ -255,7 +255,7 @@ Depende dos dados.
 **Posição no argumento do artigo:**
 Esta é a virada conclusiva: a percepção holística não precisa de defesa
 filosófica porque já foi validada pelo critério científico. A tese do
-Manifesto é indução empírica, não premissa ideológica.
+Manifesto é premissa ideológica, e indução empírica...
 A ciência passou quatrocentos anos tentando remover o observador do campo.
 O Manifesto documenta que, em certos casos, o observador é o campo.
 
