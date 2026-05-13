@@ -274,70 +274,55 @@ sinal_t4, _ = cascata_eq_adaptativa(sinal_completo, beta_conv_full, BINS_COMPLET
 sinal_t4 = normalizar(sinal_t4)
 print("T4 adaptativo aplicado ao violão completo.")
 
+# ── Mistura wet/dry — campo + violão original ─────────────────────────────────
+# Analogia ao α=1/3 do ECO BEEP 880: quanto de campo o sinal suporta.
+# wet=1.0 → campo puro (distorce timbre)
+# wet=0.0 → original puro (sem campo)
+# wet=1/3 → proporção original do projeto
+# wet=1/φ → proporção φ
+
+def mix(campo, original, wet):
+    """Mistura campo harmônico com sinal original."""
+    m = wet * campo + (1.0 - wet) * original
+    return normalizar(m)
+
+WET_VALS = [1.0/3.0, 1.0/PHI, 0.5]   # 0.333, 0.618, 0.500
+misturas  = {w: mix(sinal_t4, sinal_completo, w) for w in WET_VALS}
+
 # ── Métricas ──────────────────────────────────────────────────────────────────
-print(f"\n{'='*58}")
-print(f"{'Sinal':<32} {'AutoCorr':>9} {'EntrEsp':>9} {'Bits':>6}")
-print("-"*58)
+print(f"\n{'='*62}")
+print(f"{'Sinal':<36} {'AutoCorr':>9} {'EntrEsp':>9} {'Bits':>6}")
+print("-"*62)
 for nome, sig in [
-    ("Violão original",          sinal_completo),
-    ("T3 — campo global",        sinal_t3),
-    ("T4 — agente adaptativo",   sinal_t4),
+    ("Violão original",                    sinal_completo),
+    ("T4 campo puro (wet=1.0)",            sinal_t4),
+    (f"T4 wet=1/3  ({1/3:.3f})",           misturas[1.0/3.0]),
+    (f"T4 wet=1/φ  ({1/PHI:.3f})",         misturas[1.0/PHI]),
+    (f"T4 wet=0.5  (0.500)",               misturas[0.5]),
 ]:
-    print(f"{nome:<32} {autocorr(sig):>9.4f} {entr_esp(sig):>9.4f} {bits_ef(sig):>6.4f}")
-print(f"{'Ref. ponto dobra 5 (beep)':<32} {'1.0000':>9} {'0.0601':>9} {'7.8931':>6}  ← alvo")
+    print(f"{nome:<36} {autocorr(sig):>9.4f} {entr_esp(sig):>9.4f} {bits_ef(sig):>6.4f}")
+print(f"{'Ref. ponto dobra 5 (beep)':<36} {'1.0000':>9} {'0.0601':>9} {'7.8931':>6}  ← alvo")
 
-# ── Salvar ────────────────────────────────────────────────────────────────────
-wavfile.write("violao_original.wav",  rate, (sinal_completo * 32767).astype(np.int16))
-wavfile.write("violao_t3_global.wav", rate, (sinal_t3       * 32767).astype(np.int16))
-wavfile.write("violao_t4_adapt.wav",  rate, (sinal_t4       * 32767).astype(np.int16))
-print("WAVs salvos: violao_original.wav  violao_t3_global.wav  violao_t4_adapt.wav")
+# ── Players ───────────────────────────────────────────────────────────────────
+N_PLAY = min(int(40 * rate), len(sinal_completo))
 
-# ── Players — exibe direto do array (evita falha de leitura de arquivo grande) ─
-N_PLAY = min(int(40 * rate), len(sinal_completo))   # primeiros 40s para o player
-
-print(f"\n{'='*58}")
+print(f"\n{'='*62}")
 print("▶ 1. VIOLÃO ORIGINAL (40s)")
 display(Audio(sinal_completo[:N_PLAY], rate=rate))
 
-print("▶ 2. T3 — campo global informado (40s)")
-display(Audio(sinal_t3[:N_PLAY], rate=rate))
-
-print("▶ 3. T4 — agente adaptativo (40s)")
+print("▶ 2. T4 campo puro (wet=1.0) — referência distorcida")
 display(Audio(sinal_t4[:N_PLAY], rate=rate))
 
-# ── Gráfico ───────────────────────────────────────────────────────────────────
-fig, axes = plt.subplots(1, 3, figsize=(16, 4))
+print(f"▶ 3. T4 wet=1/3 ({1/3:.3f}) — proporção α original")
+display(Audio(misturas[1.0/3.0][:N_PLAY], rate=rate))
 
-# Convergência β
-ciclos_t3 = range(1, len(hist_t3)+1)
-ciclos_t4 = range(1, len(hist_conv)+1)
-axes[0].plot(ciclos_t3, [h.max() for h in hist_t3],   'o--', color='#00aaff', lw=1.5,
-             label=f'T3 global (ciclo {ciclo_t3})')
-axes[0].plot(ciclos_t4, [h.max() for h in hist_conv],  'o-',  color='#00cc66', lw=1.5,
-             label=f'T4 adaptativo (ciclo {ciclo_conv})')
-axes[0].axhline(PHI**3, color='gold', lw=1.5, ls=':', label=f'φ³={PHI**3:.4f}')
-axes[0].set_title(f"Convergência β — violão ({N_CONV_S}s)")
-axes[0].set_xlabel("Ciclo"); axes[0].set_ylabel("β máximo")
-axes[0].legend(fontsize=8); axes[0].grid(alpha=0.3)
+print(f"▶ 4. T4 wet=1/φ ({1/PHI:.3f}) — proporção φ")
+display(Audio(misturas[1.0/PHI][:N_PLAY], rate=rate))
 
-# α_banda do violão
-axes[1].bar(range(len(alpha_conv)), alpha_conv, color='#00cc66', alpha=0.7)
-axes[1].set_title("α_banda — acoplamento derivado do violão")
-axes[1].set_xlabel("Banda φ"); axes[1].set_ylabel("α_banda"); axes[1].grid(alpha=0.2)
-
-# Forma de onda comparada
-t = np.linspace(0, len(sinal_completo)/rate, len(sinal_completo))
-axes[2].plot(t, sinal_completo, color='gray',    lw=0.3, alpha=0.6, label='Original')
-axes[2].plot(t, sinal_t4,       color='#00cc66', lw=0.3, alpha=0.8, label='T4 adaptativo')
-axes[2].set_title("Forma de onda — original vs T4")
-axes[2].set_xlabel("s"); axes[2].legend(fontsize=8); axes[2].grid(alpha=0.2)
-
-plt.tight_layout()
-plt.savefig("teste4b_violao.png", dpi=120, bbox_inches='tight')
-plt.show()
+print(f"▶ 5. T4 wet=0.5 (0.500) — meio a meio")
+display(Audio(misturas[0.5][:N_PLAY], rate=rate))
 
 print("\nOBSERVE:")
-print("  1. O violão T4 tem campo harmônico desde o início?")
-print("  2. T4 soa diferente de T3?")
-print("  3. A identidade do violão (timbre, harmônicos) foi preservada?")
-print(f"  4. O agente convergiu no ciclo {ciclo_conv}/{n_max} — a parada antecipada funcionou?")
+print("  Em qual wet o violão soa com campo harmônico mas sem distorção?")
+print("  Em qual wet o timbre do violão está mais preservado?")
+print("  O campo é perceptível mesmo em wet=1/3?")
