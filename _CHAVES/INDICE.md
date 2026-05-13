@@ -57,5 +57,23 @@
 
 ---
 
+## CHAVE 07 — Isomorfismo entre Coerência Cotidiana e Coerência Espectral
+**Arquivo:** `_CHAVES/07_Isomorfismo_Coerencia_Cotidiana_Espectral.md`  
+**Assunto:** Correspondência estrutural entre coerência em sistemas cotidianos e coerência espectral mensurável  
+**Temas:** Isomorfismo · Atrator φ³ · Fluxo · EEG · Aprendizado motor · Terceira estrutura · Coh_mem  
+**Data:** 13/05/2026  
+**Status:** ✓ Commitado
+
+---
+
+## GLOSSÁRIO — Referência Terminológica
+**Arquivo:** `_CHAVES/GLOSSARIO.md`  
+**Assunto:** Dicionário de termos técnicos, filosóficos e científicos do Manifesto AlphaPhi  
+**Temas:** Todos os domínios — física · biologia · computação · filosofia · AlphaPhi-específico  
+**Data:** 13/05/2026  
+**Status:** ✓ Commitado — expansão contínua
+
+---
+
 *Florianópolis · 2026 · Vitor Edson Delavi*  
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
