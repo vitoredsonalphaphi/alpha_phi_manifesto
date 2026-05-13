@@ -290,17 +290,20 @@ print(f"{'Ref. ponto dobra 5 (beep)':<32} {'1.0000':>9} {'0.0601':>9} {'7.8931':
 wavfile.write("violao_original.wav",  rate, (sinal_completo * 32767).astype(np.int16))
 wavfile.write("violao_t3_global.wav", rate, (sinal_t3       * 32767).astype(np.int16))
 wavfile.write("violao_t4_adapt.wav",  rate, (sinal_t4       * 32767).astype(np.int16))
+print("WAVs salvos: violao_original.wav  violao_t3_global.wav  violao_t4_adapt.wav")
 
-# ── Players ───────────────────────────────────────────────────────────────────
+# ── Players — exibe direto do array (evita falha de leitura de arquivo grande) ─
+N_PLAY = min(int(40 * rate), len(sinal_completo))   # primeiros 40s para o player
+
 print(f"\n{'='*58}")
-print("▶ 1. VIOLÃO ORIGINAL")
-display(Audio("violao_original.wav", rate=rate))
+print("▶ 1. VIOLÃO ORIGINAL (40s)")
+display(Audio(sinal_completo[:N_PLAY], rate=rate))
 
-print("▶ 2. T3 — campo global informado")
-display(Audio("violao_t3_global.wav", rate=rate))
+print("▶ 2. T3 — campo global informado (40s)")
+display(Audio(sinal_t3[:N_PLAY], rate=rate))
 
-print("▶ 3. T4 — agente adaptativo (obs. 2ª ordem)")
-display(Audio("violao_t4_adapt.wav", rate=rate))
+print("▶ 3. T4 — agente adaptativo (40s)")
+display(Audio(sinal_t4[:N_PLAY], rate=rate))
 
 # ── Gráfico ───────────────────────────────────────────────────────────────────
 fig, axes = plt.subplots(1, 3, figsize=(16, 4))
