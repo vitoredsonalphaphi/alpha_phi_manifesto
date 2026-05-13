@@ -93,5 +93,15 @@
 
 ---
 
+## CHAVE 09 — O Agente como Observador Adaptativo
+**Arquivo:** `_CHAVES/09_Agente_Observador_Adaptativo.md`  
+**Assunto:** Co-ressonância entre sinal e campo — maleabilidade do método universal  
+**Temas:** Observação de 2ª ordem · Co-ressonância · Parâmetros adaptativos · ECO BEEP 880 como prova · Substrato específico · Método universal  
+**Data:** 13/05/2026  
+**Origem:** Testes de extensão do campo harmônico em áudio real (voz, violão)  
+**Status:** ⚗ Desenvolvimento ativo — surgiu dos testes de extensão do campo harmônico
+
+---
+
 *Florianópolis · 2026 · Vitor Edson Delavi*  
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
