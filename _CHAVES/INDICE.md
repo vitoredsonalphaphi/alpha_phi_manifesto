@@ -9,7 +9,7 @@
 **Assunto:** Mapeamento de áreas acadêmicas — UFSC e UDESC  
 **Temas:** Principia · DAC · ILHA · CEART · PPGMUS  
 **Data:** 13/05/2026  
-**Status:** Commitado
+**Status:** ✓ Commitado
 
 ---
 
@@ -17,7 +17,7 @@
 **Arquivo:** *(a adicionar)*  
 **Assunto:** Registro de direitos autorais · Biblioteca Nacional · INPI  
 **Temas:** Anterioridade · GitHub SHA-1 · Ofício técnico  
-**Status:** Em construção
+**Status:** ⏳ Em construção
 
 ---
 
@@ -25,23 +25,26 @@
 **Arquivo:** `capacidade_informacional_results.json`  
 **Assunto:** Medições honestas de capacidade informacional por etapa  
 **Temas:** Bits efetivos · Entropia espectral · Autocorrelação · β→φ³  
-**Status:** Commitado
+**Data:** 13/05/2026  
+**Status:** ✓ Commitado
 
 ---
 
 ## CHAVE 04 — Contexto Histórico de Supressão
-**Arquivo:** *(a adicionar)*  
+**Arquivo:** `_CHAVES/04_Contexto_Historico_Supressao.md`  
 **Assunto:** Casos documentados de gaslighting e assédio institucional científico  
-**Temas:** Franklin · Tesla · Semmelweis · Cruz e Sousa · Contexto local  
-**Status:** Pendente
+**Temas:** Franklin · Tesla · Semmelweis · Cruz e Sousa · Machado de Assis  
+**Data:** 13/05/2026  
+**Status:** ✓ Commitado
 
 ---
 
 ## CHAVE 05 — Campo Harmônico e Produção Musical
-**Arquivo:** *(a adicionar)*  
-**Assunto:** Vinil × Digital × Campo φ — hipótese de recuperação do "peso"  
-**Temas:** PPGMUS · Experimento duplo-cego · Violão  
-**Status:** Pendente — aguarda gravação
+**Arquivo:** `_CHAVES/05_Campo_Harmonico_Producao_Musical.md`  
+**Assunto:** Vinil × Digital × Campo φ — ergonomia, peso e terceira categoria  
+**Temas:** Harmônicos φ · Cóclea · Autocorrelação · PPGMUS · Experimento duplo-cego · Violão  
+**Data:** 13/05/2026  
+**Status:** ✓ Commitado — aguarda gravação de violão para experimento
 
 ---
 
@@ -49,7 +52,8 @@
 **Arquivo:** `pacotes_rede_results.json`  
 **Assunto:** Teste de campo harmônico em pacotes binários  
 **Temas:** BER · SNR · Hipótese data centers  
-**Status:** Resultado honesto — hipótese direta não confirmada
+**Data:** 13/05/2026  
+**Status:** ✓ Commitado — resultado honesto: hipótese direta não confirmada
 
 ---
 
