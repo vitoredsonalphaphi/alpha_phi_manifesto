@@ -75,6 +75,15 @@
 
 ---
 
+## CHAVE 08 — A Beleza como Emissão de Coerência
+**Arquivo:** `_CHAVES/08_Beleza_como_Emissao_de_Coerencia.md`  
+**Assunto:** Pintura, sistema nervoso e a percepção ergonômica da estrutura φ  
+**Temas:** Coerência somática visual · Beleza como ergonomia · Prazer estético · Canal psíquico · Arte como tecnologia de coerência · Vermeer · Da Vinci · Bioeletricidade  
+**Data:** 13/05/2026  
+**Status:** ⚗ Especulação registrada — aguarda desenvolvimento e correlações futuras
+
+---
+
 ## BIBLIOGRAFIA — Obras e Convergências
 **Arquivo:** `_CHAVES/BIBLIOGRAFIA.md`  
 **Assunto:** Lista completa de obras citadas com resumo do ponto de convergência com o AlphaPhi  
