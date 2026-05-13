@@ -75,5 +75,14 @@
 
 ---
 
+## BIBLIOGRAFIA — Obras e Convergências
+**Arquivo:** `_CHAVES/BIBLIOGRAFIA.md`  
+**Assunto:** Lista completa de obras citadas com resumo do ponto de convergência com o AlphaPhi  
+**Temas:** Shannon · Turing · Levin · Floridi · Nickel & Kiela · Hegel · Varela · Cruz e Sousa · SST-2 · e outros  
+**Data:** 13/05/2026 — primeiro contato documentado com Floridi nesta data  
+**Status:** ✓ Commitado — expansão contínua
+
+---
+
 *Florianópolis · 2026 · Vitor Edson Delavi*  
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
