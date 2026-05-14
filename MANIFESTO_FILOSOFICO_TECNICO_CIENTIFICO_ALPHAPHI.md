@@ -152,69 +152,15 @@ global, e foi exatamente neste ponto, que o velho sistema se sentiu ameaçado,
 
 ## Página 2
 
-E foi exatamente neste ponto, por presenciarem a evolução em si, no exemplo
-de um humanismo em prática, que determinado aspectos das culturas contrárias
-à equalização global, buscaram também por suas experiências anteriores,
-ferramentas embasadas em noções de visões quânticas, de maneiras
-experimentais do uso da tecnologia, de associação destas tecnologias, que
-ainda em berço, com noções de radiônica, com noções de radiestezia, de
-estudos espirituais como a apometria coletiva, etc, que significavam, mesmo
-que carentes de comprovações acadêmicas pela sua precoce existência,
-ainda assim, passíveis de "algum" resultado, mesmo que isto representa como
-"colaboração" de certa forma na expressão do que o tempo exerce, diante
-de nosso compromisso essencial que temos, de acompanhar o fluxo daquilo
-que há de vir a ser, e nisto, a justificativa de desmandos, que parecem
-retroativos enquanto noções de entendimentos que se remetem, parece aos
-anos 80, quanto na necessidade de revermos, de buscarmos paradigmas de
-observação, tanto de noções filosóficas, quanto científicas, ou político
-econômicas, de acordo com noções que comunguem de forma mais estreita com
-estes avanços que culturas humanistas jah haviam nos concedido, (e por isso,
-tinham representado certa ameaça ao sistema, ao ponto de, por isso, justificar
+E foi exatamente neste ponto, por presenciarem a evolução em si, no exemplo de um humanismo em prática, que determinado aspectos das culturas contrárias à equalização global, buscaram também por suas experiências anteriores ferramentas embasadas em noções de visões quânticas, de maneiras experimentais do uso da tecnologia, dessas tecnologias que ainda em berço, com noções de radiônica, com noções de radiestesia, de estudos espiritualistas como a apometria coletiva, etc, que significavam mesmo que carentes de comprovações acadêmicas pela sua precoce existência, ainda assim passíveis de algum resultado mesmo que estéril. Justificativas de um momento que experimentamos sobre a exigência que o tempo exerce, diante do nosso compromisso essencial que temos de acompanhar o fluxo daquilo que há de vir a ser.
 
-determinado empenho de grupos experimentais de apometria, quando visavam
-alterar aspectos das linhas de tempos coletivas, na tentativa, de preservar
-circunstâncias psicológicas retroativas, e desta forma, vulneráveis à
-manipulação que havia de costume, contestada pelas reestruturações promovidas
-por conquistas filosóficas, principalmente), isto sem desconsiderar a
-aproximação dos desenvolvimentos tecnológicos sociais, que insistem em nos
-lembrar, do tanto de importância que tem as sensibilidades, as subjetividades
-e suas implicações sobre noções de sentimentos, quais, os próprios métodos
-midiáticos tanto se utilizavam, quando buscaram manter uma subjugação de
-milhares de pessoas, exemplos como tanto conhecida pelo meio cinematográfico,
-quanto do mundo de marketing, e por isso, não dizer, do marketing político.
-Estes, seriam apenas breves pinceladas de tópicos orbitais, com os quais
-trago junto, também às noções de, pessoalmente, promover a reflexão sobre
-a "intenção do vir a ser", da intenção na idéia em si, de toda a obra
-artística, científica ou conceitual, sugerindo que, principalmente na arte,
-a intenção em si mesma, da produção de uma obra, não se refere
-necessariamente à noções de concorrências, ou de valores estabelecidos, sob
-prismas econômicos, unicamente prioritários, e que, esta intenção intrínseca
-do empenho de produzir algo, tem relevância no resultado final, e de como
-este resultado final intervêm com "o meio" propriamente dito, no que se
-refere ao diálogo com aquela parcela subjetiva do mundo, das regiões, das
-pessoas, e como que esta interação subjetiva, avessa ao mercado, do tanto de
-importância, quando também significa grande importância nesta colaboração
-que buscam todos os humanistas, pela sistematização de idéias, de conceitos,
-de emoções, nestes novos tempos, a importância destas subjetividades não
-podem mais ser desconsideradas, e nisto, o que a estética tem estendido a
-níveis da expressão social, nos avanços da arquitetura de cada época, entre
-outras vertentes de expressão cultural, como reflexo de cada desenvolvimento.
-Se alguns aspectos do que consideravam doenças mentais são, sobre outro
-ponto de vista, apenas uma característica da mente humana pedindo melhores
-entendimentos pela compreensão de cada novo entendimento científico que
-surge, quando, cada novo conceito, se refere inevitavelmente, a vários outros
-âmbitos do saber humano, emerge diante disso (de emergência), no mínimo,
-a sugestão de uma atenção quanto as relações propostas, se o que se objetiva,
-é uma compreensão clara e ampla como sugere o momento, ao contrário de
-um entendimento parcial e fragmentado como era até então, hoje se comenta
-sobre conhecimento compartilhado sobre interação subconsciente em tudo,
-reclama pela sua devida importância, nisto que quer ser entendido (como
-intenção de vir a ser) como verdadeiro desenvolvimento, diferente do
-desenvolvimento puramente tecnológico matemático, representando desta forma,
-a evolução, em tudo e nas pessoas, ...a evolução da ressonância entre a
-divina proporção, conforme Da Vinci, e outras concepções da importância
-da beleza como contribuição na estética do próprio olhar, como sugere
-Kandynsky, ou sobre a
+E nisto a justificativa de tanto destes desmandos, que parece retroativos enquanto noções de entendimentos que se remetem parece aos anos 80, quanto na necessidade de revermos, de buscar paradigmas de observação, tanto de noções filosóficas quanto científicas ou políticas econômicas. De acordo com noções que comunguem de forma mais estreita com estes avanços que culturas humanísticas já haviam nos concedido e, por isso, representado certa ameaça ao sistema, ao ponto de, por isso, justificar determinado empenho de grupos experimentais de apometria, quando visaram alterar aspectos de linhas de tempo coletivos, na tentativa de preservar circunstâncias psicológicas retroativas e desta forma vulneráveis à manipulação que havia de costume. Contestada pelas reestruturações promovidas por conquistas filosóficas, principalmente.
+
+Isto sem desconsiderar a aproximação dos desenvolvimentos tecnológicos sociais que insistem em nos lembrar do tanto de importância que tem as sensibilidades. As subjetividades e suas implicações, até sobre noções de sentimentos, quais os próprios métodos mediáticos tanto se utilizavam quando buscaram manter uma subjugação de milhares de pessoas, exemplos como engenharia de emoções, tanto conhecida pelo meio cinematográfico, quanto do mundo de marketing, por que não dizer do marketing político?
+
+Estes seriam apenas breves pinceladas de tópicos orbitais, com os quais trago junto também as noções de pessoalmente promover a reflexão sobre a intenção do vir a ser, da intenção na ideia em si de toda obra artística, científica ou conceitual, sugerindo que principalmente na arte, a intenção em si mesma da produção de uma obra não se refere necessariamente a noções de concorrências ou de valores estabelecidos sob prismas econômicos unicamente prioritários. E que esta intenção intrínseca do empenho de produzir algo tem relevância no resultado final e de como este resultado final intervém com o meio propriamente dito, no que se refere ao diálogo com aquela parcela subjetiva do mundo, das regiões, das pessoas e como esta interação subjetiva ao mercado do lucro pelo lucro também significa grande importância nesta colaboração que buscam todos os humanistas pela sistematização de ideias, de conceitos, de emoções.
+
+Nestes novos tempos, a importância destas subjetividades não podem mais ser desconsideradas. E nisto o que a estética tem como contribuição na estética do próprio olhar, como sugere Kandinsky ou sobre a divina proporção conforme Da Vinci. E outras concepções da importância da beleza que em tudo reclama pela sua devida importância, nisto que quer ser entendido como intenção de vir a ser, como verdadeiro desenvolvimento diferente do desenvolvimento puramente tecnológico matemático. Representando desta forma desenvolvimento em essência. Por evolução. Como diz o filme, a evolução prevalece. A evolução da ressonância entre a beleza da estética em tudo e nas pessoas.
 
 ---
 
