@@ -1,0 +1,394 @@
+# ALPHA PHI — Phi-Dual-Octave: Síntese Completa
+# Vitor Edson Delavi · Florianópolis · 2026
+#
+# QUATRO ELEMENTOS AGREGADOS:
+#
+# 1. TENSÃO DUAL — ascendente e descendente
+#    Frequências positivas vs negativas
+#    α como equilíbrio entre as duas direções
+#
+# 2. φ-SYMMETRIC — divisão recursiva Fibonacci
+#    Cada tensão dividida em bandas φ-proporcionais
+#    16 bandas por tensão = 32 bandas totais
+#
+# 3. OCTAVE CONCESSIONAL — melhor oitava por amostra
+#    O que parece ruído numa oitava tem estrutura em outra
+#    Concessão: não descarta, ressoa em outro nível
+#
+# 4. REGRA DO OCTETO — estabilidade geométrica
+#    As primeiras 8 componentes de cada tensão recebem
+#    peso especial — análogo à camada de valência
+#    Oito frequências fundamentais como âncora de coerência
+#
+# + VISUALIZAÇÃO 3D da assinatura vibracional
+#
+# "O lado esquerdo do gráfico representa introspecção.
+#  O lado direito representa expressão de campo."
+# — Vitor Edson Delavi · 2026
+
+!pip install sentence-transformers datasets -q
+
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import time
+from sentence_transformers import SentenceTransformer
+from datasets import load_dataset
+from scipy.stats import ttest_ind
+
+PHI   = (1 + np.sqrt(5)) / 2
+ALPHA = 1 / 137.035999084
+OCTETO = 8  # camada de valência — 8 componentes fundamentais
+
+print(f"phi    = {PHI:.10f}")
+print(f"alpha  = {ALPHA:.10f}")
+print(f"octeto = {OCTETO}  (camada de valência)")
+print("=" * 65)
+print("ALPHA PHI — Phi-Dual-Octave: Síntese Completa")
+print("Tensão Dual + φ-Recursive + Octave Concessional + Octeto")
+print("=" * 65)
+
+# ── Funções Base ──────────────────────────────────────────────────────────
+def gerar_bandas_phi(n, n_niveis=3):
+    bandas = []
+    def dividir(ini, fim, nivel):
+        if nivel == 0 or fim - ini < 2:
+            bandas.append((ini, fim))
+            return
+        meio = ini + int((fim - ini) / PHI)
+        dividir(ini, meio, nivel - 1)
+        dividir(meio, fim, nivel - 1)
+    dividir(0, n, n_niveis)
+    return bandas
+
+def coerencia_banda(freq, phi=PHI):
+    if freq.shape[-1] < 2:
+        return np.zeros((freq.shape[0], 1))
+    amp      = np.abs(freq)
+    amp_norm = amp / (amp.sum(axis=-1, keepdims=True) + 1e-8)
+    ent      = -np.sum(amp_norm * np.log(amp_norm + 1e-8), axis=-1, keepdims=True)
+    c_amp    = 1.0 - ent / np.log(max(freq.shape[-1], 2))
+    fase     = np.angle(freq)
+    res      = np.sqrt(np.cos(fase).mean(axis=-1, keepdims=True)**2 +
+                      np.sin(fase).mean(axis=-1, keepdims=True)**2)
+    return (c_amp + res) / 2.0
+
+# ── Modulador Phi-Dual-Octave ─────────────────────────────────────────────
+def phi_dual_octave_modulator(x, phi=PHI, alpha=ALPHA, n_niveis=3):
+    """
+    Síntese Completa — quatro elementos:
+
+    1. Tensão Dual: separa freq. positivas (asc) e negativas (desc)
+    2. φ-Recursive: divide cada tensão em bandas φ-proporcionais
+    3. Octave Concessional: melhor banda por amostra (não descarta)
+    4. Regra do Octeto: primeiras 8 freq. recebem peso especial
+       como camada de valência — âncora de coerência fundamental
+    """
+    freq = np.fft.fft(x, axis=-1)
+    n    = x.shape[-1]
+
+    resultados = {}
+
+    for nome, freq_tensao in [('asc', freq[:, 1:n//2]),
+                               ('desc', freq[:, n//2:])]:
+        nt     = freq_tensao.shape[-1]
+        bandas = gerar_bandas_phi(nt, n_niveis)
+
+        coers  = []
+        pesos  = []
+
+        for i, (ini, fim) in enumerate(bandas):
+            if fim > ini:
+                c    = coerencia_banda(freq_tensao[:, ini:fim], phi)
+                coers.append(c)
+                # Peso φ-proporcional base
+                peso = (1.0 / phi) ** i
+                # REGRA DO OCTETO: primeiras 8 freq. recebem peso extra
+                # Analogia com camada de valência — âncora de estabilidade
+                if ini < OCTETO:
+                    peso *= phi  # amplifica as fundamentais
+                pesos.append(peso)
+
+        if not coers:
+            resultados[nome] = np.ones((x.shape[0], 1)) * 0.5
+            continue
+
+        pesos_arr  = np.array(pesos) / sum(pesos)
+        coer_stack = np.concatenate(coers, axis=-1)
+
+        # φ-Symmetric: coerência ponderada pelas proporções φ
+        coer_pond = (coer_stack * pesos_arr).sum(axis=-1, keepdims=True)
+
+        # Octave Concessional: melhor banda disponível por amostra
+        coer_max  = coer_stack.max(axis=-1, keepdims=True)
+
+        # Síntese: ponderada (harmonia) + máxima (concessão)
+        coer_final = (1.0/phi) * coer_pond + (1.0/phi**2) * coer_max
+
+        resultados[nome] = phi * np.tanh(coer_final * phi)
+
+    mod_asc  = resultados['asc']
+    mod_desc = resultados['desc']
+
+    # α como operador de equilíbrio entre as duas tensões
+    modulador = alpha * mod_asc + (1 - alpha) * mod_desc
+
+    return modulador, mod_asc, mod_desc
+
+
+def relu(x): return np.maximum(0, x)
+def relu_deriv(x): return (x > 0).astype(float)
+def sigmoid(x): return 1.0 / (1.0 + np.exp(-np.clip(x, -500, 500)))
+def clip_grad(g, max_norm=1.0):
+    norm = np.linalg.norm(g)
+    return g * max_norm / norm if norm > max_norm else g
+
+uniform_layers = [144, 144, 144]
+
+class NeuralNet:
+    def __init__(self, layer_sizes, mode='conv', seed=42):
+        np.random.seed(seed)
+        self.mode    = mode
+        self.weights = []
+        self.biases  = []
+        for i in range(len(layer_sizes)-1):
+            scale = np.sqrt(2.0 / layer_sizes[i])
+            self.weights.append(np.random.randn(layer_sizes[i], layer_sizes[i+1]) * scale)
+            self.biases.append(np.zeros(layer_sizes[i+1]))
+
+    def forward(self, X):
+        self.pre_acts = []; self.acts = [X]; cur = X
+        for i, (W, b) in enumerate(zip(self.weights, self.biases)):
+            is_out = (i == len(self.weights)-1)
+            z = cur @ W + b
+            cur = sigmoid(z) if is_out else relu(z)
+            self.pre_acts.append(z); self.acts.append(cur)
+        return cur
+
+    def backward(self, X, y, lr=0.1, permuted=False):
+        m = X.shape[0]
+        if self.mode == 'pdo':
+            X_mod = X[np.random.permutation(len(X))] if permuted else X
+            mod, _, _ = phi_dual_octave_modulator(X_mod)
+            lr_efetivo = lr * mod.mean()
+        else:
+            lr_efetivo = lr
+
+        delta = self.acts[-1] - y.reshape(-1, 1)
+        for i in reversed(range(len(self.weights))):
+            dW = clip_grad(self.acts[i].T @ delta / m, 1.0)
+            db = clip_grad(delta.mean(axis=0), 1.0)
+            self.weights[i] -= lr_efetivo * dW
+            self.biases[i]  -= lr_efetivo * db
+            if i > 0:
+                delta = (delta @ self.weights[i].T) * relu_deriv(self.pre_acts[i-1])
+
+    def predict(self, X): return (self.forward(X).flatten() >= 0.5).astype(int)
+    def accuracy(self, X, y): return np.mean(self.predict(X) == y)
+
+# ── Carregar SST-2 ────────────────────────────────────────────────────────
+print("\nCarregando SST-2...")
+dataset = load_dataset('glue', 'sst2')
+encoder = SentenceTransformer('all-MiniLM-L6-v2')
+
+N_TRAIN = 5000
+X_train = encoder.encode(dataset['train']['sentence'][:N_TRAIN],
+                         show_progress_bar=True, batch_size=64)
+y_train = np.array(dataset['train']['label'][:N_TRAIN])
+X_val   = encoder.encode(dataset['validation']['sentence'],
+                         show_progress_bar=True, batch_size=64)
+y_val   = np.array(dataset['validation']['label'])
+
+mean = X_train.mean(0); std = X_train.std(0) + 1e-8
+X_train = (X_train - mean) / std
+X_val   = (X_val   - mean) / std
+print(f"X_train: {X_train.shape}  X_val: {X_val.shape}")
+
+# ── Diagnóstico ───────────────────────────────────────────────────────────
+print("\n=== DIAGNÓSTICO — PHI-DUAL-OCTAVE ===")
+sample = X_train[:200]
+mod, mod_asc, mod_desc = phi_dual_octave_modulator(sample)
+
+print(f"Tensão Ascendente (φ-recursive + octeto):")
+print(f"  Modulador: {mod_asc.mean():.4f} ± {mod_asc.std():.4f}")
+print(f"Tensão Descendente (φ-recursive + octeto):")
+print(f"  Modulador: {mod_desc.mean():.4f} ± {mod_desc.std():.4f}")
+print(f"Modulador Final (α·asc + (1-α)·desc):")
+print(f"  Média={mod.mean():.4f}  Desvio={mod.std():.4f}")
+print(f"  Mín={mod.min():.4f}  Máx={mod.max():.4f}")
+print(f"  Variação total: {mod.max()-mod.min():.4f}")
+
+# ── Permutation Test — 20 Seeds ───────────────────────────────────────────
+N_SEEDS = 20; N_EPOCHS = 10; LR = 0.1; BATCH_SIZE = 128
+rng     = np.random.RandomState(int(time.time()) % 100000)
+SEEDS   = rng.randint(0, 99999, size=N_SEEDS).tolist()
+
+print(f"\nSeeds: {SEEDS}\n")
+arch = [384] + uniform_layers + [1]
+
+res_pdo = []; res_perm = []; res_conv = []
+
+print(f"{'Seed':>8} | {'PDO':>8} | {'Permut.':>8} | {'Conv':>8} | {'Genuíno?':>9}")
+print("-" * 55)
+
+for seed in SEEDS:
+    net_pdo  = NeuralNet(arch, mode='pdo',  seed=seed)
+    net_perm = NeuralNet(arch, mode='pdo',  seed=seed)
+    net_conv = NeuralNet(arch, mode='conv', seed=seed)
+
+    n_batches = len(X_train) // BATCH_SIZE
+    for epoch in range(N_EPOCHS):
+        idx = np.random.RandomState(seed + epoch).permutation(len(X_train))
+        Xs, ys = X_train[idx], y_train[idx]
+        for b in range(n_batches):
+            Xb = Xs[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
+            yb = ys[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
+            net_pdo.forward(Xb);  net_pdo.backward(Xb,  yb, lr=LR, permuted=False)
+            net_perm.forward(Xb); net_perm.backward(Xb, yb, lr=LR, permuted=True)
+            net_conv.forward(Xb); net_conv.backward(Xb, yb, lr=LR)
+
+    a_p = net_pdo.accuracy(X_val,  y_val)
+    a_r = net_perm.accuracy(X_val, y_val)
+    a_c = net_conv.accuracy(X_val, y_val)
+
+    res_pdo.append(a_p); res_perm.append(a_r); res_conv.append(a_c)
+    genuino = "✅ SIM" if a_p > a_r else "❌ NÃO"
+    print(f"{seed:>8} | {a_p:>8.4f} | {a_r:>8.4f} | {a_c:>8.4f} | {genuino:>9}")
+
+pdo_arr  = np.array(res_pdo)
+perm_arr = np.array(res_perm)
+conv_arr = np.array(res_conv)
+
+_, p_pp = ttest_ind(pdo_arr, perm_arr)
+_, p_pc = ttest_ind(pdo_arr, conv_arr)
+wins_pp = int(np.sum(pdo_arr > perm_arr))
+wins_pc = int(np.sum(pdo_arr > conv_arr))
+
+print("=" * 65)
+print("  PHI-DUAL-OCTAVE — RESULTADOS")
+print("  Tensão Dual + φ-Recursive + Octave Concessional + Octeto")
+print("=" * 65)
+print(f"  PDO Real    : {pdo_arr.mean()*100:.2f}% +/- {pdo_arr.std()*100:.2f}%")
+print(f"  PDO Permut. : {perm_arr.mean()*100:.2f}% +/- {perm_arr.std()*100:.2f}%")
+print(f"  Conv puro   : {conv_arr.mean()*100:.2f}% +/- {conv_arr.std()*100:.2f}%")
+print()
+print(f"  PDO vs Permut. : {(pdo_arr-perm_arr).mean()*100:+.2f}% · p={p_pp:.4f} · {wins_pp}/20")
+print(f"  PDO vs Conv    : {(pdo_arr-conv_arr).mean()*100:+.2f}% · p={p_pc:.4f} · {wins_pc}/20")
+print()
+print(f"  PROGRESSÃO COMPLETA:")
+print(f"  Conv puro:       ~69.1% ± 3.2%  baseline")
+print(f"  Espectral flat:  ~72.8% ± 1.2%  +3.7%")
+print(f"  Octave:          ~75.5% ± 1.0%  +6.4%")
+print(f"  φ-Symmetric:     ~76.0% ± 0.8%  +6.9%")
+print(f"  Phi-Dual:        ~76.6% ± 1.1%  +7.5%")
+print(f"  PDO (síntese):   {pdo_arr.mean()*100:.2f}% ± {pdo_arr.std()*100:.2f}%  {(pdo_arr.mean()-conv_arr.mean())*100:+.2f}%")
+print("=" * 65)
+
+# ── Visualização — 2D + 3D ────────────────────────────────────────────────
+GOLD="#DAA520"; BLUE="#4169E1"; GRAY="#888888"; RED="#CC3333"
+GREEN="#2ECC71"; PURPLE="#9B59B6"; ORANGE="#E67E22"
+
+# Dados para plots
+sample_viz = X_train[:500]
+mod_viz, asc_viz, desc_viz = phi_dual_octave_modulator(sample_viz)
+
+fig = plt.figure(figsize=(18, 10))
+fig.patch.set_facecolor("#0d1117")
+
+# Plot 1 — Evolução (barras)
+ax1 = fig.add_subplot(2, 3, 1)
+ax1.set_facecolor("#161b22")
+versoes = ['Conv', 'φ-flat', 'Octave', 'φ-Sym', 'Dual', 'PDO']
+valores = [conv_arr.mean()*100, 72.8, 75.5, 76.0, 76.6, pdo_arr.mean()*100]
+cores_v = [GRAY, BLUE, GREEN, GOLD, RED, ORANGE]
+bars = ax1.bar(versoes, valores, color=cores_v, alpha=0.85)
+ax1.axhline(50, color='red', lw=0.8, linestyle='--')
+ax1.set_ylim(40, 100)
+ax1.set_title("Progressão Alpha-Phi", color="#E6EDF3", fontweight="bold", fontsize=9)
+for bar, val in zip(bars, valores):
+    ax1.text(bar.get_x()+bar.get_width()/2, bar.get_height()+0.3,
+             f'{val:.1f}%', ha='center', va='bottom', color='white', fontsize=7)
+ax1.tick_params(colors="#8B949E")
+for spine in ax1.spines.values(): spine.set_color("#30363d")
+ax1.grid(True, alpha=0.2)
+
+# Plot 2 — Seeds
+ax2 = fig.add_subplot(2, 3, 2)
+ax2.set_facecolor("#161b22")
+x = np.arange(N_SEEDS)
+ax2.plot(x, pdo_arr*100,  "o-", color=ORANGE, lw=2, label=f"PDO ({pdo_arr.mean()*100:.1f}%)")
+ax2.plot(x, perm_arr*100, "s-", color=RED,    lw=1.5, label=f"Perm. ({perm_arr.mean()*100:.1f}%)")
+ax2.plot(x, conv_arr*100, "^-", color=GRAY,   lw=1.5, label=f"Conv ({conv_arr.mean()*100:.1f}%)")
+ax2.axhline(50, color='red', lw=0.8, linestyle='--')
+ax2.set_title("20 Seeds", color="#E6EDF3", fontweight="bold", fontsize=9)
+ax2.legend(facecolor="#161b22", labelcolor="#E6EDF3", fontsize=7)
+ax2.tick_params(colors="#8B949E")
+for spine in ax2.spines.values(): spine.set_color("#30363d")
+ax2.grid(True, alpha=0.2)
+
+# Plot 3 — 2D: Ascendente vs Descendente
+ax3 = fig.add_subplot(2, 3, 3)
+ax3.set_facecolor("#161b22")
+sc = ax3.scatter(asc_viz.flatten(), desc_viz.flatten(),
+                 c=mod_viz.flatten(), cmap='plasma', alpha=0.5, s=15)
+lim = max(asc_viz.max(), desc_viz.max()) * 1.05
+ax3.plot([0, lim], [0, lim], 'r--', lw=0.8, alpha=0.5)
+ax3.set_xlabel("Ascendente φ", color="#8B949E", fontsize=8)
+ax3.set_ylabel("Descendente φ", color="#8B949E", fontsize=8)
+ax3.set_title("2D: Ascendente vs Descendente", color="#E6EDF3", fontweight="bold", fontsize=9)
+plt.colorbar(sc, ax=ax3)
+ax3.tick_params(colors="#8B949E")
+for spine in ax3.spines.values(): spine.set_color("#30363d")
+ax3.grid(True, alpha=0.2)
+
+# Plot 4 — 3D: Ascendente, Descendente, Modulador Final
+ax4 = fig.add_subplot(2, 3, 4, projection='3d')
+ax4.set_facecolor("#0d1117")
+sc4 = ax4.scatter(asc_viz.flatten(),
+                  desc_viz.flatten(),
+                  mod_viz.flatten(),
+                  c=mod_viz.flatten(), cmap='plasma', alpha=0.5, s=10)
+ax4.set_xlabel("Ascendente", fontsize=7, color="#8B949E")
+ax4.set_ylabel("Descendente", fontsize=7, color="#8B949E")
+ax4.set_zlabel("Modulador φ", fontsize=7, color="#8B949E")
+ax4.set_title("3D: Campo Vibracional\nAsc × Desc × Modulador", color="#E6EDF3", fontweight="bold", fontsize=9)
+ax4.tick_params(colors="#8B949E", labelsize=6)
+
+# Plot 5 — 3D rotacionado — outro ângulo
+ax5 = fig.add_subplot(2, 3, 5, projection='3d')
+ax5.set_facecolor("#0d1117")
+ax5.scatter(asc_viz.flatten(),
+            desc_viz.flatten(),
+            mod_viz.flatten(),
+            c=mod_viz.flatten(), cmap='viridis', alpha=0.5, s=10)
+ax5.view_init(elev=20, azim=45)
+ax5.set_xlabel("Ascendente", fontsize=7, color="#8B949E")
+ax5.set_ylabel("Descendente", fontsize=7, color="#8B949E")
+ax5.set_zlabel("Modulador φ", fontsize=7, color="#8B949E")
+ax5.set_title("3D: Vista 45°\n(Campo Expandido)", color="#E6EDF3", fontweight="bold", fontsize=9)
+ax5.tick_params(colors="#8B949E", labelsize=6)
+
+# Plot 6 — Distribuição do modulador
+ax6 = fig.add_subplot(2, 3, 6)
+ax6.set_facecolor("#161b22")
+ax6.hist(mod_viz.flatten(), bins=40, color=ORANGE, alpha=0.8, edgecolor='none')
+ax6.axvline(mod_viz.mean(), color=GOLD, lw=2, linestyle='--', label=f'média={mod_viz.mean():.3f}')
+ax6.set_xlabel("Valor do Modulador", color="#8B949E", fontsize=8)
+ax6.set_ylabel("Frequência", color="#8B949E", fontsize=8)
+ax6.set_title("Distribuição do Modulador PDO", color="#E6EDF3", fontweight="bold", fontsize=9)
+ax6.legend(facecolor="#161b22", labelcolor="#E6EDF3", fontsize=8)
+ax6.tick_params(colors="#8B949E")
+for spine in ax6.spines.values(): spine.set_color("#30363d")
+ax6.grid(True, alpha=0.2)
+
+fig.suptitle(
+    f"ALPHA PHI — Phi-Dual-Octave · Síntese Completa · p={p_pp:.4f}\n"
+    f"Tensão Dual + φ-Recursive + Octave Concessional + Regra do Octeto · Florianopolis 2026",
+    color=GOLD, fontsize=11, fontweight="bold"
+)
+plt.tight_layout()
+plt.savefig("alphaphi_phi_dual_octave.png", dpi=150,
+            bbox_inches="tight", facecolor="#0d1117")
+plt.show()
+print("\nGrafico salvo: alphaphi_phi_dual_octave.png")
+print("alpha-phi")

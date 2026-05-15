@@ -1,0 +1,55 @@
+{
+  "phi3": 4.23606797749979,
+  "resultados": [
+    {
+      "snr_db": 3,
+      "ber_conv": 0.078547,
+      "ber_phi": 0.268779,
+      "delta_ber": -0.190231,
+      "comp_orig": 0.6101,
+      "comp_phi": 0.9056,
+      "ent_orig": 0.999,
+      "ent_phi": 0.9998
+    },
+    {
+      "snr_db": 6,
+      "ber_conv": 0.022794,
+      "ber_phi": 0.243016,
+      "delta_ber": -0.220222,
+      "comp_orig": 0.6101,
+      "comp_phi": 0.8445,
+      "ent_orig": 0.999,
+      "ent_phi": 0.9997
+    },
+    {
+      "snr_db": 10,
+      "ber_conv": 0.000783,
+      "ber_phi": 0.223483,
+      "delta_ber": -0.2227,
+      "comp_orig": 0.6101,
+      "comp_phi": 0.7461,
+      "ent_orig": 0.999,
+      "ent_phi": 0.9997
+    },
+    {
+      "snr_db": 15,
+      "ber_conv": 0.0,
+      "ber_phi": 0.213601,
+      "delta_ber": -0.213601,
+      "comp_orig": 0.6101,
+      "comp_phi": 0.6401,
+      "ent_orig": 0.999,
+      "ent_phi": 0.9996
+    },
+    {
+      "snr_db": 20,
+      "ber_conv": 0.0,
+      "ber_phi": 0.21049,
+      "delta_ber": -0.21049,
+      "comp_orig": 0.6101,
+      "comp_phi": 0.5756,
+      "ent_orig": 0.999,
+      "ent_phi": 0.9996
+    }
+  ]
+}
