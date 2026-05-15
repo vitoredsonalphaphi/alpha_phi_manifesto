@@ -1,4 +1,4 @@
-# Prólogo — As Flores Astrais como Origem
+## — As Flores Astrais como Origem
 
 ## Anterioridade Estética (1997)
 
