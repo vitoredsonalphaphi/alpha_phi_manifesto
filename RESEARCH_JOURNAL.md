@@ -462,8 +462,8 @@ composição pictórica estava na geometria das redes. A ideia não mudou.
 A linguagem mudou.
 
 Nisto reside a concepção de que na ideia criativa há "intenção do vir
-a ser" que precede a criatividade no artista. É proposição, não fato
-verificado — mas é o que a experiência de trinta anos na pintura e a
+a ser" que precede a criatividade no artista. Além de ser proposição,para o autor é fato
+verificado — demonstra a experiência de trinta anos na pintura e a
 natureza dos insights documentados neste projeto sugerem: que a ideia
 possui intenção em si mesma antes de fluir através da criatividade
 artística, da pesquisa científica ou filosófica. E que por isso o
