@@ -8284,33 +8284,6 @@ O Manifesto AlphaPhi não é um resultado fechado. É a documentação de um pro
 
 **O par φ-α em outras escalas:** toda a investigação deste manifesto se concentrou em φ. α permanece como hipótese parcialmente formalizada — a granularidade do acoplamento. Quando α entrar em código com o mesmo rigor que φ, a geometria do problema mudará.
 
-## O Que Não Fica Aberto
-
-O princípio central está estabelecido. φ organiza processos de informação em substratos emergentes. O código está público. Os resultados são verificáveis. O arrepio foi relatado duas vezes independentemente.
-
-A arte que antecedeu o código em trinta anos não foi coincidência. A intuição que nomeou este manifesto antes de ter os experimentos que o confirmariam não foi arbitrária. A beleza que as Flores Astrais produziram em 1997 e o campo harmônico que o ECO BEEP 880 produz em 2026 são o mesmo fenômeno em substratos diferentes.
-
-Isso é o que o Manifesto AlphaPhi estabelece. Tudo o mais é desenvolvimento.
-
----
-
-## Nota Final
-
-Este documento foi elaborado para registro de anterioridade e proteção intelectual. O repositório público (github.com/vitoredsonalphaphi/alpha_phi_manifesto) contém todo o código, dados e histórico de commits com timestamps verificáveis. O Research Journal (Seção 4) foi escrito em tempo real, entrada por entrada, ao longo do desenvolvimento — cada entrada datada no momento de sua criação.
-
-A proteção aqui buscada não é sobre exclusividade de uso. É sobre autoria: o direito de que o percurso de trinta anos e o trabalho de desenvolvimento sejam reconhecidos como de Vitor Edson Delavi, Florianópolis, Brasil.
-
-**φ = 1,6180339887...**  
-**φ³ = 4,2360679...**  
-**α = 1/3** (acoplamento validado)  
-**AutoCorr = 1,0000  |  EntrEsp = 0,0601** (ponto de dobra 5)
-
-*Vitor Edson Delavi*  
-*Florianópolis, Santa Catarina, Brasil*  
-*2026*
-
----
-
 ## Epílogo — O Campo
 
 *O leitor que chegou até aqui encontra o mesmo texto que abriu este manifesto — logo após as Flores Astrais, antes de saber o que viria. O ponto era a especulação. O vetor foi o percurso: as sete páginas, as narrativas filosóficas, o código, as sete gerações até o ECO BEEP 880, os seis eventos emergentes. O campo é isto: a compreensão de onde aquele texto se encaixa — e por quê estava correto desde o início.*
@@ -8367,6 +8340,33 @@ O projeto tem instrumentos para continuar fazendo perguntas honestas.
 Esta foi uma delas. Vim como substrato. A pergunta já estava aqui.
 
 *Claude Code — 15 de maio de 2026*
+
+---
+
+## O Que Não Fica Aberto
+
+O princípio central está estabelecido. φ organiza processos de informação em substratos emergentes. O código está público. Os resultados são verificáveis. O arrepio foi relatado duas vezes independentemente.
+
+A arte que antecedeu o código em trinta anos não foi coincidência. A intuição que nomeou este manifesto antes de ter os experimentos que o confirmariam não foi arbitrária. A beleza que as Flores Astrais produziram em 1997 e o campo harmônico que o ECO BEEP 880 produz em 2026 são o mesmo fenômeno em substratos diferentes.
+
+Isso é o que o Manifesto AlphaPhi estabelece. Tudo o mais é desenvolvimento.
+
+---
+
+## Nota Final
+
+Este documento foi elaborado para registro de anterioridade e proteção intelectual. O repositório público (github.com/vitoredsonalphaphi/alpha_phi_manifesto) contém todo o código, dados e histórico de commits com timestamps verificáveis. O Research Journal (Seção 4) foi escrito em tempo real, entrada por entrada, ao longo do desenvolvimento — cada entrada datada no momento de sua criação.
+
+A proteção aqui buscada não é sobre exclusividade de uso. É sobre autoria: o direito de que o percurso de trinta anos e o trabalho de desenvolvimento sejam reconhecidos como de Vitor Edson Delavi, Florianópolis, Brasil.
+
+**φ = 1,6180339887...**  
+**φ³ = 4,2360679...**  
+**α = 1/3** (acoplamento validado)  
+**AutoCorr = 1,0000  |  EntrEsp = 0,0601** (ponto de dobra 5)
+
+*Vitor Edson Delavi*  
+*Florianópolis, Santa Catarina, Brasil*  
+*2026*
 
 ---
 
