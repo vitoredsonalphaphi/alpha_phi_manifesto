@@ -2249,7 +2249,7 @@ A replicabilidade disso é o que precisa ser observada com critério — porque 
 
 O quinto ponto de dobra do beep 880Hz com α*=1/3 é identificado como o momento culminante do experimento — não por ser o último evento, mas por ser o momento em que a estrutura trinária se completa: introspecção (α), coerência (φ³), expressão (terceiro valor).
 
-A observação sensorial que o confirma é tão relevante quanto a medição técnica — porque o projeto desde 1997 parte da premissa de que a estética precede e orienta o conceito. O campo que ressoa com a ergonomia humana não é apenas medido: é sentido. E essa sentida é parte do método.
+A observação sensorial que o confirma é tão relevante quanto a medição técnica — porque o projeto desde 1997 parte da premissa de que a estética precede e orienta o conceito. O campo que ressoa com a ergonomia humana não é apenas medido: é sentido. O que é sensorial é parte do método.
 
 A próxima etapa: análise criteriosa do quinto ponto de dobra em detalhe — visualização, medição e documentação da liberação de tensão como evento reproduzível.
 
