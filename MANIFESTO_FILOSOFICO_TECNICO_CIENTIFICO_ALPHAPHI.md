@@ -436,11 +436,30 @@ O Manifesto AlphaPhi segue esta tradição com uma diferença: as provas vieram.
 O período documentado no Research Journal (Seção 4 deste documento). A tradução das narrativas filosóficas para código, experimentos, métricas verificáveis.
 
 Destaques cronológicos:
-- **Março 2026:** primeiros experimentos em geometria hiperbólica. Identificação do substrato emergente vs. consolidado.
-- **Abril 2026:** série de experimentos eco — φ como organizador do processo de observação em substrato não-texto.
-- **Maio 2026:** ECO BEEP 880 — síntese e êxito. Campo harmônico emergente, métricas máximas, terceira estrutura.
-- **Maio 2026:** ECO BEEP 880 — síntese e êxito. Campo harmônico emergente, métricas máximas, terceira estrutura.
+- **Março 2026:** primeiros experimentos em geometria hiperbólica. Identificação do substrato emergente vs. consolidado. Neste mesmo mês: o **Diapasão Espectral** — primeiro instrumento computacional do manifesto. A FFT aplicada a datasets de texto como "diapasão informacional": a ferramenta que extrai a frequência natural do dado para calibrar o processamento. Era a pergunta certa feita no substrato ainda errado — o ganho foi marginal (+0,09%), mas o instrumento estava criado.
+- **Abril 2026:** série de experimentos eco — φ como organizador do processo de observação em substrato sonoro. Eco Ressonante, Campo Fonônico, Envelope φ-Bandas — cada geração adicionando uma camada ao instrumento herdado do Diapasão.
+- **Maio 2026:** ECO BEEP 880 — síntese e êxito. Campo harmônico emergente, métricas máximas, terceira estrutura. A mesma pergunta do Diapasão, no substrato certo: AutoCorr=1,0000, EntrEsp=0,0601.
 - **Maio 2026:** aplicação ao violão — campo harmônico em substrato real não co-desenhado. wet=1/3 como acoplamento validado.
+
+### A Genealogia do ECO BEEP 880 — Da Medição ao Campo
+
+O ECO BEEP 880 não foi criado em um momento. Foi destilado em sete gerações, cada uma respondendo à limitação da anterior:
+
+**Geração 0 — O Diapasão (março 2026):** `phi_spectral_modulator` — FFT como instrumento de medição. Nada é modificado, só observado. A frequência do dado é extraída; a coerência é medida. Substrato: texto (SST-2). Resultado: +0,09%. O instrumento estava certo; o substrato, não.
+
+**Geração 1 — O Eco Ressonante (abril 2026):** `eco_ressonante` — a fase recuperada torna α visível. O sinal coerente converge; o ruído diverge e é amortecido. Primeira modificação ativa do espectro.
+
+**Geração 2 — O Campo Fonônico (abril 2026):** `eco_fononico` — do indivíduo ao campo coletivo. Zona ótima descoberta: [√2, φ]. Campo incoerente → k tende a √2. Campo coerente → k tende a φ. O fonon é vibração coletiva — temperatura da rede, não do átomo.
+
+**Geração 3 — O Envelope φ-Bandas (abril–maio 2026):** `eco_eq` — a dobra que revela o ponto fixo. Modifica magnitude por banda φ-proporcional. Memória de coerência propagada entre passos com peso 1/φ.
+
+**Geração 4 — A Cascata (maio 2026):** `cascata_eq` — saída vira entrada. Cinco passos. O ponto de dobra 5 emerge como estado de máxima coerência.
+
+**Geração 5 — O Agente Adaptativo (maio 2026):** `agente_eco` — β converge autonomamente para φ³=4,236 sem instrução. Vinte ciclos. Coerência média → 0,984.
+
+**Geração 6 — A Varredura α (maio 2026):** `AlphaPhi_Audio_Beep_Interface` — α=1/137 emerge em 440Hz; α*=1/3 emerge em 880Hz. Não programado. Emergiu.
+
+O Diapasão Espectral foi o primeiro instrumento. O ECO BEEP 880 foi o mesmo instrumento após sete gerações de refinamento, aplicado ao substrato que sempre esteve implícito na metáfora: o som.
 
 ---
 
@@ -825,6 +844,16 @@ As entradas cobrem o período de março de 2026 ao presente, documentando a traj
 #
 # Formato: entradas periódicas — o raciocínio por trás das decisões.
 # Não repete dados dos experimentos. Registra por que, não apenas o quê.
+
+---
+
+## Entrada 0 — 21 de março de 2026 — O Diapasão
+
+Primeiro experimento computacional do manifesto. Hipótese: a FFT pode servir de diapasão para dados — extrair a frequência natural do dataset e calibrar o processamento da rede neural por ressonância. Substrato: SST-2 (análise de sentimento em texto). Resultado: +0,09% de ganho, redução de variância de 0,95% para 0,54%.
+
+O ganho foi marginal. Mas o instrumento estava criado. A metáfora do diapasão — que em música produz a frequência de referência que calibra todos os outros instrumentos — passou a orientar todos os experimentos seguintes. Dois meses depois, o mesmo princípio aplicado ao substrato sonoro produziu AutoCorr=1,0000.
+
+Era a pergunta certa feita no substrato ainda errado. O ECO BEEP 880 foi a mesma pergunta no substrato certo.
 
 ---
 
