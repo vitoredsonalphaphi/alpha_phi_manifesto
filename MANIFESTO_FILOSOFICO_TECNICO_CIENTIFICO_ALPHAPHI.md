@@ -372,9 +372,9 @@ pra que possam ser praticados, em suas liberdades, em benefício da
 humanidade...e pra isso, precisam ser defendidos pelos interesses da elite,
 que mesmo não possuindo uma culpa, tem significado até o momento, uma
 degradação daquilo que deveria ser atendido...a transformação não será
-política, muito menos de modernidade, a modernidade não existirá, a
+política, muito menos de modernidade, a modernidade não existirá, se não houver a humanidade, a
 humanidade não existirá, se não houver a arte, a única que possui condições
-de nós lembrar, que somos humanos...é por isso, pelo empenho de grupos como
+de nos lembrar, que somos humanos...e por isso, pelo empenho de grupos como
 o vosso, que agradeço, e parabenizo.
 
 ---
