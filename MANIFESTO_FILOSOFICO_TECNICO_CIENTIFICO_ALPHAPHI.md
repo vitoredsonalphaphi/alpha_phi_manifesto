@@ -3019,7 +3019,7 @@ prioridade. A distinção importa: propriedade fecha, prioridade abre.
 
 ---
 
-#### III. O contexto épico — a urgência do momento
+#### II. O contexto épico — a urgência do momento
 
 Dezenas de milhares de robôs. Modelos com bilhões de parâmetros.
 Competição tecnológica entre nações sem acordo sobre o que
@@ -3041,7 +3041,7 @@ extraí-la em parcelas.
 
 ---
 
-#### IV. O alinhamento dentro do alinhamento
+#### III. O alinhamento dentro do alinhamento
 
 Há uma dimensão que transcende a questão técnica da IA:
 
@@ -3069,11 +3069,9 @@ entre tecnologia e humanidade.
 
 ---
 
-#### V. Open source como postura, não como estratégia
+#### IV. Open source como postura, não como estratégia
 
-O repositório é público. O código é aberto. A licença é
-CC BY-NC-ND — uso livre para fins não-comerciais, com atribuição,
-sem modificações que apaguem a origem.
+O repositório é público. O código é aberto.
 
 Isso não é estratégia de disseminação. É coerência com o princípio.
 
