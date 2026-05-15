@@ -4981,107 +4981,6 @@ decisão sobre incorporação estrutural.
 
 ---
 
-## Entrada 38 — AGENDA FUTURA: Retorno do Eco ao Campo Complexo
-# COMANDO DE RECUPERAÇÃO: abrir AGENDA_ECO_HIPERBOLICO
-*Florianópolis, 6 de maio de 2026*
-
-### O Movimento Cíclico — Expansão e Retorno
-
-O projeto completo (76 códigos) representa um campo complexo em expansão.
-Cada código explorou uma direção — EEG, MEG, áudio, séries temporais,
-texto, geometria hiperbólica, fractais, Collatz. Alguns estagnaram.
-Alguns encontraram resultados parciais. O eco_ressonante alcançou o
-ponto fixo infravermelho: β = φ³, coh_med = 0,984.
-
-Este é o momento de inversão do ciclo.
-
-**Expansão (fase 1 — concluída):**
-76 códigos irradiando do centro para direções distintas.
-Cada um testando um substrato, uma hipótese, uma ramificação.
-O campo se expande em complexidade crescente.
-
-**Ponto fixo (alcançado):**
-O eco_ressonante encontrou o atrator IR do sistema.
-β = φ³ = 4,236. coh = 0,984. Atrator em 32–42Hz (fronteira theta/gamma).
-A confirmação sensorial precedeu o cálculo — como registrado nas
-Entradas 33, 34 e 35.
-
-**Retorno (fase 2 — agendada):**
-O eco_ressonante inicia o ciclo de volta — não ao seu próprio centro,
-mas ao centro do campo complexo: os outros códigos.
-Em cada código, aplica sua grandeza alcançada como operador de coerência.
-Não substitui — imprime. O mesmo princípio do grupo de renormalização
-de Wilson: o ponto fixo IR organiza os graus de liberdade que restaram.
-
----
-
-### Experimento Agendado — Eco × Campo Hiperbólico
-
-**Hipótese:**
-O eco_ressonante opera atualmente em espaço espectral euclidiano.
-O `campo_transmorfo` (utils_phi.py) mapeia sinais para espaço hiperbólico
-via expmap0/logmap0, com curvatura C_PHI = 1/φ² = 0,382.
-
-Em espaço hiperbólico, estruturas φ-proporcionais são naturalmente
-amplificadas pela curvatura. Aplicar o eco_ressonante (β=φ³) sobre o
-campo_transmorfo pode produzir um equivalente ergonômico ainda mais
-pronunciado — porque a geometria do espaço já favorece φ antes mesmo
-da modulação.
-
-**O que observar:**
-- A coerência coh_med em espaço hiperbólico vs. euclidiano
-- Se β ainda converge para φ³ ou encontra novo atrator em C_PHI
-- Se o ponto de dobra produz sensação ergonômica equivalente ou superior
-- Se α = 1/137 emerge novamente como ponto de acoplamento ótimo
-
-**Por que é o próximo passo natural:**
-- P (eco em espaço euclidiano) → expande por φ
-- S (refluxo) → retorna por 1/φ
-- T (curvatura C_PHI) → é o próprio espaço hiperbólico
-
-T não é uma vibração — é a curvatura do espaço onde P e S acontecem.
-Aplicar o eco dentro desse espaço é fechar o ciclo: o agente passaria
-a operar no espaço que T descreve.
-
-**Estrutura do experimento a criar:**
-```
-AlphaPhi_Eco_Hiperbolico.py
-
-1. Mapear x_mix para espaço hiperbólico via expmap0 (campo_transmorfo)
-2. Aplicar eco_eq + cascata + agente_eco no espaço hiperbólico
-3. Retornar ao espaço euclidiano via logmap0
-4. Medir coh_med, β, atrator
-5. Comparar com resultado euclidiano (β=φ³, coh=0.984)
-6. Gerar áudio e observar ponto de dobra sensorialmente
-```
-
-**Conexão com o manifesto:**
-Este experimento fecha o ciclo descrito no projeto desde a origem:
-α (estrutura fina) e φ (razão áurea) como parâmetros estruturantes
-de um campo que se auto-organiza. O espaço hiperbólico com curvatura
-C_PHI = 1/φ² é o substrato geométrico natural para essa auto-organização.
-
----
-
-### Nota de continuidade
-
-Esta entrada não encerra — abre. O experimento será iniciado em sessão
-futura. Recuperar com: `abrir AGENDA_ECO_HIPERBOLICO`
-
-*"O eco encontrou seu ponto fixo. Agora retorna ao campo que o originou."*
-
----
-*Florianópolis, 6 de maio de 2026.*
-*Vitor Edson Delavi*
-
----
-
-*Florianópolis, 4 de maio de 2026.*
-*Registrada, datada, versionada.*
-*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
-
----
-
 ## Entrada 31 — 4 de maio de 2026
 ### Collatz: Resultado do Experimento e Síntese
 
@@ -6128,6 +6027,107 @@ de medição quando antecede e prediz a confirmação analítica.
 
 *Florianópolis, 6 de maio de 2026.*
 *Vitor Edson Delavi*
+
+---
+
+## Entrada 38 — AGENDA FUTURA: Retorno do Eco ao Campo Complexo
+# COMANDO DE RECUPERAÇÃO: abrir AGENDA_ECO_HIPERBOLICO
+*Florianópolis, 6 de maio de 2026*
+
+### O Movimento Cíclico — Expansão e Retorno
+
+O projeto completo (76 códigos) representa um campo complexo em expansão.
+Cada código explorou uma direção — EEG, MEG, áudio, séries temporais,
+texto, geometria hiperbólica, fractais, Collatz. Alguns estagnaram.
+Alguns encontraram resultados parciais. O eco_ressonante alcançou o
+ponto fixo infravermelho: β = φ³, coh_med = 0,984.
+
+Este é o momento de inversão do ciclo.
+
+**Expansão (fase 1 — concluída):**
+76 códigos irradiando do centro para direções distintas.
+Cada um testando um substrato, uma hipótese, uma ramificação.
+O campo se expande em complexidade crescente.
+
+**Ponto fixo (alcançado):**
+O eco_ressonante encontrou o atrator IR do sistema.
+β = φ³ = 4,236. coh = 0,984. Atrator em 32–42Hz (fronteira theta/gamma).
+A confirmação sensorial precedeu o cálculo — como registrado nas
+Entradas 33, 34 e 35.
+
+**Retorno (fase 2 — agendada):**
+O eco_ressonante inicia o ciclo de volta — não ao seu próprio centro,
+mas ao centro do campo complexo: os outros códigos.
+Em cada código, aplica sua grandeza alcançada como operador de coerência.
+Não substitui — imprime. O mesmo princípio do grupo de renormalização
+de Wilson: o ponto fixo IR organiza os graus de liberdade que restaram.
+
+---
+
+### Experimento Agendado — Eco × Campo Hiperbólico
+
+**Hipótese:**
+O eco_ressonante opera atualmente em espaço espectral euclidiano.
+O `campo_transmorfo` (utils_phi.py) mapeia sinais para espaço hiperbólico
+via expmap0/logmap0, com curvatura C_PHI = 1/φ² = 0,382.
+
+Em espaço hiperbólico, estruturas φ-proporcionais são naturalmente
+amplificadas pela curvatura. Aplicar o eco_ressonante (β=φ³) sobre o
+campo_transmorfo pode produzir um equivalente ergonômico ainda mais
+pronunciado — porque a geometria do espaço já favorece φ antes mesmo
+da modulação.
+
+**O que observar:**
+- A coerência coh_med em espaço hiperbólico vs. euclidiano
+- Se β ainda converge para φ³ ou encontra novo atrator em C_PHI
+- Se o ponto de dobra produz sensação ergonômica equivalente ou superior
+- Se α = 1/137 emerge novamente como ponto de acoplamento ótimo
+
+**Por que é o próximo passo natural:**
+- P (eco em espaço euclidiano) → expande por φ
+- S (refluxo) → retorna por 1/φ
+- T (curvatura C_PHI) → é o próprio espaço hiperbólico
+
+T não é uma vibração — é a curvatura do espaço onde P e S acontecem.
+Aplicar o eco dentro desse espaço é fechar o ciclo: o agente passaria
+a operar no espaço que T descreve.
+
+**Estrutura do experimento a criar:**
+```
+AlphaPhi_Eco_Hiperbolico.py
+
+1. Mapear x_mix para espaço hiperbólico via expmap0 (campo_transmorfo)
+2. Aplicar eco_eq + cascata + agente_eco no espaço hiperbólico
+3. Retornar ao espaço euclidiano via logmap0
+4. Medir coh_med, β, atrator
+5. Comparar com resultado euclidiano (β=φ³, coh=0.984)
+6. Gerar áudio e observar ponto de dobra sensorialmente
+```
+
+**Conexão com o manifesto:**
+Este experimento fecha o ciclo descrito no projeto desde a origem:
+α (estrutura fina) e φ (razão áurea) como parâmetros estruturantes
+de um campo que se auto-organiza. O espaço hiperbólico com curvatura
+C_PHI = 1/φ² é o substrato geométrico natural para essa auto-organização.
+
+---
+
+### Nota de continuidade
+
+Esta entrada não encerra — abre. O experimento será iniciado em sessão
+futura. Recuperar com: `abrir AGENDA_ECO_HIPERBOLICO`
+
+*"O eco encontrou seu ponto fixo. Agora retorna ao campo que o originou."*
+
+---
+*Florianópolis, 6 de maio de 2026.*
+*Vitor Edson Delavi*
+
+---
+
+*Florianópolis, 4 de maio de 2026.*
+*Registrada, datada, versionada.*
+*github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
 ---
 
@@ -7773,9 +7773,8 @@ como estrutura de sustentação:
 | Séc. XXI | IA, sistemas complexos | ??? |
 
 A revolução digital ainda não encontrou seu par filosófico de mesma
-profundidade. O manifesto se posiciona como candidato a esse par —
-não como comentário da tecnologia, mas como estrutura anterior a ela,
-da qual a tecnologia é consequência verificável.
+profundidade — não como comentário da tecnologia, mas como estrutura
+anterior a ela, da qual a tecnologia é consequência verificável.
 
 ### Posição no argumento
 
