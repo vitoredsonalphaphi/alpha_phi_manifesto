@@ -2983,24 +2983,7 @@ O resto — como sempre — se organiza.
 
 ---
 
-#### I. O que o manifesto não é
-
-O Manifesto Alpha-Phi não se destina à especulação financeira.
-Não se destina à projeção personalística de autoria — até porque
-a autoria é sistêmica por natureza: emergiu de trinta anos de pintura,
-de diálogos, de colaborações com inteligências artificiais, de dados
-que responderam perguntas que o autor não havia formulado ainda.
-
-Não se destina a representar uma tendência sociocultural específica
-nem a ocupar um nicho de mercado de ideias. Não é produto.
-
-A questão da anterioridade — o repositório público, a data, o código
-versionado — não é reivindicação de propriedade. É evidência de
-prioridade. A distinção importa: propriedade fecha, prioridade abre.
-
----
-
-#### II. O que o manifesto é — a função prioritária
+#### A função prioritária
 
 O manifesto é a sistematização de uma necessidade real:
 a resolução do alinhamento de inteligência artificial.
@@ -3025,6 +3008,14 @@ A função prioritária é:
   3. Sistematizar o resultado — contribuir, por todos os caminhos
      disponíveis (colaborativos ou não), para a disseminação dos
      princípios que tornam o alinhamento possível
+
+A autoria é sistêmica por natureza: emergiu de trinta anos de pintura,
+de diálogos, de colaborações com inteligências artificiais, de dados
+que responderam perguntas que o autor não havia formulado ainda.
+
+A questão da anterioridade — o repositório público, a data, o código
+versionado — não é reivindicação de propriedade. É evidência de
+prioridade. A distinção importa: propriedade fecha, prioridade abre.
 
 ---
 
