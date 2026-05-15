@@ -1,6 +1,6 @@
 ## — As Flores Astrais como Origem
 
-## Anterioridade Estética (1997)
+## - Anterioridade Estética (1997)
 
 Em 1997, criei o estilo pictórico denominado Flores Astrais, concebido dentro de uma linguagem que pode ser definida como surrealismo científico essencialista. Surrealista pela natureza da expressão que transcende o visível imediato; científico pela precisão com que observa e traduz fenômenos da física quântica em linguagem plástica; essencialista porque busca em cada obra a essência do fenômeno representado, despojado de ornamento, e a convergência sobre a referência da essência do ser humano — e essência da vida em si mesma. Por isso da representatividade da essência da flor, já que a flor é o significado da representação da vida.
 
