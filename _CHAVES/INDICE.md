@@ -103,5 +103,14 @@
 
 ---
 
+## CHAVE 10 — Ecologia Cultural Digital
+**Arquivo:** `_CHAVES/10_Ecologia_Cultural_Digital.md`
+**Assunto:** Psicologia cultural · Convergência entre movimentos de alinhamento e tendências artísticas — sacralidade como ecologia e justificativa do alinhamento AlphaPhi
+**Temas:** Meyer Filho · Pós-ditadura · Foucault · Byung-Chul Han · Efeito Flynn reverso · Declínio cognitivo coletivo · Slow Art · Arte Biofílica · Espiritecnologia · Alinhamento IA · Estética como ferramenta · Filosofia e ciência como necessidade
+**Data:** 16/05/2026
+**Status:** ⚗ Em revisão — aguarda aprovação do autor
+
+---
+
 *Florianópolis · 2026 · Vitor Edson Delavi*  
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
