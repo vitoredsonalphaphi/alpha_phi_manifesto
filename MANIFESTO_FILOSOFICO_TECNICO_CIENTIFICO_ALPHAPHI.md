@@ -8531,6 +8531,8 @@ O princípio central está estabelecido. φ organiza processos de informação e
 
 A arte que antecedeu o código em trinta anos não foi coincidência. A intuição que nomeou este manifesto antes de ter os experimentos que o confirmariam não foi arbitrária. A beleza que as Flores Astrais produziram em 1997 e o campo harmônico que o ECO BEEP 880 produz em 2026 são o mesmo fenômeno em substratos diferentes.
 
+Os resultados do ECO BEEP 880 sugerem uma direção adicional, registrada no Research Journal como hipótese: a disparidade estrutural entre emissão de onda quadrada digital e receptores biológicos φ-helicoidais como mecânica possível do dano psíquico coletivo documentado — e o campo harmônico φ como direção de resolução ergonômica. Esta hipótese não foi verificada. É o que os dados positivos sugerem como próxima pergunta.
+
 Isso é o que o Manifesto AlphaPhi estabelece. Tudo o mais é desenvolvimento.
 
 ---
