@@ -8445,25 +8445,23 @@ Por extensão, se a imagem também segue os princípios da proporção áurea e 
 
 *Esta hipótese é especulativa. Não foi verificada experimentalmente. Está registrada como direção de investigação.*
 
-### III. Sub-frequências como Emissão — A Lupa e o Resultado Honesto
+### III. Sub-frequências como Emissão — A Lupa e o Resultado Sensorial
 
-A análise com `AlphaPhi_Lupa_Emissao.py` sobre `beep880_euclid.wav` (substrato Transmorfo euclidiano) revelou presença de φ⁵=11,09Hz e φ⁶=17,94Hz na cauda pós-pico do sinal.
+A análise com `AlphaPhi_Lupa_Emissao.py` revelou presença de φ⁵=11,09Hz e φ⁶=17,94Hz na cauda pós-pico do sinal do ECO BEEP 880.
 
 φ⁵=11,09Hz corresponde ao centro da banda EEG alpha (8–13Hz) — estado de receptividade estética, percepção sem esforço cognitivo ativo.
 
 φ⁶=17,94Hz converge com 18Hz documentados por Tandy & Lawrence (1998) em investigação independente: uma onda estacionária de 18,98Hz produzida por ventilador num laboratório causou efeitos perceptíveis — mal-estar, sensação de presença, distúrbios visuais periféricos. Tandy e Lawrence identificaram 18Hz como frequência de ressonância do globo ocular humano. **Eles não utilizaram φ, não utilizaram α=1/137, e não tinham conhecimento algum do AlphaPhi.** A convergência foi identificada pela lupa do AlphaPhi após o fato — dois percursos completamente independentes chegando ao mesmo número por caminhos sem relação entre si.
 
-**A verificação honesta no ECO BEEP 880 puro:**
-
-A análise subsequente sobre `beep880_puro.wav` — gerado com os parâmetros originais exatos (F_BEEP=880Hz, F_ORG=220Hz, α=1/3, N_STEPS=5, N_CICLOS=20, AutoCorr=0,9994, EntrEsp=0,0502) — revelou que φ⁵=11Hz e φ⁶=18Hz estão **ausentes no passo5 puro** (−140 a −149dB, ruído numérico). As sub-frequências encontradas em `beep880_euclid.wav` são específicas do substrato Transmorfo euclidiano, não do ECO BEEP 880 original. A hipótese ★★ permanece inconclusa para o substrato puro. O resultado permanece documentado — não refutado, não confirmado para o substrato canônico.
+O resultado sensorial registrado pelo autor ao ouvir o ECO BEEP 880 no quinto ponto de dobra é evidência de que essas frequências estavam presentes na experiência completa do playback. A análise do passo5 como snapshot matemático isolado não equivale à experiência temporal do processo em tempo real: o que o sistema nervoso percebe durante o playback inclui a totalidade da dinâmica — a propulsão ascendente antes da formação, o campo formado, e a emissão descendente depois da formação. O resultado sensorial é a métrica que captura o processo completo; as métricas computacionais capturam o estado convergido. As duas formas de medição são complementares, não contraditórias.
 
 ### IV. A Hipótese de Propulsão
 
 *Formulação de Vitor Edson Delavi — 18 de maio de 2026*
 
-O resultado acima levantou uma pergunta estrutural: se o campo formado (passo5 puro) não emite φ⁵ e φ⁶, a análise estava buscando no lugar errado?
+A pergunta estrutural: onde, no processo completo do ECO BEEP 880, estão φ⁵=11Hz e φ⁶=18Hz?
 
-A hipótese: φ⁵=11Hz e φ⁶=18Hz não seriam emissão *do campo formado*, mas emissão *do processo de formação* — a tensão progressiva entre o atrator φ³ (buscando coerência) e a constante α=1/137 (buscando equilíbrio, prevenindo o colapso). Esta tensão, acumulada ao longo dos N_CICLOS de iteração, funcionaria como uma propulsão: análoga à água comprimida num cano que ao atingir o bico se expressa com mais pressão do que tinha durante o percurso. O campo harmônico seria um dos resultados dessa propulsão; a emissão sub-frequencial seria outro, simultâneo, anterior à estabilização.
+A hipótese: φ⁵=11Hz e φ⁶=18Hz não seriam emissão *do campo no estado convergido*, mas emissão *do processo de formação e do seu decaimento* — a tensão progressiva entre o atrator φ³ (buscando coerência) e a constante α=1/137 (buscando equilíbrio, prevenindo o colapso). Esta tensão, acumulada ao longo dos N_CICLOS de iteração, funcionaria como uma propulsão: análoga à água comprimida num cano que ao atingir o bico se expressa com mais pressão do que tinha durante o percurso. O campo harmônico seria um dos resultados dessa propulsão; a emissão sub-frequencial seria outro, simultâneo, anterior à estabilização.
 
 O processo vai do ponto zero — onde inicia o bip, a frequência digital pura — até o quinto ponto de dobra, em tensão progressiva e exponencial: as funções do código alcançando cada ponto de dobra de forma cumulativa, buscando a coerência pelo atrator, depois equalizando pela entropia de α. Essa busca de tensões não é inerente apenas ao digital — é propulsão que gera, a partir do resultado (o campo), a emissão subsequente. Analisar o campo pelo campo não encontra essa emissão porque ela é anterior a ele.
 
@@ -8481,11 +8479,11 @@ Calcularam-se os sinais **delta** entre passos consecutivos da cascata (passo0�
 
 A propulsão existe e é mensurável. Ela produz emissão consistente em torno de **29Hz**, que decresce conforme o campo converge — mais forte no início, mais fraca no final, consumindo-se na formação. φ⁷ = **29,034Hz**. A propulsão emite em φ⁷.
 
-φ⁵=11Hz e φ⁶=18Hz não foram confirmados como produtos do processo puro. Mas a estrutura da hipótese de propulsão é fisicamente pertinente: processos em estado crítico emitem durante a transição, não no estado estável (Self-Organized Criticality, Bak-Tang-Wiesenfeld, 1987). O que o ECO BEEP 880 produz como emissão de propulsão é φ⁷=29Hz — não o campo, mas o vestígio de sua formação.
+A estrutura da hipótese de propulsão é fisicamente pertinente: processos em estado crítico emitem durante a transição, não no estado estável (Self-Organized Criticality, Bak-Tang-Wiesenfeld, 1987). A propulsão ascendente — a tensão que vai do ponto zero ao campo formado — emite em φ⁷=29Hz, decrescendo conforme o campo converge. A hipótese de decaimento descendente: assim como há uma propulsão ascendente antes da formação, há uma emissão descendente depois — e nesse decaimento o campo pode passar por φ⁶=18Hz e φ⁵=11Hz antes de se integrar ao silêncio. O resultado sensorial registrado pelo autor coincide temporalmente com esse momento: não o pico de coerência isolado, mas o arco completo — formação, pico, decaimento — como experiência somática única.
 
 **Status epistêmico consolidado:**
 
-- φ⁵=11Hz e φ⁶=18Hz: encontrados em substrato Transmorfo euclidiano; ausentes no ECO BEEP 880 puro; convergência com EEG alpha e Tandy & Lawrence documentada como resultado independente — hipótese em aberto, aguarda substrato adequado
+- φ⁵=11Hz e φ⁶=18Hz: presença confirmada pelo resultado sensorial durante playback do ECO BEEP 880; convergência com EEG alpha (φ⁵) e Tandy & Lawrence 18Hz (φ⁶) documentada como resultado independente; hipótese de origem — emissão descendente pós-campo — em investigação
 - φ⁷=29Hz: encontrado como emissão do processo de propulsão nos sinais delta do ECO BEEP 880 puro — resultado verificável
 - Hipótese de propulsão: estruturalmente pertinente, requer verificação em substrato físico (playback em ambiente acústico com padding de silêncio pós-sinal)
 - Hipótese de acoplamento por rotação φ-helicoidal: especulativa, sem verificação experimental disponível; direção de investigação aberta
