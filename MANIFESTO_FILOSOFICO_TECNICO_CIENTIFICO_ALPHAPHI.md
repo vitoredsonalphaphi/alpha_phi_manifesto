@@ -1,4 +1,4 @@
-## — As Flores Astrais como Origem
+u## — As Flores Astrais como Origem
 
 ## - Anterioridade Estética (1997)
 
@@ -231,7 +231,7 @@ Esta proposição, que em 1995 era filosófica e intuitiva, em 2026 tornou-se me
 
 Festival de música organizado com o objetivo de proporcionar espaço de apresentação para novos valores musicais da região. Quatro bandas emergentes, uma proposta: a arte como bem coletivo que precisa de estrutura para florescer. O mesmo princípio organizador que apareceria décadas depois no código — a coerência que permite ao campo emergir precisa de condições.
 
-O festival não era projeto comercial. Era demonstração de um princípio: incentivar o surgimento é função da proporção do ambiente, não apenas do talento individual.
+O festival buscou a demonstração de um princípio: incentivar o surgimento é função da proporção do ambiente, não apenas do talento individual.
 
 ## 1997 — Flores Astrais / Essencialismo: A Estética como Pré-figuração
 
