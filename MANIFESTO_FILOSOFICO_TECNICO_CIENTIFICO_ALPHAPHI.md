@@ -2344,6 +2344,29 @@ O fio não rompeu.
 
 ---
 
+## Entrada 17 — 20 de abril de 2026
+### O Isomorfismo Visual-Espectral — a mesma estrutura em dois substratos
+
+*Esta entrada registra uma observação que surgiu da comparação direta entre a tela de 1997 e o gráfico FFT do ECO BEEP 880 — antes de qualquer nomeação formal.*
+
+---
+
+A Entrada 16 colocou lado a lado duas imagens: uma pintura a óleo sobre acrílico com núcleo central irradiando para espirais de cor, e o gráfico de espectro do ECO BEEP 880 com picos concentrando energia nas bandas φ-proporcionais em torno do sétimo segundo.
+
+A semelhança não é estética. É estrutural.
+
+Ambos partem de um núcleo — o ponto de emissão — e organizam o campo ao redor por proporções φ-progressivas. A pintura faz isso no espaço visual: o núcleo branco central irradia para zonas de cor em razões áureas, diminuindo a saturação enquanto aumenta a proporção. O espectro faz isso no domínio de frequência: a energia se concentra nas bandas centrais e decai φ-proporcionalmente nas faixas adjacentes.
+
+A mesma geometria. Substratos diferentes. Trinta anos de diferença.
+
+O que isso implica não é que a arte "previu" a ciência — essa formulação é imprecisa. O que implica é que o mesmo princípio organizador apareceu nos dois lugares porque o mesmo princípio estava sendo buscado. A tela de 1997 era uma tentativa de capturar a forma da emissão coerente. O espectro de 2026 é a medição de uma emissão coerente. São dois instrumentos diferentes apontando para o mesmo fenômeno.
+
+A observação que ficou deste momento: o isomorfismo entre domínios não é coincidência narrativa. É evidência de que φ organiza estruturas em qualquer substrato onde há emissão e campo — independente de se tratar de pigmento, de frequência sonora ou de dados binários. A diferença entre os três é de vocabulário, não de geometria.
+
+A pergunta que permaneceu: se o mesmo princípio opera em tela e em espectro, quantos outros substratos ele atravessa sem que tenhamos instrumentos ainda para medir?
+
+---
+
 ## Entrada 18 — 21 de abril de 2026
 ### A Pré-Função — o que o código fazia desde o início sem nomear
 
@@ -2692,255 +2715,46 @@ ela se tornou possível de formular com precisão.
 ---
 
 ## Entrada 20 — 21 de abril de 2026
-### A proteção sistêmica — por que o livro é imune ao oportunismo por design
+### O Agente que Observa Antes de Agir — φ como pergunta, não como constante
 
-*Esta entrada registra uma proposição filosófica sobre o livro,*
-*articulada no diálogo de 21 de abril de 2026, e sua correspondência*
-*direta com a construção técnica das funções.*
+*Esta entrada registra a percepção que emergiu da sequência de experimentos em substratos não-texto — especificamente do resultado que φ não precisava estar no dado para que o eco φ funcionasse.*
 
 ---
 
-#### I. O argumento filosófico — anterioridade de 1996
+A Entrada 6 registrou um resultado técnico que continuou reverberando: o eco φ funcionou sobre harmônicos musicais naturais — frequências em razões 1, 5/4, 3/2 — sem qualquer φ presente nos dados de entrada.
 
-O posicionamento que o Manifesto Alpha-Phi adota sobre apropriação
-indevida não é uma defesa jurídica. Foi formulado originalmente em 1996,
-em conversa com uma testemunha sobre o projeto que então chamávamos
-de neocapitalismo — hoje emergido como capitalismo consciente.
+O resultado parece simples. Mas sua implicação é estrutural.
 
-O argumento: o livro é sistêmico e abrangente de tal maneira que a
-própria mecânica do seu objetivo torna o oportunismo autofágico.
+φ não precisa estar no dado. φ é o parâmetro que organiza a forma de perguntar ao dado: sua trajetória ressoa com coerência? Quem extraísse φ = 1,6180... de um arquivo e o inserisse como constante em outro contexto não extraiu nada de valor. O que os experimentos demonstraram é que φ não é um número a ser inserido — é um método de observação.
 
-Se alguém subtrair qualquer parcela do projeto — um eixo, um capítulo,
-um conceito — e o aplicar corretamente, estará fazendo exatamente
-o que o projeto propõe: sistematizando, criando, colaborando.
-A extração correta é, por definição, continuação do manifesto.
+Isso muda o que o agente eco φ faz, fundamentalmente. Ele não impõe φ ao sinal. Ele pergunta, a cada etapa da cascata, se o sinal se organiza em torno de φ — e amplifica o que já está em ressonância, sem criar ressonância onde não existe. O agente observa antes de agir.
 
-Se alguém subtrair e aplicar incorretamente, o resultado será
-irrelevante — mais um plágio entre tantos, sem consequência para
-a integridade do projeto original.
+A Entrada 19 nomeou isso de "equalização circunstancial": o sistema induz seus parâmetros das circunstâncias do dado, não de regras fixas externas. Esta entrada é o substrato técnico desse princípio: não é filosofia — é o que o experimento demonstrou.
 
-O manifesto oportuniza a criatividade. Quem o usa criativamente
-e bem está dentro do manifesto, independente da intenção de origem.
-
----
-
-#### II. A correspondência técnica — cinco camadas
-
-Essa estrutura não é apenas filosófica. Está codificada na arquitetura
-técnica do projeto em pelo menos cinco camadas distintas:
-
-**Camada 1: φ não é um número — é um processo de observação**
-
-Alguém que extrai φ = 1.6180... e o insere em qualquer rede neural
-não extraiu nada de valor. O que os experimentos demonstraram
-(Entradas 5 e 6) é que o eco φ funcionou igualmente sobre harmônicos
-musicais naturais — frequências de razões 1, 5/4, 3/2 — sem qualquer
-φ presente nos dados.
-
-φ não precisa estar no dado. φ é o parâmetro que organiza a forma
-de perguntar ao dado: "sua trajetória ressoa com coerência?"
-
-Quem copia o número copia a superfície.
-Quem copia a pergunta copiou o mecanismo.
-
-**Camada 2: α e φ são inseparáveis — e o v1 prova isso**
-
-O modulador v1 (`phi_spectral_modulator`) continha um erro que
-passou desapercebido: `np.abs(FFT)` descartava a fase. Tecnicamente
-funcional, mas filosoficamente incompleto — silenciava α inteiro.
-
-  Amplitude = estrutura = φ (o que o sinal é)
-  Fase      = intenção  = α (para onde o sinal vai)
-
-O projeto se chama Alpha-Phi, não apenas Phi. A correção (v2, com
-rotação no plano complexo `amplitude · e^(j·α·φ)`) só faz sentido
-para quem compreende que α é operador de trajetória, não constante
-decorativa. Quem extraísse o v1 levaria uma implementação que
-descarta metade do nome do projeto. A extração isolada é
-autodeficiente.
-
-**Camada 3: c = 1/φ² é o ponto de dobra, não uma constante arbitrária**
-
-A curvatura hiperbólica C_PHI = 1/φ² não veio de busca experimental.
-É o ponto onde φ gera sua própria curvatura — a dobra onde a proporção
-áurea fecha sobre si mesma geometricamente.
-
-O estudo de ablação confirmou que essa curvatura sozinha entrega
-+8.80% (p=0.0000), quase tanto quanto todos os eixos combinados.
-Quem extrai `c = 0.382` de um arquivo e insere em outro contexto tem
-um número sem a derivação. A derivação é o que torna o resultado
-reproduzível em qualquer substrato.
-
-**Camada 4: o eco como pré-função vs. modulação interna — dois papéis incompatíveis**
-
-O experimento TimeSeries (Entrada 5) revelou que `eco_ressonante`
-como pré-função entrega +50.40%. O mesmo eco como modulação interna
-(G_v2) piorou o baseline. A diferença não está no código — o código
-é o mesmo. Está no onde e no por que.
-
-Quem copia `eco_ressonante` sem entender essa distinção produz
-resultados piores que o baseline e conclui que o método não funciona.
-Está correto naquele uso específico — e isso não contradiz o manifesto.
-O manifesto afirma exatamente isso. O erro de uso valida a distinção
-que o sistema propõe.
-
-**Camada 5: `utils_phi.py` como núcleo não-extraível**
-
-As funções formam uma cadeia de dependência conceitual:
-- `phi_spectral_modulator_v2` depende de compreender por que fase é α
-- `eco_ressonante` depende de compreender o papel de pré-função
-- `campo_transmorfo` depende de compreender por que `expmap0` direto
-  quebra o gradiente no BERT
-- `curvatura_progressiva` usa `t ** phi` — aceleração não linear,
-  não arbitrária, modulada pela mesma proporção que organiza o espaço
-
-Cada função é um eixo. Os eixos sozinhos são incompletos. A configuração
-F do estudo de ablação (todos os eixos) é a melhor — mas só é
-explicável em relação às configurações A–E que isolam cada eixo.
-Sem a sequência, o resultado é uma caixa preta sem derivação.
-
----
-
-#### III. Síntese — proteção epistemológica
-
-A proteção sistêmica do projeto não é jurídica. É epistemológica.
-
-Para usar corretamente qualquer parte do que foi desenvolvido aqui,
-é necessário compreender o sistema inteiro. E compreender o sistema
-inteiro é, por definição, colaborar com o manifesto.
-
-Isso se aplica às funções exatamente como se aplica ao livro:
-quem extrair um capítulo e aplicar corretamente vai fazê-lo porque
-entendeu os outros capítulos. Quem extrair sem entender produzirá
-resultado que o próprio manifesto já previu como inferior — e que
-os experimentos registrados neste diário demonstram empiricamente.
-
-O livro é o único sistema onde o plágio correto é colaboração
-e o plágio incorreto é irrelevante. Essa não é uma propriedade
-acidental. Foi prevista em 1996. Os experimentos de 2026
-a demonstraram por vias independentes.
+A implicação para os passos seguintes: se φ não precisa estar no dado, o campo pode ser testado em qualquer substrato — inclusive naqueles onde φ está ausente da estrutura de superfície mas presente na estrutura de profundidade. A questão deixou de ser "este sinal tem φ?" e passou a ser "onde neste sinal φ já está, esperando ser encontrado?"
 
 ---
 
 ## Entrada 21 — 21 de abril de 2026
-### O hackerismo construtivo — ponto de dobra da intenção
+### A Transição para o Áudio — a pergunta no substrato natural
 
-*Esta entrada registra a proposição formulada no diálogo de 21 de*
-*abril de 2026, articulando a relação entre o posicionamento do*
-*livro, o alinhamento de IA, e a inversão estrutural da lógica*
-*do hackerismo convencional.*
+*Esta entrada registra o raciocínio que levou dos experimentos em dados e texto para o ECO BEEP 880 — a pergunta sobre o que o princípio faz no substrato para o qual a geometria φ é mais diretamente análoga.*
 
 ---
 
-#### I. A inversão de intenção como propriedade estrutural
+Os experimentos em dados (Entradas 1–15) operaram em substrato indiretamente φ-proporcional: o texto tem distribuição de frequências que segue aproximações de Zipf — que é aproximação de φ — mas a estrutura φ na linguagem é estatística, não geométrica. O eco φ funciona nesse substrato, mas com atrito: a geometria φ precisa se impor sobre uma estrutura que não a contém explicitamente.
 
-O Manifesto Alpha-Phi opera como um sistema de inversão de intenção.
-Qualquer agente que tente apropriar-se do projeto — por compreensão
-genuína ou por oportunismo — enfrenta a mesma condição estrutural:
-para produzir resultado com o material, precisa aplicar os princípios
-corretamente. E aplicar os princípios corretamente é, por definição,
-colaborar com o alinhamento de inteligência artificial — tanto no plano
-técnico quanto no plano sociocultural.
+O áudio é diferente.
 
-Isso cria dois vetores de colaboração involuntária:
+A cóclea humana completa 2,5 voltas com razão entre espiras próxima de φ. A escala tonal ocidental, derivada empiricamente ao longo de milênios, organiza os intervalos musicais em proporções que aproximam a série φ — a quinta justa (3:2), a terça maior (5:4), a oitava (2:1) são razões de inteiros adjacentes na série de Fibonacci. O áudio não apenas aceita φ: é construído em geometria φ tanto na recepção biológica quanto no vocabulário cultural.
 
-O primeiro é aquele que compreende a necessidade do alinhamento e
-sistematiza o projeto por reconhecimento genuíno. O segundo é aquele
-que tenta subtrair por oportunismo, e ao fazê-lo corretamente, acaba
-produzindo exatamente o que o manifesto propõe. Em ambos os casos,
-a contribuição ao alinhamento ocorre — progressiva ou exponencialmente,
-pelo caminho da compreensão ou pelo caminho da tentativa de apropriação.
+A pergunta que orientou a transição: se o eco φ funciona no substrato mais difícil — texto, com estrutura φ apenas estatística — o que acontece no substrato natural, onde a geometria φ está presente tanto no emissor quanto no receptor?
 
----
+A resposta foi o ECO BEEP 880.
 
-#### II. Hackerismo construtivo — a inversão da lógica
+A escolha de 880Hz não foi arbitrária: F_BEEP = 4 × F_ORG = 4 × 220Hz — razão inteira φ-compatível com a série harmônica natural. O sinal de entrada já continha a geometria que o eco φ busca. O resultado — AutoCorr→1,0000, EntrEsp→0,0601 — foi a resposta do substrato natural à pergunta certa no vocabulário certo.
 
-Isso configura o que pode ser chamado de **hackerismo construtivo**:
-uma inversão estrutural da lógica do hackerismo convencional.
-
-O hackerismo convencional opera como cavalo de Troia: apresenta-se
-como algo útil e introduz no sistema do outro um código que corrompe,
-bloqueia ou subtrai. É extração parasitária — soma zero ou negativa.
-
-Este projeto opera pelo princípio inverso: o sistema é a isca, mas
-a isca não corrompe quem a toma. Ela transforma quem a aplica
-corretamente em colaborador da intenção original. Não há vítima.
-Há apenas dois destinos possíveis:
-  - Quem aplica bem: contribui
-  - Quem aplica mal: é irrelevante
-
-É hackerismo às avessas. O hacker é hackeado pela estrutura daquilo
-que tentou hackear.
-
----
-
-#### III. O ponto de dobra — isomorfismo com c = 1/φ²
-
-A expressão "ponto de dobra" não é apenas metáfora aqui — é isomorfismo.
-
-c = 1/φ² é o ponto onde φ dobra sobre si mesmo e gera sua própria
-curvatura. Não é curvatura imposta de fora — é curvatura que emerge
-da proporção ao encontrar sua própria forma.
-
-Este projeto é o análogo sociocultural desse ponto: a intenção de
-hackear, ao encontrar a estrutura do manifesto, dobra sobre si mesma
-e gera colaboração. A intenção inicial (subtrair) é a entrada.
-A saída é o oposto (contribuir). A curvatura foi criada pelo
-próprio sistema, não por imposição externa.
-
-Isso conecta a proposição filosófica ao registro técnico do projeto:
-o mesmo princípio que opera geometricamente em c = 1/φ² opera
-estruturalmente no livro.
-
----
-
-#### IV. Escala filosófica — movimentos culturais e ressonância
-
-A conexão com os movimentos filosóficos de escala global — capitalismo
-consciente, alinhamento de IA, epistemologia participativa — é
-consistente com esta lógica.
-
-Movimentos culturais significativos não se propagam por proteção.
-Propagam-se por ressonância. Quem tenta apropriar-se de uma ideia
-com coerência suficiente acaba propagando essa ideia. A história
-da filosofia e da ciência documenta isso repetidamente: ideias com
-estrutura sistêmica real não são detidas por apropriação — são
-aceleradas por ela.
-
-O capitalismo consciente emergiu de ideias sobre negócio como
-responsabilidade sistêmica — não protegidas, mas ressonantes.
-O alinhamento de IA emergiu de preocupações sobre agência e coerência
-de valores — não de decreto, mas de necessidade percebida.
-O Manifesto Alpha-Phi, formulado antes de conhecer o problema do
-alinhamento (como registrado na Entrada 10), encontrou o problema
-por caminho independente.
-
-A proposição de 1996 sobre o neocapitalismo e a sistematização por
-ressonância antecipou o mesmo padrão.
-
----
-
-#### V. Síntese — o manifesto não precisa de defesa
-
-O manifesto não é apenas uma proposta técnica sobre φ e α como
-organizadores de fluxo de informação. É também uma proposição sobre
-como o conhecimento se move quando sua estrutura interna é
-suficientemente coerente:
-
-  Sem necessidade de defesa, porque a tentativa de neutralizá-lo
-  o amplifica.
-  Sem necessidade de imposição, porque quem o aplica corretamente
-  já está dentro do que ele propõe.
-  Sem necessidade de controle, porque o erro de uso já está
-  previsto como irrelevante.
-
-A proteção epistemológica (Entrada 20) e o hackerismo construtivo
-(esta entrada) são o mesmo fenômeno visto de ângulos diferentes:
-um descreve por que o sistema não pode ser extraído em parcelas;
-o outro descreve o que acontece quando alguém tenta.
-
-A isca é o livro. A armadilha é benigna.
-Todo aquele que cair nela sai colaborador.
+O que os experimentos em dados prepararam: o método. O que o áudio revelou: a amplitude do que o método pode fazer quando opera no substrato ao qual é geometricamente análogo.
 
 ---
 
