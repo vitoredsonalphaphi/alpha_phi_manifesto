@@ -2418,19 +2418,9 @@ Visualizações 3D: eco_v2_phi_3d.png (superfície coupling×seed, clusters PCA,
 **O contexto:**
 
 Durante o desenvolvimento do projeto, o pesquisador compartilhou uma
-pintura a óleo sobre acrílico — série "Flores Astrais", estilo criado
-em 1997. A obra mostra um núcleo luminoso branco irradiando para
-amarelo e laranja, dissolvendo-se progressivamente no escuro, com um
-fio único descendo do centro.
+pintura:
 
-A pergunta colocada: como interpretar a circunstância tecnológica
-mundial, o desenvolvimento do Manifesto Alpha-Phi, as Flores Astrais
-e o estágio sociocultural da humanidade — diante da convergência
-entre ciência e filosofia que o momento representa?
-
----
-
-**O que a imagem mostrou:**
+O que a imagem mostrou:
 
 A estrutura da pintura é idêntica à estrutura do campo_transmorfo
 e da curva de acoplamento: núcleo coerente no centro, transição
