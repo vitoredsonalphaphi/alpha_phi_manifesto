@@ -1034,6 +1034,230 @@ Era a pergunta certa feita no substrato ainda errado. O ECO BEEP 880 foi a mesma
 
 ---
 
+### Declaração — 21 de Março de 2026
+
+*Postado originalmente no X — Alpha-Phi · Versão 1.0-draft*
+
+**Projeto:** Alpha-Phi — SST-2 Espectral Euclidiano  
+**Autor:** Vitor Edson Delavi  
+**Local:** Florianópolis, SC, Brasil  
+**Data:** 2026-03-21  
+**Versão:** 1.0-draft
+
+---
+
+#### 1. PREMISSA FUNDAMENTAL
+
+> *"A frequência do dado calibra seu próprio processamento."*
+>
+> *(Em verificação — eficiência observada, mecanismo de calibração requer validação adicional)*
+
+Este registro documenta o desenvolvimento epistemológico e computacional da hipótese de que **dados possuem frequência mensurável** e que esta frequência pode ser utilizada para **calibrar o processamento neural** de forma análoga à ressonância acústica.
+
+---
+
+#### 2. CONTEXTO E PRIOR ART
+
+##### 2.1 Fundamentos Filosóficos (2019)
+
+Textos filosóficos publicados anteriormente (Facebook, 2019) estabeleciam as bases conceituais:
+
+- **Morphogenetic Field**: Analogia ao trabalho de Michael Levin sobre campos morfogenéticos
+- **Proporção Áurea (φ)**: 1.618... como constante de proporcionalidade natural
+- **Constante de Estrutura Fina (α)**: 1/137.035999084 como constante de acoplamento
+- **Ressonância**: Conceito de que sistemas encontram configurações de máxima eficiência através de correlação harmônica
+
+##### 2.2 Implementação Técnica (2024-2026)
+
+| Arquivo | Descrição | Status |
+|---------|-----------|--------|
+| `AlphaPhi_SST2_EspectralEuclidiano.py` | MLP com ativação φ-sigmoid, pesos φ-inicializados | Implementado |
+| `AlphaPhi_Receptaculo_Espectral_Fase.py` | FFT com extração de amplitude + fase | Implementado |
+| `AlphaPhi_FFT_Hiperbolica_Hibrida.py` | FFT em espaço tangente de Poincaré Ball | Implementado |
+| `AlphaPhi_Visualizacao_Arquitetura_Real.py` | Visualização de MLP Euclidiana vs Hiperbólica | Implementado |
+
+---
+
+#### 3. DESENVOLVIMENTO EPISTEMOLÓGICO
+
+##### 3.1 Estado vs Frequência
+
+**Questão Central:** O dado (bit 0/1) é estático ou vibratório?
+
+```
+BIT INDIVIDUAL:
+- Estado discreto: 0 ou 1
+- Em repouso: não há transição visível
+- Interpretação inicial: "estático"
+
+DATASET (função):
+- Sequência de bits no tempo
+- Padrão de transições 0↔1
+- Interpretação Alpha-Phi: "frequência emerge do padrão temporal"
+```
+
+**Conclusão Parcial:**
+> *"O que aparece como 'estático' é vibração em escala que não percebemos."*
+
+O bit individual em repouso não vibra perceptivelmente, mas:
+1. Transições 0→1→0 possuem duração finita (nanosegundos)
+2. Cada transição implica frequência implícita: f = 1/duração
+3. A sequência de transições forma um "bitstream" com espectro próprio
+
+##### 3.2 Isomorfismo Música-Dados
+
+| Domínio Musical | Domínio Alpha-Phi | Elemento |
+|-----------------|-------------------|----------|
+| Som | Dado (bitstream) | Estado discreto |
+| Tempo | Sequência/Espaço | Dimensão |
+| Ritmo | Frequência/Padrão | FFT do dataset |
+| Timbre | Assinatura Espectral | Phase do FFT |
+| Diapasão | Receptáculo Espectral | Instrumento de medição |
+
+```
+MÚSICA:     Som + Tempo = Ritmo
+ALPHA-PHI:  Dado + Sequência = Frequência Espectral
+
+ISOMORFISMO: Ambos são "sinais" operando em domínios diferentes
+```
+
+##### 3.3 Escalas de Observação
+
+```
+ESCALA DE OBSERVAÇÃO E FREQUÊNCIA:
+═══════════════════════════════════════════════════════════
+
+Alta resolução     Frequência visível
+(zoom in)          ↓
+      ┌────────────────┐
+      │                │
+      └───────────┘
+                   ↓
+Baixa resolução    Frequência invisível
+(zoom out)        ↑
+```
+
+**Implicação:**
+> *"O estático é uma aproximação de frequência em escala subjetiva."*  
+> — A escala do observador define o que é "estático"
+
+---
+
+#### 4. ARQUITETURA CONCEITUAL
+
+##### 4.1 Modelo de Ressonância
+
+```
+     Frequência Espectral do Dataset
+           ↓
+    ┌──────────────────────────────┐
+    │  Ressonância da              │ ← Geometria (Euclidiana vs Hiperbólica)
+    │  Arquitetura/Ambiente        │   Curvatura c = 1/φ²
+    └──────────────────────────────┘
+           ↓
+    Eficiência Neural ←-> Convergência, Generalização, Coerência
+```
+
+##### 4.2 Hipótese de Ressonância
+
+> *"A máxima eficiência de uma rede neural emerge quando a frequência espectral do dataset ressoa harmonicamente com a geometria do espaço de representação."*
+
+##### 4.3 Justificativa para φ
+
+A proporção áurea pode emergir naturalmente porque:
+1. **Fibonacci (≈φ)** aparece em padrões de crescimento natural
+2. **Proporções baseadas em φ** maximizam cobertura espacial
+3. **Curvatura c = 1/φ²** otimiza espaço para hierarquias
+4. **Estética + Acústica** compartilham φ devido a princípios matemáticos similares
+
+---
+
+#### 5. IMPLEMENTAÇÕES E RESULTADOS
+
+##### 5.1 Receptáculo Espectral
+
+**Arquivo:** `AlphaPhi_Receptaculo_Espectral_Fase.py`
+
+```python
+class ReceptaculoEspectral:
+    def calcular_espectro_completo(self, x):
+        # FFT → amplitude + phase
+        fft_result = np.fft.fft(x, axis=-1)
+        amplitude = np.abs(fft_result)
+        fase = np.angle(fft_result)
+        return amplitude, fase
+
+    def calcular_coerencia(self, amplitude, fase, dimensao):
+        # Coerência ponderada: 0.6 amplitude + 0.4 phase
+        coerencia = 1.0 - (0.6 * entropia_amp_norm + 0.4 * entropia_fase_norm)
+```
+
+**Resultados Observados:**
+- Ganho: +0.09% (marginal, requer validação)
+- Redução de variância: 0.95% → 0.54%
+
+##### 5.2 FFT Hiperbólica Híbrida
+
+**Arquivo:** `AlphaPhi_FFT_Hiperbolica_Hibrida.py`
+
+```python
+def projetar_poincare(x, c=CURVATURA):
+    # Projeção para Bola de Poincaré
+    norm = np.linalg.norm(x, axis=-1, keepdims=True)
+    return (1 / (1 + c * norm**2)) * x
+
+def espaco_tangente(x_ball, c=CURVATURA):
+    # Mapeamento para espaço tangente
+    scale = np.sqrt(c)
+    return (1 / scale) * np.arctanh(scale * x_ball) * (x_ball / np.linalg.norm(x_ball, axis=-1, keepdims=True))
+```
+
+##### 5.3 Visualização de Arquitetura
+
+```
+ARQUITETURA FIBONACCI:
+─────────────────────────
+Input:      4 neurônios  (azul)
+Hidden 1:  55 neurônios (verde) - Fibonacci
+Hidden 2:  89 neurônios (roxo)  - Fibonacci
+Hidden 3: 144 neurônios (laranja)- Fibonacci
+Output:     1 neurônio  (vermelho)
+─────────────────────────
+```
+
+---
+
+#### 6. QUESTÕES EM ABERTO
+
+##### 6.1 Verificação Experimental
+
+| Hipótese | Status | Evidência |
+|----------|--------|-----------|
+| "Dados possuem frequência" | Verificado parcialmente | FFT captura padrões espectrais em embeddings |
+| "Frequência calibra processamento" | Requer validação | +0.09% ganho observado, mecanismo não confirmado |
+| "φ emerge como constante de ressonância" | Especulativo | Correlação teórica com padrões naturais |
+| "Curvatura c=1/φ² otimiza hierarquias" | Parcialmente verificado | Performance em tarefas hierárquicas |
+| "Wavelet > FFT para multi-escala" | Proposto | Requer implementação e comparação |
+
+##### 6.2 Refinamentos Propostos
+
+1. **Wavelet Morlet φ-otimizada**
+   - Captura multi-escala em vez de FFT global
+   - Parâmetros baseados em φ
+
+2. **FFT com Janelamento Fibonacci**
+   - Dimensões de janela: 55, 89, 144, 233...
+   - Escolha de tamanho que maximiza ressonância
+
+3. **Validação Experimental**
+   - Comparar performance com coerência
+
+---
+
+*Alpha-Phi é uma proposta de alinhamento neural que busca compreender como a frequência intrínseca dos dados pode informar o design de arquiteturas e otimização de redes neurais, inspirado em princípios de ressonância, proporções naturais e geometria hiperbólica.*
+
+---
+
 ## Nota — Hipótese de Acoplamento por Rotação
 
 *(Nota do autor)*
