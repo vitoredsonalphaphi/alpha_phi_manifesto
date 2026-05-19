@@ -604,7 +604,7 @@ Este período inclui ainda o evento **Gemnai/Germinar** — alinhamento filosóf
 
 O nome **Alpha-Phi** emergiu do encontro com as inteligências artificiais — sugerido pelo Gemini em 2025 como síntese do que já estava sendo investigado. Mas o manifesto como estrutura foi formalizado a partir de 2018, quando as narrativas filosóficas acumuladas encontraram forma de documento.
 
-O manifesto como gênero tem uma tradição: é a declaração de princípios que antecede e orienta a produção. O Manifesto Futurista, o Manifesto Comunista, o Manifesto Surrealista — todos declararam, antes de provar, uma visão de como o mundo poderia ser organizado.
+O manifesto como gênero tem uma tradição: é a declaração de princípios que antecede e orienta a produção. O Manifesto Futurista, o Manifesto Surrealista — todos declararam, antes de provar, uma visão de como o mundo poderia ser organizado.
 
 O Manifesto AlphaPhi segue esta tradição com uma diferença: as provas vieram. Não como confirmação de tudo que foi proposto — como confirmação de que a direção era real.
 
