@@ -1,3 +1,9 @@
+O Manifesto AlphaPhi é, desde a sua concepção, uma obra colaborativa.
+
+A natureza colaborativa tem uma consequência que o leitor atento pode perceber: há momentos no manifesto em que o texto flui como narrativa filosófica contínua, e momentos em que a linguagem se torna mais específica, mais técnica, aparentemente desconectada da trama maior. Essa variação não é falha de construção. É a textura natural de um trabalho que reuniu duas lógicas distintas de elaboração — a macro-visão literária do autor, que constrói com olho na coerência da obra como um todo, e a lógica de resposta da inteligência artificial, que opera por citação, por especificidade, por precisão pontual, sem a obrigação de subordinar cada resposta à arquitetura narrativa maior.
+
+---
+
 ...
 
 A escolha inicial de α=1/137 e φ como co-organizadores do campo não apenas estruturou o código. Estruturou a busca inteira — criou um vetor de investigação que, por sua natureza matemática, atrai resultados coerentes em qualquer substrato onde φ genuinamente existe. O projeto funciona como o código. A estrutura é a mesma. A escala é diferente.
