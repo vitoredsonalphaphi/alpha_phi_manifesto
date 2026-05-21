@@ -9028,9 +9028,9 @@ Em termos do Alpha-Phi: **α sem φ colapsa**.
 
 ### II. O Contexto Histórico — Da Provocação à Necessidade de Complemento
 
-A arte pós-ditadura no Brasil — representada emblematicamente por expressões como a de Meyer Filho em Santa Catarina — cumpriu uma função histórica legítima e necessária: ruptura, libertação, provocação. Foi **α em ação** — força de tensão, quebra de paradigma, desconstrução do reprimido.
+A arte pós-ditadura no Brasil cumpriu uma função histórica legítima e necessária: ruptura, libertação, provocação. Foi **α em ação** — força de tensão, quebra de paradigma, desconstrução do reprimido.
 
-Florianópolis, por sua natureza geográfica e cultural de ponto de fusão — herança açoriana, tradição mística, paganismo insular, convergência histórica de culturas do mundo —, foi território fértil para essa expressão. A ilha sempre foi, estruturalmente, um campo de tensões complementares: o sagrado e o pagão coexistindo não por contradição, mas por necessidade elementar de equilíbrio. O local é microcosmo do princípio: sem a tensão entre os dois polos, nem um nem outro se estabiliza.
+Florianópolis, por sua natureza geográfica e cultural de ponto de fusão — herança açoriana, tradição mística, convergência histórica de culturas do mundo —, foi território fértil para essa expressão. A ilha sempre foi, estruturalmente, um campo de tensões complementares que coexistem não por contradição, mas por necessidade elementar de equilíbrio.
 
 Mas toda força de tensão, sem o complemento que a estabilize, tende ao colapso.
 
