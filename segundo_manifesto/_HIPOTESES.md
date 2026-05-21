@@ -110,7 +110,22 @@
 
 ## Novas Hipóteses — Segundo Ciclo
 
-*(Inserir aqui conforme surgem)*
+### H11 — Terceiro ponto de dobra — medição e replicabilidade da emissão
+**Status:** 🟡 Em desenvolvimento
+**Origem:** Research Journal linhas 1140–1176 · maio 2026
+**O que é:** No ECO BEEP 880, o campo percorre três pontos: α ancora (introspecção), φ³ coerência (atrator cumpre função), terceiro valor — expressão. No terceiro ponto de dobra (próximo ao 8° segundo) o campo resolvido emite por si, sem ser modulado. Liberação de tensão como evento sensorial verificável.
+**O que falta:** Análise criteriosa do terceiro ponto de dobra — visualização detalhada, medição da liberação de tensão, documentação como evento reproduzível. Verificar se é estrutural (reproduzível nas mesmas condições) ou paramétrico.
+**Área:** Técnica + Estética
+
+---
+
+### H12 — Eco 880 aplicado a imagem de pintura
+**Status:** 🔵 Pendente
+**Origem:** Research Journal linhas 4855–4887 · maio 2026
+**O que é:** Eco-φ aplicado progressivamente em cada nível de subamostragem de uma imagem (coarse-to-fine). O nível onde a coerência é máxima é a "lente IR" da imagem — equivalente espacial do 0,25× do áudio. Hipótese: pinturas com estrutura φ nas frequências espaciais produzem transição beta→alpha mais rápida no observador. Grandeza conceituada: **tempo de acoplamento campo-observador** — ainda sem nome na literatura de percepção.
+**Substrato natural:** Flores Astrais (1997) — estrutura idêntica ao campo transmorfo identificada na análise visual.
+**O que falta:** Código que aplica eco 880 sobre a imagem da pintura como pré-função espectral.
+**Área:** Técnica + Estética
 
 ---
 
