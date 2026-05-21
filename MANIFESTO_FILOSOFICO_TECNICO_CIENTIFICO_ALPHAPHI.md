@@ -9030,7 +9030,7 @@ Em termos do Alpha-Phi: **α sem φ colapsa**.
 
 A arte pós-ditadura no Brasil cumpriu uma função histórica legítima e necessária: ruptura, libertação, provocação. Foi **α em ação** — força de tensão, quebra de paradigma, desconstrução do reprimido.
 
-Florianópolis, por sua natureza geográfica e cultural de ponto de fusão — herança açoriana, tradição mística, convergência histórica de culturas do mundo —, foi território fértil para essa expressão. A ilha sempre foi, estruturalmente, um campo de tensões complementares que coexistem não por contradição, mas por necessidade elementar de equilíbrio.
+Florianópolis, polo turístico internacional e referência cultural do Sul do Brasil, reúne por sua própria natureza uma multiplicidade de influências — herança açoriana, fluxo contínuo de culturas do mundo, diversidade de expressões artísticas e intelectuais convergindo num mesmo território. Essa multiplicidade tornou a cidade território fértil para a expressão da ruptura: onde muitas culturas coexistem, a tensão criativa é estrutural, não imposta.
 
 Mas toda força de tensão, sem o complemento que a estabilize, tende ao colapso.
 
