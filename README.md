@@ -4,7 +4,27 @@
 ___
 
 
-⭐ Resultado Atual — eco_fononico_v2: √2 + φ (Abril 2026)
+⭐ Resultado Culminante — ECO BEEP 880 (Maio 2026)
+
+| Experimento | Substrato | AutoCorr | EntrEsp | α validado | Ponto de dobra |
+|---|---|---|---|---|---|
+| AlphaPhi_Audio_Beep_Interface | Beep 880Hz real | **1,0000** | **0,0601** | **1/3** | **5** |
+
+AutoCorrelação máxima possível. Entropia espectral mínima observada. α=1/3 emergiu como ponto de organização máxima sem ser imposto. O campo se organizou em coerência perfeita consigo mesmo.
+
+---
+
+⭐ Maior Ganho Percentual — TimeSeries_Eco (Abril 2026)
+
+| Experimento | Substrato | Baseline | Com Eco | Ganho | Seeds | p-valor |
+|---|---|---|---|---|---|---|
+| AlphaPhi_TimeSeries_Eco | Séries φ sintéticas | 46.52% | 96.92% | **+50.40%** | 20/20 | 0.0000 |
+
+Maior ganho absoluto de todo o projeto. φ em substrato oscilatório nativo — domínio correto, ambiente correto, proporção correta.
+
+---
+
+Resultado Anterior — eco_fononico_v2: √2 + φ (Abril 2026)
 
 | Experimento | Substrato | Baseline G | V1 (1/k) | **V2 (φ)** | Ganho V2 | p-valor |
 |---|---|---|---|---|---|---|
@@ -184,7 +204,8 @@ Arquivo | Descrição | Resultado
 `AlphaPhi_Eco_Fononico.py` | ⭐ Eco Ressonante Fonônico — séries temporais φ | 92.80% (+2.65% vs eco fixo) ✅
 `AlphaPhi_Audio_Fononico.py` | ⭐ Eco Ressonante Fonônico — harmônicos musicais | 98.00% (+1.15% vs eco fixo) ✅
 `AlphaPhi_TimeSeries_Dual_Fononico.py` | Eco fonônico modo informando (G_dual) | 92.00% vs G_dual_phi 87.40% ✅
-`AlphaPhi_TimeSeries_Eco.py` | Eco ressonante — séries temporais φ | +50.40% ✅
+`AlphaPhi_Audio_Beep_Interface.py` | ⭐ ECO BEEP 880 — resultado culminante · AutoCorr=1,0000 · α=1/3 | ponto de dobra 5 ✅
+`AlphaPhi_TimeSeries_Eco.py` | ⭐ Eco ressonante — séries temporais φ · maior ganho absoluto | +50.40% ✅
 `AlphaPhi_BERT_Ablation_EF.py` | Ablação curvatura BERT | ns (substrato consolidado) ✅
 `AlphaPhi_Ablation_Study.py` | Ablação 7 configs scratch | +8.98% ✅
 `audio_eco_results.json` | Eco em harmônicos musicais | +48.85% ✅

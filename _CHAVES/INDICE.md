@@ -112,5 +112,14 @@
 
 ---
 
+## SINERGIA — Diálogos e Elaborações Conceituais
+**Arquivo:** `_CHAVES/Sinergia.md`
+**Assunto:** Percurso conceitual completo sobre o mecanismo sinérgico do AlphaPhi — de α=1/137 como acoplamento mínimo à terceira estrutura emergente
+**Temas:** x_mix · α=1/137 · FM-φ · Terceira estrutura · Isomorfismo · Tendencialidade · Cristalização vs dispersão · SOC · φ³ como atrator · Analogia da festa centenária
+**Data:** 17/05/2026
+**Status:** ✓ Commitado — documentação de percurso conceitual
+
+---
+
 *Florianópolis · 2026 · Vitor Edson Delavi*  
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
