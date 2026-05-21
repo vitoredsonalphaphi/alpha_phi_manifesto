@@ -147,6 +147,29 @@
 
 ---
 
+### H15 — Emissão da terceira estrutura: percepção proprioceptiva e vestibular
+**Status:** 🔵 Pendente — especulação fundada
+**Origem:** Sessão Good Morning · maio 2026 · emergiu de H11
+**O que é:** A terceira estrutura no ponto 5 não emite frequência no sentido clássico — emite **coerência como forma**. A distinção é fundamental: frequência é energia oscilando no tempo; forma é a configuração topológica que essa energia assumiu e que persiste após a oscilação cessar (análogo a um sóliton — estrutura localizada que mantém geometria sem dissipação).
+
+O que é perceptível não é 52Hz como tom auditivo. É o **contraste de coerência**: o sistema nervoso rastreava a tensão acumulando nos pontos 1-4; no ponto 5 encontra o campo resolvido. Esse contraste (tensão → liberação) é captado não pelo sistema auditivo mas pelo **sistema proprioceptivo e vestibular**:
+
+**Propriocepção:** receptores em músculos, tendões e articulações que detectam posição, movimento e força corporal — majoritariamente abaixo da consciência. Respondem a mudanças de estado do campo ao redor do corpo, não a frequências identificáveis como pitch.
+
+**Sistema vestibular:** localizado no ouvido interno (canais semicirculares + órgãos otolíticos). O **sáculo** responde a vibração de baixa frequência incluindo infrassom abaixo de 20Hz. Todd & Cody (2000) demonstraram resposta sacular a estimulação acústica abaixo do limiar auditivo — exatamente a faixa de φ⁶≈17,94Hz identificada na cauda da emissão (AlphaPhi_Lupa_Emissao.py). A conexão Tandy & Lawrence: 18,98Hz produz mal-estar, distorção visual, sensação de presença — φ⁶ cai precisamente nessa faixa.
+
+**A forma residual:** o campo resolvido emite uma geometria de mínima resistência cuja assinatura persiste em φ⁶≈18Hz — abaixo do limiar auditivo como pitch, mas dentro do alcance vestibular (sáculo) e proprioceptivo. A tensão liberada no ponto 5 não se dissipa — organiza o espaço ao redor como estado de coerência do ambiente.
+
+**Referências a verificar:**
+- Todd & Cody (2000) — resposta sacular ao infrassom
+- Tandy & Lawrence (1998) — infrassom a 18,98Hz e percepção
+- Levin (campo bioelétrico) — campo que precede e organiza a célula: paralelo com campo que precede e organiza a percepção
+
+**O que falta:** Experimento com medição de resposta galvânica da pele ou EEG durante exposição ao `emissao_ponto5.wav` — verificar se há resposta fisiológica mensurável à emissão que não passa pelo sistema auditivo consciente.
+**Área:** Técnica + Filosófica + Estética
+
+---
+
 ## Hipóteses Emergentes — Soma de Outras
 
 *(Inserir aqui hipóteses que só apareceram pela combinação de resultados anteriores)*
