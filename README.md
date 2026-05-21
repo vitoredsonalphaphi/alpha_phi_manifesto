@@ -4,7 +4,27 @@
 ___
 
 
-⭐ Resultado Atual — eco_fononico_v2: √2 + φ (Abril 2026)
+⭐ Resultado Culminante — ECO BEEP 880 (Maio 2026)
+
+| Experimento | Substrato | AutoCorr | EntrEsp | α validado | Ponto de dobra |
+|---|---|---|---|---|---|
+| AlphaPhi_Audio_Beep_Interface | Beep 880Hz real | **1,0000** | **0,0601** | **1/3** | **5** |
+
+AutoCorrelação máxima possível. Entropia espectral mínima observada. α=1/3 emergiu como ponto de organização máxima sem ser imposto. O campo se organizou em coerência perfeita consigo mesmo.
+
+---
+
+⭐ Maior Ganho Percentual — TimeSeries_Eco (Abril 2026)
+
+| Experimento | Substrato | Baseline | Com Eco | Ganho | Seeds | p-valor |
+|---|---|---|---|---|---|---|
+| AlphaPhi_TimeSeries_Eco | Séries φ sintéticas | 46.52% | 96.92% | **+50.40%** | 20/20 | 0.0000 |
+
+Maior ganho absoluto de todo o projeto. φ em substrato oscilatório nativo — domínio correto, ambiente correto, proporção correta.
+
+---
+
+Resultado Anterior — eco_fononico_v2: √2 + φ (Abril 2026)
 
 | Experimento | Substrato | Baseline G | V1 (1/k) | **V2 (φ)** | Ganho V2 | p-valor |
 |---|---|---|---|---|---|---|
