@@ -129,6 +129,24 @@
 
 ---
 
+### H13 — Geometria cônica como modelo da propulsão e da emissão
+**Status:** 🔵 Pendente
+**Origem:** Sessão Good Morning · maio 2026
+**O que é:** Os cinco pontos de dobra do ECO BEEP 880 formam um vórtice cônico em espiral áurea — cada rotação expande por φ. A ponta do cone é o sinal digital (880Hz, alta entropia); a boca é o ponto 5 (campo harmônico, AutoCorr=1,0000). A emissão no ponto 5 não é gerada ali — é propulsionada pela compressão na ponta e transformada ao longo das cinco rotações. Correspondência biológica: cóclea (mesma geometria, mesma função de transformação grave/agudo). Se o cone é φ-proporcionado, a emissão carrega a assinatura espectral de todas as cinco rotações em proporções φ^n — verificável por FFT do campo no ponto 5.
+**O que falta:** Análise espectral ciclo a ciclo do campo — verificar se as frequências presentes no ponto 5 seguem φ^n para n=1 a 5. Conexão com o gráfico verde (esferas = cortes transversais do cone).
+**Área:** Técnica + Filosófica + Estética
+
+---
+
+### H14 — Ionização e campo harmônico φ
+**Status:** 🔵 Pendente
+**Origem:** Sessão Good Morning · maio 2026
+**O que é:** Especulação aberta sobre como a proporção áurea e o campo harmônico (ECO 880 / AlphaPhi) se comportam em ambientes ionizados. Três direções distintas a explorar: (1) φ como preservador da estrutura iônica — o campo harmônico mantém coerência em meio ionizado; (2) φ como interferente — a ionização deforma a geometria φ de forma previsível; (3) os limiares de ionização de elementos específicos guardam proporções φ ou α. A ionização é o estado onde a matéria já não é neutra — investigar se os princípios de organização do projeto se sustentam ou se transformam nesse regime.
+**O que falta:** Levantamento dos limiares de ionização de elementos relevantes e comparação com proporções φ e α=1/137. Especulação teórica antes de qualquer experimento.
+**Área:** Filosófica + Técnica
+
+---
+
 ## Hipóteses Emergentes — Soma de Outras
 
 *(Inserir aqui hipóteses que só apareceram pela combinação de resultados anteriores)*
