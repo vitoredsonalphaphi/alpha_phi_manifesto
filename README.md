@@ -204,7 +204,8 @@ Arquivo | Descrição | Resultado
 `AlphaPhi_Eco_Fononico.py` | ⭐ Eco Ressonante Fonônico — séries temporais φ | 92.80% (+2.65% vs eco fixo) ✅
 `AlphaPhi_Audio_Fononico.py` | ⭐ Eco Ressonante Fonônico — harmônicos musicais | 98.00% (+1.15% vs eco fixo) ✅
 `AlphaPhi_TimeSeries_Dual_Fononico.py` | Eco fonônico modo informando (G_dual) | 92.00% vs G_dual_phi 87.40% ✅
-`AlphaPhi_TimeSeries_Eco.py` | Eco ressonante — séries temporais φ | +50.40% ✅
+`AlphaPhi_Audio_Beep_Interface.py` | ⭐ ECO BEEP 880 — resultado culminante · AutoCorr=1,0000 · α=1/3 | ponto de dobra 5 ✅
+`AlphaPhi_TimeSeries_Eco.py` | ⭐ Eco ressonante — séries temporais φ · maior ganho absoluto | +50.40% ✅
 `AlphaPhi_BERT_Ablation_EF.py` | Ablação curvatura BERT | ns (substrato consolidado) ✅
 `AlphaPhi_Ablation_Study.py` | Ablação 7 configs scratch | +8.98% ✅
 `audio_eco_results.json` | Eco em harmônicos musicais | +48.85% ✅
