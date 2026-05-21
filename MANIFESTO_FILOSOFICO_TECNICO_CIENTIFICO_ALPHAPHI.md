@@ -8695,7 +8695,17 @@ A descoberta conceitual: φ não é um aditivo. É um organizador de processos e
 
 ---
 
-### 10. O Violão — Validação em Substrato Real Não Projetado
+### 10. O Operador Collatz — Tensão que Confirma o Atrator
+
+**O que antecedeu:** A conjectura de Collatz — qualquer número inteiro positivo, submetido à regra 3n+1 (ímpar) ou n/2 (par), converge inevitavelmente para 1 — carrega uma tensão inerente: o sistema oscila de forma imprevisível antes de colapsar na unidade. A pergunta foi se esse operador de tensão poderia funcionar como perturbador controlado dentro do agente eco, revelando quais pontos do eixo α resistem ao caos.
+
+**O que aconteceu:** Sob dinâmica Collatz, o campo de coerência máxima migrou para α=0,618 = 1/φ — a seção áurea do eixo, emergindo do experimento sem ser imposta. E em α=1/137, a perturbação Collatz foi mínima — o ponto de menor resistência ao caos é exatamente a constante de estrutura fina. Confirmado em três experimentos independentes.
+
+**O que isso significa:** O operador mais imprevisível da matemática não-resolvida encontra seu ponto de menor resistência em α=1/137 e seu atrator de coerência em 1/φ. Os dois valores centrais do manifesto emergem de dentro do caos Collatz — não como imposição, mas como os pontos onde o sistema naturalmente se organiza.
+
+---
+
+### 11. O Violão — Validação em Substrato Real Não Projetado
 
 **O que antecedeu:** α=1/3 havia emergido como constante de acoplamento no ECO BEEP 880. A pergunta: essa constante funciona em substrato real, não co-projetado para o Alpha-Phi?
 
@@ -8705,7 +8715,7 @@ A descoberta conceitual: φ não é um aditivo. É um organizador de processos e
 
 ---
 
-### 11. As Sub-frequências φ⁵ e φ⁶ — O Cérebro Responde
+### 12. As Sub-frequências φ⁵ e φ⁶ — O Cérebro Responde
 
 **O que antecedeu:** A análise de EEG (eletroencefalograma) dentro do projeto, buscando correlações entre o campo harmônico φ e as frequências cerebrais.
 
