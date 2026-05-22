@@ -120,7 +120,7 @@
 ---
 
 ### H12 — Eco 880 aplicado a imagem de pintura
-**Status:** 🔵 Pendente
+**Status:** 🔵 Pendente — ver também H16 (modulação de luz)
 **Origem:** Research Journal linhas 4855–4887 · maio 2026
 **O que é:** Eco-φ aplicado progressivamente em cada nível de subamostragem de uma imagem (coarse-to-fine). O nível onde a coerência é máxima é a "lente IR" da imagem — equivalente espacial do 0,25× do áudio. Hipótese: pinturas com estrutura φ nas frequências espaciais produzem transição beta→alpha mais rápida no observador. Grandeza conceituada: **tempo de acoplamento campo-observador** — ainda sem nome na literatura de percepção.
 **Substrato natural:** Flores Astrais (1997) — estrutura idêntica ao campo transmorfo identificada na análise visual.
@@ -167,6 +167,15 @@ O que é perceptível não é 52Hz como tom auditivo. É o **contraste de coerê
 
 **O que falta:** Experimento com medição de resposta galvânica da pele ou EEG durante exposição ao `emissao_ponto5.wav` — verificar se há resposta fisiológica mensurável à emissão que não passa pelo sistema auditivo consciente.
 **Área:** Técnica + Filosófica + Estética
+
+---
+
+### H16 — Modulação da frequência de luz na pintura
+**Status:** 🔵 Pendente — especulação fundada
+**Origem:** Sessão Good Morning · maio 2026 · emergiu de H12 e H15
+**Documento completo:** `segundo_manifesto/H16_modulacao_luz_pintura.md`
+**O que é:** Se o bipe gerou terceira estrutura por modulação de frequência sonora, a pintura pode gerar terceira estrutura por modulação de frequência de luz. Cada canal de cor (R,G,B) tratado como sinal espacial 1D — eco-φ aplicado coarse-to-fine sobre as frequências espaciais da imagem, buscando o ponto de mínima entropia espacial (equivalente visual do ponto 5). A dimensão fractal D (Taylor/Pollock: D≈1,67 em obras maduras) como métrica da coerência espacial — análoga ao AutoCorr do bipe. Substrato natural: Flores Astrais (1997).
+**Área:** Técnica + Estética
 
 ---
 
