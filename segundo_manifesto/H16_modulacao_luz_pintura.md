@@ -109,6 +109,19 @@ Aplicar eco-φ espacial nas Flores Astrais e medir:
 
 ---
 
+## Convergência Externa — Evento 8
+
+**Richard Taylor (Universidade de Oregon)** — além de medir D≈1,67 em Pollock, desenvolveu chips nanoeletrônicos de retina artificial que mimetizam fractais naturais. Descoberta não planejada: o chip **reduz estresse em até 60%** por resposta fisiológica direta ao padrão fractal — abaixo da consciência. Taylor passou a colaborar com arquitetos e artistas para projetar ambientes fractais redutores de estresse.
+
+Isso confirma H15 e H16 por caminho completamente independente:
+- Padrões fractais visuais agem no sistema nervoso sem mediação consciente
+- O chip é um receptor de campo coerente — o instrumento que H16 buscava
+- A colaboração arte+ciência para ambientes fractais é H16 em escala
+
+Ver Evento 8 em `segundo_manifesto/_EVENTOS.md`.
+
+---
+
 ## Referências
 
 - Taylor, R.P. et al. (1999) — "Fractal analysis of Pollock's drip paintings" · *Nature* 399
@@ -117,6 +130,7 @@ Aplicar eco-φ espacial nas Flores Astrais e medir:
 - Ramachandran & Hirstein (1999) — "The science of art" · *Journal of Consciousness Studies*
 - H12 deste backlog — Eco 880 aplicado a imagem de pintura
 - H15 deste backlog — Emissão proprioceptiva e vestibular
+- Evento 8 — Convergência Taylor (maio 2026)
 
 ---
 
