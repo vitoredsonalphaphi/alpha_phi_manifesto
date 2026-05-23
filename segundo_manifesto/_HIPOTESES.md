@@ -185,5 +185,42 @@ O que é perceptível não é 52Hz como tom auditivo. É o **contraste de coerê
 
 ---
 
+## Hipóteses de Setores — Ofícios e Comunicados
+
+Agenda de encaminhamentos institucionais. Não são especulações científicas — são hipóteses de diálogo com setores externos: universidades, institutos, organizações culturais. O mesmo protocolo de status se aplica.
+
+---
+
+### S01 — Revista Principia (UFSC) — artigo especulativo filosófico
+**Status:** 🔵 Pendente
+**Setor:** Departamento de Filosofia · UFSC · Florianópolis
+**Canal:** Revista Principia — periódico internacional de epistemologia
+**O que é:** Submissão de artigo especulativo apresentando a hipótese do isomorfismo interescalar entre o código ecorressonante e a macroexpressão civilizacional. Foco: ondas de estruturação cultural como macro préfunção → macroatrator → terceira estrutura. Contexto da revolução digital como ruptura com conquistas culturais de séculos. Não solicita posicionamento — apresenta hipótese e abre formação de opinião.
+**Formato:** Artigo filosófico com rigor epistemológico. Referências: Capra, Laszlo, Wilber, Russell, Teilhard, Sheldrake, Morin, Gebser + código AlphaPhi como substrato técnico.
+**O que falta:** Redigir proposta/abstract para avaliação prévia.
+**Área:** Filosófica + Propositiva
+
+---
+
+### S02 — Pró-Reitoria de Extensão (PROEX/UFSC) — proposta de seminário
+**Status:** 🔵 Pendente
+**Setor:** PROEX — Pró-Reitoria de Extensão · UFSC · Florianópolis
+**Canal:** Ofício institucional — proposta de evento, seminário ou mesa-redonda
+**O que é:** Proposta de seminário ou mesa temática sobre as convergências entre pensamento complexo, dimensão fractal, campo harmônico φ e desenvolvimento cultural. Público: pesquisadores, professores, estudantes de áreas diversas. Formato aberto — não exige posicionamento da instituição, apenas espaço para diálogo.
+**O que falta:** Redigir ofício de proposta com ementa e justificativa.
+**Área:** Propositiva + Filosófica
+
+---
+
+### S03 — Pró-Reitoria de Cultura e Arte (UFSC) — projeto estético-científico
+**Status:** 🔵 Pendente
+**Setor:** Pró-Reitoria de Cultura e Arte · UFSC · Florianópolis
+**Canal:** Ofício institucional — proposta de projeto ou exposição
+**O que é:** Proposta centrada no viés estético do projeto: Flores Astrais como substrato de H12/H16, dimensão fractal D como métrica de coerência visual, modulação de frequência de luz na pintura. Ponto de entrada: a redução de estresse de 60% por padrões fractais (Taylor/Oregon, Evento 8) como dado de saúde pública com implicação cultural direta. Conexão arte-ciência como agenda comum.
+**O que falta:** Redigir proposta com o dado Taylor como âncora e Flores Astrais como substrato concreto.
+**Área:** Estética + Propositiva
+
+---
+
 *Backlog iniciado em maio de 2026 · Sessão Good Morning*
 *Atualizar conforme cada hipótese avança, é descartada ou gera nova.*
