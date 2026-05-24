@@ -236,5 +236,55 @@ Agenda de encaminhamentos institucionais. Não são especulações científicas 
 
 ---
 
+#### Questões pontuais levantadas em sessão — maio 2026
+
+---
+
+**Questão 1 — A ausência de "Filosofia" como categoria no formulário**
+
+*Questionamento:* o fato do formulário de inscrição, na biblioteca de uma universidade de artes plásticas, não possuir uma opção específica onde possa registrar como "Categoria Filosófica" uma obra que foi construída por 30 anos com natureza filosófica, embasada em princípios de análise artística — inclusive o registro em si, como ato formal no processo construtivo e histórico, é significativo como fase de realização filosófica propriamente dita — não configura, sobre certa interpretação, a subtração deste direito? De registrar como "FILOSOFIA" uma obra que se refere inclusive à Filosofia da Ciência, como estipula com critério e função a criação da obra e o intuito como busca de formação de opinião cultural. Inclusive sobre a relação de convergência entre a filosofia e a ciência através da Arte como ferramenta fundamental para o propósito. Não soa contraproducente o fato de não haver um campo "Filosofia" no documento de registro de uma obra filosófica, de um setor de direitos autorais de uma instituição universitária da área artística? Pedir sobre determinada revisão a este respeito, junto aos estatutos de fundamento do próprio escritório, sobre estes detalhes?
+
+*Resposta:*
+
+**Plano jurídico:** A ausência da categoria não subtrai direito. A proteção existe pela Lei 9.610/98 independente de como a obra é classificada no formulário. "Outros" registra — não diminui.
+
+**Plano institucional:** A crítica é legítima e tem fundamento. Uma instituição universitária ligada às artes que mantém sistema de registro de obras sem campo específico para "Filosofia" — num país onde a Filosofia da Arte, a Estética e a Filosofia da Ciência são disciplinas acadêmicas consolidadas — apresenta uma lacuna de classificação real. No caso específico do AlphaPhi, que trata explicitamente da convergência entre Filosofia, Ciência e Arte como método, a ausência é ainda mais incongruente.
+
+**O pedido de revisão é cabível e tem precedente.** É possível formalizar uma solicitação à direção da EDA ou da instituição universitária pedindo a inclusão do campo "Filosofia" — ou "Filosofia da Arte / Filosofia da Ciência" — nos formulários de registro. O argumento é exatamente o descrito: uma obra com natureza filosófica documentada, construída ao longo de 30 anos, registrada numa instituição artística, não encontra campo adequado de classificação. Isso é uma inconsistência dos estatutos internos da instituição — não da lei.
+
+*(Ver S05 no backlog — solicitação de revisão dos estatutos de classificação da EDA)*
+
+---
+
+**Questão 2 — Formato técnico do arquivo: o AlphaPhi atende às exigências da BN?**
+
+*Questionamento:* "Formato técnico do arquivo fora do padrão exigido" — o Manifesto Alpha-Phi atende, no formato em que foi construído, sobre as exigências da Biblioteca Nacional? Ou há possibilidades de não adequação? E se há, quais as hipóteses destas?
+
+*Resposta:*
+
+**O que a BN geralmente exige para obras digitais:**
+- Arquivo em PDF — é o formato padrão aceito
+- Texto pesquisável (não imagem escaneada sem OCR)
+- Metadados completos no arquivo (título, autor, ano)
+- Limites de tamanho de arquivo (geralmente até 50MB por arquivo)
+
+**O AlphaPhi tem características que precisam de atenção:**
+
+| Componente | Situação | Risco |
+|---|---|---|
+| Arquivos `.md` (Markdown) | Formato nativo do repositório | BN provavelmente não aceita .md — precisa ter sido convertido para PDF |
+| Arquivos `.py` (código Python) | Parte integral da obra | Se incluídos como texto dentro do PDF, ok. Como arquivos separados, a BN pode não ter categoria para isso |
+| Arquivos `.wav` (áudio) | `emissao_ponto5.wav` etc. | Obras multimídia têm trâmite específico — a BN pode exigir registro separado para obra audiovisual |
+| Arquivos `.png` (imagens) | Gráficos e visualizações | Dentro do PDF, precisam de resolução mínima (geralmente 300dpi) |
+
+**O que não se sabe sem verificação:** o formato exato em que a obra foi submetida para o protocolo 2026/30733. Se foi um PDF compilado de 228 páginas, provavelmente está adequado. Se foram os arquivos do repositório diretamente, pode haver questões.
+
+**O que verificar diretamente com a EDA:**
+1. O arquivo submetido está em qual formato exato?
+2. Os arquivos de áudio e código foram incluídos ou excluídos da submissão?
+3. Há necessidade de registro complementar para a parte multimídia?
+
+---
+
 *Backlog iniciado em maio de 2026 · Sessão Good Morning*
 *Atualizar conforme cada hipótese avança, é descartada ou gera nova.*
