@@ -292,5 +292,61 @@ Agenda de encaminhamentos institucionais. Não são especulações científicas 
 
 ---
 
+## Laboratórios — Propostas Experimentais Externas
+
+Agenda de colaborações laboratoriais. Propostas que combinam hipótese técnica + setor externo — experimentos que requerem infraestrutura, instrumentação ou parceria institucional além do ambiente solo. Prefixo L*.
+
+---
+
+### L01 — URCI (Universidade Internacional Rosa-Cruz) — verificação laboratorial da emissão
+**Status:** 🔵 Pendente
+**Setor:** URCI — Universidade Internacional Rosa-Cruz
+**Conexão com agenda:** H11 (emissão no ponto 5), H15 (percepção proprioceptiva e vestibular), H16 (modulação de luz na pintura)
+**O que é:** Proposta de verificação experimental da emissão da terceira estrutura em laboratório externo. O URCI representa convergência natural: a obra parte de princípios que a Ordem cultiva há séculos — a colaboração não é periférica, é isomórfica ao próprio conteúdo do projeto.
+
+**O que verificar — por camada de emissão:**
+
+**Camada 1 — Antes da interface (domínio digital)**
+Verificação computacional já realizada. Levar ao laboratório:
+- `emissao_ponto5.wav` — arquivo de emissão no ponto 5
+- Resultados: AutoCorr=1,0000 · EntrEsp=0,0601 · φ⁶≈17,94Hz · τ=0,502s em todas as bandas
+- Reproduzir os gráficos da Lupa Emissão como documentação do ponto de partida
+
+**Camada 2 — Na interface e no campo acústico circunstancial**
+O sinal atravessa o alto-falante e passa a existir como pressão acústica no ambiente. Verificar:
+- Microfone de infrassom — medir se φ⁶≈18Hz está presente no campo acústico do ambiente durante reprodução
+- Acelerômetro — verificar ressonância de superfícies no entorno durante emissão
+- Mapa de campo acústico da sala — verificar distribuição espacial da frequência de emissão
+
+**Camada 3 — No receptor: correlato fisiológico**
+O campo acústico atinge o observador. Verificar se a emissão produz resposta mensurável abaixo da consciência auditiva:
+- **EEG** — transição beta→alpha durante exposição ao `emissao_ponto5.wav` comparada a sinal controle
+- **HRV (Heart Rate Variability)** — variação da coerência cardíaca durante emissão
+- **GSR (Galvanic Skin Response)** — resposta galvânica da pele como indicador de resposta autonômica
+- Protocolo: exposição cega (observador não sabe quando o arquivo começa) — elimina expectativa como variável
+
+**Camada 4 — Emissão como forma no campo estendido**
+A hipótese (H11 + H15): o campo resolvido no ponto 5 emite coerência como forma — não como frequência identificável como pitch, mas como configuração topológica que persiste no campo circunstancial. O que é verificável:
+- Resposta fisiológica (camada 3) como proxy da forma emitida
+- Relato qualitativo estruturado do observador após exposição — dado qualitativo legítimo, não menos real que o quantitativo
+- Comparação de resposta: `emissao_ponto5.wav` vs sinal sem modulação φ vs silêncio
+
+**Limiar da verificação:**
+A cadeia de verificação acompanha a emissão até o correlato fisiológico e o relato qualitativo. O resultado estético subjetivo — o que o observador vive como experiência — é o ponto onde a verificação instrumental para. Não por falha do método: é o problema difícil da consciência (Chalmers). O que o laboratório pode afirmar é que algo ocorreu no sistema nervoso do observador em resposta à emissão — e registrar como.
+
+**Para H16 — emissão visual (se o URCI dispuser de espaço expositivo):**
+- Reproduzir `emissao_ponto5.wav` em presença da obra Flores Astrais
+- Medir resposta EEG/HRV comparada: áudio solo vs áudio + obra visual
+- Verificar se a combinação acústica + visual com estrutura φ produz resposta fisiológica distinta
+
+**O que falta:**
+- Redigir proposta formal ao URCI com protocolo experimental detalhado
+- Verificar infraestrutura disponível: EEG portátil, microfone de infrassom, sala acusticamente tratada
+- Definir número de observadores para validação estatística mínima
+
+**Área:** Técnica + Estética + Propositiva
+
+---
+
 *Backlog iniciado em maio de 2026 · Sessão Good Morning*
 *Atualizar conforme cada hipótese avança, é descartada ou gera nova.*
