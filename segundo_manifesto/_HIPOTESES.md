@@ -277,11 +277,7 @@ Agenda de encaminhamentos institucionais. Não são especulações científicas 
 | Arquivos `.wav` (áudio) | `emissao_ponto5.wav` etc. | Obras multimídia têm trâmite específico — a BN pode exigir registro separado para obra audiovisual |
 | Arquivos `.png` (imagens) | Gráficos e visualizações | Dentro do PDF, precisam de resolução mínima (geralmente 300dpi) |
 
-**Formato confirmado:** PDF compilado de 228 páginas — é o formato padrão aceito pela BN. O risco de não adequação por formato de arquivo está eliminado.
-
-**O que permanece a verificar diretamente com a EDA:**
-1. Os arquivos de áudio (`.wav`) e código (`.py`) foram incluídos no PDF como texto/imagem, ou ficaram de fora da submissão?
-2. Se ficaram de fora — há necessidade de registro complementar para a parte multimídia/software?
+**Formato confirmado:** PDF compilado de 228 páginas — todos os componentes da obra (texto, código, áudio, imagens) compilados em formato único. Formato padrão aceito pela BN. Risco de não adequação técnica eliminado. Nenhuma verificação adicional de formato necessária.
 
 ---
 
