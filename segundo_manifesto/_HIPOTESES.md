@@ -222,5 +222,19 @@ Agenda de encaminhamentos institucionais. Não são especulações científicas 
 
 ---
 
+### S04 — Registro Biblioteca Nacional — acompanhamento e contingência
+**Status:** 🟡 Em andamento
+**Setor:** Fundação Biblioteca Nacional · Rio de Janeiro · via EDA Florianópolis
+**Protocolo registrado:** 2026/30733 · 22/05/2026 · 228 páginas
+**O que é:** Acompanhamento do trâmite de registro formal da obra na BN após depósito local. Prazo estimado: ~3 meses para emissão do certificado oficial.
+**O que a lei garante:** Direito autoral existe automaticamente pela Lei 9.610/98 — o registro é declaratório, não constitutivo. O protocolo já existente tem validade jurídica como prova de anterioridade independente do desfecho do registro.
+**Causas reais de recusa:** Exclusivamente formais — documentação incompleta, pagamento, formato técnico, ou conflito de autoria. Recusa por conteúdo filosófico seria inconstitucional (censura vedada pela CF/88).
+**Sobre campo "Outros" no lugar de "Filosofia":** Não afeta validade jurídica. Categoria é para catalogação bibliográfica, não para proteção.
+**Recursos em caso de recusa:** (1) Recurso administrativo dentro da FBN; (2) Resubmissão com correção; (3) Via judicial — protocolo existente já é prova suficiente de anterioridade.
+**O que falta verificar diretamente com a EDA:** Prazo de notificação em caso de irregularidade + confirmação de recebimento pela BN separada do protocolo local.
+**Área:** Propositiva + Cronológica
+
+---
+
 *Backlog iniciado em maio de 2026 · Sessão Good Morning*
 *Atualizar conforme cada hipótese avança, é descartada ou gera nova.*
