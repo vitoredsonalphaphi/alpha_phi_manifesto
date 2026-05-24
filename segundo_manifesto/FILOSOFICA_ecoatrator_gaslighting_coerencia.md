@@ -16,7 +16,7 @@ Zero observação de um evento em específico, serviu pra compreender na própri
 
 ### 1. O gaslighting como operação de ruído sobre a percepção
 
-O gaslighting é uma operação de ruído direcionada à percepção — não ao argumento. Não questiona o conteúdo da obra; questiona a sanidade, a relevância ou a seriedade de quem a produz. Manifesta-se como negação sistemática da experiência do outro: "isso não aconteceu", "você está exagerando", "ninguém mais vê isso". Em contextos mais difusos, opera como ausência de campo — o formulário não tem a categoria adequada, o periódico não tem a seção correspondente, o setor não tem o interlocutor com linguagem comum. Não é recusa explícita. É ausência estrutural que produz o mesmo efeito: o dado não encontra lugar.
+O gaslighting é uma operação de ruído direcionada à percepção — não ao argumento. Não questiona o conteúdo da obra; questiona a sanidade, a relevância ou a seriedade de quem a produz. Manifesta-se como negação sistemática da experiência do outro: "isso não aconteceu", "você está exagerando", "ninguém mais vê isso".
 
 A tentativa de desestruturação subliminar opera exatamente nesse limiar — abaixo do nível da consciência crítica, onde o argumento não chega porque o terreno foi retirado antes. O sujeito começa a duvidar não do argumento externo, mas da própria percepção interna. É nesse ponto que o gaslighting se distingue do debate legítimo: o debate questiona a tese; o gaslighting questiona o direito de ter uma tese.
 
