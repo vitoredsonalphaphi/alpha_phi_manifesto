@@ -281,5 +281,16 @@ Agenda de encaminhamentos institucionais. Não são especulações científicas 
 
 ---
 
+### S05 — EDA Florianópolis — solicitação de revisão dos estatutos de classificação
+**Status:** 🔵 Pendente
+**Setor:** EDA — Escritório de Direitos Autorais · Florianópolis
+**Canal:** Solicitação formal à direção da instituição
+**O que é:** O formulário de registro da EDA não possui campo específico para "Filosofia" como categoria de obra — apenas "Outros". O AlphaPhi foi registrado sob "Outros" por ausência da opção adequada. O pedido é a revisão dos estatutos internos de classificação para inclusão do campo "Filosofia" e/ou "Filosofia da Arte / Filosofia da Ciência" nos formulários de registro.
+**Fundamento:** Uma instituição universitária da área artística que mantém sistema de registro sem campo para Filosofia apresenta lacuna incongruente — especialmente para obras que tratam da convergência entre Filosofia, Ciência e Arte. A ausência não subtrai direito jurídico (Lei 9.610/98 garante proteção independente de classificação), mas subtrai adequação institucional e visibilidade catalogrática da obra.
+**O que falta:** Redigir solicitação formal com fundamento nos estatutos da própria instituição e na legislação de direitos autorais.
+**Área:** Propositiva + Cronológica
+
+---
+
 *Backlog iniciado em maio de 2026 · Sessão Good Morning*
 *Atualizar conforme cada hipótese avança, é descartada ou gera nova.*
