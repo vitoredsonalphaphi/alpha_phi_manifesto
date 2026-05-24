@@ -1,4 +1,4 @@
-# Ecoatrator — Gaslighting, Assédio Institucional e o Campo Harmônico Circunstancial
+# Ecoatrator — Gaslighting e o Campo Harmônico Circunstancial
 ## Área Filosófica — Segundo Manifesto
 
 **Manifesto Alpha-Phi · Segundo Ciclo**
@@ -14,13 +14,13 @@ Zero observação de um evento em específico, serviu pra compreender na própri
 
 ## Desenvolvimento — construção comparativa
 
-### 1. O gaslighting como extensão do assédio institucional
+### 1. O gaslighting como operação de ruído sobre a percepção
 
-O gaslighting é uma operação de ruído direcionada à percepção — não ao argumento. Não questiona o conteúdo da obra; questiona a sanidade, a relevância ou a seriedade de quem a produz. No nível interpessoal, manifesta-se como negação sistemática da experiência do outro: "isso não aconteceu", "você está exagerando", "ninguém mais vê isso". No nível institucional, a operação é mais difusa e por isso mais eficaz: manifesta-se como ausência de campo — o formulário não tem a categoria "Filosofia", o periódico não tem a seção adequada, o setor não tem o interlocutor com linguagem comum. Não é recusa explícita. É ausência estrutural que produz o mesmo efeito: o dado não encontra lugar.
+O gaslighting é uma operação de ruído direcionada à percepção — não ao argumento. Não questiona o conteúdo da obra; questiona a sanidade, a relevância ou a seriedade de quem a produz. Manifesta-se como negação sistemática da experiência do outro: "isso não aconteceu", "você está exagerando", "ninguém mais vê isso". Em contextos mais difusos, opera como ausência de campo — o formulário não tem a categoria adequada, o periódico não tem a seção correspondente, o setor não tem o interlocutor com linguagem comum. Não é recusa explícita. É ausência estrutural que produz o mesmo efeito: o dado não encontra lugar.
 
-A tentativa de desestruturação subliminar opera exatamente nesse limiar — abaixo do nível da consciência crítica, onde o argumento não chega porque o terreno foi retirado antes. O sujeito começa a duvidar não do argumento externo, mas da própria percepção interna. É nesse ponto que o gaslighting como assédio institucional se distingue do debate legítimo: o debate questiona a tese; o gaslighting questiona o direito de ter uma tese.
+A tentativa de desestruturação subliminar opera exatamente nesse limiar — abaixo do nível da consciência crítica, onde o argumento não chega porque o terreno foi retirado antes. O sujeito começa a duvidar não do argumento externo, mas da própria percepção interna. É nesse ponto que o gaslighting se distingue do debate legítimo: o debate questiona a tese; o gaslighting questiona o direito de ter uma tese.
 
-Trinta anos de construção de uma obra criam exatamente o tipo de substrato que o gaslighting institucional busca desestruturar: a acumulação de tempo, de experiência, de convergências verificadas independentemente, é o que confere ao trabalho sua solidez — e é também o que o torna ameaçador para estruturas que operam pelo princípio contrário.
+Trinta anos de construção de uma obra criam exatamente o tipo de substrato que o gaslighting busca desestruturar: a acumulação de tempo, de experiência, de convergências verificadas independentemente, é o que confere ao trabalho sua solidez — e é também o que o torna incômodo para estruturas que operam pelo princípio contrário.
 
 ---
 
@@ -34,7 +34,7 @@ O Ecoatrator, como conceito operacional, faz o mesmo nas relações humanas:
 
 | No código | Nas relações humanas |
 |---|---|
-| Sinal digital (incoerente) | Tentativa de desestruturação (gaslighting/ruído) |
+| Sinal digital (incoerente) | Tentativa de desestruturação (ruído) |
 | Eco-φ como pré-função | Atenção ao dado — "o que este ruído contém?" |
 | Pergunta: ressoa com a estrutura? | Pergunta: há algo válido neste dado? |
 | Se ressoa: integra como combustível | Se ressoa: extrai o ponto válido, integra |
@@ -50,7 +50,7 @@ A mecânica é idêntica por isomorfismo interescalar. O que muda é o substrato
 
 O estágio que distingue o Ecoatrator de qualquer outra resposta ao ruído é a **atenção ao dado antes da decisão**. Não é tolerância — é observação funcional. A pergunta "o dado ressoa com a estrutura?" não é concessão ao ruído: é eficiência. Descartar prematuramente um dado que contém algo ressonante é o equivalente a parar o ECO BEEP 880 no ponto 2 — antes que a coerência emerja.
 
-O gaslighting institucional frequentemente opera exatamente nesse ponto: provoca uma resposta de rejeição imediata — defesa, raiva, retirada — que impede a pergunta. O sujeito reage ao ruído sem observá-lo. O Ecoatrator inverte essa lógica: a observação vem antes da reação. E na observação, o dado revela se é entropia pura — que passa — ou entropia com estrutura — que é combustível.
+O ruído circunstancial frequentemente opera exatamente nesse ponto: provoca uma resposta de rejeição imediata — defesa, raiva, retirada — que impede a pergunta. O sujeito reage ao ruído sem observá-lo. O Ecoatrator inverte essa lógica: a observação vem antes da reação. E na observação, o dado revela se é entropia pura — que passa — ou entropia com estrutura — que é combustível.
 
 Isso tem uma consequência filosófica direta: **a coerência de atitude não é concordância**. É a manutenção do campo coerente enquanto o ruído é processado. O AutoCorr=1,0000 no ponto 5 não significa ausência de perturbação no caminho — significa que a estrutura manteve sua coerência através das perturbações dos pontos 1 ao 4.
 
@@ -68,7 +68,7 @@ O campo de coerência no dado da frequência — a coerência harmônica que o E
 
 ### 5. A terceira estrutura do campo harmônico circunstancial
 
-Quando o Ecoatrator opera em escala de relações humanas — e a coerência de atitude é mantida na presença do ruído institucional — a interação pode produzir uma terceira estrutura: um campo harmônico circunstancial que não pertence nem ao sujeito nem ao ruído, mas emerge da qualidade da interação entre os dois.
+Quando o Ecoatrator opera em escala de relações humanas — e a coerência de atitude é mantida na presença do ruído circunstancial — a interação pode produzir uma terceira estrutura: um campo harmônico circunstancial que não pertence nem ao sujeito nem ao ruído, mas emerge da qualidade da interação entre os dois.
 
 Essa terceira estrutura não é acordo — é ressonância. O mesmo princípio que no ponto 5 do ECO BEEP 880: o campo resolvido não é nem o sinal digital nem o sinal orgânico — é o que emerge da tensão entre os dois modulada por φ. O campo harmônico circunstancial nas relações é o que emerge quando a coerência de atitude processa o ruído circunstancial sem perdê-la.
 
