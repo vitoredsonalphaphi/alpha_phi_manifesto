@@ -171,7 +171,7 @@ print(f"\n  Sinal concatenado: {len(sinal_concat)} amostras = {dur_total:.2f}s")
 print(f"  (estimativa: {dur_est:.2f}s  ✓)")
 
 s16 = np.int16(np.clip(normalizar(sinal_concat), -1, 1)*32767)
-wavfile.write('/content/beep880_original_completo.wav', FS, s16)
+wavfile.write('beep880_original_completo.wav', FS, s16)
 print(f"  → beep880_original_completo.wav  ({dur_total:.2f}s)")
 
 # ── extrair envelope ultra-lento via decimação ────────────────
@@ -325,14 +325,14 @@ fig.suptitle(
     color=COR_TXT, fontsize=11, y=1.01
 )
 plt.tight_layout()
-plt.savefig('/content/verificacao_terceiro_dobra.png', dpi=150,
+plt.savefig('verificacao_terceiro_dobra.png', dpi=150,
             bbox_inches='tight', facecolor='#080810')
 plt.close()
 print("  → verificacao_terceiro_dobra.png")
 
-display(Image('/content/verificacao_terceiro_dobra.png'))
+display(Image('verificacao_terceiro_dobra.png'))
 print("\nÁudio original completo:")
-display(Audio('/content/beep880_original_completo.wav'))
+display(Audio('beep880_original_completo.wav'))
 
 print(f"\n{'='*60}")
 print(f"  RESULTADO FINAL · EMERGÊNCIA DE CAMPO  v3")
