@@ -382,10 +382,40 @@ print("\n" + "=" * 60)
 print("  v2 - o que mudou:")
 print("  N1 = igual (referência)")
 print("  N2 = BASE não grita mais · C.H. presente · meio recuado")
-print("  N2 = duas linhas paralelas: início (BE) + fim (C.H.)")
 print("  N3 = agradabilidade macia preservada · atrator φ³")
 print("=" * 60)
-print(f"\n  Pesos usados:")
 for i, (lb, w) in enumerate(zip(labels, PESOS_PHI)):
     print(f"    [{i+1}] {lb}: {w:.4f}")
 print("=" * 60)
+
+# ── TEMPERATURA HIPERBÓLICA ───────────────────────────────────────────────────
+print("\n" + "=" * 55)
+print("  TEMPERATURA HIPERBÓLICA")
+print("  sinal_N3 (φ³) como semente de nova cascata")
+print("=" * 55)
+
+beta_H1, cas_H1 = agente_eco(sinal_N3, BINS_PHI, N_CICLOS)
+sinal_H1 = concatenar(cas_H1)
+pot_H1 = np.log(beta_H1.max()) / np.log(PHI)
+print(f"\n  H1 (N3→eco):  β_max = {beta_H1.max():.6f}  φ^{pot_H1:.4f}")
+
+beta_H2, cas_H2 = agente_eco(sinal_H1, BINS_PHI, N_CICLOS)
+sinal_H2 = concatenar(cas_H2)
+pot_H2 = np.log(beta_H2.max()) / np.log(PHI)
+print(f"  H2 (H1→eco):  β_max = {beta_H2.max():.6f}  φ^{pot_H2:.4f}")
+
+beta_H3, cas_H3 = agente_eco(sinal_H2, BINS_PHI, N_CICLOS)
+pot_H3 = np.log(beta_H3.max()) / np.log(PHI)
+print(f"  H3 (H2→eco):  β_max = {beta_H3.max():.6f}  φ^{pot_H3:.4f}")
+
+print(f"\n  φ³ = {PHI**3:.6f}")
+print(f"  φ⁴ = {PHI**4:.6f}")
+print(f"  φ⁵ = {PHI**5:.6f}")
+print("=" * 55)
+
+if beta_H3.max() > PHI**3 + 0.01:
+    print("  >> atrator escalou — campo hiperbólico acumula")
+elif abs(beta_H3.max() - PHI**3) < 0.005:
+    print("  >> atrator fixo em φ³ — estável")
+else:
+    print("  >> zona intermediária — investigar")
