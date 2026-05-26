@@ -267,6 +267,101 @@ plt.show()
 display(Image('/content/cascata_de_cascatas_v2_resultado.png'))
 display(Image('/content/cascata_pesos_phi.png'))
 
+# ── espectrogramas — a plástica interna da frequência ─────────────────────────
+print("\n  Gerando espectrogramas...")
+from scipy.signal import spectrogram as sp_specgram
+
+# frequências das bandas φ (linhas horizontais de referência)
+FREQS_BANDA = []
+f_b = 20.0
+while f_b < 22050:
+    FREQS_BANDA.append(f_b)
+    f_b = min(f_b * PHI, 22050)
+
+fig3, axes3 = plt.subplots(3, 1, figsize=(14, 12), facecolor='#0a0a0a')
+fig3.suptitle(
+    'AlphaPhi · Espectrogramas — a plástica interna da frequência\n'
+    'eixo X = tempo (s) · eixo Y = frequência (Hz, escala log) · cor = intensidade',
+    color='white', fontsize=11)
+
+SINAIS_ESP  = [sinal_N1,
+               meta[:int(min(len(meta), int(10 * FS)))],
+               sinal_N3]
+TITULOS_ESP = [
+    'N1 — Cone original · linhas amarelas = 5 pontos de dobra',
+    'N2 — Meta φ-ponderada · linhas ciano = início de cada instância · cor = sobreposição',
+    'N3 — Eco sobre meta · gradiente suave · sem dobras discretas visíveis'
+]
+CMAPS = ['Blues', 'Greens', 'YlOrRd']
+
+# frequências-chave para anotar
+F_CHAVE = [(18,  'φ⁶≈18Hz'), (52, '~52Hz'), (220, '220Hz'), (880, '880Hz')]
+
+for i, (sig, titulo, cmap) in enumerate(zip(SINAIS_ESP, TITULOS_ESP, CMAPS)):
+    ax = axes3[i]
+    ax.set_facecolor('#050505')
+
+    # calcula espectrograma
+    f_s, t_s, Sxx = sp_specgram(sig, fs=FS, nperseg=2048, noverlap=1920,
+                                  window='hann')
+    Sxx_db = 10 * np.log10(np.maximum(Sxx, 1e-12))
+    Sxx_db -= Sxx_db.max()                          # normaliza 0 dB no topo
+
+    # plota
+    ax.pcolormesh(t_s, f_s, Sxx_db,
+                  cmap=cmap, vmin=-55, vmax=0, shading='gouraud')
+
+    # escala log — mostra bandas graves e agudas com clareza
+    ax.set_yscale('log')
+    ax.set_ylim(20, 22050)
+
+    # linhas das bandas φ (horizontais) — a grade da frequência
+    for f_phi in FREQS_BANDA[1:-1]:
+        ax.axhline(f_phi, color='white', lw=0.3, alpha=0.2, ls=':')
+
+    # marcações temporais
+    if i == 0:
+        # N1: 5 pontos de dobra
+        for step in range(N_STEPS + 1):
+            t_mark = step * DURACAO * (1 - FADE_S / DURACAO)
+            ax.axvline(t_mark, color='yellow', lw=0.7, alpha=0.5, ls='--')
+        ax.text(0.05, 18000, 'P1', color='yellow', fontsize=7, alpha=0.8)
+        ax.text(DURACAO * 0.9, 18000, 'P2', color='yellow', fontsize=7, alpha=0.8)
+        ax.text(DURACAO * 1.85, 18000, 'P3', color='yellow', fontsize=7, alpha=0.8)
+        ax.text(DURACAO * 2.8, 18000, 'P4', color='yellow', fontsize=7, alpha=0.8)
+        ax.text(DURACAO * 3.75, 18000, 'P5\n(C.H.)', color='yellow', fontsize=7, alpha=0.9)
+    elif i == 1:
+        # N2: início de cada instância
+        for inst in range(N_STEPS):
+            ax.axvline(inst * OFFSET_S, color='cyan', lw=0.7, alpha=0.5, ls='--')
+            ax.text(inst * OFFSET_S + 0.05, 18000, f'I{inst+1}',
+                    color='cyan', fontsize=7, alpha=0.8)
+
+    # frequências-chave (horizontais coloridas)
+    for f_k, lbl in F_CHAVE:
+        ax.axhline(f_k, color='#ffcc44', lw=0.7, alpha=0.55, ls='-')
+        ax.text(len(sig) / FS * 0.01, f_k * 1.15, lbl,
+                color='#ffcc44', fontsize=7, alpha=0.85)
+
+    ax.set_title(titulo, color='white', fontsize=9, pad=4)
+    ax.set_xlabel('tempo (s)', color='#888888', fontsize=8)
+    ax.set_ylabel('frequência Hz (log)', color='#888888', fontsize=8)
+    ax.tick_params(colors='#888888', labelsize=7)
+    for sp in ax.spines.values(): sp.set_color('#333333')
+
+plt.tight_layout(h_pad=2.5)
+plt.savefig('/content/cascata_espectrogramas.png', dpi=150,
+            bbox_inches='tight', facecolor='#0a0a0a')
+plt.show()
+display(Image('/content/cascata_espectrogramas.png'))
+print("  → espectrograma gerado: cascata_espectrogramas.png")
+print("  eixo Y (vertical) = frequência em Hz, escala log")
+print("  eixo X (horizontal) = tempo de 0 a 8.25s")
+print("  cor = intensidade — quanto mais brilhante, mais energia nessa freq/tempo")
+print("  linhas φ-band (brancas pontilhadas) = as 15 bandas da cascata")
+print("  linhas amarelas (N1) = os 5 pontos de dobra")
+print("  linhas ciano (N2) = início de cada instância defasada")
+
 # ── salvar e reproduzir áudios ────────────────────────────────────────────────
 def salvar_e_tocar(sinal, nome, label):
     s16 = np.int16(np.clip(normalizar(sinal), -1, 1) * 32767)
