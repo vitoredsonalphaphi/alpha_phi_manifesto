@@ -1,6 +1,6 @@
 """
 AlphaPhi_CascataDeCascatas_COLAB.py  v2
-Cascata de Cascatas — para Google Colab  · pesos φ nas instâncias
+Cascata de Cascatas - para Google Colab  · pesos φ nas instâncias
 
 Cole tudo numa única célula e execute.
 
@@ -10,14 +10,14 @@ Três níveis:
   N3: eco sobre meta-freq    → atrator suave · agradabilidade φ
 
 Arquitetura φ-ponderada (v2):
-  Instância 1 — BASE (início):        peso = 1.0
-  Instância 2 — transição:            peso = 1/φ²  ≈ 0.382
-  Instância 3 — meio (mais recuada):  peso = 1/φ³  ≈ 0.236
-  Instância 4 — transição:            peso = 1/φ²  ≈ 0.382
-  Instância 5 — C.H. (campo harm.):  peso = 1/φ   ≈ 0.618
+  Instância 1 - BASE (início):        peso = 1.0
+  Instância 2 - transição:            peso = 1/φ²  ≈ 0.382
+  Instância 3 - meio (mais recuada):  peso = 1/φ³  ≈ 0.236
+  Instância 4 - transição:            peso = 1/φ²  ≈ 0.382
+  Instância 5 - C.H. (campo harm.):  peso = 1/φ   ≈ 0.618
 
   BASE e CAMPO HARMÔNICO: proeminentes (duas linhas paralelas)
-  Instâncias 2,3,4: segundo plano — o processo, não o destaque
+  Instâncias 2,3,4: segundo plano - o processo, não o destaque
 
 © Vitor Edson Delavi · Florianópolis · 2026
 """
@@ -28,7 +28,7 @@ from scipy.signal import butter, filtfilt
 from scipy.io import wavfile
 from IPython.display import Audio, Image, display
 
-# ── constantes ORIGINAIS — não modificar ─────────────────────────────────────
+# ── constantes ORIGINAIS - não modificar ─────────────────────────────────────
 PHI        = (1 + np.sqrt(5)) / 2
 FS         = 44100
 F_BEEP     = 880.0
@@ -47,11 +47,11 @@ OFFSET_S   = DUR_TOTAL / N_STEPS                            # 1.65s
 
 # ── pesos φ por instância (v2) ────────────────────────────────────────────────
 PESOS_PHI = np.array([
-    1.0,           # instância 1 — BASE (sinal inicial, alta entropia)
-    1.0 / PHI**2,  # instância 2 — ≈ 0.382 (segundo plano)
-    1.0 / PHI**3,  # instância 3 — ≈ 0.236 (mais recuada)
-    1.0 / PHI**2,  # instância 4 — ≈ 0.382 (segundo plano)
-    1.0 / PHI,     # instância 5 — C.H. ≈ 0.618 (campo harmônico)
+    1.0,           # instância 1 - BASE (sinal inicial, alta entropia)
+    1.0 / PHI**2,  # instância 2 - ≈ 0.382 (segundo plano)
+    1.0 / PHI**3,  # instância 3 - ≈ 0.236 (mais recuada)
+    1.0 / PHI**2,  # instância 4 - ≈ 0.382 (segundo plano)
+    1.0 / PHI,     # instância 5 - C.H. ≈ 0.618 (campo harmônico)
 ])
 
 print("=" * 60)
@@ -64,9 +64,9 @@ for i, (lb, w) in enumerate(zip(labels, PESOS_PHI)):
     bar = "█" * int(w * 20)
     print(f"    [{i+1}] {lb} {w:.3f}  {bar}")
 print(f"\n  Duas linhas paralelas:")
-print(f"    BASE (1.000) ————— o sinal original, alta entropia")
-print(f"    C.H. (0.618) ————— o campo harmônico resolvido")
-print(f"    [2,3,4]  recuadas — o processo, não o destaque")
+print(f"    BASE (1.000) ----- o sinal original, alta entropia")
+print(f"    C.H. (0.618) ----- o campo harmônico resolvido")
+print(f"    [2,3,4]  recuadas - o processo, não o destaque")
 
 # ── funções core ──────────────────────────────────────────────────────────────
 def normalizar(s):
@@ -147,7 +147,7 @@ def concatenar(cas, fade=None):
     return normalizar(out)
 
 # ── NÍVEL 1: cone original ────────────────────────────────────────────────────
-print("\n  Gerando N1 — cone original...")
+print("\n  Gerando N1 - cone original...")
 t_sig = np.linspace(0, DURACAO, N_SINAL, endpoint=False)
 beep  = normalizar(np.sign(np.sin(2 * np.pi * F_BEEP * t_sig)))
 fm    = normalizar(np.sin(2 * np.pi * F_ORG * t_sig
@@ -158,8 +158,8 @@ beta_N1, cas_N1 = agente_eco(x_mix, BINS_PHI, N_CICLOS)
 sinal_N1 = concatenar(cas_N1)
 print(f"  β_max N1 = {beta_N1.max():.6f}  (φ³ = {PHI**3:.6f})")
 
-# ── NÍVEL 2: cascata de cascatas — ponderada por φ ────────────────────────────
-print("\n  Gerando N2 — cascata de cascatas φ-ponderada (5 instâncias)...")
+# ── NÍVEL 2: cascata de cascatas - ponderada por φ ────────────────────────────
+print("\n  Gerando N2 - cascata de cascatas φ-ponderada (5 instâncias)...")
 OFFSET_N  = int(OFFSET_S * FS)
 LEN_CONE  = len(sinal_N1)
 LEN_META  = LEN_CONE + 4 * OFFSET_N
@@ -177,7 +177,7 @@ meta_ativa = normalizar(meta[JANELA_INICIO: JANELA_INICIO + N_SINAL])
 beta_N2, _ = agente_eco(meta_ativa, BINS_PHI, N_CICLOS)
 print(f"  β_max N2 = {beta_N2.max():.6f}  Δ vs N1 = {beta_N2.max()-beta_N1.max():+.6f}")
 
-# campo contínuo 30s — ponderado por φ
+# campo contínuo 30s - ponderado por φ
 TARGET_S   = 30.0
 N_LOOPS    = int(np.ceil(TARGET_S / DUR_TOTAL)) + 2
 campo_cont = np.zeros(int(TARGET_S * FS) + LEN_CONE)
@@ -190,7 +190,7 @@ for i in range(N_STEPS):
 campo_cont = normalizar(campo_cont[:int(TARGET_S * FS)])
 
 # ── NÍVEL 3: eco sobre a meta-frequência ─────────────────────────────────────
-print("\n  Gerando N3 — eco sobre meta-frequência φ-ponderada...")
+print("\n  Gerando N3 - eco sobre meta-frequência φ-ponderada...")
 beta_N3, cas_N3 = agente_eco(meta_ativa, BINS_PHI, N_CICLOS)
 sinal_N3 = concatenar(cas_N3)
 print(f"  β_max N3 = {beta_N3.max():.6f}  Δ vs N1 = {beta_N3.max()-beta_N1.max():+.6f}")
@@ -212,9 +212,9 @@ fig.suptitle('AlphaPhi · Cascata de Cascatas  v2  (pesos φ)',
              color='white', fontsize=13)
 
 COR     = ['#00aaff', '#00ffaa', '#ffaa00']
-TITULOS = ['N1 — Cone original (8.25s)',
-           'N2 — Meta φ-ponderada (BASE + C.H. proeminentes)',
-           'N3 — Eco sobre meta φ (gradiente suave)']
+TITULOS = ['N1 - Cone original (8.25s)',
+           'N2 - Meta φ-ponderada (BASE + C.H. proeminentes)',
+           'N3 - Eco sobre meta φ (gradiente suave)']
 SINAIS  = [sinal_N1,
            meta[:int(min(len(meta), int(8.25*FS)))],
            sinal_N3]
@@ -238,7 +238,7 @@ for i, (sig, beta, cor, titulo) in enumerate(zip(SINAIS, BETAS, COR, TITULOS)):
     ax_b.tick_params(colors='#888888')
     for sp in ax_b.spines.values(): sp.set_color('#333333')
 
-# diagrama de pesos — painel extra
+# diagrama de pesos - painel extra
 fig2, ax_w = plt.subplots(figsize=(8, 3), facecolor='#0a0a0a')
 ax_w.set_facecolor('#111111')
 cores_inst = ['#00aaff', '#4488cc', '#336699', '#4488cc', '#00ffaa']
@@ -267,7 +267,7 @@ plt.show()
 display(Image('/content/cascata_de_cascatas_v2_resultado.png'))
 display(Image('/content/cascata_pesos_phi.png'))
 
-# ── espectrogramas — a plástica interna da frequência ─────────────────────────
+# ── espectrogramas - a plástica interna da frequência ─────────────────────────
 print("\n  Gerando espectrogramas...")
 from scipy.signal import spectrogram as sp_specgram
 
@@ -280,7 +280,7 @@ while f_b < 22050:
 
 fig3, axes3 = plt.subplots(3, 1, figsize=(14, 12), facecolor='#0a0a0a')
 fig3.suptitle(
-    'AlphaPhi · Espectrogramas — a plástica interna da frequência\n'
+    'AlphaPhi · Espectrogramas - a plástica interna da frequência\n'
     'eixo X = tempo (s) · eixo Y = frequência (Hz, escala log) · cor = intensidade',
     color='white', fontsize=11)
 
@@ -288,9 +288,9 @@ SINAIS_ESP  = [sinal_N1,
                meta[:int(min(len(meta), int(10 * FS)))],
                sinal_N3]
 TITULOS_ESP = [
-    'N1 — Cone original · linhas amarelas = 5 pontos de dobra',
-    'N2 — Meta φ-ponderada · linhas ciano = início de cada instância · cor = sobreposição',
-    'N3 — Eco sobre meta · gradiente suave · sem dobras discretas visíveis'
+    'N1 - Cone original · linhas amarelas = 5 pontos de dobra',
+    'N2 - Meta φ-ponderada · linhas ciano = início de cada instância · cor = sobreposição',
+    'N3 - Eco sobre meta · gradiente suave · sem dobras discretas visíveis'
 ]
 CMAPS = ['Blues', 'Greens', 'YlOrRd']
 
@@ -311,11 +311,11 @@ for i, (sig, titulo, cmap) in enumerate(zip(SINAIS_ESP, TITULOS_ESP, CMAPS)):
     ax.pcolormesh(t_s, f_s, Sxx_db,
                   cmap=cmap, vmin=-55, vmax=0, shading='gouraud')
 
-    # escala log — mostra bandas graves e agudas com clareza
+    # escala log - mostra bandas graves e agudas com clareza
     ax.set_yscale('log')
     ax.set_ylim(20, 22050)
 
-    # linhas das bandas φ (horizontais) — a grade da frequência
+    # linhas das bandas φ (horizontais) - a grade da frequência
     for f_phi in FREQS_BANDA[1:-1]:
         ax.axhline(f_phi, color='white', lw=0.3, alpha=0.2, ls=':')
 
@@ -357,7 +357,7 @@ display(Image('/content/cascata_espectrogramas.png'))
 print("  → espectrograma gerado: cascata_espectrogramas.png")
 print("  eixo Y (vertical) = frequência em Hz, escala log")
 print("  eixo X (horizontal) = tempo de 0 a 8.25s")
-print("  cor = intensidade — quanto mais brilhante, mais energia nessa freq/tempo")
+print("  cor = intensidade - quanto mais brilhante, mais energia nessa freq/tempo")
 print("  linhas φ-band (brancas pontilhadas) = as 15 bandas da cascata")
 print("  linhas amarelas (N1) = os 5 pontos de dobra")
 print("  linhas ciano (N2) = início de cada instância defasada")
@@ -370,16 +370,16 @@ def salvar_e_tocar(sinal, nome, label):
     display(Audio(nome))
 
 salvar_e_tocar(sinal_N1,   '/content/cascata_v2_N1_original.wav',
-               'N1 — Cone original (8.25s) — igual à v1')
+               'N1 - Cone original (8.25s) - igual à v1')
 
 salvar_e_tocar(campo_cont, '/content/cascata_v2_N2_campo_continuo_30s.wav',
-               'N2 — Campo contínuo 30s · BASE + C.H. proeminentes · [2,3,4] recuadas')
+               'N2 - Campo contínuo 30s · BASE + C.H. proeminentes · [2,3,4] recuadas')
 
 salvar_e_tocar(sinal_N3,   '/content/cascata_v2_N3_eco_meta.wav',
-               'N3 — Eco sobre meta φ · gradiente suave (8.25s)')
+               'N3 - Eco sobre meta φ · gradiente suave (8.25s)')
 
 print("\n" + "=" * 60)
-print("  v2 — o que mudou:")
+print("  v2 - o que mudou:")
 print("  N1 = igual (referência)")
 print("  N2 = BASE não grita mais · C.H. presente · meio recuado")
 print("  N2 = duas linhas paralelas: início (BE) + fim (C.H.)")
