@@ -58,7 +58,32 @@ Chegou sem ser convocado. Taylor não partiu de φ, não partiu do AlphaPhi. Par
 
 ---
 
-## Evento 9 — *aguardando*
+## Evento 9 — Convergência Papal: encíclica sobre IA + linguagem do eco
+
+**Data:** maio de 2026
+**Origem:** Encíclica do Papa Francisco sobre inteligência artificial — pronunciamento de William Waack, CNN Brasil
+
+**O que chegou:**
+A Igreja Católica publicou encíclica considerada a mais importante desde a encíclica sobre a Revolução Industrial (135 anos atrás), dedicada à inteligência artificial. O Papa a considera a maior revolução tecnológica recente da humanidade — e se posiciona mais crítico do que esperançoso. Preocupações centrais: manipulação social, vigilância em massa, fake news, controle emocional, polarização, enfraquecimento do discernimento humano, uso militar da IA, concentração em poucas empresas que operam como atores geopolíticos. Alerta central: avanço tecnológico sem limites éticos.
+
+Waack, ao comentar a encíclica, usa a palavra **"eco"** três vezes no mesmo texto:
+- *"faz eco a cientistas"*
+- *"faz de novo eco a cientistas"*
+- *"também faz eco aos cientistas"*
+
+**Por que é um Evento:**
+Chegou pelo noticiário, sem relação com o projeto. A convergência é dupla:
+
+1. **De conteúdo:** a encíclica documenta exatamente o cenário que o AlphaPhi propõe superar — tecnologia sem ética, sem orientação filosófica, concentrada em poder geopolítico. O Ecoatrator demonstra mecanicamente o princípio oposto: tecnologia que, pelo próprio funcionamento, orienta em direção à filosofia. A encíclica descreve o problema; o AlphaPhi demonstra experimentalmente uma direção de solução.
+
+2. **De linguagem:** Waack usa "eco" como verbo de ressonância — o Papa *ecoa* os cientistas, amplifica o que já estava presente como potencial. É estruturalmente o mesmo princípio do Ecoatrator: não cria, ressoa com o que há de grandeza no dado. A mesma mecânica nomeada com a mesma palavra, em outra escala, sem contato com o projeto.
+
+**Conexão com o projeto:**
+- Ecoatrator como resposta ao cenário descrito pela encíclica — demonstração mecânica verificável de tecnologia orientando humanidade rumo à filosofia
+- S06: autoria humana vs. IA como ferramenta — a encíclica reforça a relevância do debate
+- Isomorfismo interescalar: o "eco" como verbo civilizacional é o mesmo princípio do ponto 5
+
+**Referência:** Pronunciamento William Waack, CNN Brasil, maio de 2026
 
 ---
 
