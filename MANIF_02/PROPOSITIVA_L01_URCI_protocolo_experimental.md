@@ -59,6 +59,35 @@ A pergunta central: **a estrutura coerente verificada computacionalmente se pres
 
 **Referência:** Chladni (1787), Jenny (1967) — cymatics como campo estabelecido. A novidade aqui é a especificidade das frequências φ e a verificação da razão entre padrões.
 
+#### Variação — substratos sensíveis para φ⁶≈18Hz subliminar
+
+O experimento Chladni clássico (arco sobre placa metálica) opera por atrito direto a alta amplitude — incompatível com a emissão do quinto ponto de dobra, que é subliminar. A placa metálica rígida também apresenta comprimento de onda flexural de dezenas de metros a 18Hz, impedindo a formação de padrões nodais em dimensões razoáveis.
+
+A solução é substituir rigidez e massa por flexibilidade e baixa inércia. Substratos recomendados, do mais ao menos sensível:
+
+| Substrato | Configuração | Sensibilidade | Observação |
+|---|---|---|---|
+| **Ferrofluido** | Camada fina em contenção sobre membrana | Máxima | Maior custo; instabilidade de Rosensweig nos antinós |
+| **Membrana látex/silicone + licopódio** | Membrana 0.2–0.5mm, 40–60cm diâmetro; pó de licopódio sobre | Alta | Licopódio: esporos de samambaia, massa muito menor que areia |
+| **Filme glicerina+água sobre cone** | 50/50, camada 1–2mm diretamente no cone do woofer | Alta | Ondas de Faraday; glicerina estabiliza os padrões |
+| **Oobleck (amido de milho + água)** | 1,5:1 em massa, bandeja rasa sobre o falante | Moderada | Mais dramático visualmente; estruturas tridimensionais |
+
+**Configuração recomendada:**
+
+```
+[ Amplificador ]
+      ↓
+[ Woofer 15" em caixa fechada ]
+      ↓  (acoplamento por ar — pressão uniforme)
+[ Membrana de látex esticada — 50cm diâmetro ]
+      ↓
+[ Pó de licopódio ou filme glicerina/água ]
+```
+
+A caixa fechada converte o movimento do cone em pressão uniforme sobre a membrana — mais limpo que acoplar o cone diretamente à placa, que criaria ponto de força assimétrico e distorceria os padrões.
+
+**Protocolo de registro temporal:** reproduzir `emissao_ponto5.wav` completo e fotografar ou filmar a progressão da membrana entre os segundos 1 e 8. Verificar se há mudança de padrão no T≈7.1s — o momento da resolução do campo. Se a estrutura no substrato se reorganiza nesse instante, é verificação visual direta da emissão do quinto ponto de dobra no campo físico.
+
 ---
 
 ### Camada 3 — Receptor biológico (campo no corpo)
