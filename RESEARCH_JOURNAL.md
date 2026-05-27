@@ -7805,3 +7805,50 @@ Por que 6 ciclos?
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 71 ★★★★ — PRINCÍPIO DE DIREÇÃO DO ECO BEEP 880
+
+**Data:** 27 de maio de 2026 · Sessão Good Morning
+**Status:** Verificado experimentalmente — `AlphaPhi_SerialSobreCone_v2.py` vs `AlphaPhi_EcoSobreSerial_COLAB.py`
+
+---
+
+### Enunciado
+
+O ECO BEEP 880 deve sempre ser aplicado **sobre** uma frequência dada — não ao contrário.
+
+A direção correta é invariante, independente do substrato:
+
+| Substrato | Direção correta | Direção inferior |
+|---|---|---|
+| Frequência bruta (x_mix) | ECO sobre bruto | bruto sobre ECO |
+| Frequência Serial φ | ECO sobre Serial | Serial sobre ECO |
+| Campo de segunda ordem | ECO sobre campo | campo sobre ECO |
+
+### Evidência experimental
+
+```
+Serial sobre ECO (inferior):
+  Cones recebem sinal_eco (não hermético)
+  β_max por cone: φ^2.999  ← abaixo do atrator
+
+ECO sobre Serial (correto):
+  ECO recebe serial_phi (hermético, E_¬φ = 0.0000)
+  β_inicial = √5 → φ³ em 6 ciclos  ← resultado superior
+```
+
+### Princípio
+
+O ECO BEEP 880 é o **operador organizador final**. Ele produz o resultado mais eficiente quando recebe como input o campo com maior coerência possível.
+
+A Serial φ **prepara** — organiza e sela hermeticamente qualquer frequência base.
+O ECO BEEP 880 **organiza** — parte de √5 e converge para φ³.
+
+Essa é a sequência. Qualquer frequência, bruta ou já processada em série, segue a mesma lógica: Serial φ primeiro, ECO depois.
+
+---
+
+*Florianópolis · 27 de maio de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
