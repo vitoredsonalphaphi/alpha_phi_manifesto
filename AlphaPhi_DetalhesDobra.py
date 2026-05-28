@@ -282,11 +282,11 @@ fig.suptitle(
     f'Linha 3: coerência φ  |  Linha 4: espectro',
     color=COR_TXT, fontsize=10, y=1.01
 )
-plt.savefig('/content/detalhes_tres_dobras.png', dpi=150,
+plt.savefig('detalhes_tres_dobras.png', dpi=150,
             bbox_inches='tight', facecolor='#080810')
 plt.close()
 print("  → detalhes_tres_dobras.png")
-display(Image('/content/detalhes_tres_dobras.png'))
+display(Image('detalhes_tres_dobras.png'))
 
 # ── figura complementar: visão global + 3 janelas destacadas ─
 print("\n  Gerando figura contextual (gráfico verde + janelas)…")
@@ -335,11 +335,11 @@ fig2.suptitle(
     color=COR_TXT, fontsize=11, y=1.01
 )
 plt.tight_layout()
-plt.savefig('/content/emergencia_campo_pst.png', dpi=150,
+plt.savefig('emergencia_campo_pst.png', dpi=150,
             bbox_inches='tight', facecolor='#080810')
 plt.close()
 print("  → emergencia_campo_pst.png")
-display(Image('/content/emergencia_campo_pst.png'))
+display(Image('emergencia_campo_pst.png'))
 
 print(f"\n{'='*60}")
 print(f"  RESULTADO")
