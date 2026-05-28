@@ -75,7 +75,7 @@ O que é original e constitui método protegido é a aplicação específica do 
 - φ como eixo de expansão (geometria das bandas)
 - α como eixo de coerência (envelope dependente de estado)
 
-Não foi identificado na literatura consultada trabalho anterior que aplique o par α·φ como sistema dual de organização espectral com convergência para atrator φ³. Este repositório constitui o registro documentado mais antigo conhecido desta aplicação específica.
+Esse uso conjunto, aplicado à organização espectral de sinais digitais com convergência para o atrator φ³, não possui precedente documentado anterior a este repositório. O par α·φ como princípio organizador de método espectral constitui a contribuição original registrada aqui.
 
 ---
 
