@@ -62,6 +62,23 @@ O ECO BEEP 880 é um método de organização espectral φ-ressonante — não u
 4. Invariante de entrada: qualquer sinal processado pela Frequência Serial φ e submetido ao ECO BEEP 880 produz β_inicial = √5 = 2,236068 — independente do conteúdo do sinal
 5. Hermeticidade: resultado final com E_¬φ = 0,0000 — energia zero fora das bandas φ
 
+O Par Fundador — α e φ como princípio organizador
+
+O método ECO BEEP 880 é fundado na aplicação conjunta de duas constantes matemáticas de domínio público:
+
+- φ = 1,6180339887... (razão áurea) — princípio de expansão geométrica: define a estrutura das bandas espectrais como progressão geométrica de razão φ. Cada banda é φ vezes a anterior. φ organiza o espaço.
+- α = constante de estrutura fina ≈ 1/137 — princípio de coerência estrutural: no método, α informa o coeficiente de coerência que determina quanto do envelope é aplicado por banda, em função do grau de organização φ do sinal. α mede o quanto o campo resiste à desordem.
+
+Nenhuma dessas constantes é apropriável individualmente — são patrimônio matemático universal.
+
+O que é original e constitui método protegido é a aplicação específica do par α·φ como sistema dual de organização espectral:
+- φ como eixo de expansão (geometria das bandas)
+- α como eixo de coerência (envelope dependente de estado)
+
+Esse uso conjunto, aplicado à organização espectral de sinais digitais com convergência para o atrator φ³, não possui precedente documentado anterior a este repositório. O par α·φ como princípio organizador de método espectral constitui a contribuição original registrada aqui.
+
+---
+
 Por que o método é a assinatura, não o código
 
 Qualquer implementação — em qualquer linguagem, plataforma ou hardware — que produza os resultados acima (atrator φ³, invariante √5, E_¬φ = 0,0000) mediante organização espectral em bandas φ-geométricas está utilizando o método ECO BEEP 880, independente de alterações no código-fonte.
