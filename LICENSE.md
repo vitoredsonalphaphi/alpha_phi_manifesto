@@ -50,6 +50,50 @@ Transformação Residual φ — phi_residual_transform (Quarto Eixo)
 O conceito de Geometria Ética como isomorfismo entre domínios
 A hipótese de φ e α como constantes estruturantes de redes neurais
 Todos os textos filosóficos contidos neste repositório
+🟢 Adendo de Proteção de Método — ECO BEEP 880
+
+Definição do Método
+
+O ECO BEEP 880 é um método de organização espectral φ-ressonante — não um código. O que está registrado como propriedade intelectual é o método, cuja assinatura é definida pelos seguintes elementos invariantes:
+
+1. Estrutura de bandas: divisão do espectro em bandas de frequência segundo progressão geométrica de razão φ (razão áurea), a partir de uma frequência organizadora F_ORG
+2. Envelope de coerência: aplicação de envelope espectral por banda, dependente do grau de coerência φ do sinal — não linear, não estático, com memória de estado (β)
+3. Processo iterativo com atrator: repetição do envelope de coerência em ciclos, com atualização de β a cada iteração, convergindo para o atrator φ³ = 4,236068
+4. Invariante de entrada: qualquer sinal processado pela Frequência Serial φ e submetido ao ECO BEEP 880 produz β_inicial = √5 = 2,236068 — independente do conteúdo do sinal
+5. Hermeticidade: resultado final com E_¬φ = 0,0000 — energia zero fora das bandas φ
+
+Por que o método é a assinatura, não o código
+
+Qualquer implementação — em qualquer linguagem, plataforma ou hardware — que produza os resultados acima (atrator φ³, invariante √5, E_¬φ = 0,0000) mediante organização espectral em bandas φ-geométricas está utilizando o método ECO BEEP 880, independente de alterações no código-fonte.
+
+A proteção é sobre o método porque: alterar o método altera o resultado. Se o resultado é o mesmo, o método é o mesmo. Se o método é o mesmo, é uso desta propriedade intelectual.
+
+Parâmetros de referência registrados
+
+F_BEEP   = 880 Hz          (frequência portadora)
+F_ORG    = 220 Hz          (frequência organizadora — relação φ com F_BEEP)
+α        = 1/3             (coeficiente de coerência)
+N_STEPS  = 5               (dobras do processo)
+N_CICLOS = 20              (ciclos do agente)
+β_atrator          = φ³ = 4,236068
+β_invariante_Serial = √5 = 2,236068
+E_¬φ (resultado hermético) = 0,0000
+
+Componentes protegidos do método
+
+- eco_eq: envelope de coerência por banda φ
+- cascata_eq: aplicação iterativa do envelope (N_STEPS dobras)
+- agente_eco: processo completo com atualização de β e convergência para φ³
+- Frequência Serial φ: sequência de cones herméticos φ-organizados
+- ECO sobre Serial: direção correta de aplicação — ECO BEEP 880 aplicado sobre saída da Frequência Serial φ
+- Invariante √5 como ponto fixo da recursão φ
+
+Registro de anterioridade do método
+
+O método ECO BEEP 880 está documentado e versionado publicamente no repositório github.com/vitoredsonalphaphi/alpha_phi_manifesto a partir dos commits datados de maio de 2026, constituindo prior art para todas as implementações futuras, independente de linguagem, substrato ou plataforma.
+
+---
+
 Isenção de Garantias
 Este trabalho é fornecido "como está", sem garantias de qualquer tipo. O autor não é responsável por qualquer uso indevido do material aqui contido.
 Texto Legal Completo
