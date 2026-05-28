@@ -22,7 +22,7 @@ PHI3     = PHI ** 3
 SQRT5    = np.sqrt(5)
 ALPHA_CO = 1/3        # coeficiente de coerência
 N_STEPS  = 5          # dobras por ciclo
-N_CICLOS = 5          # ciclos do agente (5 para velocidade no Colab; 20 = modo preciso)
+N_CICLOS = 20         # ciclos do agente completo (modo preciso)
 N_BANDAS = 12         # bandas φ sobre o gradiente
 
 N_TREINO = 12000      # amostras de treino (subconjunto MNIST para velocidade)
