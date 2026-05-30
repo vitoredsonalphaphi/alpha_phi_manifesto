@@ -36,6 +36,8 @@ This is not numerology. It is a falsifiable hypothesis with an explicit experime
 
 The golden ratio φ = (1 + √5)/2 ≈ 1.618 appears as an attractor in any growth process that maximizes structural efficiency while preserving self-similarity. This includes phyllotaxis (sunflower seed packing), mollusk shell spirals, human body proportions, and — crucially for this work — solutions to Turing's reaction-diffusion morphogenesis equations (Murray, 2002). φ is not imposed on these systems; it emerges from the optimization of growth under coherence constraints.
 
+Most directly relevant to the present work, Jaeger (2020) demonstrated from an information-theoretic loss function that the optimal ratio of learning rate to momentum in gradient descent equals φ — suggesting the golden ratio has principled grounding in ML optimization dynamics, not merely biological analogy. We extend this observation from training hyperparameters to architectural constants: layer sizes, activation functions, and hyperbolic curvature.
+
 ### 2.2 The Fine-Structure Constant
 
 α = e²/(4πε₀ℏc) ≈ 1/137.036 governs the strength of electromagnetic interaction. It is dimensionless and appears across scales from quantum electrodynamics to the optical properties of graphene: the transmittance of monolayer graphene is T ≈ 1 − πα ≈ 97.7%, experimentally confirmed (Nair et al., 2008). We propose α as the natural minimum granularity of information interaction — the floor below which perturbation loses meaning.
@@ -400,6 +402,8 @@ The project is open. The methodology is public. The results are reported in full
 11. Murray, J.D. (2002). *Mathematical Biology II: Spatial Models and Biomedical Applications*. Springer.
 
 12. Thouless, D.J., Haldane, F.D.M., & Kosterlitz, J.M. (2016). Nobel Prize in Physics — Topological phase transitions and topological phases of matter.
+
+13. Jaeger, S. (2020). The Golden Ratio of Learning and Momentum. *arXiv:2006.04751*. National Library of Medicine, NIH.
 
 ---
 
