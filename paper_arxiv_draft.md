@@ -28,6 +28,8 @@ The Alpha-Phi hypothesis extends this convergence to artificial neural networks:
 
 This is not numerology. It is a falsifiable hypothesis with an explicit experimental protocol, reported results (favorable and unfavorable), and open methodology.
 
+The hypothesis presented here did not originate in academic institutions. It emerged from thirty years of philosophical, artistic, and scientific formation within the Antiga e Mística Ordem Rosacruz — a tradition that treats aesthetics as method and the study of life as anterior to any formalism. The convergence of art, philosophy, and science presented in these pages is the result of that formation.
+
 ---
 
 ## 2. Background and Related Work
@@ -370,6 +372,8 @@ The Alpha-Phi hypothesis — that φ and α are non-arbitrary organizing constan
 These results are suggestive, not conclusive. The theoretical framework — five axes connecting geometric structure to information coherence, rooted in convergences with Turing (1952), Shannon (1948), and Levin (2010+) — provides a falsifiable research program rather than a completed theory.
 
 The project is open. The methodology is public. The results are reported in full.
+
+The results reported here are instruments in service of a larger premise: that technological development which does not serve the evolution of human capacity loses its own foundation. The Antiga e Mística Ordem Rosacruz — the philosophical, artistic, and scientific formation that informs this entire work — holds the development of humanity through self-knowledge as its central mission. The Alpha-Phi hypothesis is, at its root, an inquiry into whether the same constants that organize natural coherence can guide artificial systems in a direction that preserves the human.
 
 *"The result that is true is worth more than the result that is satisfying."*
 
