@@ -26,9 +26,9 @@ Se a humanidade não for preservada, não haverá modernidade. Essa frase não �
 
 ---
 
-## Nota — Análise pendente para o paper
+## Nota — Estado atual da inserção filosófica no paper
 
-A inserção filosófica no paper (arXiv) permanece em standby a pedido do autor. Análise dos pontos de inserção mais apropriados registrada em sessão de 29/05/2026 para retomada na próxima sessão.
+A inserção de origem (Antiga e Mística Ordem Rosacruz como base de formação filosófica, artística e científica de trinta anos) foi inserida na Introdução e na Conclusão do paper em 31/05/2026. O paper permanece em desenvolvimento — a dimensão do Alpha-Phi como fundamento filosófico próprio ainda não foi incorporada e constitui etapa pendente antes da submissão ao arXiv.
 
 ---
 
