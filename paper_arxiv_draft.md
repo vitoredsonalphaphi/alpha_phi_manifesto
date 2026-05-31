@@ -36,6 +36,8 @@ This is not numerology. It is a falsifiable hypothesis with an explicit experime
 
 The golden ratio φ = (1 + √5)/2 ≈ 1.618 appears as an attractor in any growth process that maximizes structural efficiency while preserving self-similarity. This includes phyllotaxis (sunflower seed packing), mollusk shell spirals, human body proportions, and — crucially for this work — solutions to Turing's reaction-diffusion morphogenesis equations (Murray, 2002). φ is not imposed on these systems; it emerges from the optimization of growth under coherence constraints.
 
+Most directly relevant to the present work, Jaeger (2020) demonstrated from an information-theoretic loss function that the optimal ratio of learning rate to momentum in gradient descent equals φ — suggesting the golden ratio has principled grounding in ML optimization dynamics, not merely biological analogy. We extend this observation from training hyperparameters to architectural constants: layer sizes, activation functions, and hyperbolic curvature.
+
 ### 2.2 The Fine-Structure Constant
 
 α = e²/(4πε₀ℏc) ≈ 1/137.036 governs the strength of electromagnetic interaction. It is dimensionless and appears across scales from quantum electrodynamics to the optical properties of graphene: the transmittance of monolayer graphene is T ≈ 1 − πα ≈ 97.7%, experimentally confirmed (Nair et al., 2008). We propose α as the natural minimum granularity of information interaction — the floor below which perturbation loses meaning.
@@ -313,6 +315,16 @@ The ablation study resolves the apparent contradiction between BERT results (φ 
 - The Fourth Axis (phi_residual_transform) — partially explored, not yet fully integrated
 - Scaling behavior: do these effects persist at larger model sizes?
 
+**A conquista do ECO BEEP 880 como referência para o caminho em construção**
+
+Os experimentos em redes neurais demonstraram que φ e α organizam geometria emergente de forma mensurável. A modulação ergonômica do digital pró-orgânico — o objetivo central da hipótese — não foi ainda alcançada nesse substrato: os experimentos estão em construção.
+
+O ECO BEEP 880 fornece a referência empírica de que esse objetivo é alcançável. No substrato de áudio, os mesmos princípios organizadores (φ como atrator de coerência, α=1/137 como parâmetro estrutural irrevogável) produziram formação de campo harmônico com resultado sensorial de qualidade orgânica. O digital chegou ao orgânico.
+
+Isso não é uma analogia: é a mesma hipótese, testada em substrato diferente, produzindo o resultado que as redes neurais ainda buscam. O ECO BEEP 880 não precede nem sucede o trabalho em redes neurais — pertence ao mesmo percurso de especulação. O campo harmônico formado em áudio é o indicador de que a direção está correta, e de que o mesmo resultado nas redes neurais é uma questão de continuidade, não de reformulação da hipótese.
+
+---
+
 ### 6.3 The Isomorphic Translation Method
 
 The conceptual method underlying this work is isomorphic translation: the same mathematical structure (φ as coherence attractor, α as minimum granularity) is proposed to operate across physical biology, quantum physics, and artificial neural networks. This is not analogy — it is the hypothesis that these constants are substrate-independent invariants of coherent information processing.
@@ -390,6 +402,8 @@ The project is open. The methodology is public. The results are reported in full
 11. Murray, J.D. (2002). *Mathematical Biology II: Spatial Models and Biomedical Applications*. Springer.
 
 12. Thouless, D.J., Haldane, F.D.M., & Kosterlitz, J.M. (2016). Nobel Prize in Physics — Topological phase transitions and topological phases of matter.
+
+13. Jaeger, S. (2020). The Golden Ratio of Learning and Momentum. *arXiv:2006.04751*. National Library of Medicine, NIH.
 
 ---
 
