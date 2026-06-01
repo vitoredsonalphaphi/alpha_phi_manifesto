@@ -4,6 +4,20 @@
 
 ---
 
+## O Caminho do BIP até Aqui — em Palavras Simples
+
+O ECO BEEP 880 fez uma pergunta no áudio: é possível modular o sinal digital em direção ao orgânico sem destruí-lo? A resposta foi sim — campo harmônico formado, β→φ³, E_¬φ=0. Mas o BIP perdeu sua identidade no processo. O som sumiu.
+
+Essa perda virou a pergunta seguinte: como modular sem destruir? O texto foi o laboratório — porque cada letra tem uma identidade precisa, verificável bit a bit. Não tem como fingir que a letra sobreviveu.
+
+Seis experimentos depois — do eco_text_001 ao 006 — o problema da identidade foi sendo cercado: amplitude sub-limiar, modulação de fase, distribuição bimodal. Descobrimos que algumas letras aguentam 300 ciclos, outras quebram em 8. Mas não sabíamos por quê.
+
+O eco_text_007 encontrou o porquê. E com o porquê veio a regra universal. Não precisamos mais testar letra por letra — a estrutura dos bits já conta tudo.
+
+O BIP apontou o atrator. O texto ensinou a preservar. O 007 entregou a régua.
+
+---
+
 ## A Pergunta Aberta do ECO TEXT 006
 
 O eco_text_006 encerrou com uma pergunta sem resposta: por que A, I, c, ã chegam a 300 ciclos em modulação de fase enquanto e, r, o, R quebram em 8–9? O resultado era bimodal e claro — mas a causa era desconhecida.
