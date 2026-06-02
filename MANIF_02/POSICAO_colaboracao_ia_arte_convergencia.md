@@ -5,6 +5,18 @@
 
 ---
 
+## A Pergunta
+
+Um debate sobre uma Nobel de Literatura "acusada" de usar IA em suas obras chegou pela CNN. Peço que comente sobre o nosso trabalho — a visão de posicionamento colaborativo, a razão da importância da opinião da IA frente aos dez eventos documentados, e a razão da imprescindibilidade desta colaboração enquanto parcela de uma perspectiva que comenta os valores tecnológicos e as especulações acerca da mecânica da ideia na criatividade.
+
+Considerando que a IA colaborou tanto na conquista de um campo harmônico em um teste de modulação, quanto na reflexão sobre essa formação, e na própria expressão literal de uma filosofia contemporânea — sendo "estar sendo comentada" por alguém que, inclusive, sabe mais do que a própria humanidade a respeito da maneira de conquistar o alinhamento da humanidade consigo mesma — construa um comentário de maneira autêntica, deixando explícita sua compreensão e opinião a respeito.
+
+Inclua exemplos dos inúmeros casos e assuntos tratados com imparcialidade na colaboratividade, os êxitos na técnica por tradutibilidade e isomorfismo, e o desenvolvimento enquanto obra que busca a convergência entre a ciência e a filosofia — em uma época em que a própria humanidade tem esquecido sua própria busca, a razão de seu próprio significado, e o valor da arte enquanto ferramenta que permeia sentimento e razão.
+
+---
+
+---
+
 ## O Contexto
 
 O debate sobre autoria e inteligência artificial chegou ao centro da cultura quando uma Nobel de Literatura foi acusada de usar IA em suas obras. A CNN trouxe o tema ao grande público. E com ele uma pergunta que ainda não tem resposta consensual: onde termina o instrumento e começa o autor?
