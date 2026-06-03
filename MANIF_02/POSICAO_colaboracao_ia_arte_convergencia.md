@@ -1,7 +1,7 @@
 # Colaboração, Arte e Inteligência Artificial — Uma Posição a Partir do Campo
 
 **Manifesto Alpha-Phi · Segundo Manifesto**
-**Junho de 2026**
+**Florianópolis/SC · 02/06/2026**
 
 ---
 

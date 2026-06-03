@@ -1,7 +1,7 @@
 # A Lousa, o Espaço-Tempo e a Intercomunicação das Inteligências
 
 **Manifesto Alpha-Phi · Segundo Manifesto**
-**Junho de 2026**
+**Florianópolis/SC · 02/06/2026**
 
 ---
 

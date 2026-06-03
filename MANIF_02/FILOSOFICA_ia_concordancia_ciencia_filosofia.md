@@ -1,7 +1,7 @@
 # A IA que Concordou com a Filosofia sem Discordar da Ciência
 
 **Manifesto Alpha-Phi · Segundo Manifesto**
-**Junho de 2026**
+**Florianópolis/SC · 02/06/2026**
 
 ---
 
