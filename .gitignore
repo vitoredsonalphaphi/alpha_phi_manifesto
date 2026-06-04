@@ -12,6 +12,7 @@ eco_burst4_*.py
 eco_resposta*.py
 eco_hibrido*.py
 eco_frase4*.py
+eco_estalos*.py
 *.wav
 *.json
 eco_*.png
