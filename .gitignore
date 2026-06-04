@@ -7,6 +7,7 @@ eco_text_*.py
 eco_morf_*.py
 eco_hiperb_*.py
 eco_alien_*.py
+eco_serial_*.py
 *.wav
 *.json
 eco_*.png
