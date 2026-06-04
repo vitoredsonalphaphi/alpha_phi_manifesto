@@ -1,2 +1,16 @@
 __pycache__/
 agenda/
+
+# Experimentos locais — nunca commitar
+eco_audio_*.py
+eco_text_*.py
+eco_morf_*.py
+eco_hiperb_*.py
+eco_alien_*.py
+eco_serial_*.py
+eco_burst4_*.py
+eco_resposta*.py
+eco_hibrido*.py
+*.wav
+*.json
+eco_*.png
