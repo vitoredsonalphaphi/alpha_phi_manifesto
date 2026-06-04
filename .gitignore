@@ -9,6 +9,7 @@ eco_hiperb_*.py
 eco_alien_*.py
 eco_serial_*.py
 eco_burst4_*.py
+eco_resposta*.py
 *.wav
 *.json
 eco_*.png
