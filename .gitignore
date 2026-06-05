@@ -13,6 +13,7 @@ eco_resposta*.py
 eco_hibrido*.py
 eco_frase4*.py
 eco_estalos*.py
+eco_decoder*.py
 *.wav
 *.json
 eco_*.png
