@@ -13,7 +13,9 @@
 #
 # Cola tudo numa célula do Colab e roda.
 
-!pip install sentence-transformers datasets -q
+import subprocess, sys
+subprocess.run([sys.executable, "-m", "pip", "install", "-q",
+                "sentence-transformers", "datasets"], check=True)
 
 import numpy as np
 import matplotlib.pyplot as plt
