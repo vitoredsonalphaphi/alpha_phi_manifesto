@@ -288,7 +288,7 @@ class RedeConeAutonomo:
 
 # ── Carregar SST-2 ─────────────────────────────────────────────────────────────
 print("\nCarregando SST-2 real...")
-dataset = load_dataset('glue', 'sst2')
+dataset = load_dataset('nyu-mll/glue', 'sst2')
 encoder = SentenceTransformer('all-MiniLM-L6-v2')
 
 N_TRAIN = 5000
