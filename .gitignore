@@ -17,3 +17,6 @@ eco_decoder*.py
 *.wav
 *.json
 eco_*.png
+
+# Enunciados em construção — commitar quando prontos
+MANIF_02/hipoteses/CAMPO_OBSERVER_dissertacao.md
