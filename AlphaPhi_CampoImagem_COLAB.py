@@ -1,208 +1,252 @@
-# ALPHA PHI — Campo φ em Imagem Digital
+# ALPHA PHI — φ-Rendering de Contornos
 # Vitor Edson Delavi · Florianópolis · 2026
 #
 # O que este experimento faz:
-# Aplica análise de campo φ ao símbolo AlphaPhi (imagem digital, 100% euclidiana).
-# Pergunta: onde a imagem já ressoa em φ? O que o eco BIP revela?
+# ─────────────────────────────────────────────────────────────────
+# BIP 880Hz → aplicou estrutura φ ao sinal de áudio.
+# Eco_text  → aplicou BIP a cada caractere (o campo existe, mas
+#             o pixel euclidiano bloqueia a expressão visual).
+# Aqui      → aplica transição φ-ponderada nos pixels de borda
+#             dos contornos orgânicos da imagem.
 #
-# O pixel é sempre euclidiano. Mas as RELAÇÕES entre pixels podem ter estrutura φ.
-# Este experimento torna isso visível.
+# O pixel continua retangular. O que muda é a DISTRIBUIÇÃO
+# DE INTENSIDADES nos pixels de borda — seguindo proporção φ.
+#
+# Pergunta: a transição φ é mais ergonômica (menos serrilhada)
+# do que a Gaussiana convencional?
+# ─────────────────────────────────────────────────────────────────
 
 import subprocess, sys
-subprocess.run([sys.executable, "-m", "pip", "install", "-q", "Pillow", "requests"], check=True)
+subprocess.run([sys.executable, "-m", "pip", "install", "-q",
+                "Pillow", "requests", "scipy"], check=True)
 
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import requests
 from io import BytesIO
+from scipy.ndimage import sobel, convolve1d
 
 PHI   = (1 + np.sqrt(5)) / 2
 C_PHI = 1.0 / PHI**2
 
-print(f"φ         = {PHI:.10f}")
-print(f"c = 1/φ²  = {C_PHI:.10f}")
+print(f"φ         = {PHI:.6f}")
+print(f"1/φ       = {1/PHI:.6f}  (decaimento por passo)")
+print(f"1/φ²      = {C_PHI:.6f}  (curvatura)")
 print("=" * 60)
-print("ALPHA PHI — Campo φ em Imagem Digital")
+print("ALPHA PHI — φ-Rendering de Contornos Orgânicos")
 print("=" * 60)
 
-# ── Funções do Campo φ ────────────────────────────────────────────────────────
+# ── Kernels de transição ───────────────────────────────────────────────────────
 
-def campo_phi_coerencia(img, raios=None):
+def kernel_phi(raio=6):
     """
-    Para cada pixel, mede o quanto sua relação de intensidade
-    com vizinhos a distâncias φ^n ressoa com a proporção áurea.
-    Alto = o pixel está numa estrutura com proporção φ.
+    Kernel φ-ponderado: w_n = 1/φ^n
+    Mesmo princípio do BIP — cada passo de distância
+    recebe peso 1/φ^n (decaimento natural de Fibonacci).
     """
-    if raios is None:
-        # Distâncias φ¹, φ², φ³, φ⁴ arredondadas
-        raios = [max(1, int(round(PHI**n))) for n in range(1, 5)]
+    pesos = np.array([1.0 / PHI**n for n in range(raio + 1)])
+    k = np.concatenate([pesos[1:][::-1], pesos])
+    return k / k.sum()
 
-    h, w  = img.shape
-    campo = np.zeros((h, w), dtype=float)
-    peso  = 0.0
+def kernel_gaussiano(raio=6):
+    """Gaussiana equivalente — anti-aliasing convencional."""
+    sigma = raio / 2.5
+    x = np.arange(-raio, raio + 1)
+    k = np.exp(-x**2 / (2 * sigma**2))
+    return k / k.sum()
 
-    for n, r in enumerate(raios):
-        # Peso decrescente por φ: raio mais próximo = mais peso
-        w_n = 1.0 / PHI**n
-        for dy, dx in [(0,1),(1,0),(1,1),(1,-1)]:
-            viz   = np.roll(np.roll(img, dy*r, axis=0), dx*r, axis=1)
-            razao = (img + 1.0) / (viz + 1.0)
-            # Distância log da razão ao log(φ): zero = razão exata de φ
-            distancia = np.abs(np.log(razao) - np.log(PHI))
-            campo    += w_n * np.exp(-distancia**2 / 0.08)
-            peso     += w_n
+def kernel_linear(raio=6):
+    """Transição linear simples — referência mais básica."""
+    x = np.arange(-raio, raio + 1)
+    k = raio + 1 - np.abs(x)
+    return k / k.sum()
 
-    return campo / (peso + 1e-10)
+def aplica_kernel_2d(img, kernel):
+    """Aplica kernel 1D separável: horizontal depois vertical."""
+    r = convolve1d(img.astype(float), kernel, axis=1, mode='reflect')
+    r = convolve1d(r,                  kernel, axis=0, mode='reflect')
+    return np.clip(r, 0, 255)
 
-def bip_eco(sinal, n_estagios=5):
+# ── Detecção de bordas e blending ──────────────────────────────────────────────
+
+def detecta_bordas_sobel(img):
+    """Mapa de bordas normalizado [0,1]."""
+    gx = sobel(img.astype(float), axis=1)
+    gy = sobel(img.astype(float), axis=0)
+    mag = np.sqrt(gx**2 + gy**2)
+    return mag / (mag.max() + 1e-10)
+
+def renderiza_com_kernel(img, kernel, forca_borda=0.7):
     """
-    Eco φ em 5 estágios — análogo ao BIP do áudio.
-    Cada estágio adiciona eco com delay φ^n e ganho 1/φ^n.
+    Aplica kernel APENAS nas regiões de borda.
+    Fora das bordas: mantém o pixel original.
+    Nas bordas: mistura original + suavizado pelo kernel.
     """
-    out = sinal.copy().astype(float)
-    for s in range(1, n_estagios):
-        delay = max(1, int(round(PHI**s)))
-        ganho = 1.0 / PHI**s
-        if delay < len(sinal):
-            out[delay:] += ganho * sinal[:-delay]
-    # Normaliza preservando a escala original
-    mx = out.max()
-    if mx > 1e-10:
-        out = out / mx * sinal.max()
-    return out
+    bordas   = detecta_bordas_sobel(img)
+    suavizado = aplica_kernel_2d(img, kernel)
+    mascara  = np.clip(bordas * (1 / forca_borda), 0, 1)
+    resultado = img.astype(float) * (1 - mascara) + suavizado * mascara
+    return np.clip(resultado, 0, 255).astype(np.uint8), bordas
 
-def bip_imagem(img):
-    """Aplica eco BIP φ por linha e depois por coluna."""
-    resultado = np.zeros_like(img, dtype=float)
-    for i in range(img.shape[0]):
-        resultado[i, :] = bip_eco(img[i, :].astype(float))
-    temp = resultado.copy()
-    for j in range(img.shape[1]):
-        resultado[:, j] = bip_eco(temp[:, j])
-    return np.clip(resultado, 0, 255).astype(np.uint8)
+# ── Carrega imagem ─────────────────────────────────────────────────────────────
 
-def expmap0(v, c=C_PHI):
-    """Mapeia cada pixel para a bola de Poincaré."""
-    norma = np.abs(v) + 1e-10
-    return np.tanh(np.sqrt(c) * norma) * v / (np.sqrt(c) * norma)
-
-# ── Carrega a imagem ──────────────────────────────────────────────────────────
-
-URL_BRANCH = "https://raw.githubusercontent.com/vitoredsonalphaphi/alpha_phi_manifesto/claude/good-morning-N6f3S/1775593114753.png"
-URL_MAIN   = "https://raw.githubusercontent.com/vitoredsonalphaphi/alpha_phi_manifesto/main/1775593114753.png"
+URLS = [
+    "https://raw.githubusercontent.com/vitoredsonalphaphi/alpha_phi_manifesto/claude/good-morning-N6f3S/1775593114753.png",
+    "https://raw.githubusercontent.com/vitoredsonalphaphi/alpha_phi_manifesto/main/1775593114753.png",
+]
 
 img_pil = None
-for url in [URL_BRANCH, URL_MAIN]:
+for url in URLS:
     try:
-        resp = requests.get(url, timeout=10)
-        if resp.status_code == 200:
-            img_pil = Image.open(BytesIO(resp.content))
-            print(f"Imagem carregada: {img_pil.size} modo={img_pil.mode}")
+        r = requests.get(url, timeout=15)
+        if r.status_code == 200:
+            img_pil = Image.open(BytesIO(r.content))
+            print(f"Imagem carregada: {img_pil.size}  modo={img_pil.mode}")
             break
     except Exception as e:
-        print(f"Tentativa falhou: {e}")
+        print(f"  {e}")
 
 if img_pil is None:
-    raise RuntimeError("Não foi possível carregar a imagem do repositório.")
+    raise RuntimeError("Não foi possível carregar a imagem.")
 
-# Redimensiona para processamento rápido
-MAX_DIM = 500
-w_orig, h_orig = img_pil.size
-escala = min(MAX_DIM / w_orig, MAX_DIM / h_orig, 1.0)
+# Trabalha em escala real (até 800px)
+MAX_DIM = 800
+w, h = img_pil.size
+escala = min(MAX_DIM / w, MAX_DIM / h, 1.0)
 if escala < 1.0:
-    img_pil = img_pil.resize((int(w_orig*escala), int(h_orig*escala)), Image.LANCZOS)
-    print(f"Redimensionada para: {img_pil.size}")
+    img_pil = img_pil.resize((int(w * escala), int(h * escala)), Image.LANCZOS)
+    print(f"Redimensionada: {img_pil.size}")
 
 img_rgb  = np.array(img_pil.convert('RGB'))
-img_gray = np.array(img_pil.convert('L')).astype(float)
+img_gray = np.array(img_pil.convert('L'))
+H, W     = img_gray.shape
 
-# ── Processa ──────────────────────────────────────────────────────────────────
+# ── Processa com os três kernels ───────────────────────────────────────────────
 
-print("Calculando campo φ...")
-campo = campo_phi_coerencia(img_gray)
+RAIO = 5
 
-print("Aplicando eco BIP φ...")
-img_bip = bip_imagem(img_gray)
+k_phi   = kernel_phi(RAIO)
+k_gauss = kernel_gaussiano(RAIO)
+k_lin   = kernel_linear(RAIO)
 
-print("Mapeando para bola de Poincaré...")
-img_norm = img_gray / 127.5 - 1.0             # normaliza para [-1, 1]
-img_hyp  = expmap0(img_norm)                  # mapeia para bola de Poincaré
-img_hyp_v = ((img_hyp + 1) / 2 * 255).astype(np.uint8)
+print(f"\nRaio do kernel : {RAIO} pixels")
+print(f"Kernel φ (pesos): {np.round(k_phi,   3)}")
+print(f"Kernel G (pesos): {np.round(k_gauss, 3)}")
+print(f"Kernel L (pesos): {np.round(k_lin,   3)}")
 
-# Diferença BIP vs original
-diff = np.abs(img_bip.astype(float) - img_gray)
-diff = (diff / diff.max() * 255).astype(np.uint8)
+print("\nAplicando kernels...")
+img_lin,   bordas = renderiza_com_kernel(img_gray, k_lin,   forca_borda=0.6)
+img_gauss, _      = renderiza_com_kernel(img_gray, k_gauss, forca_borda=0.6)
+img_phi,   _      = renderiza_com_kernel(img_gray, k_phi,   forca_borda=0.6)
 
-# Overlay: campo φ em dourado sobre original
-overlay = img_rgb.copy().astype(float)
-mascara = campo / (campo.max() + 1e-10)
-overlay[:,:,0] = np.clip(overlay[:,:,0] + mascara * 120, 0, 255)  # R+
-overlay[:,:,1] = np.clip(overlay[:,:,1] + mascara *  80, 0, 255)  # G+
-overlay[:,:,2] = np.clip(overlay[:,:,2] - mascara *  60, 0, 255)  # B-
-overlay = overlay.astype(np.uint8)
+# ── Seleciona região de zoom no contorno orgânico ─────────────────────────────
 
-# Perfil horizontal: intensidade média × campo φ médio por coluna
-perfil_orig  = img_gray.mean(axis=0)
-perfil_campo = campo.mean(axis=0)
-perfil_bip   = img_bip.astype(float).mean(axis=0)
+# Encontra centro de massa das bordas — provavelmente o círculo do logo
+gy, gx   = np.where(bordas > 0.5)
+if len(gy) > 0:
+    cy, cx = int(gy.mean()), int(gx.mean())
+else:
+    cy, cx = H // 2, W // 2
 
-# ── Visualização ──────────────────────────────────────────────────────────────
+# Zoom de 60px ao redor do contorno mais forte
+ZOOM = 60
+y1 = max(0, cy - ZOOM); y2 = min(H, cy + ZOOM)
+x1 = max(0, cx - ZOOM); x2 = min(W, cx + ZOOM)
+
+def z(arr):
+    return arr[y1:y2, x1:x2]
+
+# ── Perfil de intensidade cruzando borda ──────────────────────────────────────
+
+# Linha que tem mais bordas
+linha_idx = int(np.argmax(bordas.sum(axis=1)))
+# Segmento que cruza a região mais ativa
+col_ativo = bordas[linha_idx, :].argmax()
+seg_w = 80
+cs = max(0, col_ativo - seg_w); ce = min(W, col_ativo + seg_w)
+
+p_orig  = img_gray[linha_idx, cs:ce].astype(float)
+p_lin   = img_lin [linha_idx, cs:ce].astype(float)
+p_gauss = img_gauss[linha_idx, cs:ce].astype(float)
+p_phi   = img_phi [linha_idx, cs:ce].astype(float)
+
+# ── Visualização ───────────────────────────────────────────────────────────────
 
 GOLD  = "#DAA520"
 CYAN  = "#00BFFF"
 GREEN = "#00FF88"
+WHITE = "#E6EDF3"
 
-fig = plt.figure(figsize=(18, 12))
+fig = plt.figure(figsize=(20, 14))
 fig.patch.set_facecolor("#0d1117")
+gs  = fig.add_gridspec(3, 4, hspace=0.45, wspace=0.18)
 
-# Grade: 2 linhas × 3 colunas (imagens) + 1 linha perfis
-gs = fig.add_gridspec(3, 3, hspace=0.35, wspace=0.15)
-
-def estiliza(ax, titulo, cor=GOLD):
+def ax_img(ax, img, cmap, titulo, cor=GOLD, interp='bilinear'):
     ax.set_facecolor("#0d1117")
-    ax.set_title(titulo, color=cor, fontsize=10, fontweight='bold', pad=6)
+    ax.imshow(img, cmap=cmap, interpolation=interp)
+    ax.set_title(titulo, color=cor, fontsize=10, fontweight='bold', pad=5)
     ax.axis('off')
 
-ax1 = fig.add_subplot(gs[0, 0]); ax1.imshow(img_rgb);      estiliza(ax1, "Original\n(pixel euclidiano)")
-ax2 = fig.add_subplot(gs[0, 1]); ax2.imshow(campo, cmap='inferno'); estiliza(ax2, "Campo φ — Coerência\n(onde a imagem já ressoa em φ)")
-ax3 = fig.add_subplot(gs[0, 2]); ax3.imshow(overlay);      estiliza(ax3, "Campo φ sobreposto\n(dourado = alta ressonância φ)")
+def ax_plot(ax, titulo):
+    ax.set_facecolor("#161b22")
+    ax.set_title(titulo, color=GOLD, fontsize=10, fontweight='bold', pad=5)
+    ax.tick_params(colors="#8B949E")
+    for sp in ax.spines.values(): sp.set_color("#30363d")
+    ax.grid(True, alpha=0.15)
 
-ax4 = fig.add_subplot(gs[1, 0]); ax4.imshow(img_bip, cmap='gray');   estiliza(ax4, "Eco BIP φ\n(5 estágios por linha e coluna)")
-ax5 = fig.add_subplot(gs[1, 1]); ax5.imshow(diff, cmap='hot');        estiliza(ax5, "Δ BIP — O que o eco φ adiciona\n(campo harmônico emergente)")
-ax6 = fig.add_subplot(gs[1, 2]); ax6.imshow(img_hyp_v, cmap='gray'); estiliza(ax6, f"expmap0  c=1/φ²={C_PHI:.4f}\n(mapeado para bola de Poincaré)")
+# Linha 0 — imagens completas
+ax_img(fig.add_subplot(gs[0,0]), img_gray,  'gray',    "Original\n(pixel euclidiano)")
+ax_img(fig.add_subplot(gs[0,1]), img_lin,   'gray',    "Transição linear\n(referência básica)",     CYAN)
+ax_img(fig.add_subplot(gs[0,2]), img_gauss, 'gray',    "Transição Gaussiana\n(anti-aliasing padrão)", CYAN)
+ax_img(fig.add_subplot(gs[0,3]), img_phi,   'gray',    "Transição φ  (1/φⁿ)\n(anti-aliasing φ-ponderado)", GREEN)
 
-# Perfis horizontais
-ax7 = fig.add_subplot(gs[2, :])
-ax7.set_facecolor("#161b22")
-cols = np.arange(len(perfil_orig))
-ax7.plot(cols, perfil_orig  / perfil_orig.max(),  color=GOLD,  lw=1.5, label="Intensidade original")
-ax7.plot(cols, perfil_campo / perfil_campo.max(), color=CYAN,  lw=1.5, label="Campo φ (coerência média)")
-ax7.plot(cols, perfil_bip   / perfil_bip.max(),   color=GREEN, lw=1.0, alpha=0.7, label="Eco BIP φ")
-ax7.axhline(1/PHI, color='white', lw=0.7, ls='--', alpha=0.4, label=f"1/φ = {1/PHI:.3f}")
-ax7.axhline(C_PHI, color='red',   lw=0.7, ls='--', alpha=0.4, label=f"c = 1/φ² = {C_PHI:.3f}")
-ax7.set_title("Perfil horizontal — Intensidade × Campo φ × Eco BIP", color=GOLD, fontsize=10, fontweight='bold')
-ax7.tick_params(colors="#8B949E")
-for sp in ax7.spines.values(): sp.set_color("#30363d")
-ax7.set_facecolor("#161b22")
-ax7.legend(facecolor="#161b22", labelcolor="#E6EDF3", fontsize=8, loc='upper right')
-ax7.grid(True, alpha=0.15)
+# Linha 1 — zoom no contorno orgânico (NEAREST para ver os pixels)
+ax_img(fig.add_subplot(gs[1,0]), z(img_gray),  'gray', f"ZOOM original\n(contorno orgânico — pixel a pixel)", interp='nearest')
+ax_img(fig.add_subplot(gs[1,1]), z(img_lin),   'gray', f"ZOOM linear",   CYAN,  interp='nearest')
+ax_img(fig.add_subplot(gs[1,2]), z(img_gauss), 'gray', f"ZOOM Gaussiana", CYAN,  interp='nearest')
+ax_img(fig.add_subplot(gs[1,3]), z(img_phi),   'gray', f"ZOOM φ",         GREEN, interp='nearest')
 
-# Estatísticas
-media_campo = campo.mean()
-pico_campo  = campo.max()
-print(f"\nCoerência φ média : {media_campo:.4f}")
-print(f"Coerência φ pico  : {pico_campo:.4f}")
-print(f"Δ BIP médio       : {diff.mean():.2f} / 255")
-raios = [max(1, int(round(PHI**n))) for n in range(1, 5)]
-print(f"Raios φ usados    : {raios}  (φ¹={PHI:.2f} → φ⁴={PHI**4:.2f})")
+# Linha 2 — perfil de intensidade e kernels
+ax_p = fig.add_subplot(gs[2, :2]); ax_plot(ax_p, f"Perfil de intensidade — linha {linha_idx}  (cruzando contorno orgânico)")
+x_p  = np.arange(len(p_orig))
+ax_p.plot(x_p, p_orig,  color=GOLD,  lw=1.5, label="Original",        alpha=0.9)
+ax_p.plot(x_p, p_lin,   color=CYAN,  lw=1.5, label="Linear",          alpha=0.8, ls=':')
+ax_p.plot(x_p, p_gauss, color=CYAN,  lw=2.0, label="Gaussiana",       alpha=0.9, ls='--')
+ax_p.plot(x_p, p_phi,   color=GREEN, lw=2.5, label="φ (1/φⁿ)",        alpha=1.0)
+ax_p.legend(facecolor="#161b22", labelcolor=WHITE, fontsize=9)
+ax_p.set_ylabel("Intensidade", color="#8B949E")
+
+ax_k = fig.add_subplot(gs[2, 2:]); ax_plot(ax_k, "Kernel de transição de borda: Linear vs Gaussiana vs φ")
+x_k  = np.arange(len(k_phi)) - len(k_phi) // 2
+ax_k.plot(x_k, k_lin,   color=CYAN,  lw=1.5, marker='o', ms=4, label="Linear")
+ax_k.plot(x_k, k_gauss, color=CYAN,  lw=2.0, marker='s', ms=5, label="Gaussiana",  ls='--')
+ax_k.plot(x_k, k_phi,   color=GREEN, lw=2.5, marker='^', ms=5, label="φ  (1/φⁿ)")
+# Marca posições φ^n
+for n in range(1, 4):
+    pos = int(round(PHI**n))
+    if pos <= RAIO:
+        ax_k.axvline( pos, color=GOLD, lw=0.8, ls=':', alpha=0.6)
+        ax_k.axvline(-pos, color=GOLD, lw=0.8, ls=':', alpha=0.6)
+        ax_k.text(pos + 0.1, k_phi[len(k_phi)//2 + pos] + 0.002,
+                  f"φ^{n}", color=GOLD, fontsize=7, alpha=0.8)
+ax_k.legend(facecolor="#161b22", labelcolor=WHITE, fontsize=9)
+ax_k.set_xlabel("Distância do pixel de borda (pixels)", color="#8B949E")
+ax_k.set_ylabel("Peso de intensidade", color="#8B949E")
 
 fig.suptitle(
-    f"ALPHA PHI — Campo φ em Imagem Digital  c=1/φ²={C_PHI:.4f}  φ={PHI:.4f}  Florianópolis 2026",
+    f"ALPHA PHI — φ-Rendering  |  kernel: 1/φⁿ  |  φ={PHI:.4f}  |  raio={RAIO}px  |  Florianópolis 2026",
     color=GOLD, fontsize=12, fontweight='bold'
 )
 
-plt.savefig("alphaphi_campo_imagem.png", dpi=150, bbox_inches='tight', facecolor="#0d1117")
+plt.savefig("alphaphi_rendering_phi.png", dpi=150,
+            bbox_inches='tight', facecolor="#0d1117")
 plt.show()
-print("\nGráfico salvo: alphaphi_campo_imagem.png")
-print("alpha-phi")
+
+print("\nGráfico salvo: alphaphi_rendering_phi.png")
+print(f"\nO que o kernel φ faz diferente da Gaussiana:")
+print(f"  Pixel 0 (borda):      φ =  {k_phi[RAIO]:.4f}  G = {k_gauss[RAIO]:.4f}")
+print(f"  Pixel ±1:             φ =  {k_phi[RAIO+1]:.4f}  G = {k_gauss[RAIO+1]:.4f}")
+print(f"  Pixel ±φ¹ ({int(round(PHI)):}px):      φ =  {k_phi[RAIO+int(round(PHI))]:.4f}  G = {k_gauss[RAIO+int(round(PHI))]:.4f}")
+print(f"  Pixel ±φ² ({int(round(PHI**2)):}px):      φ =  {k_phi[RAIO+int(round(PHI**2))]:.4f}  G = {k_gauss[RAIO+int(round(PHI**2))]:.4f}")
+print("\nalpha-phi")
