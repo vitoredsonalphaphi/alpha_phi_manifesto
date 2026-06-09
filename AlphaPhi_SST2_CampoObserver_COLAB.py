@@ -157,18 +157,15 @@ class RedeConeAutonomo:
         return out
 
     def backward(self, X, y, lr):
+        # _cone usa z = x @ W + b (projeção euclidiana), então backward é euclidiano.
+        # A geometria hiperbólica está no forward — não no gradiente dos parâmetros.
         m     = X.shape[0]
         delta = self.acts[-1] - y.reshape(-1,1)
         for i in reversed(range(len(self.W))):
             self.W[i] -= lr * (self.acts[i].T @ delta / m)
             self.b[i]  -= lr * delta.mean(0)
             if i > 0:
-                x     = self.acts[i]
-                norm2 = np.sum(x**2, axis=-1, keepdims=True)
-                norm2 = np.clip(norm2, 0, (1.0/C_PHI - 1e-5)**2)
-                lam   = 2.0 / (1.0 - C_PHI * norm2 + 1e-10)
-                lam   = np.clip(lam, 1.0, 100.0)  # cap: máx 10000x atenuação
-                delta = (delta @ self.W[i].T) / (lam**2 + 1e-10)
+                delta = delta @ self.W[i].T
 
     def predict(self, X):
         try:    return (self.forward(X).flatten() >= 0.5).astype(int)
@@ -222,12 +219,7 @@ class RedeCampoObserver(RedeConeAutonomo):
             self.b[i]  -= lr * delta.mean(0)
 
             if i > 0:
-                x     = self.acts[i]
-                norm2 = np.sum(x**2, axis=-1, keepdims=True)
-                norm2 = np.clip(norm2, 0, (1.0/C_PHI - 1e-5)**2)
-                lam   = 2.0 / (1.0 - C_PHI * norm2 + 1e-10)
-                lam   = np.clip(lam, 1.0, 100.0)
-                delta = (delta @ self.W[i].T) / (lam**2 + 1e-10)
+                delta = delta @ self.W[i].T
 
     def taxa_assimilacao(self):
         if self._total == 0: return 0.0
@@ -287,10 +279,8 @@ for ep in range(1, N_EPOCHS+1):
         Xb = Xs[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
         yb = ys[b*BATCH_SIZE:(b+1)*BATCH_SIZE]
         net_A.forward(Xb); net_A.backward(Xb, yb, LR)
-        try: net_C.forward(Xb); net_C.backward(Xb, yb, LR)
-        except: pass
-        try: net_D.forward(Xb); net_D.backward(Xb, yb, LR)
-        except: pass
+        net_C.forward(Xb); net_C.backward(Xb, yb, LR)
+        net_D.forward(Xb); net_D.backward(Xb, yb, LR)
 
     aA   = net_A.accuracy(X_val, y_val)
     aC   = net_C.accuracy(X_val, y_val)
