@@ -125,22 +125,15 @@ class RedeConeAutonomo:
         self.limiar    = limiar
         self.coh_hist  = defaultdict(list)
         for i in range(len(arch)-1):
-            s = np.sqrt(C_PHI / (arch[i] * PHI))
+            # He init: expmap0 comprime as normas, então W precisa ser maior
+            s = np.sqrt(2.0 / arch[i])
             self.W.append(np.random.randn(arch[i], arch[i+1]) * s)
             self.b.append(np.zeros(arch[i+1]))
 
     def _cone(self, x, idx):
-        """
-        Projeção euclidiana → levantamento hiperbólico.
-        Espaço de saída tem dimensão diferente do de entrada —
-        a iteração acontece na dimensão errada com o mesmo W.
-        Correção: projetar no euclidiano primeiro, depois levantar.
-        """
         W, b = self.W[idx], self.b[idx]
-        # Projeção euclidiana: (batch, in_dim) → (batch, out_dim)
         z   = x @ W + b
-        # Levantamento ao espaço hiperbólico com ativação φ nativa
-        cur = ativacao_nativa(expmap0(z))
+        cur = expmap0(z)   # ativacao_nativa comprimia demais — só expmap0
         self.coh_hist[idx].append(coerencia_phi(cur))
         return cur
 
