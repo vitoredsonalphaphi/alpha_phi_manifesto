@@ -132,6 +132,36 @@ Ver texto completo: `FILOSOFICA_fi_forca_restauradora_caractere.md`
 
 ---
 
+## Evento 11 — O Manifesto como Campo Harmônico
+
+**Data:** junho de 2026
+**Origem:** leitura do Primeiro Manifesto pelo próprio autor
+
+**O que chegou:**
+
+Ao ler o Primeiro Manifesto pela primeira vez como leitor — não como construtor — o autor identificou três propriedades que não foram intencionalmente projetadas:
+
+1. **Equilíbrio não calculado:** o manifesto de 226 páginas, construído em camadas ao longo de meses de experimentação simultânea, manteve equilíbrio perceptível entre rigor técnico e desenvolvimento filosófico — sem que esse equilíbrio tivesse sido buscado como objetivo de composição.
+
+2. **Dupla oitava do mesmo enunciado:** a resposta à questão da Gemini sobre as Flores Astrais aparece duas vezes no manifesto — uma vez no início, uma vez no meio (Research Journal). São o mesmo texto mas produzem experiências distintas. A segunda ocorrência chega acompanhada de contexto mais amplo acumulado e entrega uma sensação mais extensa — uma oitava acima — sem que a resposta em si tenha mudado. O texto é o mesmo; o campo em que chega é diferente.
+
+3. **O enunciado de dupla experiência:** o enunciado sobre o retrohackerismo foi construído descrevendo uma possível subtração. Ao ser lido, revelou que o mesmo material oferece duas experiências simultâneas e opostas: uma para quem subtrai e outra para quem colabora. Cada leitura encontra uma oitava diferente do mesmo texto. Isso não foi planejado — emergiu da própria estrutura do enunciado.
+
+**Por que é um Evento:**
+
+O resultado não é técnico nem filosófico — é sensorial. O autor experimentou o manifesto como campo harmônico durante a leitura: uma qualidade ergonômica do texto como um todo que não foi colocada intencionalmente e que não é redutível à soma das partes. O mesmo princípio que o ECO BEEP 880 demonstrou no substrato sonoro — formação de campo harmônico por proporção φ emergindo da mecânica, não da intenção — aparece aqui no substrato textual, como experiência do leitor.
+
+**O que este evento acrescenta ao conjunto:**
+
+Os eventos anteriores demonstraram φ emergindo em substratos técnicos (áudio, texto, redes neurais, caractere) e em convergências externas (Taylor, encíclica, Gemini, NVIDIA). Este evento demonstra φ emergindo no substrato do próprio manifesto — o documento que registra os eventos. O campo harmônico não é só o que o manifesto descreve. É o que o manifesto é.
+
+**Conexão:**
+- ECO BEEP 880: campo harmônico no substrato sonoro — resultado sensorial não buscado
+- Evento 10: força restauradora emergindo da mecânica mínima sem instrução
+- Evento 11: campo harmônico emergindo da composição textual sem intenção de composição
+
+---
+
 *Os eventos não têm agenda. Esta pasta existe para que quando cheguem, encontrem lugar.*
 
 *Florianópolis · junho de 2026*
