@@ -159,17 +159,33 @@ class RedeFoton:
 
 # ─── Carregamento de dados ────────────────────────────────────────────────────
 print("\nCarregando SST-2...")
-try:
-    ds = load_dataset("nyu-mll/glue", "sst2")
-except Exception:
-    ds = load_dataset("glue", "sst2")
+# stanfordnlp/sst2 e SetFit/sst2 sao autocontidos — nao referenciam
+# o dataset legado 'sst2' (sem namespace) que falha no HF Hub novo.
+_TEXT_FIELD = "sentence"
+_ds = None
+for _name, _cfg, _field in [
+    ("stanfordnlp/sst2", None,   "sentence"),
+    ("SetFit/sst2",      None,   "text"),
+    ("nyu-mll/glue",     "sst2", "sentence"),
+    ("glue",             "sst2", "sentence"),
+]:
+    try:
+        _ds = load_dataset(_name) if _cfg is None else load_dataset(_name, _cfg)
+        _TEXT_FIELD = _field
+        print(f"  Dataset: {_name}  campo='{_field}'")
+        break
+    except Exception as _e:
+        print(f"  {_name}: falhou ({type(_e).__name__})")
+if _ds is None:
+    raise RuntimeError("Nao foi possivel carregar SST2 — verifique conexao HF")
+ds = _ds
 
 np.random.seed(42)
 idx_tr  = np.random.choice(len(ds['train']),      3000, replace=False)
 idx_val = np.random.choice(len(ds['validation']),  872, replace=False)
 
-texts_tr  = [ds['train'][int(i)]['sentence']      for i in idx_tr]
-texts_val = [ds['validation'][int(i)]['sentence'] for i in idx_val]
+texts_tr  = [ds['train'][int(i)][_TEXT_FIELD]      for i in idx_tr]
+texts_val = [ds['validation'][int(i)][_TEXT_FIELD] for i in idx_val]
 y_tr  = np.array([ds['train'][int(i)]['label']      for i in idx_tr],  dtype=float)
 y_val = np.array([ds['validation'][int(i)]['label'] for i in idx_val], dtype=float)
 
