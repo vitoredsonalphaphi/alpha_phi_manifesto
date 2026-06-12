@@ -158,7 +158,10 @@ class RedeFoton:
 
 # ─── Carregamento de dados ────────────────────────────────────────────────────
 print("\nCarregando SST-2...")
-ds = load_dataset("sst2")
+try:
+    ds = load_dataset("nyu-mll/glue", "sst2")
+except Exception:
+    ds = load_dataset("glue", "sst2")
 
 np.random.seed(42)
 idx_tr  = np.random.choice(len(ds['train']),      3000, replace=False)
