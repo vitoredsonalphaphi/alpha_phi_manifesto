@@ -27,7 +27,8 @@
 
 import subprocess, sys
 subprocess.run([sys.executable, "-m", "pip", "install", "-q",
-                "datasets", "scipy"], check=True)
+                "--upgrade", "huggingface_hub", "datasets", "scipy"],
+               check=True)
 
 import numpy as np
 import matplotlib
