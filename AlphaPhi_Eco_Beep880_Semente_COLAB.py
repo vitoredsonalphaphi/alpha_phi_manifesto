@@ -43,7 +43,7 @@ F_M      = F_ORG / PHI
 BETA_FM  = PHI
 DURACAO  = 1.5
 N_STEPS  = 5
-N_CICLOS = 20
+N_CICLOS = 100
 N_OBS    = 10
 LIMIAR   = 0.99 * PHI**3
 
