@@ -63,20 +63,24 @@ class ScannerAlphaPhi:
         print(scanner.relatorio())
     """
 
-    PHI       = (1 + np.sqrt(5)) / 2
-    ALPHA     = 1 / 137.035999084
-    LOG_ALPHA = np.log(1.0 / ALPHA)    # log(137) ≈ 4.920
-    wm        = 1.0 / PHI              # 1/φ ≈ 0.618 — peso primário
-    wn        = 1.0 - 1.0 / PHI       # 1-1/φ ≈ 0.382
+    PHI              = (1 + np.sqrt(5)) / 2
+    ALPHA            = 1 / 137.035999084
+    LOG_ALPHA        = np.log(1.0 / ALPHA)    # log(137) ≈ 4.920
+    wm               = 1.0 / PHI              # 1/φ ≈ 0.618 — peso primário
+    wn               = 1.0 - 1.0 / PHI       # 1-1/φ ≈ 0.382
+    META_COH_LIMIAR  = 0.70
+    LIMIAR_SUBSTRATO = 1e-3
+    N_SONDA_MIN      = 3
+    N_SONDA_MAX      = 10
 
     def __init__(self, rede,
-                 N_SONDA_MIN=3, N_SONDA_MAX=10,
-                 META_COH_LIMIAR=0.70, LIMIAR_SUBSTRATO=1e-3):
+                 n_sonda_min=None, n_sonda_max=None,
+                 meta_coh_limiar=None, limiar_substrato=None):
         self.rede              = rede
-        self.N_SONDA_MIN       = N_SONDA_MIN
-        self.N_SONDA_MAX       = N_SONDA_MAX
-        self.META_COH_LIMIAR   = META_COH_LIMIAR
-        self.LIMIAR_SUBSTRATO  = LIMIAR_SUBSTRATO
+        self._n_sonda_min      = n_sonda_min      or self.__class__.N_SONDA_MIN
+        self._n_sonda_max      = n_sonda_max      or self.__class__.N_SONDA_MAX
+        self._meta_coh_limiar  = meta_coh_limiar  or self.__class__.META_COH_LIMIAR
+        self._limiar_substrato = limiar_substrato or self.__class__.LIMIAR_SUBSTRATO
 
         self._scores_ema   = None
         self._meta_coh_hist = []
@@ -186,8 +190,8 @@ class ScannerAlphaPhi:
         self._meta_coh_hist.append(mc)
         self._n_ciclos += 1
 
-        parar  = self._n_ciclos >= self.N_SONDA_MIN and mc >= self.META_COH_LIMIAR
-        limite = self._n_ciclos >= self.N_SONDA_MAX
+        parar  = self._n_ciclos >= self._n_sonda_min and mc >= self._meta_coh_limiar
+        limite = self._n_ciclos >= self._n_sonda_max
 
         if parar or limite:
             self._fase_otima   = int(np.argmax(self._scores_ema)) + 1
@@ -221,8 +225,8 @@ class ScannerAlphaPhi:
             return {"pronto": False}
         scores  = [p['score'] for p in self._perfil_final]
         mc_final = self._meta_coh_hist[-1] if self._meta_coh_hist else 0.0
-        adequado = (max(scores) > self.LIMIAR_SUBSTRATO
-                    and mc_final >= self.META_COH_LIMIAR)
+        adequado = (max(scores) > self._limiar_substrato
+                    and mc_final >= self._meta_coh_limiar)
         return {
             "pronto":        True,
             "fase_otima":    self._fase_otima,
