@@ -416,12 +416,13 @@ if cc_rels:
     mc_med  = np.mean([r['meta_coh']   for r in cc_rels])
     nc_med  = np.mean([r['n_ciclos']   for r in cc_rels])
     b_med   = np.mean([r['beta_atual'] for r in cc_rels])
-    print(f"\n  meta_coh médio : {mc_med:.4f}  (limiar={ScannerAlphaPhi.META_COH_LIMIAR})")
+    limiar = ScannerAlphaPhi.META_COH_LIMIAR
+    print(f"\n  meta_coh médio : {mc_med:.4f}  (limiar={limiar})")
     print(f"  ciclos médio   : {nc_med:.1f}")
     print(f"  β médio        : {b_med:.4f}")
     adequados = sum(r['adequado'] for r in cc_rels)
     print(f"  substrato      : {adequados}/10 adequados")
-    if mc_med < ScannerAlphaPhi.META_COH_LIMIAR:
+    if mc_med < limiar:
         print(f"\n  → Diagnóstico: substrato INADEQUADO")
         print(f"    meta_coh não convergiu — sinal semântico ausente neste substrato")
 
