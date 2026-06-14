@@ -34,6 +34,14 @@
 # ══════════════════════════════════════════════════════════════════
 # DIRETRIZ DE APLICABILIDADE — SCANNER α-φ
 #
+# PROPÓSITO FUNDAMENTAL:
+#   α não tem posição fixa — o Scanner determina onde α opera
+#   em cada substrato específico.
+#   A sequência eco-ressonante informa o estágio de α:
+#     qual fase da rede, com quais parâmetros, para cada tipo de dado.
+#   Sem Scanner: α aplicado cegamente.
+#   Com Scanner: α encontra sua residência natural no substrato.
+#
 # DOMÍNIO ATUAL: espectros de frequência
 #   → sinais de áudio (FFT)
 #   → séries temporais com estrutura espectral
