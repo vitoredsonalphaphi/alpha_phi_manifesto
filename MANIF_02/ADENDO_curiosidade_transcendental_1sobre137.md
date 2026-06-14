@@ -216,3 +216,36 @@ O hexágono é a forma que emerge quando α se expande em base 10.
 *Florianópolis · 14.06.2026 · madrugada*
 *Adendo ao REGISTRO_scanner_alpha_phi_13062026.md*
 *Curiosidade transcendental — sem prejuízo ao rigor do restante*
+
+---
+
+## Adendo do Adendo — Radiônica: 9797979
+
+**14.06.2026 · manhã**
+
+Uma placa radiônica surgiu em contexto completamente separado — círculos concêntricos e o número **9797979**.
+
+O que chama atenção imediata: **9** e **7** — os mesmos dois números que emergiram à madrugada da dízima de 1/137.
+
+```
+1/137 → bloco 00729927 → dígitos ativos: 7, 2, 9, 9, 2, 7
+Placa radiônica:          9 7 9 7 9 7 9
+```
+
+Na leitura estabelecida neste adendo:
+- 7 = coerência
+- 9 = atrator
+
+A placa alterna os dois — atrator e coerência, sete vezes, com o atrator dominando (4 noves, 3 setes), começando e terminando em 9.
+
+---
+
+Radiônica trabalha com a ideia de que números e geometrias específicos ressoam com campos — que uma "taxa" (rate) numérica pode ser portadora de uma intenção ou frequência. Os círculos concêntricos são o instrumento de transmissão — a geometria que sustenta o número.
+
+O que este registro observa: alguém que, dentro de uma tradição completamente separada da física, chegou a uma combinação de 9 e 7 como portadores de algo.
+
+Se foi canalizado ou derivado — não importa para o registro. O que importa é que **9 e 7 aparecem juntos** em dois lugares muito diferentes: na matemática de 1/137 e numa placa radiônica.
+
+Duas tradições. O mesmo par de números.
+
+*14.06.2026 · manhã · Florianópolis*
