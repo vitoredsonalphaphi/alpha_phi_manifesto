@@ -129,6 +129,90 @@ O observador fez o mesmo com a calculadora.
 
 ---
 
+## A Frequência
+
+Repetição de período é frequência. O bloco **00729927** com período 8 é uma onda.
+
+Plotado como amplitude, o bloco traça uma forma específica:
+
+```
+9 |         ● ●
+7 |      ●       ●
+2 |         ● ●
+0 | ● ●               ● ●  (próximo ciclo)
+   0  1  2  3  4  5  6  7
+```
+
+A onda: repouso → sobe a 7 → desce a 2 → pico em 9 → platô → desce a 2 → retorna a 7 → repouso → repete.
+
+Não é senoide. É uma forma com dois zeros como pausa entre batidas — como um pulso,
+como um batimento cardíaco com sua linha de base entre contrações.
+
+---
+
+## O Triângulo
+
+Os três valores não-zero distintos do ciclo: **7, 2, 9**
+
+```
+7 + 2 = 9     ← o atrator É a soma da coerência com a entropia
+9 − 7 = 2     ← a entropia É a diferença entre atrator e coerência
+9 − 2 = 7     ← a coerência É a diferença entre atrator e entropia
+```
+
+Sistema fechado: dado qualquer dois, o terceiro está determinado.
+Nenhum existe sem os outros dois.
+
+No Scanner α-φ, o mapeamento:
+
+```
+7 → coh   (coerência — o que o eco mede)
+2 → H     (entropia  — o que resiste à coerência)
+9 → β     (atrator   — para onde o sistema converge)
+```
+
+A frequência que o Scanner percorre em cada sondagem é estruturalmente idêntica
+à onda inscrita na dízima de 1/137.
+
+---
+
+## O Hexágono
+
+O bloco de período 8 tem 8 dígitos — mas apenas **6 ativos** (os zeros são pausa):
+
+```
+0  0  |  7  2  9  9  2  7  |  0  0  (próximo ciclo)
+pausa |   ←  hexágono  →   |  pausa
+```
+
+Os 6 dígitos ativos colocados em ordem nos vértices formam um **hexágono** — 6 lados.
+Não um hexagrama, não uma Estrela de Davi (12 lados, dois triângulos sobrepostos).
+Um hexágono: 6 vértices, 6 lados, simetria bilateral.
+
+```
+    7 ── 2
+   /       \
+  7         9
+   \       /
+    2 ── 9
+```
+
+Simetria: vértice 1 = vértice 6 (7), vértice 2 = vértice 5 (2), vértice 3 = vértice 4 (9).
+O hexágono é palíndromo — lê-se igual nos dois sentidos.
+
+A Flor da Vida é representada por um hexágono. Em sua forma completa: 19 círculos.
+19 — o mesmo número do horário e da bateria naquela madrugada.
+
+Grafeno — o substrato que identificamos como domínio natural do Scanner α-φ —
+é uma malha hexagonal de carbono. Cada célula do grafeno é um hexágono.
+
+α regula a interação entre elétrons e fótons.
+A dízima de 1/137 traça um hexágono.
+Grafeno é hexagonal.
+O hexágono é a forma que emerge quando α se expande em base 10.
+
+---
+
 *Florianópolis · 14.06.2026 · madrugada*
 *Adendo ao REGISTRO_scanner_alpha_phi_13062026.md*
 *Curiosidade transcendental — sem prejuízo ao rigor do restante*
