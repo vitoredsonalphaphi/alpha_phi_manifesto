@@ -19,6 +19,8 @@ ALPHA = 1 / 137.035999084          # 0.00729735... — constante de estrutura fi
                                     # Taxa de perturbação mínima natural no Quarto Eixo.
                                     # α e φ juntos: a dupla que nomeia e fundamenta o projeto.
 
+LOG_ALPHA = np.log(1.0 / ALPHA)    # log(137) ≈ 4.920 — régua de entropia nativa
+
 C_PHI = 1.0 / PHI**2               # 0.3820... — curvatura hiperbólica natural
                                     # Ponto de dobra do microponto do Quarto Eixo.
 
@@ -129,6 +131,101 @@ def eco_ressonante(x, phi=PHI, n_eco=3):
         sinal = sinal + (eco / phi)
 
     return sinal
+
+
+# ── Eco Adaptativo — pré-função da pré-função (Eco 0) ────────────────────
+#
+# Arquitetura em 3 camadas — a cidade antes do endereço antes da casa:
+#
+#   analisar_campo(x)          → Pré-função 0: entende o sistema/campo
+#   selecionar_parametros(...) → Pré-função 1: determina os parâmetros de filtro
+#   eco_adaptativo(x)          → Pré-função 2: filtra o dado com parâmetros do campo
+#
+# O eco_ressonante original usa φ fixo — não conhece o sistema onde opera.
+# O eco_adaptativo conhece o campo primeiro, depois escolhe o parâmetro.
+
+def analisar_campo(x):
+    """
+    Pré-função 0 — analisa o campo/sistema antes de qualquer filtro.
+    Caracteriza o espectro de frequência e retorna métricas do substrato.
+
+    Retorna dict com:
+      H_alpha       — entropia espectral normalizada (0=concentrado, 1=disperso)
+      conc_espectral — fração de energia nos componentes dominantes
+      n_amostras, n_dim — dimensões do dado
+    """
+    x = np.asarray(x, dtype=float)
+    freq    = np.fft.fft(x, axis=-1)
+    energia = np.abs(freq)
+    e_norm  = np.clip(energia / (energia.sum(axis=-1, keepdims=True) + 1e-8), 1e-10, 1.0)
+    H       = -np.sum(e_norm * np.log(e_norm), axis=-1)
+    H_alpha = float(np.clip(H / max(np.log(x.shape[-1]), LOG_ALPHA), 0.0, 1.0).mean())
+
+    k      = max(1, x.shape[-1] // 8)
+    e_sort = np.sort(energia, axis=-1)[:, ::-1]
+    conc   = float((e_sort[:, :k].sum(axis=-1) / (energia.sum(axis=-1) + 1e-8)).mean())
+
+    return {
+        'H_alpha':        H_alpha,
+        'conc_espectral': conc,
+        'n_amostras':     x.shape[0],
+        'n_dim':          x.shape[-1],
+    }
+
+
+def selecionar_parametros(campo_info):
+    """
+    Pré-função 1 — seleciona parâmetros de filtro com base na análise do campo.
+
+    H_alpha baixo  (< 0.3) → espectro concentrado → φ já presente → reforça com φ
+    H_alpha médio  (< 0.6) → φ modulado por α     → ajuste fino
+    H_alpha alto   (≥ 0.6) → espectro disperso    → φ² como força restauradora maior
+
+    Retorna dict com fator_fase, fator_eco, n_eco, modo.
+    """
+    H    = campo_info['H_alpha']
+    conc = campo_info['conc_espectral']
+
+    if H < 0.3:
+        return {'fator_fase': PHI,        'fator_eco': PHI, 'n_eco': 2, 'modo': 'phi'}
+    elif H < 0.6:
+        ajuste = PHI * (1.0 + ALPHA * (1.0 - conc))
+        return {'fator_fase': ajuste,     'fator_eco': PHI, 'n_eco': 3, 'modo': 'phi_alpha'}
+    else:
+        return {'fator_fase': PHI ** 2,   'fator_eco': PHI, 'n_eco': 5, 'modo': 'phi2'}
+
+
+def eco_adaptativo(x, params=None):
+    """
+    Pré-função 2 — eco-ressonante com parâmetros determinados pelo campo.
+
+    Se params não fornecido: chama analisar_campo → selecionar_parametros primeiro.
+    Retorna: (sinal_convergido, params_usados)
+
+    Substrate-agnostic. Parâmetro não é fixo — emerge do substrato.
+    """
+    x = np.asarray(x, dtype=float)
+
+    if params is None:
+        campo  = analisar_campo(x)
+        params = selecionar_parametros(campo)
+
+    fator_fase = params['fator_fase']
+    fator_eco  = params['fator_eco']
+    n          = params['n_eco']
+
+    sinal = x.copy()
+    for _ in range(n):
+        freq           = np.fft.fft(sinal, axis=-1)
+        amplitude      = np.abs(freq)
+        fase           = np.angle(freq)
+        nova_fase      = fase * fator_fase
+        sinal_complexo = amplitude * np.exp(1j * nova_fase)
+        reflexao       = np.real(np.fft.ifft(sinal_complexo, axis=-1))
+        eco            = reflexao - x
+        sinal          = sinal + (eco / fator_eco)
+
+    return sinal, params
 
 
 # ── Ativações ─────────────────────────────────────────────────────────────
