@@ -30,6 +30,20 @@
 # DIAGNÓSTICO:
 #   meta_coh < META_COH_LIMIAR após N_SONDA_MAX ciclos
 #   → substrato inadequado: α não encontra residência
+#
+# ══════════════════════════════════════════════════════════════════
+# DIRETRIZ DE APLICABILIDADE — SCANNER α-φ
+#
+# DOMÍNIO ATUAL: espectros de frequência
+#   → sinais de áudio (FFT)
+#   → séries temporais com estrutura espectral
+#   → grafeno e substratos físicos de frequência
+#   → qualquer dado onde a distribuição de FREQUÊNCIA carrega o sinal
+#
+# EM DESENVOLVIMENTO:
+#   → aplicabilidades em observação — outros substratos e adaptações
+#     serão incorporados conforme o desenvolvimento avança
+# ══════════════════════════════════════════════════════════════════
 
 import subprocess, sys
 subprocess.run([sys.executable, "-m", "pip", "install", "-q",
