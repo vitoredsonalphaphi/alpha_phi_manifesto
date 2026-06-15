@@ -2,6 +2,7 @@ __pycache__/
 
 # Experimentos locais — nunca commitar
 eco_test_*.py
+eco_geometria_*.py
 eco_audio_*.py
 eco_text_*.py
 eco_morf_*.py
