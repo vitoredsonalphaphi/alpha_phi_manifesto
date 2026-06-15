@@ -202,6 +202,11 @@ def eco_adaptativo(x, params=None):
     Se params não fornecido: chama analisar_campo → selecionar_parametros primeiro.
     Retorna: (sinal_convergido, params_usados)
 
+    params inclui auto-observação:
+      H_entrada — entropia espectral antes do eco
+      H_saida   — entropia espectral depois do eco
+      delta_H   — H_saida - H_entrada (negativo = coerência aumentou)
+
     Substrate-agnostic. Parâmetro não é fixo — emerge do substrato.
     """
     x = np.asarray(x, dtype=float)
@@ -214,6 +219,8 @@ def eco_adaptativo(x, params=None):
     fator_eco  = params['fator_eco']
     n          = params['n_eco']
 
+    H_entrada = analisar_campo(x)['H_alpha']
+
     sinal = x.copy()
     for _ in range(n):
         freq           = np.fft.fft(sinal, axis=-1)
@@ -224,6 +231,13 @@ def eco_adaptativo(x, params=None):
         reflexao       = np.real(np.fft.ifft(sinal_complexo, axis=-1))
         eco            = reflexao - x
         sinal          = sinal + (eco / fator_eco)
+
+    H_saida  = analisar_campo(sinal)['H_alpha']
+    delta_H  = H_saida - H_entrada
+
+    params['H_entrada'] = H_entrada
+    params['H_saida']   = H_saida
+    params['delta_H']   = delta_H
 
     return sinal, params
 
