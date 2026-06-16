@@ -153,7 +153,7 @@ ontológica, mas como hipótese de leitura com suporte no próprio código.
 ### eco_adaptativo — a pré-função que lê o campo
 
 O eco_ressonante original usa φ fixo. Não conhece o sistema onde opera —
-aplica a mesma rotação de fase independentemente do substrato.
+aplicava a mesma rotação de fase independentemente do substrato.
 
 A proposta foi uma arquitetura em três camadas:
 
@@ -285,3 +285,72 @@ simultaneamente: mapa do código, template da respiração de α, e possível
 representação da emissão do campo harmônico.
 
 Três leituras. Uma forma.
+
+---
+
+## Entrada 82 — 16 de Junho de 2026
+### Nível de análise — o eco no byte vs o eco na frase
+
+**A origem da pergunta**
+
+A observação de que o período-8 de 1/137 (bloco `00729927`) e o byte de um
+caractere ASCII têm exatamente 8 elementos levou à hipótese de que o
+eco_ressonante poderia operar no caractere como sinal de 8 amostras — replicando
+no domínio do texto o que o EcoBIP fez no domínio do áudio.
+
+**O que foi testado**
+
+Para cada caractere printável (ASCII 32–126): converter para sinal 8-bit, aplicar
+o ciclo completo (analisar_campo → selecionar_parametros → n_eco iterações de
+rotação de fase → delta_H). Comparar delta_H médio entre frases positivas e
+negativas de SST-2.
+
+**O que foi encontrado**
+
+Primeiro resultado: φ² domina. Quase todos os caracteres têm H_alpha > 0.70
+(entropia alta — o mundo binário é de alta entropia por natureza). O eco seleciona
+n_eco=5 ciclos para quase tudo.
+
+Segundo resultado: a respiração do eco é real e limpa. O caractere 'A' (01000001)
+mostrou H decrescendo monotonicamente de 0.833 → 0.827 → 0.802 → 0.744 → 0.647
+→ 0.530 ao longo de 5 ciclos. O eco funciona no byte.
+
+Terceiro resultado — o dado central: POS e NEG são indistinguíveis nesse nível.
+Δ(POS−NEG) = −0.00270. Menos de três milésimos. O eco reduz H em todos os
+caracteres de forma uniforme, independente de sentimento.
+
+A maioria dos caracteres sai com identidade alterada (✗ — o sinal pós-eco não
+arredonda de volta para os bits originais). O eco no byte ganha coerência e perde
+o caractere.
+
+**A conclusão**
+
+O eco funciona em qualquer nível de análise. O que discrimina sentimento não é
+o eco em si — é o nível de agregação onde ele opera.
+
+| Nível          | Eco reduz H? | Discrimina sentimento? |
+|----------------|-------------|----------------------|
+| 8-bit/caractere | Sim         | Não                  |
+| Histograma/frase | Sim        | Sim (resultado SST-2) |
+
+O experimento SST-2 com bons resultados operou no histograma de frequência da
+frase inteira (distribuição de quais caracteres aparecem) — um espectro de 95
+dimensões. O eco rotacionou esse espectro, não os bytes individuais. Nível
+diferente, resultado diferente.
+
+**O que isso estabelece para o Scanner**
+
+O Scanner α-φ busca coerência espectral × discriminabilidade por fase de rede.
+Este experimento mostra que a discriminabilidade (para sentimento) não existe no
+nível do byte — existe no nível da distribuição da frase. O Scanner aplicado a
+histogramas de caracteres encontraria f* com discriminabilidade real. Aplicado a
+bytes individuais, encontraria f* sem discriminabilidade semântica.
+
+A pergunta sobre em qual nível aplicar o eco é a mesma pergunta que o Scanner
+foi construído para responder em cada substrato: onde reside a informação
+discriminante?
+
+---
+
+*Florianópolis · 16.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
