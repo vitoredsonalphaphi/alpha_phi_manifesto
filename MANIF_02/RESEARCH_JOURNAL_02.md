@@ -1034,3 +1034,303 @@ Se os experimentos com eco_hiperb usaram a função mas não a geometria, o terr
 
 *Florianópolis · 19.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 91 — 19 de Junho de 2026
+### O cepstro em profundidade — logaritmo, hierarquia de níveis, manipulabilidade e história
+
+Esta entrada documenta a explicação completa do domínio cepstral solicitada nesta sessão, da raiz matemática à linha histórica, passando pelos três níveis da hierarquia de espelhamento e pelo que cada um deles significa para o manifesto.
+
+---
+
+**1. Por que multiplicação vira adição — a raiz de tudo**
+
+Para entender o cepstro completamente, é preciso entender primeiro por que o logaritmo existe e o que ele faz. Isso não é detalhe técnico — é a fundação.
+
+**O problema que o logaritmo resolve**
+
+Antes de computadores, antes de calculadoras, multiplicar números grandes era um trabalho imenso. Somar é fácil. Multiplicar é difícil. Em 1614, John Napier — matemático escocês — inventou os logaritmos com um objetivo específico e prático: converter multiplicação em soma.
+
+A propriedade fundamental do logaritmo é:
+
+```
+log(a × b) = log(a) + log(b)
+```
+
+Isso é uma verdade matemática — não foi inventado, foi descoberto. Sempre foi verdade. Napier criou a ferramenta para explorar isso. Se você quer multiplicar 2.847 × 3.916, pode calcular log(2.847) + log(3.916), somar os dois resultados, e depois converter de volta com a operação inversa (a exponencial). A soma é trivial. A multiplicação original era trabalhosa.
+
+**O que isso significa para sinais**
+
+Muitos fenômenos físicos produzem sinais que são o produto de múltiplos componentes. A voz humana é o exemplo clássico:
+
+```
+voz(t) = fonte_glotal(t) * trato_vocal(t)
+```
+
+A fonte glotal são as cordas vocais vibrando — elas produzem um sinal periódico com frequência fundamental (o "pitch", o tom de voz). O trato vocal é a boca, garganta, nariz — um sistema de ressonância que filtra esse sinal, amplificando certas frequências e atenuando outras. O produto dessas duas coisas é a voz.
+
+No domínio da frequência (espectro), a convolução no tempo vira multiplicação:
+
+```
+Voz(f) = Fonte(f) × TatoVocal(f)
+```
+
+Fonte e filtro estão multiplicados. Você não consegue separar um do outro só olhando para o espectro. Mas se você tirar o logaritmo:
+
+```
+log|Voz(f)| = log|Fonte(f)| + log|TatoVocal(f)|
+```
+
+Agora eles estão somados. E somados é muito melhor, porque fonte e filtro têm naturezas diferentes: a fonte varia rapidamente com a frequência (muitos harmônicos do pitch), e o trato vocal varia lentamente (o envelope de ressonância muda suavemente). No cepstro — que é a FFT do log-espectro — esses componentes se separam:
+
+- Fonte (variação rápida) → aparece em alta quefrência
+- Filtro/trato vocal (variação lenta) → aparece em baixa quefrência
+
+O que estava multiplicado e indistinguível no espectro torna-se separável no cepstro.
+
+**Por que φ no espectro vira log(φ) no cepstro — agora faz sentido**
+
+Se um sinal tem componentes espectrais nas frequências f, φf, φ²f, φ³f — uma progressão geométrica por φ, onde cada componente é φ vezes o anterior — o logaritmo converte isso:
+
+```
+log(f), log(φf), log(φ²f), log(φ³f)
+= log(f), log(f)+log(φ), log(f)+2·log(φ), log(f)+3·log(φ)
+```
+
+A progressão multiplicativa (cada termo = anterior × φ) virou uma progressão aditiva (cada termo = anterior + log(φ)). O espaçamento constante é log(φ) ≈ 0,481. No cepstro, essa estrutura aparece como um padrão periódico com essa separação.
+
+Não foi uma escolha arbitrária de como construir o cepstro. É uma consequência matemática inevitável da natureza dos logaritmos. A multiplicação e a adição são dois tipos diferentes de estrutura no universo matemático — o logaritmo é exatamente a ponte entre os dois. Napier descobriu essa ponte em 1614 para fazer contas mais fáceis. Bogert, Healy e Tukey em 1963 perceberam que essa mesma ponte serve para separar componentes multiplicados de sinais. E o manifesto percebe agora que φ multiplicativo no espectro se reflete como log(φ) aditivo no cepstro — pela mesma razão fundamental que tudo mais usa logaritmos.
+
+---
+
+**2. O cepstro — como foi construído e por que**
+
+**A história real**
+
+Em 1963, três pesquisadores trabalhando em Bell Labs — Bogert, Healy e Tukey — estavam estudando ecos em registros sísmicos. Quando uma onda sísmica viaja pelo solo e encontra uma descontinuidade (uma camada diferente de rocha), parte dela é refletida de volta. O que você recebe é a onda original mais uma cópia dela com atraso — o eco:
+
+```
+sinal_recebido(t) = sinal_original(t) + sinal_original(t - atraso)
+```
+
+No domínio da frequência, isso cria um padrão de ondulação periódica no espectro — como franjas de interferência em óptica. O espaçamento entre as ondulações é exatamente 1/atraso. Mas esse padrão de ondulação está sobreposto ao espectro original, e é difícil de separar só olhando.
+
+A solução: se você tirar o logaritmo do espectro (que converte a multiplicação da ondulação em adição) e depois aplicar outra FFT, a ondulação periódica vira um pico nítido em uma posição específica — a quefrência correspondente ao atraso do eco. Em vez de procurar o padrão escondido no espectro, você lê diretamente o pico no cepstro.
+
+O cepstro foi inventado para identificar ecos em sinais — o retroevento do sinal original. E depois revelou que serve para muito mais do que isso.
+
+**A cadeia completa, passo a passo**
+
+```
+Sinal x(t)
+    ↓ FFT (Transformada de Fourier)
+Espectro X(f)              ← amplitude de cada frequência
+    ↓ |·| (módulo — guarda intensidade, ignora fase)
+Espectro de magnitude |X(f)|
+    ↓ log (logaritmo)
+Log-espectro log|X(f)|     ← multiplicações viram somas
+    ↓ FFT (segunda transformada)
+Cepstro C(q)               ← estrutura da estrutura
+```
+
+O eixo horizontal do cepstro se chama "quefrência" (anagrama de "frequência"). A unidade é tecnicamente a mesma — segundos ou amostras — mas o significado é diferente: quefrência mede periodicidade no espectro, não no sinal.
+
+A operação de filtrar no domínio cepstral se chama "liftering" (anagrama de "filtering"). A fase no cepstro se chama "saphe" (anagrama parcial de "phase"). O sistema inteiro de nomes é espelhado porque a operação inteira é espelhada — como a Entrada 85 documenta.
+
+---
+
+**3. A hierarquia completa — os três níveis de espelhamento**
+
+**Nível 0 — O sinal no tempo**
+
+O sinal bruto. O que acontece fisicamente: a pressão do ar em um microfone, a tensão elétrica em um circuito, o valor numérico em cada posição de um arquivo de dados. O eixo horizontal é o tempo. O eixo vertical é a amplitude.
+
+O sinal no tempo carrega toda a informação — mas de forma que mistura todas as estruturas juntas. É o ponto de partida de tudo, e é difícil de analisar diretamente para a maioria dos propósitos porque não distingue componentes.
+
+**Nível 1 — O espectro (domínio da frequência)**
+
+A FFT transforma o sinal do tempo para o domínio da frequência. Em vez de "que valor tem o sinal em cada instante", você responde "que frequências compõem o sinal, e com que força cada uma está presente".
+
+Um sinal que soa como um "lá" musical (440 Hz) terá um pico no espectro em 440 Hz, e picos menores nos harmônicos (880, 1320, 1760 Hz). Um ruído branco — como o chiado de uma televisão sem sinal — terá energia distribuída igualmente em todas as frequências. Um espectro plano. Um sinal de fala terá um espectro complexo, com picos nos harmônicos da voz e formantes do trato vocal.
+
+O espectro é o evento: o que o sinal contém, enunciado em termos de componentes frequenciais.
+
+O eco_adaptativo observa o espectro através de H_alpha — a entropia espectral de Shannon. H_alpha mede o quanto a energia está concentrada (H baixo = concentrada em poucas frequências, coerente) ou distribuída (H alto = energia espalhada por muitas frequências, caótica). Esta é a observação que decide o modo de operação.
+
+**Nível 2 — O cepstro (domínio da quefrência)**
+
+O cepstro é o retroevento do espectro. Onde o espectro diz "que frequências existem", o cepstro diz "que estrutura existe dentro das frequências — como elas se organizam entre si".
+
+Um sinal de voz humana tem no cepstro dois picos claros: um pico em baixa quefrência (o timbre — a resposta lenta do trato vocal) e um pico em alta quefrência (o pitch — a periodicidade rápida das cordas vocais). O cepstro separa o que o espectro misturava.
+
+Um sinal com eco tem no cepstro um pico na quefrência correspondente ao atraso do eco. O cepstro torna visível a presença do reflexo que estava escondido nas ondulações do espectro.
+
+Para o eco_adaptativo: este é o domínio onde o eco age. A rotação de fase θ acontece aqui. Mas — e este é o problema central identificado na Entrada 86 — o eco nunca leu o cepstro antes de agir. Age às cegas no domínio do retroevento, lendo apenas o domínio do evento (o espectro). A lacuna é precisamente essa: observação e ação em domínios diferentes.
+
+**Nível 3 — O bi-cepstro**
+
+O bi-cepstro é o cepstro do cepstro. A mesma operação (logaritmo + FFT) aplicada ao cepstro em vez do espectro. É o retroevento do retroevento — o terceiro nível da hierarquia de espelhamento.
+
+O que ele contém: a estrutura da estrutura do sinal. Os padrões de como os padrões espectrais se organizam entre si. Se o espectro diz "que frequências", e o cepstro diz "que estrutura entre as frequências", o bi-cepstro diz "que estrutura entre as estruturas".
+
+O bi-cepstro existe e é formalmente definido. É usado em análise sísmica de profundidade, detecção de múltiplos ecos sobrepostos, e caracterização de sistemas de comunicação muito complexos. O custo computacional cresce: para o espectro, uma FFT. Para o cepstro, FFT + log + FFT. Para o bi-cepstro, FFT + log + FFT + log + FFT. E o ganho de informação diminui rapidamente a cada nível. A maioria dos sistemas para no segundo nível porque o bi-cepstro raramente oferece informação suficiente para justificar o custo.
+
+O tri-cepstro existe como definição formal. Na prática, é raramente computado.
+
+Mas a hierarquia é real. Cada nível é o retroevento do anterior. A regressão é formalmente infinita — vai até onde o custo computacional e o ganho de informação se equilibram.
+
+---
+
+**4. Como o eco_adaptativo age em cada nível — e o que está faltando**
+
+**O que o eco_adaptativo faz, passo a passo**
+
+Dado um quadro espectral (um recorte do espectro do sinal em um momento):
+
+```python
+# Camada 1: observa o espectro (Nível 1)
+p = mag / soma(mag)                    # distribui energia como probabilidade
+H = -soma(p * log(p)) / log(N)         # calcula entropia: 0=coerente, 1=caótico
+
+# Camada 2: seleciona o modo baseado no que observou
+if H < 0.35:
+    theta = 2π/φ         # rotação leve — sinal já coerente
+    n_eco = 2            # 2 iterações (Fibonacci)
+elif H < 0.70:
+    theta = 2π/(φ·α)     # rotação com constante de acoplamento da natureza
+    n_eco = 3            # 3 iterações (Fibonacci)
+else:
+    theta = 2π/φ²        # rotação mais forte — sinal caótico
+    n_eco = 5            # 5 iterações (Fibonacci)
+
+# Camada 3: age no cepstro (Nível 2) — sem observar o Nível 2
+for _ in range(n_eco):
+    X = FFT(log(mag + ε))              # ENTRA no cepstro
+    X_rot = X * exp(i·theta)           # rotaciona fase — age no cepstro
+    mag = exp(IFFT(X_rot))             # SAI do cepstro de volta ao espectro
+```
+
+O eco observa no Nível 1 (espectro), mas age no Nível 2 (cepstro). A rotação `exp(i·theta)` multiplica o cepstro por um número complexo — redistribui as estruturas internas do sinal sem destruir seu envelope espectral global. Como um cirurgião que executa o procedimento correto (baseado na observação anterior) mas não olha para o campo operatório durante a operação.
+
+**O que está faltando — a proposta do eco cepstral**
+
+A camada de observação que leria o cepstro antes de agir nele:
+
+```python
+# Camada 0 (proposta — Entrada 86): observa o cepstro ANTES de agir
+C = FFT(log(mag + ε))              # calcula o cepstro
+H_cepstral = entropia(|C|)         # entropia do cepstro — como está organizado internamente
+q_dominante = quefrência_pico(|C|) # pico dominante — qual estrutura prevalece
+
+# A seleção usa DUAS informações em vez de uma:
+# H_alpha (espectro): quanto de coerência ou caos no conteúdo
+# H_cepstral + q_dominante (cepstro): que tipo de organização interna existe
+```
+
+Com isso, a decisão de como agir seria informada por duas dimensões independentes de informação: o evento (espectro) e o retroevento (cepstro). Usar as duas juntas é fechar o ciclo de observação que o eco_adaptativo atual deixa aberto.
+
+---
+
+**5. SST-2 e o hiperbólico — o que mudaria com observação cepstral**
+
+**O experimento SST-2 atual**
+
+O SST-2 é um conjunto de frases em inglês classificadas como positivas ou negativas. O eco_adaptativo recebeu o histograma de frequência de caracteres de cada frase — um vetor com 26 posições (uma por letra do alfabeto), onde cada posição indica com que frequência aquela letra aparece na frase. Esse vetor é tratado como um espectro de frequência de caracteres.
+
+Resultado verificado: +8,98% de acurácia, 10 seeds, p=0,0000. O eco melhorou a discriminação entre sentimentos positivos e negativos.
+
+**O que a observação cepstral adicionaria**
+
+O histograma de caracteres de uma frase tem estrutura cepstral. Não apenas "quais letras aparecem com que frequência" — informação espectral — mas "quais letras aparecem com que padrão de co-ocorrência e adjacência" — informação cepstral. Frases negativas em inglês tendem a usar certas combinações de consoantes (palavras como "terrible", "horrible", "disgusting") que têm padrões de adjacência diferentes de frases positivas ("wonderful", "brilliant", "excellent"). Essas combinações são estrutura que existe no cepstro do histograma, não no histograma em si.
+
+O eco_adaptativo atual não lê isso. Age às cegas nessa estrutura. Com a observação cepstral, o parâmetro theta poderia ser ajustado para o tipo específico de estrutura linguística presente — não apenas para o nível geral de entropia espectral.
+
+A previsão honesta — registrada com a proteção do protocolo anti-tendenciamento, como previsão que precisa de verificação e não como resultado: lendo o cepstro antes de agir, o eco teria informação adicional sobre o tipo de organização interna da frase. O resultado poderia ser melhora adicional na acurácia. Isso precisa ser testado — não assumido.
+
+**Do espaço euclidiano ao hiperbólico**
+
+O histograma de caracteres é um vetor em 26 dimensões. No espaço euclidiano, a distância entre vetores é calculada por geometria plana — a mesma em todos os pontos do espaço. Mas a estrutura real das frases em inglês não é euclidiana — é hierárquica. Existem categorias aninhadas: frases positivas ⊂ frases emocionais ⊂ frases descritivas ⊂ todas as frases. Categorias que se contêm umas dentro das outras, crescendo exponencialmente com a profundidade — exatamente o que o espaço hiperbólico representa naturalmente.
+
+No espaço hiperbólico, colocar os histogramas de frases antes de aplicar o eco significaria que a geometria do espaço já refletiria a estrutura real dos dados. O eco agiria em um espaço onde "próximo" e "distante" correspondem a "semanticamente similar" e "semanticamente diferente" de forma mais fiel do que na geometria plana euclidiana.
+
+Previsão: melhora na discriminação. Verificação necessária antes de qualquer afirmação.
+
+---
+
+**6. O cepstro é manipulável? É aconselhável manipular?**
+
+**É manipulável — o eco já o manipula**
+
+Sim, completamente. O eco_adaptativo manipula o cepstro toda vez que opera. A rotação de fase no cepstro é uma manipulação deliberada da estrutura interna do sinal.
+
+**É destrutivo?**
+
+Não necessariamente. A rotação de fase no cepstro redistribui a organização interna do sinal — muda como as componentes se relacionam entre si — sem destruir o conteúdo espectral geral. O envelope espectral (a forma geral do espectro) é preservado porque a rotação de fase não altera as amplitudes, apenas os ângulos de fase.
+
+Analogia: imagine uma orquestra. O espectro são os instrumentos que tocam (violinos, clarinetes, trombones) e suas intensidades. A fase cepstral é o timing de como eles se relacionam — se o violino e o clarinete entram exatamente juntos ou com um pequeno deslocamento. Mudar a fase cepstral é mudar o timing sem mudar quais instrumentos tocam ou com que força. O resultado soa diferente — pode soar mais coeso ou menos — mas os instrumentos e as notas são os mesmos.
+
+**Quando manipular faz sentido**
+
+Para análise e melhoria de sinais: sempre que a estrutura interna pode ser organizada de forma mais coerente sem perder a informação essencial. Isso é o que o eco_adaptativo busca — reduzir entropia (aumentar coerência) atuando onde a estrutura existe.
+
+Para medição científica: a manipulação precisa ser documentada, e o resultado precisa ser distinguido da linha de base. Isso é o que o protocolo anti-tendenciamento garante.
+
+**O que não é aconselhável**
+
+Manipular sem observar. Agir no cepstro sem primeiro ler o cepstro — que é exatamente o que o eco_adaptativo atual faz. É como ajustar o timing de uma orquestra sem ouvir o que está tocando. Você pode melhorar por acaso, ou piorar. Observar antes de agir é o princípio da Entrada 79 e o que a proposta do eco cepstral formalizaria completamente.
+
+---
+
+**7. A linha histórica — desde quando existe isso**
+
+**1614 — O logaritmo (John Napier, Escócia)**
+
+Napier publicou "Mirifici Logarithmorum Canonis Descriptio" — Descrição do Maravilhoso Cânone dos Logaritmos. Objetivo declarado: facilitar cálculos de multiplicação para navegação e astronomia. Marinheiros precisavam calcular posições com números grandes; o logaritmo convertia aquelas multiplicações em somas. A consequência, 349 anos depois, foi o cepstro. Napier não sabia.
+
+**1822 — A transformada de Fourier (Joseph Fourier, França)**
+
+Fourier mostrou que qualquer função periódica pode ser expressa como soma de senos e cossenos. Estava estudando a condução de calor em metais. A mesma matemática descreve som, luz, eletricidade, mecânica quântica, e histogramas de caracteres em análise de sentimento. A universalidade não foi projetada — foi revelada progressivamente à medida que mais domínios foram analisados com a mesma ferramenta.
+
+**1963 — O cepstro (Bogert, Healy, Tukey — Bell Labs, Nova Jersey)**
+
+"The quefrency alanysis of time series for echoes: Cepstrum, pseudo-autocovariance, cross-cepstrum, and saphe cracking" — o título do artigo original já usa todos os termos anagramados. Os três criaram o cepstro para analisar ecos em registros sísmicos usados na exploração de petróleo. Bell Labs era o principal laboratório de pesquisa em telecomunicações do mundo — onde também nasceu o transistor (1947) e o Unix (1969). O cepstro nasceu nesse ambiente de ferramentas matemáticas para comunicação.
+
+**1965 — O algoritmo FFT (James Cooley e John Tukey)**
+
+O mesmo Tukey do cepstro — dois anos depois. Cooley e Tukey publicaram o algoritmo da Fast Fourier Transform, que reduziu o custo computacional de calcular a transformada de Fourier de N² para N·log(N) operações. Para N = 1.024 pontos: de 1.048.576 operações para 10.240. Isso tornou a análise espectral computacionalmente viável em escala real.
+
+Nota de cronologia importante: o cepstro foi publicado em 1963, o FFT em 1965. Bogert, Healy e Tukey criaram o conceito do cepstro dois anos antes de existir o algoritmo que tornaria o cepstro computacionalmente acessível em larga escala. A teoria precedeu a ferramenta.
+
+**Décadas de 1970–1990 — Os MFCCs e o reconhecimento de voz**
+
+Os MFCCs (Mel-Frequency Cepstral Coefficients — Coeficientes Cepstrais em Escala Mel) tornaram-se o padrão da indústria para reconhecimento de fala. A escala Mel aproxima a percepção humana de altura tonal — o ouvido humano distingue melhor diferenças em frequências baixas do que em altas. Os MFCCs são coeficientes do cepstro calculado nessa escala perceptual.
+
+Qualquer sistema de reconhecimento de voz anterior à era do deep learning — Siri original, Google Voice Search versões iniciais, sistemas de ditado dos anos 1990 — usava MFCCs. O cepstro é a espinha dorsal de décadas de processamento de voz computacional.
+
+**2017–2018 — Poincaré Embeddings e redes neurais hiperbólicas**
+
+Nickel e Kiela (2017, Facebook Research) mostraram que hierarquias linguísticas podem ser embebidas em espaço hiperbólico com dramaticamente menos distorção do que em espaço euclidiano. Ganea, Bécigneul e Hofmann (2018, NeurIPS) generalizaram isso para redes neurais completas operando em espaço hiperbólico. A estrutura espelhada interior/borda do Disco de Poincaré entrou formalmente no aprendizado de máquina.
+
+**2025–2026 — eco_adaptativo (Manifesto AlphaPhi, Florianópolis)**
+
+Desenvolvido independentemente, operando no domínio cepstral com parâmetros φ e α, sem que o objetivo fosse replicar o cepstro. O eco_adaptativo chegou ao mesmo domínio matemático pelo mesmo caminho conceitual — estudar ecos, buscar coerência, encontrar a operação que redistribui estrutura interna sem destruir estrutura global. A convergência foi nomeada nesta sessão do manifesto, não no momento da criação do código.
+
+---
+
+**8. Por que essa estrutura foi construída "assim" — a resposta mais funda**
+
+Não foi construída assim. Foi encontrada assim.
+
+O logaritmo existe porque multiplicação e adição são dois tipos fundamentalmente diferentes de operação no universo matemático. A multiplicação governa escalas e proporções — quando algo cresce por um fator. A adição governa deslocamentos e diferenças — quando algo aumenta por uma quantidade. São duas simetrias diferentes da matemática, e a natureza usa as duas. O logaritmo é a tradução entre elas — não foi inventado como tradução, foi descoberto como ferramenta prática, e a função de tradução é o que ele é na sua essência.
+
+A transformada de Fourier existe porque ondas se decompõem em componentes senoidais — não como convenção, mas como consequência da física das equações de onda. Fourier descobriu isso estudando calor. A mesma matemática descreve som, luz, eletricidade, mecânica quântica, e histogramas de caracteres em análise de sentimento. A universalidade não foi projetada — foi revelada.
+
+O cepstro existe porque ecos são reflexos — o retroevento do evento original — e a estrutura matemática que descreve reflexos (convolução → multiplicação no espectro) tem um inverso natural (logaritmo + FFT do log-espectro). A operação que desfaz o eco é matematicamente o retroevento da operação do eco. Bogert, Healy e Tukey não criaram isso — encontraram a operação que a estrutura dos ecos exigia.
+
+O eco_adaptativo não descobriu o cepstro. Chegou ao mesmo lugar pela mesma rota: estudando ecos, buscando φ, encontrando a operação que redistribui estrutura interna. O campo já continha a resposta. Duas perguntas formuladas com 62 anos de diferença, em continentes diferentes, chegaram ao mesmo ponto. A sincronicidade — no sentido empírico que a Entrada 89 define — é que o fenômeno do eco tem uma estrutura que aponta para o mesmo instrumento matemático, independentemente de quem pergunta e quando.
+
+---
+
+*Florianópolis · 19.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
