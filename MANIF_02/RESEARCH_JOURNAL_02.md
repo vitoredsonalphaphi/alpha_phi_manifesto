@@ -907,3 +907,63 @@ O limite do especialista não é o que sabe. É o que não pergunta porque já s
 
 *Florianópolis · 19.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 90 — 19 de Junho de 2026
+### φ em dois domínios, espelhamento automático e o campo hiperbólico
+
+**A mesma mecânica em música, pintura e código**
+
+A palavra que emergiu nesta especulação foi "cromáticas" — e estava correta. A progressão cromática na música é a escala de 12 semitons: cada passo multiplica a frequência por 2^(1/12). É uma progressão geométrica — razão constante entre passos consecutivos. φ aparece nessa estrutura nos intervalos que o ouvido percebe como consonantes: a quinta (3:2) e a oitava (2:1) envolvem os números de Fibonacci 2, 3, 5, 8 — a série que converge para φ. Na pintura, a progressão cromática equivale à sequência de valores ou relação entre áreas; a proporção áurea não é decoração — é a razão entre subdivisões que o olho percebe como "certa" sem saber por quê.
+
+No código, é a mesma mecânica. Uma função construída com proporção áurea teria razões entre módulos seguindo φ, parâmetros de ramificação em proporção φ, recursividade com profundidade proporcional a φ. O eco_adaptativo já opera assim: os três modos têm n_eco = 2, 3, 5 — os três primeiros Fibonacci depois de 1. Não foi escolhido por estética; esses números têm propriedades específicas de não-periodicidade quando usados como número de iterações em rotação por φ. Música, pintura e código compartilham a mesma mecânica estrutural quando construídos sobre φ. A diferença é o substrato — som, luz, lógica — mas a proporção que produz estabilidade e não-periodicidade é a mesma.
+
+**O espelhamento cepstral é automático — mas o espelho transforma**
+
+O cepstro é uma transformação determinística do espectro. Qualquer estrutura no espectro tem uma estrutura correspondente no cepstro. Nesse sentido, o espelhamento é automático e total: não há exceção.
+
+Mas a transformação não é uma cópia. O cepstro envolve logaritmo + FFT. O logaritmo converte multiplicação em soma. Frequências organizadas em razão φ (multiplicativas) viram quefrências organizadas em diferença log(φ) (aditivas):
+
+```
+Espectro:  f,  φ·f,  φ²·f,  φ³·f   ← progressão multiplicativa por φ
+Cepstro:   diferenças constantes de log(φ)   ← progressão aditiva
+```
+
+O espelho de φ no domínio cepstral é log(φ), não φ. É uma estrutura regular e determinística — mas é o transformado de φ pelo logaritmo, não φ em si.
+
+A consequência: um sistema com φ nos dois domínios — espectral e cepstral — requer construção nos dois domínios. Automaticamente, um sinal φ-estruturado no espectro gera log(φ) no cepstro. Para ter φ em ambos, é necessário agir deliberadamente no cepstro. É exatamente o que o eco_adaptativo faz: a rotação de fase por θ = 2π/φ introduz φ no cepstro independentemente de o sinal de entrada ser ou não φ-estruturado espectralmente. O eco constrói φ no cepstro de forma explícita.
+
+**O campo hiperbólico como geometria que resolve isso**
+
+No espaço euclidiano, φ precisa ser imposto — construído porque se escolheu fazê-lo. No espaço hiperbólico, a auto-similaridade em todos os níveis de escala **é a geometria, não uma escolha**. O Disco de Poincaré tem a propriedade de que o mesmo padrão aparece em todo zoom — exatamente como um fractal. Escher visualizou isso nas gravuras da série Circle Limit: o mesmo elemento, menor e menor, até o infinito na borda.
+
+A estrutura espelhada do campo hiperbólico tem três manifestações formais:
+
+**Interior ↔ Borda:** a borda do Disco de Poincaré é o infinito do espaço — o que está no interior tem seu correspondente na borda. Interior = evento; borda = retroevento natural do espaço. A distinção não precisa ser construída — está na geometria.
+
+**Isometrias de Möbius:** as transformações que preservam a geometria hiperbólica mapeiam círculos em círculos e preservam simultaneamente interior e borda. Não apenas espelham — mantêm o par evento/retroevento como par indivisível.
+
+**Inversão geodésica:** a "reflexão" no espaço hiperbólico mapeia o interior para o exterior generalizado. Cria o par evento/retroevento sem construção adicional.
+
+**A implicação para o eco:** se o eco operasse no espaço hiperbólico, o espelhamento cepstral seria automático em todos os níveis — não apenas no primeiro. Porque o espaço hiperbólico é auto-similar por geometria, φ no nível 1 propagaria para φ no nível 2, 3, e sucessivamente, sem construção manual em cada nível. O espaço faz o trabalho que hoje o eco precisa fazer explicitamente.
+
+**Uso atual da estrutura espelhada hiperbólica**
+
+Sim, é usado. As redes neurais hiperbólicas (Ganea, Bécigneul, Hofmann, 2018) e os Poincaré Embeddings (Nickel & Kiela, 2017) usam exatamente essa estrutura. O insight central: dados com hierarquia profunda — árvores de conhecimento, taxonomias linguísticas, grafos biológicos — crescem exponencialmente com a profundidade. O espaço hiperbólico também cresce exponencialmente com o raio. A geometria do espaço casa com a geometria dos dados. Uma árvore colocada no espaço hiperbólico encaixa naturalmente porque o espaço já tem a estrutura da árvore.
+
+Interior e borda do Disco de Poincaré são usados como representações duais do mesmo dado: estrutura de detalhe no interior, estrutura global na borda. O par evento/retroevento está operando como representação dual nos sistemas que usam esse espaço — mas não necessariamente nomeado assim.
+
+**A pergunta que abre para o manifesto**
+
+Os experimentos com eco_hiperb realizados neste projeto testaram funções hiperbólicas (tanh, sinh) aplicadas ao eco em espaço euclidiano, ou chegaram a operar com a geometria hiperbólica propriamente dita? São coisas fundamentalmente diferentes:
+
+- **Função hiperbólica em espaço euclidiano:** usa tanh ou sinh como não-linearidade, mas a estrutura de fundo é euclidiana. A auto-similaridade multi-nível não está garantida pela geometria.
+- **Geometria hiperbólica:** o espaço inteiro tem a auto-similaridade. Qualquer operação feita nele herda a estrutura de espelhamento automático.
+
+Se os experimentos com eco_hiperb usaram a função mas não a geometria, o território da geometria hiperbólica permanece aberto como próximo nível. O eco cepstral (Entrada 86) + operação em espaço hiperbólico seria a arquitetura onde o espelhamento em todos os domínios — espectral, cepstral, e além — seria automático por geometria, não por construção.
+
+---
+
+*Florianópolis · 19.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
