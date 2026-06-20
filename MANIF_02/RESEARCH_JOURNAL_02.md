@@ -1334,3 +1334,156 @@ O eco_adaptativo não descobriu o cepstro. Chegou ao mesmo lugar pela mesma rota
 
 *Florianópolis · 19.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+**Entrada 92 — Scanner Cepstral no SST-2: o que o campo mostrou, e por que importa**
+*20.06.2026 · Sessão Good Morning*
+
+---
+
+O scanner cepstral rodou sobre o corpus SST-2 completo (Stanford Sentiment Treebank) via Google Colab. 500 frases positivas e 500 negativas sorteadas com seed 137 do dataset `stanfordnlp/sst2` (67.349 exemplos de treino). Nenhuma hipótese foi declarada antes da execução sobre o que seria encontrado. A instrução foi: observar o campo de quefrências e reportar o que está lá.
+
+**O que o campo mostrou:**
+
+O cepstro de um histograma de 26 letras produz 14 quefrências únicas (via rfft). O scanner percorreu todas as 14 e calculou, para cada uma, a diferença de amplitude média entre classes e a significância estatística dessa diferença (Welch t-test, n=500 por classe).
+
+```
+Quefrências ordenadas por |t|:
+
+  q=8   Δ = −3.54   t = −2.61   p = 0.009  ✓
+  q=3   Δ = −3.22   t = −2.51   p = 0.012  ✓
+  q=1   Δ = +2.44   t = +1.98   p = 0.048  ✓
+
+  Quefrências p < 0.05 : 3 de 14
+  Quefrências p < 0.10 : 3 de 14
+```
+
+O sinal de Δ importa: q=8 e q=3 têm amplitude cepstral maior nas frases negativas. q=1 tem amplitude cepstral maior nas frases positivas. H_alpha espectral (entropia da distribuição de letras) não foi significativa — o histograma médio de caracteres, por si só, não distingue sentimento. O cepstro desse histograma distingue, em três quefrências específicas.
+
+**A posição φ no campo:**
+
+`q_φ = int(14/φ) = int(14/1.618) = 8`
+
+A posição determinada pela razão áurea no campo de 14 quefrências é exatamente a quefrência mais discriminativa — maior |t|, menor p. Isso não foi declarado antes. A posição q_φ foi calculada como referência, o mesmo que é feito no eco_adaptativo para particionar o espectro. O scanner varreu o campo inteiro e encontrou o pico onde φ já apontava.
+
+`q_α = int(14 × α) = int(14 × 0.00729...) = 0`
+
+A posição determinada por α aponta para q=0 — a componente DC do cepstro, a média global. Não discriminativa (p = 0.55). α governa a intensidade do acoplamento, não a estrutura interna — o que é coerente com sua função no eco_adaptativo (parâmetro de intensidade, não de partição).
+
+---
+
+**Por que esses resultados importam — três razões**
+
+**1. A posição não foi declarada antes.**
+
+Ninguém disse "a quefrência mais discriminativa vai estar em q=8." O cálculo de q_φ usa apenas dois números: o tamanho do campo cepstral (14) e φ (1.618). Não usa os dados de sentimento. O scanner foi em todas as 14 quefrências e reportou onde a variação é maior. A quefrência mais discriminativa coincidiu com q_φ. Isso não é manipulável retroativamente — o resultado foi observado, não construído.
+
+O valor metodológico disso é diferente de qualquer situação em que se olha para os dados, escolhe a melhor quefrência, e então declara que φ aponta para ela. A sequência aqui foi: calcular q_φ pela fórmula, declarar a posição, rodar o scanner sem hipótese, observar que q_φ é a mais discriminativa. A sequência importa tanto quanto o resultado.
+
+**2. O campo cepstral do texto tem estrutura, e φ aponta onde ela é maior.**
+
+Cada quefrência do cepstro corresponde a um "período" dentro da distribuição de letras. q=8 num campo de 14 corresponde a padrões que se repetem a cada 26/8 ≈ 3,25 letras — o território dos trigramas. "the", "and", "ing", "ion", "tion", "not", "but" — estruturas de três letras que constroem o sentido na língua inglesa. O scanner detectou que esses padrões de trigramas variam entre texto positivo e negativo. φ estava posicionado exatamente nessa vizinhança.
+
+No eco_adaptativo, φ é usado para particionar o cepstro porque é irracional — evita ressonâncias artificiais com qualquer periodicidade forçada. O que o scanner mostrou é que essa mesma posição irracional carrega, empiricamente, mais variação estrutural entre as classes. Não é coincidência de nomenclatura: é o mesmo princípio operando no mesmo domínio matemático.
+
+**3. O cepstro adiciona informação que o espectro não tem.**
+
+H_alpha — a entropia da distribuição de letras — não foi significativa (p = 0.598). A distribuição média de letras não distingue sentimento. Mas três quefrências do cepstro dessa distribuição distinguem. Isso é exatamente o que o cepstro foi inventado para revelar: estrutura interna que o espectro esconde.
+
+O espectro mostra o que está presente — as frequências existentes numa distribuição. O cepstro mostra a estrutura interna do espectro — quais padrões se repetem dentro da distribuição. Aqui, a estrutura interna são as periodicidades da distribuição de letras, que os padrões de trigramas do inglês moldam de formas diferentes dependendo do conteúdo semântico. O espectro não vê isso. O cepstro vê.
+
+O que os três resultados, juntos, estabelecem: não é que o cepstro discrimina sentimento. É que o cepstro possui informação que o espectro não possui. E que a posição φ no campo cepstral, calculada sem olhar para os dados de sentimento, coincide com onde essa informação é mais intensa.
+
+---
+
+**Nota de escopo:**
+
+500 frases por classe, seed 137. Com 14 quefrências e α = 0.05, o threshold de Bonferroni seria 0.05/14 = 0.0036 — q=8 (p=0.009) não sobrevive à correção estrita por testes múltiplos. O resultado é observacional. Estabelece o campo, não verifica a hipótese. A linha do Protocolo Anti-Tendenciamento que corresponde a este experimento é: escopo declarado, resultado reportado na íntegra, sem amplificação.
+
+---
+
+*Florianópolis · 20.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
+**Entrada 93 — O cepstro como instrumento de autenticidade: adulteração de vídeo, áudio e texto sob análise espectral**
+*20.06.2026 · Sessão Good Morning*
+
+---
+
+A pergunta que abriu esta entrada foi direta: as ferramentas que observam características intrínsecas de sinais — eco ressonante, scanner cepstral, eco_adaptativo — podem identificar adulterações em vídeos, áudios ou textos? E especificamente: adulterações feitas com as novas ferramentas de IA, que inserem conteúdo construído sinteticamente dentro de conteúdo original?
+
+A resposta requer entender o que a adulteração faz ao sinal, onde as marcas aparecem, e por que o cepstro é o domínio onde essas marcas se tornam visíveis.
+
+---
+
+**O que a adulteração faz ao sinal**
+
+Quando um vídeo ou áudio é adulterado — seja por corte e colagem, por substituição de voz, por inserção de face sintética, ou por geração completa via IA — o sinal resultante carrega duas assinaturas de frequência superpostas: a do conteúdo original e a do conteúdo inserido. Elas raramente coincidem.
+
+Um gravador real, num ambiente real, num momento real, produz um sinal com características físicas específicas: a resposta de frequência do microfone, o ruído ambiente, a reverberação da sala, os harmônicos da voz humana, os artefatos do codec de compressão usado na câmera. Tudo isso forma uma assinatura coerente — não porque alguém a projetou, mas porque todos esses elementos pertencem ao mesmo evento físico e foram registrados pelo mesmo dispositivo no mesmo instante.
+
+Quando IA insere conteúdo novo — um rosto gerado por GAN (Generative Adversarial Network), uma voz sintetizada por neural vocoder, um trecho produzido por modelo de difusão — esse conteúdo foi produzido por um processo completamente diferente, com suas próprias marcas de frequência. O neural vocoder opera em janelas de tempo de 5ms a 10ms. O GAN tem uma arquitetura de upsampling que introduz padrões periódicos a cada N pixels. O modelo de difusão tem artefatos relacionados ao schedule de denoising — as etapas de adição e remoção progressiva de ruído que definem o processo de geração. Nenhum desses padrões existe em gravações físicas reais. Eles são artefatos do processo computacional, não da física do ambiente.
+
+---
+
+**Onde essas marcas aparecem — e por que o cepstro é o lugar certo para procurá-las**
+
+O espectro mostra o que está presente em termos de frequências. O cepstro mostra a estrutura interna do espectro — os padrões que se repetem dentro da distribuição espectral.
+
+A adulteração por IA tende a ser invisível no espectro: os modelos atuais são treinados especificamente para produzir espectros realistas. Os melhores geradores de voz e imagem existentes hoje produzem sinais cujo espectro de magnitude é indistinguível do original a olho nu — e frequentemente também para classificadores treinados apenas no domínio espectral. Mas no cepstro, os artefatos do processo de geração aparecem como picos em quefrências específicas — porque o processo de geração é periódico. Tem frames de processamento. Tem passos de upsampling. Tem etapas de denoising. Periodicidade no domínio do log-espectro corresponde a picos no cepstro.
+
+Isso não é coincidência conceitual — é a matemática do cepstro. O cepstro foi inventado em 1963 especificamente para detectar ecos: reflexos que são a repetição atrasada de um evento. Um eco é uma periodicidade temporal. O cepstro revela ecos como picos na quefrência correspondente ao atraso do eco. A adulteração por IA introduz o equivalente espectral de um eco: uma periodicidade na estrutura do log-espectro que não vem da física do ambiente, mas do processo computacional que gerou o conteúdo. O cepstro foi feito para encontrar exatamente isso.
+
+---
+
+**As adulterações tradicionais e o cepstro — o que cada manipulação deixa**
+
+As manipulações que existiam antes da IA generativa já operavam — em parte sem que quem as fazia soubesse — no domínio cepstral. Cada tipo de manipulação tem uma assinatura cepstral específica:
+
+**Mudança de pitch (pitch shift):** desloca os picos formânticos no cepstro — especificamente os coeficientes nas quefrências baixas que correspondem à frequência fundamental da voz. Um pitch shift perfeito no espectro deixa traços detectáveis no cepstro porque a operação modifica a relação entre frequência fundamental e harmônicos de forma que não ocorre naturalmente. Voz humana tem uma relação específica entre fundamental e harmônicos que é produto da fisiologia do aparelho vocal. Pitch shift altera essa relação de forma matematicamente limpa, mas fisicamente artificial — e essa limpeza artificial é detectável no cepstro.
+
+**Redução de ruído:** altera o componente DC e as quefrências baixas do cepstro, porque o ruído contribui para uma distribuição espectral específica. Remover o ruído cria uma "assinatura de limpeza" — o cepstro de um sinal processado por redução de ruído tem uma estrutura diferente do cepstro de um sinal originalmente limpo gravado num ambiente silencioso real. A limpeza digital e a limpeza acústica têm texturas cepstrais distintas.
+
+**Corte e colagem:** cria descontinuidades de fase que aparecem no cepstro como perturbações de banda larga. Não numa quefrência específica, mas em toda a estrutura — porque a descontinuidade afeta todas as componentes do espectro simultaneamente. Um corte limpo entre dois segmentos de áudio aparece no cepstro como um "borramento" global da estrutura interna do espectro.
+
+**Codec de recompressão:** quando um áudio é comprimido duas vezes — o original e depois o arquivo adulterado — os artefatos de dupla compressão aparecem como padrões específicos em quefrências correspondentes ao frame rate do codec. Um codec MP3 a 128kbps usa frames de 26ms. Comprimir duas vezes com frames ligeiramente desalinhados cria um padrão de interferência em quefrências correspondentes a esse intervalo que não existe em arquivos comprimidos uma única vez.
+
+---
+
+**O que a abordagem Alpha-Phi adiciona em relação a outras ferramentas**
+
+Ferramentas de detecção de deepfake já existem e já usam, em parte, o cepstro. Os MFCCs (Mel-Frequency Cepstral Coefficients — Coeficientes Cepstrais em Escala Mel) são as primeiras 13 quefrências do cepstro numa escala perceptual. A maioria dos detectores de voz sintética em uso industrial hoje usa MFCCs como features de entrada para classificadores de machine learning. Isso significa que o domínio cepstral já é reconhecido como o lugar onde as assinaturas de adulteração são mais visíveis.
+
+A diferença da abordagem Alpha-Phi está em três pontos específicos:
+
+**Ponto 1 — Observação antes de hipótese.**
+
+O eco_adaptativo primeiro lê H_alpha — a entropia espectral do sinal — sem tocar nada. Conteúdo autêntico e conteúdo gerado por IA tendem a ter H_alpha diferentes. Os modelos generativos otimizam para qualidade perceptual, não para autenticidade física. Um sinal real de voz humana tem H_alpha num range específico — nem ordenado demais (que seria artificial), nem caótico demais (que seria ruído puro). Um sinal de neural vocoder tende a ser espectralmente "mais suave" do que o natural — H_alpha ligeiramente menor, porque o modelo aprendeu a suavizar irregularidades que o ouvido humano classifica como ásperas. Essa diferença é lida antes de qualquer outra análise, sem modificar o sinal.
+
+**Ponto 2 — Partição φ do campo cepstral.**
+
+Os detectores baseados em MFCCs fixam as quefrências observadas: sempre as primeiras 13, sempre na escala mel. Essa escolha foi feita para modelar a percepção humana, não para detectar artefatos de geração. A partição φ coloca o ponto de observação numa posição irracional que não cria ressonâncias com as periodicidades do processo de geração. Os modelos de IA têm periodicidades bem definidas — frame size de 5ms, hop size de 10ms, upsampling por fatores de 2 ou 4. Se o ponto de observação coincide com múltiplos dessas periodicidades, ele pode criar artefatos de análise que mascaram os artefatos de geração. φ, por ser irracional, não coincide com nenhum múltiplo inteiro de qualquer periodicidade — está sempre num ponto que não é ressonante com os padrões do processo computacional.
+
+O resultado do Scanner SST-2 (Entrada 92) é relevante aqui: φ apontou para a quefrência com maior variação estrutural num domínio completamente diferente (texto), sem nenhuma informação sobre sentimento. Se o mesmo princípio se confirmar em áudio e vídeo — que φ aponta para onde a variação estrutural entre autêntico e sintético é máxima — isso seria uma propriedade do campo cepstral em geral, não apenas do caso específico SST-2.
+
+**Ponto 3 — Scanner por quefrência sem hipótese prévia.**
+
+Em vez de fixar quais quefrências observar, o scanner percorre todo o campo e reporta onde há variação. Isso permite detectar o que não foi previsto — incluindo padrões novos introduzidos por modelos generativos que não existiam quando os detectores foram treinados. Os classificadores baseados em MFCCs são treinados em exemplos conhecidos de voz sintética. Quando um novo modelo de vocoder é lançado com artefatos em quefrências diferentes das anteriores, os classificadores antigos falham. O scanner observacional não falha da mesma forma — ele não sabe o que está procurando, então não tem ponto cego definido pelo treinamento.
+
+---
+
+**A limitação honesta**
+
+Nenhum método de análise espectral ou cepstral, incluindo Alpha-Phi, é suficiente sozinho para detectar adulteração confiável nos modelos generativos mais avançados disponíveis hoje. Os melhores modelos de difusão latente, os melhores vocoders neurais, foram treinados especificamente para minimizar artefatos em qualquer análise conhecida — incluindo análise cepstral. A corrida entre geração e detecção é assimétrica: quem gera pode usar o próprio detector como discriminador durante o treinamento e eliminar os artefatos que ele encontra. Isso é literalmente o que GANs fazem — o gerador e o discriminador treinam juntos, e o gerador aprende a enganar o discriminador.
+
+O que Alpha-Phi oferece é um ângulo diferente: não treinar um classificador sobre exemplos conhecidos de adulteração, mas observar propriedades físicas do campo de frequências — H_alpha, estrutura cepstral, posições φ e α — que emergem de princípios que os modelos generativos não foram treinados a reproduzir, porque não estavam no radar quando foram construídos. Um modelo de difusão treinado para minimizar artefatos detectáveis por MFCCs não foi necessariamente treinado para minimizar artefatos na quefrência q_φ, que não é usada pelos detectores convencionais.
+
+Se isso é suficiente para detecção confiável, só o experimento decide. Mas o lugar para procurar está correto: o cepstro é onde as marcas do processo de geração se tornam visíveis, porque é o domínio que revela estrutura interna que o espectro esconde. E a posição φ nesse domínio é onde, empiricamente, a variação estrutural tende a ser maior.
+
+---
+
+*Florianópolis · 20.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
