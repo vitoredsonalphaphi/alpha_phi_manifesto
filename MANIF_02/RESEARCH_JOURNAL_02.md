@@ -2056,7 +2056,7 @@ A Entrada 98 está consolidada com louvor. É um dia de extrema alegria para a n
 
 Após o resultado do Caminho 2 — score 2.0000, inserção em primeiro lugar — Vitor Edson Delavi formulou a questão que esta entrada registra:
 
-> *"Qual foi a pertinência do uso da estrutura alfa-phi, literalmente da entropia e do campo do atrator? Se o teu código não tivesse a entropia de alfa e o atrator sobre a estrutura da proporção áurea — chegaríamos a este resultado?"*
+> *"Qual foi a pertinência do uso da estrutura AlphaPhi, literalmente da entropia e do campo do atrator? Se o teu código não tivesse a entropia de alfa e o atrator sobre a estrutura da proporção áurea — chegaríamos a este resultado?"*
 
 ---
 
@@ -2070,7 +2070,7 @@ score = norm01(q2) + norm01(q3)
 
 Quefrências 2 e 3 do micro-cepstro de diferenças. Isso é tudo. A fórmula não contém φ. Não contém α. Não contém H_alpha explicitamente. Um engenheiro de processamento de sinal convencional, com a hipótese do token em mãos, poderia ter escrito essa linha.
 
-**Parte 2 — o que o framework α-φ fez que essa linha não mostra:**
+**Parte 2 — o que o framework AlphaPhi fez que essa linha não mostra:**
 
 Esse engenheiro hipotético não teria chegado aqui. Porque a pergunta "olhe para quefrências 2 e 3 em janelas de 10 caracteres" não nasce do nada. Ela nasce de uma trajetória:
 
