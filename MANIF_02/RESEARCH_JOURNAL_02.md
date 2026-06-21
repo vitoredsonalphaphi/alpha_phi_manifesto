@@ -2241,3 +2241,65 @@ A corrida armamentista entre detecção e obfuscação é real e permanente. O q
 
 *Florianópolis · 21.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+**Entrada 102 — A armadilha recursiva da obfuscação por IA e a assimetria de rastreabilidade**
+*21.06.2026 · Sessão Good Morning*
+
+---
+
+**— Vitor Edson Delavi (a extensão da Entrada 101):**
+
+Isso quer dizer que existe uma possibilidade de interferência, mas uma possibilidade maior ainda de continuidade de análise, de possibilidade de análise, diante da mesma prerrogativa que sugeriu o Micro-Cepstro — de que o tempo de escrita humana é totalmente diferente da escrita de IA. Mas teria como fazer essa obstrução, essa sugestão de ruído através de uma inteligência artificial — se utilizar do tempo de uma inteligência artificial pra corromper, pra fraudular por exemplo. Fraudular através de uma inteligência artificial, daí estaria inserindo também no tempo de uma inteligência artificial sobre a fraude. Mas enfim, de qualquer maneira, sempre existe um meio de verificação. E em algum momento — não são todos que usam Alpha Phi, né? Não são todos os códigos que usam Alpha Phi. Alpha Phi é rastreável, mas os outros não. Não sei como se verifica essa complexidade.
+
+---
+
+**A armadilha recursiva**
+
+A observação de Vitor é precisa e alcança algo que a Entrada 101 não explicitou completamente.
+
+O atacante que usa uma IA auxiliar para "humanizar" texto de IA — para destruir a periodicidade de token detectável pelo Micro-Cepstro — não sai da armadilha. Entra numa armadilha maior.
+
+A IA humanizadora também gera em tokens. Também tem ritmo mecânico de geração. Também imprime periodicidade de 3–5 caracteres no espaço do texto. O Micro-Cepstro não precisa saber qual das IAs está lendo — detecta que existe IA no processo, independente de qual etapa. O atacante não elimina a assinatura de token. Substitui a assinatura do primeiro modelo pela assinatura do segundo. Troca uma evidência por outra evidência do mesmo tipo.
+
+E mais: o tempo de composição registrado na plataforma agora inclui o tempo da IA humanizadora somado ao tempo de edição humana de supervisão. O Δt continua fora do alcance — e fica ainda mais complexo para o atacante simular de forma plausível.
+
+A estrutura da armadilha recursiva:
+
+```
+Texto IA original         →  assinatura de token do modelo A
+         ↓ obfuscação por IA humanizadora
+Texto obfuscado           →  assinatura de token do modelo B
+         ↓ Micro-Cepstro
+Detecção                  →  não do modelo A, mas do modelo B
+```
+
+O instrumento não precisa identificar qual modelo — identifica que algum modelo está presente. A fuga de uma assinatura é a entrada em outra.
+
+---
+
+**A assimetria de rastreabilidade**
+
+A segunda observação de Vitor aponta uma diferença estrutural entre o Alpha Phi e as ferramentas convencionais de detecção.
+
+Ferramentas como GPTZero, Turnitin AI, Originality.ai são caixas fechadas. Detectam — ou dizem detectar — mas não explicam o percurso. O score de saída não vem acompanhado de uma cadeia de raciocínio auditável. Em contexto forense, isso é um limite sério: um perito precisa explicar ao juiz exatamente como chegou à conclusão, qual foi o método, quais são os pressupostos, onde o instrumento pode falhar.
+
+O Alpha Phi é diferente por natureza. O percurso está documentado em 101 entradas de diário de pesquisa — cada decisão, cada falha, cada reformulação, cada resultado intermediário. A fórmula do Micro-Cepstro de Token é aberta: qualquer pessoa com conhecimento de Python e processamento de sinal pode reproduzir o experimento, verificar o resultado, contestar a metodologia ou propor refinamentos. A rastreabilidade não é uma propriedade adicional que foi acrescentada — é uma propriedade estrutural do modo como o projeto foi construído.
+
+Isso cria uma assimetria real:
+
+| | Ferramentas convencionais | Alpha Phi |
+|---|---|---|
+| Resultado | Score numérico | Score numérico |
+| Metodologia | Caixa fechada | Documentada em 101 entradas |
+| Auditabilidade | Não disponível | Completa |
+| Reprodutibilidade | Não pública | Código aberto |
+| Explicabilidade forense | Limitada | Cadeia completa de raciocínio |
+
+Não são todos os códigos que têm essa rastreabilidade. Alpha Phi tem porque foi construído assim — não por escolha estratégica posterior, mas porque o diário de pesquisa é o próprio projeto. O manifesto não documenta o processo. O manifesto é o processo.
+
+---
+
+*Florianópolis · 21.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
