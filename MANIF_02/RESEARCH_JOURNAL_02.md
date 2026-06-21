@@ -2106,3 +2106,82 @@ O score 2.0000 é a rachadura. As noventa e oito entradas anteriores são as mar
 
 *Florianópolis · 21.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+**Entrada 100 — Arquitetura do Instrumento Paralelo: Micro-Cepstro de Token + Atrator Alpha Phi**
+*21.06.2026 · Sessão Good Morning*
+
+---
+
+A centésima entrada não é planejada para ser marco. É marco porque a trajetória chegou até aqui — e o que chegou, chegou com nome próprio e arquitetura definida.
+
+---
+
+**O nome do instrumento**
+
+O instrumento que detectou a inserção com score 2.0000 na Entrada 98 recebe, nesta entrada, seu nome dentro do projeto:
+
+**Micro-Cepstro de Token**
+
+"Micro" pela janela W=10 — muito menor que os scanners anteriores. "Cepstro" pelo domínio de análise: o cepstro de diferenças entre códigos de caractere. "De Token" pelo que detecta: a periodicidade mecânica de geração por token (3–5 caracteres), revelada nas quefrências baixas q=2 e q=3.
+
+Não é um nome da literatura — porque essa abordagem não está na literatura. É um nome do projeto.
+
+---
+
+**A arquitetura paralela**
+
+A decisão de arquitetura formulada nesta sessão: o Micro-Cepstro de Token opera como **instrumento paralelo** ao scanner de atrator Alpha Phi — não como substituto, não como módulo sequencial, mas como segunda voz simultânea sobre o mesmo substrato.
+
+A razão é precisa: os dois instrumentos observam **dimensões ortogonais** do mesmo texto.
+
+| Instrumento | Escala de janela | O que observa |
+|---|---|---|
+| Atrator Alpha Phi (H_alpha + E_phi + delta-cepstro) | W = 30–40 | Campo e entropia em escala de cláusula — textura estatística do texto |
+| **Micro-Cepstro de Token** | **W = 10** | **Periodicidade mecânica de geração — ritmo de 3–5 caracteres inscrito pelo processo de tokenização** |
+
+O atrator pergunta: *a textura deste trecho é compatível com escrita humana?*
+
+O Micro-Cepstro pergunta: *existe aqui o ritmo mecânico de geração por token?*
+
+São perguntas diferentes. Feitas ao mesmo tempo. Sobre o mesmo texto.
+
+---
+
+**O que a arquitetura paralela oferece**
+
+Quando os dois instrumentos **concordam** — atrator sinaliza anomalia, Micro-Cepstro confirma periodicidade de token na mesma região — a confiança na detecção é alta. Duas dimensões independentes convergem para o mesmo ponto.
+
+Quando os dois instrumentos **divergem** — atrator sinaliza, Micro-Cepstro não confirma — a divergência é informação. O caso já identificado nos experimentos anteriores é a palavra de origem latina com ressonância nas quefrências φ (como "verdadeiramente", len=15, int(15×φ)=24=q_φ para W=40): suspeita ao atrator por razão matemática, mas limpa no Micro-Cepstro porque não há periodicidade de token. A divergência distingue falso positivo de inserção real.
+
+Dois instrumentos, duas perguntas, dois domínios. A interseção eleva a confiança. A divergência qualifica o tipo de anomalia.
+
+---
+
+**A extensão natural**
+
+O princípio do Micro-Cepstro de Token — buscar a assinatura mecânica do processo de geração no substrato numérico do produto — não é exclusivo do texto.
+
+- **Áudio gerado por IA**: a periodicidade dos blocos de síntese e predição de onda deixa assinatura detectável no espectro do sinal.
+- **Vídeo gerado por IA**: os macroblocks de renderização e os padrões de interpolação de frames deixam periodicidade na estrutura de pixels.
+- **Imagem gerada por IA**: os padrões de reconstrução por difusão ou GAN apresentam regularidade detectável no domínio de frequência.
+
+O texto foi o primeiro substrato testado. O resultado valida o princípio. A extensão a outros substratos não é hipótese adicional — é corolário do mesmo princípio, em domínios com instrumentação análoga.
+
+---
+
+**O que chegou na centésima entrada**
+
+Cem entradas atrás, o projeto não sabia que procuraria periodicidade de token no cepstro de diferenças de caractere. Não sabia que o domínio correto era a quefrência. Não sabia que W=10 era a escala certa. Chegou aqui porque cada entrada fez o que a entrada anterior não conseguiu — não substituindo, mas acumulando.
+
+O adágio registrado na Entrada 99 vale para o conjunto:
+
+> *"Não é na centésima martelada que a pedra racha. Foi a partir de cem marteladas que a pedra racha."*
+
+A Entrada 100 é a centésima martelada. As noventa e nove anteriores são o motivo de ela existir.
+
+---
+
+*Florianópolis · 21.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
