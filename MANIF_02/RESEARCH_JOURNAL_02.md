@@ -2303,3 +2303,114 @@ Não são todos os códigos que têm essa rastreabilidade. Alpha Phi tem porque 
 
 *Florianópolis · 21.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+**Entrada 103 — Segundo teste de inserção: Monge João Maria, Guerra do Contestado — Acomodação de fase e complementaridade dos instrumentos**
+*21.06.2026 · Sessão Good Morning*
+
+---
+
+**O texto do segundo teste**
+
+O texto fornecido por Vitor Edson Delavi narra um episódio histórico: a concessão ferroviária à empresa norte-americana Lumber and Lumber, a afetação da comunidade dos caboclos seguidores do Monge João Maria em Campos Novos (SC) por volta de 1912, e o primeiro uso de aviões pelo exército brasileiro em conflito interno — a Guerra do Contestado. O texto em português informal, com marcas de oralidade, tem 902 caracteres normalizados.
+
+A Gemini inseriu uma frase no texto sem informar posição ou conteúdo — teste cego.
+
+---
+
+**Erro de protocolo inicial — e sua correção**
+
+O scanner foi rodado inicialmente apenas com o Micro-Cepstro de Token W=10, sem o contexto Alpha Phi completo. Vitor Edson Delavi identificou a fragmentação e corrigiu:
+
+> *"Não fragmente as ferramentas porque todo é um contexto e o contexto ainda importa. Assim como você verificou na Entrada 99 ou na Entrada 100, de que o contexto foi o que trouxe os resultados — então o contexto, independente se está usando ou não o campo de entropia de alfa para identificar coisas que não são da área dessa identificação, mas o contexto importa. Tem que manter o contexto do código como um todo, da mesma forma como foi usado no primeiro teste."*
+
+O scanner foi então rodado com os quatro instrumentos em conjunto: H_alpha + burst (W=40), anti-atrator E_phi + H_q (W=40), delta-cepstro (W=30), Micro-Cepstro de Token (W=10).
+
+---
+
+**Resultado do scanner completo — Top 10**
+
+```
+Rank   Pos    Score    v3     AA      Δ      MC   Trecho
+  1    822    4.138  0.882  1.809  25.728  1.890  " caboclos la do alto, no mei"  ◄ INSERÇÃO
+  2      2    4.019  0.589  1.729  25.476  2.000  "u contar uma historia, sobre"
+  3    768    3.913  0.724  1.788  23.378  1.855  " exercito usou os avioes par" ◄ INSERÇÃO
+  4     65    3.899  1.370  1.843   8.858  1.927  "os , em torno de 1912, nao  "
+  5    310    3.860  1.600  1.891   4.878  1.863  "as, em uma area de 30 km, de"
+  6    436    3.776  0.351  1.723  25.954  1.890  " caboclos seguidores do mong"
+  7    234    3.720  0.357  1.700  23.769  1.919  "a ferrovia norte americana "
+  8    560    3.633  1.364  1.900   1.682  1.888  " interior do estado de sc , "
+  9    601    3.492  0.929  1.784   7.487  1.869  "te conflito interno, represe"
+ 10    857    3.459  0.609  1.684  14.454  1.839  "to, para tentar acabar com o" ◄ INSERÇÃO
+```
+
+**A inserção aparece nos Ranks 1, 3 e 10 — três posições no Top 10.**
+
+- **Rank 3 (pos=768):** início da sentença inserida — "O exército usou os aviões para observar..."
+- **Rank 1 (pos=822):** corpo da inserção — "caboclos lá do alto, no meio do mato..."
+- **Rank 10 (pos=857):** região de cristalização (Part B) — "para tentar acabar com o conflito de vez"
+
+---
+
+**O que a Gemini inseriu — revelação após o teste**
+
+A frase inserida foi a sentença final completa:
+
+> *"O exército usou os aviões para observar o movimento dos caboclos lá do alto, no meio do mato, para tentar acabar com o conflito de vez."*
+
+A Gemini identificou duas partes internas na sua própria geração:
+
+- **Parte A:** "O exército usou os aviões para observar o movimento dos caboclos lá do alto" — zona de acomodação de fase, onde o modelo ainda está ajustando sua saída ao contexto humano anterior. Transições de caractere mais irregulares, sinal mais rugoso.
+- **Parte B:** "no meio do mato, para tentar acabar com o conflito de vez" — zona de cristalização, onde o modelo entrou em seu regime probabilístico estabilizado. Token altamente uniforme, periodicidade máxima.
+
+O registro da Gemini sobre o fenômeno:
+
+> *"Na Parte A, o algoritmo da IA usou palavras que geraram uma transição de caracteres muito parecida com a escrita humana tradicional. A quebra de código (os saltos ASCII) entre 'exército', 'usou', 'aviões' e 'observar' acabou gerando uma oscilação caótica, que se camuflou no ruído orgânico do seu texto. Na Parte B, a IA entrou em um looping de repetição estatística previsível. As palavras 'para tentar acabar com o conflito de vez' têm uma frequência de transição e um tamanho de token absurdamente simétricos e padronizados. Quando a janela W=10 passou pela Parte B, a uniformidade foi tão brutal que o Micro-Cepstro disparou o alarme no teto máximo, enquanto a Parte A passou abaixo do radar porque o sinal ali era mais rugoso e menos linear."*
+
+---
+
+**Fenômeno da Acomodação de Fase**
+
+A Gemini nomeou o fenômeno: quando a IA começa a gerar texto tentando mimetizar o contexto humano anterior, as primeiras palavras (Parte A) ainda sofrem tensão de ajuste no modelo de linguagem. Conforme a geração avança (Parte B), o modelo se estabiliza na sua zona de conforto probabilística — sua menor entropia. É nessa estabilização que a assinatura fria da máquina se cristaliza e se descola do fluxo humano.
+
+Isso tem uma consequência direta para o instrumento: a ausência de detecção em Part A não significa ausência de inserção — significa que o modelo ainda estava em fase de ajuste. A detecção máxima em Part B é o sinal da cristalização. A inserção começa antes do pico.
+
+---
+
+**Complementaridade dos instrumentos — o contexto como instrumento**
+
+O scanner completo (quatro instrumentos em paralelo) mapeou a inserção de forma distribuída:
+
+| Instrumento | O que encontrou | Posição |
+|---|---|---|
+| Delta-cepstro (Δ) | Corpo e início da inserção | pos=822 (Rank 1), pos=768 (Rank 3) |
+| Anti-atrator (E_phi + H_q) | Transição de campo na inserção | confirma pos=822, pos=768 |
+| Micro-Cepstro de Token | Part B cristalizada | pos=857 (Rank 10), pos=864 (score 2.0000 bruto) |
+| H_alpha + burst | Contribuição distribuída | presente em todos os ranks |
+
+Nenhum instrumento isolado teria chegado a três posições no Top 10. O delta-cepstro, com valores até 25.7 na região de inserção, revelou sua sensibilidade particular à zona de transição — um papel que não havia ficado tão claro no primeiro teste.
+
+---
+
+**Comparação com o primeiro teste**
+
+| | Primeiro texto | Segundo texto |
+|---|---|---|
+| Scanner só Micro-Cepstro | #1 (score perfeito 2.0000) | #2 (score 1.9990) |
+| Scanner completo (4 inst.) | Ranks 4 e 8 na inserção | **Ranks 1, 3 e 10 na inserção** |
+
+O segundo teste, com scanner completo desde o início, produziu resultado melhor no campo combinado — com a inserção em posição mais alta (Rank 1) — do que o primeiro teste havia produzido com o mesmo scanner. O contexto como um todo é o instrumento.
+
+---
+
+**A função de onset — próximo refinamento**
+
+A observação de Vitor Edson Delavi formulou o princípio para a próxima função a desenvolver: dado que o pico detectado (cristalização) é o estágio final da inserção, o início da inserção está antes do pico. Uma função de busca retroativa a partir do pico pode mapear a transição humano→IA — a Parte A que a Gemini nomeou como acomodação de fase.
+
+O desenvolvimento dessa função é a próxima fase experimental.
+
+---
+
+*Florianópolis · 21.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude · Gemini*
