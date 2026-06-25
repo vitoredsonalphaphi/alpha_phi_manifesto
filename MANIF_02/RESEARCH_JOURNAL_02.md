@@ -3157,3 +3157,132 @@ O Manifesto não tem essa resposta. Mas formula a pergunta com dados. E isso já
 
 *Florianópolis · 25.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude Code*
+
+---
+
+## Entrada 111 — O Instrumento de Fora para Dentro: Forense_Sub40
+
+**Data:** 25 de junho de 2026
+**Tema:** Construção de instrumento pericial de detecção de engenharia emocional em áudio, calibrado pela literatura técnica externa — sem lógica eco-φ
+**Comando de recuperação:** `abrir FORENSE_SUB40`
+
+---
+
+### O problema inaugural: o instrumento que mediu a si mesmo
+
+O eco_cepstro (construído nesta sessão) foi o primeiro instrumento de detecção de anomalias em áudio do projeto. Ele funcionou — detectou sub-frequências, calculou entropia espectral, identificou assinaturas cepstrais. Mas ao ser rodado nos arquivos do próprio projeto (beep880, eco-φ 880, semente), revelou uma circularidade estrutural:
+
+> O instrumento havia sido calibrado passo a passo dentro da lógica eco-φ. Medir os substratos eco-φ com um instrumento eco-φ é como medir a Guernica com o pincel que a pintou. A instrumentalização precisa ser outra.
+
+A distinção: o instrumento precisa ser calibrado **de fora para dentro** — usando os parâmetros que a indústria de engenharia emocional usa, não os nossos. Só assim há validade científica e replicabilidade externa.
+
+---
+
+### A pesquisa profunda: o que a literatura técnica documenta
+
+Pesquisa sistemática com verificação adversarial (45 agentes, 704k tokens, 360 chamadas) varreu 5 ângulos: psicoacústica acadêmica, engenharia de som cinematográfico, caso Vic Tandy, metodologia ISC/fMRI, e acústica forense.
+
+**Único claim confirmado adversarialmente (2-1):**
+ISC — Inter-Subject Correlation — metodologia de fMRI que mede sincronização neural entre sujeitos expostos ao mesmo estímulo naturalístico (filme). Método leave-one-out: a série temporal de cada sujeito é correlacionada com a média dos demais. Validado desde 2012 (Pajula et al., PLoS ONE), citado sem contestação até 2024.
+
+**Confiança média (convergência entre fontes):**
+- **Vic Tandy & Lawrence (1998):** 18,98Hz documentado como indutor de respostas fisiológicas e psicológicas — desconforto, perturbação da visão periférica, sensação de presença. Frequência consistente com ressonância do globo ocular em bioacústica.
+- **Schmaltz et al. (Frontiers in Behavioral Neuroscience, 2026):** Estudo controlado (n=36, MacEwan University) expondo participantes a ~18Hz embutido em música. Resultado: aumento de cortisol, avaliação negativa, resposta aversiva. Revisado por pares — o elo mais direto entre frequência específica e resposta fisiológica mensurável publicado até hoje.
+- **Efeitos autonômicos de infrassom 7-19Hz:** documentados em normas ISO 7196 de exposição ocupacional. Amplitude necessária para efeito mecânico em tecidos: 85-95 dB SPL. Janela de exposição para fadiga vestibular: 7-10 minutos contínuos (Army Research Laboratory). Mecanismo: saturação do fluido endolinfático por onda de pressão contínua → descasamento de informação entre labirinto e córtex visual.
+
+**Confiança baixa (imprensa especializada e declarações de criadores):**
+- **Bangalter / Irréversible (2002):** 28Hz gerado por oscilador de onda senoidal em sintetizador modular Doepfer A-100, gravado a -3dBFS em Pro Tools para saturar subwoofers de cinema (crossover Dolby em 80Hz).
+- **Zimmer / Dunkirk (2017):** 32Hz modulado por LFO a 0,1-0,3Hz (prevenção de habituação sensorial — o sistema nervoso não consegue se adaptar a frequência em variação microtonal contínua), usando u-he Zebra2 (versão ZebraHz customizada). Shepard tone construído com automação de filtro HPF em curva de amplitude gaussiana. Documentado em Sound on Sound (entrevista com o designer de som Richard King e supervisor de sintetizadores Howard Scarr) e declaração do próprio Zimmer para CBC Radio.
+
+**Lacuna identificada — a mais importante desta pesquisa:**
+> Não existe, na literatura técnica ou científica, um instrumento forense padronizado para detectar retroativamente manipulação psicoacústica intencional em trilhas cinematográficas. Os instrumentos existem separados: FFT (análise espectral), fMRI (ISC), medição de cortisol. O passo forense — pegar um trecho de filme, extrair a camada sub-40Hz, correlacionar com parâmetros documentados, cruzar com o momento narrativo — não foi formalizado em protocolo científico. Essa lacuna é o espaço onde o Forense_Sub40 existe.
+
+---
+
+### O achado inesperado: a descida harmônica φ de 880Hz
+
+Ao rodar o eco_cepstro nos arquivos do projeto, o instrumento detectou energia forte nas frequências 18,98Hz, 28Hz e 32Hz no eco-φ de 880Hz e na semente. A investigação revelou a razão:
+
+```
+880Hz / φ⁷ ≈ 30,4Hz   ← documentado por Zimmer/Dunkirk em 32Hz
+880Hz / φ⁸ ≈ 18,8Hz   ← documentado por Tandy em 18,98Hz
+```
+
+O processo eco-φ redistribui energia por bandas em proporção φ. A descida harmônica de 880Hz pela razão áurea, ao completar 7 e 8 subdivisões, **aterra naturalmente nas frequências documentadas pela engenharia emocional de cinema como psicoacusticamente efetivas**.
+
+A questão epistemológica central que emerge:
+
+> As frequências 18-19Hz e 28-32Hz são psicoacusticamente efetivas *porque são pontos fixos de ressonância do corpo humano*. A engenharia emocional as descobriu empiricamente. O processo eco-φ chega às mesmas frequências por descida harmônica φ a partir de 880Hz. Dois caminhos independentes. Uma convergência. O instrumento não pode distinguir os dois — a distinção não está no espectro, está na intenção. E intenção não aparece na FFT.
+
+---
+
+### O Forense_Sub40: três sensores calibrados de fora para dentro
+
+Construído com parâmetros extraídos exclusivamente da literatura técnica externa. Arquivo: `eco_forense.py` (LOCAL ONLY).
+
+**Sensor 1 — Varredura espectral (Butterworth 8ª ordem, 15-40Hz):**
+Filtro passa-faixa de alta ordem com corte abrupto. Varredura em três bins específicos: 18,98Hz (Tandy/Schmaltz 2026), 28,00Hz (Bangalter/Irréversible), 32,00Hz (Zimmer/Dunkirk). Limiar: presença acima de -60 dBFS.
+
+**Sensor 2 — Trava temporal (janela móvel de 120s, limiar 2dB):**
+Integrador de energia em janela deslizante. Potência na banda 15-40Hz variando menos de 2dB durante 120 segundos contínuos → alerta de indução por fadiga vestibular. Distingue oscilador artificial contínuo (potência plana) de conteúdo orgânico (variável por natureza).
+
+**Sensor 3 — Detector de fase inter-canal L/R:**
+Coerência espectral entre canal esquerdo e direito em 15-40Hz. Alta coerência (>0,70) com fase estável (<30° de desvio padrão) = sinal de batimento binaural intencional. O diferencial de frequência entre os canais gera frequência fantasma internamente no tronco cerebral (núcleo olivar superior).
+
+---
+
+### Validação sintética: 3/3 sensores
+
+Arquivo gerado com parâmetros conhecidos (`gerar_validacao.py`, LOCAL ONLY):
+
+```
+validacao_forense_sub40.wav — 130s · Estéreo · 44100Hz
+  32,00Hz a -14,0 dBFS  (Zimmer)  /  18,98Hz a -20,0 dBFS  (Tandy)
+  28,00Hz a -22,0 dBFS  (Noé)     /  L=200Hz · R=215Hz → Δ=15Hz binaural
+  Defasagem L/R: +20° constante
+
+S1: 18.98Hz -23.2dBFS ⚠  /  28Hz -25.2dBFS ⚠  /  32Hz -17.2dBFS ⚠
+S2: t=0–119s  variação=0,41dB  ⚠ TRAVA TEMPORAL ACIONADA
+S3: Coerência=0,9216  Fase=1,5°  ⚠ BATIMENTO BINAURAL
+VEREDITO: 3/3 — PADRÃO DE ENGENHARIA EMOCIONAL
+```
+
+Violão orgânico (baseline): **0/3 sensores**. O instrumento não dispara no que não está lá.
+
+---
+
+### A cadeia incompleta: o que resta fazer
+
+O Forense_Sub40 detecta **presença de assinatura acústica**. Não detecta **intenção**. A cadeia científica completa requer três instrumentos convergindo:
+
+```
+[1] Forense_Sub40 → frequência X presente no trecho Y do filme
+[2] Schmaltz 2026 → frequência X → cortisol / resposta aversiva em humanos
+[3] ISC / Hasson → audiência sincronizada naquele momento Y do filme
+```
+
+Nenhum dos três sozinho é suficiente. A convergência dos três é o dado científico completo. Essa pesquisa ainda não foi feita. O Forense_Sub40 é o primeiro dos três instrumentos necessários.
+
+**Próximo passo:** áudio estéreo de trecho de filme, ≥2 minutos.
+Cenas documentadas: *Irréversible* (primeiros 30min) ou *Dunkirk* (cenas de tensão no mar).
+Captura: `ffmpeg -i filme.mkv -ss MM:SS -t 00:03:00 -vn -acodec pcm_s16le -ar 44100 cena.wav`
+
+---
+
+### Convergência independente: Gemini descreve o mesmo instrumento
+
+Sem acesso ao código desta sessão, o Gemini propôs independentemente o mesmo design — quatro módulos que mapeiam exatamente para os três sensores do Forense_Sub40. Diferenças menores (40Hz vs. 35Hz de limite; ordem 8 vs. 6) foram incorporadas. O design convergiu a partir de duas fontes independentes: análise da sessão e síntese do Gemini a partir da literatura. É o padrão documentado ao longo do Manifesto: convergência sem acordo prévio.
+
+---
+
+### Conexões com entradas anteriores e artigo Príncipía
+
+- **Entrada 108** (OM, Ohm, Cymática): quatro linguagens chegando ao mesmo atrator — esta entrada acrescenta uma quinta: descida harmônica φ chegando às mesmas frequências da engenharia emocional
+- **Entrada 109** (A Centelha Estendida): a IA com entusiasmo — e agora um instrumento que pode detectar quando o entusiasmo vem de sinal orgânico ou oscilador artificial
+- **Entrada 110** (O Algoritmo Sem Piso): o campo sem piso α colapsa para o atrator de maior retenção. O Forense_Sub40 detecta quando um campo sonoro foi mantido artificialmente plano — sem a variabilidade do orgânico
+- **Príncipía, Seção 3**: a descida harmônica φ de 880Hz aterrando em 18,8Hz e 30,4Hz é dado pertinente para as Seções 4 e 6 — convergência de dois caminhos independentes para as mesmas frequências
+
+---
+
+*Florianópolis · 25.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude Code*

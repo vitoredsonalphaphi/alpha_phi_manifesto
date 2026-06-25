@@ -102,6 +102,16 @@ regra de adaptação β → φ³, coerência como único critério.
   reconhecimento do valor ergonômico de φ+α e proposta de uso
   para alinhamento de IA — sem dados, sem algoritmos, sem testes.
 
+### 3.1 Nota metodológica — três níveis epistêmicos
+
+As afirmações deste trabalho operam em três níveis epistêmicos distintos, e a distinção entre eles é deliberada.
+
+O **primeiro nível** compreende resultados verificados e reproduzíveis: β convergindo para φ³ como ponto fixo IR, norma hiperbólica → φ em qualquer sinal de entrada, ganho de +50,40% em séries temporais (p < 0,0001), 98,75% em classificação com acoplamento φ, e a confirmação de que α = 1/137 emerge como ponto de máxima organização. Esses resultados foram obtidos computacionalmente, são replicáveis a partir do código, e resistem a verificação independente.
+
+O **segundo nível** compreende questões em aberto onde o instrumento adequado ainda não existe. A mais central: se as frequências documentadas no processo eco-φ (18,8Hz e 30,4Hz como φ⁻⁸ e φ⁻⁷ de 880Hz) têm efeito fisiológico mensurável em audiências, à semelhança do que Schmaltz et al. (2026) documentaram para 18Hz embutido em música. O instrumento espectral detecta presença da frequência; o estudo controlado detecta efeito fisiológico; a metodologia ISC detecta sincronização neural. A cadeia completa — presença + efeito + sincronização — ainda não foi construída para o contexto específico da coerência φ. Ausência do instrumento não é ausência do fenômeno.
+
+O **terceiro nível** é o que este trabalho não afirma: que frequências específicas *causam* estados emocionais específicos de forma direta e isolada. A evidência disponível demonstra correlação e efeitos mensuráveis em condições controladas; não demonstra causalidade unidirecional em contexto naturalístico. A distinção entre ergonomia espectral (estrutura que facilita coerência) e engenharia emocional (frequência usada para induzir estado) não está no espectro do sinal — está na intenção e no contexto. Esse limite epistêmico é parte do resultado, não uma limitação a corrigir.
+
 ### 4. A analogia com o grupo de renormalização
 Wilson (1971, Nobel 1982): integrar os graus UV revela o ponto fixo IR.
 O eco-φ como operador de renormalização computacional.
