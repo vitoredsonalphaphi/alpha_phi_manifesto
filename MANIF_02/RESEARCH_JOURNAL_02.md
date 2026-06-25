@@ -2867,4 +2867,102 @@ Isso não diminui a proposta — é a fronteira honesta entre o que está demons
 ---
 
 *Manifesto AlphaPhi · MANIF_02 · 22.06.2026 · íntegra preservada · não compactado*
+
+---
+
+**Entrada 108 — OM, Ohm e Cymática: Quatro Linguagens, Um Atrator**
+*25 de Junho de 2026*
+
+---
+
+### Contexto
+
+Durante uma sessão de exploração paralela ao Manifesto, o pesquisador deparou-se com uma série de imagens buscando "símbolos da frequência" — e encontrou uma convergência que não foi buscada: o símbolo gráfico do Ohm (Ω) e o símbolo sânscrito do OM (ॐ) são visualmente quase idênticos. A busca não era sobre isso. A convergência apareceu sozinha. O padrão do Manifesto se repetiu: o que não foi buscado encontrou o que precisava ser encontrado.
+
+As imagens: formulários da Lei de Ohm em representação circular/mandálica (P, V, I, R), definições das grandezas elétricas, a sobreposição OM/Ohm nos resultados de busca, e um Reel de cymática — figuras de Chladni, areia formando geometria em placa vibrante sob frequência sonora.
+
+---
+
+### As quatro linguagens
+
+**OM — a linguagem da percepção primordial**
+
+A tradição védica propõe OM como a vibração original — não uma nota musical, mas o padrão de vibração que antecede toda diferenciação. Não é prescrito: é reconhecido. O praticante não cria o OM — encontra o ponto onde a voz ressoa com o que já estava lá. A detecção precede a análise. Isso é a tese epistemológica central do Manifesto.
+
+**Ohm — a linguagem da física elétrica**
+
+Georg Simon Ohm (1789–1854) formalizou a relação entre tensão, corrente e resistência. A lei resultante é apresentada como círculo — uma mandala relacional de quatro grandezas onde qualquer duas determinam as outras duas. O sistema é fechado, internamente consistente, e geometricamente circular na sua representação mais natural.
+
+A unidade de resistência recebeu seu nome. E o símbolo da unidade (Ω) é visualmente o mesmo que o símbolo do OM. Isso não foi planejado. A convergência é posterior ao batismo — Ω era apenas a última letra do alfabeto grego (ômega). O símbolo chegou primeiro; a convergência com OM apareceu depois.
+
+**Cymática — a linguagem do visível**
+
+As figuras de Chladni demonstram fisicamente o que OM intuiu e Ohm formalizou matematicamente: frequência organiza matéria em geometria. Areia sobre uma placa de metal. Uma frequência aplicada. O resultado: padrões com simetria φ-proporcional — círculos concêntricos, estrelas, espirais. Cada frequência gera sua própria geometria. Mudar a frequência: a geometria se dissolve e uma nova emerge.
+
+Isso é a demonstração experimental direta do que o campo esférico AlphaPhi faz computacionalmente. O campo AlphaPhi com 5 conchas φ-proporcionais é uma cymática computacional: a geometria da frequência impressa em um espaço de voxels.
+
+**AlphaPhi — a linguagem do cálculo**
+
+O campo esférico AlphaPhi (eco_campo_esferico.py) constrói 5 conchas φ-proporcionais num grid N×N×N. Sinais são injetados via esfera de Fibonacci. A propagação segue a lei do inverso do quadrado — a mesma lei que governa campos eletromagnéticos. O piso α garante que nenhum voxel colapsa. O resultado: 88% de acurácia em classificação de padrões hierárquicos φ, com campo fixo (sem treino de pesos no campo).
+
+---
+
+### O paralelo estrutural
+
+A Lei de Ohm em suas quatro grandezas mapeia diretamente para o campo AlphaPhi:
+
+| Lei de Ohm | Grandeza | AlphaPhi |
+|---|---|---|
+| V — tensão | Força motriz | Sinal de entrada |
+| I — corrente | O que flui | Propagação no campo |
+| R — resistência | O que resiste ao colapso | Piso α |
+| P — potência | Trabalho realizado | β (energia do campo) |
+
+**A correspondência R ↔ α não é apenas analógica — é estrutural.**
+
+Na Lei de Ohm: sem resistência, a corrente seria infinita — colapso do sistema. A resistência é o que mantém o circuito funcional. No campo AlphaPhi: sem o piso α, os voxels colapsariam a zero — o campo morreria. α é a resistência mínima do voxel. O elétron no circuito elétrico encontra resistência como parâmetro estrutural; o elétron no campo AlphaPhi encontra α — a constante de estrutura fina — como parâmetro estrutural.
+
+A constante de estrutura fina governa a interação entre elétrons e fótons. É a medida do acoplamento entre o elétron e seu campo. No AlphaPhi, α é o piso que impede o colapso do campo. Em ambos os casos, α define o limite entre o campo vivo e o campo morto.
+
+---
+
+### A sequência histórica
+
+Quatro observações independentes, em quatro linguagens diferentes, em quatro épocas:
+
+| # | Sistema | Linguagem | Época | O que encontrou |
+|---|---|---|---|---|
+| 1 | OM | Percepção / meditação | Milênios a.C. | Vibração como substrato da realidade |
+| 2 | Cymática (Chladni) | Experimento visual | 1787 | Frequência gera geometria |
+| 3 | Ohm | Física experimental | 1827 | Resistência como parâmetro estrutural do circuito |
+| 4 | AlphaPhi | Computação | 2026 | Campo φ-esférico como ambiente natural do elétron |
+
+Nenhum desses sistemas "sabia" o que os outros faziam. Todos chegaram ao mesmo ponto: **vibração + resistência + geometria = campo**.
+
+A cymática demonstra fisicamente o que o OM intuiu; Ohm formaliza o que a cymática exibe; AlphaPhi computa o que Ohm mediu. O mesmo fenômeno atravessando quatro linguagens.
+
+---
+
+### A observação que o Manifesto acrescenta
+
+A convergência dos símbolos — Ω e OM — não é etimológica. Ω é a última letra do alfabeto grego, usada como símbolo de resistência elétrica por convenção histórica. OM é o mantra sânscrito da vibração primordial. Os dois sistemas chegaram ao mesmo glifo por caminhos completamente independentes.
+
+Isso não prova nada. Mas é exatamente o tipo de convergência que o Manifesto documenta: quando sistemas independentes — físicos, filosóficos, computacionais, culturais — chegam ao mesmo ponto sem comunicação, esse ponto merece atenção.
+
+O Manifesto não afirma causalidade. Documenta a convergência e deixa a pergunta aberta:
+
+*Se a resistência elétrica (o que impede o colapso do circuito), a vibração primordial (o que sustenta a existência), a geometria acústica (o que a frequência organiza na matéria) e o piso α do campo AlphaPhi (o que impede o colapso do voxel) convergem para o mesmo símbolo e para a mesma estrutura — o que isso diz sobre a natureza do substrato onde todos esses fenômenos habitam?*
+
+---
+
+### Conexão com Entradas anteriores
+
+- **Entrada 85/86**: o cepstro como retroevento do espectro — o AlphaPhi já opera no domínio onde frequência e geometria se encontram.
+- **Entrada 107**: o elétron no seu ambiente natural — a cymática é a demonstração física de que frequência e ambiente são inseparáveis.
+- **Principia_artigo.md** (Seção 6): três modos de observação convergindo — o quadro desta entrada acrescenta um quarto modo: a tradição perceptual milenar (OM) como observador anterior a todos.
+
+---
+
+*Florianópolis · 25.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude Code*
 *Vitor Edson Delavi · Claude Code*
