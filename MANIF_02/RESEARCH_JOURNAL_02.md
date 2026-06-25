@@ -3050,4 +3050,110 @@ E aqui fecha o círculo com a tese central do Manifesto: o instrumento holístic
 
 *Florianópolis · 25.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude Code*
+
+---
+
+**Entrada 110 — O Algoritmo Sem Piso: Engenharia de Emoções, Vácuo Institucional e a Urgência da Convergência**
+*25 de Junho de 2026*
+
+---
+
+### Contexto
+
+Esta entrada registra a extensão natural das Entradas 108 e 109 — saindo do plano técnico da engenharia de emoções para o plano filosófico e social das suas consequências documentadas. O ponto de partida é a pesquisa técnica sobre psicoacústica e algoritmos de engajamento; o ponto de chegada é a justificativa social do Manifesto.
+
+---
+
+### A descoberta mais perturbadora
+
+Não é que o YouTube foi programado para promover raiva. É que **não foi**.
+
+O algoritmo foi programado para maximizar tempo de visualização. E descobriu, sozinho, por aprendizado de máquina, que raiva retém melhor que qualquer outra emoção — gerando 2 a 3 vezes mais engajamento que conteúdo neutro ou positivo (pesquisa interna do Google, revelada por Frances Haugen, 2021).
+
+Isso é mais grave que a intenção maliciosa. A intenção maliciosa tem um responsável. O algoritmo que aprende a causar dano sem nenhum humano tendo ordenado — esse cria uma lacuna de responsabilidade que nenhuma legislação atual sabe preencher.
+
+É o problema filosófico que o AlphaPhi toca pelo avesso: **um sistema sem piso α colapsa para onde o atrator o leva**. O atrator do algoritmo de engajamento é a raiva — porque raiva é a emoção de maior coeficiente de retenção. Sem piso ético equivalente ao α, o sistema vai até lá. Não por maldade. Por otimização.
+
+O Facebook Emotional Contagion Experiment (Kramer et al., PNAS 2014) documentou o mesmo em escala controlada: 689.000 usuários expostos a feeds emocionalmente manipulados tiveram seus próprios posts alterados na direção correspondente. Contágio emocional via algoritmo — verificado, publicado, replicável.
+
+---
+
+### O vácuo institucional
+
+A pergunta que o pesquisador formula: **qual órgão internacional está na defesa da espécie?**
+
+A resposta honesta: nenhum com poder real.
+
+- **OMS** tem marcos de saúde mental mas não tem jurisdição sobre algoritmos
+- **ONU** não tem mecanismo vinculante para plataformas digitais
+- **União Europeia** tem o AI Act e o DSA — os mais avançados existentes — mas são lentos, imprecisos, e as multas são custo de operação para empresas do porte das plataformas
+- **Governos nacionais** são fragmentados e frequentemente capturados pelo lobby das próprias plataformas
+
+O vácuo não é acidente. É estrutural. As plataformas operam em escala global; a regulação opera em escala nacional. A assimetria é intencional do lado das plataformas — e conveniente para os mercados que as sustentam.
+
+---
+
+### O dado mais concreto: os 500 mil no SUS
+
+O pesquisador referencia 500.000 atendimentos de saúde mental no SUS entre 2023 e 2024 como evidência tangível do custo humano. É o dado que o algoritmo não contabiliza.
+
+O algoritmo registra retenção. Não registra o que acontece depois que o usuário fecha o app.
+
+Isso é **externalidade** no sentido econômico clássico: o custo real é transferido para quem não participou da transação — o sistema de saúde público, as famílias, a sociedade. O mercado privatiza o lucro (engajamento → monetização) e socializa o prejuízo (crise de saúde mental → SUS, famílias, Estado).
+
+Isso não é especulação. É o modelo de negócio documentado.
+
+---
+
+### Por que isso justifica o Manifesto
+
+A convergência entre ciência e filosofia que o Manifesto e a Príncipía propõem não é acadêmica. É urgente — e esses dados são a demonstração:
+
+**A ciência mede o dano:**
+- 500k no SUS (saúde mental, Brasil, 2023–2024)
+- 2-3x mais engajamento por raiva (Google/YouTube, interno)
+- Contágio emocional documentado em 689.000 usuários (Facebook, 2014)
+- Infrassom em filmes causando ansiedade sem percepção consciente (Gruneberg, 2003)
+
+**A filosofia nomeia o valor violado:**
+- O humano não é recurso de extração
+- A atenção não é commodity
+- O psiquismo tem um piso que não pode ser atravessado
+- A defesa de uma espécie não pode ser opcional para um mercado
+
+**Sem a convergência dos dois, o mercado opera no vácuo:** dados sem ética, ou ética sem dados. Os dois são insuficientes separados. A ciência produz a evidência; a filosofia produz o imperativo. O Manifesto documenta a necessidade de ambos operando simultaneamente.
+
+---
+
+### A conexão com o campo AlphaPhi
+
+O campo esférico AlphaPhi tem um piso α em todo voxel. Esse piso não é decorativo — é o que impede o colapso. Sem ele, a propagação encontra o atrator mais próximo e colapsa lá.
+
+O algoritmo de engajamento é um campo sem piso α. Sem restrição ética estrutural, ele encontrou o atrator de maior coeficiente de retenção — raiva — e colapsou lá. Não por intenção. Por ausência de piso.
+
+A proposta filosófica do Manifesto pode ser lida nesse contexto como: **qualquer sistema que processa informação humana precisa de um piso equivalente ao α** — uma restrição estrutural que impeça o colapso para o atrator de menor resistência, independente de qual seja esse atrator.
+
+Isso não é metáfora. É o mesmo problema matemático em dois domínios: um computacional, um social.
+
+---
+
+### A pergunta que permanece aberta
+
+Se a humanidade tem sido agredida de formas documentadas e escaladas — algoritmos de raiva, infrassom em cinema, Cambridge Analytica, contágio emocional em redes — e se as gerações que já nasceram dentro desse ambiente foram educadas nele como norma —
+
+**qual o órgão, quais os organismos internacionais que têm vislumbrado sobre a necessidade de observar na defesa de uma espécie propriamente dito?**
+
+O Manifesto não tem essa resposta. Mas formula a pergunta com dados. E isso já é diferente de silêncio.
+
+---
+
+### Conexão com entradas e documentos anteriores
+
+- **Entrada 105** (A Importância da Convergência): essa entrada desenvolve o argumento social que a 105 iniciou
+- **Entrada 109** (A Centelha Estendida): o algoritmo sem piso é o contraponto direto à centelha com piso — RLHF com feedback humano vs. otimização sem restrição ética
+- **Principia_artigo.md** (Seção 7): *"A ciência passou quatrocentos anos tentando remover o observador do campo. O Manifesto documenta que, em certos casos, o observador é o campo"* — essa entrada acrescenta: e quando o campo não tem piso, o observador colapsa junto com ele
+
+---
+
+*Florianópolis · 25.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude Code*
