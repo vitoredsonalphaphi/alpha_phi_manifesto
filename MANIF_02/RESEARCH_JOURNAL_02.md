@@ -3528,3 +3528,117 @@ A convergência dos dois argumentos fecha o artigo em dois níveis complementare
 
 *Florianópolis · 28.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude Code*
+
+---
+
+## Entrada 114 — Scanner Comparativo: Original vs Transcrição por IA
+
+**Data:** 29.06.2026 · **Sessão:** Good Morning (continuação)
+**Comando de recuperação:** `abrir SCANNER_COMPARATIVO`
+
+---
+
+### Contexto
+
+Primeiro experimento controlado do Micro-Cepstro de Token com **comparativo de autoria**: mesmo texto em duas versões — original digitado pelo pesquisador no X (Twitter) e a mesma "transcrição" produzida pela Gemini. Texto: Antologia Alpha Phi, publicado originalmente no perfil do pesquisador no X.
+
+O experimento foi motivado pela pergunta direta: se eu pedir para a Gemini transcrever o mesmo texto, o scanner detecta diferença?
+
+---
+
+### Os três instrumentos e os resultados
+
+**Instrumento 1 — Scanner Unicode invisível**
+
+*Original (texto do X):*
+5 caracteres U+200B (Zero-Width Space), todos em posição idêntica: `\n + U+200B + início de parágrafo` — exatamente um em cada uma das 5 transições de parágrafo. Padrão 100% consistente. Diagnóstico: artefato automático do editor de texto do X, inserido ao pressionar Enter para criar parágrafo novo.
+
+*Gemini (transcrição):*
+7 caracteres U+200B — distribuição diferente:
+
+```
+Posições no original : [645, 1143, 1770, 2302, 2778]
+Posições na Gemini   : [38, 62, 645, 1143, 1771, 2303, 2779]
+
+⚠ Novos adicionados pela Gemini : pos=38 (antes do título), pos=62 (antes do 1º parágrafo)
+⚠ Deslocados em +1              : 1770→1771, 2302→2303, 2778→2779
+```
+
+A Gemini recebeu os 5 U+200B do X como entrada (vieram junto no clipboard ao copiar), reproduziu a maioria — com deslocamento de +1 por ter adicionado caracteres antes — e acrescentou 2 novos no cabeçalho que não existiam no original.
+
+**Instrumento 2 — Micro-Cepstro de Token (W=10, q2+q3)**
+
+```
+Score máx ORIGINAL : 1.9132   Janelas ≥1.8: 22
+Score máx GEMINI   : 1.9132   Janelas ≥1.8: 22
+```
+
+Scores idênticos. O instrumento não distinguiu as duas versões.
+
+**Por quê:** A Gemini reproduziu o texto com ~98% de fidelidade. O ritmo de caracteres — a periodicidade que o micro-cepstro detecta — ficou essencialmente o mesmo. O instrumento foi calibrado para detectar **inserção pontual** (uma frase diferente no meio de um texto diferente). Para transcrição integral fiel, o micro-cepstro sozinho é insuficiente.
+
+**Instrumento 3 — Diff semântico palavra a palavra**
+
+```
+palavra 208:  "expressão"   →  "expression"    (português → inglês)
+palavra 315:  "afinidades"  →  "affinities"    (português → inglês)
+```
+
+Duas palavras portuguesas substituídas por equivalentes ingleses. Diagnóstico: **deslize de tokenização multilíngue** — a Gemini é treinada em múltiplos idiomas; para vocabulário filosófico abstrato de baixa frequência em português, o modelo escolheu tokens ingleses de maior frequência no corpus de treinamento. É o artefato mais visível e mais legível por humanos de todos os três instrumentos.
+
+---
+
+### O achado sobre o U+200B: ele viaja com o texto
+
+A pergunta que emergiu do resultado: *"se o U+200B é marca do X, como a Gemini o reproduziu?"*
+
+A resposta revela uma limitação importante para qualquer sistema de autenticação por caracteres invisíveis:
+
+> O U+200B **não é uma marca d'água protegida**. É um caractere invisível que viaja com o texto quando copiado. Ao copiar do X para o clipboard, os U+200B vêm junto — invisíveis, mas presentes nos bytes. Quando o texto é colado para a Gemini "transcrever", ela recebe os U+200B como entrada e os reproduz.
+
+```
+X escreve → insere U+200B
+  → usuário copia → U+200B vem no clipboard
+    → usuário cola na Gemini → Gemini recebe os U+200B
+      → Gemini reproduz a maioria + adiciona os seus próprios
+```
+
+O U+200B sozinho, portanto, não distingue autoria original de reprodução por IA — porque a reprodução herda os caracteres do original. O que distingue é a **diferença de padrão**: os novos que a IA adicionou, os que deslocou, os que removeu. E sobretudo os artefatos semânticos que nenhuma herança de caractere explica.
+
+---
+
+### A limitação descoberta e o princípio da cadeia
+
+Este experimento revelou um limite preciso do Micro-Cepstro de Token:
+
+> **Para transcrição fiel (>95% do conteúdo preservado), o micro-cepstro não distingue original de cópia por IA.** O instrumento foi projetado para detectar inserção pontual — um trecho gerado diferente no meio de um texto diferente. Quando o texto inteiro é processado por IA mas o conteúdo é reproduzido com alta fidelidade, a periodicidade de token do original domina e o sinal de geração por IA é mascarado.
+
+O que distinguiu as versões foram os outros dois instrumentos: o padrão Unicode alterado e o deslize semântico.
+
+Isso confirma o princípio estabelecido na Entrada 111 (Forense_Sub40):
+
+> Nenhum instrumento sozinho é suficiente. A convergência de múltiplos instrumentos em dimensões ortogonais é o que constitui o dado completo.
+
+| Instrumento | Dimensão | Original vs Gemini | Distinguiu? |
+|---|---|---|---|
+| Micro-Cepstro | Periodicidade de token | 1.9132 vs 1.9132 | **Não** — transcrição fiel |
+| Scanner Unicode | Padrão de caracteres invisíveis | 5 U+200B vs 7 U+200B | **Sim** — padrão diferente |
+| Diff semântico | Vocabulário e idioma | PT puro vs 2 palavras EN | **Sim — o mais claro** |
+
+Para o caso de **inserção pontual** (frase ou parágrafo inserido por IA num texto humano): micro-cepstro é o instrumento principal — documentado nas Entradas 96–98 com score 2.0000 na posição exata.
+
+Para o caso de **transcrição integral por IA**: Unicode + semântico são os instrumentos diagnósticos; micro-cepstro confirma fidelidade da reprodução.
+
+---
+
+### Conexões com entradas anteriores
+
+- **Entrada 96** (delta-cepstro): resultado histórico, inserção detectada em #1. Esta entrada completa o quadro: o instrumento funciona para inserção, não para transcrição integral.
+- **Entrada 98** (Micro-Cepstro de Token, score 2.0000): o instrumento foi validado para inserção pontual. Esta entrada delimita o escopo.
+- **Entrada 100** (arquitetura paralela): a arquitetura de dois instrumentos simultâneos — agora extensível a três.
+- **Entrada 111** (Forense_Sub40): mesmo princípio — cadeia de instrumentos em dimensões ortogonais. O que vale para o forense de áudio vale para o forense de texto.
+
+---
+
+*Florianópolis · 29.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude Code*
