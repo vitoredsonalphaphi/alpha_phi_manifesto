@@ -3758,3 +3758,46 @@ Dois instrumentos convergindo para o mesmo ponto: o scanner externo (quantitativ
 
 *Florianópolis · 29.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude Code · Gemini*
+
+---
+
+## ENTRADA 116 — 30/JUN/2026
+## Paradoxo Determinístico-Probabilístico: Validação Externa e Hipótese de Roteamento
+
+**Fonte:** vídeo canal gotoCobol — "Por que grandes empresas estão cancelando projetos de IA"
+
+**Argumento central do vídeo:** empresas falham ao usar IA para tarefas que exigem comportamento determinístico. O erro não é a tecnologia — é a ontologia da ferramenta aplicada na categoria errada. IA processa tokens por probabilidade; sistemas corporativos (impostos, salários, Cobol/Mainframe) exigem replicação exata do mesmo resultado milhões de vezes. Cooperação correta: IA interpreta contexto, software tradicional executa regras.
+
+**Conexão com o design do scanner (Entrada 100):**
+
+A exigência explícita durante o desenvolvimento foi: *não usar análise semântica*. Essa decisão nomeia o mesmo princípio do vídeo:
+
+| Instrumento | Tipo | O que detecta |
+|---|---|---|
+| Micro-Cepstro (FFT, W=10) | determinístico | periodicidade de token no sinal de caracteres |
+| Scanner Unicode | determinístico | posições exatas de U+200B |
+| Diff semântico palavra-a-palavra | determinístico | mudanças exatas de string |
+
+Nenhum dos três pede a uma IA "esse texto parece gerado por IA?" — que seria exatamente o erro de categoria do vídeo. Quando a Gemini trocou "expressão"→"expression", a detecção foi por comparação de string exata, não por interpretação. Artefato probabilístico, detecção determinística.
+
+**Hipótese de roteamento:**
+
+Um instrumento mais sofisticado poderia ter uma camada de despacho que lê *o que está sendo perguntado* e seleciona o instrumento adequado — semântico ou determinístico — por necessidade da análise, não por alternância fixa:
+
+| Pergunta | Categoria | Instrumento |
+|---|---|---|
+| "o sentido mudou entre versões?" | semântica | reasoning AI |
+| "qual a periodicidade espectral?" | determinístico | FFT/cepstro |
+| "o intervalo entre tokens é uniforme?" | determinístico | análise de timestamps SSE |
+| "quantos U+200B e em que posição?" | determinístico | scanner de bytes |
+
+O roteador pode ser AI — e tudo bem. A AI faz um julgamento *sobre qual instrumento usar*, não *qual é a resposta*. A resposta vem do instrumento. Isso evita circularidade: AI probabilística escolhe ferramenta → ferramenta determinística executa → resultado fixo. Exatamente o modelo do vídeo.
+
+A dimensão de **timing** abre uma nova camada determinística ainda não explorada: AI gera com cadência de inter-token ~uniforme; humano escreve em rajadas irregulares com pausas e correções. Esse sinal existe no momento da geração (timestamps SSE da API) e é ortogonal a tudo que o Micro-Cepstro já mede — invisível no texto final, mas capturável na origem.
+
+**Conexão Alpha-Phi:** a confusão de categorias (probabilístico onde deveria ser determinístico) é o mesmo erro em escala epistêmica que o Manifesto nomeia: instrumentos filosóficos e científicos operam em registros diferentes e complementares, não intercambiáveis.
+
+---
+
+*Florianópolis · 30.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude Code*
