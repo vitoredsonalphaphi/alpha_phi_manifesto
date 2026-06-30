@@ -1,7 +1,7 @@
 # φ como Força Restauradora — A Comprovação no Caractere
 
 **Manifesto Alpha-Phi · Segundo Manifesto**
-**Florianópolis/SC · 02/06/2026**
+**Junho de 2026**
 
 ---
 

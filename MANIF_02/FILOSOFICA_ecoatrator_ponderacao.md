@@ -2,7 +2,6 @@
 ## Área Filosófica — Segundo Manifesto
 
 **Manifesto Alpha-Phi · Segundo Ciclo**
-**Florianópolis/SC · 26/05/2026**
 **Florianópolis · maio de 2026 · Sessão Good Morning**
 
 ---

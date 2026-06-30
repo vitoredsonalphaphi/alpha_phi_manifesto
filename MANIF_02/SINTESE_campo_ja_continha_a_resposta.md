@@ -2,7 +2,6 @@
 ## Fundamento do Manifesto Alpha-Phi · Segundo Ciclo
 
 **Manifesto Alpha-Phi · Segundo Ciclo**
-**Florianópolis/SC · 27/05/2026**
 **Florianópolis · maio de 2026 · Sessão Good Morning**
 
 ---
