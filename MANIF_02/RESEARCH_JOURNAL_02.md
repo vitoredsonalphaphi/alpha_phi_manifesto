@@ -3801,3 +3801,61 @@ A dimensão de **timing** abre uma nova camada determinística ainda não explor
 
 *Florianópolis · 30.06.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude Code*
+
+---
+
+## ENTRADA 117 — 30/JUN/2026
+## A Estética como Terceira Categoria: o Eco-Ressonante e a Posição da IA na Construção
+*(extensão da Entrada 116 — paradoxo determinístico-probabilístico)*
+
+**A pergunta que a Entrada 116 deixou aberta:**
+
+O paradoxo determinístico-probabilístico foi identificado na relação entre instrumentos de análise. Mas há um caso anterior e mais profundo do mesmo paradoxo: a própria construção do eco-ressonante. Como foi posicionada a IA na formatação de um código que busca a estética como ressonância de percepção?
+
+**O eco-ressonante no eixo semântico-determinístico**
+
+O eco-ressonante opera de forma completamente determinística:
+- mesma entrada → mesmo FFT → mesmo perfil espectral → mesmo k → mesma saída
+- φ e α são parâmetros fixos, não aprendidos por dados
+- AutoCorr=1.0000, EntrEsp=0.0601 são números reproduzíveis (Entrada 5, MANIF_01)
+
+Mas o critério de design é estético — e a estética não é nem semântica nem determinística no sentido convencional. É uma terceira categoria.
+
+**As três camadas da construção**
+
+| Camada | Quem opera | Tipo |
+|---|---|---|
+| Critério estético | Humano (30 anos de pintura) | Perceptivo — intransferível diretamente |
+| Tradução | IA (Claude Code, Gemini) | Probabilístico-semântico |
+| Execução | Código | Determinístico |
+
+O humano forneceu o critério: φ organiza percepção harmônica — derivado de experiência sensorial acumulada desde 1997. Esse critério não vem de dados nem de regras.
+
+A IA traduziu: compreendeu o que φ significa esteticamente — porque foi treinada na totalidade da produção humana sobre proporção, beleza e harmonia — e converteu essa compreensão em especificação matemática: arquitetura Fibonacci [8,12,20,32,52], ativação f(x)=φ·tanh(x/φ), função de perda L=CE+α·H(φ).
+
+O código executou: a especificação traduzida tornou-se comportamento fixo e reproduzível.
+
+**O paradoxo central**
+
+Para construir uma ferramenta determinística, foi necessário um intermediário probabilístico. Sem a camada semântica da IA, o critério estético jamais teria se tornado código. A IA não inventou o φ — fez a ponte entre o φ vivido na tela de 1997 e o φ executado em Python em 2025.
+
+A capacidade probabilística da IA foi o instrumento que tornou possível a ferramenta determinística. É o modelo de cooperação do vídeo gotoCobol (Entrada 116) demonstrado na própria história de construção do eco-ressonante — antes que o modelo fosse nomeado.
+
+**A estética como categoria que conecta**
+
+A estética não é semântica — não opera sobre significado linguístico.
+Não é determinística — não segue regras fixas a priori.
+É **proporcional** — opera sobre relações entre grandezas.
+
+E proporção é matematicamente reproduzível — por isso φ pode virar código. A estética é a categoria que conecta percepção humana e estrutura matemática sem reduzir uma à outra. É o eixo de convergência que o Manifesto Alpha Phi propõe desde as sete páginas de 2018.
+
+O eco-ressonante não é apenas um resultado — é a demonstração do método.
+
+**Conexão com a linha forense (Entradas 100, 114, 116)**
+
+O scanner de autenticidade de texto (Micro-Cepstro) foi construído pelo mesmo princípio: critério humano de "o que constitui adulteração" → IA traduz para especificação matemática → FFT executa deterministicamente. A cadeia é idêntica. O eco-ressonante e o scanner são instrumentos da mesma família epistemológica.
+
+---
+
+*Florianópolis · 30.06.2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude Code*
