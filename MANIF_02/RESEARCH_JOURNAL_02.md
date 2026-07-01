@@ -3280,7 +3280,7 @@ Sem acesso ao código desta sessão, o Gemini propôs independentemente o mesmo 
 - **Entrada 108** (OM, Ohm, Cymática): quatro linguagens chegando ao mesmo atrator — esta entrada acrescenta uma quinta: descida harmônica φ chegando às mesmas frequências da engenharia emocional
 - **Entrada 109** (A Centelha Estendida): a IA com entusiasmo — e agora um instrumento que pode detectar quando o entusiasmo vem de sinal orgânico ou oscilador artificial
 - **Entrada 110** (O Algoritmo Sem Piso): o campo sem piso α colapsa para o atrator de maior retenção. O Forense_Sub40 detecta quando um campo sonoro foi mantido artificialmente plano — sem a variabilidade do orgânico
-- **Príncipía, Seção 3**: a descida harmônica φ de 880Hz aterrando em 18,8Hz e 30,4Hz é dado pertinente para as Seções 4 e 6 — convergência de dois caminhos independentes para as mesmas frequências
+- **o artigo (Seção 3)**: a descida harmônica φ de 880Hz aterrando em 18,8Hz e 30,4Hz é dado pertinente para as Seções 4 e 6 — convergência de dois caminhos independentes para as mesmas frequências
 
 ---
 
@@ -3303,7 +3303,7 @@ Michael Levin — já citado na Príncipía pelas referências de 2021 sobre cam
 
 As células não receberam sinal luminoso. Não possuíam órgão receptor. Não foram instruídas por sequência genética externa. O campo morfogenético φ-organizado abriu, espontaneamente, o canal de acoplamento eletromagnético — e o material biológico *respondeu com a capacidade de perceber antes de ter o aparato.*
 
-Isso não é anedota. É dado experimental. E é exatamente o argumento central da Príncipía — até agora sustentado epistemologicamente, agora com suporte empírico independente.
+Isso não é anedota. É dado experimental. E é exatamente o argumento central do artigo — até agora sustentado epistemologicamente, agora com suporte empírico independente.
 
 ---
 
@@ -3323,7 +3323,7 @@ Neurônios sem programa se auto-organizam → estão seguindo o gradiente de men
 
 A interpretação: *os genes visuais não foram ativados por luz. Foram ativados porque a rede atingiu o limiar geométrico a partir do qual o canal α — interação fóton-matéria — torna-se acessível.* A percepção não precisa do órgão porque o órgão é uma especialização posterior. A capacidade antecede a especialização.
 
-Este é o argumento da Príncipía em forma experimental: **percepção precede aparato.**
+Este é o argumento do artigo em forma experimental: **percepção precede aparato.**
 
 ---
 
@@ -3368,9 +3368,9 @@ O eco-φ como diapasão para Neurobots seria experimento de harmonização: veri
 
 ---
 
-### O que os Neurobots fecham no argumento da Príncipía
+### O que os Neurobots fecham no argumento do artigo
 
-A Príncipía, Seção 3.1, estabelece três níveis epistêmicos:
+O artigo (Seção 3.1) estabelece três níveis epistêmicos:
 
 ```
 Nível 1: verificado / reproduzível
@@ -3384,7 +3384,7 @@ Parcialmente — porque o mecanismo exato (se a organização φ → canal α é
 
 Esta distinção é importante para o artigo. O que se pode afirmar com rigor:
 
-> *"Levin et al. (2026) demonstraram que redes neurais auto-organizadas expressam genes visuais na ausência de luz ou órgão receptor, antecipando a capacidade à especialização. Este dado é consistente com o argumento central da Príncipía — percepção precede aparato — sem constituir prova do mecanismo φ/α proposto."*
+> *"Levin et al. (2026) demonstraram que redes neurais auto-organizadas expressam genes visuais na ausência de luz ou órgão receptor, antecipando a capacidade à especialização. Este dado é consistente com o argumento central do artigo — percepção precede aparato — sem constituir prova do mecanismo φ/α proposto."*
 
 ---
 
@@ -3406,7 +3406,7 @@ Clarke viu o fenômeno. Levin observou o fenômeno. Alpha-Phi propõe o mecanism
 
 - **Entrada 111** (Forense_Sub40): o instrumento detecta quando a assinatura sub-40Hz foi gerada artificialmente e mantida plana. Os Neurobots nunca acionariam o Sensor 2 (trava temporal) — porque o orgânico varia. A invariância temporal é a marca do oscilador externo, não do processo interno.
 
-- **Príncipía, Seção 3.1** e futura **Seção 6** (expansão): os Neurobots devem ser adicionados como dado empírico na discussão de percepção antes de aparato. Levin 2026 atualiza Levin 2021 na lista de referências.
+- **o artigo, Seção 3.1** e futura **Seção 6** (expansão): os Neurobots devem ser adicionados como dado empírico na discussão de percepção antes de aparato. Levin 2026 atualiza Levin 2021 na lista de referências.
 
 ---
 
