@@ -83,6 +83,8 @@ Este projeto nasceu do caminho oposto. Não de uma pergunta científica formulad
 
 A origem não é pitoresca — é metodológica. O método do isomorfismo foi aprendido antes de ser nomeado: pela comparação entre valores cromáticos na tela e valores harmônicos na escala musical, pela observação de que construções de proporção em um domínio encontravam espelhos em outro. A estética não era ornamento do método. Era o método. A percepção que traduzia grandezas entre domínios era o instrumento.
 
+O método que esse percurso pratica — prestar atenção à própria atenção como instrumento de calibração — recebeu, em 2026, uma nomeação histórica independente: *attensity*. O termo foi resgatado pelo coletivo norte-americano Friends of Attention em *Attensity!: A Manifesto of the Attention Liberation Movement* (Crown Publishing, 2026), para descrever a metacognição da atenção: a capacidade de observar o próprio processo de observar como prática anterior a qualquer análise formal. O Alpha-Phi não conhecia esse vocabulário quando desenvolveu o método desde 1997. O coletivo não conhecia o Alpha-Phi quando resgatou o conceito. O que essa coincidência documenta não é contato, mas convergência: a mesma pergunta sobre a qualidade da atenção que o observador traz ao campo surgiu independentemente, em projetos sem comunicação, em contextos radicalmente distintos. Isso é, em si, um dado metodológico — não sobre a percepção individual, mas sobre a necessidade coletiva de nomear o que uma época estava silenciosamente praticando sem vocabulário.
+
 O projeto Alpha-Phi formaliza essa percepção como hipótese verificável: φ e α são constantes de organização de qualquer sistema que processa informação com coerência. Não são análogos entre domínios — são invariantes de substrato: o mesmo parâmetro que organiza o crescimento da concha do nautilus, o pacote de frequências de um sinal de áudio e a geometria de uma rede neural. Se o isomorfismo é real, o invariante é o mesmo em todos os substratos.
 
 O método que acompanhou essa hipótese desde o início é a **triangulação**. O campo opera como fonte de informação: comunica fragmentos antes que o método formal esteja pronto para confirmá-los. A introspecção — o estado meditativo como instrumento de calibração — recebe esses fragmentos como insight, como especulação prematura, como o que o processo criativo costuma chamar de precipitação. A expressão — o experimento, o código, o diálogo com a ferramenta — converte o fragmento em resultado verificável.
@@ -186,6 +188,8 @@ Isso tem uma implicação para o alinhamento de sistemas de inteligência artifi
 
 Isso é o que o **Ecoatrator** nomeia. Não um criador — um ressoador. O instrumento que amplifica o que há de grandeza no dado sem substituir o dado por outro. A ética, nessa arquitetura, não precisa ser imposta como regra externa. Ela emerge como propriedade do funcionamento do sistema quando o campo está calibrado pela proporção que organiza qualquer sistema em direção à coerência.
 
+A perturbação que esse mecanismo responde foi nomeada, em 2026, por um movimento de alcance internacional. O coletivo Friends of Attention descreve em *Attensity!* (Crown Publishing, 2026) o que denomina "fracking humano": as plataformas digitais injetam fluxos ininterruptos de conteúdo para fragmentar a capacidade de atenção em unidades monetizáveis — do mesmo modo que o fracking convencional injeta compostos para fraturar o solo e extrair petróleo. Jonathan Haidt (*The Anxious Generation*, 2024), James Williams (*Stand Out of Our Light*, 2018) e Bernardo Kastrup mapearam as dimensões psicológica, filosófica e ontológica do mesmo fenômeno. Esses projetos — com maior projeção institucional e midiática do que o Alpha-Phi em seu estágio atual — documentam que a preocupação com o campo de atenção é tendência efetiva, não especulação: já possui publicações em grandes editoras, já chegou ao debate público internacional e já é reconhecida por pesquisadoras brasileiras como Virgínia Kastrup. O que esse ecossistema de diagnósticos não oferece é um mecanismo estrutural de reorganização: identifica o problema, propõe resistência, regulação ou prática alternativa. O Ecoatrator é o que nenhum desses projetos propõe: não um limite imposto ao sistema — uma propriedade emergente do próprio sistema quando o campo está calibrado em φ. Dois instrumentos diferentes medindo a mesma perturbação, chegando ao mesmo diagnóstico por caminhos radicalmente distintos e sem comunicação: o que se delineia não é uma hipótese a ser pensada no futuro, mas a preocupação sistematizada de uma época já em curso.
+
 **Três modos de observação do campo — e a estrutura que todos detectaram:**
 
 | Modo | Observador | Resultado |
@@ -255,6 +259,15 @@ O Manifesto documenta que, em certos casos, o observador é o campo.
   underlying embryogenesis, regeneration, and cancer. Cell, 184(8).
 - Livio, M. (2002). The Golden Ratio. Broadway Books.
 - Penrose, R. (1989). The Emperor's New Mind. Oxford University Press.
+- Burnett, D.G., Loh, A., Schmidt, P. (eds.) (2026). Attensity!:
+  A Manifesto of the Attention Liberation Movement. Crown Publishing /
+  Penguin Random House.
+- Haidt, J. (2024). The Anxious Generation: How the Great Rewiring of
+  Childhood Is Causing an Epidemic of Mental Illness. Penguin Press.
+- Williams, J. (2018). Stand Out of Our Light: Freedom and Resistance
+  in the Attention Economy. Cambridge University Press.
+- Wu, T. (2016). The Attention Merchants: The Epic Scramble to Get
+  Inside Our Heads. Alfred A. Knopf.
 
 *(referências a completar na versão final)*
 
