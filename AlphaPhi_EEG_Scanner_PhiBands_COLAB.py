@@ -213,6 +213,9 @@ class ScannerEEGPhiBands:
         perfil, scores = [], []
 
         for i, (b_lo, b_hi, f_lo, f_hi) in enumerate(self.bins):
+            # Mínimo de 3 bins para medir entropia real — evita coh=1.0 trivial
+            if b_hi - b_lo < 3:
+                continue
             coh  = self._coh_banda(ffts_all, b_lo, b_hi)
             disc = self._disc_banda(ffts_T1, ffts_T2, b_lo, b_hi)
             s    = coh * disc
@@ -350,11 +353,19 @@ for suj_id in range(1, N_SUJ + 1):
                            "n_T1": len(T1), "n_T2": len(T2)})
         continue
 
-    print(f"  Épocas: T1={len(T1)}  T2={len(T2)}")
+    print(f"  Épocas brutas : T1={len(T1)}  T2={len(T2)}")
 
     # Rodar Scanner por N_SONDA_MAX ciclos usando subconjuntos de épocas
     scanner = ScannerEEGPhiBands(BANDAS, BINS)
     rng = np.random.default_rng(TIMESTAMP + suj_id * 137)
+
+    # Balancear T1/T2 — subsample do majoritário para igualar classes
+    n_min = min(len(T1), len(T2))
+    if len(T1) > n_min:
+        T1 = T1[rng.choice(len(T1), n_min, replace=False)]
+    if len(T2) > n_min:
+        T2 = T2[rng.choice(len(T2), n_min, replace=False)]
+    print(f"  Balanceadas   : T1={len(T1)}  T2={len(T2)}")
 
     for ciclo in range(scanner.N_SONDA_MAX):
         if scanner.pronto:
