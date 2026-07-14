@@ -113,6 +113,11 @@ class ScannerAlphaPhi:
         self._beta         = 1.0
         self.pronto        = False
 
+        # ── Capacitor de Software (Eco-Ressonante) ───────────────────
+        self._capacitance  = 1.0   # capacitância adaptativa (dielétrico virtual)
+        self._resistance   = 1.0   # resistência virtual (fixa)
+        self._charge       = None  # carga acumulada — estado do capacitor
+
     # ── Espectros ───────────────────────────────────────────────────
 
     def _coh_A(self, h):
@@ -177,6 +182,31 @@ class ScannerAlphaPhi:
         H_max  = np.log(max(len(s), 2))
         return float(1.0 - np.clip(H_meta / H_max, 0.0, 1.0))
 
+    # ── Capacitor de Software ───────────────────────────────────────
+
+    def _adjust_dielectric(self, spectral_entropy):
+        """
+        Regulação adaptativa do dielétrico virtual.
+        Entropia alta (sinal ruidoso) → capacitância maior → absorção mais lenta.
+        Entropia baixa (sinal claro)  → capacitância menor → resposta mais rápida.
+        capacitance = 1 + (entropia × φ)
+        """
+        self._capacitance = 1.0 + (spectral_entropy * self.PHI)
+
+    def _process_pulse(self, s_arr):
+        """
+        Filtro RC digital: y[n] = a·x[n] + (1-a)·y[n-1]
+        tau = C × R × (φ/α)  →  a = 1 / (tau + 1)
+        Substitui o EMA fixo por integração harmônica adaptativa.
+        """
+        tau = self._capacitance * self._resistance * (self.PHI / self.ALPHA)
+        a   = 1.0 / (tau + 1.0)
+        if self._charge is None:
+            self._charge = s_arr.copy()
+        else:
+            self._charge = a * s_arr + (1.0 - a) * self._charge
+        return self._charge
+
     # ── Interface principal ─────────────────────────────────────────
 
     def escaneia(self, X_batch, y_batch):
@@ -201,12 +231,11 @@ class ScannerAlphaPhi:
             perfil.append(p)
             scores.append(s)
 
-        # EMA_α dos scores (α como fator de suavização)
-        s_arr = np.array(scores)
-        if self._scores_ema is None:
-            self._scores_ema = s_arr.copy()
-        else:
-            self._scores_ema = self.ALPHA * s_arr + (1.0 - self.ALPHA) * self._scores_ema
+        # Capacitor de Software — integração RC adaptativa
+        s_arr    = np.array(scores)
+        mc_prev  = self._meta_coh_hist[-1] if self._meta_coh_hist else 0.5
+        self._adjust_dielectric(1.0 - mc_prev)   # entropia = 1 − meta_coh anterior
+        self._scores_ema = self._process_pulse(s_arr)
 
         mc = self._meta_coh(self._scores_ema)
         self._meta_coh_hist.append(mc)
@@ -259,6 +288,7 @@ class ScannerAlphaPhi:
             "adequado":      adequado,
             "perfil":        self._perfil_final,
             "beta_atual":    self._beta,
+            "capacitancia":  round(self._capacitance, 4),
         }
 
 
@@ -416,7 +446,8 @@ for nome, usa_scanner in CONFIGS.items():
             nc  = r['n_ciclos']
             tag = "OK" if r['adequado'] else "INADEQUADO"
             print(f"  seed {seed} → acc={acc:.4f}  F{f}({r['dim_otima']})"
-                  f"  meta_coh={mc:.3f}  ciclos={nc}  β={r['beta_atual']:.3f}  {tag}")
+                  f"  meta_coh={mc:.3f}  ciclos={nc}  β={r['beta_atual']:.3f}"
+                  f"  C={r['capacitancia']:.3f}  {tag}")
         else:
             print(f"  seed {seed} → acc={acc:.4f}")
 
