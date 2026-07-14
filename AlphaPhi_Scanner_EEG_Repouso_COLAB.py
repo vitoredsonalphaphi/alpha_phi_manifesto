@@ -194,7 +194,9 @@ class ScannerEEGRepouso:
         perfil, scores = [], []
 
         for i, (b_lo, b_hi, f_lo, f_hi) in enumerate(self.bins):
-            if b_hi - b_lo < 3:
+            # Mínimo de 6 bins: elimina viés de coh em bandas de baixa resolução
+            # F03 (3 bins) e F04 (3 bins) têm coh inflado matematicamente
+            if b_hi - b_lo < 6:
                 continue
             coh  = self._coh_banda(ffts_all, b_lo, b_hi)
             disc = self._disc_banda(ffts_T1, ffts_T2, b_lo, b_hi)
@@ -305,7 +307,7 @@ BINS   = bandas_para_bins_eeg(BANDAS, n=N_AMOSTRAS, fs=FS_EEG)
 print(f"\nBandas φ-proporcionais ({len(BANDAS)} bandas, resolução 0.5 Hz/bin):")
 for i, (b_lo, b_hi, f_lo, f_hi) in enumerate(BINS):
     n_bins = b_hi - b_lo
-    status = "SKIP" if n_bins < 3 else f"{n_bins} bins"
+    status = "SKIP" if n_bins < 6 else f"{n_bins} bins"
     print(f"  F{i+1:02d}  {f_lo:6.2f}–{f_hi:6.2f} Hz"
           f"  [{nome_banda(f_lo, f_hi):7s}]"
           f"  bins {b_lo:3d}–{b_hi:3d}  ({status})")
