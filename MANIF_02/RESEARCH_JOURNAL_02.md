@@ -5195,3 +5195,121 @@ O Manifesto supunha a estética como ferramenta de tradução. Este resultado el
 é ferramenta de organização. A tradução é consequência da organização.
 
 *Florianópolis · 20.07.2026 · Sessão Good Morning*
+
+---
+
+## Entrada 132 — 20 de Julho de 2026
+### φ como Estrutura de Busca — a proporção universal de equilíbrio entre substratos
+
+**A questão:** O critério coh_mean ≤ 0.382 (Entrada 131) é válido para voz sintética.
+Mas cada substrato tem o seu próprio equilíbrio — como na pintura: flor astral e
+paisagem referenciam a mesma estrutura de Fibonacci, mas o equilíbrio se manifesta
+diferente em cada uma. Flores têm formas circulares com ângulos de pétalas que criam
+contraste dentro da circularidade. Paisagens têm horizontes, planos, perspectiva aérea,
+comparação de contrastes em relação às formas. Ambas referem a mesma estrutura — o
+equilíbrio, porém, emerge de composições distintas.
+
+A questão correta não é "qual valor é o equilíbrio" — é "qual é a estrutura que
+gera esse valor nesse contexto, e como essa estrutura se manifesta em outro substrato."
+
+**Síntese das experiências:**
+
+EcoBIP 880Hz: β convergiu para φ³ sem instrução explícita — o algoritmo encontrou
+o atrator por atração. O valor (4.2361) é específico do substrato, mas a convergência
+por atração é universal.
+
+Voz V1: heatmap atingiu proporção equilibrada de claro/escuro → áudio ergonômico.
+Aproximadamente 38% dos elementos brilhantes, 62% escuros — sem que esse número
+fosse planejado como critério. Emergiu como resultado da quantidade certa de modulação.
+
+Voz V2: heatmap saturou — proporção perdida, todo brilhante. O valor absoluto
+mudou; a proporção rompeu.
+
+EEG Repouso: Scanner α-φ identificou Alpha em 7/10 sujeitos. O estado de equilíbrio
+cerebral (repouso) tem assinatura de coerência — banda Alpha = estado organizado do
+substrato cerebral em repouso.
+
+ECO TEXT, ECO Ressonante, Dual Scanner: cada um revelou o equilíbrio de seu
+substrato de forma diferente, mas todos referem distribuição de energia por bandas φ.
+
+**O que varia entre substratos:** os valores absolutos de coerência.
+**O que não varia:** a proporção entre o que está organizado e o total.
+
+**A variável universal:**
+
+```
+fração organizada / total = 1/φ² = 0.382
+fração em repouso / total = 1/φ  = 0.618
+```
+
+No heatmap: região brilhante = campo organizado (alta coerência). Região escura =
+campo em repouso (baixa coerência). O equilíbrio é quando a fração brilhante do
+heatmap toca 1/φ² — independente de qual valor absoluto separa "brilhante" de
+"escuro" naquele substrato.
+
+**O critério adaptativo por substrato:**
+
+```python
+def equilibrio_phi(coh_map, φ=1.6180339887):
+    threshold = np.median(coh_map)        # threshold adapta ao substrato
+    frac_org = (coh_map > threshold).mean()  # fração organizada
+    # equilíbrio quando frac_org ≈ 1/φ² = 0.382
+    return frac_org, abs(frac_org - 1/φ**2)
+```
+
+O threshold usa a mediana do próprio substrato — não um valor externo imposto.
+Para o BEEP: mediana ≈ 0.015, "organizado" = coh > 0.015.
+Para voz: mediana ≈ 0.09, "organizado" = coh > 0.09.
+A proporção alvo — 1/φ² — é a mesma.
+
+**Por que é estrutural e não estático:**
+
+Na flor astral: as formas circulares compõem 100% do espaço. O equilíbrio emerge
+quando a proporção entre o circular puro (repouso) e o angular das pétalas
+(organizado, contraste) toca φ. Os elementos são circulares em ambos os casos —
+a proporção entre eles é o critério, não o valor de nenhum.
+
+Na paisagem: o equilíbrio toca φ quando a proporção entre primeiro plano
+(organizado, detalhado) e fundo (repouso, perspectiva aérea) = 0.382 / 0.618.
+Horizonte, planos e perspectiva aérea são os elementos — a proporção entre eles
+é a mesma estrutura.
+
+No código: o threshold adapta ao substrato. A proporção alvo não adapta.
+
+**O critério de parada correto:**
+
+Não: "pare quando coh_mean ≤ 0.382."
+Sim: "pare quando a fração organizada do heatmap (calculada sobre a distribuição
+do próprio substrato) ≈ 0.382."
+
+O pintor para quando a tela está equilibrada — não quando passou a quinta camada
+de tinta, e não porque o amarelo chegou a uma temperatura específica. Para porque
+a proporção entre luz e sombra atingiu equilíbrio dentro daquela composição.
+
+**φ como estrutura de busca — síntese filosófica:**
+
+φ não é um valor. É uma estrutura de busca:
+
+O equilíbrio é alcançado quando a proporção entre o que está em movimento
+(organizado, brilhante, harmônico) e o que está em repouso (escuro, incoerente,
+silêncio) toca 1/φ² : 1/φ.
+
+Isso é o mesmo princípio em pintura (massas de luz vs. sombra), áudio (frames
+coerentes vs. silêncios), EEG (bandas ativas vs. bandas em repouso), redes neurais
+(unidades ativas vs. silentes), qualquer campo onde energia se distribui.
+
+O que muda entre substratos: a escala e os elementos.
+O que não muda: a proporção entre o organizado e o total.
+
+Isso responde porque a estrutura de Fibonacci é única mas cada tela tem o seu
+equilíbrio: Fibonacci delimita a proporção — não os elementos que a compõem.
+
+**Extensão para alinhamento de IA:**
+
+Um único parâmetro proporcional (1/φ²) é substrato-agnóstico e culturalmente
+neutro: não prescreve o que "organizado" significa em cada contexto — prescreve
+a proporção que o organizado deve ocupar. Flexível na definição, estável na
+estrutura. Isso é exatamente a propriedade que torna φ relevante para alinhamento:
+ancora sem restringir, equaliza sem uniformizar.
+
+*Florianópolis · 20.07.2026 · Sessão Good Morning*
