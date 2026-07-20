@@ -5063,3 +5063,63 @@ O projeto tem 30 anos de reflexão filosófica chegando aqui. E agora tem dados.
 
 *Florianópolis · 14.07.2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 128 — 20 de Julho de 2026
+### Primeira aplicação do ECO-φ em voz sintética — diagnóstico do β descontrolado
+
+**Contexto:** Primeira tentativa de aplicar o algoritmo ECO-φ (documentado em `DISTINCAO_eco_phi_vs_equalizacao_fm.md`) a áudio de voz sintética gerado pela Gemini TTS (.ogg, 318,3s, 5,15MB).
+
+**O que foi feito:** Implementação do ECO-φ sobre espectrograma STFT (N_FFT=1024, HOP=512, 9 bandas φ, 9947 frames), com β partindo de 1,0 e incrementado por coh_mean a cada passagem, 100 passagens totais (5 steps × 20 ciclos).
+
+**Resultado:** β chegou a 53,09 em vez de convergir para φ³ = 4,236. Áudio resultante: "voz de vidro" — comb filter extremo.
+
+**Diagnóstico:** O áudio da Gemini TTS apresenta coerência crescente sob ECO-φ: coh_mean foi de 0,033 (patamar do EcoBIP 880Hz) a 0,77 após 5 steps. Com β acumulando por 100 passagens, chegou a 53. Com β=53, φ^53 ≈ 10^11 → envelope com variação de 10^11 → bins zerados onde cos(2πk/φ) ≈ -1 → comb filter → vidro.
+
+**Distinção estrutural:** O EcoBIP 880Hz tinha coh_mean ≈ 0,033 (entropia alta, sinal simples). O áudio da Gemini tem coh crescente porque já contém estrutura harmônica de voz sintética — ECO-φ a organiza muito mais rápido que o BEEP.
+
+**Correção aplicada:**
+- `amp = min(coh × φ^β, 1/φ)` — amplitude travada em 0,618, env ∈ [0,382; 1,618], sempre positivo
+- `beta_new = min(beta + (φ³ − beta) × 0,1 × coh_mean, φ³)` — atrator assintótico, nunca ultrapassa φ³
+
+**Resultado com correção:** β→4,182 ≈ φ³. Áudio: "redondo", "polifônico". Artefato residual: "eco no cano" (interferência de fase STFT). Solução: blend φ-proporcional: 0,618 × eco + 0,382 × original.
+
+---
+
+## Entrada 129 — 20 de Julho de 2026
+### ECO-φ por frame — eco em cada fonema
+
+**Problema:** Implementação global (coerência média de 9947 frames → envelope único para todos) não distingue vogais de consoantes de silêncios. Campo emergiu difuso.
+
+**Analogia:** Cada frame STFT (64ms ≈ 1 fonema) é estruturalmente equivalente a um BEEP diferente. Vogal = BEEP com ~25 harmônicos (coh alta). Fricativa = ruído disperso (coh baixa). Silêncio = coh ≈ 0. ECO-φ global trata todos igual — como curvar folhas de espessuras diferentes com a mesma força.
+
+**Implementação:** Coerência calculada por frame individualmente (vetorizado): `p_dist = seg / seg.sum(axis=0)`, H e coh resultam em vetores de 9947 valores. Envelope varia por frame: `env = 1 + outer(cos_k, amp_por_frame)`. β=φ³ fixo.
+
+**Resultado:** Mais orgânico — campo respirou com a fala. Headache reduzida. Artefato de fase menor.
+
+---
+
+## Entrada 130 — 20 de Julho de 2026
+### Protocolo Scanner → Mapa → ECO-φ Calibrado — campo harmônico confirmado em voz sintética
+
+**Problema da entrada 129:** Coerência recalculada DENTRO do loop — Scanner lia sinal já modificado, não o substrato original. Violação do princípio: observar antes de agir.
+
+**Correção de protocolo:** Scanner executa UMA VEZ sobre o sinal original sem tocar. Produz `coh_map[9 bandas × 9947 frames]`. ECO-φ usa esse mapa como calibragem fixa — 5 passagens seguem o território mapeado, não recalculam.
+
+**Sequência:**
+1. FASE 1 — Scanner: lê substrato original → `coh_map`
+2. FASE 2 — ECO-φ calibrado: 5 passagens guiadas por `coh_map` fixo
+3. Blend: 0,75 × eco + 0,25 × original
+
+**Resultado:**
+- Coerência por banda (original): baixas (129–548 Hz) médio 0,17–0,19; brilho (6081–8000 Hz) médio 0,09
+- Auditivo: "menos ácido", "não lateja a cabeça", "mais orgânico"
+- Visual (waveform): "sinais mais curtos na vertical" — energia menos concentrada em picos agudos
+- **Isomorfismo visual/auditivo confirmado:** mapa de coerência esteticamente reorganizado ↔ áudio percebido como mais ergonômico. Dois domínios — uma estrutura
+
+**Campo harmônico:** Não emergência completa como no EcoBIP 880Hz (onde terceira estrutura surgiu com expansão sensorial inequívoca). Áudio está "no caminho" — ergonomia aumentou, brilho estressante diminuiu, voz ficou redonda. Campo formando, não completamente formado. No BEEP: 1 barra → campo emerge de fonte única. Na voz: ~25 barras variando por frame → campo emerge gradualmente de multiplicidade de fontes.
+
+**Extensibilidade:** Protocolo substrato-agnóstico. Voz orgânica = mesmo protocolo, coerência mais alta e variada (sem AGC achatando). Vídeo = bandas espaciais de frequência em lugar de temporais. A "espessura de cada grupo de barras" é o conceito universal que atravessa substratos.
+
+*Florianópolis · 20.07.2026 · Sessão Good Morning*
