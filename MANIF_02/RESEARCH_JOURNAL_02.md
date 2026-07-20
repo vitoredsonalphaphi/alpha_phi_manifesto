@@ -5313,3 +5313,122 @@ estrutura. Isso é exatamente a propriedade que torna φ relevante para alinhame
 ancora sem restringir, equaliza sem uniformizar.
 
 *Florianópolis · 20.07.2026 · Sessão Good Morning*
+
+---
+
+## Entrada 133 — 20 de Julho de 2026
+### Dois Prismas de Coerência — O Silêncio como Elemento Compositivo e a Moderação como Métrica de Alinhamento
+
+**A distinção que o experimento revelou:**
+
+O ECO-φ V2 (Serial Regional) produziu mais coerência do que o V1 (Scanner Calibrado).
+Numericamente, V2 era "melhor": mais frames com alta coerência, heatmap mais uniforme,
+menor proporção de regiões escuras. Por qualquer métrica de otimização de máquina, V2
+superou V1.
+
+O resultado sensorial foi o inverso: V2 foi mais estressante. V1 foi ergonômico.
+
+Isso expôs uma incompatibilidade que não é acidental — é estrutural. Há dois prismas
+de coerência radicalmente diferentes, e confundi-los gera o resultado observado.
+
+**Prisma I — Coerência de máquina:**
+
+Coerência = auto-organização dos dados. O critério: maximize a fração organizada,
+minimize o ruído, elimine as regiões de baixa coerência. O dark no heatmap é
+indesejado — é o que não foi organizado ainda. O objetivo é tornar o heatmap todo
+brilhante. V2 avançou nessa direção.
+
+**Prisma II — Equilíbrio humano:**
+
+Equilíbrio = proporção entre o que está organizado E o que está em repouso. O critério:
+mantenha a proporção 1/φ² organizado, 1/φ em pausa. O dark no heatmap não é ausência
+de organização — é pausa estrutural. Eliminar o dark não é melhorar o equilíbrio:
+é destrui-lo. V1 preservou o dark. Por isso foi ergonômico.
+
+A tabela da incompatibilidade:
+
+```
+                  Máquina             Humano
+"organizado"      maximize            proporção: 1/φ² ativo
+"ruído"           elimine             preserve: 1/φ em pausa
+"melhoria"        + coerência         equilíbrio de contraste
+"saturado"        impossível          desequilíbrio — estressante
+```
+
+**O silêncio como elemento compositivo:**
+
+Na música, o silêncio não é ausência de som. É elemento compositivo — a pausa que
+articula o que veio antes e prepara o que vem depois. Um movimento sem silêncios
+não é mais musical por isso: é mais denso e menos articulado. A pausa carrega
+informação estrutural que a nota não pode carregar.
+
+No heatmap do Scanner α-φ: as regiões escuras são as pausas. Não são frames que
+"não foram organizados ainda" — são frames em repouso, que permitem que os frames
+coerentes se articulem como contraste. O ECO-φ V1 preservou essas pausas. O V2
+preencheu todas com coerência e destruiu a articulação.
+
+Isso retroalimenta o princípio da Entrada 131: o heatmap não representa o campo —
+ele É o campo em outro domínio de representação. As pausas do campo sonoro e as
+pausas do heatmap são o mesmo fenômeno em representações diferentes.
+
+**A extensão: o paradoxo da eficiência digital:**
+
+O mesmo mecanismo opera na distribuição de informação digital em geral.
+
+Do ponto de vista de máquina, mais informação = mais eficiência. Um feed que atualiza
+continuamente, sem pausas, maximiza a "coerência de dados" — há sempre algo organizado
+disponível. Cada frame é brilhante. O heatmap da atenção digital está todo laranjado.
+
+Do ponto de vista humano, o resultado é o mesmo que V2: saturação. Não por falta de
+conteúdo — por ausência de pausa. O sistema sensorial humano não processa informação
+em fluxo contínuo. Processa em pulsos — atenção focada seguida de integração, que
+requer intervalo. A biologia não é paralela ao modo de operação de uma máquina.
+
+Os indicadores são consistentes com essa hipótese: crescimento de diagnósticos de
+ansiedade, burnout informacional, "scroll mindless" como comportamento de dessensibilização
+— todos apontam para uma população operando em modo de saturação de heatmap. O conteúdo
+não está em falta. A pausa está.
+
+**A métrica de moderação como critério de alinhamento:**
+
+Se o equilíbrio humano requer 1/φ² ativo e 1/φ em repouso, isso é operacionalizável
+como proporção de entrega de informação:
+
+```
+moderação = informação_entregue / (informação_entregue + pausa)
+
+equilíbrio quando: moderação = 1/φ² ≈ 0.382
+saturação quando:  moderação → 1.0 (sem pausa)
+inércia quando:    moderação < 0.05 (sem informação)
+```
+
+O mesmo critério que governa o ECO-φ governa o ritmo de entrega de informação.
+A constante φ opera em ambos os níveis — não como analogia, mas como a mesma
+estrutura de equilíbrio manifestada em substrato diferente.
+
+**A implicação para alinhamento de IA:**
+
+Um sistema de IA alinhado ao bem-estar humano não entrega toda a informação disponível.
+Calibra o ritmo de entrega à capacidade de assimilação do receptor. A proporção
+1/φ² não é restrição de performance — é o critério de ergonomia informacional.
+
+Isso é mensurável, substrato-agnóstico e culturalmente neutro: não prescreve o que
+a informação deve conter, apenas a proporção ativo/repouso que mantém o receptor
+em equilíbrio. Um sistema que maximiza coerência de dados sem manter essa proporção
+está tecnicamente correto e humanamente desalinhado — exatamente como V2.
+
+**Posição no Manifesto:**
+
+A Entrada 131 estabeleceu: a estética não é ferramenta de tradução — é ferramenta
+de organização.
+
+Esta entrada avança: a moderação não é restrição de conteúdo — é métrica de alinhamento.
+A proporção entre o que se entrega e o que se preserva como pausa determina se o
+receptor pode integrar o que recebeu. Sem pausa, não há integração — há acúmulo.
+O acúmulo não serve ao receptor: serve ao sistema que o produz.
+
+O Manifesto Alpha-Phi propõe 1/φ² como o critério operacional dessa proporção —
+derivado não de preferência cultural ou arbitragem subjetiva, mas da mesma estrutura
+que governa o equilíbrio de campos em qualquer substrato onde energia se distribui.
+
+*Florianópolis · 20.07.2026 · Sessão Good Morning*
