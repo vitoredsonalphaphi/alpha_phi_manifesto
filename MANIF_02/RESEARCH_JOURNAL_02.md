@@ -5123,3 +5123,75 @@ O projeto tem 30 anos de reflexão filosófica chegando aqui. E agora tem dados.
 **Extensibilidade:** Protocolo substrato-agnóstico. Voz orgânica = mesmo protocolo, coerência mais alta e variada (sem AGC achatando). Vídeo = bandas espaciais de frequência em lugar de temporais. A "espessura de cada grupo de barras" é o conceito universal que atravessa substratos.
 
 *Florianópolis · 20.07.2026 · Sessão Good Morning*
+
+---
+
+## Entrada 131 — 20 de Julho de 2026
+### A Estética como Instrumento de Organização — equilíbrio claro/escuro como critério de convergência
+
+**Resultado do V2 (Serial ECO-φ Regional):** 3 Scanners × 5–7 passes por região
+saturaram o campo. O heatmap ficou inteiramente brilhante — laranja/amarelo
+uniforme em todas as 9 bandas. O resultado auditivo confirmou: áudio voltou a
+estressar, "latejar", ácido. O V1 (Scanner Calibrado, 5 passes globais) havia
+atingido equilíbrio — heatmap com proporção de claro/escuro, áudio ergonômico.
+
+**Analogia da pintura — Amarelo de Cádmio:** Na pintura, amarelo de cádmio sem
+contraste satura a tela. Equilíbrio não surge nas primeiras camadas. Surge por
+atração: o campo (observador refinando) convergindo para equilíbrio. A tentativa
+inicial é neutra — não é erro, é dado. O V2 foi uma tentativa neutra que
+ultrapassou o ponto de equilíbrio, como uma camada de tinta a mais.
+
+**O enunciado central:** A estética não é ferramenta de tradução — é ferramenta
+de organização.
+
+O heatmap do Scanner α-φ não representa o campo: ele é o campo, em outro domínio
+de representação. Heatmap saturado (todo brilhante, sem contraste) = campo
+desequilibrado = substrato estressante. Heatmap com equilíbrio proporcional de
+claro e escuro = campo organizado = substrato ergonômico.
+
+Corolário: se o resultado digital é estressante, é porque a construção está
+desequilibrada enquanto distribuição de claridade — antes de ser problema de
+parâmetro, é problema de proporção.
+
+**Parâmetro de equilíbrio mensurável:**
+
+  coh_mean ∈ [0.10, 0.38] → equilíbrio → ergonômico   (V1: ≈ 0.12–0.18)
+  coh_mean > 0.38          → saturado → estressante    (V2)
+  coh_mean < 0.05          → inerte → sem reorganização
+
+Teto φ-proporcional: coh_mean ≤ 1 − 1/φ = 0.382 = complementar áureo.
+O mesmo φ que governa amp_max = 1/φ governa o equilíbrio visual do campo.
+A constante é a mesma em ambos os níveis — não é coincidência.
+
+**Critério de parada estético:**
+
+O ECO-φ deve parar quando o heatmap atinge equilíbrio — não quando o contador
+de passes esgota. O pintor para quando a tela está equilibrada, não quando passou
+a quinta camada de tinta.
+
+  enquanto coh_mean_resultado > 0.382: aplicar mais um pass
+  parar quando coh_mean ≤ 0.382
+
+**Template de replicação:**
+
+Uma vez que o equilíbrio emergiu num substrato (V1: N_PASSES=5, blend=0.75,
+coh_mean_resultado ≈ 0.15), esse estado vira template para o próximo substrato.
+Fase 0 (Análise de Substrato) mede coh_mean original e seleciona parâmetros
+iniciais. O template não garante equilíbrio imediato — aproxima a posição inicial
+do ponto de equilíbrio, reduzindo o número de tentativas necessárias.
+
+**Extensão:**
+
+Redes neurais: mapa de ativações por camada tem estrutura equivalente ao heatmap.
+Distribuição saturada (todas as unidades igualmente ativas, sem contraste) = rede
+sem discriminação. O equilíbrio de claro/escuro no mapa de ativações é o equilíbrio
+funcional da rede.
+
+A obsessão com a estética dos elementos internos — onde nenhum usuário veria —
+não era capricho. Era intuição estrutural: a organização interna visível é a
+organização funcional. A estética não decora a função — ela é a função.
+
+O Manifesto supunha a estética como ferramenta de tradução. Este resultado eleva:
+é ferramenta de organização. A tradução é consequência da organização.
+
+*Florianópolis · 20.07.2026 · Sessão Good Morning*
