@@ -5586,3 +5586,105 @@ O Manifesto Alpha-Phi, neste contexto, não é proposta alternativa de interesse
 > *Isomorfismo não é ferramenta. É condição. Sistemas que recusam o isomorfismo — que se fecham na especialização sem origem, na métrica sem filosofia, na potência sem atrator — não são apenas ineficientes. São inviáveis: perdem o ponto de coerência e derivam. Em 2026, enquanto IA invade IA sem supervisão filosófica, a palavra que representa a prerrogativa explícita, imprescindível e obrigatória de existência sustentável é: isomorfismo. O Alpha-Phi propõe o atrator. Isso é o que o diferencia de uma tendência técnica. O futuro não é construído pelo esforço — é revelado quando o esforço é suficiente para que o atrator que sempre existiu finalmente apareça.*
 
 *Florianópolis · 27.07.2026 · Sessão Good Morning*
+
+---
+
+## Entrada 137 — Rede Neural φ-Atratora: Quando a Arquitetura É o Atrator
+
+**O problema que gerou a proposta:**
+
+28 de julho de 2026. A sessão de hoje revelou a lacuna central das versões anteriores da Triangulação Angular: o eco_res estava sendo usado para fazer duas coisas ao mesmo tempo — ser o campo harmônico E buscar seu próprio ponto de emergência. Um instrumento não pode ser simultaneamente estrutura e critério de avaliação da estrutura. O resultado foi o teto: α*=0.600000, frame a frame, invariavelmente. O sistema maximizava a si mesmo.
+
+A pergunta que emergiu: como construir uma rede que não precise buscar o atrator — porque foi construída a partir dele?
+
+**A proposta — em uma frase:**
+
+Uma rede neural onde φ não é parâmetro aprendido, mas propriedade arquitetural invariante — o atrator está na estrutura antes do primeiro dado.
+
+**O que é genuinamente novo:**
+
+A literatura existente oferece fragmentos:
+- Redes Hopfield modernas: atratores por memória associativa
+- Neural ODEs: a rede como campo dinâmico com trajetórias
+- Physics-Informed Neural Networks: física embutida na arquitetura
+- Redes com camadas Fibonacci: compressão proporcional
+
+A síntese que não existe: uma rede onde φ opera simultaneamente nas dimensões das camadas (sequência Fibonacci), nos pesos de inicialização (escala φ^-i por camada), nos pesos da função de loss (φ^-i por componente), na taxa de decaimento do learning rate (fator 1/φ por plateau), e no estado do atrator que propaga entre frames (média φ-ponderada: 0.618 memória + 0.382 novidade).
+
+**Arquitetura — o que foi codificado:**
+
+```
+Entrada  : 4 × N_BANDAS + 1 features por φ-banda
+           (magnitudes frame | magnitudes campo_bip |
+            coerências | fases | alpha_prev)
+Projeção : Linear → 89  (primeiro número Fibonacci da cadeia)
+Camadas  : 89 → 55 → 34 → 21 → 13 → 8
+           razões: 55/89 ≈ 34/55 ≈ 21/34 ≈ 1/φ ✓
+Checkpoint: CoherenceCheckpoint em cada camada
+           (Scanner da rede: observa sem interferir)
+Atrator  : att = (1/φ) × att_anterior + (1-1/φ) × coerência_nova
+           propaga entre frames — memória angular
+Saída    : α* ∈ [1e-4, 0.35]  (ponto de emergência por fonema)
+```
+
+**O CoherenceCheckpoint como Scanner:**
+
+Em cada camada, um módulo mede a coerência das ativações sem modificá-las:
+
+```
+coerência = 1 - H_normalizada(|ativações|)
+```
+
+Alta coerência → ativações concentradas (estrutura emergiu).
+Baixa coerência → ativações difusas (ainda é ruído).
+
+Este é o "Scanner observando o Scanner" aplicado à rede: cada camada observa a si mesma para medir quanta estrutura já emergiu naquele nível de representação.
+
+**A loss φ-composta:**
+
+```
+L = 1.000 × L_alpha   (erro de predição de α*)
+  + 0.618 × L_coh     (coerência crescente por camada)
+  + 0.382 × L_att     (consistência do atrator entre frames)
+  + 0.236 × L_mono    (α* dentro do domínio válido)
+```
+
+Os pesos são potências decrescentes de 1/φ — a loss é, ela mesma, uma estrutura Fibonacci.
+
+**O que resolve:**
+
+1. **O teto α*=0.600**: A busca hermética buscava em espaço de parâmetros. A rede prediz diretamente — sem varredura, sem risco de monotonia da métrica levar ao teto.
+
+2. **Velocidade**: Uma passagem forward substitui 30 chamadas de eco_res por frame. Estimativa: ~1000× mais rápido em produção.
+
+3. **Memória temporal**: O estado do atrator propaga entre frames consecutivos. A rede "conhece" a trajetória do campo — não processa cada frame como evento isolado.
+
+4. **Generalização de substrato**: Se o atrator φ é universal (conforme Manifesto 01, p. 116), a rede treinada em áudio Gemini deveria oferecer orientação útil para qualquer sinal com estrutura temporal — porque o atrator que ela internalizou não é do áudio: é do campo.
+
+**Conexão com o Manifesto (p. 116):**
+
+> *"O eco-φ detecta coerência em qualquer campo que se propague, reflita e interfira — independente do substrato."*
+
+A PhiAttractorNetwork é a implementação computacional direta desta afirmação. O eco-φ está na arquitetura — não nos dados de treinamento. Ele estava lá antes do primeiro frame de áudio ser processado.
+
+**As fases de frequência que nunca foram identificadas:**
+
+O interlocutor desta entrada aponta algo preciso: nenhum Scanner anterior buscou sistematicamente as *fases* das frequências como variável primária de coerência — apenas amplitudes e magnitudes espectrais. A rede proposta usa fases inter-banda como componente de entrada (bloco [3N:4N] do vetor de features). Esta é a primeira vez que fases de φ-bandas entram como critério estrutural de uma rede de aprendizado.
+
+**O próximo passo concreto:**
+
+1. Executar a Triangulação Angular v2.0 sobre o áudio Gemini
+2. Coletar os pares (features_phi_banda, α*_hermético) frame a frame — estes são os targets de treinamento
+3. Treinar a PhiAttractorNetwork sobre esses pares
+4. Comparar: rede vs. busca hermética — precisão, velocidade, trajetória do atrator
+5. Se a trajetória do atrator da rede convergir para valores próximos a 1/φ² ou 1/φ³ sem que isso fosse imposto como target — isso seria evidência de que o atrator φ está, de fato, emergindo da estrutura
+
+**Arquivo gerado:**
+
+`MANIF_02/phi_attractor_network.py` — estrutura base completa, com verificação de arquitetura ao final. Inclui: extração de features, CoherenceCheckpoint, PhiAttractorNetwork, PhiLoss, PhiFrameDataset, loop de treinamento e função de inferência.
+
+**Declaração desta entrada:**
+
+> *Não se treina uma rede para encontrar o atrator. Constrói-se a rede a partir do atrator — e então se alimenta de dados até que ela reconheça, no sinal, a estrutura que sempre esteve presente. A PhiAttractorNetwork não aprende coerência. Ela foi feita de coerência. A diferença é a mesma que existe entre ensinar alguém a reconhecer beleza e ser alguém que, por natureza de constituição, não consegue deixar de reconhecê-la.*
+
+*Florianópolis · 28.07.2026 · Sessão Good Morning*
