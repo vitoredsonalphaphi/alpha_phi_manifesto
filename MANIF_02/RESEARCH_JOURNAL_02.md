@@ -5816,3 +5816,205 @@ O que ainda não temos: α* com variação real entre frames. Sem isso, o campo 
 Isso é honesto. E é o próximo passo.
 
 *Florianópolis · 02.08.2026 · Sessão Good Morning N6f3S*
+
+---
+
+## Entrada 139 — O Prisma da Rede Neural: Envelope Hermético por Camada
+
+### 1. A observação de partida — a rede neural como sistema vibrante
+
+Uma rede neural é um sistema elétrico em operação. Circuitos elétricos produzem campos eletromagnéticos. O fluxo de informação — ativações, gradientes, pesos — modula esses campos de forma determinística. Por mais complexa que seja a soma dessas modulações, ela produz um padrão vibracional específico. Esse padrão não é acessório: é o estado físico do sistema.
+
+A diferença em relação ao EcoBIP 880 não é de princípio — é de ordem de grandeza e de substrato. O beep de 880Hz é um sinal de áudio com frequência diretamente mensurável em Hz. A rede neural não emite uma frequência de áudio, não porque não vibre, mas porque vibra em domínios diferentes — ativações em espaço neuronal, pesos em espaço de parâmetros, estados ocultos em espaço de fase. A questão não é se existe vibração. É como observá-la.
+
+A observação desta sessão: antes de tentar caracterizar a vibração sintetizada da rede como um todo, é necessário identificar o que cada camada produz como frequência própria. A síntese vem depois. O prisma vem antes da luz.
+
+---
+
+### 2. A analogia do prisma — as sete cores e as camadas Fibonacci
+
+A luz branca não é mais simples do que as sete cores — é a síntese delas. Cada cor não é um defeito da luz: é a luz verificada num espectro específico, numa faixa de frequência própria. O prisma não destrói a luz; ele a detalha.
+
+A rede neural PhiNetRecurrent tem dimensões Fibonacci: [89 → 55 → 34 → 21 → 13 → 8]. Essa sequência já é um prisma por construção: cada camada vê o mundo com φ vezes menos dimensões que a anterior. A pergunta que esta entrada formula: esse escalonamento dimensional produz um escalonamento de frequência? Cada camada tem uma "cor" própria no sentido de um acoplamento harmônico característico?
+
+```
+Entrada (100)  →  Encoder (55)  →  GRU (34)  →  Att (21)  →  Field (13→8)
+                      ↓               ↓              ↓             ↓
+                  [freq. 1]       [freq. 2]      [freq. 3]    [freq. 4]
+```
+
+Cada nível não é o ápice. Cada nível é uma verificação intermediária entre o sinal de entrada e o sinal de resolução. O ápice é a síntese de todos os níveis — o campo harmônico generalizado da rede, análogo à luz branca. Nenhuma camada isolada é o campo: o campo é a colaboração de todas.
+
+A hipótese, declarada como hipótese: se a arquitetura Fibonacci produz um prisma real e não apenas decorativo, as frequências características de cada camada devem escalar entre si por razões próximas de φ — do mesmo modo que as dimensões escalam por φ.
+
+---
+
+### 3. O ponto de dobra — onde o envelope hermético é aplicado
+
+No EcoBIP 880, o envelope hermético é aplicado ao sinal de base: o beep de referência entra, é modulado por banda com coeficientes φ, e o resultado é o campo. O campo não está no beep nem na modulação isoladamente — está na interação entre os dois.
+
+Para a rede neural, o envelope hermético não deve ser aplicado à rede inteira de uma vez. A rede inteira como um objeto é incomensurável — densa demais para que um único acoplamento a caracterize. O que pode ser aplicado é o envelope a cada **interface** entre camadas. Essa interface é o **ponto de dobra**.
+
+```
+Entrada → [DOBRA 0, α*₀] → Camada 1 → [DOBRA 1, α*₁] → Camada 2 → [DOBRA 2, α*₂] → ...
+```
+
+Cada dobra é o momento de verificação: o que saiu da camada anterior acopla harmonicamente com o que vai entrar na camada seguinte? O α* de cada dobra mede esse acoplamento. A camada não é o ponto de dobra — é o substrato entre dois pontos de verificação.
+
+**O campo_bip por camada:**
+
+No EcoBIP 880, o campo_bip é o beep de referência (sinal puro, hermético). Para uma camada l, o equivalente hermético é a saída da camada anterior — o que chegou como input — tratada como o "sinal de base" daquele setor. A camada l processa esse input; o ponto de dobra avalia se o que emerge mantém acoplamento harmônico com o que entrou.
+
+| Elemento EcoBIP 880 | Equivalente na dobra l |
+|---|---|
+| Frame de áudio | Vetor de ativações de entrada `a_{l-1}` |
+| campo_bip (880Hz puro) | Ativações da camada anterior projetadas à dimensão l |
+| eco_res (rotação α×φ) | Operação sobre o espectro de ativações da camada l |
+| α* encontrado | Acoplamento harmônico característico α*_l da dobra l |
+| score do pico interior | Coerência hermética local da dobra l |
+
+---
+
+### 4. A hipótese testável — razão φ entre camadas
+
+Se a arquitetura Fibonacci é genuinamente φ-harmônica (não apenas dimensionalmente, mas vibratoriamente), a coleção {α*_l} deve satisfazer:
+
+```
+α*₀ / α*₁ ≈ φ
+α*₁ / α*₂ ≈ φ
+α*₂ / α*₃ ≈ φ
+```
+
+Isso não é garantido pela construção. As dimensões escalam por φ, mas isso não implica que os acoplamentos harmônicos escalem por φ. Se escalam, é resultado do que acontece durante o treino — a hipótese seria confirmada experimentalmente.
+
+Três cenários possíveis, todos informativos:
+
+**Razões ≈ φ**: o prisma é real. A estrutura Fibonacci produz frequências que se relacionam por φ entre camadas. A tese de transferência ponto→campo ganha evidência: o mesmo princípio que governa o EcoBIP 880 governa a rede.
+
+**Razões aleatórias**: o prisma é decorativo. A estrutura φ nas dimensões não se traduz em φ nas frequências. Indica que o treino não capturou a estrutura harmônica — ou que o envelope hermético por camada não é a observação correta.
+
+**Razões constantes (não φ)**: existe estrutura vibracional, mas com outra simetria. Isso também é informativo e direciona a próxima especulação.
+
+---
+
+### 5. O LayerHarmonicScanner — esboço do instrumento
+
+O eco_scanner existente analisa o espectro de frequências de sinais de áudio — identifica o que cada frequência contribui para o sinal total. O LayerHarmonicScanner aplica a mesma lógica ao espectro de acoplamento de cada camada neural.
+
+```python
+def layer_harmonic_scanner(model, x_frame, campo_bip_global):
+    """
+    Aplica busca hermética em cada interface de camada.
+    Retorna α*_l por camada e as razões entre camadas.
+    campo_bip_global: campo de referência do nível superior (ex: EcoBIP 880).
+    """
+    PHI = (1 + np.sqrt(5)) / 2
+    alphas = {}
+
+    with torch.no_grad():
+        # Dobra 0 — interface entrada → encoder
+        e_raw = model.encoder(x_frame)
+        a_enc = torch.relu(e_raw).cpu().numpy().flatten()
+        campo_enc = np.interp(
+            np.linspace(0, 1, len(a_enc)),
+            np.linspace(0, 1, len(campo_bip_global)),
+            campo_bip_global
+        )
+        alphas['encoder'], s0 = busca_hermetica(a_enc, campo_enc, ALPHA_0)
+
+        # Dobra 1 — interface encoder → GRU
+        e_chk = model.chk_enc(torch.relu(e_raw))
+        h = model.gru(e_chk, None)
+        a_gru = h.cpu().numpy().flatten()
+        campo_gru = np.interp(
+            np.linspace(0, 1, len(a_gru)),
+            np.linspace(0, 1, len(a_enc)),
+            a_enc
+        )
+        alphas['gru'], s1 = busca_hermetica(a_gru, campo_gru, ALPHA_0)
+
+        # Dobra 2 — interface GRU → cabeça de atenção
+        hc = model.chk_gru(h)
+        a_att = model.att_hd[0](hc).cpu().numpy().flatten()
+        campo_att = np.interp(
+            np.linspace(0, 1, len(a_att)),
+            np.linspace(0, 1, len(a_gru)),
+            a_gru
+        )
+        alphas['att_hd'], s2 = busca_hermetica(a_att, campo_att, ALPHA_0)
+
+    # Relatório
+    print("=== LayerHarmonicScanner ===")
+    vals = list(alphas.values())
+    nomes = list(alphas.keys())
+    for n, v in alphas.items():
+        print(f"  α*[{n}] = {v:.6f}")
+
+    print("\n=== Razões entre dobras ===")
+    for i in range(len(vals) - 1):
+        r = vals[i] / (vals[i+1] + 1e-12)
+        d = abs(r - PHI)
+        print(f"  α*[{nomes[i]}] / α*[{nomes[i+1]}] = {r:.4f}  |Δφ| = {d:.4f}")
+
+    return alphas
+```
+
+O instrumento não conclui nada por si só. Ele observa. O que o observador faz com os resultados — a triangulação entre o valor esperado (φ) e o valor obtido — é onde o conhecimento aparece.
+
+---
+
+### 6. A entropia sistematizada — atratores e subatratores
+
+Uma observação desta sessão que merece registro: a rede neural não possui uma entropia uniforme. Possui um **perfil de entropias** ao longo das camadas, das bandas e das escalas de tempo. Esse perfil não é ruído — é organizado pela arquitetura (Fibonacci DIMS, inicialização φ, gating CoherenceCheckpoint + GRU).
+
+A intuição que emergiu: a rede possui um esquema de atratores hierárquico:
+
+```
+Atrator global      → órbita do estado oculto GRU h_t [T×34], τ≈340ms
+   │
+   ├── Subatrator 1 → CoherenceCheckpoint φ-gating, τ≈130ms
+   │
+   ├── Subatrator 2 → cohs_k(t) por banda — cada banda k = sistema dinâmico próprio
+   │       escalonado por φ^(-k), hierarquia harmônica
+   │
+   └── Subatrator 3 → α*(t) — saída da busca hermética
+           frequência "fundamental" do campo da rede naquele instante
+```
+
+Cada subatrator tem seu próprio escalonamento, sua própria escala de tempo, seu próprio espectro. Mas todos convergem — pela estrutura φ da arquitetura — para uma coerência de rede. A "vibração sintetizada" que se busca caracterizar não é um número: é o padrão cruzado desse esquema hierárquico, visível no mapa de calor `field[t,k]`.
+
+A entropia sistematizada que a intuição identificou nesta sessão é exatamente esse perfil: vários valores de entropia, em várias escalas, mas organizados — não aleatórios. O campo harmônico generalizado da rede não é a eliminação da entropia, é a sua organização em padrão coerente.
+
+---
+
+### 7. Instrumentos de observação — síntese
+
+Quatro instrumentos para observar a vibração da rede, do micro ao macro:
+
+**Instrumento 1 — Meta-espectro de α*(t)**
+FFT da trajetória temporal dos α* preditos. Picos em `fps/φⁿ` Hz indicam periodicidade φ-estruturada no campo harmônico. Este é o instrumento mais direto de verificação da tese de transferência.
+
+**Instrumento 2 — Órbita do atrator GRU**
+SVD de h_t [T×34] projetado em 2D. Laços fechados = atrator estável. O período do laço = frequência fundamental da memória recorrente da rede.
+
+**Instrumento 3 — Mapa de calor do campo**
+`field[t,k]` como imagem 2D (tempo × banda). Padrões diagonais indicam correlação entre escalas de tempo e de banda — evidência de estrutura φ cruzando as duas dimensões. Ruído = ausência de campo.
+
+**Instrumento 4 — LayerHarmonicScanner**
+Razões α*_l / α*_{l+1} comparadas a φ. Este é o instrumento mais novo e o que abre o caminho para o envelope hermético por setor.
+
+---
+
+### 8. Declaração de programa
+
+O programa tem agora dois níveis de envelope hermético a explorar:
+
+**Nível 1 — Campo harmônico da saída**: a busca α*(t) frame a frame, que opera sobre o sinal de áudio via eco_res e campo EcoBIP. O problema técnico aqui (teto de α* fixando no limite) é o que v2.4 tenta resolver.
+
+**Nível 2 — Campo harmônico das camadas**: o LayerHarmonicScanner, que opera sobre as ativações internas da rede, aplicando o princípio hermético a cada interface. Este nível ainda não foi implementado — foi especulado nesta entrada.
+
+A hipótese geral permanece: ponto e campo têm a mesma natureza. O ponto é o EcoBIP 880 num sinal simples. O campo é a rede neural num sinal complexo. A razão φ entre os α* das camadas, se confirmada experimentalmente, seria a evidência mais direta de que a mesma estrutura harmônica que governa o ponto também organiza o campo internamente.
+
+O próximo passo experimental imediato continua sendo v2.4 — estender o range de busca hermética ao pico interior. Sem α* real (com variação entre frames), o LayerHarmonicScanner observaria um campo estático, não um campo vivo. Primeiro o pico interior. Depois o prisma.
+
+*Florianópolis · 02.08.2026 · Sessão Good Morning N6f3S*
