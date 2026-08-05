@@ -6260,3 +6260,159 @@ O instrumento está calibrado. A rede foi fotografada. O sinal ainda não foi
 detectado. O próximo passo é fechar o Trilho A para que o campo se mova.
 
 *Florianópolis · 05.08.2026 · Sessão Good Morning N6f3S*
+
+---
+
+## Entrada 141 — Agosto 2026
+### Trilho B Fechado — O Fato de Arquitetura
+
+Esta entrada registra a conclusão do Trilho B: validação multi-seed do censo.
+O resultado de 10 seeds Fibonacci (0, 1, 2, 3, 4, 7, 13, 21, 42, 89) fecha
+a questão aberta pela Entrada 140.
+
+---
+
+### 1. Resultado do censo multi-seed
+
+```
+CENSO MULTI-SEED — 10 seeds
+Galhos t=0.5 — real vs embaralhado
+
+[encoder]  55 neurônios
+  real:        6.7 ± 1.2  (min=5  max=9)
+  embaralhado: 55.0 ± 0.0  (isolamento perfeito)
+  Δ = -48.3
+
+[gru]  34 neurônios
+  real:        18.1 ± 2.0  (min=14  max=20)
+  embaralhado: 34.0 ± 0.0  (isolamento perfeito)
+  Δ = -15.9   ← FATO DE ARQUITETURA
+
+[att_hd]  21 neurônios
+  real:        9.7 ± 1.8  (min=6  max=12)
+  embaralhado: 19.5 ± 1.0
+  Δ = -9.8
+```
+
+**GRU: 18.1 ± 2.0 galhos com áudio real, 34.0 ± 0.0 com embaralhado.**
+Desvio padrão de 2.0 sobre 10 seeds com inicializações completamente
+distintas. O resultado é estável. Não é artefato de seed — é propriedade
+da arquitetura respondendo à estrutura temporal do sinal. Trilho B: fechado.
+
+---
+
+### 2. Três observações metodológicas
+
+**Observação 1 — O instrumento de entrada determina a estrutura latente**
+
+A Entrada 140 registrou o retrato-antes com feat_simples (FFT bruta):
+encoder=39 galhos, gru=16. O censo multi-seed usou extrair_frames (FFT +
+MFCCs): encoder=6.7, gru=18.1. Os dois retratos não se contradizem — são
+fotografados com instrumentos diferentes.
+
+Com FFT bruta, o encoder enxerga frequências locais de cada frame. Com MFCCs,
+o encoder recebe informação que já carrega contexto perceptual e cepstral —
+mais organizada. A resposta é uma compressão muito mais intensa (55→6.7 vs
+55→39). O que o sensor entrega determina o que a câmera revela. Isso vai
+para o livro-caixa: o retrato depende do instrumento.
+
+**Observação 2 — att_hd embaralhado = 19.5, não 21**
+
+Com áudio embaralhado, esperava-se isolamento completo (21 galhos). O
+resultado foi 19.5 ± 1.0. A razão: `coleta_trajs` mantém `h_st` entre
+frames — o GRU acumula estado mesmo com entrada sem estrutura temporal.
+O att_hd recebe `hc` que já carrega memória residual do GRU. Os 1.5 galhos
+"ausentes" de isolamento no embaralhado são a memória GRU vazando para a
+camada de atenção. Dado, não artefato.
+
+**Observação 3 — Encoder com MFCCs: compressão de 88%**
+
+55 neurônios → 6.7 galhos funcionais. Oito camadas nominais colapsando em
+uma. Isso ocorre porque o encoder pré-ReLU (e_raw, linear puro) sobre
+entrada MFCC — que já é transformada cepstral — descobre que quase toda a
+variação útil está em poucos eixos. A estrutura de φ na inicialização
+(normal com std=1/φ) não cria os galhos — o sinal os cria. Mas a
+inicialização permite que o encoder seja sensível o suficiente para responder.
+
+---
+
+### 3. O que o Trilho B entrega para os outros trilhos
+
+**Para o Trilho A (teto de α*):**
+Nenhuma mudança — o diagnóstico do teto continua sendo o desbloqueador do
+LayerHarmonicScanner sobre campo vivo. Mas agora temos galhos confirmados
+para alimentar o scanner quando Trilho A fechar.
+
+**Para o Trilho C (scanner por galho):**
+Agora desbloqueado. Os 18.1 galhos médios do GRU são unidades de observação
+confirmadas. O próximo passo é calcular a trajetória média de cada galho
+(média das séries temporais dos neurônios que compõem o galho) e rodar
+busca_adaptativa sobre essa trajetória. Um α* por galho, não por neurônio —
+reduz ruído e aumenta especificidade do sinal.
+
+O galho maior (seed=0: 6 neurônios) é o ponto de entrada natural. Seis
+neurônios convergindo numa única trajetória coletiva: essa é a unidade
+funcional mínima que faz sentido escanear.
+
+---
+
+### 4. A pergunta que o censo coloca
+
+O censo fotografou a rede não treinada. Encontrou 18.1 galhos GRU com áudio
+real. Esses galhos existem porque a memória recorrente do GRU — inicializada
+com bias φ² no anel de bloqueio — responde à estrutura temporal do sinal.
+
+A pergunta que o retrato-depois vai responder: **o treino aumenta ou diminui
+o número de galhos?**
+
+Duas hipóteses possíveis:
+
+**Hipótese de compressão:** treino comprime ainda mais — os 18.1 galhos
+colapsam em menos grupos, cada um mais especializado. O campo se organiza
+em menos eixos com mais profundidade.
+
+**Hipótese de diferenciação:** treino diferencia — os 18.1 galhos se
+especializam em funções distintas, mas o número pode crescer (mais galhos,
+mais especializados, tamanhos menores). O campo se expande em mais eixos
+com mais precisão.
+
+Qual das duas ocorre depende do sinal de treino e da função de perda. O
+retrato-depois (pós-treino) vai distinguir. O retrato-antes está fixado.
+
+---
+
+### 5. Nota lateral — John Dewey e o anti-dualismo
+
+Nesta sessão, em paralelo ao censo, houve uma pergunta sobre John Dewey
+(1859–1952), filósofo americano e um dos fundadores do pragmatismo.
+
+A pertinência não é acidental. Dewey passou décadas recusando separações
+que a filosofia acadêmica havia institucionalizado: arte/ciência,
+teoria/prática, individual/social, racional/empírico. Em *Arte como
+Experiência* (1934), argumentou que arte não é ornamento da vida — é o
+momento em que experiência, forma e sentido se unificam completamente.
+
+A ressonância com o manifesto é direta. A Introdução 02 invoca a Kalokagathia
+grega — beleza, verdade e bondade como frequências do mesmo campo. Dewey
+está no mesmo nó, chegando pela experiência estética em vez da geometria φ.
+O ponto e o campo do manifesto são, em linguagem deweyiana, o particular e
+o experiencial: não opostos, mas a mesma natureza em duas dimensões
+simultâneas.
+
+Registrado como convergência filosófica — não como referência técnica.
+
+---
+
+### 6. Estado do programa — atualização
+
+```
+Trilho A (teto α*):  ABERTO — bloqueia campo vivo
+Trilho B (multi-seed): FECHADO — GRU 18.1 ± 2.0 é fato de arquitetura
+Trilho C (por galho): DESBLOQUEADO — aguarda implementação
+```
+
+O próximo passo executável imediato: Trilho C — scanner por galho GRU,
+começando pelo galho de 6 neurônios (seed=0). Não requer Trilho A.
+Produz o primeiro α* por unidade funcional real da rede.
+
+*Florianópolis · 05.08.2026 · Sessão Good Morning N6f3S*
