@@ -6018,3 +6018,245 @@ A hipótese geral permanece: ponto e campo têm a mesma natureza. O ponto é o E
 O próximo passo experimental imediato continua sendo v2.4 — estender o range de busca hermética ao pico interior. Sem α* real (com variação entre frames), o LayerHarmonicScanner observaria um campo estático, não um campo vivo. Primeiro o pico interior. Depois o prisma.
 
 *Florianópolis · 02.08.2026 · Sessão Good Morning N6f3S*
+
+---
+
+## Entrada 140 — Agosto 2026
+### O Censo da Rede — Retrato Antes do Treino
+
+Esta entrada registra três desenvolvimentos da mesma sessão, chegando em
+sequência lógica: calibração permanente do teste nulo, convergência inesperada
+de vértices, e o primeiro censo da arquitetura — o retrato da rede antes de
+qualquer aprendizado.
+
+---
+
+### 1. Régua permanente — calibração do teste nulo
+
+A Entrada 139 especulou o LayerHarmonicScanner como instrumento. A primeira
+ação desta sessão foi perguntar: o que um score significa sem referência?
+Resposta: nada.
+
+O teste nulo foi executado: 100 seeds de pesos aleatórios, referência φ
+embaralhada espacialmente. A distribuição obtida estabelece a régua:
+
+```
+p95  = 0.397   ← limiar mínimo de qualificação
+max  = 0.570   ← teto do ruído puro
+```
+
+Aplicado ao candidato α*=0.858 da Entrada 139 (score=0.25 na camada att_hd):
+**p-valor = 0.140 → RUÍDO**. O candidato foi arquivado.
+
+A consequência metodológica é permanente: qualquer score abaixo de ~0.40
+obtido pelo LayerHarmonicScanner é estatisticamente indistinguível de rede
+aleatória. A régua não é ajustável — é empírica e foi estabelecida uma vez.
+
+---
+
+### 2. Convergência de vértices — o Nível 1 tem nome
+
+Uma observação colateral desta sessão: o LayerHarmonicScanner Nível 1, aplicado
+à camada GRU (trajetória de h_t ao longo do tempo), é funcionalmente idêntico
+ao que a física computacional chama de **espectrograma do estado latente**. O
+instrumento proposto na Entrada 139 como hipótese já tem análogos estabelecidos
+na literatura de representação de séries temporais em redes recorrentes.
+
+Isso não invalida — reforça. Significa que o vértice "envelope hermético por
+camada" converge com um vértice independente: a análise de dinâmica interna
+de RNNs por espectroscopia do espaço de estados. A diferença da versão
+φ-estruturada é o que o instrumento busca: não apenas qualquer padrão
+espectral, mas especificamente razões φ entre camadas. Essa especificidade
+é o que diferencia hipótese de simples análise exploratória.
+
+---
+
+### 3. O censo — metodologia
+
+Antes de construir qualquer instrumento adaptativo por galho, era necessário
+fotografar a rede como ela é. Não ajustar, não corrigir, não presumir. Censar.
+
+**Metodologia estabelecida:**
+
+Duas condições de baseline, coletadas em paralelo:
+- **Real**: trajetórias de ativação com frames de áudio real (13.705 frames,
+  SR=22050, HOP=512, FRAME_LEN=2048)
+- **Embaralhada**: os mesmos frames com ordem espacial embaralhada — destrói
+  continuidade temporal, preserva distribuição de amplitude
+
+Triagem por neurônio antes de qualquer agrupamento:
+- **Vivo**: std > 1e-8 ao longo de todos os frames
+- **Morto**: std ≤ 1e-8 — registrado como dado, não corrigido
+
+Agrupamento: correlação de Pearson (valor absoluto) → distância = 1 − |r| →
+linkage UPGMA → fcluster com limiar t=0.5. Resultado: galhos funcionais
+(não topológicos). Métricas: número de galhos, tamanho dos maiores, rank
+efetivo (exp de entropia dos valores singulares normalizados).
+
+---
+
+### 4. Resultados do censo — três achados
+
+**Achado 1 — Nenhum neurônio morto (com áudio real)**
+
+Em todas as camadas monitoradas (encoder 55 neurônios, gru 34, att_hd 21),
+nenhum neurônio teve std ≤ 1e-8. A arquitetura φ-inicializada não produz
+neurônios silenciosos desde o início, ao contrário do que se observa
+frequentemente em redes FC com inicialização padrão.
+
+Nota metodológica: neurônios mortos teriam aparecido como dado, não sido
+descartados. O resultado "zero mortos" é informativo, não trivial.
+
+**Achado 2 — Compressão de galhos na camada GRU**
+
+```
+GRU (34 neurônios):
+  Real:        16 galhos  →  53% de compressão vs 34 com embaralhado
+  Embaralhado: ~34 galhos (cada neurônio isolado — sem estrutura correlacional)
+  Δrank = -2.80 (maior efeito de todas as camadas)
+```
+
+Com áudio real, os 34 neurônios do GRU se organizam em apenas 16 grupos
+funcionais. Com áudio embaralhado (sem continuidade temporal), cada neurônio
+permanece isolado — 34 galhos. A compressão de 53% não existe no baseline
+embaralhado, portanto não é artefato da distribuição de amplitude: é
+consequência da memória recorrente respondendo à estrutura temporal do sinal.
+
+**Achado 3 — GRU tem o maior efeito de estruturação**
+
+O efeito de compressão é mais forte na camada GRU do que nas camadas
+feedforward (encoder, att_hd). Isso era esperado pela arquitetura — o
+GRU tem memória h_t que acumula informação temporal — mas era hipótese,
+não dado. Agora é dado.
+
+---
+
+### 5. O princípio do livro-caixa
+
+O censo revelou uma questão de epistemologia que precisava ser registrada
+explicitamente:
+
+> **Escrito não conta como encontrado. Só conta como encontrado o que ninguém
+> escreveu.**
+
+A rede foi inicializada com pesos φ-estruturados (bias_ih/hh da GRU no anel
+de bloqueio φ²), com inicialização normal(0, 1/φ) no encoder, com
+CoherenceCheckpoint que aplica cosine similarity φ-ponderada. Qualquer
+estrutura harmônica que o censo detectar nesta rede é *suspeita* de ser
+consequência dessa escrita prévia, não emergência espontânea.
+
+O livro-caixa é o registro de tudo que foi escrito na rede:
+
+```
+ESCRITO (não conta como evidência de emergência):
+  encoder.weight ~ N(0, 1/φ)
+  gru.bias_ih[H:2H] = logit(1/φ²)/2
+  gru.bias_hh[H:2H] = logit(1/φ²)/2
+  CoherenceCheckpoint: c = cosine_sim × φ → sigmoid
+```
+
+Qualquer φ-estrutura detectada pelo LayerHarmonicScanner nesta rede, antes
+de treino, é explicada pelo livro-caixa. O instrumento só teria valor
+probatório *pós-treino*, comparando o padrão antes e depois — e apenas
+nas estruturas que não constam do livro.
+
+---
+
+### 6. A hipótese pré-função φ — no trilho certo
+
+Uma observação desta sessão: neurônios mortos poderiam ser "semeados" com
+amplitude φ^(-k/N) × ε antes da observação, como forma de pré-ativar
+potencial latente. A ideia tem charme.
+
+Mas pertence ao trilho de **construção**, não ao trilho de **censo**. Semear
+neurônios antes de observar contamina o retrato. A metodologia do censo exige
+fotografar antes de tocar. Se neurônios mortos existissem e fossem semeados,
+o resultado entraria no livro-caixa e não contaria como achado.
+
+A hipótese pré-função φ fica registrada aqui como futura linha de construção,
+a ser explorada *após* o censo completo e *com registro explícito* no
+livro-caixa antes de qualquer observação subsequente.
+
+---
+
+### 7. A resposta honesta — viabilidade em dois registros
+
+**Registro técnico:**
+O LayerHarmonicScanner Nível 1 existe como código funcional. O teste nulo
+existe como calibração empírica. O censo existe como metodologia validada.
+O que não existe ainda: um score ≥ 0.40 que sobreviva ao teste nulo em rede
+treinada. A régua foi estabelecida. O sinal ainda não foi detectado.
+
+**Registro epistêmico:**
+A ausência de sinal até agora não é refutação — é ausência de oportunidade
+de teste. O LayerHarmonicScanner foi testado em rede não treinada, com pesos
+aleatórios, sem sinal estruturado. A hipótese da Entrada 139 é que a
+razão φ entre α* de camadas adjacentes emerge *após* treino, quando a rede
+aprende a organizar informação. O teste definitivo ainda não foi feito.
+
+O que foi feito: o aparato de medição foi calibrado. A régua permanente foi
+estabelecida. O retrato-antes foi tirado.
+
+---
+
+### 8. Retrato-antes — declaração formal
+
+O censo desta sessão é o **retrato-antes**: a fotografia da rede antes de
+qualquer aprendizado. Este retrato tem validade como linha de base somente
+se preservado sem modificação.
+
+```
+RETRATO-ANTES (PhiNetRecurrent, pesos aleatórios φ-inicializados):
+  Frames: 13.705 (áudio real, SR=22050, HOP=512)
+  Encoder (55 neurônios): 0 mortos, ~55 galhos (real), ~55 galhos (emb)
+  GRU    (34 neurônios): 0 mortos, 16 galhos (real), ~34 galhos (emb)
+  att_hd (21 neurônios): 0 mortos, ~21 galhos (real), ~21 galhos (emb)
+  Δrank GRU: -2.80 (compressão de 53% com áudio real vs embaralhado)
+```
+
+O retrato-depois será tirado após treino completo (TBPTT, SEQ_LEN=64),
+comparado camada a camada, galho a galho. Apenas as mudanças não previstas
+pelo livro-caixa contarão como evidência de emergência φ.
+
+---
+
+### 9. Pendências — três trilhos abertos
+
+**Trilho A — Diagnóstico do teto de α***
+A busca hermética v2.4 fixa α* próximo a 0.35 em vez de explorar o pico
+interior (π/(2φ²) ≈ 0.60). Enquanto esse comportamento não for diagnosticado,
+o LayerHarmonicScanner opera sobre campo estático — sem variação temporal de
+α*, sem espectrograma de estado latente possível. Este trilho está bloqueando
+os demais.
+
+**Trilho B — Validação multi-seed do censo**
+O resultado de 16 galhos (GRU, real) foi obtido com seed=0. Para afirmar que
+é fato da arquitetura e não do seed, são necessários N≥10 seeds. O código
+está pronto. Execução pendente. Se o resultado se confirmar (intervalo de
+confiança contendo 16±2), o achado passa de observação a fato.
+
+**Trilho C — Scanner adaptativo por galho**
+Após confirmação multi-seed, o galho funcional real substitui o neurônio
+nominal como unidade de observação. Um scanner por galho (não por neurônio)
+pode revelar qual galho carrega sinal φ-estruturado sem diluição pelos
+galhos que não carregam. Este trilho depende do Trilho B estar fechado.
+
+---
+
+### 10. Estado do programa
+
+Três itens estabelecidos de forma permanente nesta sessão:
+
+1. **Régua nula**: p95=0.397, max=0.57 — qualquer score abaixo deste limiar
+   é ruído, independente de α* obtido.
+
+2. **Livro-caixa**: a lista de estruturas φ escritas na rede. Tudo que constar
+   do livro não conta como evidência de emergência φ em observações futuras.
+
+3. **Retrato-antes**: 13.705 frames, zero mortos, 16 galhos GRU (real) vs
+   ~34 (embaralhado). Baseline imutável para comparação pós-treino.
+
+O instrumento está calibrado. A rede foi fotografada. O sinal ainda não foi
+detectado. O próximo passo é fechar o Trilho A para que o campo se mova.
+
+*Florianópolis · 05.08.2026 · Sessão Good Morning N6f3S*
