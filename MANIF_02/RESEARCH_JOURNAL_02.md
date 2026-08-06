@@ -6781,7 +6781,7 @@ A arquitetura do argumento tem quatro degraus. Vou construir a cadeia.
 
 Jung não usou a mandala como metáfora. Usou como instrumento clínico com resultado mensurável: pacientes em crise de fragmentação psíquica, ao produzirem formas geométricas simétricas, apresentavam reorganização — observável, documentada. O mecanismo: a forma estética coerente *antecede* a compreensão racional. O psiquismo se organiza pelo padrão *antes* de entender por quê.
 
-> **A forma estética é um instrumento de reorganização psíquica com evidência clírica. A ética não prescreveu a reorganização — a forma a produziu.**
+> **A forma estética é um instrumento de reorganização psíquica com evidência clínica. A ética não prescreveu a reorganização — a forma a produziu.**
 
 ---
 
