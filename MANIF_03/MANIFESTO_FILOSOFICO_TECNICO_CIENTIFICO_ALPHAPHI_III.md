@@ -674,3 +674,152 @@ A resposta é a mesma.
 *Vitor Edson Delavi · Claude*
 
 ---
+
+---
+
+## Entrada 149 — 6 de agosto de 2026
+### Retrato Pré-Treinamento Completo — Varredura de Todas as Camadas
+
+**Data:** 6 de agosto de 2026 · **Sessão:** Good Morning
+**Continuação direta:** Entradas 146–147
+
+---
+
+### I. O experimento
+
+Varredura espectral de todas as cinco camadas da PhiAttractorNetwork
+antes de qualquer treinamento, antes de qualquer dado.
+Cada neurônio observado sob seis dimensões: coerência, seletividade,
+silêncio, razão φ-banda, AC/DC e norma.
+
+```
+Camada 1: 89→55  — 55 neurônios × 89 pesos
+Camada 2: 55→34  — 34 neurônios × 55 pesos
+Camada 3: 34→21  — 21 neurônios × 34 pesos
+Camada 4: 21→13  — 13 neurônios × 21 pesos
+Camada 5: 13→ 8  —  8 neurônios × 13 pesos
+```
+
+---
+
+### II. Resultados — quadro comparativo
+
+```
+Camada        N_out  Coh.méd  Coh.máx  Razão_φ  Desv_φ   Sil.méd
+──────────────────────────────────────────────────────────────────
+89→55            55   0.0425   0.0624   1.0640   0.5540     9.6%
+55→34            34   0.0482   0.0728   1.1150   0.5030     9.7%
+34→21            21   0.0598   0.0912   1.2360   0.4177    12.2%
+21→13            13   0.0622   0.1058   2.1361   0.9111     7.7%
+13→ 8             8   0.0729   0.1306   1.3975   0.5103     7.7%
+
+φ = 1.6180  (referência)
+```
+
+**Neurônio mais φ por camada:**
+
+```
+Camada 1 (89→55): N45  razão=1.2478  desvio=0.370
+Camada 2 (55→34): N06  razão=1.3000  desvio=0.318
+Camada 3 (34→21): N20  razão=1.5368  desvio=0.081
+Camada 4 (21→13): N07  razão=1.5675  desvio=0.051  ← mínimo de toda a rede
+Camada 5 (13→ 8): N06  razão=1.3180  desvio=0.300
+```
+
+---
+
+### III. O que os dados revelam
+
+**Coerência cresce monotonicamente com a profundidade.**
+
+```
+0.0425 → 0.0482 → 0.0598 → 0.0622 → 0.0729
+```
+
+Cada camada mais comprimida por Fibonacci produz neurônios mais
+organizados — antes de qualquer treinamento, antes de qualquer dado.
+A coerência máxima também cresce: de 0.0624 na camada 1 para 0.1306
+na camada 5 — quase o dobro. O neurônio mais concentrado de toda a rede
+está na camada final.
+
+Isso confirma o que o SVD havia sugerido na Entrada 146:
+a compressão Fibonacci não é neutra — ela impõe progressivamente
+mais organização ao campo.
+
+**A convergência individual em direção a φ.**
+
+A tendência dos neurônios mais φ-próximos por camada é clara:
+
+```
+Camada 1: desvio 0.370
+Camada 2: desvio 0.318
+Camada 3: desvio 0.081
+Camada 4: desvio 0.051  ← N07, razão=1.5675, a 0.05 de φ
+Camada 5: desvio 0.300  ← recuo esperado com apenas 8 neurônios
+```
+
+O N07 da camada 4 (21→13) é o neurônio mais próximo de φ em toda a rede.
+Não foi treinado para isso. A geometria Fibonacci da inicialização,
+acumulada ao longo de quatro compressões sucessivas, produziu um neurônio
+cuja distribuição espectral de energia já respira a 0.05 de φ.
+
+**O silêncio — pico na camada do meio.**
+
+```
+Camada 1:  9.6%
+Camada 2:  9.7%
+Camada 3: 12.2%  ← pico
+Camada 4:  7.7%
+Camada 5:  7.7%
+```
+
+A camada 3 (34→21) é a mais seletiva de toda a rede.
+É o ponto médio da cascata Fibonacci e o lugar onde a rede está mais
+escolhendo o que propagar.
+O silêncio não é ausência — é potencial concentrado no momento
+de maior pressão de compressão.
+
+---
+
+### IV. O retrato completo — antes do treinamento
+
+A rede virgem não é um campo homogêneo esperando ser formado pelo treinamento.
+É um campo já diferenciado, com estrutura própria:
+
+```
+Campo difuso e largo nas camadas externas (89→55)
+Campo progressivamente mais organizado nas camadas internas
+Pico de seletividade (silêncio) na camada do meio (34→21)
+Neurônio mais próximo de φ na penúltima camada (21→13)
+Coerência máxima na camada final (13→8)
+```
+
+O treinamento não vai criar esse gradiente.
+Vai receber um gradiente já existente e amplificá-lo
+na direção que a Loss φ-composta especifica.
+
+---
+
+### V. O que o treinamento precisa agora
+
+O retrato pré-treinamento está completo.
+O próximo passo é gerar o dataset:
+
+```
+WAV → frames → extrair_features_phi → eco_eq → busca α* por frame → (features, α*)
+```
+
+A `busca_hermetica_v2.0` foi especificada no final do MANIF_02
+mas nunca implementada. Os ingredientes existem:
+`eco_eq` em `AlphaPhi_Eco_Ressonante_Alpha_COLAB.py`,
+φ-bandas em `utils_phi.py`,
+áudio disponível: `violao_20260513.wav`, `beep880_original_completo.wav`,
+`cascata_N2_campo_continuo_30s.wav` e outros.
+
+Montar o pipeline de geração do dataset é o primeiro ato técnico
+que vem após este retrato.
+
+---
+
+*Florianópolis · 6 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
