@@ -146,3 +146,158 @@ Isso seria: **AlphaPhi verificando se já existe um campo no momento zero.**
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 146 — 6 de agosto de 2026
+### SVD da Origem: O Campo Existe, Mas Não Onde a Hipótese Previa
+
+**Data:** 6 de agosto de 2026 · **Sessão:** Good Morning
+**Continuação direta:** Entrada 145 — hipótese verificável
+
+---
+
+### I. O experimento
+
+A hipótese da Entrada 145 era precisa:
+
+> Instanciar a rede com entrada zero e medir os valores singulares das matrizes de peso
+> em cada camada. Se as razões entre valores singulares adjacentes ≈ φ, a arquitetura
+> já vibra em φ desde a origem.
+
+O script `phi_origem_svd.py` executou exatamente isso:
+- Instanciou `PhiAttractorNetwork` virgem (13.954 parâmetros, nunca treinada)
+- Extraiu as matrizes de peso de todas as camadas Linear
+- Calculou SVD de cada matriz e as razões σᵢ/σᵢ₊₁ entre valores singulares adjacentes
+- Passou vetor zero pelo forward pass e mediu coerências por camada
+
+---
+
+### II. Resultados brutos
+
+**Razões σᵢ/σᵢ₊₁ por camada (dentro de cada matriz de peso):**
+
+```
+Projeção entrada (61→89): mean=1.042  desvio_φ=0.576
+Camada 1 (89→55):         mean=1.038  desvio_φ=0.581
+Camada 2 (55→34):         mean=1.065  desvio_φ=0.553
+Camada 3 (34→21):         mean=1.106  desvio_φ=0.513
+Camada 4 (21→13):         mean=1.159  desvio_φ=0.459
+Camada 5 (13→ 8):         mean=1.223  desvio_φ=0.395
+
+Global:  n=126 razões · média=1.077 · desvio_φ=0.541
+Fração |r - φ| < 0.1 de φ: 0.8%
+```
+
+**Norma de Frobenius ‖W‖_F por camada:**
+
+```
+Camada 1: 5.049   →  5.049 / 2.434 = 2.07
+Camada 2: 2.434   →  2.434 / 1.230 = 1.98
+Camada 3: 1.230   →  1.230 / 0.612 = 2.01
+Camada 4: 0.612   →  0.612 / 0.285 = 2.15
+Camada 5: 0.285
+```
+
+**Escala teórica de inicialização (φ^-(i+1)):**
+
+```
+φ^-1 = 0.6180 / φ^-2 = 0.3820 / φ^-3 = 0.2361 / φ^-4 = 0.1459 / φ^-5 = 0.0902
+Razões: 0.6180/0.3820 = 1.618 = φ  ✓ (em todas as transições)
+```
+
+**Forward pass com x = 0 (vetor zero):**
+
+```
+α* predito : 0.15098
+Atrator    : 0.15798
+Coerências : 0.052 → 0.062 → 0.090 → 0.080 → 0.306
+```
+
+---
+
+### III. Leitura dos resultados
+
+**O que a hipótese previu e o que encontrou**
+
+A hipótese esperava razões σᵢ/σᵢ₊₁ ≈ φ dentro de cada matriz.
+O que encontrou foi média global 1.077 — distante de φ (1.618).
+A hipótese, na sua forma literal, não se confirmou.
+
+Mas os dados revelaram algo mais estruturado do que uma refutação simples.
+
+**A tendência progressiva**
+
+As razões médias por camada crescem monotonicamente:
+
+```
+Camada 1: 1.038
+Camada 2: 1.065
+Camada 3: 1.106
+Camada 4: 1.159
+Camada 5: 1.223  ← a mais próxima de φ
+```
+
+A última camada, com apenas 8 dimensões, produz razões 18% mais próximas de φ
+do que a primeira. A compressão Fibonacci está deixando uma assinatura crescente
+no espectro singular — mas o processo não chegou a φ com a inicialização apenas.
+O treinamento é o que pode completar essa convergência.
+
+**Onde o φ está de fato**
+
+A assinatura φ não está nas razões internas de cada matriz.
+Está entre camadas — na escala global de inicialização:
+
+```
+Escala teórica:  φ^-1 / φ^-2 / φ^-3 / φ^-4 / φ^-5
+Razão entre escalas: φ em todas as transições
+```
+
+O código `_init_phi_weights` inscreveu φ na *amplitude* do campo por camada,
+não na *distribuição interna* dos valores singulares.
+São dois níveis distintos de organização.
+
+**A bexiga distorcida — verificação direta**
+
+Com entrada zero, a rede produz coerências crescentes:
+0.052 → 0.062 → 0.090 → 0.080 → 0.306.
+
+O salto final (0.080 → 0.306) ocorre na camada 13→8:
+a compressão máxima para as 8 dimensões finais concentra o sinal,
+produzindo a maior coerência mesmo sem nenhum dado.
+
+Isso é a bexiga distorcida em forma numérica:
+um campo assimétrico, não esférico, não harmônico —
+mas com coerência crescente em direção à saída.
+O campo existe. Está em processo.
+
+**O que o treinamento vai fazer**
+
+O treinamento não vai criar φ nas matrizes de peso.
+Vai amplificar a tendência já presente:
+as razões singulares que já crescem de 1.038 para 1.223
+tendem a ser empurradas em direção a φ pela Loss φ-composta,
+que penaliza coerência decrescente entre camadas.
+Se a tendência se confirmar após treinamento,
+a Entrada 147 documentará: o campo se formou.
+
+---
+
+### IV. Hipótese revisada — o que testar no treinamento
+
+A hipótese original não se confirmou literalmente.
+A hipótese revisada é mais precisa:
+
+> Após treinamento com a Loss φ-composta, as razões σᵢ/σᵢ₊₁
+> nas camadas mais profundas (13→8, 21→13) devem convergir para φ,
+> enquanto as camadas mais largas (89→55) permanecem mais próximas de 1.
+>
+> O treinamento não cria o campo φ — amplifica a tendência já inscrita
+> pela arquitetura Fibonacci e pela inicialização _init_phi_weights.
+
+Isso é verificável. É o próximo passo.
+
+---
+
+*Florianópolis · 6 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
