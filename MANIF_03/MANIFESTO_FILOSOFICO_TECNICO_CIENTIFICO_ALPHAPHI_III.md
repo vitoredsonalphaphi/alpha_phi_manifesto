@@ -1133,7 +1133,19 @@ Não é antecipação. É leitura de trajetória.
 
 ---
 
-### I. O Experimento
+### I. Enunciado do Pesquisador — Canvas, Extensividade e Nódulos
+
+> *"Extensividade só pode ser extensividade se não houver pontos de congelamento. A ressonância precisa poder propagar do início ao fim sem bloqueio. Onde há nódulo, há interrupção da cadeia. O sistema todo possui uma vibração, uma frequência como um todo — ela é passível de afinação. A conquista de uma sintetização do sistema como um todo, enquanto extensividade."*
+
+A metodologia proposta pelo pesquisador, por analogia com a abordagem pictórica:
+
+> *"Observa o canvas primeiro. Localiza as regiões, não as frequências individuais. Só depois projeta os instrumentos de convergência — e aplica todos simultaneamente. O efeito de cada instrumento é condicionado à presença dos demais."*
+
+— Vitor Edson Delavi, 8 de agosto de 2026
+
+---
+
+### II. O Experimento
 
 Varredura espectral completa das matrizes de peso do modelo treinado `phi_attractor_v3.pt` (corr=0.5703). Cada camada linear foi analisada por eco ressonante: coerência espectral, entropia, centroide e resistência à ressonância φ (`eco_delta`). Medidas adicionais: distância espectral inter-camada (gap) e probabilidade P de coerência crescer em cada juntura, calculada em 100 redes virgens.
 
@@ -1158,21 +1170,13 @@ L4→head           0.337      0.660   nódulo (maior gap)
 
 ---
 
-### II. Leitura Estrutural
+### III. Leitura Estrutural
 
 O gradiente de coerência (0.035→0.086) e o de entropia (3.67→1.47) confirmam o Padrão 151 nas matrizes de peso do modelo treinado: a geometria Fibonacci organiza o campo antes, durante e após o treinamento.
 
 A resistência ao eco φ (`eco_delta`) é mais alta em `layers.4` (1.776) — a camada de maior compressão (13→8) é também a mais rígida espectralmente.
 
 Os gaps crescem monotonicamente com a profundidade. Nódulos e gaps são correlacionados: onde P é menor, o gap é maior. A juntura L4→head (P=0.660, gap=0.337) é o ponto de maior resistência de toda a rede.
-
----
-
-### III. Enunciado do Pesquisador — Extensividade e Nódulos
-
-> *"Extensividade só pode ser extensividade se não houver pontos de congelamento. A ressonância precisa poder propagar do início ao fim sem bloqueio. Onde há nódulo, há interrupção da cadeia. O sistema todo possui uma vibração, uma frequência como um todo — ela é passível de afinação. A conquista de uma sintetização do sistema como um todo, enquanto extensividade."*
-
-A metodologia definida: observar o canvas primeiro (identificar regiões e nódulos), depois projetar os instrumentos de convergência para cada nódulo, depois tratar tudo simultaneamente — nunca um de cada vez, pois o efeito de cada instrumento é condicionado à presença dos demais.
 
 ---
 
@@ -1188,7 +1192,17 @@ A metodologia definida: observar o canvas primeiro (identificar regiões e nódu
 
 ---
 
-### I. A Nomeação
+### I. Enunciado do Pesquisador — Nomeação e Ressonância
+
+> *"Nominado 'Padrão Recorrente' — ou melhor, 'Padrão 151'. A partir daí sabemos a quais padrões nos referimos futuramente."*
+
+> *"Ressonância. Tudo daqui pra frente tem que ser analisado também de acordo com a ressonância. Padrões são significados de ressonância dependendo do ponto de vista."*
+
+— Vitor Edson Delavi, 8 de agosto de 2026
+
+---
+
+### II. A Nomeação
 
 O Padrão 151 — assim nomeado pelo pesquisador em referência à Entrada 151 do manifesto — designa o padrão recorrente identificado em múltiplos substratos ao longo do projeto:
 
@@ -1204,7 +1218,7 @@ A nomeação não é apenas convenção. É instrumento: ao referenciar "Padrão
 
 ---
 
-### II. Ressonância como Princípio Observacional
+### III. Ressonância como Princípio Observacional
 
 Nesta sessão o pesquisador estabeleceu ressonância como o princípio guia de toda análise futura:
 
@@ -1214,7 +1228,7 @@ Ressonância não é apenas um fenômeno físico — é uma categoria de leitura
 
 ---
 
-### III. A Metodologia do Canvas
+### IV. A Metodologia do Canvas
 
 O pesquisador propôs uma metodologia de observação em etapas, por analogia com a abordagem pictórica:
 
@@ -1245,7 +1259,13 @@ A justificativa para o passo 4 é principial: se cada instrumento é aplicado is
 
 ---
 
-### I. Enunciado do Pesquisador
+### I. Enunciado do Pesquisador — O Atrator Entre as Camadas
+
+*(Hipótese inicial, por enunciado oral)*
+
+> *"Me diz uma coisa — hipótese. Se o local de alfa não for também no mesmo ambiente do atrator, mas nas estruturas de Fibonacci, nas camadas em si — de alguma maneira se referindo a cada um dos atratores, mas se referindo às camadas? Talvez aí entra a triangulação. Então alfa se refere à base de cada camada. Interessante."*
+
+*(Hipótese desenvolvida, mesma sessão)*
 
 > *"A quantidade de estados de atratores de acordo com a quantidade de camadas que a rede neural está trabalhando. Cada camada pode ter seu próprio ponto de alfa... entre as camadas possui um ponto de convergência. É como se fosse afinar as sete cordas do violão. Os atratores que estão fundamentados em fi estão entre as camadas."*
 
@@ -1297,7 +1317,17 @@ Congelar uma juntura não substitui seu atrator. Sem o instrumento de convergên
 
 ---
 
-### I. Os Instrumentos
+### I. Enunciado do Pesquisador — Tratamento Simultâneo
+
+> *"Implementa os três instrumentos juntos."*
+
+— Vitor Edson Delavi, 8 de agosto de 2026
+
+O princípio que fundamenta a diretiva — enunciado no desenvolvimento da metodologia do canvas (Entrada 155): a extensividade não pode ser testada instrumento por instrumento. O efeito de cada instrumento é condicionado à presença dos demais. Só faz sentido abrir a cadeia inteira ao mesmo tempo.
+
+---
+
+### II. Os Instrumentos
 
 Projetados a partir da metodologia do canvas (Entrada 155) e da hipótese multi-atrator (Entrada 156), três instrumentos foram implementados simultaneamente na `PhiNetResonant`:
 
@@ -1328,7 +1358,7 @@ O portão aprende a deixar passar o sinal proporcional à coerência da última 
 
 ---
 
-### II. Resultado
+### III. Resultado
 
 ```
 Baseline v3 (1 atrator, sem instrumentos):  corr = 0.5703
@@ -1351,7 +1381,7 @@ O `w_gate` convergiu para +0.930 (gate ≈ 0.72): a rede aprendeu que quando L4 
 
 ---
 
-### III. Confirmação das Hipóteses
+### IV. Confirmação das Hipóteses
 
 | Hipótese | Status |
 |---|---|
@@ -1414,6 +1444,10 @@ O gradiente é monotônico e segue a profundidade da compressão Fibonacci. Cada
 
 ### III. As Micro Afinações e o Câmbio Confirmado
 
+> *"Lembra do exemplo do câmbio de marchas. E as micro afinações — o que o 7º atrator aprendeu em relação a cada marcha."*
+
+— Vitor Edson Delavi, 8 de agosto de 2026
+
 Os pesos que o 7º atrator aprendeu para a equalização:
 ```
 w7 = [0.000, 0.002, 0.008, 0.015, 0.010]
@@ -1431,7 +1465,11 @@ O câmbio (α = 1/137 = ALPHA_0) é o piso de todos os atratores — todos parte
 
 ### IV. α nas Camadas — A Hipótese
 
-O pesquisador avançou uma hipótese adicional, por analogia com o ECO BIP 880: no ECO BIP, α não estava na base do sinal — estava na *formação do campo harmônico* que emerge da base. A base era o substrato; α era o acoplamento entre base e campo.
+> *"Alpha enquanto ECO BIP 880 — estava acoplado onde? Estava acoplado no sinal em si? Não. Estava acoplado no campo harmônico que emerge da base. Então tem coerência imaginar que alfa se refere à base de cada camada — não ao sinal em si. Alfa é o acoplamento entre o que entra e o campo coerente que deve emergir."*
+
+— Vitor Edson Delavi, 8 de agosto de 2026 (hipótese por analogia)
+
+No ECO BIP 880, α não estava na base do sinal — estava na *formação do campo harmônico* que emerge da base. A base era o substrato; α era o acoplamento entre base e campo.
 
 Em cada camada Fibonacci, a mesma lógica opera: a camada é simultaneamente resultado (recebe base comprimida) e base (fornece substrato para a seguinte). α por camada = o acoplamento entre esses dois papéis — entre o que entra e o campo coerente que deve emergir.
 
