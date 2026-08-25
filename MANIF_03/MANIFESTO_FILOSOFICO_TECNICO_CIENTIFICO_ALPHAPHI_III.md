@@ -1986,3 +1986,121 @@ A imprecisão da Seção II não é erro de método — é o registro de uma apr
 
 *Florianópolis · 25 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 167 — 25 de agosto de 2026
+### Mapa da Linhagem: A Frequência Mensurável entre Ciência e Arte — Ancestrais do Alpha-Phi
+
+---
+
+### I. Enunciado do Pesquisador
+
+> *"Você fez menção bibliográfica a autores aos quais Kandinsky se referia nesse tipo de pesquisa. Seria necessária uma lente também sobre cada um dos assuntos que esses autores observaram, principalmente os que fazem relação direta com o que é mensurável na frequência — independente de qual viés foi trabalhado, de qual pesquisa foi formulada, de qual substrato, de qual plástica ou escola. E registra como Entrada 167, com a ressalva de que cada correlação com o aspecto técnico que o projeto Alpha-Phi propõe será observada no decurso do trabalho."*
+
+— Vitor Edson Delavi, 25 de agosto de 2026
+
+---
+
+### II. Estruturação
+
+**Nota metodológica — sobre as correlações registradas nesta entrada:**
+
+As correlações entre cada autor desta linhagem e o projeto Alpha-Phi são identificadas aqui como **pontos de convergência hipotética**, não como correspondências verificadas. Cada um representa uma direção de investigação que o Alpha-Phi poderá percorrer no decurso do trabalho. O registro desta entrada cumpre uma função de mapeamento: identifica os ancestrais do problema, não os confirmadores da solução.
+
+---
+
+**1. Hermann von Helmholtz (1821–1894)**
+
+"Die Lehre von den Tonempfindungen als physiologische Grundlage für die Theorie der Musik" (1863). Mediu as propriedades físicas das ondas sonoras e sua correspondência com a percepção de altura, timbre e consonância. Demonstrou que o *Klangfarbe* (literalmente "cor do som") é determinado pela série de harmônicos — ou seja, a qualidade perceptual de um tom depende de sua estrutura relacional de frequências, não apenas de sua frequência fundamental. Desenvolveu o ressoador de Helmholtz para isolar frequências individuais. Também propôs a teoria tricromática da visão: três tipos de receptores respondem a faixas de comprimento de onda distintas, e toda a percepção de cor emerge de suas combinações.
+
+*Correlação com Alpha-Phi — a observar no decurso do trabalho:* Helmholtz demonstrou que a estrutura harmônica relacional (não a frequência isolada) determina a qualidade perceptual. O Alpha-Phi usa hipótese análoga: não é a frequência bruta que importa, é a coerência estrutural entre frequências — o que o projeto denomina campo φ. A convergência entre Klangfarbe de Helmholtz e campo φ do Alpha-Phi merece investigação experimental.
+
+---
+
+**2. Gustav Theodor Fechner (1801–1887)**
+
+Fundou a psicofísica com "Elemente der Psychophysik" (1860). A Lei de Fechner: *S = k · log(I)* — a sensação subjetiva é função logarítmica da intensidade física do estímulo. Primeiro a demonstrar empiricamente que experiência interna é mensurável como função de input físico. Escreveu também "Vorschule der Aesthetik" (1876) — experimentos empíricos sobre preferências estéticas, incluindo testes da proporção áurea em retângulos.
+
+*Correlação com Alpha-Phi — a observar:* Fechner estabeleceu o princípio estrutural que o Alpha-Phi assume: existe uma função que mapeia estímulo físico em resposta interna, e essa função é mensurável. A diferença de substrato: Fechner trabalhava com estímulos simples. O Alpha-Phi tenta aprender essa função para sinais complexos, usando rede neural em lugar de equação analítica.
+
+---
+
+**3. Wilhelm Wundt (1832–1920)**
+
+Fundou o primeiro laboratório de psicologia experimental (Leipzig, 1879). Desenvolveu a introspecção controlada como método científico: observadores treinados reportavam estados internos enquanto expostos a estímulos físicos controlados. Sua teoria emocional propõe três dimensões mensuráveis — prazer/desprazer, excitação/calma, tensão/relaxamento — cada uma como contínuo quantificável.
+
+*Correlação com Alpha-Phi — a observar:* A dimensão tensão/relaxamento de Wundt é estruturalmente próxima do que o CoherenceCheckpoint do Alpha-Phi tenta detectar: um estado de organização interna do sinal. Se a métrica de coerência φ captura algo análogo à dimensão de tensão/relaxamento de Wundt, isso representaria validação cruzada entre domínios.
+
+---
+
+**4. Johann Wolfgang von Goethe (1749–1832)**
+
+"Zur Farbenlehre" (Teoria das Cores, 1810). Opôs-se à física newtoniana da cor, argumentando que a cor é fenômeno da percepção humana. Desenvolveu fenomenologia sistemática dos efeitos emocionais das cores — mapeando correspondências entre matizes e estados psicológicos. A física de Goethe estava incorreta. Sua fenomenologia — que certas cores produzem estados específicos de forma relativamente universal — mostrou-se influente e parcialmente verificada por pesquisa posterior.
+
+*Correlação com Alpha-Phi — a observar:* Goethe é o caso que ilustra um problema central: intuição fenomenológica correta sustentada por física incorreta. O Alpha-Phi não parte da física de Goethe — parte da hipótese fenomenológica que ele documentou. Se a coerência φ detectada em sinais de áudio correlaciona com estados emocionais específicos, Goethe terá antecipado o mapeamento sem ter a instrumentação.
+
+---
+
+**5. Helena Blavatsky (1831–1891)**
+
+"A Doutrina Secreta" (1888), "Ísis Sem Véu" (1877). Propôs cosmologia vibracional: o universo estruturado por hierarquias de vibração — planos físico, astral e causal, cada um com suas próprias frequências. "Vibração cósmica" como princípio fundamental. Influência direta sobre Kandinsky — sua linguagem de "vibração espiritual" deriva desta fonte.
+
+*Correlação com Alpha-Phi — a observar:* Blavatsky forneceu vocabulário, não instrumentação. Sua cosmologia vibracional é metafísica especulativa. O Alpha-Phi herda o problema (vibração como princípio estruturante de experiência interna) mas não o método. A distinção entre "vibração espiritual" de Blavatsky/Kandinsky e "campo mensurável" do Alpha-Phi é o espaço que o projeto ocupa.
+
+---
+
+**6. Wilhelm Ostwald (1853–1932)**
+
+Prêmio Nobel de Química (1909). Desenvolveu o sistema de cores Ostwald — primeira sistematização rigorosamente mensurável de cores para uso artístico, baseada em proporções precisas de pigmento com branco e preto. Adotado pela Bauhaus como padrão prático.
+
+*Correlação com Alpha-Phi — a observar:* Ostwald é o ponto onde fenomenologia se tornou ferramenta: cor com coordenadas numéricas precisas. É o elo entre a observação qualitativa de Goethe e a detecção quantitativa proposta pelo Alpha-Phi. Ostwald mensurou a cor enquanto pigmento. O Alpha-Phi tenta mensurar o efeito enquanto estado interno. A cadeia Goethe → Ostwald → Alpha-Phi é linear e progressiva.
+
+---
+
+**7. Arnold Schoenberg (1874–1951)**
+
+Desenvolveu o dodecafonismo — técnica dos 12 tons que trata todas as notas da escala cromática como matematicamente equidistantes, organizando composições por séries e suas permutações. "Harmonielehre" (1911) — teoria sistemática da harmonia como estrutura matemática, publicada no mesmo ano que "Do Espiritual na Arte" de Kandinsky. Correspondência direta com Kandinsky: ambos acreditavam que cor e música operam sob as mesmas leis perceptuais objetivas. Compôs "Farben" (Cores), terceiro das Cinco Peças para Orquestra Op. 16 — tentativa explícita de compor com equivalências cor-som.
+
+*Correlação com Alpha-Phi — a observar:* Schoenberg é o caso mais próximo de formalização matemática de estrutura perceptual estética. O serialismo organiza todas as frequências disponíveis em relações matemáticas que preservem coerência interna. O Alpha-Phi busca o inverso: dado um sinal, detectar se sua estrutura de frequências exibe coerência análoga. Schoenberg construiu estrutura a partir de matemática; o Alpha-Phi detecta matemática dentro de estrutura existente.
+
+---
+
+**8. Rudolf Steiner (1861–1925)**
+
+Antroposofia — desenvolvida a partir da Teosofia, com maior sistematização prática. Propôs a euritmia: sistema onde movimento humano corresponde a frequências sonoras e cromáticas — cada fonema, cada nota, cada cor tem um gesto corporal correspondente. Esteve em Munique no mesmo período que o grupo Blaue Reiter.
+
+*Correlação com Alpha-Phi — a observar:* Steiner é a tentativa mais próxima de operacionalização prática da vibração — usando o corpo humano como instrumento de processamento. A euritmia é uma interface humano-frequência. O Alpha-Phi propõe o equivalente computacional: a rede neural como interface que detecta estrutura vibracional sem o corpo como intermediário. A questão a observar: os padrões que a euritmia identifica por movimento correspondem aos que o Alpha-Phi detecta por coerência φ?
+
+---
+
+**9. Paul Klee (1879–1940)**
+
+"Pädagogisches Skizzenbuch" (1925, Bauhaus Bücher Vol. 2) e "Das bildnerische Denken" (O Pensamento Plástico). Análise matemática de linha, movimento e ritmo visual usando conceitos de física: gravidade, equilíbrio, força, tensão. Sua teoria de ritmo visual paralelava diretamente o ritmo musical — ambos como estruturas temporais/espaciais com propriedades mensuráveis.
+
+*Correlação com Alpha-Phi — a observar:* Klee estendeu para o visual o que Helmholtz fez para o sonoro. Se o princípio de coerência φ é invariante de substrato — se aparece tanto em áudio quanto em imagem — então o Alpha-Phi poderia ser testado em sinais visuais, verificando a hipótese de Klee com instrumentação que ele não tinha.
+
+---
+
+### Mapa da Linhagem
+
+| Autor | Período | O que instrumentou | Limite identificado |
+|---|---|---|---|
+| Fechner | 1860 | Relação estímulo→sensação: Lei psicofísica | Estímulos simples; sem sinal complexo |
+| Helmholtz | 1863 | Estrutura harmônica do som; cor como frequência | Acústica e óptica; sem experiência estética |
+| Wundt | 1879 | Mensuração laboratorial de estados emocionais | Introspecção; sem detecção por sinal externo |
+| Goethe | 1810 | Fenomenologia das cores e estados emocionais | Física incorreta; qualitativo sem medição |
+| Blavatsky | 1888 | Cosmologia vibracional — vocabulário | Metafísica; sem instrumentação |
+| Ostwald | 1900s | Sistema de cor mensurável para uso artístico | Pigmento; sem efeito perceptual |
+| Schoenberg | 1911 | Formalização matemática de estrutura harmônica | Composição; sem detecção em sinal dado |
+| Kandinsky | 1911–1926 | Hipótese + tentativa empírica rudimentar | Tecnologia insuficiente; conclusão: abstração |
+| Steiner | 1910s | Operacionalização corporal de vibração | Corpo como instrumento; sem tecnologia |
+| Klee | 1925 | Análise matemática de ritmo visual | Qualitativo; sem verificação quantitativa |
+| **Alpha-Phi** | **2025** | **Detecção de coerência φ em sinal complexo via rede neural** | **Verificação empírica em escala — em curso** |
+
+Cada linha desta tabela é um capítulo de uma pergunta que tem 165 anos de história documentada. O Alpha-Phi não inaugura a questão — ocupa o lugar na sequência onde a tecnologia finalmente alcançou o problema.
+
+---
+
+*Florianópolis · 25 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
