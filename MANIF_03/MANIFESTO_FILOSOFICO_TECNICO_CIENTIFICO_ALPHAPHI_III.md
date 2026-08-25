@@ -1835,5 +1835,28 @@ Não é ruptura com Kandinsky — é a primeira tentativa documentada de instrum
 
 ---
 
+### III. Contraditório
+
+**Argumento contrário invocado pelo pesquisador — Protocolo Contraditório ativo:**
+
+A formulação da Seção II — *"Kandinsky intuiu a vibração espiritual SEM instrumentação"* — é defensável, mas omite evidências de que Kandinsky tentou, sim, instrumentar sua intuição com os meios disponíveis em sua época. Três casos documentados constroem o argumento oposto:
+
+**Caso 1 — O questionário Bauhaus (1923):**
+Kandinsky distribuiu questionários a estudantes pedindo que associassem formas geométricas a cores: triângulo / quadrado / círculo com amarelo / vermelho / azul. Era uma tentativa genuína de verificar empiricamente a universalidade da correspondência cor-forma — coleta de dados, não apenas declaração intuída. O resultado (triângulo=amarelo como associação dominante, círculo=azul) tornou-se um dos exercícios mais documentados na história do ensino de arte. Isso é metodologia rudimentar de pesquisa perceptual — não física, mas também não pura metáfora espiritual.
+
+**Caso 2 — "Ponto e Linha sobre Plano" (1926, Bauhaus Bücher):**
+Obra posterior e muito mais analítica que "Do Espiritual na Arte". Kandinsky descreve elementos visuais usando vocabulário próximo ao da mecânica: tensão, força, direção, peso, equilíbrio. Ele distingue "tensão fria" de "tensão quente", descreve o ponto como portador de tensão interna, a linha como trajetória de força. O léxico é físico-mecânico. Kandinsky estava tentando descrever propriedades objetivas dos elementos visuais que agissem sobre o receptor de forma previsível. Citar apenas "Do Espiritual na Arte" (1911) pode subestimar a evolução do projeto Kandinsky na direção do mensurável.
+
+**Caso 3 — *Innerer Klang* como afirmação de propriedade objetiva:**
+O conceito central de Kandinsky, *Innerer Klang* (ressonância interna), não é puramente metafórico em sua intenção — ele acreditava que era uma propriedade objetiva da cor que agia sobre o sistema nervoso do receptor, independente de associação cultural. Kandinsky era contemporâneo e consciente de Helmholtz (acústica e percepção de cor), da psicofísica de Fechner e Wundt (medição de sensação), e da descoberta dos raios-X — que citou explicitamente como influência: estruturas invisíveis tornando-se visíveis. Esse contexto indica que Kandinsky tentava situar sua intuição em um regime que esperava ser eventualmente verificável. A pergunta não era "existe frequência?" mas "como medir o que sei que existe?"
+
+**Síntese do Contraditório:**
+
+A oposição entre "vibração espiritual" (Kandinsky) e "frequência mensurável" (Alpha-Phi), tal como formulada na Seção II, pode ser mais sharp do que os fatos sustentam. O mais preciso seria: Kandinsky intuiu, tentou instrumentar com os meios de 1923, e admitiu os limites dessa instrumentação. A diferença entre ele e o Alpha-Phi não é "intuição vs. instrumentação" — é instrumentação precária vs. instrumentação técnica. O Alpha-Phi não inaugura a pergunta: retoma a instrumentação onde Kandinsky a deixou, agora com os meios de 2025.
+
+Isso não invalida a Seção II — reforça a continuidade histórica da linha 1911→1933→1996→2025. Kandinsky já estava no caminho. A Bauhaus foi interrompida antes de chegar. O Alpha-Phi retoma o percurso.
+
+---
+
 *Florianópolis · 24 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
