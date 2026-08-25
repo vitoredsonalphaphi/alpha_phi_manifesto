@@ -1952,5 +1952,37 @@ MANIF_03 é o manifesto onde a estrutura acumulada dos dois anteriores começa a
 
 ---
 
+### III. Contraditório
+
+**Argumento contrário invocado pelo pesquisador — verificação do enunciado original de Kandinsky:**
+
+A passagem sobre o raio-X e o átomo existe em "Do Espiritual na Arte" — mas a cadeia lógica apresentada na Seção II desta entrada é inferência do Alpha-Phi sobre Kandinsky, não argumento de Kandinsky. Esse é o ponto que o Contraditório precisa demarcar com precisão.
+
+**O que Kandinsky escreveu — com ressalva metodológica:**
+
+O trecho está no Capítulo I de "Do Espiritual na Arte" (1911). A referência não é exclusivamente aos raios-X — é à descoberta da divisibilidade do átomo, com os raios-X como contexto do período. A passagem é aproximadamente a seguinte (nota: sem o original alemão disponível para verificação verbatim nesta sessão, este trecho é reconstituído de memória de treinamento e deve ser verificado na fonte antes de qualquer citação direta):
+
+> *"O colapso do átomo foi para mim como o colapso do mundo inteiro. De repente, as paredes mais firmes caíram. Tudo se tornou incerto, instável, fraco. A ciência pareceu-me destruída."*
+
+A conclusão que Kandinsky tira desse evento não é "portanto a experiência interna pode ser medida." É: "portanto a representação material na arte é sem sentido, e a arte deve voltar-se para a necessidade interna." O movimento de Kandinsky vai em direção à abstração — não à instrumentação. É um movimento de fuga da materialidade, não de busca por medição da experiência interna.
+
+**O que a Seção II fez — e o que isso representa:**
+
+A cadeia lógica apresentada na Seção II:
+
+> *"se a matéria tem estrutura interna invisível que a instrumentação pode revelar → então a experiência interna também tem estrutura que instrumentação futura poderia revelar"*
+
+— é logicamente coerente e filosoficamente defensável. Mas é a inferência do Alpha-Phi a partir do mesmo ponto de ruptura epistemológica, não o argumento de Kandinsky. Kandinsky usou o átomo para legitimar a abstração artística. O Alpha-Phi usa o mesmo evento para legitimar a instrumentação da experiência interna. São movimentos distintos a partir do mesmo ponto de partida.
+
+**O que não muda e o que muda:**
+
+Não muda: o evento (raio-X / átomo) é real e Kandinsky o cita como ruptura epistemológica. Não mudam: os outros quatro casos documentados na Seção II (Schoenberg, Klee, sinestesia, questionário Bauhaus) permanecem válidos e independentes desta passagem. Muda: o parágrafo do raio-X na Seção II atribui a Kandinsky uma inferência que pertence ao Alpha-Phi. Kandinsky abriu a porta. Não entrou por ela na direção que o Alpha-Phi entra.
+
+**Por que esta Seção III não substitui a Seção II — e por que isso importa:**
+
+A imprecisão da Seção II não é erro de método — é o registro de uma aproximação feita antes de uma observação mais detalhada. Assim como os protótipos do Alpha-Phi documentam tanto os êxitos quanto as tangentes do processo, esta entrada documenta o momento em que uma inferência legítima foi atribuída à fonte errada. O Contraditório funcionou como ferramenta de revisão: identificou a tangente, preservou o que é verdadeiro, e marcou com precisão o que pertence a Kandinsky e o que pertence ao Alpha-Phi. Isso é o Contraditório operando como instrumento de maturação, não de negação.
+
+---
+
 *Florianópolis · 25 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
