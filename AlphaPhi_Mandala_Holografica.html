@@ -1,0 +1,641 @@
+<title>eco_adaptativo · Mandala</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700&family=Outfit:wght@300;400;500&display=swap">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #080A10;
+  color: #D4C9A8;
+  font-family: 'Outfit', system-ui, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(26,43,64,0.9);
+  flex-shrink: 0;
+  gap: 12px;
+}
+.header-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #D4C9A8;
+  white-space: nowrap;
+}
+.header-constants {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #3E5060;
+  display: flex;
+  gap: 18px;
+  white-space: nowrap;
+}
+.cv { color: #C8960A; }
+
+.canvas-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+canvas { display: block; }
+
+/* Info panel */
+.info-panel {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 188px;
+  background: rgba(10,16,28,0.94);
+  border: 1px solid #1A2B3E;
+  border-radius: 7px;
+  padding: 14px 14px 12px;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.18s, transform 0.18s;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(8px);
+}
+.info-panel.vis {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+.il { font-family: 'Space Mono', monospace; font-size: 9px; color: #3E5060; letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 2px; }
+.iv { font-size: 12px; color: #D4C9A8; margin-bottom: 9px; font-weight: 400; line-height: 1.4; }
+.iv.gold { color: #F5D55A; font-family: 'Space Mono', monospace; font-size: 11px; }
+.iv.dim  { color: #3E5060; font-family: 'Space Mono', monospace; font-size: 11px; margin-bottom: 4px; }
+.sbar { height: 3px; border-radius: 2px; background: #0E1A2C; margin: 5px 0 10px; overflow: hidden; }
+.sbar-fill { height: 100%; background: linear-gradient(90deg, #2A5090, #A87010, #F5D55A); border-radius: 2px; transition: width 0.4s ease; }
+
+/* Controls */
+footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-top: 1px solid rgba(26,43,64,0.9);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.lvl-group {
+  display: flex;
+  background: rgba(10,16,28,0.7);
+  border: 1px solid #1A2B3E;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.lb {
+  background: none;
+  border: none;
+  border-right: 1px solid #1A2B3E;
+  color: #3E5060;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  padding: 5px 13px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.lb:last-child { border-right: none; }
+.lb:hover { color: #D4C9A8; background: rgba(26,43,64,0.5); }
+.lb.on { background: #111E30; color: #F5D55A; }
+
+.btn {
+  background: none;
+  border: 1px solid #1A2B3E;
+  border-radius: 5px;
+  color: #D4C9A8;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+  white-space: nowrap;
+}
+.btn:hover { border-color: #C8960A; color: #F5D55A; }
+.btn.prime { border-color: #A87010; color: #C8960A; }
+.btn.prime:hover { background: rgba(168,112,16,0.12); }
+.btn.prime.running { border-color: #3E5060; color: #3E5060; }
+.btn.prime.running:hover { color: #D4C9A8; border-color: #D4C9A8; background: none; }
+.btn:disabled { opacity: 0.35; pointer-events: none; }
+
+.spacer { flex: 1; min-width: 0; }
+
+.leg {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #3E5060;
+  letter-spacing: 0.06em;
+}
+.ld { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+
+.status {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #3E5060;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hl { color: #C8960A; }
+
+@media (max-width: 560px) {
+  .leg { display: none; }
+  .header-constants { display: none; }
+}
+</style>
+
+<header>
+  <div class="header-title">eco_adaptativo · Mandala Holográfica</div>
+  <div class="header-constants">
+    <span>φ = <span class="cv">1.6180339887</span></span>
+    <span>α = <span class="cv">1/137.035999</span></span>
+    <span>Sépstro: Coh + Entr = <span class="cv">1</span></span>
+  </div>
+</header>
+
+<div class="canvas-wrap">
+  <canvas id="c"></canvas>
+
+  <div class="info-panel" id="infoPanel">
+    <div class="il">Fase</div>
+    <div class="iv" id="iPhase">—</div>
+    <div class="il">Profundidade</div>
+    <div class="iv" id="iDepth">—</div>
+    <div class="il">Sépstro — Coh + Entr = 1</div>
+    <div class="sbar"><div class="sbar-fill" id="iBar" style="width:0%"></div></div>
+    <div class="iv gold" id="iCoh">Coh = —</div>
+    <div class="iv dim" id="iEntr">Entr = —</div>
+    <div class="il">Raio no mandala</div>
+    <div class="iv" id="iRaio">—</div>
+    <div class="il">Filhos diretos</div>
+    <div class="iv" id="iFilhos">—</div>
+  </div>
+</div>
+
+<footer>
+  <div class="leg">
+    <span><span class="ld" style="background:#E84040;box-shadow:0 0 5px #E84040"></span>α centro</span>
+    <span><span class="ld" style="background:#1A3060"></span>entrópico</span>
+    <span><span class="ld" style="background:#A87010"></span>processando</span>
+    <span><span class="ld" style="background:#F5D55A"></span>coerente</span>
+    <span><span class="ld" style="background:#FFE89A;box-shadow:0 0 4px rgba(255,232,154,0.6)"></span>campo harmônico</span>
+  </div>
+
+  <div class="spacer"></div>
+
+  <span style="font-family:Space Mono,monospace;font-size:10px;color:#3E5060">Nível</span>
+  <div class="lvl-group">
+    <button class="lb on" onclick="setLevel(0)">0</button>
+    <button class="lb" onclick="setLevel(1)">1</button>
+    <button class="lb" onclick="setLevel(2)">2</button>
+    <button class="lb" onclick="setLevel(3)">3</button>
+  </div>
+
+  <button class="btn prime" id="animBtn" onclick="toggleAnim()">▶ Simular</button>
+  <button class="btn" onclick="doReset()">↺ Resetar</button>
+
+  <div class="status" id="stat">
+    ciclo <span class="hl">0/7</span> · coh média <span class="hl" id="statCoh">α</span>
+  </div>
+</footer>
+
+<script>
+const PHI   = (1 + Math.sqrt(5)) / 2;
+const ALPHA = 1 / 137.035999;
+const SEAL  = 1 / PHI;
+const DEPTH_R = [0, 0.33, 0.58, 0.80];
+
+// ── Septro ──────────────────────────────────────────────────────────────
+
+class Septro {
+  constructor() { this.reset(); }
+  reset() { this.coh = ALPHA; this.entr = 1 - ALPHA; }
+  update(a) {
+    const g = Math.max(0, Math.min(a * (1 - this.coh) * SEAL, 1 - this.coh));
+    this.coh += g; this.entr = 1 - this.coh; return g;
+  }
+}
+
+// ── EcoNo ───────────────────────────────────────────────────────────────
+
+class EcoNo {
+  constructor(depth=0, phase='Σ', aStart=0, aSpan=360, parent=null) {
+    this.depth  = depth;
+    this.phase  = phase;
+    this.aStart = aStart;
+    this.aSpan  = aSpan;
+    this.angle  = aStart + aSpan / 2;
+    this.parent = parent;
+    this.septro = new Septro();
+    this.children = [];
+    this.x = 0; this.y = 0;
+    this.pulse  = 0;      // animation glow 0→1
+    this._out   = 1.0;    // last processar output
+  }
+
+  expand(maxD) {
+    if (this.depth >= maxD) return;
+    const phases = ['Observar', 'Selecionar', 'Agir'];
+    const cs = this.aSpan / 3;
+    phases.forEach((p, i) => {
+      const c = new EcoNo(this.depth+1, p, this.aStart+i*cs, cs, this);
+      c.expand(maxD);
+      this.children.push(c);
+    });
+  }
+
+  layout(cx, cy, R) {
+    const r = (DEPTH_R[Math.min(this.depth, 3)] || 0) * R;
+    const rad = this.angle * Math.PI / 180;
+    this.x = this.depth === 0 ? cx : cx + r * Math.cos(rad);
+    this.y = this.depth === 0 ? cy : cy + r * Math.sin(rad);
+    this.children.forEach(c => c.layout(cx, cy, R));
+  }
+
+  processar(signal) {
+    const obs = signal * (1 + ALPHA * (this.depth + 1));
+    const sel = Math.sin(obs * PHI) * Math.cos(obs / PHI);
+    const out = sel * this.septro.coh;
+    this.septro.update(Math.abs(sel) / (1 + Math.abs(sel)));
+    this._out = out;
+    this.pulse = 1.0;
+    return out;
+  }
+
+  reset() {
+    this.septro.reset(); this.pulse = 0; this._out = 1.0;
+    this.children.forEach(c => c.reset());
+  }
+
+  bfs(maxD = 99) {
+    const r = [], q = [this];
+    while (q.length) { const n = q.shift(); if (n.depth > maxD) continue; r.push(n); q.push(...n.children); }
+    return r;
+  }
+
+  atDepth(d) { return this.bfs().filter(n => n.depth === d); }
+
+  nearest(px, py, maxD) {
+    let best = null, bd = Infinity;
+    for (const n of this.bfs(maxD)) {
+      const d = Math.hypot(n.x - px, n.y - py);
+      if (d < bd) { bd = d; best = n; }
+    }
+    return { node: best, dist: bd };
+  }
+
+  meanCoh(maxD) {
+    const all = this.bfs(maxD);
+    return all.reduce((s,n) => s + n.septro.coh, 0) / all.length;
+  }
+}
+
+// ── State ───────────────────────────────────────────────────────────────
+
+const canvas = document.getElementById('c');
+const ctx    = canvas.getContext('2d');
+let cx, cy, R;
+let root = null, currentLevel = 0, selected = null;
+let animOn = false, cycle = 0, waveD = 0, waveT = 0, lastTs = 0;
+const MAX_CYC = 7, WAVE_MS = 480;
+let rafId = null;
+
+function build(lvl) {
+  root = new EcoNo();
+  root.expand(lvl);
+  if (cx) root.layout(cx, cy, R);
+}
+
+function resize() {
+  const wrap = canvas.parentElement;
+  const dpr  = window.devicePixelRatio || 1;
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  canvas.width  = W * dpr; canvas.height = H * dpr;
+  canvas.style.width = W+'px'; canvas.style.height = H+'px';
+  cx = W/2; cy = H/2;
+  R  = Math.min(cx, cy) * 0.81;
+  if (root) root.layout(cx, cy, R);
+}
+window.addEventListener('resize', resize);
+
+// ── Color ───────────────────────────────────────────────────────────────
+
+function cohColor(coh) {
+  const t = Math.max(0, Math.min(1, (coh - ALPHA) / (1 - ALPHA)));
+  const s = [
+    [0.00, [26, 48, 96]],
+    [0.40, [168,112, 16]],
+    [0.72, [245,213, 90]],
+    [1.00, [255,232,154]],
+  ];
+  for (let i = 0; i < s.length-1; i++) {
+    const [t0,c0] = s[i], [t1,c1] = s[i+1];
+    if (t <= t1) {
+      const u = (t-t0)/(t1-t0);
+      return `rgb(${Math.round(c0[0]+u*(c1[0]-c0[0]))},${Math.round(c0[1]+u*(c1[1]-c0[1]))},${Math.round(c0[2]+u*(c1[2]-c0[2]))})`;
+    }
+  }
+  return 'rgb(255,232,154)';
+}
+
+// ── Draw ────────────────────────────────────────────────────────────────
+
+function draw(ts) {
+  if (!root) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.width/dpr, H = canvas.height/dpr;
+
+  ctx.save(); ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  // Background
+  const bg = ctx.createRadialGradient(cx, cy, 0, cx, cy, R*1.4);
+  bg.addColorStop(0, '#0D1525'); bg.addColorStop(1, '#080A10');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+  // Campo Harmônico ring + glow
+  for (let i = 4; i >= 0; i--) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, R + i*2.5, 0, Math.PI*2);
+    ctx.strokeStyle = `rgba(255,228,130,${0.03+i*0.008})`;
+    ctx.lineWidth = i === 0 ? 1 : 1.5 + i*0.3;
+    ctx.stroke();
+  }
+
+  // Campo label
+  ctx.font = '9px Space Mono, monospace';
+  ctx.fillStyle = 'rgba(255,232,154,0.28)';
+  ctx.textAlign = 'center';
+  ctx.fillText('Campo Harmônico', cx, cy - R - 10);
+
+  // Depth guide rings (dashed)
+  for (let d = 1; d <= currentLevel; d++) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, DEPTH_R[d]*R, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(40,70,110,0.18)';
+    ctx.lineWidth = 0.6;
+    ctx.setLineDash([3, 9]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Two spirals (very subtle — φ expansive + α contractive)
+  if (currentLevel >= 1) {
+    drawSpiral(ctx, cx, cy, R,  1, 'rgba(200,150,30,0.07)');  // φ outward
+    drawSpiral(ctx, cx, cy, R, -1, 'rgba(180,60,60,0.05)');   // α inward
+  }
+
+  // Connections
+  drawConns(ctx, root);
+
+  // Nodes (depth 0 drawn last so α is always on top)
+  const visible = root.bfs(currentLevel).filter(n => n.depth > 0);
+  visible.forEach(n => drawNode(ctx, n, n === selected));
+  drawAlpha(ctx, cx, cy, ts);
+
+  // Depth ring labels
+  if (currentLevel >= 1) {
+    ctx.textAlign = 'left';
+    ctx.fillStyle = 'rgba(62,80,96,0.5)';
+    ctx.font = '9px Space Mono, monospace';
+    const names = ['','N1 · r≈0.33','N2 · r≈0.58','N3 · r≈0.80'];
+    for (let d = 1; d <= currentLevel; d++) {
+      const lx = cx + DEPTH_R[d]*R + 7;
+      ctx.fillText(names[d], lx, cy - 4);
+    }
+  }
+
+  // Fade pulses
+  root.bfs(currentLevel).forEach(n => { n.pulse = Math.max(0, n.pulse - 0.028); });
+
+  ctx.restore();
+}
+
+function drawSpiral(ctx, cx, cy, R, dir, color) {
+  ctx.save();
+  ctx.beginPath();
+  const turns = 2.5;
+  for (let i = 0; i <= 280; i++) {
+    const t   = i / 280;
+    const r   = R * t;
+    const ang = dir * t * turns * 2 * Math.PI;
+    const x   = cx + r * Math.cos(ang);
+    const y   = cy + r * Math.sin(ang);
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 0.8;
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawConns(ctx, node) {
+  for (const child of node.children) {
+    if (child.depth > currentLevel) continue;
+    const p = Math.max(node.pulse, child.pulse);
+    const a = 0.04 + (node.septro.coh + child.septro.coh)/2 * 0.18 + p * 0.18;
+    ctx.beginPath();
+    ctx.moveTo(node.x, node.y); ctx.lineTo(child.x, child.y);
+    ctx.strokeStyle = `rgba(200,150,30,${a})`;
+    ctx.lineWidth = 0.4 + p * 0.9;
+    ctx.stroke();
+    drawConns(ctx, child);
+  }
+}
+
+function drawNode(ctx, n, sel) {
+  const p  = n.pulse;
+  const br = Math.max(2.5, 9.5 - n.depth * 2.2);
+  const r  = br + p * 5;
+
+  if (p > 0.05) {
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, r + 10*p, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(245,213,90,${0.07*p})`;
+    ctx.fill();
+  }
+
+  if (p > 0.15) { ctx.shadowBlur = 14*p; ctx.shadowColor = '#F5D55A'; }
+  ctx.beginPath();
+  ctx.arc(n.x, n.y, r, 0, Math.PI*2);
+  ctx.fillStyle = cohColor(n.septro.coh);
+  ctx.fill();
+  ctx.shadowBlur = 0;
+
+  if (sel) {
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, r + 3.5, 0, Math.PI*2);
+    ctx.strokeStyle = 'rgba(255,232,154,0.85)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+
+  // Phase label at depth 1
+  if (n.depth === 1 && currentLevel >= 1) {
+    ctx.font = '8px Space Mono, monospace';
+    ctx.fillStyle = 'rgba(212,201,168,0.45)';
+    ctx.textAlign = 'center';
+    ctx.fillText(n.phase.slice(0,3).toUpperCase(), n.x, n.y + r + 11);
+  }
+}
+
+function drawAlpha(ctx, cx, cy, ts) {
+  const t = (ts || 0) / 1000;
+  const f = 0.72 + 0.28 * Math.sin(t*6.8) * Math.sin(t*2.9+1.1);
+
+  ctx.shadowBlur = 18; ctx.shadowColor = '#E84040';
+  ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI*2);
+  ctx.fillStyle = `rgba(232,64,64,${0.88*f})`; ctx.fill();
+  ctx.shadowBlur = 0;
+
+  ctx.beginPath(); ctx.arc(cx, cy, 9, 0, Math.PI*2);
+  ctx.fillStyle = `rgba(232,64,64,${0.09*f})`; ctx.fill();
+
+  ctx.font = '9px Space Mono, monospace';
+  ctx.fillStyle = `rgba(232,64,64,${0.45*f})`;
+  ctx.textAlign = 'center';
+  ctx.fillText('α', cx, cy + 18);
+}
+
+// ── Animation ────────────────────────────────────────────────────────────
+
+function animFrame(ts) {
+  if (!animOn) return;
+  if (!lastTs) lastTs = ts;
+  const dt = ts - lastTs; lastTs = ts;
+  waveT += dt;
+
+  if (waveT >= WAVE_MS) {
+    waveT = 0;
+    if (waveD === 0) {
+      if (cycle >= MAX_CYC) { stopAnim(); draw(ts); return; }
+      cycle++;
+      root.processar(1.0);
+    } else {
+      root.atDepth(waveD).forEach(n => {
+        const sig = n.parent ? n.parent._out : 1.0;
+        n.processar(sig);
+      });
+    }
+    waveD++;
+    if (waveD > currentLevel) waveD = 0;
+    updateStat();
+    if (selected) refreshInfo(selected);
+  }
+
+  draw(ts);
+  rafId = requestAnimationFrame(animFrame);
+}
+
+function idleLoop(ts) {
+  draw(ts);
+  rafId = requestAnimationFrame(idleLoop);
+}
+
+function toggleAnim() {
+  animOn ? stopAnim() : startAnim();
+}
+function startAnim() {
+  animOn = true; cycle = 0; waveD = 0; waveT = 0; lastTs = 0;
+  const b = document.getElementById('animBtn');
+  b.textContent = '■ Parar'; b.classList.add('running');
+  if (rafId) cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(animFrame);
+}
+function stopAnim() {
+  animOn = false;
+  const b = document.getElementById('animBtn');
+  b.textContent = '▶ Simular'; b.classList.remove('running');
+  if (!rafId) rafId = requestAnimationFrame(idleLoop);
+  else { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(idleLoop); }
+}
+
+// ── UI ────────────────────────────────────────────────────────────────────
+
+function setLevel(lvl) {
+  if (animOn) stopAnim();
+  currentLevel = lvl;
+  build(lvl);
+  document.querySelectorAll('.lb').forEach((b,i) => b.classList.toggle('on', i===lvl));
+  selected = null;
+  hideInfo();
+  updateStat();
+  if (!animOn) { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(idleLoop); }
+}
+
+function doReset() {
+  if (animOn) stopAnim();
+  cycle = 0;
+  build(currentLevel);
+  selected = null; hideInfo(); updateStat();
+  cancelAnimationFrame(rafId); rafId = requestAnimationFrame(idleLoop);
+}
+
+function updateStat() {
+  const mc = root ? root.meanCoh(currentLevel).toFixed(5) : ALPHA.toFixed(5);
+  const el = document.getElementById('stat');
+  const ch = document.getElementById('statCoh');
+  el.innerHTML = `ciclo <span class="hl">${cycle}/${MAX_CYC}</span> · coh média <span class="hl" id="statCoh">${mc}</span>`;
+}
+
+function refreshInfo(n) {
+  const NAMES = ['Σ root','N1','N2','N3'];
+  document.getElementById('iPhase').textContent = n.phase;
+  document.getElementById('iDepth').textContent = `profundidade ${n.depth}`;
+  document.getElementById('iCoh').textContent = `Coh = ${n.septro.coh.toFixed(6)}`;
+  document.getElementById('iEntr').textContent = `Entr = ${n.septro.entr.toFixed(6)}`;
+  document.getElementById('iRaio').textContent = `${(DEPTH_R[Math.min(n.depth,3)]||0).toFixed(3)} × R`;
+  document.getElementById('iFilhos').textContent = `${n.children.length}`;
+  document.getElementById('iBar').style.width = (n.septro.coh * 100).toFixed(1) + '%';
+}
+
+function showInfo(n) {
+  selected = n;
+  refreshInfo(n);
+  document.getElementById('infoPanel').classList.add('vis');
+}
+function hideInfo() {
+  selected = null;
+  document.getElementById('infoPanel').classList.remove('vis');
+}
+
+// ── Interaction ────────────────────────────────────────────────────────────
+
+canvas.addEventListener('click', e => {
+  if (!root) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left, y = e.clientY - rect.top;
+  const { node, dist } = root.nearest(x, y, currentLevel);
+  if (!node) return;
+  const hit = node.depth === 0 ? 18 : Math.max(12, 15 - node.depth * 1.5);
+  if (dist < hit) {
+    selected === node ? hideInfo() : showInfo(node);
+  } else {
+    hideInfo();
+  }
+});
+
+// ── Boot ────────────────────────────────────────────────────────────────
+
+resize();
+build(0);
+updateStat();
+rafId = requestAnimationFrame(idleLoop);
+</script>
