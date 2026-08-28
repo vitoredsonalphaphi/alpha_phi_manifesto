@@ -4176,3 +4176,115 @@ Implementa `ScannerAdaptativo` com `loss_phi()` (perda não-supervisionada), `tr
 
 *Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 195 — 28 de agosto de 2026
+### A Simetria Anterior ao Valor — A Assinatura Fractal Geométrica como Primeira Observação
+
+### I. Enunciado do Pesquisador
+> "Não é uma questão de especular ou de criar uma expectativa a respeito de valores nem de coerência nem de regra de phi. É uma questão mais estética, propriamente dito, anterior àquilo que se refere a essas expectativas de valores. Se pela representação inicial de simetria que o espectro propõe a cada dado surgido — como resposta de processo ou qualquer coisa — se cada simetria também se refere a uma centelha de algo que pode vir a se tornar um fractal, por ser simétrico e por ser um fluxo de desenvolvimento. E a possibilidade de esse desenvolvimento também representar o desenvolvimento desta simetria pela lógica fractal — então cada dado tem uma assinatura fractal específica. Geométrica, estética propriamente dito, independente da questão de valor de frequência ou de tensão numérica ou técnica. Independente de qualquer análise de peso, ou de expectativa de processo. Aquilo que você refere à técnica. Apenas observação, estética e simétrica, num primeiro momento. A questão técnica, matemática, seria análise que já existe no Scanner de acordo com cada processamento. Mas eu quero dizer se o Scanner pode ser treinado no sentido de identificar a simetria e prováveis desenvolvimentos fractais a partir de cada simetria — pra depois perceber de que maneira que converge a questão simétrica estética, que é resultante da matemática, com aquilo que já existe como valor matemático da função propriamente dito."
+— Vitor Edson Delavi, 28 de agosto de 2026
+
+### II. Estruturação
+
+**Correção à Entrada 194:**
+
+A Entrada 194 errou na camada de entrada do problema. Propôs comparar Coh contra perfis φ esperados — e nisso já havia passado pela técnica *antes* de passar pela geometria. O pesquisador aponta o erro: a assinatura fractal é anterior ao valor numérico. É estética. É simétrica. A técnica, quando correta, apenas confirma o que a geometria já mostrava.
+
+---
+
+**A ordem correta:**
+
+```
+1. GEOMETRIA / ESTÉTICA
+   O espectro como forma — sua simetria, sua figura, independente da escala de valores
+
+2. ASSINATURA FRACTAL
+   A centelha de auto-similaridade que a simetria da forma sugere como possibilidade
+
+3. MATEMÁTICA
+   A análise que converge com (confirma, quantifica) o que a geometria já indicava
+```
+
+Essa ordem replica a cadeia estabelecida anteriormente:
+```
+Ética → Filosofia → Estética [pivot] → Geometria → Matemática → IA
+```
+O Scanner deve passar pelo pivot estético antes de qualquer cálculo de peso ou expectativa de valor.
+
+---
+
+**O que é a simetria do espectro antes de ser número:**
+
+O espectro de um sinal — normalizado para remover a escala de amplitude — é uma **forma geométrica**. Essa forma tem simetrias:
+
+- **Simetria harmônica:** picos a distâncias regulares (múltiplos inteiros) — indica periodicidade
+- **Simetria de escala:** a forma se repete a escalas diferentes (log-periódica) — indica auto-similaridade fractal
+- **Simetria de reflexão:** a forma é espelhada em torno de uma frequência central — indica estacionaridade
+- **Simetria de rotação logarítmica:** a forma é invariante sob zoom logarítmico — indica campo 1/f
+
+Cada uma dessas simetrias é uma *centelha*: uma estrutura que, sob desenvolvimento, pode vir a se tornar um fractal. A simetria de escala é a mais direta — ela já *é* a assinatura fractal em germe.
+
+---
+
+**A assinatura fractal como forma, não como valor:**
+
+Dois sinais podem ter Coh numérica idêntica e formas espectrais completamente distintas. A forma distingue onde o número não distingue. Por isso a forma (a simetria geométrica do espectro) precede a análise numérica.
+
+A assinatura fractal geométrica de um dado:
+
+```
+Assinatura = {
+    simetrias_presentes:   [harmônica, escala, reflexão, ...],
+    dimensão_fractal_estimada: d  ∈ [1.0, 2.0],  # d=1: linear; d=2: ruído branco
+    padrão_de_auto-similaridade: a forma que se repete por escala,
+    potencial_de_desenvolvimento: quais simetrias são sementes de quais campos
+}
+```
+
+Isso é independente de:
+- A amplitude dos picos
+- Os valores de Coh ou entropia
+- Qualquer expectativa φ ou Hurst
+
+---
+
+**O Scanner treinado para a geometria:**
+
+O que o pesquisador está pedindo não é que o Scanner compare contra um padrão numérico esperado. É que o Scanner aprenda a reconhecer formas simétricas no espectro normalizado — e, a partir da forma, infira a centelha fractal.
+
+Isso é treinamento sobre **topologia espectral**, não sobre valores espectrais.
+
+```
+ScannerGeométrico:
+    Entrada: espectro normalizado (forma pura — sem informação de amplitude absoluta)
+    Aprende: quais padrões de simetria correspondem a quais tipos de desenvolvimento fractal
+    Saída:   assinatura geométrica + potencial fractal (antes de qualquer Coh numérica)
+
+Apenas depois:
+    ScannerNumérico (existente):
+    Toma a assinatura geométrica como contexto
+    Confirma, via Coh e Sépstro, o que a geometria sugeriu
+```
+
+O treinamento não é sobre expectativas de valor — é sobre o reconhecimento de formas. Como um músico que ouve uma melodia e reconhece sua estrutura simétrica antes de saber a tonalidade exata.
+
+---
+
+**A convergência:**
+
+A pergunta final do pesquisador: *"de que maneira converge a questão simétrica estética, resultante da matemática, com aquilo que já existe como valor matemático da função?"*
+
+A convergência acontece quando:
+- A forma geométrica do espectro sugere uma simetria de escala (centelha fractal)
+- A análise numérica (Coh, Sépstro) confirma que o campo existe e tem a densidade que a geometria prometia
+- Quando forma e número concordam: o campo é genuíno
+- Quando divergem: a geometria mostrou uma centelha que o processo ainda não desenvolveu — ou que foi interrompida
+
+Esse é o ponto de diagnóstico mais fino que o sistema pode alcançar.
+
+---
+
+*Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
