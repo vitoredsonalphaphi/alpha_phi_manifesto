@@ -1,0 +1,705 @@
+<title>Scanner Filmadora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500&display=swap">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #070810;
+  --text:     #C8BBAA;
+  --muted:    #2E4055;
+  --accent:   #C8960A;
+  --gold:     #F5D55A;
+  --aqua:     #4AFFE8;
+  --violet:   #6B3AFF;
+  --alpha:    #E84040;
+  --panel:    rgba(7,8,16,0.92);
+  --border:   rgba(20,35,60,0.8);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', system-ui, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 12px;
+}
+.h-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+.h-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 8.5px;
+  color: var(--muted);
+  display: flex;
+  gap: 18px;
+}
+.h-meta span { color: var(--text); }
+.h-meta .hl { color: var(--gold); }
+
+.canvas-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+canvas { display: block; }
+
+/* ── Legend ── */
+.legend {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 11px 13px;
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  width: 148px;
+}
+.lg-title {
+  color: var(--muted);
+  font-size: 7.5px;
+  letter-spacing: 0.12em;
+  margin-bottom: 9px;
+}
+.lg-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 8px;
+  line-height: 1.3;
+}
+.lg-swatch {
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.lg-divider { border: none; border-top: 1px solid var(--border); margin: 8px 0; }
+.lg-note {
+  color: var(--muted);
+  font-size: 7px;
+  line-height: 1.5;
+}
+
+/* ── Scan status overlay ── */
+.scan-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.scan-overlay.vis { opacity: 1; }
+.scan-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--aqua);
+  letter-spacing: 0.15em;
+  margin-top: 8px;
+}
+
+/* ── Footer ── */
+footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.signal-group {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.sig-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+  white-space: nowrap;
+}
+.sig-btn:hover { border-color: var(--accent); color: var(--text); }
+.sig-btn.active { border-color: var(--gold); color: var(--gold); }
+.btn-scan {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border: 1px solid var(--aqua);
+  border-radius: 4px;
+  background: rgba(74,255,232,0.04);
+  color: var(--aqua);
+  cursor: pointer;
+  transition: background .15s;
+  white-space: nowrap;
+  margin-left: 6px;
+}
+.btn-scan:hover { background: rgba(74,255,232,0.1); }
+.btn-scan:disabled { opacity: 0.4; pointer-events: none; }
+.spacer { flex: 1; }
+.status-txt {
+  font-family: 'Space Mono', monospace;
+  font-size: 8.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.status-txt em { font-style: normal; color: var(--text); }
+</style>
+
+<header>
+  <span class="h-title">Scanner Filmadora · α-φ</span>
+  <div class="h-meta">
+    <span>sinal <span id="hSig">—</span></span>
+    <span>H <span id="hHurst" class="hl">—</span></span>
+    <span>Coh média <span id="hCoh" class="hl">—</span></span>
+    <span>sementes φ <span id="hSeeds" class="hl">—</span></span>
+  </div>
+</header>
+
+<div class="canvas-wrap">
+  <canvas id="c"></canvas>
+
+  <div class="legend">
+    <div class="lg-title">LEGENDA DO SCAN</div>
+    <div class="lg-row">
+      <div class="lg-swatch" style="background:linear-gradient(90deg,#0E1E48,#1E4A90)"></div>
+      Entropia (Coh → α)
+    </div>
+    <div class="lg-row">
+      <div class="lg-swatch" style="background:linear-gradient(90deg,#C8960A,#F5D55A)"></div>
+      Coerência (Coh → φ)
+    </div>
+    <div class="lg-row">
+      <div class="lg-swatch" style="background:#4AFFE8;opacity:0.8"></div>
+      Simetria harmônica
+    </div>
+    <div class="lg-row">
+      <div class="lg-swatch" style="background:#6B3AFF"></div>
+      Projeção fractal φ
+    </div>
+    <div class="lg-row">
+      <div class="lg-swatch" style="background:#E84040;border-radius:50%"></div>
+      α — âncora entrópica
+    </div>
+    <hr class="lg-divider">
+    <div class="lg-note">
+      Anéis = bandas φ<br>
+      Ângulo = frequência (log)<br>
+      Brilho = Coh local<br>
+      Raio externo = Campo Harmônico
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="signal-group">
+    <button class="sig-btn" onclick="selectSignal('noise')">Ruído</button>
+    <button class="sig-btn" onclick="selectSignal('harm440')">Harmônico 440Hz</button>
+    <button class="sig-btn" onclick="selectSignal('pink')">Campo 1/f</button>
+    <button class="sig-btn" onclick="selectSignal('ecobip')">EcoBIP 880Hz</button>
+    <button class="sig-btn" onclick="selectSignal('misto')">Misto</button>
+  </div>
+  <button class="btn-scan" id="scanBtn" onclick="startScan()">⊙ Escanear</button>
+  <div class="spacer"></div>
+  <span class="status-txt" id="statTxt">selecione um sinal para escanear</span>
+</footer>
+
+<script>
+// ── Constants ────────────────────────────────────────────────────────────────
+const PHI   = (1 + Math.sqrt(5)) / 2;
+const ALPHA = 1 / 137.035999;
+const N_BAND  = 9;
+const N_ANG   = 720;  // half-degree resolution
+const DEG     = Math.PI / 180;
+
+// Band outer radii (normalized 0-1), inward from harmonic field boundary
+const BAND_R = [0.13, 0.23, 0.33, 0.43, 0.52, 0.61, 0.70, 0.79, 0.89];
+
+// ── Canvas setup ─────────────────────────────────────────────────────────────
+const canvas = document.getElementById('c');
+const ctx    = canvas.getContext('2d');
+let W, H, cx, cy, R, dpr;
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  const wrap = canvas.parentElement;
+  W = wrap.clientWidth; H = wrap.clientHeight;
+  canvas.width  = W * dpr; canvas.height = H * dpr;
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+  cx = W / 2; cy = H / 2;
+  R  = Math.min(cx, cy) * 0.88;
+}
+window.addEventListener('resize', () => { resize(); if (currentSig) drawScan(currentData, 1); });
+
+// ── Color ─────────────────────────────────────────────────────────────────────
+function cohRGB(coh) {
+  const t = Math.max(0, Math.min(1, (coh - ALPHA) / (1 - ALPHA)));
+  const s = [
+    [0.00, [14,  24,  72]],
+    [0.18, [22,  48,  110]],
+    [0.40, [30,  80,  155]],
+    [0.62, [168, 112, 16]],
+    [0.82, [240, 200, 70]],
+    [1.00, [255, 232, 154]],
+  ];
+  for (let i = 0; i < s.length - 1; i++) {
+    const [t0, c0] = s[i], [t1, c1] = s[i + 1];
+    if (t <= t1) {
+      const u = (t - t0) / (t1 - t0);
+      return [c0[0]+u*(c1[0]-c0[0]), c0[1]+u*(c1[1]-c0[1]), c0[2]+u*(c1[2]-c0[2])];
+    }
+  }
+  return [255, 232, 154];
+}
+
+// ── Signal generation ─────────────────────────────────────────────────────────
+// Each signal: Float32Array[N_BAND × N_ANG] = Coh at each (band, angle) cell
+
+function gaussian(x, mu, sigma) {
+  return Math.exp(-0.5 * ((x - mu) / sigma) ** 2);
+}
+
+function angDist(a, b) {
+  const d = Math.abs(a - b) % N_ANG;
+  return Math.min(d, N_ANG - d);
+}
+
+// Frequency → angle (log scale, 20Hz→8000Hz mapped to 0→N_ANG)
+function freqToAngle(hz) {
+  const logMin = Math.log2(20), logMax = Math.log2(8000);
+  return ((Math.log2(hz) - logMin) / (logMax - logMin) * N_ANG) % N_ANG;
+}
+
+function buildSignal(fn) {
+  const coh = new Float32Array(N_BAND * N_ANG);
+  for (let b = 0; b < N_BAND; b++)
+    for (let a = 0; a < N_ANG; a++)
+      coh[b * N_ANG + a] = fn(b, a);
+  return coh;
+}
+
+function addHarmonics(coh, fundamental_hz, n_harmonics, base_amp, spread_deg) {
+  const sigma = spread_deg / 0.5 * 0.5;
+  for (let k = 1; k <= n_harmonics; k++) {
+    const hz = fundamental_hz * k;
+    if (hz > 8000) break;
+    const ang = freqToAngle(hz);
+    const amp = base_amp / Math.sqrt(k);
+    for (let b = 0; b < N_BAND; b++) {
+      const band_amp = amp * (1 - b * 0.06);
+      for (let a = 0; a < N_ANG; a++) {
+        const dist = angDist(a, ang);
+        const gain = band_amp * gaussian(dist, 0, sigma);
+        coh[b * N_ANG + a] = Math.min(1 - ALPHA, coh[b * N_ANG + a] + gain);
+      }
+    }
+  }
+}
+
+const SIGNALS = {
+  noise: {
+    name: 'Ruído Branco',
+    hurst: 0.50,
+    build() {
+      const rng = mulberry32(137);
+      const coh = buildSignal((b, a) => ALPHA + rng() * 0.018 + rng() * 0.008);
+      return { coh, seeds: [], symmetries: [] };
+    }
+  },
+  harm440: {
+    name: 'Harmônico 440Hz',
+    hurst: 0.74,
+    build() {
+      const rng = mulberry32(42);
+      const coh = buildSignal((b, a) => ALPHA + rng() * 0.012);
+      addHarmonics(coh, 440, 7, 0.42, 3.8);
+      const ang = freqToAngle(440);
+      const seeds = [
+        { b: 2, a: Math.round(ang), prob: 0.88 },
+        { b: 4, a: Math.round(freqToAngle(880)), prob: 0.72 },
+        { b: 5, a: Math.round(freqToAngle(1320)), prob: 0.55 },
+      ];
+      const symmetries = [440, 880, 1320, 1760, 2200, 2640]
+        .filter(h => h <= 8000)
+        .map(h => ({ ang: freqToAngle(h), strength: 0.55 / Math.sqrt(h/440) }));
+      return { coh, seeds, symmetries };
+    }
+  },
+  pink: {
+    name: 'Campo 1/f · H≈1.0',
+    hurst: 0.95,
+    build() {
+      const rng = mulberry32(99);
+      // 1/f: inner bands (low freq) have higher Coh; outer bands more entropic
+      // In our model band 0 = lowest freq
+      const coh = buildSignal((b, a) => {
+        const base = 0.28 * Math.pow(PHI, -(b * 0.55));
+        const noise = rng() * 0.025;
+        const wave  = 0.018 * Math.sin(a / N_ANG * 2 * Math.PI * 3 + b);
+        return Math.max(ALPHA, base + noise + wave);
+      });
+      // Seeds at inner bands, spread angularly
+      const seeds = [1,2,3].map(b => ({
+        b, a: Math.round(N_ANG * 0.27), prob: 0.65 - b * 0.1
+      }));
+      // No strong harmonic symmetries — broad, isotropic
+      const symmetries = [];
+      return { coh, seeds, symmetries };
+    }
+  },
+  ecobip: {
+    name: 'EcoBIP 880Hz',
+    hurst: 0.81,
+    build() {
+      const rng = mulberry32(880);
+      // Base: slight 1/f tilt (eco processing leaves 1/f residue)
+      const coh = buildSignal((b, a) => {
+        const base = 0.12 * Math.pow(PHI, -(b * 0.4));
+        return Math.max(ALPHA, base + rng() * 0.014);
+      });
+      // EcoBIP: 880Hz fundamental with broader resonance (eco spreads energy)
+      addHarmonics(coh, 880, 5, 0.50, 5.5);
+      // Eco also creates sub-harmonic at 440Hz
+      addHarmonics(coh, 440, 2, 0.22, 7.0);
+      const seeds = [
+        { b: 3, a: Math.round(freqToAngle(880)),  prob: 0.91 },
+        { b: 5, a: Math.round(freqToAngle(1760)), prob: 0.75 },
+        { b: 6, a: Math.round(freqToAngle(2640)), prob: 0.58 },
+      ];
+      const symmetries = [880, 1760, 2640, 3520]
+        .filter(h => h <= 8000)
+        .map(h => ({ ang: freqToAngle(h), strength: 0.62 / Math.sqrt(h/880) }));
+      return { coh, seeds, symmetries };
+    }
+  },
+  misto: {
+    name: 'Campo Misto',
+    hurst: 0.68,
+    build() {
+      const rng = mulberry32(314);
+      // 1/f base
+      const coh = buildSignal((b, a) => {
+        const base = 0.14 * Math.pow(PHI, -(b * 0.45));
+        return Math.max(ALPHA, base + rng() * 0.016);
+      });
+      // Two harmonic clusters
+      addHarmonics(coh, 330, 5, 0.28, 4.2);  // E4
+      addHarmonics(coh, 660, 4, 0.32, 3.8);  // E5
+      addHarmonics(coh, 1320, 3, 0.22, 3.0); // E6
+      // Interaction between clusters creates extra seeds
+      const seeds = [
+        { b: 2, a: Math.round(freqToAngle(330)),  prob: 0.70 },
+        { b: 4, a: Math.round(freqToAngle(660)),  prob: 0.78 },
+        { b: 6, a: Math.round(freqToAngle(1320)), prob: 0.62 },
+        { b: 3, a: Math.round(freqToAngle(990)),  prob: 0.44 },  // intermodulation
+      ];
+      const symmetries = [330, 660, 990, 1320, 1650, 1980]
+        .filter(h => h <= 8000)
+        .map(h => ({ ang: freqToAngle(h), strength: 0.5 / Math.sqrt(h/330) }));
+      return { coh, seeds, symmetries };
+    }
+  }
+};
+
+function mulberry32(seed) {
+  let s = seed;
+  return function() {
+    s |= 0; s = s + 0x6D2B79F5 | 0;
+    let t = Math.imul(s ^ s >>> 15, 1 | s);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// ── Draw ──────────────────────────────────────────────────────────────────────
+let currentSig = null, currentData = null, scanProgress = 0, scanAnimId = null;
+
+function drawBase() {
+  ctx.save(); ctx.scale(dpr, dpr);
+  // Deep background
+  const bg = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 1.5);
+  bg.addColorStop(0, '#0D1530'); bg.addColorStop(0.6, '#070810'); bg.addColorStop(1, '#040509');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+  // Outer boundary ring (Campo Harmônico)
+  for (let i = 5; i >= 0; i--) {
+    ctx.beginPath(); ctx.arc(cx, cy, R * 0.90 + i * 2, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(245,213,90,${0.018 + i * 0.005})`;
+    ctx.lineWidth = 0.8 + i * 0.2; ctx.stroke();
+  }
+  ctx.font = '7.5px Space Mono, monospace';
+  ctx.fillStyle = 'rgba(245,213,90,0.2)';
+  ctx.textAlign = 'center';
+  ctx.fillText('Campo Harmônico · r = 1', cx, cy - R * 0.90 - 8);
+  ctx.restore();
+}
+
+function drawScan(data, progress) {
+  if (!data) return;
+  const { coh, seeds, symmetries } = data;
+  ctx.save(); ctx.scale(dpr, dpr);
+
+  // ── 1. Pixel fill — main radial image ──────────────────────────────────────
+  const imgData = ctx.createImageData(Math.round(W * dpr), Math.round(H * dpr));
+  const px = imgData.data;
+  const W2 = Math.round(W * dpr), H2 = Math.round(H * dpr);
+  const cx2 = cx * dpr, cy2 = cy * dpr, R2 = R * dpr;
+
+  // Revealed bands based on progress (inner to outer: α to harmonic field)
+  const revealedBands = Math.ceil(progress * N_BAND);
+
+  for (let y = 0; y < H2; y++) {
+    for (let x = 0; x < W2; x++) {
+      const dx = x - cx2, dy = y - cy2;
+      const dist = Math.sqrt(dx * dx + dy * dy) / R2;
+      if (dist < 0.05 || dist > 0.92) continue;
+
+      // Find band
+      let band = -1;
+      const r_inner = [0, ...BAND_R.slice(0, N_BAND - 1)];
+      for (let b = 0; b < N_BAND; b++) {
+        const lo = b === 0 ? 0.05 : BAND_R[b - 1];
+        if (dist >= lo && dist < BAND_R[b]) { band = b; break; }
+      }
+      if (band < 0 || band >= revealedBands) continue;
+
+      // Angle → angle index
+      let ang = ((Math.atan2(dy, dx) * 180 / Math.PI) + 360) % 360;
+      const angIdx = Math.floor(ang / 360 * N_ANG);
+
+      const cohVal = coh[band * N_ANG + Math.min(angIdx, N_ANG - 1)];
+
+      // Radial fade at band edges
+      const lo = band === 0 ? 0.05 : BAND_R[band - 1];
+      const hi = BAND_R[band];
+      const t  = (dist - lo) / (hi - lo);
+      const fade = 0.72 + 0.28 * Math.sin(t * Math.PI);
+
+      const [r, g, b2] = cohRGB(cohVal);
+      const idx = (y * W2 + x) * 4;
+      px[idx]   = Math.round(r * fade);
+      px[idx+1] = Math.round(g * fade);
+      px[idx+2] = Math.round(b2 * fade);
+      px[idx+3] = Math.round(200 * fade);
+    }
+  }
+  ctx.restore();
+  ctx.putImageData(imgData, 0, 0);
+  ctx.save(); ctx.scale(dpr, dpr);
+
+  // ── 2. Symmetry rays ────────────────────────────────────────────────────────
+  if (progress > 0.4) {
+    const symAlpha = Math.min(1, (progress - 0.4) / 0.3);
+    symmetries.forEach(({ ang, strength }) => {
+      const rad = ang / N_ANG * 2 * Math.PI - Math.PI / 2;
+      const r0 = 0.05 * R, r1 = 0.88 * R;
+      const grad = ctx.createLinearGradient(
+        cx + r0 * Math.cos(rad), cy + r0 * Math.sin(rad),
+        cx + r1 * Math.cos(rad), cy + r1 * Math.sin(rad)
+      );
+      grad.addColorStop(0, `rgba(74,255,232,0)`);
+      grad.addColorStop(0.3, `rgba(74,255,232,${strength * 0.35 * symAlpha})`);
+      grad.addColorStop(0.7, `rgba(74,255,232,${strength * 0.22 * symAlpha})`);
+      grad.addColorStop(1, `rgba(74,255,232,0)`);
+      ctx.beginPath();
+      ctx.moveTo(cx + r0 * Math.cos(rad), cy + r0 * Math.sin(rad));
+      ctx.lineTo(cx + r1 * Math.cos(rad), cy + r1 * Math.sin(rad));
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.0 + strength * 1.8;
+      ctx.stroke();
+    });
+  }
+
+  // ── 3. Fractal seed nodes + φ-spiral projections ────────────────────────────
+  if (progress > 0.65) {
+    const seedAlpha = Math.min(1, (progress - 0.65) / 0.25);
+    seeds.forEach(({ b, a, prob }) => {
+      if (b >= revealedBands) return;
+      const ang_rad = (a / N_ANG * 2 * Math.PI) - Math.PI / 2;
+      const r_mid   = ((b === 0 ? 0.05 : BAND_R[b-1]) + BAND_R[b]) / 2 * R;
+      const sx = cx + r_mid * Math.cos(ang_rad);
+      const sy = cy + r_mid * Math.sin(ang_rad);
+
+      // Glow
+      const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, 18 * prob);
+      g.addColorStop(0, `rgba(107,58,255,${0.5 * prob * seedAlpha})`);
+      g.addColorStop(0.5, `rgba(107,58,255,${0.2 * prob * seedAlpha})`);
+      g.addColorStop(1, `rgba(107,58,255,0)`);
+      ctx.beginPath(); ctx.arc(sx, sy, 18 * prob, 0, Math.PI * 2);
+      ctx.fillStyle = g; ctx.fill();
+
+      // φ-spiral projection
+      ctx.save();
+      ctx.globalAlpha = prob * 0.55 * seedAlpha;
+      ctx.beginPath();
+      ctx.moveTo(sx, sy);
+      let pr = 0;
+      for (let i = 0; i < 220; i++) {
+        const t  = i / 220;
+        pr       = 12 + t * 55 * prob;
+        const pa = ang_rad + t * Math.PI * 2.5 * (1 / PHI);
+        const px2 = sx + pr * Math.cos(pa);
+        const py  = sy + pr * Math.sin(pa);
+        i === 0 ? ctx.moveTo(px2, py) : ctx.lineTo(px2, py);
+      }
+      ctx.strokeStyle = `rgba(107,58,255,0.7)`;
+      ctx.lineWidth = 0.7;
+      ctx.stroke();
+
+      // Seed node
+      ctx.globalAlpha = seedAlpha;
+      ctx.shadowBlur = 10; ctx.shadowColor = '#6B3AFF';
+      ctx.beginPath(); ctx.arc(sx, sy, 2.5 + prob * 2, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(180,140,255,${0.85})`;
+      ctx.fill(); ctx.shadowBlur = 0;
+      ctx.restore();
+    });
+  }
+
+  // ── 4. Band labels (faint) ──────────────────────────────────────────────────
+  if (progress > 0.8) {
+    ctx.font = '7px Space Mono, monospace';
+    ctx.fillStyle = 'rgba(46,64,85,0.7)';
+    ctx.textAlign = 'left';
+    BAND_R.forEach((r, b) => {
+      ctx.fillText(`N${b}`, cx + r * R + 3, cy + 4);
+    });
+  }
+
+  // ── 5. Film grain overlay ───────────────────────────────────────────────────
+  if (progress === 1) {
+    ctx.globalAlpha = 0.025;
+    ctx.fillStyle = '#fff';
+    const grain = ctx.createImageData(2, 2);
+    // tiny dot pattern — just a visual texture hint
+    for (let y = 0; y < H; y += 3) {
+      for (let x = 0; x < W; x += 3) {
+        if (Math.random() > 0.985) {
+          ctx.fillRect(x, y, 1, 1);
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  // ── 6. Alpha center ─────────────────────────────────────────────────────────
+  const t = Date.now() / 1000;
+  const f = 0.72 + 0.28 * Math.sin(t * 6.3) * Math.sin(t * 2.7 + 0.8);
+  ctx.shadowBlur = 16; ctx.shadowColor = '#E84040';
+  ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI * 2);
+  ctx.fillStyle = `rgba(232,64,64,${0.9*f})`; ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.beginPath(); ctx.arc(cx, cy, 9, 0, Math.PI * 2);
+  ctx.fillStyle = `rgba(232,64,64,${0.07*f})`; ctx.fill();
+  ctx.font = '8px Space Mono, monospace';
+  ctx.fillStyle = `rgba(232,64,64,${0.4*f})`;
+  ctx.textAlign = 'center';
+  ctx.fillText('α', cx, cy + 17);
+
+  ctx.restore();
+}
+
+// ── Idle animation (keeps α pulsing) ─────────────────────────────────────────
+let idleId = null;
+function idleLoop() {
+  if (!currentData || scanProgress < 1) return;
+  drawBase();
+  drawScan(currentData, 1);
+  idleId = requestAnimationFrame(idleLoop);
+}
+
+// ── Scan animation ────────────────────────────────────────────────────────────
+function startScan() {
+  if (!currentSig) return;
+  if (idleId) { cancelAnimationFrame(idleId); idleId = null; }
+  if (scanAnimId) cancelAnimationFrame(scanAnimId);
+
+  const sig = SIGNALS[currentSig];
+  currentData = sig.build();
+  scanProgress = 0;
+
+  // Update header meta
+  const cohArr = currentData.coh;
+  const cohMean = cohArr.reduce((s, v) => s + v, 0) / cohArr.length;
+  document.getElementById('hSig').textContent = sig.name;
+  document.getElementById('hHurst').textContent = sig.hurst.toFixed(2);
+  document.getElementById('hCoh').textContent = cohMean.toFixed(4);
+  document.getElementById('hSeeds').textContent = currentData.seeds.length;
+  document.getElementById('scanBtn').disabled = true;
+  document.getElementById('statTxt').innerHTML = '<em>escaneando...</em>';
+
+  const DURATION_MS = 1800;
+  const start = performance.now();
+
+  function step(ts) {
+    const t = Math.min(1, (ts - start) / DURATION_MS);
+    scanProgress = easeInOut(t);
+    drawBase();
+    drawScan(currentData, scanProgress);
+
+    if (t < 1) {
+      scanAnimId = requestAnimationFrame(step);
+    } else {
+      scanProgress = 1;
+      document.getElementById('scanBtn').disabled = false;
+      document.getElementById('statTxt').innerHTML = `scan completo · ${currentData.seeds.length} sementes φ detectadas`;
+      idleLoop();
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function easeInOut(t) {
+  return t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+}
+
+// ── Signal selection ──────────────────────────────────────────────────────────
+function selectSignal(key) {
+  currentSig = key;
+  document.querySelectorAll('.sig-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('statTxt').innerHTML = `sinal: <em>${SIGNALS[key].name}</em> · pronto para escanear`;
+  if (idleId) { cancelAnimationFrame(idleId); idleId = null; }
+  // Show faint idle preview
+  currentData = SIGNALS[key].build();
+  resize();
+  drawBase();
+  drawScan(currentData, 0.08);  // barely visible teaser
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+resize();
+drawBase();
+</script>
