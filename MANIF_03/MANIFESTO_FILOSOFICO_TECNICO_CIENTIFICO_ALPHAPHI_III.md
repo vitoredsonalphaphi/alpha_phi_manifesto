@@ -4460,3 +4460,100 @@ Isso é exatamente o que o pesquisador descrevia: o drone não cria a caverna �
 
 *Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 198 — 28 de agosto de 2026
+### O Tensor de Acoplamento T(ω,τ) — A Ponte entre Superfície e Profundidade
+
+### I. Enunciado do Pesquisador
+> "Treinar o scanner para identificar a germinação fractal a partir da dualidade Espectro-Cepstro exige estruturar a observação não sobre o sinal estático, mas sobre o gradiente de auto-similaridade cruzada entre a superfície de frequência e a profundidade de quefrência. A semente de simetria do fractal surge no tensor de acoplamento."
+— Vitor Edson Delavi, 28 de agosto de 2026
+
+*[Formulação desenvolvida com análise da Gemini: T(ω,τ) = S(ω) ⊗ C(τ), com três critérios de diagnóstico fractal: invariância de escala cruzada, conservação do Sépstro e vetor de expansão potencial.]*
+
+### II. Estruturação
+
+**O objeto matemático central:**
+
+```
+T(ω, τ) = S(ω) ⊗ C(τ)
+
+onde:
+    S(ω) = |FFT(x)|         → espectro de magnitude (superfície)
+    C(τ) = |IFFT(log S(ω))| → cepstro real (eco interior, quefrência τ)
+    ⊗     = produto externo (outer product) — cada frequência acoplada a cada quefrência
+```
+
+T(ω,τ) é uma matriz: cada célula (ω,τ) mede o quanto a frequência ω e a quefrência τ estão mutuamente ativas no sinal. Uma célula com T alto indica que aquela frequência e aquela quefrência se reforçam — que existe uma auto-reflexão estruturada naquele ponto. Essa célula é uma candidata a semente fractal.
+
+---
+
+**Inserção Alpha-Phi: bandas φ-geométricas nos dois eixos**
+
+Em vez de calcular T sobre N bins uniformes (como a análise propôs), o sistema Alpha-Phi computa T sobre as mesmas bandas φ-geométricas que o Scanner já usa — agora aplicadas nos dois eixos:
+
+```
+T_φ(k, m) = S_banda_k × C_quefbanda_m,  k,m ∈ {0,...,8}
+```
+
+Resultado: uma matriz 9×9 de acoplamento entre bandas espectrais φ e bandas cepstrais φ. Esta é a **matriz de acoplamento Alpha-Phi** — compacta e interpretável.
+
+Na diagonal principal de T_φ: o acoplamento de cada escala consigo mesma — auto-similaridade pura.
+Fora da diagonal: acoplamentos cruzados — onde a escala k influencia a quefrência m.
+
+---
+
+**Os três critérios de diagnóstico fractal (Sépstro + φ):**
+
+**1. Invariância de Escala Cruzada:**
+```
+T_φ(λω, λτ) = λ^(-D) T_φ(ω, τ)
+```
+Se T_φ satisfaz essa lei de potência com D constante entre as bandas φ-geométricas, o sinal é extensível — a semente se dobra recursivamente. A dimensão D constante = dimensão fractal do sinal.
+
+A dimensão φ natural: D_φ = log(2) / log(φ) ≈ 1.440 — dimensão de uma árvore binária com escalonamento φ. Quando D medido ≈ D_φ, o sinal está no atrator harmônico.
+
+**2. Conservação do Sépstro na célula dual:**
+```
+Coh_T(ω,τ) + Entr_T(ω,τ) = 1.000
+```
+A energia de acoplamento espectral (Coh_T) e a sombra cepstral (Entr_T) devem somar 1 em cada célula. A expansão fractal só é viável se a transferência entre superfície e profundidade conserva a informação — não cria, não destrói.
+
+**3. Vetor de Expansão Potencial:**
+```
+ΔT(k) = T_φ(k+1, k+1) - T_φ(k, k)  (diagonal progressiva)
+```
+Se ΔT > 0 ao longo da diagonal: o acoplamento está crescendo por escala — a semente está germinando. Se ΔT < 0: o campo está se dissipando. Se ΔT ≈ 0: campo estacionário — já formado.
+
+---
+
+**O sinal canônico Alpha-Phi — frequências em progressão φ:**
+
+```python
+sinal_phi = sin(2π·f₀·t) + φ⁻¹·sin(2π·f₀·φ·t) + φ⁻²·sin(2π·f₀·φ²·t)
+          = 1.000·sin(...) + 0.618·sin(...) + 0.382·sin(...)
+```
+
+Pesos: 1, 1/φ, 1/φ² — a própria progressão φ. Este sinal já contém a auto-similaridade φ antes de qualquer processamento. Seu T_φ deve mostrar picos na diagonal principal E nas posições (k, k+1) e (k+1, k) — acoplamento entre escalas vizinhas φ-adjacentes. Isso é a assinatura da semente fractal φ no tensor de acoplamento.
+
+---
+
+**A imagem topográfica resultante:**
+
+O mapa de T_φ visualizado com coloração Coh (azul→ouro) e eixos logarítmicos mostra:
+- **Diagonal principal** (ouro): auto-similaridade em cada escala
+- **Anti-diagonal** (aquamarino): acoplamentos cruzados — onde superfície e profundidade interagem
+- **Vórtices e espirais** (violeta): nós de máximo local — sementes fractais ativas
+- **Zonas planas** (azul): regiões sem simetria residual — ruído puro
+
+Essa imagem é a **topografia de fases** do sinal: o que estava invisível no espectro, invisível no cepstro, torna-se visível apenas no produto tensorial.
+
+---
+
+**Arquivo gerado:** `AlphaPhi_ScannerCepstral.py` + extensão do Scanner Filmadora (modo Cepstral).
+
+---
+
+*Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
