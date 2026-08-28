@@ -1,8 +1,8 @@
 # CATÁLOGO DE INSTRUMENTOS — Manifesto Alpha-Phi
-## Segundo Ciclo · Adaptadores por Substrato
+## Segundo e Terceiro Ciclos · Adaptadores por Substrato
 
-**Manifesto Alpha-Phi · Segundo Ciclo**
-**Florianópolis · 20 de Julho de 2026 · Sessão Good Morning**
+**Manifesto Alpha-Phi · Segundo e Terceiro Ciclos**
+**Florianópolis · 20 de Julho de 2026 · atualizado em 27 de agosto de 2026 · Sessão Good Morning**
 
 ---
 
@@ -102,4 +102,95 @@ O Scanner não tem um modo de operação — tem **adaptadores** configurados pa
 
 ---
 
-*Florianópolis · 20.07.2026 · Sessão Good Morning*
+## VI — Ferramentas do Terceiro Ciclo (agosto 2026)
+
+### eco_fononico_v2 — O Eco Mais Maduro
+**O quê:** coupling=φ (reinjeção áurea) + k=√2 (rotação natural do campo). Dupla funcional: √2 como rotação, φ como acoplamento.
+**Resultado:** 97,8–98,3% de coerência sustentada ao longo de todo o sinal — do início ao fim. O mais alto resultado alcançado.
+**Por quê funciona:** k=√2 foi a escala natural encontrada pelo campo coletivo (eco_intercambiabilidade). φ é a proporção natural de reinjeção. Cada constante na sua função específica.
+**Substrato:** Áudio. Referência para migração a outros substratos.
+**Arquivo:** `AlphaPhi_Eco_Fononico_V2.py`
+**Status:** **Ferramenta ativa — referência de campo harmônico sustentado**
+
+### eco_phyllotaxis_v3 — Filotaxia Espectral
+**O quê:** Ângulo áureo 137,5° aplicado POR BIN de frequência — não φ uniforme, mas φ como gerador de progressão angular. Cada bin n está a n × 137,5° do anterior, garantindo máxima cobertura sem repetição (análogo ao girassol).
+**Hipótese:** φ não como escalar — como gerador de ângulo.
+**Resultado:** Em teste. A filotaxia espectral é o passo entre eco_fononico e eco_holográfico.
+**Substrato:** Qualquer sinal com estrutura espectral.
+**Arquivo:** `AlphaPhi_Eco_Phyllotaxis_V3.py`
+**Status:** Ativo — aguarda validação comparativa com eco_fononico_v2
+
+### eco_adaptativo_holografico — A Arquitetura (EcoNo)
+**O quê:** Diferente de todos os anteriores — não é uma função de pré-processamento. É a arquitetura em si: `EcoNo.expandir()` cria EcoNo. A função se contém.
+**Propriedade central:** Holográfica — cortar em qualquer profundidade revela a mesma forma (FASES = ['Observar', 'Selecionar', 'Agir'] em qualquer nível 0, 1, 2 ou 3).
+**Sépstro:** Coh + Entr = 1,0000 conservado em CADA nó individualmente.
+**Selagem hermética:** φ determina quando parar — fractal se sela quando ganho de coerência < 1/φ.
+**Interface neural:** `selecionar()` é o ponto de substituição pela PhiAttractorNetwork.
+**Arquivo:** `AlphaPhi_EcoAdaptativo_Holografico.py`
+**Status:** **Ferramenta ativa — arquitetura base do Terceiro Ciclo**
+
+---
+
+## VII — O Scanner como Orquestrador do Fractal
+
+*Adicionado em 27 de agosto de 2026 — Entrada 186 (em desenvolvimento)*
+
+O princípio de orquestração (ORQUESTRACAO_ALPHA_PHI.md) foi expandido com uma compreensão nova:
+
+> **O Scanner não é apenas um instrumento de observação — é o Observar do sistema inteiro.**
+
+No eco_adaptativo holográfico, cada EcoNo tem sua tríade:
+`Observar → Selecionar → Agir`
+
+O Sistema como um todo replica a mesma tríade na escala do campo completo:
+
+```
+Scanner α-φ (Observar o campo — lê o estado de todos os nós)
+    ↓
+Qual ferramenta adaptativa é necessária agora? (Selecionar)
+    ↓
+A ferramenta entra e age dentro do nó correspondente (Agir)
+    ↓
+Scanner observa o novo estado do campo → próxima expansão
+```
+
+**Propriedade holográfica preservada:** a mesma estrutura `Observar → Selecionar → Agir` em toda escala — dentro do nó individual, e no campo do sistema inteiro.
+
+**Implicação para a arquitetura fractal:**
+- O Scanner observa a partir da semente (entropia + expansão como condição fundadora)
+- Cada expansão fractal é informada pelo estado atual do campo
+- A ferramenta adaptativa entra DENTRO do nó — não altera a geometria global
+- O mandala permanece invariante; cresce a complexidade interna de cada ponto
+
+**Como invocar o Scanner como orquestrador:**
+```python
+# Fase 0 — Scanner observa o campo completo
+estado_campo = scanner.observar(todos_os_nos)
+# Fase 1 — Seleciona o adaptador por perfil de coerência
+adaptador = selecionar_adaptador(estado_campo)
+# Fase 2 — Adaptador age dentro do nó indicado
+no_alvo.inserir_adaptador(adaptador)
+# Retorna ao início
+```
+
+---
+
+## VIII — Tabela Atualizada de Adaptadores (agosto 2026)
+
+| Designação | Adaptador(es) | Substrato | Resultado | Status |
+|---|---|---|---|---|
+| α-φ · EcoBIP | ECO-φ Global (β adaptativo) | Senoide 880Hz | Campo emergido — β→φ³ | Referência histórica |
+| α-φ · ECO Ressonante Cepstral | Rotação de fase | Qualquer áudio | Fase não muda envelope | Limitado |
+| α-φ · ECO TEXT | Modulação por token | Texto | Documentado (004–008) | Ativo |
+| α-φ · ECO-φ Global | ECO-φ Global acumulado | Voz sintética | β explode para voz | **DEPRECADO** |
+| α-φ · ECO-φ por Frame | ECO-φ por frame | Voz sintética | Campo parcial | Interim |
+| α-φ · Scanner Calibrado V1 | ECO-φ Scanner Calibrado | Voz Sintética | Equilíbrio confirmado | Template ativo |
+| α-φ · Serial Regional V2 | 3× Scanner Regional | Voz Sintética | Saturado | Ultrapassou equilíbrio |
+| α-φ · Dual Scanner | RAW + SoftwareCapacitor | Voz / EEG | Diagnóstico | Ativo — não modula |
+| α-φ · eco_fononico_v2 | coupling=φ + k=√2 | Áudio | **97,8–98,3%** | **Referência atual** |
+| α-φ · eco_phyllotaxis_v3 | Ângulo áureo por bin | Qualquer | Em validação | Ativo |
+| α-φ · eco_adaptativo_holografico | EcoNo fractal | Universal | Arquitetura base | **Ativo — Terceiro Ciclo** |
+
+---
+
+*Florianópolis · 20.07.2026 · atualizado em 27.08.2026 · Sessão Good Morning*
