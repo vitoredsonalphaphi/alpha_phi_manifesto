@@ -1,0 +1,724 @@
+<title>Fractal Campo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500&display=swap">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #080A10;
+  --canvas:  #0D1525;
+  --text:    #D4C9A8;
+  --muted:   #3E5060;
+  --accent:  #C8960A;
+  --gold:    #F5D55A;
+  --seal:    #4AFFE8;
+  --alpha:   #E84040;
+  --panel:   rgba(10,16,28,0.94);
+  --border:  rgba(26,43,64,0.9);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', system-ui, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 12px;
+}
+.header-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+.header-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  display: flex;
+  gap: 16px;
+}
+.cv { color: var(--accent); }
+
+.canvas-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+canvas { display: block; }
+
+/* ── Depth panel ── */
+.depth-panel {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 168px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+}
+.dp-title {
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  font-size: 8px;
+}
+.dp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.dp-label {
+  width: 18px;
+  color: var(--muted);
+  text-align: right;
+  flex-shrink: 0;
+  font-size: 9px;
+}
+.dp-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(26,43,64,0.5);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.dp-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease, background 0.4s ease;
+  width: 0%;
+}
+.dp-val {
+  width: 38px;
+  text-align: right;
+  color: var(--text);
+  font-size: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.dp-sealed {
+  font-size: 7px;
+  color: var(--seal);
+  letter-spacing: 0.08em;
+  margin-left: 2px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.dp-sealed.vis { opacity: 1; }
+
+.dp-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 10px 0;
+}
+
+.dp-stat {
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1.6;
+}
+.dp-stat span { color: var(--text); }
+
+/* ── Footer ── */
+footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 16px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  padding: 5px 11px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.prime { border-color: var(--accent); color: var(--accent); }
+.btn.prime:hover { background: rgba(200,150,10,0.1); }
+.btn.running { border-color: var(--alpha); color: var(--alpha); }
+
+.slider-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 160px;
+}
+.slider-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+input[type=range] {
+  flex: 1;
+  accent-color: var(--accent);
+  height: 3px;
+}
+.slider-val {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--accent);
+  width: 32px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.spacer { flex: 1; }
+
+.status {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.hl { color: var(--gold); }
+</style>
+
+<header>
+  <span class="header-title">eco_adaptativo · Fractal Campo</span>
+  <div class="header-sub">
+    <span>φ = <span class="cv">1.6180339887</span></span>
+    <span>α = <span class="cv">1/137.036</span></span>
+    <span>SEAL = <span class="cv">1/φ</span></span>
+    <span>critério = <span class="cv">(1−Coh)·φ⁻¹ &lt; α</span></span>
+  </div>
+</header>
+
+<div class="canvas-wrap">
+  <canvas id="c"></canvas>
+
+  <div class="depth-panel" id="depthPanel">
+    <div class="dp-title">COH POR PROFUNDIDADE</div>
+    <div class="dp-row" id="dr0">
+      <span class="dp-label">Σ</span>
+      <div class="dp-track"><div class="dp-fill" id="df0"></div></div>
+      <span class="dp-val" id="dv0">α</span>
+      <span class="dp-sealed" id="ds0">SELADO</span>
+    </div>
+    <div class="dp-row" id="dr1">
+      <span class="dp-label">N1</span>
+      <div class="dp-track"><div class="dp-fill" id="df1"></div></div>
+      <span class="dp-val" id="dv1">—</span>
+      <span class="dp-sealed" id="ds1">SELADO</span>
+    </div>
+    <div class="dp-row" id="dr2">
+      <span class="dp-label">N2</span>
+      <div class="dp-track"><div class="dp-fill" id="df2"></div></div>
+      <span class="dp-val" id="dv2">—</span>
+      <span class="dp-sealed" id="ds2">SELADO</span>
+    </div>
+    <div class="dp-row" id="dr3">
+      <span class="dp-label">N3</span>
+      <div class="dp-track"><div class="dp-fill" id="df3"></div></div>
+      <span class="dp-val" id="dv3">—</span>
+      <span class="dp-sealed" id="ds3">SELADO</span>
+    </div>
+    <hr class="dp-divider">
+    <div class="dp-stat">
+      nós ativos <span id="statNos">—</span><br>
+      selados <span id="statSeal">0</span><br>
+      Coh média <span id="statMean">α</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <button class="btn prime" id="animBtn" onclick="toggleAnim()">▶ Construir</button>
+  <button class="btn" onclick="doReset()">↺ Resetar</button>
+  <div class="slider-group">
+    <span class="slider-label">alinhamento φ</span>
+    <input type="range" id="alignSlider" min="0" max="100" value="40"
+           oninput="onAlign(this.value)">
+    <span class="slider-val" id="alignVal">0.40</span>
+  </div>
+  <div class="spacer"></div>
+  <div class="status" id="stat">
+    ciclo <span class="hl" id="statCyc">0</span> · profundidade <span class="hl" id="statDep">0</span>
+  </div>
+</footer>
+
+<script>
+// ── Constants ────────────────────────────────────────────────────────────────
+const PHI   = (1 + Math.sqrt(5)) / 2;
+const ALPHA = 1 / 137.035999;
+const SEAL  = 1 / PHI;
+const DEPTH_R = [0, 0.33, 0.58, 0.80];
+const MAX_DEPTH = 3;
+const SEAL_COH  = 1 - ALPHA * PHI;   // ≈ 0.9882 — critério hermético
+
+let alignment = 0.40;   // 0 = ruído puro, 1 = campo harmônico
+
+// ── Septro ───────────────────────────────────────────────────────────────────
+class Septro {
+  constructor() { this.coh = ALPHA; this.entr = 1 - ALPHA; }
+  update(a) {
+    const g = Math.max(0, Math.min(a * (1 - this.coh) * SEAL, 1 - this.coh));
+    this.coh += g;
+    this.entr = 1 - this.coh;
+    return g;
+  }
+  sealed() { return (1 - this.coh) * SEAL < ALPHA; }
+}
+
+// ── FractalNode (binário) ─────────────────────────────────────────────────────
+class FractalNode {
+  constructor(depth, angle, parent) {
+    this.depth   = depth;
+    this.angle   = angle;
+    this.parent  = parent;
+    this.septro  = new Septro();
+    this.children = [];
+    this.x = 0; this.y = 0;
+    this.pulse     = 0;
+    this.sealFlash = 0;   // 0→1 burst on seal event
+    this.active    = false;
+    this.expanded  = false;
+  }
+
+  layout(cx, cy, R) {
+    const r   = (DEPTH_R[Math.min(this.depth, 3)] || 0) * R;
+    const rad = this.angle * Math.PI / 180;
+    this.x = this.depth === 0 ? cx : cx + r * Math.cos(rad);
+    this.y = this.depth === 0 ? cy : cy + r * Math.sin(rad);
+    this.children.forEach(c => c.layout(cx, cy, R));
+  }
+
+  processar(parentCoh) {
+    if (!this.active) return;
+    // Alinhamento φ escalado pela profundidade — filhos profundos recebem
+    // sinal já refinado, com alinhamento ligeiramente maior
+    const a = Math.min(1, alignment * (1 + this.depth * 0.1));
+    const wasSealed = this.septro.sealed();
+    this.septro.update(a);
+    this.pulse = 1.0;
+    if (!wasSealed && this.septro.sealed()) {
+      this.sealFlash = 1.0;   // triggera o burst dourado
+    }
+  }
+
+  expand() {
+    if (this.expanded || this.depth >= MAX_DEPTH || this.septro.sealed()) return;
+    this.expanded = true;
+    // Dois filhos — ângulos simétricos ao redor do ângulo do pai
+    const spread = Math.max(15, 60 - this.depth * 18);
+    const angles = [this.angle - spread, this.angle + spread];
+    angles.forEach(a => {
+      const child = new FractalNode(this.depth + 1, a, this);
+      child.layout(cx, cy, R);
+      child.active = true;
+      this.children.push(child);
+    });
+  }
+
+  allNodes() {
+    const r = [this];
+    this.children.forEach(c => r.push(...c.allNodes()));
+    return r;
+  }
+
+  nodesAtDepth(d) { return this.allNodes().filter(n => n.depth === d && n.active); }
+}
+
+// ── State ─────────────────────────────────────────────────────────────────────
+const canvas = document.getElementById('c');
+const ctx    = canvas.getContext('2d');
+let cx, cy, R;
+let root = null;
+let animOn = false, cycle = 0, waveDepth = 0, waveT = 0, lastTs = 0;
+const WAVE_MS   = 520;
+const MAX_CYCLES = 12;
+let rafId = null;
+
+function build() {
+  root = new FractalNode(0, 90, null);
+  if (cx) root.layout(cx, cy, R);
+  root.active = true;
+  cycle = 0; waveDepth = 0; waveT = 0;
+}
+
+function resize() {
+  const wrap = canvas.parentElement;
+  const dpr  = window.devicePixelRatio || 1;
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  canvas.width  = W * dpr; canvas.height = H * dpr;
+  canvas.style.width  = W + 'px';
+  canvas.style.height = H + 'px';
+  cx = W / 2; cy = H / 2;
+  R  = Math.min(cx, cy) * 0.81;
+  if (root) root.layout(cx, cy, R);
+}
+window.addEventListener('resize', resize);
+
+// ── Color ─────────────────────────────────────────────────────────────────────
+function cohColor(coh, alpha = 1) {
+  const t = Math.max(0, Math.min(1, (coh - ALPHA) / (1 - ALPHA)));
+  const stops = [
+    [0.00, [22, 48, 96]],
+    [0.35, [30, 74, 148]],
+    [0.60, [168, 112, 16]],
+    [0.82, [245, 213, 90]],
+    [1.00, [255, 232, 154]],
+  ];
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [t0, c0] = stops[i], [t1, c1] = stops[i + 1];
+    if (t <= t1) {
+      const u = (t - t0) / (t1 - t0);
+      const r = Math.round(c0[0] + u * (c1[0] - c0[0]));
+      const g = Math.round(c0[1] + u * (c1[1] - c0[1]));
+      const b = Math.round(c0[2] + u * (c1[2] - c0[2]));
+      return `rgba(${r},${g},${b},${alpha})`;
+    }
+  }
+  return `rgba(255,232,154,${alpha})`;
+}
+
+function sealColor(flash) {
+  const r = Math.round(74 + flash * (255 - 74));
+  const g = Math.round(255 - flash * 23);
+  const b = Math.round(232 - flash * 232);
+  return `rgba(${r},${g},${b},${0.5 + flash * 0.5})`;
+}
+
+// ── Draw ──────────────────────────────────────────────────────────────────────
+function draw(ts) {
+  if (!root) return;
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.width / dpr, H = canvas.height / dpr;
+  ctx.save(); ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  // Background gradient
+  const bg = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 1.5);
+  bg.addColorStop(0, '#0D1525'); bg.addColorStop(1, '#080A10');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+  // Campo Harmônico ring
+  for (let i = 5; i >= 0; i--) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, R + i * 2.2, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(255,228,130,${0.025 + i * 0.007})`;
+    ctx.lineWidth = i === 0 ? 0.8 : 1.2 + i * 0.25;
+    ctx.stroke();
+  }
+  ctx.font = '8px Space Mono, monospace';
+  ctx.fillStyle = 'rgba(255,232,154,0.22)';
+  ctx.textAlign = 'center';
+  ctx.fillText('Campo Harmônico', cx, cy - R - 10);
+
+  // Depth guide rings (dashed)
+  for (let d = 1; d <= MAX_DEPTH; d++) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, DEPTH_R[d] * R, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(40,70,110,0.15)';
+    ctx.lineWidth = 0.5;
+    ctx.setLineDash([2, 8]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Depth ring labels
+    const lx = cx + DEPTH_R[d] * R + 6;
+    const avgCoh = avgCohAtDepth(d);
+    ctx.font = '8px Space Mono, monospace';
+    ctx.fillStyle = avgCoh > 0.01 ? cohColor(avgCoh, 0.35) : 'rgba(62,80,96,0.35)';
+    ctx.textAlign = 'left';
+    ctx.fillText(`r=${DEPTH_R[d]}`, lx, cy + 4);
+  }
+
+  // φ spiral (outward, very subtle)
+  ctx.beginPath();
+  const turns = 2.5;
+  for (let i = 0; i <= 300; i++) {
+    const t = i / 300;
+    const r = R * t * SEAL;
+    const ang = t * turns * 2 * Math.PI;
+    const x = cx + r * Math.cos(ang), y = cy + r * Math.sin(ang);
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  }
+  ctx.strokeStyle = 'rgba(200,150,30,0.06)';
+  ctx.lineWidth = 0.7;
+  ctx.stroke();
+
+  // Connections (parent → child)
+  drawConnections(root);
+
+  // Nodes
+  const all = root.allNodes().filter(n => n.active && n.depth > 0);
+  all.forEach(n => drawNode(n));
+  drawAlpha(ts);
+
+  // Decay pulses and flashes
+  root.allNodes().forEach(n => {
+    n.pulse     = Math.max(0, n.pulse - 0.022);
+    n.sealFlash = Math.max(0, n.sealFlash - 0.018);
+  });
+
+  ctx.restore();
+  updateDepthPanel();
+}
+
+function drawConnections(node) {
+  node.children.forEach(child => {
+    if (!child.active) return;
+    const p    = Math.max(node.pulse, child.pulse);
+    const coh  = (node.septro.coh + child.septro.coh) / 2;
+    const a    = 0.03 + coh * 0.2 + p * 0.18;
+
+    // Chain direction indicator — small arrowhead midpoint
+    const mx = (node.x + child.x) / 2;
+    const my = (node.y + child.y) / 2;
+
+    ctx.beginPath();
+    ctx.moveTo(node.x, node.y);
+    ctx.lineTo(child.x, child.y);
+    ctx.strokeStyle = cohColor(coh, a);
+    ctx.lineWidth = 0.3 + p * 0.8;
+    ctx.stroke();
+
+    // Directional dot at midpoint (shows data flow)
+    if (p > 0.1) {
+      ctx.beginPath();
+      ctx.arc(mx, my, 1.5 * p, 0, Math.PI * 2);
+      ctx.fillStyle = cohColor(coh, p * 0.6);
+      ctx.fill();
+    }
+
+    drawConnections(child);
+  });
+}
+
+function drawNode(n) {
+  const p  = n.pulse;
+  const sf = n.sealFlash;
+  const br = Math.max(2.5, 9 - n.depth * 2);
+  const r  = br + p * 5;
+  const isSealed = n.septro.sealed();
+
+  // Seal flash burst (one-time event)
+  if (sf > 0) {
+    const burstR = r + 22 * sf;
+    const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, burstR);
+    grad.addColorStop(0, `rgba(74,255,232,${0.3 * sf})`);
+    grad.addColorStop(0.5, `rgba(74,255,232,${0.12 * sf})`);
+    grad.addColorStop(1, 'rgba(74,255,232,0)');
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, burstR, 0, Math.PI * 2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+  }
+
+  // Glow halo
+  if (p > 0.05 || isSealed) {
+    const haloR = r + (isSealed ? 10 : 8 * p);
+    const haloA = isSealed ? 0.08 : 0.07 * p;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, haloR, 0, Math.PI * 2);
+    ctx.fillStyle = isSealed ? `rgba(74,255,232,${haloA})` : cohColor(n.septro.coh, haloA);
+    ctx.fill();
+  }
+
+  // Shadow glow
+  if (p > 0.15 || isSealed) {
+    ctx.shadowBlur   = isSealed ? 12 : 12 * p;
+    ctx.shadowColor  = isSealed ? '#4AFFE8' : '#F5D55A';
+  }
+
+  // Main circle
+  ctx.beginPath();
+  ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+  ctx.fillStyle = cohColor(n.septro.coh);
+  ctx.fill();
+  ctx.shadowBlur = 0;
+
+  // Hermetic seal ring — thin circle around sealed node
+  if (isSealed) {
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, r + 3, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(74,255,232,0.7)`;
+    ctx.lineWidth = 0.8;
+    ctx.stroke();
+    // Inner flicker
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, r + 1.5, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(255,232,154,0.3)`;
+    ctx.lineWidth = 0.4;
+    ctx.stroke();
+  }
+
+  // Phase mini-label at depth 1
+  if (n.depth === 1) {
+    ctx.font = '7px Space Mono, monospace';
+    ctx.fillStyle = `rgba(212,201,168,${0.35 + n.septro.coh * 0.45})`;
+    ctx.textAlign = 'center';
+    ctx.fillText(n.children.length === 0 && n.septro.sealed() ? '⊙' :
+                 (n.angle < 180 ? 'f₁' : 'f₂'), n.x, n.y + r + 11);
+  }
+}
+
+function drawAlpha(ts) {
+  const t = (ts || 0) / 1000;
+  const f = 0.7 + 0.3 * Math.sin(t * 6.5) * Math.sin(t * 2.8 + 1.1);
+  ctx.shadowBlur = 16; ctx.shadowColor = '#E84040';
+  ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI * 2);
+  ctx.fillStyle = `rgba(232,64,64,${0.88 * f})`; ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.beginPath(); ctx.arc(cx, cy, 9, 0, Math.PI * 2);
+  ctx.fillStyle = `rgba(232,64,64,${0.08 * f})`; ctx.fill();
+  ctx.font = '9px Space Mono, monospace';
+  ctx.fillStyle = `rgba(232,64,64,${0.45 * f})`;
+  ctx.textAlign = 'center';
+  ctx.fillText('α', cx, cy + 18);
+}
+
+// ── Depth panel ───────────────────────────────────────────────────────────────
+function avgCohAtDepth(d) {
+  if (!root) return 0;
+  const nodes = root.nodesAtDepth(d);
+  if (!nodes.length) return 0;
+  return nodes.reduce((s, n) => s + n.septro.coh, 0) / nodes.length;
+}
+
+function updateDepthPanel() {
+  if (!root) return;
+  const all = root.allNodes().filter(n => n.active);
+  const sealed = all.filter(n => n.septro.sealed()).length;
+
+  for (let d = 0; d <= MAX_DEPTH; d++) {
+    const nodes = root.nodesAtDepth(d);
+    if (!nodes.length && d > 0) {
+      document.getElementById(`dv${d}`).textContent = '—';
+      document.getElementById(`df${d}`).style.width = '0%';
+      document.getElementById(`ds${d}`).classList.remove('vis');
+      continue;
+    }
+    const coh = d === 0 ? root.septro.coh : avgCohAtDepth(d);
+    const pct = ((coh - ALPHA) / (1 - ALPHA) * 100).toFixed(1);
+    const fill = document.getElementById(`df${d}`);
+    fill.style.width = pct + '%';
+    fill.style.background = cohColor(coh);
+    document.getElementById(`dv${d}`).textContent = coh.toFixed(4);
+    const allSealed = d === 0 ? root.septro.sealed() :
+                      nodes.length > 0 && nodes.every(n => n.septro.sealed());
+    document.getElementById(`ds${d}`).classList.toggle('vis', allSealed);
+  }
+
+  document.getElementById('statNos').textContent = all.length;
+  document.getElementById('statSeal').textContent = sealed;
+  const meanCoh = all.reduce((s, n) => s + n.septro.coh, 0) / (all.length || 1);
+  document.getElementById('statMean').textContent = meanCoh.toFixed(5);
+}
+
+// ── Animation ─────────────────────────────────────────────────────────────────
+function animFrame(ts) {
+  if (!animOn) return;
+  if (!lastTs) lastTs = ts;
+  const dt = ts - lastTs; lastTs = ts;
+  waveT += dt;
+
+  if (waveT >= WAVE_MS) {
+    waveT = 0;
+
+    // Processar nós na profundidade atual
+    const nodesHere = root.nodesAtDepth(waveDepth);
+    nodesHere.forEach(n => {
+      if (!n.active) return;
+      const parentCoh = n.parent ? n.parent.septro.coh : ALPHA;
+      n.processar(parentCoh);
+    });
+
+    // Expandir nós não selados para próxima profundidade
+    if (waveDepth < MAX_DEPTH) {
+      nodesHere.forEach(n => {
+        if (n.active && !n.septro.sealed()) n.expand();
+      });
+    }
+
+    waveDepth++;
+    if (waveDepth > MAX_DEPTH) {
+      waveDepth = 0;
+      cycle++;
+      if (cycle >= MAX_CYCLES) { stopAnim(); }
+    }
+
+    updateStat();
+  }
+
+  draw(ts);
+  rafId = requestAnimationFrame(animFrame);
+}
+
+function idleLoop(ts) {
+  draw(ts);
+  rafId = requestAnimationFrame(idleLoop);
+}
+
+function toggleAnim() { animOn ? stopAnim() : startAnim(); }
+
+function startAnim() {
+  animOn = true; lastTs = 0; waveT = 0;
+  const b = document.getElementById('animBtn');
+  b.textContent = '■ Parar'; b.classList.add('running');
+  if (rafId) cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(animFrame);
+}
+function stopAnim() {
+  animOn = false;
+  const b = document.getElementById('animBtn');
+  b.textContent = '▶ Construir'; b.classList.remove('running');
+  cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(idleLoop);
+}
+
+// ── UI ────────────────────────────────────────────────────────────────────────
+function doReset() {
+  if (animOn) stopAnim();
+  build();
+  cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(idleLoop);
+  updateStat();
+}
+
+function updateStat() {
+  document.getElementById('statCyc').textContent = cycle;
+  document.getElementById('statDep').textContent = waveDepth;
+}
+
+function onAlign(v) {
+  alignment = v / 100;
+  document.getElementById('alignVal').textContent = alignment.toFixed(2);
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+resize();
+build();
+updateStat();
+rafId = requestAnimationFrame(idleLoop);
+</script>

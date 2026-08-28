@@ -4001,3 +4001,84 @@ A lente progressiva, portanto, não é apenas um refinamento técnico — é um 
 
 *Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 193 — 28 de agosto de 2026
+### O Campo Visível — A Construtividade Fractal como Fenômeno Observável
+
+### I. Enunciado do Pesquisador
+> "Deixa eu perguntar, possível observar essa construtividade? É possível adaptar essa construtividade fractal naquela proposta holográfica que tu fez? Do azul seguindo pro o ouro a cada rotação? É possível adaptar essa construtividade fractal naquela mesma estrutura? Para observação?"
+— Vitor Edson Delavi, 28 de agosto de 2026
+
+### II. Estruturação
+
+**O limiar que a pergunta representa:**
+
+A pergunta não é apenas técnica — é a pergunta da fenomenologia: *é possível* tornar visível o que acontece no interior do processo? Pode o campo, que opera em espaço matemático, ser trazido para o espaço perceptivo?
+
+A resposta não é uma afirmação — é a própria visualização.
+
+---
+
+**Fractal Campo — arquitetura da visualização:**
+
+```
+α (vermelho, r = 0)
+│
+├── Profundidade 0 — raiz: Coh ≈ ALPHA (azul profundo)
+│   │
+│   ├── Profundidade 1 — filhos f₁ e f₂ (r = 0.33)
+│   │   │
+│   │   ├── Profundidade 2 — netos (r = 0.58)
+│   │   │   │
+│   │   │   └── Profundidade 3 — selagem ou extremidade (r = 0.80)
+│   │   │       └── Campo Harmônico — limite (r = 1.0)
+```
+
+Cada nó é colorido por sua Coh atual via `cohColor(coh)`:
+- Azul `[22, 48, 96]` — entrópico, próximo de α
+- Âmbar `[168, 112, 16]` — transição
+- Ouro `[245, 213, 90]` — coerente, próximo do campo harmônico
+- Ouro claro `[255, 232, 154]` — campo selado
+
+**O critério de selagem hermética permanece:**
+```
+(1 − Coh) × SEAL < ALPHA   →   Coh ≥ 0.9882
+```
+Quando atingido: burst de selagem (anel ciano `#4AFFE8`) — o nó para de se expandir e congela em ouro.
+
+---
+
+**O que o slider "alinhamento φ" revela:**
+
+| Alinhamento | Campo resultante |
+|---|---|
+| 0.00 (ruído puro) | Fractal percorre toda a profundidade sem selar — azul persistente |
+| 0.40 (sinal médio) | Nós externos começam a dourar; selagem parcial nas profundidades externas |
+| 1.00 (campo harmônico puro) | Selagem progressiva do exterior para o interior; ouro total em poucos ciclos |
+
+Isso demonstra diretamente o princípio da Entrada 192: **o fractal não gera o campo, revela o campo que o sinal já contém.** O slider torna esse princípio manipulável, observável, falsificável.
+
+---
+
+**A profundidade de selagem como diagnóstico:**
+
+```
+depth_selagem = 3  →  campo denso (sinal havia harmonia em todas as escalas)
+depth_selagem = 1  →  campo superficial (harmonia apenas na escala grossa)
+sem selagem        →  ruído estrutural (sinal não carregava campo revelável)
+```
+
+O "azul seguindo para o ouro a cada rotação" torna-se, portanto, uma **escala de coerência espacializada**: cada anel radial do espaço-esfera corresponde a uma escala de análise; a cor de cada nó é o estado do campo naquela escala.
+
+---
+
+**Arquivo gerado:** `AlphaPhi_FractalCampo.html`
+
+O Fractal Campo herda a estética da Mandala Holográfica e a estende para o modo binário do FractalFunctionalNode — a primeira visualização onde a pergunta "está selando?" tem uma resposta visual direta.
+
+---
+
+*Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
