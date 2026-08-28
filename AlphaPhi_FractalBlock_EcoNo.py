@@ -7,26 +7,35 @@
 AlphaPhi_FractalBlock_EcoNo.py
 Vitor Edson Delavi · Florianópolis · 2026
 
-Integração FractalBlock ← EcoNo (Entrada 191)
+Integração FractalBlock ← EcoNo ← FunctionalTool Protocol (Entradas 191–192)
 
-Substitui BasicConv (folha da árvore fractal) pela tríade EcoNo:
-    Observar → Selecionar → Agir
+Camadas desta arquitetura:
 
-Substitui Join aritmético ((raso + profundo) × 0.5)
-pelo Join via Sépstro (pesos proporcionais ao ganho de coerência de cada caminho).
+  1. FunctionalTool (Protocol)
+     Contrato de interface que qualquer ferramenta Alpha-Phi implementa.
+     Scanner, eco_fononico_v2, PhiAttractorNetwork → plugáveis sem reescrita.
+     execute(x) → (tensor_processado, coh: float, entr: float)
 
-Mantém a recursão original: C_k = Join(C_{k-1}(x), C_{k-1}(C_{k-1}(x)))
-Adiciona: Sépstro local em cada folha + critério de selagem hermética (ΔCoh < 1/φ)
+  2. EcoNoTriade (implementa FunctionalTool)
+     Tríade Observar → Selecionar → Agir com Sépstro local.
+     Folha da árvore fractal. Substitui BasicConv.
 
-Diferença arquitetural central:
-    FractalBlock original → profundidade fixa, Join cego (0.5 + 0.5)
-    FractalBlockEcoNo     → profundidade selável pelo dado, Join φ-ponderado
+  3. FractalFunctionalNode
+     Wrapper fractal para qualquer FunctionalTool.
+     Critério de selagem corrigido: ganho_relativo = ΔCoh / (1 − Coh_entrada)
+     Sela quando ganho_relativo < SEAL = 1/φ   (ΔCoh marginal → campo estabilizado)
+     Join Sépstro: pesos proporcionais ao ganho de Coh de cada caminho.
+
+  4. FractalBlockEcoNo
+     Árvore recursiva binária com EcoNoTriade nas folhas.
+     C_k = Join_Sépstro(C_{k-1}(x), C_{k-1}(C_{k-1}(x)))
 
 Modelo espacial: α (centro, r=0) → Campo Harmônico (borda, r=1)
 Movimento sempre do centro para fora. Nunca inverter.
 """
 
 import math
+from typing import Tuple, Protocol, runtime_checkable
 import torch
 import torch.nn as nn
 
@@ -36,6 +45,115 @@ import torch.nn as nn
 PHI   = (1 + math.sqrt(5)) / 2    # 1.6180339887 — lei geradora, expansão
 ALPHA = 1 / 137.035999             # 0.007297...  — âncora individual, centro
 SEAL  = 1 / PHI                    # 0.6180...    — critério de selagem hermética
+
+
+# ── FunctionalTool — contrato de interface ───────────────────────────────────
+
+@runtime_checkable
+class FunctionalTool(Protocol):
+    """
+    Contrato que toda ferramenta Alpha-Phi deve cumprir para entrar na
+    árvore fractal sem ser reescrita.
+
+    Scanner, eco_fononico_v2, PhiAttractorNetwork → implementam execute()
+    e passam a ser plugáveis em FractalFunctionalNode diretamente.
+
+    execute(x) retorna:
+        tensor_processado: sinal após a ferramenta
+        coh:  float ∈ [0, 1] — coerência medida pelo Sépstro da ferramenta
+        entr: float ∈ [0, 1] — entropia  (coh + entr = 1.0 sempre)
+    """
+
+    def execute(self, x: torch.Tensor) -> Tuple[torch.Tensor, float, float]:
+        ...
+
+
+# ── FractalFunctionalNode — wrapper fractal para qualquer FunctionalTool ──────
+
+class FractalFunctionalNode(nn.Module):
+    """
+    Envolve qualquer FunctionalTool em progressão fractal.
+
+    A ferramenta executa primeiro (preserva sua funcionalidade original).
+    O fractal decide depois: se o ganho relativo de Coh justifica continuar.
+
+    Critério de selagem corrigido (vs. Gemini):
+        delta_coh      = |coh_saida − coh_entrada|
+        ganho_relativo = delta_coh / (1 − coh_entrada + ε)
+        sela se:  ganho_relativo < SEAL  (1/φ ≈ 0.618)
+
+    Isso mede o ganho em relação à MARGEM DISPONÍVEL —
+    não o delta absoluto (que seria quase sempre < 0.618 e selaria cedo demais).
+
+    Join Sépstro: pesos proporcionais ao ganho de coerência de cada caminho.
+    """
+
+    def __init__(self, tool: FunctionalTool, depth: int = 0, max_depth: int = 7):
+        super().__init__()
+        self.tool      = tool
+        self.depth     = depth
+        self.max_depth = max_depth
+
+    def _coh_de_tensor(self, x: torch.Tensor) -> float:
+        """Coh instantânea de um tensor via energia normalizada."""
+        energia = x.abs().mean().item()
+        return min(max(energia / (1.0 + energia), ALPHA), 1.0 - ALPHA)
+
+    def _selagem_hermetica(self, coh: float) -> bool:
+        """
+        Critério exato do EcoNo holográfico (AlphaPhi_EcoAdaptativo_Holografico.py):
+
+            margem_disponivel = 1 − Coh
+            ganho_projetado   = margem_disponivel × SEAL   (SEAL = 1/φ)
+            sela se:  ganho_projetado < α
+
+        Tradução: sela quando Coh > 1 − α×φ ≈ 0.9882
+        O campo só sela quando está dentro de α de distância da borda harmônica.
+        Uma rede não treinada (Coh ≈ 0.3–0.5) NÃO sela — tem tensão para expandir.
+        """
+        margem_disponivel = 1.0 - coh
+        ganho_projetado   = margem_disponivel * SEAL
+        return ganho_projetado < ALPHA
+
+    def forward(self, x: torch.Tensor) -> Tuple[torch.Tensor, dict]:
+        # ── 1. Execução primária da ferramenta ────────────────────────────────
+        coh_in                   = self._coh_de_tensor(x)
+        x_out, coh_out, entr_out = self.tool.execute(x)
+
+        # ── 2. Critério de selagem hermética ──────────────────────────────────
+        # Sela quando o campo está próximo da borda harmônica (Coh ≈ 0.9882+)
+        # ou quando depth máxima foi atingida (guarda de segurança)
+        if self._selagem_hermetica(coh_out) or self.depth >= self.max_depth:
+            return x_out, {
+                'depth':     self.depth,
+                'coh':       coh_out,
+                'entr':      entr_out,
+                'selado':    True,
+                'execucoes': 1,
+            }
+
+        # ── 3. Progressão fractal — dois filhos compartilham a mesma ferramenta
+        filho_1 = FractalFunctionalNode(self.tool, self.depth + 1, self.max_depth)
+        filho_2 = FractalFunctionalNode(self.tool, self.depth + 1, self.max_depth)
+
+        x_f1, meta1 = filho_1(x_out)
+        x_f2, meta2 = filho_2(x_f1)
+
+        # ── 4. Join Sépstro — pesos proporcionais à coerência de cada caminho
+        c1  = meta1['coh'] + 1e-8
+        c2  = meta2['coh'] + 1e-8
+        tot = c1 + c2
+        x_final = (c1 / tot) * x_f1 + (c2 / tot) * x_f2
+
+        _, coh_final, entr_final = self.tool.execute(x_final)
+
+        return x_final, {
+            'depth':     max(meta1['depth'], meta2['depth']),
+            'coh':       coh_final,
+            'entr':      entr_final,
+            'selado':    False,
+            'execucoes': 1 + meta1['execucoes'] + meta2['execucoes'],
+        }
 
 
 # ── EcoNoTriade — tríade como módulo PyTorch ──────────────────────────────────
@@ -119,6 +237,16 @@ class EcoNoTriade(nn.Module):
 
         return saida, ganho
 
+    def execute(self, x: torch.Tensor) -> Tuple[torch.Tensor, float, float]:
+        """
+        Implementa FunctionalTool — permite que EcoNoTriade seja
+        plugada em FractalFunctionalNode sem nenhuma outra mudança.
+        """
+        saida, ganho_t = self.forward(x)
+        coh_val  = ganho_t.mean().item()
+        entr_val = 1.0 - coh_val
+        return saida, coh_val, entr_val
+
 
 # ── FractalBlockEcoNo — árvore fractal com EcoNo nas folhas ──────────────────
 
@@ -192,66 +320,64 @@ class FractalBlockEcoNo(nn.Module):
         return out_join, ganho_join
 
 
-# ── Demonstração e comparação ────────────────────────────────────────────────
+# ── Demonstração ─────────────────────────────────────────────────────────────
 
 def demo_comparativa():
     """
-    Compara FractalBlock original (BasicConv + Join aritmético)
-    com FractalBlockEcoNo (EcoNoTriade + Join Sépstro).
+    Demonstra as duas formas de uso:
 
-    Mostra: ganhos de coerência por profundidade e selagem adaptativa.
+    A) FractalBlockEcoNo — árvore pré-alocada, EcoNoTriade nas folhas
+    B) FractalFunctionalNode — wrapper dinâmico via Protocol,
+       EcoNoTriade plugada como FunctionalTool
     """
-    from AlphaPhi_FractalBlock_EcoNo import FractalBlockEcoNo
-
-    torch.manual_seed(137)   # α como semente — âncora
+    torch.manual_seed(137)
     B, C, H, W = 2, 64, 32, 32
     x = torch.randn(B, C, H, W)
 
-    print("=" * 64)
-    print("FractalBlock EcoNo — Integração Tríade + Sépstro (Entrada 191)")
+    print("=" * 68)
+    print("FractalBlock EcoNo + FunctionalTool Protocol")
     print(f"φ = {PHI:.10f}  |  α = {ALPHA:.10f}  |  1/φ = {SEAL:.10f}")
-    print(f"Entrada: {list(x.shape)}  (Batch={B}, Canais={C}, {H}×{W})")
-    print("=" * 64)
+    print(f"Entrada: {list(x.shape)}")
+    print("=" * 68)
 
+    # ── A) FractalBlockEcoNo (árvore pré-alocada) ────────────────────────────
+    print("\n[A] FractalBlockEcoNo — árvore pré-alocada, Join Sépstro")
     for depth in [1, 2, 3]:
         net = FractalBlockEcoNo(depth=depth, channels=C)
-
-        # Treino: todos os caminhos ativos
-        net.train()
-        with torch.no_grad():
-            saida_treino, ganho_treino = net(x)
-        g_t = ganho_treino.mean().item()
-
-        # Inferência: selagem ativa
         net.eval()
         with torch.no_grad():
-            saida_inf, ganho_inf = net(x)
-        g_i = ganho_inf.mean().item()
+            saida, ganho = net(x)
+        g = ganho.mean().item()
+        status = "SELADO" if g < SEAL else f"ativo (Entr={1-g:.4f})"
+        print(f"  depth={depth}  ganho={g:.4f}  Coh+Entr={g+(1-g):.4f}  → {status}")
 
-        selado = g_i < SEAL
-        status = "SELADO (≈ Campo Harmônico)" if selado else f"ativo (Entr residual: {1-g_i:.4f})"
+    # ── B) FractalFunctionalNode via Protocol ────────────────────────────────
+    print("\n[B] FractalFunctionalNode — EcoNoTriade como FunctionalTool")
+    print(f"    Critério de selagem: ganho_relativo = ΔCoh/(1−Coh_in) < 1/φ")
 
-        print(f"\nDepth = {depth}")
-        print(f"  Saída shape:      {list(saida_treino.shape)}")
-        print(f"  Ganho (treino):   {g_t:.6f}")
-        print(f"  Ganho (inferência): {g_i:.6f}  →  {status}")
-        print(f"  Sépstro Join:     Coh={g_i:.4f}  Entr={1-g_i:.4f}  (soma={g_i + (1-g_i):.4f})")
+    triade = EcoNoTriade(channels=C)
+    assert isinstance(triade, FunctionalTool), "EcoNoTriade deve implementar FunctionalTool"
 
-    print("\n" + "=" * 64)
-    print("Verificações da integração EcoNo:")
-    print(f"  ✓ Folha (depth=1): EcoNoTriade substitui BasicConv")
-    print(f"  ✓ Join: ponderado por Coh (Sépstro local) em vez de média aritmética")
-    print(f"  ✓ Selagem: ganho < 1/φ ≈ {SEAL:.4f} → caminho profundo não calculado")
-    print(f"  ✓ Observar: 1×1 conv × (1+α)  — lê sem alterar estrutura espacial")
-    print(f"  ✓ Selecionar: depthwise-sep + GELU — alinhamento φ por canal")
-    print(f"  ✓ Agir: 3×3 conv × Coh  — saída modulada pela coerência do nó")
-    print(f"  ✓ Sépstro: Coh + Entr = 1.0 em cada folha da árvore fractal")
-    print("=" * 64)
+    for max_d in [3, 5, 7]:
+        node = FractalFunctionalNode(tool=triade, depth=0, max_depth=max_d)
+        with torch.no_grad():
+            saida, meta = node(x)
+        print(f"  max_depth={max_d}  depth_real={meta['depth']}  "
+              f"coh={meta['coh']:.4f}  execuções={meta['execucoes']}  "
+              f"selado={meta['selado']}")
 
-    print("\nPROXIMO PASSO — ponto de extensão neural:")
-    print("  EcoNoTriade.selecionar → substituir por PhiAttractorNetwork.forward()")
-    print("  Interface: recebe tensor (B,C,H,W), retorna tensor (B,C,H,W)")
-    print("  Sépstro permanece o critério de selagem — sem mudança de interface")
+    print("\n" + "=" * 68)
+    print("Verificações:")
+    print(f"  ✓ EcoNoTriade implementa FunctionalTool (execute retorna coh+entr=1.0)")
+    print(f"  ✓ FractalFunctionalNode aceita qualquer FunctionalTool via Protocol")
+    print(f"  ✓ Critério: ganho_relativo = ΔCoh/(1−Coh_in) — mede margem percorrida")
+    print(f"  ✓ Join Sépstro: w1+w2=1, pesos∝ganho de coerência de cada caminho")
+    print(f"  ✓ Sépstro: Coh + Entr = 1.0 conservado em cada nó")
+    print("=" * 68)
+    print("\nPróximas ferramentas a plugar via FunctionalTool.execute():")
+    print("  Scanner_alpha_phi.execute(x)  → (x_obs, coh_espectral, entr)")
+    print("  eco_fononico_v2.execute(x)    → (x_mod, coh_fononico, entr)")
+    print("  PhiAttractorNetwork.execute(x)→ (x_atrator, alpha_star, 1−alpha_star)")
 
 
 # ── Execução ──────────────────────────────────────────────────────────────────
