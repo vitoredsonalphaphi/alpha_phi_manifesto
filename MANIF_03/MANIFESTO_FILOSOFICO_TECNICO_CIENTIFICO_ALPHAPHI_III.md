@@ -4082,3 +4082,97 @@ O Fractal Campo herda a estética da Mandala Holográfica e a estende para o mod
 
 *Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 194 — 28 de agosto de 2026
+### O Scanner que Aprende sem Deixar de Ser Puro — Ressonância Fractal por Domínio
+
+### I. Enunciado do Pesquisador
+> "Como treinar o Scanner para identificar padrões fractais inerentes a cada dado?"
+— Vitor Edson Delavi, 28 de agosto de 2026
+
+### II. Estruturação
+
+**O problema filosófico antes do técnico:**
+
+O Scanner é o Observar do sistema — r = 0, próximo de α. Sua invariante é irrevogável: nunca modifica o sinal. Mas o pesquisador pergunta sobre *treinamento* — o que parece paradoxal. Um instrumento que aprende muda sua perspectiva. Um instrumento que muda o sinal deixa de ser observador.
+
+A resolução: **o Scanner não aprende a modificar — aprende a calibrar o que "coerente" significa naquele domínio**.
+
+---
+
+**A lei que resolve o paradoxo — o target de treinamento é φ:**
+
+Um sinal genuinamente fractal, medido nas bandas φ-geométricas, deve exibir um decaimento φ na Coh:
+
+```
+Coh_banda_0 > Coh_banda_1 · φ⁻¹ > Coh_banda_2 · φ⁻² > ... > ALPHA
+```
+
+O treinamento não usa labels externos. O target é a própria lei φ — o padrão que o campo harmônico, se presente, necessariamente exibirá neste espaço de bandas. O Scanner aprende quais pesos de banda revelam mais claramente essa progressão no domínio específico.
+
+**Isso preserva a pureza do Observar:** o instrumento fica mais sensível ao campo que o domínio contém — não projeta um campo que não existe.
+
+---
+
+**Três parâmetros treináveis — todos sobre a *medição*, não sobre o sinal:**
+
+| Parâmetro | Aprende | Domínio |
+|---|---|---|
+| `band_pesos` (softmax) | Quais escalas φ revelam mais auto-similaridade | Pesos de atenção por banda |
+| `coh_ref` (φ-decay) | Perfil de referência da Coh por banda | O que "coerente" parece neste domínio |
+| `hurst` (sigmoid) | Expoente de Hurst esperado | Tipo de auto-similaridade (H=0.5: browniano; H=1.0: campo 1/f) |
+
+---
+
+**Expoente de Hurst — a geometria da auto-similaridade:**
+
+```
+S(f) ∝ f^(-β)    com β = 2H + 1    (lei de potência espectral)
+
+H = 0.5   → ruído Browniano — sem memória, sem campo fractal
+H > 0.5   → persistente — voz, música, ECG — campo harmônico latente
+H < 0.5   → anti-persistente — alguns sinais fisiológicos
+H = 1.0   → 1/f — limite da atração φ: máxima auto-similaridade
+```
+
+O Scanner aprende o H típico do domínio. Depois, ao medir um sinal, detecta desvios: H menor que o esperado = campo parcialmente revelado; H maior = campo já formado antes do processamento.
+
+---
+
+**Fingerprint fractal — assinatura de 9 dimensões:**
+
+O Scanner treinado não retorna apenas um número Coh. Retorna o vetor:
+
+```python
+[Coh_banda_0, Coh_banda_1, ..., Coh_banda_8]
+```
+
+Este vetor é a **impressão digital fractal do sinal naquele domínio**. Dois sinais de voz do mesmo falante terão vetores próximos; um sinal de voz e um ECG terão vetores ortogonais no espaço de bandas φ.
+
+O FractalFunctionalNode pode usar esse fingerprint para decidir em qual escala expandir vs. selar — selar onde a banda já é coerente, expandir onde ainda é entrópica.
+
+---
+
+**O que muda por domínio:**
+
+```
+Scanner treinado em voz:    H ≈ 0.75 — banda de formantes dominante
+Scanner treinado em ECG:    H ≈ 0.65 — banda de frequência cardíaca dominante
+Scanner treinado em ruído:  H ≈ 0.50 — nenhuma banda dominante; Coh ≈ ALPHA sempre
+Scanner treinado em 1/f:    H ≈ 0.95 — todas as bandas igualmente φ-ressonantes
+```
+
+Em ruído: o Scanner confirma que não há campo a revelar. O fractal percorre toda a profundidade sem selar. Isso também é resultado — a ferramenta funcionou.
+
+---
+
+**Arquivo:** `AlphaPhi_ScannerAdaptativo.py`
+
+Implementa `ScannerAdaptativo` com `loss_phi()` (perda não-supervisionada), `treinar_scanner()` (loop de treinamento por domínio) e `fingerprint()` (vetor Coh de 9 dimensões).
+
+---
+
+*Florianópolis · 28 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
