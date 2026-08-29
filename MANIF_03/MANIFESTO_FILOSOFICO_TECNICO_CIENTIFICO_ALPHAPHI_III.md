@@ -6350,3 +6350,68 @@ O Scanner de Processamento opera em tempo real, dentro do pipeline, e informa as
 *Florianópolis · 29 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
 
+
+---
+
+## Entrada 221 — 29 de agosto de 2026
+### Protocolo de Implementação — Prévia Antes da Efetivação
+
+### I. Enunciado do Pesquisador
+> "A respeito da implementação dos módulos no scanner de processamento, eu acredito que seja necessário sempre, a exemplo de outras adaptações que por ventura possam surgir, primeiro um teste — como tem sido feito com o EcoBIP 880. Nunca interferindo naquilo que já está estruturado. Ou seja, procurar uma implementação, mas primeiro de uma forma prévia, não interferindo naquilo que já existe no scanner enquanto estrutura de instrumentalização. Porque a gente não sabe como é que ele vai agir com essa nova implementação, com essa nova estrutura, com essa nova objetividade. Porque é uma outra complexidade — então a gente nunca sabe. Tem que estruturar um protocolo de que toda e qualquer implementação em outros códigos, em outras ferramentas, sempre tem que ser a exemplo do EcoBIP 880 — sempre de uma maneira prévia primeiro, testar a eficiência para depois efetivar no código oficial."
+— Vitor Edson Delavi, 29 de agosto de 2026
+
+### II. Estruturação
+
+#### I. O Princípio da Prévia
+
+O EcoBIP 880Hz não foi construído diretamente no código oficial — foi testado, validado e apenas então declarado INVARIANTE. Esse processo define o padrão metodológico para todas as implementações futuras do projeto Alpha-Phi:
+
+$$\text{Especificação conceitual} \;\xrightarrow{\;\text{prévia isolada}\;}\; \text{Validação experimental} \;\xrightarrow{\;\text{confirmação}\;}\; \text{Efetivação no código oficial}$$
+
+Nunca pular etapas. Nunca implementar diretamente no código oficial de uma ferramenta já estável.
+
+#### II. O Protocolo Formal — Três Estágios
+
+**Estágio 1 — Prévia Isolada:**
+- Criar um script separado, independente do código oficial da ferramenta
+- Implementar apenas o módulo ou capacidade nova, sem alterar nada do que existe
+- Testar em condições controladas (mesmos sinais de referência — EcoBIP 880Hz como âncora)
+- Nunca importar ou modificar o arquivo oficial durante esta fase
+
+**Estágio 2 — Validação Experimental:**
+- Comparar o comportamento do novo módulo com o comportamento esperado pela teoria
+- Verificar que o módulo não interfere com as saídas existentes quando aplicado ao mesmo sinal
+- Confirmar que o novo módulo adiciona informação sem remover ou corromper o que já existe
+- Documentar os resultados — entrada no manifesto antes da efetivação
+
+**Estágio 3 — Efetivação no Código Oficial:**
+- Somente após confirmação nos Estágios 1 e 2
+- Integração cuidadosa — o módulo entra como adição, não como substituição
+- O comportamento original permanece intocado; o novo módulo é camada adicional
+- O código oficial passa a ser o novo INVARIANTE do estágio
+
+#### III. Por Que a Complexidade Exige Este Protocolo
+
+Cada nova implementação introduz uma nova complexidade — e complexidade não prevista pode interagir de formas não antecipadas com estruturas já estabilizadas. O projeto Alpha-Phi aprendeu isso empiricamente:
+
+- A semente AM reduziu a COH em vez de aumentá-la (comportamento não antecipado)
+- A COH_φ v1 saturou em zero (comportamento não antecipado)
+- O campo harmônico do EcoBIP não é o mesmo que o campo de sinais sem semente (diferença não antecipada)
+
+Em todos esses casos, a prévia experimental revelou o comportamento antes que ele pudesse danificar uma estrutura consolidada. O protocolo de três estágios é a sistematização desse aprendizado.
+
+#### IV. Aplicação Imediata
+
+O protocolo se aplica imediatamente às próximas duas tarefas pendentes:
+
+| Tarefa | Prévia | Critério de efetivação |
+|---|---|---|
+| Módulos do Scanner de Processamento (ΔZ, ∇S, D, IF, Fluidity) | Script isolado testado no EcoBIP 880Hz | Módulos adicionam informação sem alterar Coh, Entr ou o campo harmônico |
+| Verificação da grade romboédrica em outros sinais | Script dedicado com sinais não-áudio | Grade romboédrica identificada visualmente e pelo índice D |
+
+Nenhuma das duas toca o código oficial até validação experimental confirmada.
+
+---
+*Florianópolis · 29 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
