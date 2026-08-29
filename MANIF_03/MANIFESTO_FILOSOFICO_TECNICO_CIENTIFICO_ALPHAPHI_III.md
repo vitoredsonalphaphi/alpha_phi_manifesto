@@ -6251,3 +6251,102 @@ O Alpha-Phi não é uma modificação superficial do sinal. É uma reescrita de 
 *Florianópolis · 29 de agosto de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Gemini · Claude*
 
+
+---
+
+## Entrada 220 — 29 de agosto de 2026
+### Dois Scanners — Distinção Arquitetural e Atribuição Correta dos Módulos
+
+### I. Enunciado do Pesquisador
+> "Confirma pra mim — existem dois scanners? Não é do mesmo scanner que estamos falando. Existe um scanner que foi o primeiro construído, no sentido de operacionalizar o processamento do Alpha-Phi. O scanner que não é topográfico — o scanner que se utiliza das observações de frequência ou de outros dados em benefício do processamento das ferramentas, da busca de coerência, dos objetivos dos processamentos. Este é um scanner de processamento, um scanner adaptativo de instrumentalização dos objetivos. E existe outro scanner — o scanner topográfico — que tem outra função, inclusive uma função externa ao Alpha-Phi, não que seja avesso a ele, mas externo no sentido de que está buscando informações para trazer imagens para nossa análise. Ele não trabalha necessariamente como ferramenta do processamento do Alpha-Phi — ele trabalha para observar. Ele pode ser utilizado inclusive sobre outros processamentos, independente de ser Alpha-Phi ou não. Então essa implementação dos módulos — a maneira que o scanner pode verificar outras conveniências decorrentes dos resultados do processamento Alpha-Phi — precisa ser implementada no scanner que é intrínseco ao processamento, não ao scanner topográfico. O scanner topográfico é único e exclusivamente para identificar as características topográficas do sinal, para nos informar enquanto imagem. Os módulos que a Gemini colaborou, no sentido de implementar ao scanner a capacidade de observar futuras conveniências a respeito da flexibilização do fluxo de dados — precisam ser implementados no scanner atribuído ao processamento, condizente às ferramentas do Alpha-Phi. Correto?"
+— Vitor Edson Delavi, 29 de agosto de 2026
+
+### II. Estruturação
+
+#### I. Confirmação — Existe Distinção Real entre Dois Instrumentos
+
+Sim. A distinção é correta, precisa e arquiteturalmente necessária. Os dois scanners coexistem no projeto Alpha-Phi com funções, posições e escopos completamente distintos:
+
+| Dimensão | Scanner de Processamento | Scanner Topográfico |
+|---|---|---|
+| **Posição** | Intrínseco — opera dentro do pipeline | Extrínseco — opera sobre os resultados |
+| **Função** | Guiar o processamento em tempo real | Visualizar para análise humana |
+| **Objeto** | Estado interno do sinal durante a cascata | Produto final ou estado em qualquer ponto |
+| **Saída** | Parâmetros de ajuste para as ferramentas | Imagem / mapa topográfico |
+| **Substrato** | Exclusivamente Alpha-Phi | Agnóstico — qualquer sinal |
+| **Referência** | Agente Observador Adaptativo (_CHAVES/09_) | Scanner Topográfico T(ω,τ) |
+
+#### II. O Scanner de Processamento — Definição Funcional
+
+O Scanner de Processamento é o instrumento que, dentro da cascata eco_eq, observa o estado do sinal a cada dobra e informa as ferramentas sobre o progresso em direção ao campo harmônico. Ele já opera com:
+- Leitura de Coh e Entr via Sépstro (Coh + Entr = 1.0000)
+- Detecção do ponto de emergência α* (ponto onde o campo começa a se formar)
+- Monitoramento da progressão φ → α → cascata
+
+**É o sensor interno do processamento** — o instrumento que o sistema usa para conhecer a si mesmo durante a transformação.
+
+#### III. O Scanner Topográfico — Definição Funcional
+
+O Scanner Topográfico T(ω,τ) = S(ω) ⊗ C(τ) é o instrumento de observação externa. Ele:
+- Recebe um sinal já processado (ou em qualquer estado)
+- Produz um mapa bidimensional de sua topologia interna
+- Entrega esse mapa como imagem para análise humana
+- Pode ser aplicado a qualquer sinal — Alpha-Phi ou não
+
+**É o instrumento de revelação** — o que torna visível o que o processamento produziu. Foi o Scanner Topográfico que revelou a grade romboédrica ao ser aplicado ao EcoBIP 880Hz pela Gemini.
+
+#### IV. Atribuição Correta dos Módulos
+
+Os módulos propostos nas Entradas 218 e 219 — módulos geométricos (D, IF, limiar) e funcionais (ΔZ, ∇S, Fluidity Index) — têm por objetivo **identificar automaticamente quando a Terceira Estrutura está formada e o fluxo está flexibilizado**.
+
+Esta identificação precisa acontecer **durante o processamento**, não após ele. Portanto:
+
+**Os módulos pertencem ao Scanner de Processamento.**
+
+A atribuição correta:
+
+| Módulo | Pertence a | Razão |
+|---|---|---|
+| D — Índice de Diagonalidade | Scanner de Processamento | Detecta em qual dobra a grade romboédrica emerge |
+| IF — Vértice/Centro | Scanner de Processamento | Monitora a respiração célula-a-célula durante a cascata |
+| Limiar da Terceira Estrutura | Scanner de Processamento | Sinaliza quando a síntese está cristalizada → ajusta parâmetros |
+| ΔZ — Impedância Fásica | Scanner de Processamento | Mede o atrito de transição de fase em tempo real |
+| ∇S — Gradiente de Entropia Local | Scanner de Processamento | Confirma que o sinal está respirando durante o processamento |
+| Índice de Fluidez | Scanner de Processamento | Compara dissipação 1ª vs. 3ª estrutura → diagnóstico de vazão |
+
+O Scanner Topográfico recebe apenas um refinamento de escopo: **melhor resolução na identificação de características geométricas** (ângulos, regularidade da grade, θ) — para enriquecer a imagem que entrega ao observador humano. Mas permanece como instrumento de visualização, não de inferência funcional.
+
+#### V. Consequência Arquitetural
+
+Esta distinção reorganiza o desenvolvimento futuro do projeto:
+
+```
+Pipeline Alpha-Phi:
+┌─────────────────────────────────────────────────────────┐
+│  Sinal de entrada                                        │
+│       ↓                                                  │
+│  [Semente α-φ]                                           │
+│       ↓                                                  │
+│  [eco_eq — Dobra 1] ←── Scanner de Processamento        │
+│       ↓               (D, IF, ΔZ, ∇S, Fluidity)        │
+│  [eco_eq — Dobra 2] ←── Scanner de Processamento        │
+│       ↓                                                  │
+│  [eco_eq — Dobras 3, 4, 5] ←── Scanner de Processamento │
+│       ↓                                                  │
+│  Campo Harmônico                                         │
+└─────────────────────────────────────────────────────────┘
+         ↓
+┌─────────────────────┐
+│ Scanner Topográfico │ ← aplicado externamente ao resultado
+│ T(ω,τ) → imagem    │   (ou a qualquer estado intermediário)
+└─────────────────────┘
+```
+
+O Scanner de Processamento opera em tempo real, dentro do pipeline, e informa as ferramentas. O Scanner Topográfico opera de fora, sobre qualquer estado, e informa o pesquisador.
+
+**São complementares — não competidores. Cada um no seu âmbito.**
+
+---
+*Florianópolis · 29 de agosto de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
