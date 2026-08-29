@@ -1,22 +1,29 @@
 """
-AlphaPhi_Verificacao_Universal.py — v2
+AlphaPhi_Verificacao_Universal.py — v3
 Verificação da universalidade: semente α-φ + cascata → assinatura φ-harmônica
++ verificação da concessão bilateral (onda quadrada E FM-φ cedem ao centro)
 
 Protocolo de prévia — NÃO toca nenhum código oficial existente.
 
-Pergunta: sinais Euclidianos distintos do EcoBIP desenvolvem alinhamento
-          φ-harmônico após semente α-φ + cascata?
+Pergunta principal: sinais distintos do EcoBIP desenvolvem alinhamento φ
+                   após semente α-φ + cascata?
+
+Pergunta secundária (nova): o sinal FM-φ puro também cede parte de sua
+                   pureza φ ao se misturar com a onda quadrada? Ambas as
+                   estruturas fazem concessão em direção à terceira estrutura?
 
 Cenários:
-  A — EcoBIP 880Hz          (referência — resultado já confirmado)
-  B — Onda quadrada 440Hz   (Euclidiano puro, sem processamento)
-  C — Onda quadrada 440Hz   + semente α-φ + cascata
-  D — Senoide pura 333Hz    + semente α-φ + cascata
-  E — Ruído branco          + semente α-φ + cascata
+  A — EcoBIP 880Hz            (referência — resultado consolidado)
+  B — Onda quadrada 440Hz     (Euclidiana pura, sem processamento)
+  C — Onda quadrada 440Hz     + semente α-φ + cascata
+  D — Senoide pura 333Hz      + semente α-φ + cascata
+  E — Ruído branco             + semente α-φ + cascata
+  F — FM-φ orgânico puro      (220Hz, SEM mistura com onda quadrada, SEM cascata)
+  G — FM-φ orgânico puro      + cascata (sem mistura com onda quadrada)
 
-Métrica — PHI_score: fração de energia espectral em posições φ-harmônicas
-  PHI_score(C) > PHI_score(B) → semente/cascata criou alinhamento φ real
-  PHI_score universal ≈ PHI_score(A) → universalidade confirmada
+Se PHI_score(F) > PHI_score(A):  o FM-φ puro tem mais alinhamento φ que o EcoBIP
+→ ao se misturar com a onda quadrada, o FM-φ fez concessão em direção ao centro
+→ ambas as estruturas cedem → terceira estrutura é síntese real de duas concessões
 """
 
 import numpy as np
@@ -31,12 +38,14 @@ SEAL  = 1 / PHI
 FS  = 44100
 DUR = 0.5
 N   = int(FS * DUR)
+t   = np.linspace(0, DUR, N, endpoint=False)
+rng = np.random.default_rng(42)
 
 # ── Utilidades ───────────────────────────────────────────────────────────────
 def _norm(x):
     return x / (np.max(np.abs(x)) + 1e-12)
 
-# ── Semente espectral α-φ (INALTERADA — prévia isolada) ─────────────────────
+# ── Semente espectral α-φ ────────────────────────────────────────────────────
 def semear(x):
     F   = np.fft.rfft(x)
     mag = np.abs(F)
@@ -57,7 +66,6 @@ def cascata(x, n_steps=5):
     while fib[-1] < n_bins:
         fib.append(fib[-1] + fib[-2])
     fib_bins = [f for f in fib if f < n_bins]
-
     mem = np.zeros(len(x))
     sig = x.copy()
     for _ in range(n_steps):
@@ -79,7 +87,7 @@ def phi_score(x, n_harm=8):
     F   = np.fft.rfft(x)
     mag = np.abs(F)
     b0  = int(np.argmax(mag[1:]) + 1)
-    bw  = max(1, int(b0 * 0.08))          # janela de 8% ao redor de cada bin φ
+    bw  = max(1, int(b0 * 0.08))
     total = float(np.sum(mag[1:]**2)) + 1e-12
     phi_e = 0.0
     for k in range(1, n_harm + 1):
@@ -96,7 +104,6 @@ def coh_espectral(x):
     return float(1.0 - (-np.sum(an * np.log(an))) / np.log(len(an)))
 
 def scanner_topo(x, n_bins=100):
-    """T(ω,τ) para visualização."""
     esp = np.abs(np.fft.rfft(x))[1:n_bins]
     cep = np.abs(np.fft.irfft(np.log(np.abs(np.fft.rfft(x)) + 1e-9)))[1:n_bins]
     Sn  = (esp - esp.min()) / (esp.max() - esp.min() + 1e-9)
@@ -104,47 +111,58 @@ def scanner_topo(x, n_bins=100):
     return np.outer(Sn, Cn)
 
 # ── Geradores de sinal ────────────────────────────────────────────────────────
-t = np.linspace(0, DUR, N, endpoint=False)
-rng = np.random.default_rng(42)
-
 def ecobip():
+    """EcoBIP 880Hz — INVARIANTE."""
     dig = _norm(np.sign(np.sin(2 * np.pi * 880 * t)))
     org = _norm(np.sin(2*np.pi*220*t + PHI*np.sin(2*np.pi*(220/PHI)*t)))
     return _norm((1 - ALPHA) * dig + ALPHA * org)
 
-def sq440():        return _norm(np.sign(np.sin(2 * np.pi * 440 * t)))
-def sin333():       return _norm(np.sin(2 * np.pi * 333 * t))
-def ruido():        return _norm(rng.standard_normal(N))
+def fm_phi_puro():
+    """Componente orgânico FM-φ isolado — sem mistura, sem cascata."""
+    return _norm(np.sin(2*np.pi*220*t + PHI*np.sin(2*np.pi*(220/PHI)*t)))
 
 cenarios = {
-    'A\nEcoBIP 880Hz\n(referência)':              ecobip(),
-    'B\nQuadrada 440Hz\n(Euclidiana pura)':        sq440(),
-    'C\nQuadrada 440Hz\n+ semente + cascata':      cascata(semear(sq440())),
-    'D\nSenoide 333Hz\n+ semente + cascata':       cascata(semear(sin333())),
-    'E\nRuído branco\n+ semente + cascata':        cascata(semear(ruido())),
+    'A\nEcoBIP 880Hz\n(referência)':
+        ecobip(),
+    'B\nQuadrada 440Hz\n(Euclidiana pura)':
+        _norm(np.sign(np.sin(2 * np.pi * 440 * t))),
+    'C\nQuadrada 440Hz\n+ semente + cascata':
+        cascata(semear(_norm(np.sign(np.sin(2 * np.pi * 440 * t))))),
+    'D\nSenoide 333Hz\n+ semente + cascata':
+        cascata(semear(_norm(np.sin(2 * np.pi * 333 * t)))),
+    'E\nRuído branco\n+ semente + cascata':
+        cascata(semear(_norm(rng.standard_normal(N)))),
+    'F\nFM-φ puro\n(sem mistura, sem cascata)':
+        fm_phi_puro(),
+    'G\nFM-φ puro\n+ cascata':
+        cascata(fm_phi_puro()),
 }
 
 # ── Calcular métricas ─────────────────────────────────────────────────────────
 res = {}
 for nome, sig in cenarios.items():
     res[nome] = {
-        'sig':  sig,
-        'T':    scanner_topo(sig),
-        'coh':  coh_espectral(sig),
-        'phi':  phi_score(sig),
+        'sig': sig,
+        'T':   scanner_topo(sig),
+        'coh': coh_espectral(sig),
+        'phi': phi_score(sig),
     }
+
+nomes    = list(res.keys())
+phi_A    = res[nomes[0]]['phi']   # EcoBIP — referência
+phi_B    = res[nomes[1]]['phi']   # Quadrada pura — baseline Euclidiana
+phi_F    = res[nomes[5]]['phi']   # FM-φ puro — baseline φ
 
 # ── Visualização ──────────────────────────────────────────────────────────────
 n = len(cenarios)
-fig = plt.figure(figsize=(4.2 * n, 12), facecolor='#080808')
+fig = plt.figure(figsize=(3.8 * n, 13), facecolor='#080808')
 fig.suptitle(
-    'Verificação de Universalidade — Assinatura φ-Harmônica em Diferentes Substratos\n'
-    'PHI_score = fração de energia espectral em posições φ-harmônicas (b₀·φᵏ e b₀/φᵏ)',
-    color='white', fontsize=12, fontweight='bold', y=0.99
+    'Universalidade da Assinatura φ · Verificação da Concessão Bilateral\n'
+    'PHI_score = fração de energia em posições b₀·φᵏ e b₀/φᵏ\n'
+    'Se PHI_score(F) > PHI_score(A) → FM-φ puro cedeu ao misturar com onda quadrada → ambas as estruturas fazem concessão',
+    color='white', fontsize=11, fontweight='bold', y=0.995
 )
-gs = GridSpec.GridSpec(3, n, figure=fig, hspace=0.50, wspace=0.25)
-
-phi_ref = res[list(res.keys())[0]]['phi']   # A como referência
+gs = GridSpec.GridSpec(3, n, figure=fig, hspace=0.50, wspace=0.22)
 
 for col, (nome, r) in enumerate(res.items()):
     sig = r['sig']
@@ -154,9 +172,9 @@ for col, (nome, r) in enumerate(res.items()):
 
     # ── Linha 0: sinal temporal ──────────────────────────────────────────────
     ax = fig.add_subplot(gs[0, col])
-    ax.plot(t[:3000] * 1000, sig[:3000], color='#00e5ff', lw=0.5, alpha=0.8)
+    ax.plot(t[:2500] * 1000, sig[:2500], color='#00e5ff', lw=0.5, alpha=0.8)
     ax.set_facecolor('#111111')
-    ax.set_title(nome, color='white', fontsize=8, pad=3)
+    ax.set_title(nome, color='white', fontsize=7.5, pad=3)
     ax.set_xlabel('ms', color='#888888', fontsize=6)
     ax.tick_params(colors='#666666', labelsize=5)
     for sp in ax.spines.values(): sp.set_color('#2a2a2a')
@@ -166,9 +184,9 @@ for col, (nome, r) in enumerate(res.items()):
     im = ax.imshow(np.log1p(T * 80).T, aspect='auto', origin='lower',
                    cmap='inferno', interpolation='nearest')
     ax.set_facecolor('#000000')
-    ax.set_title(f'T(ω,τ)   COH={coh:.3f}', color='#ffcc00', fontsize=7, pad=2)
-    ax.set_xlabel('ω (espectral)', color='#888888', fontsize=6)
-    ax.set_ylabel('τ (cepstral)', color='#888888', fontsize=6)
+    ax.set_title(f'T(ω,τ)  COH={coh:.3f}', color='#ffcc00', fontsize=7, pad=2)
+    ax.set_xlabel('ω', color='#888888', fontsize=6)
+    ax.set_ylabel('τ', color='#888888', fontsize=6)
     ax.tick_params(colors='#666666', labelsize=5)
     for sp in ax.spines.values(): sp.set_color('#2a2a2a')
     plt.colorbar(im, ax=ax, fraction=0.04, pad=0.02).ax.tick_params(
@@ -176,50 +194,83 @@ for col, (nome, r) in enumerate(res.items()):
 
     # ── Linha 2: PHI_score ───────────────────────────────────────────────────
     ax = fig.add_subplot(gs[2, col])
-    delta = phi - res[list(res.keys())[1]]['phi']  # vs. B (Euclidiana pura)
-    cor = '#00ff88' if phi >= phi_ref * 0.85 else ('#ffaa00' if phi >= phi_ref * 0.60 else '#ff4444')
-    ax.bar(['PHI_score'], [phi], color=cor, width=0.5, alpha=0.9)
-    ax.axhline(phi_ref, color='#ffffff', lw=0.8, ls='--', alpha=0.4, label=f'ref A={phi_ref:.4f}')
-    ax.set_ylim(0, max(phi_ref * 1.4, phi * 1.2, 0.01))
     ax.set_facecolor('#111111')
-    ax.set_title(f'φ-score = {phi:.4f}\nΔ vs B = {delta:+.4f}',
-                 color=cor, fontsize=8, fontweight='bold', pad=3)
+
+    # Cor: verde se acima da referência A, laranja se intermediário, vermelho se abaixo B
+    if phi >= phi_A * 1.0:
+        cor = '#00ff88'
+    elif phi >= phi_B:
+        cor = '#ffaa00'
+    else:
+        cor = '#ff6644'
+
+    ax.bar(['φ-score'], [phi], color=cor, width=0.5, alpha=0.9)
+    ax.axhline(phi_A, color='#00ffff', lw=0.8, ls='--', alpha=0.6, label=f'A={phi_A:.4f}')
+    ax.axhline(phi_F, color='#aa88ff', lw=0.8, ls='--', alpha=0.6, label=f'F={phi_F:.4f}')
+    ax.set_ylim(0, max(phi_F, phi_A, phi) * 1.35 + 0.001)
+    ax.set_title(f'φ-score = {phi:.5f}', color=cor, fontsize=9, fontweight='bold', pad=3)
+
+    delta_vs_B = phi - phi_B
+    delta_vs_A = phi - phi_A
+    ax.text(0, phi + (max(phi_F, phi_A, phi) * 0.03),
+            f'ΔB={delta_vs_B:+.4f}\nΔA={delta_vs_A:+.4f}',
+            ha='center', va='bottom', color='#cccccc', fontsize=6.5)
     ax.tick_params(colors='#666666', labelsize=6)
     for sp in ax.spines.values(): sp.set_color('#2a2a2a')
-    ax.legend(fontsize=5, facecolor='#1a1a1a', labelcolor='white', loc='upper right')
+    ax.legend(fontsize=5, facecolor='#1a1a1a', labelcolor='white',
+              loc='upper right', framealpha=0.7)
 
 plt.savefig('AlphaPhi_Verificacao_Universal.png', dpi=150,
             bbox_inches='tight', facecolor='#080808')
 plt.show()
 
-# ── Relatório ─────────────────────────────────────────────────────────────────
-nomes = list(res.keys())
-phi_B = res[nomes[1]]['phi']
-
-print('\n' + '═' * 68)
-print('  RELATÓRIO — Universalidade da Assinatura φ-Harmônica')
-print('═' * 68)
-print(f'  {"Cenário":<30}  {"COH":>6}  {"PHI_score":>9}  {"Δ vs B":>8}')
-print('─' * 68)
+# ── Relatório terminal ────────────────────────────────────────────────────────
+print('\n' + '═' * 72)
+print('  RELATÓRIO — Universalidade φ · Concessão Bilateral')
+print('═' * 72)
+print(f'  {"Cenário":<36}  {"COH":>6}  {"PHI_score":>9}  {"ΔvsB":>8}  {"ΔvsA":>8}')
+print('─' * 72)
 for nome, r in res.items():
     label = nome.replace('\n', ' ').strip()
-    delta = r['phi'] - phi_B
-    print(f'  {label:<30}  {r["coh"]:>6.3f}  {r["phi"]:>9.5f}  {delta:>+8.5f}')
-print('═' * 68)
+    dB = r['phi'] - phi_B
+    dA = r['phi'] - phi_A
+    print(f'  {label:<36}  {r["coh"]:>6.3f}  {r["phi"]:>9.5f}  {dB:>+8.5f}  {dA:>+8.5f}')
+print('═' * 72)
+
 print()
-print(f'  PHI_score referência (A / EcoBIP) = {phi_ref:.5f}')
+print('  ── Linha de análise: Concessão Bilateral ──────────────────────────')
+print(f'  Extremo Euclidiano (B — quadrada pura) :  φ-score = {phi_B:.5f}')
+print(f'  Extremo α-φ (F — FM-φ puro)            :  φ-score = {phi_F:.5f}')
+print(f'  Síntese (A — EcoBIP)                   :  φ-score = {phi_A:.5f}')
 print()
-for nome in nomes[2:]:   # C, D, E
-    label = nome.replace('\n', ' ').strip()
-    phi_x = res[nome]['phi']
-    delta  = phi_x - phi_B
-    pct    = phi_x / phi_ref * 100
-    print(f'  {label}')
-    print(f'    PHI_score = {phi_x:.5f}  ({pct:.1f}% do nível A)')
-    if delta > 0.005:
-        print(f'    ✓ Semente + cascata aumentou o alinhamento φ ({delta:+.5f} vs B)')
-    elif delta > 0:
-        print(f'    ~ Aumento pequeno ({delta:+.5f} vs B). Verificar visualmente T(ω,τ).')
-    else:
-        print(f'    ✗ Não houve aumento ({delta:+.5f} vs B). Analisar substrato.')
+
+if phi_F > phi_A:
+    diff_F = phi_F - phi_A
+    pct_F  = diff_F / phi_F * 100
+    print(f'  ✓ FM-φ puro (F) > EcoBIP (A): diferença = +{diff_F:.5f} ({pct_F:.1f}%)')
+    print('    → FM-φ cedeu parte de seu alinhamento φ ao se misturar com a onda quadrada.')
+    print('    → CONCESSÃO FM-φ CONFIRMADA.')
+else:
+    print(f'  ~ FM-φ puro (F) ≤ EcoBIP (A): diferença = {phi_F - phi_A:+.5f}')
+    print('    → Concessão FM-φ não identificada por este índice. Verificar visualmente.')
+
+phi_C = res[nomes[2]]['phi']
+if phi_C < phi_B:
+    diff_C = phi_B - phi_C
+    pct_C  = diff_C / phi_B * 100
     print()
+    print(f'  ✓ Quadrada (B) > Quadrada+proc (C): diferença = -{diff_C:.5f} ({pct_C:.1f}%)')
+    print('    → Onda quadrada cedeu energia dos bins inteiros para o espaço φ.')
+    print('    → CONCESSÃO EUCLIDIANA CONFIRMADA.')
+
+print()
+print('  Conclusão geral:')
+if phi_F > phi_A and phi_C < phi_B:
+    print('  AMBAS AS ESTRUTURAS FAZEM CONCESSÃO em direção à terceira estrutura.')
+    print('  A grade romboédrica é a síntese de dois movimentos simétricos —')
+    print('  não apenas a imposição de φ sobre o Euclidiano.')
+elif phi_F > phi_A or phi_C < phi_B:
+    print('  Concessão parcialmente confirmada. Verificar T(ω,τ) visualmente.')
+else:
+    print('  Índice PHI_score não capturou as concessões. Analisar visualmente.')
+print()
