@@ -175,7 +175,8 @@ def _topografia(sig, n_bins=180, bins_phi=None):
                 ratios.append(energias[i + 1] / energias[i])
         if ratios:
             erros_norm = [((r - SEAL) / SEAL)**2 for r in ratios]
-            coh_phi = float(max(0.0, 1.0 - np.mean(erros_norm)))
+            # Sem clamp: permite negativo — o que importa é CφC − CφB (diferença relativa)
+            coh_phi = float(1.0 - np.mean(erros_norm))
     return T, coh, entr, coh_phi
 
 
@@ -306,25 +307,21 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
         dphi = cphi_C[i] - cphi_B[i]
         print(f'{i+1:>3}  {cohs_A[i]:>7.4f}  {cohs_B[i]:>7.4f}  {cohs_C[i]:>7.4f}'
               f'  {dcb:>+7.4f}  {dab:>+7.4f}'
-              f'  {cphi_A[i]:>7.5f}  {cphi_B[i]:>7.5f}  {cphi_C[i]:>7.5f}  {dphi:>+7.5f}')
+              f'  {cphi_A[i]:>+9.4f}  {cphi_B[i]:>+9.4f}  {cphi_C[i]:>+9.4f}  {dphi:>+9.4f}')
     print(sep)
     ganho_coh  = cohs_C[-1] - cohs_B[-1]
     ganho_impl = cohs_A[-1] - cohs_B[-1]
     ganho_phi  = cphi_C[-1] - cphi_B[-1]
-    print(f'COH  — Ganho C−B (espectral genérico):     {ganho_coh:+.4f}')
-    print(f'COH  — Ganho A−B (EcoBIP vs Euclidiano):   {ganho_impl:+.4f}')
-    print(f'COH_φ — Ganho C−B (alinhamento φ-real):    {ganho_phi:+.5f}')
+    print(f'COH   Ganho C−B (espectral):              {ganho_coh:+.4f}')
+    print(f'COH   Ganho A−B (EcoBIP vs Euclidiano):   {ganho_impl:+.4f}')
+    print(f'COH_φ Ganho C−B (decaimento bandas φ):    {ganho_phi:+.6f}')
     print(f'Critério selagem hermética: COH ≥ {1 - ALPHA*PHI:.4f}')
     print(sep)
     if ganho_phi > 0:
-        print('✓ AXIOMA CONFIRMADO via COH_φ: C tem mais energia φ-harmônica que B')
-        print(f'  A semente espectral gerou +{ganho_phi:.5f} de alinhamento φ-real.')
+        print('✓ AXIOMA CONFIRMADO via COH_φ: perfil φ de C supera B')
+        print(f'  Semente espectral: CφC-B = +{ganho_phi:.6f}')
     else:
-        print('○ COH_φ(C) ≤ COH_φ(B) — investigar bins φ-harmônicos e eco_eq.')
-    if ganho_coh > 0:
-        print('  COH espectral também confirma (C > B).')
-    else:
-        print('  COH espectral: C < B — concentração genérica menor (esperado para sinal FM).')
+        print('○ COH_φ(C) ≤ COH_φ(B) — semente insuficiente para curvar perfil de bandas.')
     print(sep)
 
     return {
