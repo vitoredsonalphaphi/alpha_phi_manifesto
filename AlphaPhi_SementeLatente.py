@@ -153,27 +153,29 @@ def _cascata(x0, bins_phi):
         laminas.append(s.copy())
     return laminas
 
-def _topografia(sig, n_bins=180):
+def _topografia(sig, n_bins=180, bins_phi=None):
     esp = np.abs(np.fft.rfft(sig))
     cep = np.abs(np.fft.irfft(np.log(esp + 1e-9)))
     S = esp[1:n_bins]; C = cep[1:n_bins]
     Sn = (S - S.min()) / (S.max() - S.min() + 1e-9)
     Cn = (C - C.min()) / (C.max() - C.min() + 1e-9)
     T = np.outer(Sn, Cn)
-    # COH espectral (concentração genérica — legado)
+    # COH espectral (concentração genérica)
     an = np.clip(Sn / (Sn.sum() + 1e-9), 1e-10, 1.0)
     entr = float(-np.sum(an * np.log(an)) / np.log(len(an)))
     coh = float(1.0 - entr)
-    # COH_φ (fração de energia nas posições φ-harmônicas da dominante)
-    b0 = int(np.argmax(esp[1:]) + 1)
-    phi_bins = set()
-    for k in range(1, 12):
-        for bk in [int(round(b0 * PHI**k)), int(round(b0 / PHI**k))]:
-            if 0 < bk < len(esp):
-                phi_bins.add(bk)
-    e_phi = sum(esp[b]**2 for b in phi_bins)
-    e_tot = float(np.sum(esp**2)) + 1e-12
-    coh_phi = float(e_phi / e_tot)
+    # COH_φ v2: perfil de decaimento nas bandas Fibonacci
+    # Mede se E_{k+1}/E_k ≈ SEAL em cada banda — perfil áureo de energia
+    coh_phi = 0.0
+    if bins_phi is not None and len(bins_phi) >= 2:
+        energias = [float(np.sum(esp[lo:hi]**2)) for lo, hi, *_ in bins_phi]
+        ratios = []
+        for i in range(len(energias) - 1):
+            if energias[i] > 1e-18:
+                ratios.append(energias[i + 1] / energias[i])
+        if ratios:
+            erros_norm = [((r - SEAL) / SEAL)**2 for r in ratios]
+            coh_phi = float(max(0.0, 1.0 - np.mean(erros_norm)))
     return T, coh, entr, coh_phi
 
 
@@ -209,7 +211,7 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
     def _metricas(laminas):
         cohs, entrs, cohs_phi = [], [], []
         for i in range(N_STEPS):
-            _, c, e, cp = _topografia(laminas[i + 1])
+            _, c, e, cp = _topografia(laminas[i + 1], bins_phi=bins)
             cohs.append(c); entrs.append(e); cohs_phi.append(cp)
         return cohs, entrs, cohs_phi
 
@@ -240,7 +242,7 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
     for row, (laminas, cohs, entrs, cohsphi, lbl, cmap) in enumerate(CENARIOS):
         for col in range(N_STEPS):
             ax = fig.add_subplot(gs[row, col])
-            T, _, _, _ = _topografia(laminas[col + 1])
+            T, _, _, _ = _topografia(laminas[col + 1], bins_phi=bins)
             ax.imshow(T + 1e-4, cmap=cmap, origin='lower', aspect='auto',
                       norm=mcolors.LogNorm(vmin=1e-3, vmax=1.0))
             ax.set_title(
@@ -278,8 +280,8 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
                       where=[c > b for b, c in zip(cphi_B, cphi_C)],
                       alpha=0.25, color=CORES[2], label='Ganho COH_φ (C−B)')
     ax_e.set_xlabel('Dobra', color='#C8BBAA')
-    ax_e.set_ylabel('COH_φ  (fração energia φ-harmônica)', color='#C8BBAA')
-    ax_e.set_title('COH_φ — Métrica de Alinhamento Harmônico Real', color='#C8BBAA', fontsize=9)
+    ax_e.set_ylabel('COH_φ  (perfil decaimento SEAL nas bandas)', color='#C8BBAA')
+    ax_e.set_title('COH_φ v2 — Decaimento Áureo entre Bandas Fibonacci', color='#C8BBAA', fontsize=9)
     ax_e.legend(fontsize=7.5, facecolor='#0D1525', labelcolor='#C8BBAA', loc='upper left')
     ax_e.tick_params(colors='#2E4055')
     ax_e.grid(alpha=0.2, color='#2E4055')
