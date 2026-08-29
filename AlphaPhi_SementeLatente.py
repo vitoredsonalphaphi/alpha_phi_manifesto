@@ -52,35 +52,24 @@ F_ORG   = 220.0
 
 def inicializar_alpha_phi(x: np.ndarray) -> np.ndarray:
     """
-    Estágio zero: semente α-φ no domínio espectral.
+    Estágio zero: semente α-φ latente.
 
     Ordem irrevogável (Axioma da Precedência):
-        1. φ primeiro  — define as POSIÇÕES φ-harmônicas (curvatura do espaço espectral)
-        2. α segundo   — âncora o peso de cada harmônica inserida (ALPHA × SEAL^k)
+        1. φ primeiro  — curvatura do espaço de fase: cos(2π·n/φ)
+        2. α segundo   — âncora mínima: amplitude × (1 + α·curv)
 
-    Operação: insere energia nas posições b_k = b₀ × φ^k e b₀ / φ^k do espectro.
-    Peso: ALPHA × SEAL^k (decrescente com φ⁻ᵏ, irredutível em α).
-    Fase: exp(i·φ·k) — curvatura de fase φ-ressonante.
+    Não modifica amplitude total — apenas curva a geometria do sinal.
+    O sinal deixa de ser euclidiano (quadrado) e passa a ter célula
+    ergonômica (losango φ), antes de qualquer fractal.
 
-    Ao contrário da versão AM (obsoleta), esta não redistribui energia existente —
-    adiciona energia nova nas posições φ-harmônicas. O eco_eq então amplifica
-    preferencialmente essas posições, elevando COH_φ real.
+    Retorna sinal normalizado com semente latente ativa.
     """
     N = len(x)
-    F = np.fft.rfft(x)
-    mag = np.abs(F)
-    # Frequência dominante (evita DC)
-    b0 = int(np.argmax(mag[1:]) + 1)
-    ref_amp = mag[b0]
-    # Insere energia nas posições φ^k e φ^{-k}
-    for k in range(1, 9):
-        weight = ALPHA * SEAL**k * ref_amp          # α ancora; SEAL^k decai
-        phase_k = np.exp(1j * PHI * k)             # φ curva a fase
-        for bk in [int(round(b0 * PHI**k)),
-                   int(round(b0 / PHI**k))]:
-            if 0 < bk < len(F):
-                F[bk] += weight * phase_k
-    return _norm(np.fft.irfft(F, n=N))
+    t = np.arange(N, dtype=float)
+    curvatura_phi = np.cos(2.0 * np.pi * t / PHI)      # φ: define o raio de curvatura
+    x_seeded = x * (1.0 + ALPHA * curvatura_phi)        # α: âncora mínima irredutível
+    m = np.max(np.abs(x_seeded))
+    return x_seeded / m if m > 1e-12 else x_seeded
 
 
 # ── Funções do EcoBIP Scanner Top (preservadas intactas) ─────────────────────
@@ -160,21 +149,9 @@ def _topografia(sig, n_bins=180):
     Sn = (S - S.min()) / (S.max() - S.min() + 1e-9)
     Cn = (C - C.min()) / (C.max() - C.min() + 1e-9)
     T = np.outer(Sn, Cn)
-    # COH espectral (concentração genérica — legado)
     an = np.clip(Sn / (Sn.sum() + 1e-9), 1e-10, 1.0)
     entr = float(-np.sum(an * np.log(an)) / np.log(len(an)))
-    coh = float(1.0 - entr)
-    # COH_φ (fração de energia nas posições φ-harmônicas da dominante)
-    b0 = int(np.argmax(esp[1:]) + 1)
-    phi_bins = set()
-    for k in range(1, 12):
-        for bk in [int(round(b0 * PHI**k)), int(round(b0 / PHI**k))]:
-            if 0 < bk < len(esp):
-                phi_bins.add(bk)
-    e_phi = sum(esp[b]**2 for b in phi_bins)
-    e_tot = float(np.sum(esp**2)) + 1e-12
-    coh_phi = float(e_phi / e_tot)
-    return T, coh, entr, coh_phi
+    return T, float(1.0 - entr), entr
 
 
 # ── Protocolo Comparativo A / B / C ──────────────────────────────────────────
@@ -207,15 +184,15 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
     lam_C = _cascata(inicializar_alpha_phi(x_euclidiano), bins)
 
     def _metricas(laminas):
-        cohs, entrs, cohs_phi = [], [], []
+        cohs, entrs = [], []
         for i in range(N_STEPS):
-            _, c, e, cp = _topografia(laminas[i + 1])
-            cohs.append(c); entrs.append(e); cohs_phi.append(cp)
-        return cohs, entrs, cohs_phi
+            _, c, e = _topografia(laminas[i + 1])
+            cohs.append(c); entrs.append(e)
+        return cohs, entrs
 
-    cohs_A, entrs_A, cphi_A = _metricas(lam_A)
-    cohs_B, entrs_B, cphi_B = _metricas(lam_B)
-    cohs_C, entrs_C, cphi_C = _metricas(lam_C)
+    cohs_A, entrs_A = _metricas(lam_A)
+    cohs_B, entrs_B = _metricas(lam_B)
+    cohs_C, entrs_C = _metricas(lam_C)
 
     # ── Painel visual ──────────────────────────────────────────────────────────
     fig = plt.figure(figsize=(26, 16), facecolor='#07080E')
@@ -231,22 +208,22 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
                   top=0.91, bottom=0.07, left=0.04, right=0.98)
 
     CENARIOS = [
-        (lam_A, cohs_A, entrs_A, cphi_A, 'A — EcoBIP (semente implícita)', 'inferno'),
-        (lam_B, cohs_B, entrs_B, cphi_B, 'B — Euclidiano puro (sem semente)', 'magma'),
-        (lam_C, cohs_C, entrs_C, cphi_C, 'C — Euclidiano + semente α-φ (espectral)', 'plasma'),
+        (lam_A, cohs_A, entrs_A, 'A — EcoBIP (semente implícita)', 'inferno'),
+        (lam_B, cohs_B, entrs_B, 'B — Euclidiano puro (sem semente)', 'magma'),
+        (lam_C, cohs_C, entrs_C, 'C — Euclidiano + semente α-φ', 'plasma'),
     ]
     CORES = ['#FF8C42', '#AAAAAA', '#4AFFE8']
 
-    for row, (laminas, cohs, entrs, cohsphi, lbl, cmap) in enumerate(CENARIOS):
+    for row, (laminas, cohs, entrs, lbl, cmap) in enumerate(CENARIOS):
         for col in range(N_STEPS):
             ax = fig.add_subplot(gs[row, col])
-            T, _, _, _ = _topografia(laminas[col + 1])
+            T, _, _ = _topografia(laminas[col + 1])
             ax.imshow(T + 1e-4, cmap=cmap, origin='lower', aspect='auto',
                       norm=mcolors.LogNorm(vmin=1e-3, vmax=1.0))
             ax.set_title(
-                f'{lbl}\nD{col+1}  COH:{cohs[col]:.4f}\n'
-                f'COH_φ:{cohsphi[col]:.4f}  E:{entrs[col]:.4f}',
-                fontsize=6.5, color='#C8BBAA'
+                f'{lbl}\nDobra {col+1}\n'
+                f'COH: {cohs[col]:.4f}\nENTR: {entrs[col]:.4f}',
+                fontsize=7, color='#C8BBAA'
             )
             ax.set_xticks([]); ax.set_yticks([])
             for sp in ax.spines.values():
@@ -256,9 +233,9 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
 
     # Curva COH
     ax_c = fig.add_subplot(gs[3, :3], facecolor='#0D1525')
-    ax_c.plot(dobras, cohs_A, 'o--', color=CORES[0], lw=1.8, label='A — EcoBIP (COH)')
-    ax_c.plot(dobras, cohs_B, 's:',  color=CORES[1], lw=1.5, label='B — Euclidiano (COH)')
-    ax_c.plot(dobras, cohs_C, 'D-',  color=CORES[2], lw=2.2, label='C — Eucl+Semente (COH)')
+    ax_c.plot(dobras, cohs_A, 'o--', color=CORES[0], lw=1.8, label='A — EcoBIP (impl.)')
+    ax_c.plot(dobras, cohs_B, 's:',  color=CORES[1], lw=1.5, label='B — Euclidiano puro')
+    ax_c.plot(dobras, cohs_C, 'D-',  color=CORES[2], lw=2.2, label='C — Euclidiano + semente')
     ax_c.fill_between(dobras, cohs_B, cohs_C,
                       where=[c > b for b, c in zip(cohs_B, cohs_C)],
                       alpha=0.20, color=CORES[2], label='Ganho do Axioma (C−B)')
@@ -271,16 +248,16 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
 
     # Curva ENTR
     ax_e = fig.add_subplot(gs[3, 3:], facecolor='#0D1525')
-    ax_e.plot(dobras, cphi_A, 'o--', color=CORES[0], lw=1.8, label='A — EcoBIP (COH_φ)')
-    ax_e.plot(dobras, cphi_B, 's:',  color=CORES[1], lw=1.5, label='B — Euclidiano (COH_φ)')
-    ax_e.plot(dobras, cphi_C, 'D-',  color=CORES[2], lw=2.2, label='C — Eucl+Semente (COH_φ)')
-    ax_e.fill_between(dobras, cphi_B, cphi_C,
-                      where=[c > b for b, c in zip(cphi_B, cphi_C)],
-                      alpha=0.25, color=CORES[2], label='Ganho COH_φ (C−B)')
+    ax_e.plot(dobras, entrs_A, 'o--', color=CORES[0], lw=1.8, label='A — EcoBIP (impl.)')
+    ax_e.plot(dobras, entrs_B, 's:',  color=CORES[1], lw=1.5, label='B — Euclidiano puro')
+    ax_e.plot(dobras, entrs_C, 'D-',  color=CORES[2], lw=2.2, label='C — Euclidiano + semente')
+    ax_e.fill_between(dobras, entrs_C, entrs_B,
+                      where=[c < b for b, c in zip(entrs_B, entrs_C)],
+                      alpha=0.20, color=CORES[2], label='Redução entrópica (B−C)')
     ax_e.set_xlabel('Dobra', color='#C8BBAA')
-    ax_e.set_ylabel('COH_φ  (fração energia φ-harmônica)', color='#C8BBAA')
-    ax_e.set_title('COH_φ — Métrica de Alinhamento Harmônico Real', color='#C8BBAA', fontsize=9)
-    ax_e.legend(fontsize=7.5, facecolor='#0D1525', labelcolor='#C8BBAA', loc='upper left')
+    ax_e.set_ylabel('ENTR', color='#C8BBAA')
+    ax_e.set_title('Evolução de ENTR — Redução Entrópica', color='#C8BBAA', fontsize=9)
+    ax_e.legend(fontsize=7.5, facecolor='#0D1525', labelcolor='#C8BBAA', loc='upper right')
     ax_e.tick_params(colors='#2E4055')
     ax_e.grid(alpha=0.2, color='#2E4055')
 
@@ -289,46 +266,38 @@ def comparar_cenarios(salvar='SementeLatente_ValidacaoComparativa.png'):
     plt.show()
 
     # ── Relatório textual ──────────────────────────────────────────────────────
-    sep = '=' * 84
+    sep = '=' * 76
     print(f'\n{sep}')
-    print('RELATÓRIO — Axioma da Precedência α-φ  (v3 — semente espectral + COH_φ)')
+    print('RELATÓRIO — Axioma da Precedência α-φ')
     print(f'φ = {PHI:.10f}   α = {ALPHA:.10f}   SEAL = {SEAL:.10f}')
     print(sep)
-    print(f'{"D":>3}  {"COH_A":>7}  {"COH_B":>7}  {"COH_C":>7}'
-          f'  {"C-B":>7}  {"A-B":>7}'
-          f'  {"CPhi_A":>7}  {"CPhi_B":>7}  {"CPhi_C":>7}  {"CφC-B":>7}')
-    print('-' * 84)
+    print(f'{"Dobra":>6}  {"COH_A":>8}  {"COH_B":>8}  {"COH_C":>8}'
+          f'  {"ΔC-B":>8}  {"ΔA-B":>8}')
+    print('-' * 76)
     for i in range(N_STEPS):
-        dcb  = cohs_C[i] - cohs_B[i]
-        dab  = cohs_A[i] - cohs_B[i]
-        dphi = cphi_C[i] - cphi_B[i]
-        print(f'{i+1:>3}  {cohs_A[i]:>7.4f}  {cohs_B[i]:>7.4f}  {cohs_C[i]:>7.4f}'
-              f'  {dcb:>+7.4f}  {dab:>+7.4f}'
-              f'  {cphi_A[i]:>7.5f}  {cphi_B[i]:>7.5f}  {cphi_C[i]:>7.5f}  {dphi:>+7.5f}')
+        dcb = cohs_C[i] - cohs_B[i]   # ganho da semente explícita
+        dab = cohs_A[i] - cohs_B[i]   # ganho da semente implícita
+        print(f'{i+1:>6}  {cohs_A[i]:>8.4f}  {cohs_B[i]:>8.4f}  {cohs_C[i]:>8.4f}'
+              f'  {dcb:>+8.4f}  {dab:>+8.4f}')
     print(sep)
-    ganho_coh  = cohs_C[-1] - cohs_B[-1]
-    ganho_impl = cohs_A[-1] - cohs_B[-1]
-    ganho_phi  = cphi_C[-1] - cphi_B[-1]
-    print(f'COH  — Ganho C−B (espectral genérico):     {ganho_coh:+.4f}')
-    print(f'COH  — Ganho A−B (EcoBIP vs Euclidiano):   {ganho_impl:+.4f}')
-    print(f'COH_φ — Ganho C−B (alinhamento φ-real):    {ganho_phi:+.5f}')
-    print(f'Critério selagem hermética: COH ≥ {1 - ALPHA*PHI:.4f}')
+    ganho_axioma = cohs_C[-1] - cohs_B[-1]
+    ganho_impl   = cohs_A[-1] - cohs_B[-1]
+    print(f'Ganho Axioma (C−B, semente explícita sobre Euclidiano): {ganho_axioma:+.4f}')
+    print(f'Ganho implícito (A−B, EcoBIP sobre Euclidiano puro):    {ganho_impl:+.4f}')
+    print(f'Critério de selagem hermética: COH ≥ {1 - ALPHA*PHI:.4f}')
     print(sep)
-    if ganho_phi > 0:
-        print('✓ AXIOMA CONFIRMADO via COH_φ: C tem mais energia φ-harmônica que B')
-        print(f'  A semente espectral gerou +{ganho_phi:.5f} de alinhamento φ-real.')
+
+    if ganho_axioma > 0:
+        print('✓ AXIOMA CONFIRMADO: COH_C > COH_B')
+        print(f'  A semente α-φ gerou +{ganho_axioma:.4f} de coerência sobre o Euclidiano puro.')
     else:
-        print('○ COH_φ(C) ≤ COH_φ(B) — investigar bins φ-harmônicos e eco_eq.')
-    if ganho_coh > 0:
-        print('  COH espectral também confirma (C > B).')
-    else:
-        print('  COH espectral: C < B — concentração genérica menor (esperado para sinal FM).')
+        print('○ Hipótese a rever: COH_C ≤ COH_B — investigar função de semeação.')
     print(sep)
 
     return {
-        'cohs_A': cohs_A, 'entrs_A': entrs_A, 'cphi_A': cphi_A,
-        'cohs_B': cohs_B, 'entrs_B': entrs_B, 'cphi_B': cphi_B,
-        'cohs_C': cohs_C, 'entrs_C': entrs_C, 'cphi_C': cphi_C,
+        'cohs_A': cohs_A, 'entrs_A': entrs_A,
+        'cohs_B': cohs_B, 'entrs_B': entrs_B,
+        'cohs_C': cohs_C, 'entrs_C': entrs_C,
     }
 
 
