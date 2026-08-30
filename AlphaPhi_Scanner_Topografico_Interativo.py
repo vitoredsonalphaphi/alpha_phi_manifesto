@@ -127,13 +127,13 @@ dobras  = [cascata_step(semente, k) for k in range(1, 6)]
 print("  Sinais prontos.")
 
 AMBIENTES = [
-    ('Base — Quadrada 880Hz',  quad,       '#888888', 'Greys',   dict(x=1.9, y=-1.9, z=0.75)),
-    ('Semente α-φ',            semente,    '#BB55FF', 'Purples', dict(x=1.7, y=-1.7, z=0.85)),
-    ('Dobra 1',                dobras[0],  '#FF6633', 'hot',     dict(x=1.6, y=-1.7, z=0.90)),
-    ('Dobra 2',                dobras[1],  '#FFAA22', 'YlOrRd',  dict(x=1.5, y=-1.6, z=0.95)),
-    ('Dobra 3',                dobras[2],  '#FFD700', 'inferno', dict(x=1.4, y=-1.6, z=1.00)),
-    ('Dobra 4',                dobras[3],  '#88FF44', 'YlGn',    dict(x=1.4, y=-1.5, z=1.05)),
-    ('Dobra 5',                dobras[4],  '#00FFAA', 'viridis', dict(x=1.3, y=-1.5, z=1.10)),
+    ('Base — Quadrada 880Hz',           quad,       '#888888', 'Greys',   dict(x=1.9, y=-1.9, z=0.75)),
+    ('Semente α-φ',                     semente,    '#BB55FF', 'Purples', dict(x=1.7, y=-1.7, z=0.85)),
+    ('Dobra 1',                         dobras[0],  '#FF6633', 'hot',     dict(x=1.6, y=-1.7, z=0.90)),
+    ('Dobra 2',                         dobras[1],  '#FFAA22', 'YlOrRd',  dict(x=1.5, y=-1.6, z=0.95)),
+    ('Dobra 3',                         dobras[2],  '#FFD700', 'inferno', dict(x=1.4, y=-1.6, z=1.00)),
+    ('Dobra 4',                         dobras[3],  '#88FF44', 'YlGn',    dict(x=1.4, y=-1.5, z=1.05)),
+    ('Dobra 5 — Campo Harmônico β→φ³',  dobras[4],  '#00FFAA', 'viridis', dict(x=1.3, y=-1.5, z=1.10)),
 ]
 
 N_TRACES = 5  # por ambiente: superfície + grade_r_linha + vértices + tapete_sub + phi_harm
@@ -338,17 +338,16 @@ fig.update_layout(
         aspectratio=dict(x=2.0, y=1.4, z=0.85),
     ),
     updatemenus=[dict(
-        type='buttons',
-        direction='right',
+        type='dropdown',
         showactive=True,
         active=0,
-        x=0.5, xanchor='center',
-        y=1.07, yanchor='top',
+        x=0.01, xanchor='left',
+        y=1.10, yanchor='top',
         bgcolor='#0D0D1E',
         bordercolor='#334466',
-        font=dict(color='#DDDDDD', size=10),
+        font=dict(color='#DDDDDD', size=11),
         buttons=buttons,
-        pad=dict(r=6, t=6),
+        pad=dict(r=8, t=8),
     )],
     legend=dict(
         bgcolor='rgba(8,8,22,0.88)',
