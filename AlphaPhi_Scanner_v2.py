@@ -402,6 +402,150 @@ def scanner_v2():
     return fig
 
 
+# ─── STFT de alta resolução para sub-harmônicos ───────────────────────────────
+def stft_subfreq(x, sr=SR):
+    """Janela 8× maior — resolução fina em baixas frequências."""
+    win = int(sr / BASE * 8 * PHI)
+    win = max(4096, min(win, 32768))
+    hop = win // 8
+    f, t, Zxx = stft(x, fs=sr, window='hann', nperseg=win, noverlap=win-hop)
+    return f, t, np.abs(Zxx)**2
+
+
+# ─── FIGURA 3D ─────────────────────────────────────────────────────────────────
+def scanner_3d():
+    from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+    _, eco  = gerar_ecobeep()
+    _, quad = gerar_quadrada()
+    sinais  = [('EcoBIP 880Hz', eco, '#FFD700'),
+               ('Quadrada Pura', quad, '#4488FF')]
+
+    fig = plt.figure(figsize=(24, 14), facecolor='#030308')
+    fig.suptitle(
+        'Scanner Topográfico 3D  ·  Superfície Espectral  ·  Zoom Sub-harmônico',
+        color='white', fontsize=13, fontweight='bold', y=0.99)
+
+    for col, (nome, x, cor) in enumerate(sinais):
+
+        # ── Linha 1: superfície completa 0–5000 Hz ────────────────────────────
+        freqs, times, S = stft_phi(x)
+        fmask = freqs <= 5000
+        fv, Sv = freqs[fmask], S[fmask]
+        Sl = np.log1p(Sv * 100)
+
+        sf = max(1, len(fv) // 120)
+        st = max(1, len(times) // 80)
+        fv_d  = fv[::sf];     tv_d  = times[::st]
+        Sl_d  = Sl[::sf, ::st]
+
+        T_g, F_g = np.meshgrid(tv_d, fv_d)
+        norm = (Sl_d - Sl_d.min()) / (Sl_d.max() - Sl_d.min() + 1e-9)
+        fc   = plt.cm.inferno(norm)
+
+        ax1 = fig.add_subplot(2, 2, col + 1, projection='3d')
+        ax1.set_facecolor('#030308')
+        ax1.plot_surface(T_g, F_g, Sl_d, facecolors=fc,
+                         rstride=1, cstride=1,
+                         linewidth=0, antialiased=False, alpha=0.93)
+
+        # Linha θ_R no espaço 3D
+        t_r  = np.linspace(times[0], times[-1], 30)
+        f_r  = np.tan(THETA_R) * (t_r - times[0]) / (times[-1] - times[0] + 1e-9) * fv[-1]
+        f_r  = np.clip(f_r, fv[0], fv[-1])
+        z_r  = np.full_like(t_r, Sl_d.max() * 0.15)
+        ax1.plot(t_r, f_r, z_r, '--', color='#00FF88', lw=1.8, alpha=0.85,
+                 label=f'θ_R = {np.degrees(THETA_R):.1f}°')
+
+        # φ-harmônicos como arestas horizontais no piso
+        for k in range(-1, 5):
+            fh = BASE * PHI**k
+            if fv[0] < fh < fv[-1]:
+                ax1.plot([times[0], times[-1]], [fh, fh], [0, 0],
+                         ':', color='#AA88FF', lw=0.7, alpha=0.45)
+                ax1.text(times[-1], fh, 0, f' φ^{k:+d}',
+                         color='#8866CC', fontsize=5.5)
+
+        ax1.set_xlabel('Tempo (s)', color='#AAAAAA', fontsize=7, labelpad=5)
+        ax1.set_ylabel('Freq (Hz)', color='#AAAAAA', fontsize=7, labelpad=5)
+        ax1.set_zlabel('log(E)',    color='#AAAAAA', fontsize=7, labelpad=3)
+        ax1.set_title(f'{nome}  ·  Superfície Espectral Completa',
+                      color=cor, fontsize=9, fontweight='bold', pad=10)
+        ax1.tick_params(labelsize=5.5)
+        ax1.xaxis.pane.fill = False
+        ax1.yaxis.pane.fill = False
+        ax1.zaxis.pane.fill = False
+        ax1.xaxis.pane.set_edgecolor('#151525')
+        ax1.yaxis.pane.set_edgecolor('#151525')
+        ax1.zaxis.pane.set_edgecolor('#151525')
+        ax1.grid(True, color='#111122', linewidth=0.3, alpha=0.6)
+        ax1.view_init(elev=28, azim=-55)
+        ax1.legend(fontsize=6.5, facecolor='#0A0A1A', labelcolor='white',
+                   loc='upper left')
+
+        # ── Linha 2: zoom sub-harmônico 0–880Hz, alta resolução ───────────────
+        fh2, th2, Sh2 = stft_subfreq(x)
+        fmask2 = fh2 <= BASE * 1.02
+        fv2 = fh2[fmask2]
+        Sv2 = Sh2[fmask2]
+        Sl2 = np.log1p(Sv2 * 100)
+
+        sf2 = max(1, len(fv2) // 100)
+        st2 = max(1, len(th2) // 80)
+        fv2_d = fv2[::sf2];  tv2_d = th2[::st2]
+        Sl2_d = Sl2[::sf2, ::st2]
+
+        T_g2, F_g2 = np.meshgrid(tv2_d, fv2_d)
+        norm2 = (Sl2_d - Sl2_d.min()) / (Sl2_d.max() - Sl2_d.min() + 1e-9)
+        fc2   = plt.cm.plasma(norm2)
+
+        ax2 = fig.add_subplot(2, 2, col + 3, projection='3d')
+        ax2.set_facecolor('#030308')
+        ax2.plot_surface(T_g2, F_g2, Sl2_d, facecolors=fc2,
+                         rstride=1, cstride=1,
+                         linewidth=0, antialiased=False, alpha=0.93)
+
+        # φ sub-harmônicos como arestas no piso
+        for k in range(-6, 1):
+            fh = BASE * PHI**k
+            if 5 < fh < fv2[-1]:
+                ax2.plot([th2[0], th2[-1]], [fh, fh], [0, 0],
+                         ':', color='#00FF88', lw=0.9, alpha=0.55)
+                ax2.text(th2[-1], fh, 0, f' φ^{k:+d}\n {fh:.0f}Hz',
+                         color='#00CC66', fontsize=5)
+
+        # Grade R no espaço sub-harmônico
+        t_r2 = np.linspace(th2[0], th2[-1], 20)
+        f_r2 = np.tan(THETA_R) * (t_r2 - th2[0]) / (th2[-1] - th2[0] + 1e-9) * fv2[-1]
+        f_r2 = np.clip(f_r2, fv2[0], fv2[-1])
+        z_r2 = np.full_like(t_r2, Sl2_d.max() * 0.1)
+        ax2.plot(t_r2, f_r2, z_r2, '--', color='#00FF88', lw=1.5, alpha=0.8,
+                 label=f'θ_R = {np.degrees(THETA_R):.1f}°')
+
+        ax2.set_xlabel('Tempo (s)', color='#AAAAAA', fontsize=7, labelpad=5)
+        ax2.set_ylabel('Freq (Hz)', color='#AAAAAA', fontsize=7, labelpad=5)
+        ax2.set_zlabel('log(E)',    color='#AAAAAA', fontsize=7, labelpad=3)
+        ax2.set_title(f'{nome}  ·  Zoom Sub-harmônico (0 – 880Hz)  ·  Alta Resolução',
+                      color='#00FF88', fontsize=8, fontweight='bold', pad=10)
+        ax2.tick_params(labelsize=5.5)
+        ax2.xaxis.pane.fill = False
+        ax2.yaxis.pane.fill = False
+        ax2.zaxis.pane.fill = False
+        ax2.xaxis.pane.set_edgecolor('#151525')
+        ax2.yaxis.pane.set_edgecolor('#151525')
+        ax2.zaxis.pane.set_edgecolor('#151525')
+        ax2.grid(True, color='#111122', linewidth=0.3, alpha=0.6)
+        ax2.view_init(elev=32, azim=-50)
+        ax2.legend(fontsize=6.5, facecolor='#0A0A1A', labelcolor='white',
+                   loc='upper left')
+
+    fig.savefig('scanner_3d_resultado.png', dpi=148,
+                bbox_inches='tight', facecolor=fig.get_facecolor())
+    print("Salvo: scanner_3d_resultado.png")
+    plt.show()
+    return fig
+
+
 if __name__ == '__main__':
     print(f"φ  = {PHI}")
     print(f"α  = {ALPHA:.8f}")
@@ -409,3 +553,4 @@ if __name__ == '__main__':
     print(f"SR  = {SR} Hz | DUR = {DUR}s")
     print()
     scanner_v2()
+    scanner_3d()
