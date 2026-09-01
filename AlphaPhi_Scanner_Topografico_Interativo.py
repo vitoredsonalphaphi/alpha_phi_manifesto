@@ -158,6 +158,7 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     vis = (amb_i == 0)
 
     # STFT principal — amplitude ou fase
+    plv_map = None  # inicialização — sobrescrito nos modos de fase
     if mode == 'phase_raw':
         freqs, times, Zxx_c = stft_phi_complex(x)
         fmask = freqs <= 5000
@@ -165,24 +166,27 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         Zc    = Zxx_c[fmask]
         Sl    = np.angle(Zc)          # fase bruta -π … +π
         gradS = Sl - gaussian_filter(Sl, sigma=3.0)
-        S     = np.abs(Zc)**2         # amplitude auxiliar para vértices
+        S     = np.abs(Zc)**2
         Sl_amp = np.log1p(S * 100)
         gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
     elif mode in ('phase_coh', 'phase_couple'):
-        freqs, times, Zxx_c = stft_phi_complex(x)
-        fmask = freqs <= 5000
-        fv    = freqs[fmask]
+        # Amplitude para altura Z (teto visível)
+        freqs, times, S_amp = stft_phi(x)
+        fmask  = freqs <= 5000
+        fv     = freqs[fmask]
+        Sl     = np.log1p(S_amp[fmask] * 100)
+        gradS  = Sl - gaussian_filter(Sl, sigma=3.0)
+        Sl_amp = Sl
+        gradS_amp = gradS
+        # PLV para cor da superfície
+        _, _, Zxx_c = stft_phi_complex(x)
         Zc    = Zxx_c[fmask]
         ph    = np.angle(Zc)
         W     = 12
         cos_m = uniform_filter1d(np.cos(ph), size=2*W+1, axis=1)
         sin_m = uniform_filter1d(np.sin(ph), size=2*W+1, axis=1)
-        Sl    = np.sqrt(cos_m**2 + sin_m**2)   # PLV 0–1 (teto da fase)
-        gradS = Sl - gaussian_filter(Sl, sigma=3.0)
-        S     = np.abs(Zc)**2
-        Sl_amp = np.log1p(S * 100)
-        gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
-        ph_raw = ph   # fase bruta — guardada para tapete do acoplamento
+        plv_map = np.sqrt(cos_m**2 + sin_m**2)   # PLV 0–1
+        ph_raw  = ph   # fase bruta — tapete do acoplamento
     else:
         freqs, times, S = stft_phi(x)
         fmask = freqs <= 5000
@@ -191,41 +195,64 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         gradS = Sl - gaussian_filter(Sl, sigma=3.0)
         Sl_amp = Sl
         gradS_amp = gradS
+        ph_raw = None
 
     sf = max(1, len(fv) // 140)
     st = max(1, len(times) // 90)
     fv_d  = fv[::sf];    tv_d  = times[::st]
     Sl_d  = Sl[::sf, ::st]
     gS_d  = gradS[::sf, ::st]
+    plv_d = plv_map[::sf, ::st] if mode in ('phase_coh', 'phase_couple') else None
     T_g, F_g = np.meshgrid(tv_d, fv_d)
 
     # ── 1. Superfície espectral principal ─────────────────────────────────────
-    surf_extra = {}
-    if mode == 'phase_raw':
-        surf_extra = dict(cmin=-np.pi, cmax=np.pi, cmid=0)
-    elif mode in ('phase_coh', 'phase_couple'):
-        surf_extra = dict(cmin=0, cmax=1)
-
-    fig.add_trace(go.Surface(
-        x=T_g, y=F_g, z=Sl_d,
-        colorscale=cmap,
-        **surf_extra,
-        opacity=0.91,
-        showscale=(amb_i == 0),
-        colorbar=dict(
-            title=dict(text='log(E)', font=dict(color='#AAAAAA', size=10)),
-            len=0.45, x=1.01,
-            tickfont=dict(color='#AAAAAA', size=8),
-        ),
-        name=f'{nome} · Superfície',
-        hovertemplate=(
-            f'<b>{nome}</b><br>'
-            't = %{x:.2f} s<br>'
-            'f = %{y:.0f} Hz<br>'
-            'log(E) = %{z:.3f}<extra></extra>'
-        ),
-        visible=vis,
-    ))
+    if mode in ('phase_coh', 'phase_couple'):
+        # Z = amplitude (teto visível), cor = PLV (coerência de fase)
+        fig.add_trace(go.Surface(
+            x=T_g, y=F_g, z=Sl_d,
+            surfacecolor=plv_d,
+            colorscale='Viridis',
+            cmin=0, cmax=1,
+            opacity=0.93,
+            showscale=True,
+            colorbar=dict(
+                title=dict(text='PLV (coer.)', font=dict(color='#AAAAAA', size=10)),
+                len=0.45, x=1.01,
+                tickfont=dict(color='#AAAAAA', size=8),
+            ),
+            name=f'{nome} · Superfície',
+            hovertemplate=(
+                f'<b>{nome}</b><br>'
+                't = %{x:.2f} s<br>'
+                'f = %{y:.0f} Hz<br>'
+                'log(E) = %{z:.3f}<extra></extra>'
+            ),
+            visible=vis,
+        ))
+    else:
+        surf_extra = {}
+        if mode == 'phase_raw':
+            surf_extra = dict(cmin=-np.pi, cmax=np.pi, cmid=0)
+        fig.add_trace(go.Surface(
+            x=T_g, y=F_g, z=Sl_d,
+            colorscale=cmap,
+            **surf_extra,
+            opacity=0.91,
+            showscale=(amb_i == 0),
+            colorbar=dict(
+                title=dict(text='log(E)', font=dict(color='#AAAAAA', size=10)),
+                len=0.45, x=1.01,
+                tickfont=dict(color='#AAAAAA', size=8),
+            ),
+            name=f'{nome} · Superfície',
+            hovertemplate=(
+                f'<b>{nome}</b><br>'
+                't = %{x:.2f} s<br>'
+                'f = %{y:.0f} Hz<br>'
+                'log(E) = %{z:.3f}<extra></extra>'
+            ),
+            visible=vis,
+        ))
 
     # ── 2. Linha Grade R θ_R (cavalga superfície) ─────────────────────────────
     t_r  = np.linspace(tv_d[0], tv_d[-1], 80)
