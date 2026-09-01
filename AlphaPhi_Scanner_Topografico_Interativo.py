@@ -144,7 +144,7 @@ AMBIENTES = [
     ('Fase Bruta — EcoBIP',             semente,    '#4488FF', 'RdBu',    dict(x=1.3, y=-1.5, z=1.10), 'phase_raw'),
     ('Coerência de Fase — EcoBIP',      semente,    '#44FF88', 'Viridis', dict(x=1.3, y=-1.5, z=1.10), 'phase_coh'),
     ('Acoplamento Fase Base↔Teto',      semente,    '#FF88FF', 'Viridis', dict(x=1.5, y=-1.8, z=1.20), 'phase_couple'),
-    ('Base + Teto Unificados',          semente,    '#AAFFFF', 'ice',     dict(x=1.5, y=-1.8, z=1.40), 'unified'),
+    ('Base + Teto Unificados',          semente,    '#AAFFFF', 'ice',     dict(x=1.8, y=-2.2, z=2.00), 'unified'),
 ]
 
 N_TRACES = 5  # por ambiente: superfície + grade_r_linha + vértices + tapete_sub + phi_harm
@@ -159,8 +159,9 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     vis = (amb_i == 0)
 
     # STFT principal — amplitude ou fase
-    plv_map  = None   # inicialização — sobrescrito nos modos de fase
-    Sl_base  = None   # inicialização — sobrescrito no modo unified
+    plv_map       = None   # inicialização — sobrescrito nos modos de fase
+    Sl_base       = None   # inicialização — sobrescrito no modo unified
+    Sl_teto_color = None   # inicialização — sobrescrito no modo unified
     if mode == 'phase_raw':
         freqs, times, Zxx_c = stft_phi_complex(x)
         fmask = freqs <= 5000
@@ -195,9 +196,10 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         fv     = freqs[fmask]
         Sl_pos_raw = np.log1p(S[fmask] * 100)
         Sl_neg_raw = Sl_pos_raw.max() - Sl_pos_raw   # Espaço Negativo
-        # Normaliza ambos para 0–1 para empilhar
-        Sl_base = Sl_pos_raw / (Sl_pos_raw.max() + 1e-9)  # base 0–1
-        Sl      = Sl_neg_raw / (Sl_neg_raw.max() + 1e-9)  # teto 0–1 (superfície principal)
+        Sl_base = Sl_pos_raw / (Sl_pos_raw.max() + 1e-9)   # piso: amplitude 0–1
+        Sl_teto_color = Sl_neg_raw / (Sl_neg_raw.max() + 1e-9)  # cor do teto: Espaço Negativo 0–1
+        # Teto Z deslocado 2+ acima do piso (0–1) para ser claramente visível
+        Sl = Sl_teto_color + 2.0   # teto Z: 2.0 a 3.0
         gradS   = Sl - gaussian_filter(Sl, sigma=3.0)
         Sl_amp  = Sl_pos_raw
         gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
@@ -217,14 +219,16 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     fv_d  = fv[::sf];    tv_d  = times[::st]
     Sl_d  = Sl[::sf, ::st]
     gS_d  = gradS[::sf, ::st]
-    plv_d = plv_map[::sf, ::st] if mode in ('phase_coh', 'phase_couple') else None
+    plv_d        = plv_map[::sf, ::st]       if mode in ('phase_coh', 'phase_couple') else None
+    teto_color_d = Sl_teto_color[::sf, ::st] if mode == 'unified'                    else None
     T_g, F_g = np.meshgrid(tv_d, fv_d)
 
     # ── 1. Superfície espectral principal ─────────────────────────────────────
     if mode == 'unified':
-        # Teto = Espaço Negativo normalizado, colorscale ice
+        # Teto = Z deslocado 2–3 acima do piso; COR = Espaço Negativo (ice)
         fig.add_trace(go.Surface(
             x=T_g, y=F_g, z=Sl_d,
+            surfacecolor=teto_color_d,
             colorscale='ice',
             cmin=0, cmax=1,
             opacity=0.93,
@@ -332,12 +336,11 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
 
     # ── 4. Tapete no piso ─────────────────────────────────────────────────────
     if mode == 'unified':
-        # Piso = superfície de amplitude real (base) deslocada abaixo do teto
-        Sl_base_d = Sl_base[::sf, ::st] - 1.5   # deslocada -1.5 abaixo do teto (0–1)
+        # Piso = amplitude base 0–1 (naturalmente abaixo do teto 2–3)
+        Sl_base_d = Sl_base[::sf, ::st]
         T_s, F_s  = np.meshgrid(tv_d, fv_d)
         fig.add_trace(go.Surface(
             x=T_s, y=F_s, z=Sl_base_d,
-            surfacecolor=Sl_base[::sf, ::st],
             colorscale='hot',
             cmin=0, cmax=1,
             opacity=0.88,
@@ -347,9 +350,8 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
                 '<b>Base (amplitude)</b><br>'
                 't=%{x:.2f}s<br>'
                 'f=%{y:.0f}Hz<br>'
-                'logE=%{customdata:.3f}<extra></extra>'
+                'amp=%{z:.3f}<extra></extra>'
             ),
-            customdata=Sl_base[::sf, ::st],
             visible=vis,
         ))
     elif mode == 'phase_couple':
