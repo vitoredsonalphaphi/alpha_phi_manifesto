@@ -7,7 +7,7 @@
 
 import numpy as np
 from scipy.signal import stft
-from scipy.ndimage import gaussian_filter
+from scipy.ndimage import gaussian_filter, uniform_filter1d
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -83,6 +83,13 @@ def stft_phi(x):
     f, tv, Zxx = stft(x, fs=SR, window='hann', nperseg=win, noverlap=win-hop)
     return f, tv, np.abs(Zxx)**2
 
+def stft_phi_complex(x):
+    win = int(SR / BASE * 2 * PHI)
+    win = max(512, min(win, 4096))
+    hop = win // 4
+    f, tv, Zxx = stft(x, fs=SR, window='hann', nperseg=win, noverlap=win-hop)
+    return f, tv, Zxx  # complexo — fase preservada
+
 def stft_subfreq(x):
     win = int(SR / BASE * 8 * PHI)
     win = max(4096, min(win, 16384))
@@ -127,13 +134,15 @@ dobras  = [cascata_step(semente, k) for k in range(1, 6)]
 print("  Sinais prontos.")
 
 AMBIENTES = [
-    ('Base — Quadrada 880Hz',           quad,       '#888888', 'Greys',   dict(x=1.9, y=-1.9, z=0.75)),
-    ('Semente α-φ',                     semente,    '#BB55FF', 'Purples', dict(x=1.7, y=-1.7, z=0.85)),
-    ('Dobra 1',                         dobras[0],  '#FF6633', 'hot',     dict(x=1.6, y=-1.7, z=0.90)),
-    ('Dobra 2',                         dobras[1],  '#FFAA22', 'YlOrRd',  dict(x=1.5, y=-1.6, z=0.95)),
-    ('Dobra 3',                         dobras[2],  '#FFD700', 'inferno', dict(x=1.4, y=-1.6, z=1.00)),
-    ('Dobra 4',                         dobras[3],  '#88FF44', 'YlGn',    dict(x=1.4, y=-1.5, z=1.05)),
-    ('Dobra 5 — Campo Harmônico β→φ³',  dobras[4],  '#00FFAA', 'viridis', dict(x=1.3, y=-1.5, z=1.10)),
+    ('Base — Quadrada 880Hz',           quad,       '#888888', 'Greys',   dict(x=1.9, y=-1.9, z=0.75), 'amp'),
+    ('Semente α-φ',                     semente,    '#BB55FF', 'Purples', dict(x=1.7, y=-1.7, z=0.85), 'amp'),
+    ('Dobra 1',                         dobras[0],  '#FF6633', 'hot',     dict(x=1.6, y=-1.7, z=0.90), 'amp'),
+    ('Dobra 2',                         dobras[1],  '#FFAA22', 'YlOrRd',  dict(x=1.5, y=-1.6, z=0.95), 'amp'),
+    ('Dobra 3',                         dobras[2],  '#FFD700', 'inferno', dict(x=1.4, y=-1.6, z=1.00), 'amp'),
+    ('Dobra 4',                         dobras[3],  '#88FF44', 'YlGn',    dict(x=1.4, y=-1.5, z=1.05), 'amp'),
+    ('Dobra 5 — Campo Harmônico β→φ³',  dobras[4],  '#00FFAA', 'viridis', dict(x=1.3, y=-1.5, z=1.10), 'amp'),
+    ('Fase Bruta — EcoBIP',             semente,    '#4488FF', 'RdBu',    dict(x=1.3, y=-1.5, z=1.10), 'phase_raw'),
+    ('Coerência de Fase — EcoBIP',      semente,    '#44FF88', 'Viridis', dict(x=1.3, y=-1.5, z=1.10), 'phase_coh'),
 ]
 
 N_TRACES = 5  # por ambiente: superfície + grade_r_linha + vértices + tapete_sub + phi_harm
@@ -143,16 +152,43 @@ trace_idx = 0
 
 print("\nConstruindo ambientes Plotly...")
 
-for amb_i, (nome, x, cor, cmap, cam_eye) in enumerate(AMBIENTES):
-    print(f"  [{amb_i+1}/7] {nome}...")
+for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
+    print(f"  [{amb_i+1}/{len(AMBIENTES)}] {nome}...")
     vis = (amb_i == 0)
 
-    # STFT principal
-    freqs, times, S = stft_phi(x)
-    fmask = freqs <= 5000
-    fv, Sv = freqs[fmask], S[fmask]
-    Sl     = np.log1p(Sv * 100)
-    gradS  = Sl - gaussian_filter(Sl, sigma=3.0)
+    # STFT principal — amplitude ou fase
+    if mode == 'phase_raw':
+        freqs, times, Zxx_c = stft_phi_complex(x)
+        fmask = freqs <= 5000
+        fv    = freqs[fmask]
+        Zc    = Zxx_c[fmask]
+        Sl    = np.angle(Zc)          # fase bruta -π … +π
+        gradS = Sl - gaussian_filter(Sl, sigma=3.0)
+        S     = np.abs(Zc)**2         # amplitude auxiliar para vértices
+        Sl_amp = np.log1p(S * 100)
+        gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
+    elif mode == 'phase_coh':
+        freqs, times, Zxx_c = stft_phi_complex(x)
+        fmask = freqs <= 5000
+        fv    = freqs[fmask]
+        Zc    = Zxx_c[fmask]
+        ph    = np.angle(Zc)
+        W     = 12
+        cos_m = uniform_filter1d(np.cos(ph), size=2*W+1, axis=1)
+        sin_m = uniform_filter1d(np.sin(ph), size=2*W+1, axis=1)
+        Sl    = np.sqrt(cos_m**2 + sin_m**2)   # PLV 0–1
+        gradS = Sl - gaussian_filter(Sl, sigma=3.0)
+        S     = np.abs(Zc)**2
+        Sl_amp = np.log1p(S * 100)
+        gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
+    else:
+        freqs, times, S = stft_phi(x)
+        fmask = freqs <= 5000
+        fv, Sv = freqs[fmask], S[fmask]
+        Sl    = np.log1p(Sv * 100)
+        gradS = Sl - gaussian_filter(Sl, sigma=3.0)
+        Sl_amp = Sl
+        gradS_amp = gradS
 
     sf = max(1, len(fv) // 140)
     st = max(1, len(times) // 90)
@@ -162,9 +198,16 @@ for amb_i, (nome, x, cor, cmap, cam_eye) in enumerate(AMBIENTES):
     T_g, F_g = np.meshgrid(tv_d, fv_d)
 
     # ── 1. Superfície espectral principal ─────────────────────────────────────
+    surf_extra = {}
+    if mode == 'phase_raw':
+        surf_extra = dict(cmin=-np.pi, cmax=np.pi, cmid=0)
+    elif mode == 'phase_coh':
+        surf_extra = dict(cmin=0, cmax=1)
+
     fig.add_trace(go.Surface(
         x=T_g, y=F_g, z=Sl_d,
         colorscale=cmap,
+        **surf_extra,
         opacity=0.91,
         showscale=(amb_i == 0),
         colorbar=dict(
@@ -204,7 +247,9 @@ for amb_i, (nome, x, cor, cmap, cam_eye) in enumerate(AMBIENTES):
     ))
 
     # ── 3. Vértices Grade R por resultado ◆ ciano ─────────────────────────────
-    vx, vy, vz, vinfo = grade_r_vertices(fv_d, tv_d, Sl_d, gS_d)
+    Sl_amp_d   = Sl_amp[::sf, ::st]
+    gradS_amp_d = gradS_amp[::sf, ::st]
+    vx, vy, vz, vinfo = grade_r_vertices(fv_d, tv_d, Sl_amp_d, gradS_amp_d)
 
     fig.add_trace(go.Scatter3d(
         x=vx, y=vy, z=vz,
@@ -277,7 +322,7 @@ total_traces = trace_idx
 
 # ─── Botões de navegação ──────────────────────────────────────────────────────
 buttons = []
-for amb_i, (nome, _, cor, _, cam_eye) in enumerate(AMBIENTES):
+for amb_i, (nome, _, cor, _, cam_eye, _mode) in enumerate(AMBIENTES):
     vis = [False] * total_traces
     for idx in vis_map[amb_i]: vis[idx] = True
     buttons.append(dict(
