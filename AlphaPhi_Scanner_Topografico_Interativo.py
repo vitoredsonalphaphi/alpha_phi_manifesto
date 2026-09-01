@@ -126,16 +126,43 @@ def grade_r_vertices(fv, tv, Sl, gradS, theta=THETA_R, margin=0.07):
                 )
     return vx, vy, vz, vinfo
 
+# ─── Pré-campo Grade R (subfrequência fundação) ───────────────────────────────
+def gerar_pre_campo(epsilon=0.05):
+    """Pré-campo a f_semente = BASE × α ≈ 6.4Hz com estrutura FM_φ interna.
+    Opera como 'atmosfera' que inclina o campo para θ_R antes do input.
+    ε controla a intensidade da tendência (não a amplitude dominante).
+    """
+    f_s  = BASE * ALPHA          # ≈ 6.4 Hz — frequência do sistema
+    f_m  = f_s / PHI             # ≈ 3.96 Hz — modulante
+    f_m2 = f_s / PHI**2          # ≈ 2.45 Hz — modulante de segunda ordem
+    # Carrier quadrado lento — estrutura análoga ao EcoBIP, mas em subnível
+    carrier = np.sign(np.sin(2 * np.pi * f_s * t))
+    # FM_φ: mesma topologia do semear(), em escala 1/α
+    fm_env  = np.sin(2 * np.pi * f_m * t + PHI * np.sin(2 * np.pi * f_m2 * t))
+    # Mistura com proporção α — espelha o acoplamento do EcoBIP
+    pre = (1 - ALPHA) * carrier + ALPHA * fm_env
+    return epsilon * _norm(pre)
+
 # ─── Gerar todos os sinais ────────────────────────────────────────────────────
-print("\nGerando sinais (Quadrada → Semente → 5 Dobras)...")
+print("\nGerando sinais (Quadrada → Semente → 5 Dobras + Pré-Campo)...")
 quad    = gerar_quadrada()
 semente = semear(quad)
 dobras  = [cascata_step(semente, k) for k in range(1, 6)]
+
+# Pré-campo em dois graus de intensidade para comparação
+pre_campo_leve  = gerar_pre_campo(epsilon=0.03)   # ε leve — tendência sutil
+pre_campo_forte = gerar_pre_campo(epsilon=0.10)   # ε forte — tendência visível
+quad_pre_leve   = _norm(quad + pre_campo_leve)
+quad_pre_forte  = _norm(quad + pre_campo_forte)
+semente_pre_leve  = semear(quad_pre_leve)
+semente_pre_forte = semear(quad_pre_forte)
 print("  Sinais prontos.")
 
 AMBIENTES = [
-    ('Base — Quadrada 880Hz',           quad,       '#888888', 'Greys',   dict(x=1.9, y=-1.9, z=0.75), 'amp'),
-    ('Semente α-φ',                     semente,    '#BB55FF', 'Purples', dict(x=1.7, y=-1.7, z=0.85), 'amp'),
+    ('Base — Quadrada 880Hz',           quad,              '#888888', 'Greys',   dict(x=1.9, y=-1.9, z=0.75), 'amp'),
+    ('Semente α-φ',                     semente,           '#BB55FF', 'Purples', dict(x=1.7, y=-1.7, z=0.85), 'amp'),
+    ('Pré-Campo Leve (ε=0.03)',         semente_pre_leve,  '#FF66CC', 'RdPu',   dict(x=1.7, y=-1.7, z=0.87), 'amp'),
+    ('Pré-Campo Forte (ε=0.10)',        semente_pre_forte, '#FF2299', 'magenta', dict(x=1.7, y=-1.7, z=0.87), 'amp'),
     ('Dobra 1',                         dobras[0],  '#FF6633', 'hot',     dict(x=1.6, y=-1.7, z=0.90), 'amp'),
     ('Dobra 2',                         dobras[1],  '#FFAA22', 'YlOrRd',  dict(x=1.5, y=-1.6, z=0.95), 'amp'),
     ('Dobra 3',                         dobras[2],  '#FFD700', 'inferno', dict(x=1.4, y=-1.6, z=1.00), 'amp'),
