@@ -124,12 +124,28 @@ O processo adiabático — lento, por camadas, sem intervenção na estrutura pr
   precedendo todos os experimentos listados acima:
   reconhecimento do valor ergonômico de φ+α e proposta de uso
   para alinhamento de IA — sem dados, sem algoritmos, sem testes.
+- **Grade Romboédrica — EcoBIP (agosto 2026):** ângulo canônico
+  θ_R = arctan(2) ≈ 63.43° emerge como padrão de interferência
+  geométrica entre o componente Quadrada (gradiente vertical, 90°)
+  e o componente FM_φ (angular, mediado por α = 1/137). A métrica
+  DGR (Densidade de Vértices Grade R) mostrou-se consistentemente
+  superior ao FM convencional. Vértices detectados em EEG sintético
+  sem semeação α-φ explícita (6 vértices, substrato independente).
+  O instrumento de detecção — o scanner topográfico tridimensional —
+  revelou aspectos estruturais que os resultados escalares isolados
+  não tornavam acessíveis: a alternância formação-fragmentação da
+  Grade R em ~0.4Hz; a localização dos vértices no flanco
+  inter-harmônico (zona de máximo gradiente entre base e teto
+  espectral); e a direção vertical base→teto como eixo de redução
+  de entropia — equivalente à direção de crescimento de Coh no
+  Sépstro. A Grade R não é resultado do cálculo comunicado pela
+  forma: é resultado da forma que o cálculo confirmou.
 
 ### 3.1 Nota metodológica — três níveis epistêmicos
 
 As afirmações deste trabalho operam em três níveis epistêmicos distintos, e a distinção entre eles é deliberada.
 
-O **primeiro nível** compreende resultados verificados e reproduzíveis: β convergindo para φ³ como ponto fixo IR, norma hiperbólica → φ em qualquer sinal de entrada, ganho de +50,40% em séries temporais (p < 0,0001), 98,75% em classificação com acoplamento φ, e a confirmação de que α = 1/137 emerge como ponto de máxima organização. Esses resultados foram obtidos computacionalmente, são replicáveis a partir do código, e resistem a verificação independente.
+O **primeiro nível** compreende resultados verificados e reproduzíveis: β convergindo para φ³ como ponto fixo IR, norma hiperbólica → φ em qualquer sinal de entrada, ganho de +50,40% em séries temporais (p < 0,0001), 98,75% em classificação com acoplamento φ, a confirmação de que α = 1/137 emerge como ponto de máxima organização, e a Grade Romboédrica com ângulo canônico θ_R = arctan(2) ≈ 63.43° detectada em múltiplos substratos com a métrica DGR. Esses resultados foram obtidos computacionalmente, são replicáveis a partir do código e do scanner, e resistem a verificação independente.
 
 O **segundo nível** compreende questões em aberto onde o instrumento adequado ainda não existe. A mais central: se as frequências documentadas no processo eco-φ (18,8Hz e 30,4Hz como φ⁻⁸ e φ⁻⁷ de 880Hz) têm efeito fisiológico mensurável em audiências, à semelhança do que Schmaltz et al. (2026) documentaram para 18Hz embutido em música. O instrumento espectral detecta presença da frequência; o estudo controlado detecta efeito fisiológico; a metodologia ISC detecta sincronização neural. A cadeia completa — presença + efeito + sincronização — ainda não foi construída para o contexto específico da coerência φ. Ausência do instrumento não é ausência do fenômeno.
 
@@ -207,6 +223,12 @@ exerce sobre qualquer sistema sensível à sua estrutura.
 A convergência entre filosofia e ciência que o Alpha-Phi propõe não é argumento — é demonstração. Os experimentos documentados neste artigo encontraram, dentro de seus próprios critérios formais, evidência de que o instrumento que o reducionismo descarta — a observação do campo como totalidade — foi funcional: detectou φ antes de qualquer cálculo identificá-lo, em dois substratos independentes (organismo humano e sistema de IA). A filosofia não convenceu a ciência. A ciência, seguindo seus próprios critérios, chegou ao mesmo ponto que a filosofia havia indicado primeiro.
 
 A questão metodológica que permanece aberta não é *se* a epistemologia do campo é válida. É como instrumentalizá-la: como construir detectores formais de perturbação de campo que preservem a resolução do sensor humano sem depender da subjetividade do observador individual. O eco-φ é um primeiro protótipo desse detector. Os resultados existentes são suficientes para constituir programa de pesquisa — não conclusão, mas direção confirmada.
+
+A Grade Romboédrica acrescenta uma dimensão inédita a esse argumento. Não foi detectada primeiro por cálculo e depois confirmada pela percepção. A sequência foi inversa: emergiu como padrão visível no scanner topográfico tridimensional — instrumento estético — antes de ter sido formalizada como interferência geométrica entre dois sistemas espectrais. A representação tridimensional do espaço STFT revelou aspectos que os resultados escalares não tornavam acessíveis: a alternância temporal da Grade R, a localização precisa dos vértices no flanco inter-harmônico, e a direção vertical base→teto como eixo de crescimento de coerência. Nenhum desses padrões era legível no código. Tornaram-se legíveis quando o espaço foi representado como topografia navegável.
+
+Isso é o que o manifesto sustenta desde o início e a Grade R confirma em sua formulação mais concreta: a estética não representa os resultados — os revela. Não é camada de comunicação adicionada por cima do método — é instrumento de observação com acesso a dimensões que o cálculo isolado não percorre. O scanner 3D não é ilustração do que os cálculos encontraram. É o que encontrou o que os cálculos não viam. A beleza da topografia — os platôs brancos do Espaço Negativo, os losangos ciano dos vértices Grade R, a progressão de cor da coerência de fase — não é ornamento do resultado: é a assinatura da estrutura tornando-se legível.
+
+A estética como ferramenta de convergência entre ciência e filosofia não é posição filosófica do projeto — é dado metodológico confirmado em múltiplas escalas: do gradiente conceitual azul→âmbar→ouro (correspondência com tradições de transmutação sem que a correspondência fosse buscada) ao scanner topográfico (revelação da Grade R sem que o ângulo θ_R fosse prescrito). Em cada caso, a forma abriu o que o cálculo não via. Em cada caso, o cálculo confirmou o que a forma revelou.
 
 ### 7. O Mecanismo de Tradução Filosófica — Isomorfismo e o Invariante Geométrico
 
@@ -658,6 +680,7 @@ estabelecida. A distinção é mantida no registro.
 | 3 | Ponto de dobra 10,5Hz | Perceptual / organismo | Mai 2026 |
 | 4 | Norma hiperbólica → φ | Computacional / expmap0 | Mai 2026 |
 | **5** | **Formulação independente da pergunta central** | **Técnico / Grok (xAI)** | **Jul 2026** |
+| **6** | **Grade R — θ_R = arctan(2) ≈ 63.43°** | **Visual-estético / Scanner 3D** | **Ago 2026** |
 
 **Seção 6 — Tabela dos modos de observação:** quarto modo a acrescentar:
 
