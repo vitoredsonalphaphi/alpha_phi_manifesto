@@ -144,6 +144,7 @@ AMBIENTES = [
     ('Fase Bruta — EcoBIP',             semente,    '#4488FF', 'RdBu',    dict(x=1.3, y=-1.5, z=1.10), 'phase_raw'),
     ('Coerência de Fase — EcoBIP',      semente,    '#44FF88', 'Viridis', dict(x=1.3, y=-1.5, z=1.10), 'phase_coh'),
     ('Acoplamento Fase Base↔Teto',      semente,    '#FF88FF', 'Viridis', dict(x=1.5, y=-1.8, z=1.20), 'phase_couple'),
+    ('Base + Teto Unificados',          semente,    '#AAFFFF', 'ice',     dict(x=1.5, y=-1.8, z=1.40), 'unified'),
 ]
 
 N_TRACES = 5  # por ambiente: superfície + grade_r_linha + vértices + tapete_sub + phi_harm
@@ -158,7 +159,8 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     vis = (amb_i == 0)
 
     # STFT principal — amplitude ou fase
-    plv_map = None  # inicialização — sobrescrito nos modos de fase
+    plv_map  = None   # inicialização — sobrescrito nos modos de fase
+    Sl_base  = None   # inicialização — sobrescrito no modo unified
     if mode == 'phase_raw':
         freqs, times, Zxx_c = stft_phi_complex(x)
         fmask = freqs <= 5000
@@ -187,6 +189,19 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         sin_m = uniform_filter1d(np.sin(ph), size=2*W+1, axis=1)
         plv_map = np.sqrt(cos_m**2 + sin_m**2)   # PLV 0–1
         ph_raw  = ph   # fase bruta — tapete do acoplamento
+    elif mode == 'unified':
+        freqs, times, S = stft_phi(x)
+        fmask  = freqs <= 5000
+        fv     = freqs[fmask]
+        Sl_pos_raw = np.log1p(S[fmask] * 100)
+        Sl_neg_raw = Sl_pos_raw.max() - Sl_pos_raw   # Espaço Negativo
+        # Normaliza ambos para 0–1 para empilhar
+        Sl_base = Sl_pos_raw / (Sl_pos_raw.max() + 1e-9)  # base 0–1
+        Sl      = Sl_neg_raw / (Sl_neg_raw.max() + 1e-9)  # teto 0–1 (superfície principal)
+        gradS   = Sl - gaussian_filter(Sl, sigma=3.0)
+        Sl_amp  = Sl_pos_raw
+        gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
+        ph_raw  = None
     else:
         freqs, times, S = stft_phi(x)
         fmask = freqs <= 5000
@@ -206,7 +221,29 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     T_g, F_g = np.meshgrid(tv_d, fv_d)
 
     # ── 1. Superfície espectral principal ─────────────────────────────────────
-    if mode in ('phase_coh', 'phase_couple'):
+    if mode == 'unified':
+        # Teto = Espaço Negativo normalizado, colorscale ice
+        fig.add_trace(go.Surface(
+            x=T_g, y=F_g, z=Sl_d,
+            colorscale='ice',
+            cmin=0, cmax=1,
+            opacity=0.93,
+            showscale=True,
+            colorbar=dict(
+                title=dict(text='Teto (neg)', font=dict(color='#AAAAAA', size=10)),
+                len=0.45, x=1.01,
+                tickfont=dict(color='#AAAAAA', size=8),
+            ),
+            name=f'{nome} · Teto',
+            hovertemplate=(
+                f'<b>Teto — Espaço Negativo</b><br>'
+                't = %{x:.2f} s<br>'
+                'f = %{y:.0f} Hz<br>'
+                'val = %{z:.3f}<extra></extra>'
+            ),
+            visible=vis,
+        ))
+    elif mode in ('phase_coh', 'phase_couple'):
         # Z = amplitude (teto visível), cor = PLV (coerência de fase)
         fig.add_trace(go.Surface(
             x=T_g, y=F_g, z=Sl_d,
@@ -294,7 +331,28 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     ))
 
     # ── 4. Tapete no piso ─────────────────────────────────────────────────────
-    if mode == 'phase_couple':
+    if mode == 'unified':
+        # Piso = superfície de amplitude real (base) deslocada abaixo do teto
+        Sl_base_d = Sl_base[::sf, ::st] - 1.5   # deslocada -1.5 abaixo do teto (0–1)
+        T_s, F_s  = np.meshgrid(tv_d, fv_d)
+        fig.add_trace(go.Surface(
+            x=T_s, y=F_s, z=Sl_base_d,
+            surfacecolor=Sl_base[::sf, ::st],
+            colorscale='hot',
+            cmin=0, cmax=1,
+            opacity=0.88,
+            showscale=False,
+            name=f'Base — Amplitude · {nome}',
+            hovertemplate=(
+                '<b>Base (amplitude)</b><br>'
+                't=%{x:.2f}s<br>'
+                'f=%{y:.0f}Hz<br>'
+                'logE=%{customdata:.3f}<extra></extra>'
+            ),
+            customdata=Sl_base[::sf, ::st],
+            visible=vis,
+        ))
+    elif mode == 'phase_couple':
         # Piso = fase bruta (-π … +π) — o "Base" da fase
         ph_raw_d = ph_raw[::sf, ::st]
         T_s, F_s = np.meshgrid(tv_d, fv_d)
