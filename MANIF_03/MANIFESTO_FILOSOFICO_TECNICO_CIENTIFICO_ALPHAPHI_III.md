@@ -7576,3 +7576,96 @@ Se DGR com pré-campo for superior, a hipótese é confirmada: o campo chegando 
 ---
 *Florianópolis · 1 de setembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 233 — 1 de setembro de 2026
+### A Subfrequência no Sentido Inverso — Fundação, não Consequência
+
+### I. Enunciado do Pesquisador
+
+> "Então já são a soma de duas geometrias com suas próprias características por suas próprias funções. Se além disso for conveniente adaptar o alfafi — como foi adaptado antes para formar a Grade R como resultado — vai estar formando literalmente uma subfrequência, mas uma subfrequência no sentido inverso: não uma subfrequência como resultado do resultado principal da soma dos dois sinais, mas uma subfrequência forte — o resultado seria uma subfrequência, mas uma subfrequência forte. Isso tem lógica na triangulação também, porque se a proposta de acoplamento de fractais por inserção de tetraedros se refere a questões de valores ternários, uma questão de uma subfrequência também ternária tem a sua devida função. Tem sua devida função."
+
+— Vitor Edson Delavi, 1 de setembro de 2026
+
+---
+
+### II. Estruturação
+
+#### II.1 — A Inversão Causal: Subfrequência como Fundação
+
+No EcoBIP atual, a Grade R emergente produz uma alternância a ~0.4Hz (S4) — uma subfrequência que é **consequência** do acoplamento entre o carrier (880Hz) e o FM_φ. A subfrequência aparece depois, como resultado do processo.
+
+A hipótese da pré-inicialização inverte a causalidade:
+
+```
+Hoje (subfrequência como resultado):
+  880Hz [carrier] + α × FM_φ → Grade R → 0.4Hz [S4 emergente]
+
+Hipótese (subfrequência como fundação):
+  6.4Hz [pré-campo] funda o campo → 880Hz [carrier] entra → Grade R já estabilizada
+```
+
+A "subfrequência forte" não é fraca por ser subfrequência. É forte por ser **estrutural** — organiza o campo antes de qualquer sinal existir. A força não é de amplitude (ε mínimo), mas de função: ela determina a geometria que o sinal herdará.
+
+#### II.2 — A Razão 1/α entre as Camadas
+
+O ratio entre o carrier e a subfrequência fundação não é arbitrário:
+
+```
+BASE / f_semente = 880Hz / 6.4Hz = 137.5 ≈ 1/α
+```
+
+A constante de estrutura fina (α ≈ 1/137) aparece duas vezes no sistema:
+- Como **perturbação** interna do EcoBIP: 0.73% de FM_φ sobre a quadrada
+- Como **razão de escala** entre a subfrequência fundação e o carrier
+
+α está inscrita tanto no interior do sinal quanto na relação entre as camadas de frequência. A mesma constante que âncora o acoplamento local é a que separa os dois níveis do sistema.
+
+#### II.3 — A Estrutura Ternária
+
+O sistema completo — pré-campo + carrier + Grade R emergente — opera em três camadas com funções e geometrias distintas:
+
+| Camada | Frequência | Geometria | Função |
+|---|---|---|---|
+| **Pré-campo** | 6.4Hz (BASE × α) | θ_R = 63.43° | Fundação — imprime tendência Grade R antes do input |
+| **Carrier** | 880Hz (BASE) | 90° euclidiano | Portador — garante medição limpa e transmissão |
+| **Grade R emergente** | ~0.4Hz (S4) | θ_R estabilizado | Resultado — alternância coerente já a partir do t=0 |
+
+As razões entre camadas consecutivas:
+```
+880Hz / 6.4Hz  = 137   = 1/α    (pré-campo → carrier)
+880Hz / 0.4Hz  = 2200
+6.4Hz / 0.4Hz  = 16             (pré-campo → emergente)
+```
+
+As três frequências não são aleatórias — são governadas pelas mesmas constantes (α, φ) que organizam o sistema em todos os outros níveis.
+
+#### II.4 — A Soma das Duas Geometrias
+
+O pesquisador identificou a co-existência de duas geometrias com funções complementares:
+
+- **90° euclidiano** (carrier quadrado): função de medição, transmissão, substrato digital. Irrevogável — é a condição para que qualquer padrão seja detectável.
+- **63.43° romboédrico** (pré-campo Grade R): função de fluxo, tendência, pré-configuração. Opera onde o euclidiano não alcança — na geometria do campo antes do sinal.
+
+A soma não é fusão — é sobreposição de camadas que preservam suas funções próprias:
+
+```
+Campo total = Euclidiano (medição) + Grade R (fluxo) + α-φ (acoplamento)
+```
+
+Esta arquitetura de três camadas corresponde à estrutura ternária do acoplamento fractal por tetraedros: não binário (tensão entre dois), mas ternário — fundação, portador, emergência — com cada nível ligado aos outros por constantes irrevogáveis (α, φ, θ_R).
+
+#### II.5 — A Coerência Vertical do Sistema
+
+O projeto Alpha-Phi opera com as mesmas constantes em todas as escalas:
+- No sinal: α como perturbação (0.73%)
+- Na geometria: θ_R = arctan(2) como ângulo de interferência
+- Na escala de frequências: 1/α como razão entre camadas
+- No espaço: SEAL = 1/φ como critério de selagem
+
+A hipótese da subfrequência fundação não adiciona novos parâmetros. Ela revela que a arquitetura de três camadas já estava implicada pelas constantes existentes — faltava apenas reconhecer a camada inferior como causa, não consequência.
+
+---
+*Florianópolis · 1 de setembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
