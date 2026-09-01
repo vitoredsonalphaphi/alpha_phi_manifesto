@@ -162,6 +162,7 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     plv_map       = None   # inicialização — sobrescrito nos modos de fase
     Sl_base       = None   # inicialização — sobrescrito no modo unified
     Sl_teto_color = None   # inicialização — sobrescrito no modo unified
+    plv_base      = None   # inicialização — PLV do piso no modo unified
     if mode == 'phase_raw':
         freqs, times, Zxx_c = stft_phi_complex(x)
         fmask = freqs <= 5000
@@ -203,6 +204,14 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         gradS   = Sl - gaussian_filter(Sl, sigma=3.0)
         Sl_amp  = Sl_pos_raw
         gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
+        # PLV do piso — coerência de fase da base
+        _, _, Zxx_c_u = stft_phi_complex(x)
+        Zc_u    = Zxx_c_u[fmask]
+        ph_u    = np.angle(Zc_u)
+        W_u     = 12
+        cos_u   = uniform_filter1d(np.cos(ph_u), size=2*W_u+1, axis=1)
+        sin_u   = uniform_filter1d(np.sin(ph_u), size=2*W_u+1, axis=1)
+        plv_base = np.sqrt(cos_u**2 + sin_u**2)  # 0–1
         ph_raw  = None
     else:
         freqs, times, S = stft_phi(x)
@@ -221,6 +230,7 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     gS_d  = gradS[::sf, ::st]
     plv_d        = plv_map[::sf, ::st]       if mode in ('phase_coh', 'phase_couple') else None
     teto_color_d = Sl_teto_color[::sf, ::st] if mode == 'unified'                    else None
+    plv_base_d   = plv_base[::sf, ::st]      if mode == 'unified'                    else None
     T_g, F_g = np.meshgrid(tv_d, fv_d)
 
     # ── 1. Superfície espectral principal ─────────────────────────────────────
@@ -341,13 +351,14 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         T_s, F_s  = np.meshgrid(tv_d, fv_d)
         fig.add_trace(go.Surface(
             x=T_s, y=F_s, z=Sl_base_d,
-            colorscale='hot',
+            surfacecolor=plv_base_d,   # cor = PLV (coerência de fase da base)
+            colorscale='Viridis',
             cmin=0, cmax=1,
             opacity=0.88,
             showscale=False,
-            name=f'Base — Amplitude · {nome}',
+            name=f'Base — Coerência de Fase · {nome}',
             hovertemplate=(
-                '<b>Base (amplitude)</b><br>'
+                '<b>Base — Coerência de Fase (PLV)</b><br>'
                 't=%{x:.2f}s<br>'
                 'f=%{y:.0f}Hz<br>'
                 'amp=%{z:.3f}<extra></extra>'
@@ -514,9 +525,33 @@ fig.update_layout(
 
 # ─── Exportar ─────────────────────────────────────────────────────────────────
 out = 'scanner_topografico_interativo.html'
+_cam_js = """
+(function() {
+    var gd = document.querySelector('.js-plotly-plot');
+    if (!gd) return;
+    var cam = null;
+    gd.on('plotly_relayout', function(ev) {
+        var sc = ev['scene.camera'];
+        if (sc && typeof sc === 'object' && sc.eye) {
+            cam = JSON.parse(JSON.stringify(sc));
+        }
+    });
+    var bar = document.querySelector('.modebar');
+    if (bar) {
+        bar.addEventListener('click', function() {
+            if (!cam) return;
+            setTimeout(function() {
+                Plotly.relayout(gd, {'scene.camera': cam});
+            }, 90);
+        }, true);
+    }
+})();
+"""
+
 fig.write_html(
     out,
     include_plotlyjs='cdn',
+    post_script=_cam_js,
     config={
         'displayModeBar': True,
         'scrollZoom': True,
