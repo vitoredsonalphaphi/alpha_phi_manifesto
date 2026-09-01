@@ -143,6 +143,7 @@ AMBIENTES = [
     ('Dobra 5 — Campo Harmônico β→φ³',  dobras[4],  '#00FFAA', 'viridis', dict(x=1.3, y=-1.5, z=1.10), 'amp'),
     ('Fase Bruta — EcoBIP',             semente,    '#4488FF', 'RdBu',    dict(x=1.3, y=-1.5, z=1.10), 'phase_raw'),
     ('Coerência de Fase — EcoBIP',      semente,    '#44FF88', 'Viridis', dict(x=1.3, y=-1.5, z=1.10), 'phase_coh'),
+    ('Acoplamento Fase Base↔Teto',      semente,    '#FF88FF', 'Viridis', dict(x=1.5, y=-1.8, z=1.20), 'phase_couple'),
 ]
 
 N_TRACES = 5  # por ambiente: superfície + grade_r_linha + vértices + tapete_sub + phi_harm
@@ -167,7 +168,7 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         S     = np.abs(Zc)**2         # amplitude auxiliar para vértices
         Sl_amp = np.log1p(S * 100)
         gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
-    elif mode == 'phase_coh':
+    elif mode in ('phase_coh', 'phase_couple'):
         freqs, times, Zxx_c = stft_phi_complex(x)
         fmask = freqs <= 5000
         fv    = freqs[fmask]
@@ -176,11 +177,12 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         W     = 12
         cos_m = uniform_filter1d(np.cos(ph), size=2*W+1, axis=1)
         sin_m = uniform_filter1d(np.sin(ph), size=2*W+1, axis=1)
-        Sl    = np.sqrt(cos_m**2 + sin_m**2)   # PLV 0–1
+        Sl    = np.sqrt(cos_m**2 + sin_m**2)   # PLV 0–1 (teto da fase)
         gradS = Sl - gaussian_filter(Sl, sigma=3.0)
         S     = np.abs(Zc)**2
         Sl_amp = np.log1p(S * 100)
         gradS_amp = Sl_amp - gaussian_filter(Sl_amp, sigma=3.0)
+        ph_raw = ph   # fase bruta — guardada para tapete do acoplamento
     else:
         freqs, times, S = stft_phi(x)
         fmask = freqs <= 5000
@@ -201,7 +203,7 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
     surf_extra = {}
     if mode == 'phase_raw':
         surf_extra = dict(cmin=-np.pi, cmax=np.pi, cmid=0)
-    elif mode == 'phase_coh':
+    elif mode in ('phase_coh', 'phase_couple'):
         surf_extra = dict(cmin=0, cmax=1)
 
     fig.add_trace(go.Surface(
@@ -264,37 +266,56 @@ for amb_i, (nome, x, cor, cmap, cam_eye, mode) in enumerate(AMBIENTES):
         visible=vis,
     ))
 
-    # ── 4. Tapete sub-harmônico no piso (0–880Hz) ─────────────────────────────
-    f_sub, t_sub, S_sub = stft_subfreq(x)
-    fm_s = f_sub <= BASE * 1.01
-    fv_s = f_sub[fm_s]; Sv_s = S_sub[fm_s]
-    Sl_s = np.log1p(Sv_s * 100)
-
-    sf2 = max(1, len(fv_s) // 80)
-    st2 = max(1, len(t_sub) // 70)
-    fv_s2  = fv_s[::sf2];  tv_s2  = t_sub[::st2]
-    Sl_s2  = Sl_s[::sf2, ::st2]
-
-    # Tapete: superfície plana no piso (z = -0.4), colorida pela energia sub
-    T_s, F_s = np.meshgrid(tv_s2, fv_s2)
-    z_piso   = np.full_like(Sl_s2, -0.4)
-
-    fig.add_trace(go.Surface(
-        x=T_s, y=F_s, z=z_piso,
-        surfacecolor=Sl_s2,
-        colorscale='Plasma',
-        opacity=0.80,
-        showscale=False,
-        name=f'Sub-harmônicos 0–880Hz · {nome}',
-        hovertemplate=(
-            '<b>Sub-harmônico</b><br>'
-            't=%{x:.2f}s<br>'
-            'f=%{y:.0f}Hz<br>'
-            'log(E)=%{customdata:.3f}<extra></extra>'
-        ),
-        customdata=Sl_s2,
-        visible=vis,
-    ))
+    # ── 4. Tapete no piso ─────────────────────────────────────────────────────
+    if mode == 'phase_couple':
+        # Piso = fase bruta (-π … +π) — o "Base" da fase
+        ph_raw_d = ph_raw[::sf, ::st]
+        T_s, F_s = np.meshgrid(tv_d, fv_d)
+        z_piso   = np.full_like(ph_raw_d, -0.4)
+        fig.add_trace(go.Surface(
+            x=T_s, y=F_s, z=z_piso,
+            surfacecolor=ph_raw_d,
+            colorscale='RdBu',
+            cmin=-np.pi, cmax=np.pi,
+            opacity=0.85,
+            showscale=False,
+            name=f'Fase Bruta (base) · {nome}',
+            hovertemplate=(
+                '<b>Fase Bruta — Base</b><br>'
+                't=%{x:.2f}s<br>'
+                'f=%{y:.0f}Hz<br>'
+                'fase=%{customdata:.3f} rad<extra></extra>'
+            ),
+            customdata=ph_raw_d,
+            visible=vis,
+        ))
+    else:
+        f_sub, t_sub, S_sub = stft_subfreq(x)
+        fm_s = f_sub <= BASE * 1.01
+        fv_s = f_sub[fm_s]; Sv_s = S_sub[fm_s]
+        Sl_s = np.log1p(Sv_s * 100)
+        sf2 = max(1, len(fv_s) // 80)
+        st2 = max(1, len(t_sub) // 70)
+        fv_s2  = fv_s[::sf2];  tv_s2  = t_sub[::st2]
+        Sl_s2  = Sl_s[::sf2, ::st2]
+        T_s, F_s = np.meshgrid(tv_s2, fv_s2)
+        z_piso   = np.full_like(Sl_s2, -0.4)
+        fig.add_trace(go.Surface(
+            x=T_s, y=F_s, z=z_piso,
+            surfacecolor=Sl_s2,
+            colorscale='Plasma',
+            opacity=0.80,
+            showscale=False,
+            name=f'Sub-harmônicos 0–880Hz · {nome}',
+            hovertemplate=(
+                '<b>Sub-harmônico</b><br>'
+                't=%{x:.2f}s<br>'
+                'f=%{y:.0f}Hz<br>'
+                'log(E)=%{customdata:.3f}<extra></extra>'
+            ),
+            customdata=Sl_s2,
+            visible=vis,
+        ))
 
     # ── 5. φ-harmônicos (cristas sobre superfície) ───────────────────────────
     phi_t, phi_f, phi_z = [], [], []
