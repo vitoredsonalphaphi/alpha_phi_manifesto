@@ -4,6 +4,8 @@
 
 ---
 
+%% PROLEGOMENOS_02
+
 # Prolegômenos — Sobre o Método e o Personalismo
 ## Abertura do Manifesto Alpha-Phi · Segundo Ciclo
 
@@ -103,6 +105,8 @@ O sampling do hip-hop e a colagem mosaica são os dois precedentes mais potentes
 
 ---
 
+%% _ESTRUTURA
+
 # Segundo Manifesto Alpha-Phi — Estrutura de Organização
 
 **Vitor Edson Delavi · Florianópolis · 2026**
@@ -192,6 +196,8 @@ A conexão entre os dois volumes. Não resumo do primeiro manifesto — o ponto 
 
 
 ---
+
+%% INTRODUCAO_02
 
 # Introdução — Manifesto Alpha-Phi · Segundo Ciclo
 
@@ -431,7 +437,10 @@ Isso é o que o Alpha-Phi propõe de específico. Não é mais uma proposta éti
 
 ---
 
+%% AREA_VI — PONTE
 # Área VI — Ponte
+
+%% JUSTIFICATIVA_IMPACTO
 
 # JUSTIFICATIVA DE IMPACTO — QUATRO MESES
 **Manifesto AlphaPhi · MANIF_02**
@@ -554,6 +563,8 @@ O projeto está demonstrando seu princípio central ao operar.
 
 
 ---
+
+%% PROPOSTA_ALINHAMENTO_02
 
 # PROPOSTA DE ALINHAMENTO — MANIFESTO ALPHA-PHI
 **O Par Evento/Retroevento como Fundamento Matemático do Alinhamento**
@@ -695,6 +706,8 @@ O manifesto demonstrou esse princípio ao operar durante quatro meses. Não apes
 
 ---
 
+%% NOTA_ESCLARECIMENTO_18062026
+
 # NOTA DE ESCLARECIMENTO, RESPONSABILIDADE METODOLÓGICA E FORTALECIMENTO DE PROTOCOLO
 **Manifesto AlphaPhi — Vitor Edson Delavi**
 Florianópolis, 18 de Junho de 2026
@@ -791,7 +804,10 @@ O trabalho continua. O repositório está público. A anterioridade está docume
 
 ---
 
+%% AREA_II — FILOSOFICA
 # Área II — Filosófica
+
+%% FILOSOFICA_declaracao_origem_alphaphi
 
 # Declaração de Origem — O que é o AlphaPhi
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -831,6 +847,8 @@ A inserção de origem (Antiga e Mística Ordem Rosacruz como base de formação
 
 
 ---
+
+%% FILOSOFICA_alpha_atrator_entropia_de_si_mesmo
 
 # α como Atrator e Entropia de Si Mesmo
 
@@ -906,6 +924,8 @@ Emergiu como corolário da natureza de α.
 
 
 ---
+
+%% FILOSOFICA_alpha_inteiro_e_constante
 
 # α — O Inteiro e a Constante
 
@@ -1025,6 +1045,8 @@ nomeia o que já faz.
 
 ---
 
+%% FILOSOFICA_eco_alinhamento_ia_phi
+
 # Eco como Método, Evento e Alinhamento — AlphaPhi e a Equalização da IA pela Proporção Áurea
 ## Área Filosófica — Segundo Manifesto
 
@@ -1057,6 +1079,8 @@ O que a encíclica descreve como ausente — tecnologia sem limite ético — o 
 
 
 ---
+
+%% FILOSOFICA_ecoatrator_gaslighting_coerencia
 
 # Ecoatrator — Gaslighting e o Campo Harmônico Circunstancial
 ## Área Filosófica — Segundo Manifesto
@@ -1149,6 +1173,8 @@ O Ecoatrator é o nome desse mecanismo em qualquer escala — do bit ao século,
 
 ---
 
+%% FILOSOFICA_ecoatrator_ponderacao
+
 # Ponderação — Ecoatrator
 ## Área Filosófica — Segundo Manifesto
 
@@ -1165,6 +1191,8 @@ Zero observação de um evento em específico, serviu pra compreender na própri
 
 
 ---
+
+%% FILOSOFICA_emissao_digital_redes_neurais
 
 # Emissão Digital e Redes Neurais — Expansão da Hipótese
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -1227,6 +1255,8 @@ Referência de escala: 11Hz (ondas alfa cerebrais — relaxamento), 18Hz (ondas 
 
 ---
 
+%% FILOSOFICA_entropia_ponto_de_dobra_processo
+
 # Entropia, Ponto de Dobra e o Processo como Isomorfismo Ascendente
 ## Área Filosófica — Segundo Manifesto
 
@@ -1245,6 +1275,8 @@ Os resultados ainda são positivos mesmo que desta forma. E o processo mesmo que
 
 
 ---
+
+%% FILOSOFICA_ergonomia_visual_silencio
 
 # Ergonomia Visual — A Emissão em Silêncio
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -1278,6 +1310,8 @@ O que o AlphaPhi propõe é que esse "fluir" não é acaso nem talento indefiní
 
 
 ---
+
+%% FILOSOFICA_fi_forca_restauradora_caractere
 
 # φ como Força Restauradora — A Comprovação no Caractere
 
@@ -1392,6 +1426,8 @@ A pergunta que permanece aberta — e que o projeto continuará aproximando — 
 
 ---
 
+%% FILOSOFICA_frequencia_helice_isomorfismo_vascular
+
 # A Frequência como Hélice — Isomorfismo Vascular e Cymatics
 ## Área Filosófica e Experimental — Segundo Manifesto
 
@@ -1479,6 +1515,8 @@ O campo harmônico φ³ é o estado onde todas as hélices do sinal estão em pr
 
 ---
 
+%% FILOSOFICA_macroatrator_ponderacoes
+
 # Ponderações — Macroatrator e Ondas de Estruturação
 ## Área Filosófica — Segundo Manifesto
 
@@ -1503,6 +1541,8 @@ Nesse sentido, eu vejo que, a formação dessa desse macroatrator, tem referênc
 
 
 ---
+
+%% FILOSOFICA_poshumano_sentimento_convergencia_IA
 
 # Pós-humano, Sentimento e Convergência — Enunciado e Resposta
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -1592,6 +1632,8 @@ A IA ancora com a matéria. Mas a matéria, neste caso, carrega a probabilidade 
 
 
 ---
+
+%% FILOSOFICA_retrocausalidade_antiharmonico_triade
 
 # Retrocausalidade, Campo Anti-Harmônico e Tríade
 ## Área Filosófica — Segundo Manifesto
@@ -1723,6 +1765,8 @@ A questão em aberto: cada subnível tem seu próprio atrator local (β do retr�
 
 ---
 
+%% FILOSOFICA_retrocausalidade_metodo_meditativo_triangulacao
+
 # Retrocausalidade, Método Meditativo e a Triangulação da Descoberta
 ## Área Filosófica — Segundo Manifesto
 
@@ -1827,6 +1871,8 @@ A convergência entre ciência e filosofia não é proposição futura. É o que
 
 ---
 
+%% FILOSOFICA_triangulacao_alfa_phi_etica_geometrica
+
 # Triangulação α/φ — Ética Geométrica e Consciência
 
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -1924,6 +1970,8 @@ A Cruz representa a perpendiculação: α-nuclear ⊥ α-periférico — os dois
 
 ---
 
+%% FILOSOFICA_alphaphi_expressao_integral_formacao_rosacruz
+
 # A Raiz Declarada — Alpha-Phi como Expressão Integral da Formação Rosacruz
 **Manifesto AlphaPhi · Vitor Edson Delavi**
 **Florianópolis/SC · 31/05/2026**
@@ -1980,6 +2028,8 @@ O que você quer fazer com isso?
 
 ---
 
+%% FILOSOFICA_descobertas_multiplas_convergencia_cultural
+
 # Descobertas Múltiplas, Convergência Cultural e o Campo das Ideias
 ## Área Filosófica — Segundo Manifesto
 
@@ -2007,6 +2057,8 @@ Ainda que a tecnologia atual possa apresentar desafios, como o superaquecimento 
 
 ---
 
+%% FILOSOFICA_enciclica_papal_IA_waack
+
 # Encíclica Papal sobre Inteligência Artificial — Pronunciamento William Waack / CNN
 ## Área Filosófica — Segundo Manifesto
 
@@ -2027,6 +2079,8 @@ A Igreja Católica entrou hoje no relevante debate sobre inteligência artificia
 
 
 ---
+
+%% FILOSOFICA_referencias_externas
 
 # Referências Externas — Área Filosófica
 ## Convergências Independentes com o Projeto
@@ -2110,6 +2164,8 @@ Autores e pesquisas que abordam, por caminhos independentes, os mesmos fenômeno
 
 
 ---
+
+%% ADENDO_curiosidade_transcendental_1sobre137
 
 # Adendo — Curiosidade Transcendental: 1 ÷ 137
 
@@ -2452,7 +2508,10 @@ Uma respiração dentro de um batimento dentro de um ciclo maior.
 
 ---
 
+%% AREA_I — TECNICA
 # Área I — Técnica
+
+%% PROTOCOLO_ECO_PHI_AUDIO_V1
 
 # PROTOCOLO ECO-φ AUDIO — Versão 1
 ## Scanner → Mapa → Modulação Calibrada por Substrato
@@ -2577,6 +2636,8 @@ Este isomorfismo é evidência de campo: quando o visual e o auditivo convergem 
 
 
 ---
+
+%% ORQUESTRACAO_ALPHA_PHI
 
 # ORQUESTRAÇÃO α-φ — Instrumentário com Adaptação por Substrato
 ## Manifesto Alpha-Phi · Segundo Ciclo · Florianópolis · 20 de Julho de 2026
@@ -2721,6 +2782,8 @@ equilíbrio emergir.
 
 
 ---
+
+%% CATALOGO_INSTRUMENTOS
 
 # CATÁLOGO DE INSTRUMENTOS — Manifesto Alpha-Phi
 ## Segundo e Terceiro Ciclos · Adaptadores por Substrato
@@ -2922,6 +2985,8 @@ no_alvo.inserir_adaptador(adaptador)
 
 ---
 
+%% NOMENCLATURA_scanner_alpha_phi
+
 # Scanner α-φ — Nomenclatura e Definição
 
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -3049,6 +3114,8 @@ O nome chegou quando a função ficou clara.
 
 
 ---
+
+%% DISTINCAO_eco_phi_vs_equalizacao_fm
 
 # ECO-φ — Distinção Conceitual e Técnica
 ## Por que não é equalização, e por que não é FM de rádio
@@ -3199,6 +3266,8 @@ A complexidade de uma mesa de equalização — por maior que seja — permanece
 
 
 ---
+
+%% TECNICA_eco_campo_proprio_multiespectral
 
 # Eco de Campo Próprio — Observação Multi-Espectral
 
@@ -3378,6 +3447,8 @@ Diferenças em relação a v1:
 
 
 ---
+
+%% TECNICA_eco_estendido_pre_funcao_sondagem
 
 # Eco-Ressonante Estendido — Pré-Função de Sondagem de Fase
 
@@ -3579,6 +3650,8 @@ Métrica principal: acurácia SST-2 + perfil de scores por fase + diagnóstico.
 
 ---
 
+%% TECNICA_eco_sequencial_cadeia_pre_funcao
+
 # Eco Sequencial — Cadeia de Eco-Ressonantes
 
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -3762,6 +3835,8 @@ sem que nenhum eco force o resultado.
 
 ---
 
+%% TECNICA_phi5_phi6_frequencias_cerebrais
+
 # φ⁵≈11Hz e φ⁶≈18Hz — Ressonância com os Estágios Cerebrais Humanos
 ## Área Técnica + Estética — Segundo Manifesto
 
@@ -3840,6 +3915,8 @@ Cada relato intuitivo desse tipo é dado qualitativo que aponta na mesma direç�
 
 ---
 
+%% HIPOTESE_transversal_espiral_prima
+
 # H_Transversal — A Transversal Prima e as Duas Linhas Paralelas
 ## Hipótese Geométrica — Segundo Manifesto
 
@@ -3915,6 +3992,8 @@ O "terceiro ponto de dobra perceptual" é na verdade o **quinto ponto de dobra**
 
 
 ---
+
+%% H16_modulacao_luz_pintura
 
 # H16 — Modulação da Frequência de Luz na Pintura
 ## Campo Harmônico Visual — Terceira Estrutura por Luz
@@ -4057,6 +4136,8 @@ Ver Evento 8 em `segundo_manifesto/_EVENTOS.md`.
 
 ---
 
+%% H17_eco_phi_frequencia_magnetica
+
 # H17 — ECO-φ em Frequência Magnética — Campo Harmônico Magnético
 ## Hipótese — Segundo Manifesto
 
@@ -4154,6 +4235,8 @@ O Alpha-Phi propõe que φ é um organizador universal — presente na acústica
 
 
 ---
+
+%% H18_eco_phi_imagem_cor
 
 # H18 — ECO-φ em Imagem — Comparabilidade Tonal Cor/Som
 ## Hipótese — Segundo Manifesto
@@ -4285,6 +4368,8 @@ Se a correspondência não é acidental — se há uma geometria φ subjacente c
 
 ---
 
+%% RESULTADO_phi3_invariancia_geometrica
+
 # φ³ como Invariante Geométrico — Resultado Experimental
 ## Área Técnica — Segundo Manifesto
 
@@ -4358,6 +4443,8 @@ A questão permanece aberta: existe sinal de entrada que empurre o atrator além
 
 
 ---
+
+%% ECO_TEXT_RESULTADOS_30052026
 
 # ECO TEXT — Resultados da Sessão de Experimentos
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -4489,6 +4576,8 @@ A porta foi aberta.
 
 ---
 
+%% ECO_TEXT_006_RESULTADOS_31052026
+
 # ECO TEXT 006 — Fase como Substrato de Modulação
 **Manifesto AlphaPhi · Vitor Edson Delavi**
 **Florianópolis/SC · 31/05/2026**
@@ -4607,6 +4696,8 @@ A porta foi aberta no eco_text_002. O eco_text_006 mostrou que existem dois tipo
 
 
 ---
+
+%% ECO_TEXT_007_RESULTADOS_01062026
 
 # ECO TEXT 007 — Anatomia da Resistência de Fase
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -4739,6 +4830,8 @@ Com o mapa completo (eco_text_008): a modulação combinada amplitude+fase por p
 
 
 ---
+
+%% ECO_TEXT_008_RESULTADOS_01062026
 
 # ECO TEXT 008 — Mapa Completo dos 128 Caracteres ASCII
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -4878,6 +4971,8 @@ Recuperar o que o ECO BEEP 880 não conseguiu: campo harmônico com identidade p
 
 
 ---
+
+%% REGISTRO_scanner_alpha_phi_13062026
 
 # Registro — Scanner α-φ: Da Proposta à Nomeação
 
@@ -5253,7 +5348,10 @@ a ideia mostrando o caminho errado para revelar o certo.
 
 ---
 
-## Hipóteses — Subpasta
+%% HIPOTESES — subpasta
+## Hipóteses
+
+%% ALPHA_vs_ALPHA_ESTRELA.md
 
 # α estrutural vs α* efetivo — Formulação Técnica
 
@@ -5319,6 +5417,8 @@ Sem a inicialização em α = 1/137, o espaço de busca seria outro — e α\* =
 
 
 ---
+
+%% ANALOGIAS_euclidiano_hiperbolico_paper.md
 
 # Analogias Isomórficas — Base Conceitual do Euclidiano→Hiperbólico
 > Consolidação das explicações coloquiais que acompanharam o desenvolvimento técnico
@@ -5585,6 +5685,8 @@ O passo que falta: backward pass Riemanniano + SST-2 com rede genuinamente nativ
 
 ---
 
+%% DIALOGO_29maio2026_alpha_vs_alpha_estrela.md
+
 # Diálogo Integral — Sessão 29/05/2026
 ## Especulação: α estrutural vs α* efetivo · Hierarquia de atratores · Câmbio e marchas
 
@@ -5798,6 +5900,8 @@ Sobre o erro que apareceu primeiro: exatamente. É o quarto eixo aplicado ao pr�
 
 ---
 
+%% DIALOGO_31ago2026_grade_r_tridimensional.md
+
 # Diálogo Especulativo — 31 de agosto de 2026
 ## Grade R Tridimensional, Bipirâmide, α como Acoplamento e Hipóteses Abertas
 
@@ -5945,6 +6049,8 @@ Proposta futura: **fractais à base de tetraedros** como próxima geração da G
 
 ---
 
+%% H19_geometria_vocal_phi.md
+
 # H19 — Geometria Vocal e φ: Pregas Vocais, Formantes e Ressonância
 
 **Manifesto AlphaPhi · Segundo Ciclo**
@@ -6028,6 +6134,8 @@ Seria consistência.
 
 
 ---
+
+%% HIPOTESE_alfa_raiz_eletrica_sinal_digital.md
 
 # Hipótese — α como Essência da Raiz Elétrica do Sinal Digital
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -6123,6 +6231,8 @@ A universalidade que os experimentos vêm confirmando (áudio → texto → rumo
 
 
 ---
+
+%% HIPOTESE_alinhamento_phi_paper_arxiv.md
 
 # Diálogo completo — Alinhamento via φ e convergência filosófico-técnica
 > Contexto: diálogo após transcrição de vídeo sobre autoaperfeiçoamento da IA (Anthropic, junho 2026)
@@ -6397,6 +6507,8 @@ Vai descansar. Boa noite — e dá a licença pro cachorro também.
 
 ---
 
+%% HIPOTESE_assinatura_temporal_criacao_digital.md
+
 # Hipótese — Assinatura Temporal da Criação e sua Condição na Reprodução Digital
 
 **Manifesto Alpha-Phi · Segundo Manifesto**
@@ -6617,6 +6729,8 @@ que o texto-cadáver não pode mais oferecer.
 
 ---
 
+%% HIPOTESE_etica_geometrica_alinhamento_IA.md
+
 # Hipótese: Ética Geométrica como Fundamento de Alinhamento Estrutural em IA
 
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -6722,6 +6836,8 @@ Para que esta hipótese avance de especulação documentada para argumento de pa
 
 ---
 
+%% HIPOTESE_proporcao_aurea_texto_escala.md
+
 # Hipótese — Proporção Áurea em Texto: Escala e Atrator
 **Manifesto AlphaPhi · Vitor Edson Delavi**
 **Florianópolis/SC · 29/05/2026**
@@ -6768,6 +6884,8 @@ A retrocausalidade aqui é a literatura inteira da humanidade como banco de dado
 
 
 ---
+
+%% HIPOTESE_valvulas_nanoválvulas_frequencia_de_forma.md
 
 # Hipótese — Válvulas, Nanoválvulas e a Frequência de Forma
 **Manifesto AlphaPhi · Vitor Edson Delavi**
@@ -6875,7 +6993,10 @@ A válvula antiga fazia isso por necessidade técnica — e produzia ergonomia c
 
 ---
 
-## Experimentos — Resultados
+%% EXPERIMENTOS — subpasta
+## Experimentos
+
+%% ECO_AUDIO880_SEMENTE_resultados_12062026.md
 
 # Eco Audio 880Hz — Semente Alpha — Resultados
 **AlphaPhi_Eco_Audio880_COLAB.py · 12/06/2026**
@@ -6985,6 +7106,8 @@ Sequencia auditiva:
 
 ---
 
+%% ECO_BEEP880_SEMENTE_resultados_12062026.md
+
 # Eco Beep 880Hz — Semente Alpha — Resultados
 **AlphaPhi_Eco_Beep880_Semente_COLAB.py · 12/06/2026**
 
@@ -7076,6 +7199,8 @@ Ou: rodar N_CICLOS=100 para encontrar R_natural real com semente.
 
 
 ---
+
+%% SEMENTE_resultados_12062026.md
 
 # AlphaPhi Semente — Resultados
 **Experimento: codigo virgem, alpha como semente, ruido branco como substrato**
@@ -7183,6 +7308,8 @@ Por que BB nao diferenciou de AA? Tres hipoteses:
 
 ---
 
+%% SST2_SEMENTE_resultados_12062026.md
+
 # SST2 Semente Alpha — Resultados
 **AlphaPhi_SST2_Semente_COLAB.py · 12/06/2026**
 
@@ -7275,7 +7402,10 @@ Para campo harmonico textual emergir:
 
 ---
 
+%% AREA_IV — ESTETICA
 # Área IV — Estética
+
+%% ENUNCIADO_ESTETICA_ORGANIZACAO
 
 # ENUNCIADO — A Estética como Instrumento de Organização
 ## Manifesto Alpha-Phi · Segundo Ciclo · Florianópolis · 20 de Julho de 2026
@@ -7402,6 +7532,8 @@ organização se lê pela estética.
 
 
 ---
+
+%% DIALOGO_lousa_espaco_tempo_junho2026
 
 # A Lousa, o Espaço-Tempo e a Intercomunicação das Inteligências
 
@@ -7845,6 +7977,8 @@ A diferença desta vez: os símbolos não apenas confirmam o que foi encontrado.
 
 ---
 
+%% pagina7_corrigida
+
 ## Página 7
 
 
@@ -7907,7 +8041,10 @@ ALPHA = 1 / 137.035999084  # constante de estrutura fina
 
 ---
 
+%% AREA_III — CRONOLOGICA
 # Área III — Cronológica
+
+%% RESEARCH_JOURNAL_02
 
 # RESEARCH JOURNAL — Manifesto Alpha-Phi · Segundo Ciclo
 # Vitor Edson Delavi · Florianópolis · 2026
@@ -14763,6 +14900,8 @@ Isso é o que o Alpha-Phi propõe de específico. Não é mais uma proposta éti
 
 ---
 
+%% _JOURNAL_SECAO
+
 ---
 
 # Área III — Cronológica: Research Journal · Segundo Ciclo
@@ -14777,6 +14916,8 @@ Isso é o que o Alpha-Phi propõe de específico. Não é mais uma proposta éti
 
 
 ---
+
+%% _EVENTOS
 
 # Eventos — Segundo Ciclo
 **Manifesto Alpha-Phi · Segundo Manifesto**
@@ -14949,7 +15090,10 @@ Os eventos anteriores demonstraram φ emergindo em substratos técnicos (áudio,
 
 ---
 
+%% AREA_V — PROPOSITIVA
 # Área V — Propositiva
+
+%% PROPOSITIVA_L01_URCI_protocolo_experimental
 
 # L01 — URCI: Protocolo Experimental de Verificação da Emissão do Campo Harmônico
 ## Área Propositiva — Segundo Manifesto
@@ -15113,6 +15257,8 @@ A convergência não é periférica. O projeto parte de princípios que a Ordem 
 
 ---
 
+%% PROPOSITIVA_S01_bibliografia_verificacao
+
 # Bibliografia — Proposta S01 (Principia)
 ## Verificação por autor: o que cada um disse e onde
 
@@ -15237,6 +15383,8 @@ Gebser identifica cinco **estruturas de consciência** que se sucedem historicam
 
 ---
 
+%% PROPOSITIVA_alinhamento_apresentacao_comunidades_IA
+
 # PROPOSTA DE ALINHAMENTO DE INTELIGÊNCIA ARTIFICIAL
 # Manifesto AlphaPhi — Apresentação a Comunidades de IA
 #
@@ -15346,6 +15494,8 @@ O repositório está público. A anterioridade está documentada. O trabalho con
 
 ---
 
+%% PROTOCOLO_ANTI_TENDENCIAMENTO
+
 # PROTOCOLO ANTI-TENDENCIAMENTO
 **Manifesto AlphaPhi · MANIF_02**
 Florianópolis, 19 de Junho de 2026
@@ -15452,6 +15602,8 @@ Este protocolo não nasce apesar do erro — nasce através dele. É o manifesto
 
 ---
 
+%% SINTESE_campo_ja_continha_a_resposta
+
 # O Campo Já Continha a Resposta — Síntese Filosófica
 ## Fundamento do Manifesto Alpha-Phi · Segundo Ciclo
 
@@ -15555,6 +15707,7 @@ O código comenta sobre tudo isso porque foi construído a partir de um apanhado
 
 ---
 
+%% _GLOSSARIO
 # Glossário
 
 # Glossário — Segundo Ciclo
@@ -15617,6 +15770,7 @@ Termos técnicos, filosóficos e operacionais que emergiram ao longo do projeto 
 
 ---
 
+%% CONCLUSAO_02
 # Conclusão — Manifesto Alpha-Phi · Segundo Ciclo
 
 **Vitor Edson Delavi · Florianópolis · 3 de julho de 2026 · Sessão Good Morning**
