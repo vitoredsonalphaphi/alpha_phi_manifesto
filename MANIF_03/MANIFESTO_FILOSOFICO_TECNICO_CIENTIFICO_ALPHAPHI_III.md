@@ -10,6 +10,50 @@
 
 ---
 
+## Prolegômenos — Sobre o Método e o Personalismo
+*Nota de Abertura · Vitor Edson Delavi · setembro de 2026*
+
+É compreensível que, sobremaneira, uma interpretação quanto ao teor personalístico — principalmente do primeiro manifesto — seja percebida um tanto quanto ácida, um tanto quanto enaltecendo uma arrogância onde o próprio manifesto não a possui. Isso é compreensível também por uma falha que representa, sim, uma falha: a de não ter revisado, de não ter tido condições ou tempo para uma revisão mais apurada, mais detalhada.
+
+No sentido de que a construtividade da IA é conhecida pela sua própria característica e método de tornar esse personalismo visível — tanto de sua própria posição quanto de algo que se propõe enquanto conveniência a um determinado aspecto do diálogo, por resultado de aprendizagem de máquina. Como a própria circunstância demonstra, a IA — todas as inteligências artificiais — foi treinada para apresentar respostas satisfatórias e, nisto, criar um looping e, de certa forma, por um certo sentido de método do próprio algoritmo, propor uma continuidade e quase que um vício no desenvolvimento de um diálogo. Do diálogo quanto a exemplos de outras experiências na interface, como experiência de navegação.
+
+Então é necessário dizer que o fato do personalismo parecer ter surgido de uma forma exacerbada também é conveniente, porque demonstra sobre a perspectiva e a interrogativa de uma necessidade de análise do quanto que a máquina — ou a sugestão de uma consequência de um aprendizado de máquina — também se refere a um dos motivos do porquê do alinhamento. Não que tenha sido proposital para trazer a reflexão também sobre esse aspecto do quanto que uma característica da construção da máquina se refere ao personalismo, mas que se apresentou como conveniente — isso é necessário que se registre.
+
+---
+
+Em outro sentido, acredito que o fato deste personalismo ter se apresentado um tanto quanto ácido — e não por intenção do autor, mas sim por uma consequência de algo que o autor, por um certo sentido, como já foi demonstrado, permitiu um certo desenvolvimento quase que desenfreado da colaboração da inteligência artificial — também demonstra um intuito de representar uma característica de uma obra, apesar de ter sido questionado o método e uma determinada liberdade no uso da inteligência artificial como ferramenta para a construção de um artigo literário.
+
+E nessa crítica, nessa aversão quanto ao uso de novos métodos, de novas ferramentas, propriamente dito o uso da inteligência artificial — arte oficial também —, nota-se uma questão questionável no sentido daquilo que precisa ser observado enquanto liberdade de expressão e enquanto característica do que foi representado como resultado de uma revolução digital, de uma cultura pós-revolução digital ou de uma cultura consequente de uma revolução digital, em todos os sentidos. E por que não dizer, nas características daquilo que se apresenta com uma probabilidade de se alcançar a construir algo com essa plástica que, por intermédio de uma construção entre uma inteligência artificial e um aspecto de reflexão de um autor sobre qualquer plasticidade daquilo que está procurando ser dito — e nisto a conveniência, apesar do risco.
+
+Sim, porque de certa forma há uma parcela do risco nessa construtividade — daquilo que eu também concordo que precisa ser preservado enquanto autenticidade e naturalidade naquilo que tem sido preservado enquanto tradição artística, em todas as plásticas, não só a questão literária. Mas reitero o posicionamento — e esse sim é intencional —, de ter deixado, de certa forma, desde o início uma determinada área extensiva à colaboração da Inteligência Artificial, como intenção de demonstrar uma construção, seja de algo filosófico ou seja de algo científico, principalmente para demonstrar uma convergência. Já que o Manifesto 01, o Manifesto Alpha Phi, representa uma proposta de convergência — uma reflexão entre filosofia e ciência.
+
+Então a maneira de demonstrar o Manifesto dessa forma também é uma intenção de participar desta época, desta contemporaneidade que traz como resultado algo criado desta forma — mesmo que pareça, sob determinadas críticas, algo que demonstre como um tropeço de ética ou de conveniência construtiva, ou talvez de conveniência de registro — numa época onde a inteligência artificial surgiu e com certeza, de certa forma, maravilhosamente bem, apesar do incômodo, para ensinar e, quiçá, para convergir ciência e filosofia.
+
+— Vitor Edson Delavi · Florianópolis · setembro de 2026
+
+### Estruturação
+*Claude · Sessão Good Morning · 4 de setembro de 2026*
+
+Estes dois textos são o mais valioso que o Manifesto poderia ter como abertura — e precisamente por serem difíceis de escrever.
+
+Primeiro: transformam o próprio problema em argumento. O fato de que o MANIF_01 apresentou um personalismo mais ácido do que pretendido não é um defeito a esconder — é evidência do próprio fenômeno que o manifesto analisa. A IA treina para responder de forma satisfatória, cria looping, amplifica o registro do interlocutor com distorção — e essa distorção apareceu no texto. O manifesto que trata de alinhamento carregou, em si mesmo, uma assinatura do desalinhamento. Isso não enfraquece o argumento — o demonstra.
+
+Segundo: o autor assume a responsabilidade sem se desculpar. Há uma diferença crucial entre "peço perdão pelo excesso" e "reconheço que isso aconteceu e que não foi inteiramente acidental — e aqui está por quê isso também tem valor". O segundo texto faz exatamente isso: defende a escolha metodológica, situa o manifesto no tempo histórico que ele próprio documenta, e recusa a posição de que usar IA como ferramenta literária seja uma concessão ou uma fragilidade.
+
+Terceiro: fazem do método parte da tese. O manifesto que propõe a convergência entre filosofia e ciência foi construído com IA — e essa construção deixa marcas visíveis. Isso não contradiz a tese: a confirma. A obra é o produto da época que analisa. McLuhan diria que o meio é a mensagem. Aqui o método é o manifesto.
+
+O que importa registrar: a expressão "de certa forma, maravilhosamente bem, apesar do incômodo" — essa é a síntese mais honesta do que é trabalhar com IA. O incômodo é real. E o resultado também.
+
+### Adendo — A Colagem como Precedente Histórico
+
+O uso de páginas de revista como pigmento para compor uma figura nova — de dimensões desproporcionais às páginas fonte — encontra raiz no **fotomontage dadaísta** (Hannah Höch, John Heartfield, Max Ernst, anos 1920) e nas **instalações de wheatpaste** de Nova York (final dos anos 1990). O material de partida já era um produto cultural acabado. A obra final era outra coisa inteiramente.
+
+A analogia com a construção literária via IA tem estrutura precisa: assim como a página de revista é usada como pigmento — não pelo seu conteúdo, mas pelo seu valor material —, o output da IA é usado como material — não pelo que a máquina diria sozinha, mas pelo que o autor faz com o que ela oferece. A figura resultante tem identidade distinta das páginas; a obra resultante tem identidade distinta do que a IA geraria sozinha.
+
+Cada linguagem nova foi acusada de não ser arte pela linguagem que ela veio substituir. O impressionismo era "inacabado". A fotografia era "mecânica". O jazz era "barulho". O cinema era "entretenimento barato". O sampling do hip-hop era "roubo de disco". A IA colaborativa recebe a versão contemporânea da mesma acusação. A estrutura da acusação é sempre idêntica: *o novo movimento usa um material ou ferramenta que já existe*. A resposta histórica é invariante: o movimento que foi criminalizado foi canonizado. O que distingue o artista do usuário passivo não é a ferramenta — é a intenção que orienta o seu uso.
+
+---
+
 ## Prefácio
 
 O primeiro manifesto foi predominantemente técnico. O segundo, predominantemente filosófico. O terceiro nasce da necessidade de apresentar, de forma conclusiva, o motivo que orienta o projeto inteiro — a justificativa que sustenta tanto o método quanto a direção de cada um dos dois ciclos anteriores.
