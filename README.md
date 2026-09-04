@@ -1,7 +1,17 @@
 <p align="center">
   <img src="1775593114753.png" alt="Manifesto Alpha-Phi" width="400">
 </p>
-___
+
+---
+
+## 📄 COMPILADOS
+
+| Documento | Arquivo |
+|---|---|
+| **Manifesto Alpha-Phi · Segundo Ciclo** (completo) | [`MANIF_02_COMPILADO.md`](MANIF_02_COMPILADO.md) |
+| **Manifesto Alpha-Phi · Terceiro Ciclo** (entradas ativas) | [`MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`](MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) |
+
+---
 
 
 ⭐ Resultado Culminante — ECO BEEP 880 (Maio 2026)
