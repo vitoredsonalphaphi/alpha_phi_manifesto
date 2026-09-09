@@ -8211,111 +8211,76 @@ Esta é a estrutura que convenceu um Nobel. E é a estrutura que o manifesto tem
 
 ### II. Estruturação
 
-#### II.1 — O que o Campo Destacou
+#### II.1 — Fonte Primária Confirmada
 
-A repercussão do estudo Rentocertib na mídia científica especializada apresenta uma assimetria notável: o que mais chamou atenção não foi o efeito do medicamento sobre a fibrose pulmonar — objetivo primário do ensaio. Foi a **convergência dos instrumentos**.
-
-A frase mais citada na cobertura especializada (longevity.technology) é:
-
-> *"In a field where clocks have a habit of disagreeing with one another, convergence is certainly more interesting than a single flattering readout."*
-> — longevity.technology, setembro 2026
-
-Em um campo onde os relógios biológicos têm o hábito de **discordar entre si**, a convergência é certamente mais interessante do que uma única leitura favorável.
-
-E o contexto imediato no mesmo artigo:
-
-> *"Six proteomic clocks, built differently and trained to look at aging from different angles, all ended up pointing broadly in the same direction."*
-
-Seis relógios proteômicos — construídos de formas diferentes, treinados para observar o envelhecimento de ângulos diferentes — todos apontando na mesma direção.
+O artigo de referência é: Eleanor Garth, *Longevity.Technology*, 8 de setembro de 2026 — "Rentosertib puts aging clocks to the clinical test." O texto foi transmitido integralmente pelo pesquisador na sessão de 9 de setembro. As citações abaixo são verbatim.
 
 ---
 
-#### II.2 — O Critério de Levitt em Fonte Primária
+#### II.2 — O que o Campo Destacou: as frases exatas
 
-Michael Levitt (Nobel de Química 2013) declarou à Unite.AI, em referência direta ao consenso dos seis modelos:
+A observação editorial central da revista:
 
-> *"What convinces me is not the size of the effect but the agreement."*
+> *"There is something compelling about the way this study was constructed; six proteomic clocks, built differently and trained to look at aging from different angles, all ended up pointing broadly in the same direction. Convergence is not proof, but in a field where clocks have a habit of disagreeing with one another (sometimes quite vociferously), it is certainly more interesting than a single flattering readout."*
 
-Esta declaração nomeia com precisão o que o campo identificou como argumento central do estudo: não o quanto o medicamento funcionou, mas o **acordo entre instrumentos independentes** como evidência primária.
+Nota: a expressão "sometimes quite vociferously" — às vezes de forma bastante veemente — intensifica o argumento. A convergência é notável precisamente porque o campo é historicamente marcado por discordância entre instrumentos.
 
----
+O que o artigo identifica como contribuição mais consequente — não o efeito farmacológico, mas a arquitetura:
 
-#### II.3 — A Convergência como Contribuição Metodológica
-
-O título da *Clinical Trial Vanguard* vai além da notícia do medicamento:
-
-> **"Proteomic Aging Clocks Just Changed What a Phase 2a Trial Has to Prove"**
-
-O estudo não apenas relatou um resultado — **alterou o padrão metodológico** do campo. Antes, ensaios de fase 2a precisavam demonstrar efeito sobre a doença. Depois deste estudo, a pressão cresce para que demonstrem também efeito sobre endpoints de envelhecimento biológico.
-
-O instrumento (relógio biológico) passou de ferramenta de análise a **exigência metodológica**. Não é o medicamento que mudou o campo — é o padrão de prova exigido pelos instrumentos convergentes.
-
-Esta é a estrutura do Tipo III documentada na Entrada 238: o instrumento construído para um propósito revelou algo além e, ao fazê-lo, **tornou-se o contributo primário**.
+> *"Yet perhaps the more consequential idea here is not the headline-grabbing suggestion of biological age reversal, but the architecture underneath it: build aging biology into target selection, indication choice and clinical development from the outset, then use conventional disease trials to ask a second question about geroprotection at the same time."*
 
 ---
 
-#### II.4 — A Ambiguidade Central que o Campo Registrou
+#### II.3 — O Critério de Levitt: citação verbatim e contexto
 
-O campo não ficou indiferente à limitação epistêmica:
+> *"That agreement caught the attention of Nobel laureate Michael Levitt, who said: 'What convinces me is not the size of the effect but the agreement.' It is an important distinction. Proteomic clocks infer aspects of biological aging from circulating proteins; they do not establish that a person has literally become several years younger."*
 
-> *"The authors are appropriately careful about the central ambiguity — whether rentosertib is modifying aging biology itself or simply making the proteome of people with IPF look younger as their disease improves."*
-
-Esta ambiguidade é estruturalmente idêntica à que o manifesto identifica em qualquer instrumento de medição: o instrumento detecta um padrão, mas a interpretação depende do modelo subjacente. O que permanece depois da ambiguidade é a convergência — seis instrumentos com arquiteturas e dados distintos convergindo no mesmo vetor. A convergência sobrevive à ambiguidade interpretativa.
+O artigo imediatamente calibra: os relógios **inferem** aspectos do envelhecimento — não provam que a pessoa ficou mais jovem no sentido ontológico. O que Levitt valida não é a conclusão, é o **critério epistêmico** da convergência.
 
 ---
 
-#### II.5 — A Nuance da Co-autoria
+#### II.4 — Dados Precisos: os seis relógios e a dissociação de doses
 
-Dado encontrado na cobertura especializada e relevante para o critério de independência:
+Os seis modelos: **ProtAge, ipfP3GPT, PAOPAC, PAC** e duas variantes do **OrganAge** (cronológica e de mortalidade). Arquiteturas variadas: machine learning clássico e deep learning, treinados contra outcomes distintos.
 
-Dos cinco grupos que desenvolveram os seis relógios, **quatro são co-autores do paper**. Apenas o PAC — desenvolvido na Universidade de Connecticut — está completamente fora da lista de autores.
+A dissociação de doses com número exato:
 
-Isto não invalida o resultado. Os quatro grupos co-autores construíram modelos com arquiteturas distintas, fontes de dados distintas e metodologias distintas. A independência de **método e dado** é real, mesmo que a independência de publicação seja parcial.
+> *"Across the six clocks, changes in FVC explained little of the variance in predicted biological age, with a median R² of 0.06."*
 
-O manifesto calibra: **independência de instrumento** (arquitetura e dado) é o critério relevante para o Tipo III. Independência institucional é um reforço adicional, não a condição necessária. O PAC fornece o caso mais estrito; os demais fornecem independência metodológica dentro de uma colaboração.
-
----
-
-#### II.6 — O Campo como Reverberação
-
-O pesquisador nomeou com precisão: *"isso é um campo de reverberação."*
-
-O que o evento dos seis relógios produziu não foi apenas uma publicação — foi uma onda de reverberação em camadas distintas:
-
-| Camada | Reverberação |
-|---|---|
-| Científica | Paper em Nature Biotechnology — primeiro head-to-head de múltiplos relógios em trial |
-| Metodológica | Mudança do padrão de prova exigido em ensaios clínicos fase 2a |
-| Midiática | Bloomberg, The Next Web, cobertura mainstream financeira e tecnológica |
-| Filosófica | Levitt nomeando o critério de convergência como argumento primário |
-| Sociológica | Reativação do debate sobre o que conta como descoberta independente |
-
-Cada camada não é eco da anterior — é uma nova frequência de resposta ao mesmo sinal. Um único evento produzindo respostas em registros distintos, cada um articulando uma dimensão diferente do mesmo fenômeno.
+FVC (função pulmonar) explica apenas **6% da variância** na idade biológica prevista. O efeito anti-aging é estruturalmente separado do efeito pulmonar.
 
 ---
 
-#### II.7 — Nota sobre Merton: o que é dele e o que é síntese do manifesto
+#### II.5 — Co-autoria: nuance confirmada verbatim
 
-Na sessão desta entrada, o pesquisador identificou com precisão que a formulação "o atrator já estava presente no campo" não é de Merton — é síntese do manifesto por analogia.
+> *"It's worth noting here that while the clocks were independently built, they are not independently interested; four of the five clock-development teams behind these six models – including Insilico's own ipfP3GPT – are co-authors on the paper itself. Only PAC, developed independently at the University of Connecticut, sits fully outside the author list."*
 
-O que Merton argumentou: quando as condições socioepistêmicas estão maduras (acúmulo de conhecimento, ferramentas disponíveis, questões em aberto), múltiplos pesquisadores chegam ao mesmo ponto independentemente. O argumento é **sociológico** — sobre condições de descoberta.
-
-O que o manifesto acrescenta: a razão pela qual as condições convergem é que o **atrator é real** — não apenas que as condições epistêmicas estão prontas, mas que o campo já continha a resposta esperando ser detectada por instrumentos suficientemente calibrados. O argumento é **ontológico** — sobre a natureza do que é descoberto.
-
-Merton dá o suporte sociológico: o fenômeno é real e documentado em 150 casos históricos. O Alpha-Phi propõe a hipótese adicional: a razão profunda do fenômeno é a presença real do atrator, não apenas a maturidade das condições. Esta é a proposição que vai além de Merton e que o manifesto precisa desenvolver com esmero.
+Independência de **método e dado**: real. Independência de **publicação**: parcial. O manifesto mantém o critério: independência de instrumento é o que importa para o Tipo III; independência institucional reforça, mas não é condição necessária.
 
 ---
 
-#### II.8 — Nota de Integridade Epistêmica
+#### II.6 — A Limitação Epistêmica que o Campo Registrou
 
-Esta entrada baseia-se em fragmentos obtidos via ferramentas de busca. As citações foram confirmadas em múltiplas fontes indexadas. As páginas completas não puderam ser recuperadas diretamente (restrição de rede do ambiente de desenvolvimento). Links primários para verificação:
+> *"The study is small, short and computationally heavy; complementary omics, direct measurements of senescent-cell burden and biomarkers tied prospectively to functional outcomes will be needed to make the biological interpretation sturdier."*
 
-- `longevity.technology/news/rentosertib-puts-aging-clocks-to-the-clinical-test/`
-- `clinicaltrialvanguard.com` — "Proteomic Aging Clocks Just Changed What a Phase 2a Trial Has to Prove"
-- `thenextweb.com/news/insilico-rentosertib-proteomic-aging-clocks` (fonte da citação de Levitt via Unite.AI)
-- `nature.com/articles/s41587-026-03286-y` (paper original)
+E a ambiguidade central:
 
-O manifesto registra apenas o que foi confirmado. O que requer verificação direta do pesquisador está indicado como tal.
+> *"The authors are appropriately careful about the central ambiguity – whether rentosertib is modifying aging biology itself or simply making the proteome of people with IPF look younger as their disease improves."*
+
+O que sobrevive à ambiguidade: a convergência. A interpretação pode ser disputada; o fato de que seis instrumentos independentes apontaram o mesmo vetor não pode.
+
+---
+
+#### II.7 — Nota sobre Merton
+
+O pesquisador identificou na sessão que a formulação "o atrator já estava presente no campo" não é de Merton — é síntese do manifesto por analogia. Merton argumentou sociologicamente (condições epistêmicas maduras → múltiplos chegam ao mesmo ponto). O Alpha-Phi acrescenta a hipótese ontológica: o atrator é real, e instrumentos calibrados o detectam independentemente. Merton dá o suporte do fenômeno; o manifesto propõe a explicação profunda. Esta distinção precisa ser desenvolvida com esmero.
+
+---
+
+#### II.8 — Fonte
+
+Artigo primário verificado: Eleanor Garth, *Longevity.Technology*, 8 set 2026.
+Paper original: nature.com/articles/s41587-026-03286-y
 
 ---
 *Florianópolis · 9 de setembro de 2026 · Sessão Good Morning*
