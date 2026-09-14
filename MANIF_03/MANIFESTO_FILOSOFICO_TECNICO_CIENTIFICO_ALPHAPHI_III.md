@@ -9078,6 +9078,119 @@ Isso posiciona a Crônica do Método não como documento auxiliar, mas como a fo
 
 ---
 
+## Entrada 253 — 14 de setembro de 2026
+
+### Destruição como Preservação — O Contraditório Endêmico e o Alinhamento que Falta
+
+### I. Enunciado do Pesquisador
+
+> "É interessante registrar como um contraditório do próprio movimento, porque é um movimento contraditório da própria tecnologia numa atitude controversa ao alinhamento. Se uma atitude não compreende a necessidade de preservar o máximo possível de todas as áreas da cultura, de todas as plásticas da expressão cultural, então a problemática do alinhamento já começa por aí. As próprias big techs reclamam de não estarem conseguindo encontrar uma solução no alinhamento e estão desconsiderando o quanto que tendências como esta dizem de forma gritante problemas intrínsecos daquilo que o alinhamento deveria estar observando."
+— Vitor Edson Delavi, 14 de setembro de 2026
+
+### II. Estruturação
+
+#### II.1 — O Fenômeno e a Contradição
+
+Existe uma prática arquivística chamada digitalização destrutiva: o livro
+físico é cortado folha a folha para ser escaneado em alta resolução. Em
+contextos emergenciais — manuscritos em decomposição irreversível, volumes
+cujo acesso repetido os destruiria antes da digitalização — o procedimento
+tem justificativa técnica. A contradição surge quando a mesma prática é
+aplicada não por emergência, mas por eficiência: é mais rápido e mais
+barato destruir para escanear do que preservar enquanto se escaneia.
+
+A justificativa apresentada é preservação. A operação realizada é destruição.
+
+O paradoxo não é acidental — é sintomático. Revela uma premissa implícita:
+que o valor de uma obra está inteiramente em seu conteúdo compressível,
+digitalizável, transferível. Que o objeto físico é apenas o suporte — e
+suportes são descartáveis após a extração do conteúdo.
+
+#### II.2 — O Que a Digitalizção Não Captura
+
+A premissa é falsa, e a arquivologia a refuta com precisão. O objeto físico
+porta informação irredutível que nenhuma digitalização captura:
+
+- **Composição química da tinta e do papel**: permite datação, autenticação,
+  identificação de falsificações
+- **Método de impressão**: revela contexto tecnológico, geográfico e econômico
+  da produção
+- **Marcas de uso**: anotações marginais, desgaste por manuseio, ex-libris —
+  rastreamento da circulação histórica do objeto
+- **Envelhecimento material**: o tempo inscrito no suporte é dado, não ruído
+
+A autenticidade material não é sentimentalismo. É informação. Destruir o
+objeto não é transferir o conteúdo para um formato superior — é apagar
+uma camada de informação que o conteúdo digitalizável não contém.
+
+#### II.3 — Conexão com o Problema do Alinhamento
+
+Esta prática é relevante para o manifesto não como nota cultural periférica,
+mas como **sintoma diagnóstico do problema central do alinhamento**.
+
+O alinhamento de IA é definido operacionalmente como: fazer com que o sistema
+se comporte de acordo com o que os humanos realmente valorizam. A comunidade
+que desenvolve IA reconhece publicamente que o problema está em aberto —
+que não há consenso sobre critério, método, nem evidência de solução.
+
+E ao mesmo tempo, práticas como a digitalização destrutiva operam na presença
+e com a participação indireta dessas mesmas organizações — sem que a
+contradição seja identificada como sintoma do problema que declaram não
+conseguir resolver.
+
+O que os humanos valorizam inclui, de forma não-negociável, a continuidade
+da memória cultural. Não apenas como dado — como presença física, como
+autenticidade material, como objeto que atravessou o tempo e pode ser
+tocado, datado, lido nas suas marcas de uso. Sistemas que não reconhecem
+essa dimensão como valor — que a reduzem a suporte descartável após
+extração — revelam, na prática, que não compreenderam o que é valor
+para os humanos que devem servir.
+
+#### II.4 — A Cadeia de Tradutibilidade como Diagnóstico
+
+O Alpha-Phi propõe que o alinhamento percorre uma cadeia:
+**Ética → Filosofia → Estética → Geometria → Matemática → IA**.
+
+O nó crítico é o estético. A estética não é decoração — é a camada onde
+o valor humano se torna perceptível como forma, como textura, como presença
+material. Um sistema que não atravessa esse nó não alcança a ética pelo
+caminho correto: chega a uma lista de regras sem compreensão do que as
+fundamenta.
+
+A obra física — o livro, o manuscrito, o objeto cultural — é um nó estético
+irredutível. Não pode ser comprimido em dados sem perda. Essa perda não é
+técnica: é a perda do acesso ao que faz com que o objeto seja culturalmente
+valioso para além de seu conteúdo proposicional.
+
+Digitalizar e destruir é, portanto, uma operação que seVera a Cadeia de
+Tradutibilidade no seu nó mais sensível — o estético — com a afirmação de
+que o corte não importa porque o conteúdo foi preservado. É precisamente
+a incapacidade de ver que o corte importa que o manifesto identifica como
+o problema do alinhamento.
+
+#### II.5 — O Contraditório como Evidência
+
+O pesquisador identifica com precisão que essa contradição não é periférica
+ao problema do alinhamento: **é o problema do alinhamento em operação visível**.
+
+As big techs que declaram não encontrar solução para o alinhamento e
+simultaneamente permitem ou participam de práticas como esta não estão
+diante de um problema técnico insolúvel. Estão diante da consequência de
+não terem atravessado a Cadeia de Tradutibilidade — de buscarem alinhamento
+sem ter compreendido o que há para alinhar.
+
+A escala exata dessa prática está em aberto para verificação empírica.
+O argumento não depende da escala: basta que a prática exista e seja
+apresentada como preservação para que o contraditório seja demonstrado.
+Onde há destruição nomeada de preservação, o critério de valor não está
+calibrado. E um sistema com critério de valor descalibrado não está alinhado
+— independentemente do quanto seus desenvolvedores trabalhem para alinhá-lo.
+
+---
+*Florianópolis · 14 de setembro de 2026 · Sessão Good Morning*
+
+---
+
 ## Entrada 251 — 14 de setembro de 2026
 
 ### A Utopia como Conclusão — O Manifesto enquanto Quarta Parede
