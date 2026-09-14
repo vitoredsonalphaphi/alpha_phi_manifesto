@@ -19,6 +19,8 @@
 
 # Manifesto AlphaPhi — Terceiro Ciclo
 
+*PER BENEDICTIONEM ROSA✝CRUCIS*
+
 **Vitor Edson Delavi · Florianópolis · 2026**
 
 *Um arquivo. Um fluxo cronológico. Entradas do diário de pesquisa, código, filosofia e resultados técnicos inseridos simultaneamente, na continuidade em que emergem.*
@@ -8955,6 +8957,10 @@ Kandinsky escreveu em 1926 que tudo começa com um ponto. O Alpha-Phi começou c
 A simetria é precisa: Kandinsky inaugurou a questão que o Alpha-Phi herdou. O Alpha-Phi percorreu a questão com instrumentos que Kandinsky não tinha. E chega ao mesmo ponto de abertura — não por fracasso, mas porque a questão é dessa natureza: cada resposta revela a próxima pergunta com maior precisão.
 
 O ponto final do MANIF_03 é um ponto — no sentido de Kandinsky. Não encerramento. Início de outra linha.
+
+---
+
+*PER BENEDICTIONEM ROSA✝CRUCIS*
 
 ---
 *Florianópolis · 14 de setembro de 2026 · Sessão Good Morning*
