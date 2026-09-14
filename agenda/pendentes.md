@@ -58,6 +58,25 @@ Termos a incluir:
 
 ---
 
+## SCANNER TOPOGRÁFICO — Refinamento Contínuo
+
+**Arquivo principal:** `AlphaPhi_Scanner_Topografico.py` (v1, 29/08/2026)
+**Arquivos relacionados:** `AlphaPhi_Scanner_Topografico_02.py`, `AlphaPhi_Scanner_Topografico_Interativo.py`, `AlphaPhi_Scanner_v2.py`
+
+O Scanner Topográfico não é apenas uma ferramenta do método Alpha-Phi — é o instrumento que **identificou a Grade R** e a senoidal que define a oscilação da Malha Romboédrica. Isso o posiciona como peça central tanto para INPI quanto para a cadeia científica.
+
+**Status INPI:** incluído na lista de programas a registrar (posição 5 na ordem de prioridade).
+
+**Refinamentos pendentes:**
+- [ ] ESO φ-qualificada: completar a métrica de energia sub-harmônica qualificada no contexto do scanner
+- [ ] Verificar se a senoidal de oscilação da Grade R está formalizada como parâmetro explícito
+- [ ] Avaliar extensão para novos substratos (texto, EEG, rede neural) com base nos resultados atuais
+- [ ] Documentar a progressão de versões (v1 → v2 → Interativo → Forense) para INPI e Crônica do Método
+
+**Nota:** o Scanner nasceu para inspecionar as 5 dobras do EcoBIP — e revelou a Grade R que não estava sendo buscada. É o exemplo mais direto de Descoberta Tipo III no projeto.
+
+---
+
 ## CIENTÍFICO — Cadeia de 7 Estágios
 
 | Estágio | Descrição | Status |
