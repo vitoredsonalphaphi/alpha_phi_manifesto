@@ -9032,6 +9032,52 @@ A tradução não é metáfora. É operação. E este projeto é sua demonstraç
 
 ---
 
+## Entrada 252 — 14 de setembro de 2026
+
+### Crônica do Método — A Narrativa como Quarta Forma do Projeto
+
+### I. Enunciado do Pesquisador
+
+> "O método é esse, é bem interessante, de trazer os tópicos de forma narrativa. Só nove fases não justifica, não exemplifica cada um dos desenvolvimentos. Cada especulação se desenvolveu e como cada especulação propôs para a técnica o desenvolvimento em si. Para ambos — técnico e filosófico —, e inclusive para o público, seria interessantíssimo apresentar de forma narrativa e cronológica, que demonstraria como e por que cada fase se desenvolveu. Crônica do Método. Até parece o nome de um livro. Vou adotar como nome desse capítulo: Crônica do Método."
+— Vitor Edson Delavi, 14 de setembro de 2026
+
+### II. Estruturação
+
+#### II.1 — As Quatro Formas do Projeto
+
+O projeto Alpha-Phi possui até agora três formas documentais:
+o **Manifesto** (filosófico-técnico-científico), a **documentação técnica** (arquivos `.py`, commits, resultados) e o **artigo Principia** (forma acadêmica para publicação). Cada uma fala para um público e uma finalidade distintos.
+
+A **Crônica do Método** nomeia uma quarta forma — que não é nenhuma das anteriores. Não é o resultado técnico; não é a proposição filosófica; não é a síntese acadêmica. É a narrativa de como o pensamento se moveu: como cada especulação abriu uma pergunta técnica, como cada resultado respondeu ou reformulou a pergunta, como o método emergiu do processo e não o precedeu.
+
+#### II.2 — A Distinção do Gênero
+
+A Crônica não é um método descrito — é um método em ação, narrado. A diferença é precisa:
+
+- Um **método descrito** diz: "usamos α como constante de mistura porque ela ancora sem dominar."
+- Uma **crônica do método** diz: "a questão era como inserir α no sinal sem que α se tornasse o sinal. Várias abordagens falharam por destruir a natureza digital. A solução veio como proporção — não substituição — e o gráfico verde apareceu. Só depois nomeamos o princípio."
+
+A sequência real — especulação → experimento → resultado → reformulação — não aparece nem no manifesto nem no artigo. Aparece apenas nos commits. A Crônica é o trabalho de extrair essa sequência do registro técnico e devolvê-la em linguagem narrativa.
+
+#### II.3 — Escopo e Densidade
+
+O documento `GENEALOGIA_FERRAMENTAS.md` (14/09/2026) é o esqueleto da Crônica: 9 fases com causas explícitas. Mas o pesquisador identificou que esse esqueleto é insuficiente — entre cada fase de destaque houve muitos momentos intermediários que também merecem tratamento narrativo.
+
+Entre o protótipo fundador e os 5 pontos de dobra: as experiências com roldanas, o problema da direção da cascata, a formação do ECO BEEP 880, a semente α como entropia, o delta-cepstro como resultado histórico. Entre os 5 pontos de dobra e a Grade R: os fractais, a PhiAttractorNetwork, as tentativas de inserção em redes neurais, o EEG, a mandala holográfica, a árvore ternária. Cada uma dessas etapas tem sua própria sequência especulação→técnica→resultado.
+
+O escopo adequado para a Crônica é: **cada momento em que a pergunta mudou de natureza**. Não cada experimento — mas cada inflexão. A escolha dos momentos a narrar é trabalho do pesquisador, que conhece de dentro quais transições foram decisivas.
+
+#### II.4 — A Crônica como Universalidade
+
+A observação do pesquisador é estratégica: a forma narrativa atinge os três públicos simultaneamente. O técnico reconhece o processo experimental; o filósofo reconhece a epistemologia emergente; o público geral acompanha a história. Nenhuma das outras três formas faz isso.
+
+Isso posiciona a Crônica do Método não como documento auxiliar, mas como a forma de maior alcance do projeto. Provavelmente o texto que mais pessoas lerão — e pelo qual o projeto será compreendido antes de ser estudado.
+
+---
+*Florianópolis · 14 de setembro de 2026 · Sessão Good Morning*
+
+---
+
 ## Entrada 251 — 14 de setembro de 2026
 
 ### A Utopia como Conclusão — O Manifesto enquanto Quarta Parede
