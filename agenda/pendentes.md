@@ -72,6 +72,12 @@ O Scanner Topográfico não é apenas uma ferramenta do método Alpha-Phi — é
 - [ ] Verificar se a senoidal de oscilação da Grade R está formalizada como parâmetro explícito
 - [ ] Avaliar extensão para novos substratos (texto, EEG, rede neural) com base nos resultados atuais
 - [ ] Documentar a progressão de versões (v1 → v2 → Interativo → Forense) para INPI e Crônica do Método
+- [ ] **Scanner Topográfico 3D — extensão tridimensional** (16/09/2026)
+    Hipótese Entrada 256: a Grade R é a projeção 2D de uma estrutura icosaédrica 3D já presente no sinal EcoBIP.
+    Campo harmônico Alpha-Phi é esférico por definição (r=1 = superfície esférica); Scanner atual analisa apenas plano 2D.
+    Próximo passo: executar EcoBIP com registro espectral passe a passe, analisar em 3 eixos (tempo × frequência × fase),
+    verificar se rotação do ambiente euclidiano ocorre em passe específico e se projeção 2D do resultado 3D = Grade R.
+    Se confirmado: identificar passe exato em que EcoBIP "firma o cubo" icosaédrico perpendicular ao plano de análise.
 - [ ] **Experimento comparativo — exclusividade do φ na emergência da Grade R**
   Usar o Scanner Topográfico para inserir outras constantes matemáticas no lugar de φ e registrar o ângulo emergente:
   | Constante | Grade emergente? | θ resultante |
