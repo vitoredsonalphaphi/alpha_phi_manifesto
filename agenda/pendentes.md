@@ -72,6 +72,15 @@ O Scanner Topográfico não é apenas uma ferramenta do método Alpha-Phi — é
 - [ ] Verificar se a senoidal de oscilação da Grade R está formalizada como parâmetro explícito
 - [ ] Avaliar extensão para novos substratos (texto, EEG, rede neural) com base nos resultados atuais
 - [ ] Documentar a progressão de versões (v1 → v2 → Interativo → Forense) para INPI e Crônica do Método
+- [ ] **Experimento comparativo — exclusividade do φ na emergência da Grade R**
+  Usar o Scanner Topográfico para inserir outras constantes matemáticas no lugar de φ e registrar o ângulo emergente:
+  | Constante | Grade emergente? | θ resultante |
+  |-----------|-----------------|--------------|
+  | φ = 1,618... | ✓ Grade R | arctan(2) ≈ 63,43° |
+  | e = 2,718... | ? | ? |
+  | √2 = 1,414... | ? | ? |
+  | π = 3,14... | ? | ? |
+  Se apenas φ produz θ = arctan(2) como atrator estável, isso constitui argumento científico de exclusividade — blindagem da Patente de Invenção contra reivindicação independente por outro método. (16/09/2026)
 
 **Nota:** o Scanner nasceu para inspecionar as 5 dobras do EcoBIP — e revelou a Grade R que não estava sendo buscada. É o exemplo mais direto de Descoberta Tipo III no projeto.
 
