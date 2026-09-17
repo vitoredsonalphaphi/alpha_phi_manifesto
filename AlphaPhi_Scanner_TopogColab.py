@@ -1,8 +1,9 @@
 # ╔══════════════════════════════════════════════════════════════════════════════╗
 # ║  AlphaPhi_Scanner_TopogColab.py                                            ║
-# ║  Scanner Topográfico 3D — Versão Colab — 9 modos                           ║
+# ║  Scanner Topográfico 3D — Versão Colab — 12 modos                          ║
 # ║                                                                             ║
 # ║  Modos:  eco · teto · unif · lap · amp · xq · fm · txt_filos · txt_codigo  ║
+# ║           compare · sep_compare · plv_compare                              ║
 # ║  Sinais: EcoBIP · φ-Narrativa Filosófica · α-Linguagem de Programação      ║
 # ║                                                                             ║
 # ║  Vitor Edson Delavi · Florianópolis · 2026 · © CC BY-NC-ND 4.0             ║
@@ -170,6 +171,52 @@ def stft_texto(sig):
     S    = np.abs(Zxx) ** 2
     return f[:NUM_BINS], tv, S[:NUM_BINS]
 
+def stft_texto_cplx(sig):
+    """STFT complexa para texto — preserva fase para cálculo de PLV."""
+    WS  = 256;  HOP = 64;  NUM_BINS = 64
+    f, tv, Zxx = stft(sig, fs=1.0, window='hann', nperseg=WS, noverlap=WS - HOP)
+    return f[:NUM_BINS], tv, Zxx[:NUM_BINS]
+
+def cepstro_texto_raw(text, n_seg=44, n_quef=32):
+    """Cepstro janelado na resolução de caractere.
+    Quefrência em chars: revela o lag de repetição estrutural do texto.
+    Quefrência 5 = estrutura que se repete a cada 5 chars (ritmo de palavra).
+    Quefrência 20 = estrutura que se repete a cada 20 chars (ritmo de função/frase).
+    """
+    N = len(text)
+    hop = max(1, N // n_seg)
+    win_size = max(64, hop * 2)
+    raw = np.zeros(N)
+    for i, c in enumerate(text):
+        o = ord(c)
+        if o in (32, 9, 10, 13):
+            raw[i] = 0.0
+        elif (65 <= o <= 90) or (97 <= o <= 122) or o > 127:
+            raw[i] = 0.3
+        elif 48 <= o <= 57:
+            raw[i] = 0.7
+        else:
+            raw[i] = 1.0
+    raw -= raw.mean()
+    positions, cep_data = [], []
+    for i in range(n_seg):
+        start = i * hop
+        end   = min(start + win_size, N)
+        seg   = raw[start:end]
+        if len(seg) < 16:
+            continue
+        seg_w = seg * np.hanning(len(seg))
+        spec  = np.abs(np.fft.rfft(seg_w, n=max(128, len(seg_w)))) ** 2
+        lsp   = np.log1p(spec * 1e4)
+        cep   = np.abs(np.fft.irfft(lsp))
+        n_out = min(n_quef, len(cep))
+        row   = np.zeros(n_quef)
+        row[:n_out] = cep[:n_out]
+        positions.append((start + end) / 2.0)
+        cep_data.append(row)
+    cep_m = np.array(cep_data).T   # (n_quef, n_seg)
+    return np.arange(n_quef, dtype=float), np.array(positions), cep_m
+
 # ─── Cálculo dos modos ────────────────────────────────────────────────────────
 def compute_plv(Zxx_c, W=12):
     """Phase Locking Value janelado."""
@@ -246,6 +293,21 @@ fv_tf, tv_tf, S_tf = stft_texto(sig_tf)
 fv_tc, tv_tc, S_tc = stft_texto(sig_tc)
 print("  Prontas.")
 
+# PLV dos sinais de texto (fase complexa)
+fv_ptf, tv_ptf, Ztf = stft_texto_cplx(sig_tf)
+_,      _,      Ztc = stft_texto_cplx(sig_tc)
+PLV_tf = compute_plv(Ztf)
+PLV_tc = compute_plv(Ztc)
+fv_p, tv_p, PLV8_ds = downsample_grid(fv_ptf, tv_ptf, PLV_tf)
+_,    _,    PLV9_ds = downsample_grid(fv_ptf, tv_ptf, PLV_tc)
+
+# Sépstro (cepstro janelado na resolução de caractere)
+quef8, pos8, Cep8 = cepstro_texto_raw(TEXT_FILOS)
+quef9, pos9, Cep9 = cepstro_texto_raw(TEXT_CODIGO)
+Sl_cep8 = np.log1p(Cep8 * 50)
+Sl_cep9 = np.log1p(Cep9 * 50)
+print("  PLV e Sépstro dos textos computados.")
+
 # ─── Preparação dos modos ─────────────────────────────────────────────────────
 # 1. ECO — Coerência de fase (PLV) + log-energia como altura
 Sl_e   = np.log1p(S_e * 100)
@@ -297,6 +359,11 @@ T3,F3 = np.meshgrid(tv3,fv3);  T4,F4 = np.meshgrid(tv4,fv4)
 T5,F5 = np.meshgrid(tv5,fv5);  T6,F6 = np.meshgrid(tv6,fv6)
 T7,F7 = np.meshgrid(tv7,fv7);  T8,F8 = np.meshgrid(tv8,fv8)
 T9,F9 = np.meshgrid(tv9,fv9)
+# Sépstro — eixo: posição (chars) × quefrência (chars)
+P8c, Q8c = np.meshgrid(pos8, quef8)
+P9c, Q9c = np.meshgrid(pos9, quef9)
+# PLV dos textos — mesmo grid da STFT de texto
+T8p, F8p = np.meshgrid(tv_p, fv_p)
 
 # ─── Linha Grade R e harmônicos por modo ─────────────────────────────────────
 gr1 = linha_grade_r(fv1, tv1, Sl1)
@@ -440,6 +507,56 @@ add_line(*ph_c_lo, '#FFD700', 'φ-Razões (piso)', width=2)
 add_line(*ph_c_hi, '#44AAFF', 'φ-Razões (teto)', width=2)
 vis_map['compare'] = list(range(trace_idx, trace_idx+5)); trace_idx += 5
 
+# ── MODO 11: SEP_COMPARE (Sépstro φ vs α, piso+teto) ─────────────────────────
+# Normalização comum — diferenças topográficas são estruturais, não volumétricas
+sep_max = max(Sl_cep8.max(), Sl_cep9.max()) + 1e-9
+Sl_c8n  = Sl_cep8 / sep_max
+Sl_c9n  = Sl_cep9 / sep_max
+add_surf(P8c, Q8c, Sl_c8n,
+         cs=[[0,'rgb(20,10,0)'],[0.4,'rgb(140,80,0)'],[1,'rgb(255,210,60)']],
+         opacity=0.92, name='φ Sépstro (piso)',
+         hover='φ · pos=%{x:.0f}chr · quef=%{y:.0f}chr · amp=%{z:.3f}<extra>φ-Sep</extra>')
+add_surf(P9c, Q9c, Sl_c9n + 3.0,
+         cs=[[0,'rgb(0,0,30)'],[0.4,'rgb(0,60,160)'],[1,'rgb(80,200,255)']],
+         opacity=0.92, name='α Sépstro (teto +3)',
+         hover='α · pos=%{x:.0f}chr · quef=%{y:.0f}chr · amp=%{z:.3f}<extra>α-Sep</extra>')
+# Divisor Z=1.5
+_sx_d = np.linspace(min(pos8[0], pos9[0]), max(pos8[-1], pos9[-1]), 40)
+_sy_d = np.full(40, quef8[-1] / 2)
+_sz_d = np.full(40, 1.5)
+fig.add_trace(go.Scatter3d(
+    x=_sx_d, y=_sy_d, z=_sz_d, mode='lines',
+    line=dict(color='rgba(180,180,180,0.35)', width=2, dash='dash'),
+    name='Limiar Sep φ|α', visible=False,
+    hovertemplate='Limiar Sépstro<extra></extra>',
+))
+vis_map['sep_compare'] = list(range(trace_idx, trace_idx+3)); trace_idx += 3
+
+# ── MODO 12: PLV_COMPARE (Coerência de Fase φ vs α, piso+teto) ───────────────
+# PLV em 0-1: mostra quais frequências simbólicas têm ritmo estável
+plv_max = max(PLV8_ds.max(), PLV9_ds.max()) + 1e-9
+PLV8n   = PLV8_ds / plv_max
+PLV9n   = PLV9_ds / plv_max
+add_surf(T8p, F8p, PLV8n,
+         cs=[[0,'rgb(20,10,0)'],[0.4,'rgb(140,80,0)'],[1,'rgb(255,210,60)']],
+         opacity=0.92, name='φ Coerência (piso)',
+         hover='φ · pos=%{x:.0f} · ciclos=%{y:.2f} · PLV=%{z:.3f}<extra>φ-PLV</extra>')
+add_surf(T8p, F8p, PLV9n + 3.0,
+         cs=[[0,'rgb(0,0,30)'],[0.4,'rgb(0,60,160)'],[1,'rgb(80,200,255)']],
+         opacity=0.92, name='α Coerência (teto +3)',
+         hover='α · pos=%{x:.0f} · ciclos=%{y:.2f} · PLV=%{z:.3f}<extra>α-PLV</extra>')
+# Divisor Z=1.5
+_px_d = np.linspace(tv_p[0], tv_p[-1], 60)
+_py_d = np.full(60, (fv_p[0] + fv_p[-1]) / 2)
+_pz_d = np.full(60, 1.5)
+fig.add_trace(go.Scatter3d(
+    x=_px_d, y=_py_d, z=_pz_d, mode='lines',
+    line=dict(color='rgba(180,180,180,0.35)', width=2, dash='dash'),
+    name='Limiar PLV φ|α', visible=False,
+    hovertemplate='Limiar PLV<extra></extra>',
+))
+vis_map['plv_compare'] = list(range(trace_idx, trace_idx+3)); trace_idx += 3
+
 print(f"  {trace_idx} traces criados.")
 
 # ─── Dropdown ─────────────────────────────────────────────────────────────────
@@ -471,8 +588,14 @@ MODOS = [
     ('txt_codigo', 'α Linguagem de Programação',
      'Funções do scanner em Python · mesmo encoding · mesma escala · observação agnóstica',
      dict(x=1.4, y=-1.4, z=0.90)),
-    ('compare',   'COMPARE — φ vs α (visão dupla)',
+    ('compare',      'COMPARE — φ vs α (visão dupla)',
      'φ-Narrativa (piso dourado) + α-Código (teto azul, +3) · mesma escala · observação agnóstica',
+     dict(x=1.6, y=-1.8, z=1.10)),
+    ('sep_compare',  'SEP — Sépstro φ vs α',
+     'Cepstro janelado em resolução de caractere · quefrência = lag de repetição estrutural (chars) · φ-Narrativa (piso) vs α-Código (teto)',
+     dict(x=1.5, y=-1.8, z=1.10)),
+    ('plv_compare',  'PLV — Coerência de Fase φ vs α',
+     'Phase Locking Value dos sinais de texto · frequências com ritmo estável vs. irregular · φ-Narrativa (piso) vs α-Código (teto)',
      dict(x=1.6, y=-1.8, z=1.10)),
 ]
 
@@ -484,12 +607,17 @@ for key, label, desc, cam in MODOS:
     for idx in vis_map[key]:
         vis_list[idx] = True
 
-    x_label = 'Tempo (s)' if key not in ('txt_filos', 'txt_codigo', 'compare') else 'Posição no texto'
-    y_label = 'Freq (Hz)' if key not in ('txt_filos', 'txt_codigo', 'compare') else 'Ciclos/janela'
+    _text_keys = ('txt_filos', 'txt_codigo', 'compare', 'plv_compare')
+    x_label = ('Posição (chars)' if key == 'sep_compare'
+               else 'Posição no texto' if key in _text_keys
+               else 'Tempo (s)')
+    y_label = ('Quefrência (chars)' if key == 'sep_compare'
+               else 'Ciclos/janela' if key in _text_keys
+               else 'Freq (Hz)')
     z_label = ('Sl_max−logE' if key == 'teto'
                 else '∇²(Sl)' if key == 'lap'
                 else 'Piso+Teto' if key == 'unif'
-                else 'φ(piso) / α(teto)' if key == 'compare'
+                else 'φ(piso) / α(teto)' if key in ('compare', 'sep_compare', 'plv_compare')
                 else 'log(E)')
 
     buttons.append(dict(
@@ -568,6 +696,6 @@ fig.update_layout(
 )
 
 fig.show()
-print("\nScanner pronto. Use o dropdown para trocar entre os 9 modos.")
+print("\nScanner pronto. Use o dropdown para trocar entre os 12 modos.")
 print(f"Grade R θ={np.degrees(THETA_R):.2f}° (linha verde)")
 print(f"Harmônicos φ (linhas douradas)")
