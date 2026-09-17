@@ -408,6 +408,38 @@ add_surf(T9,F9,Sl9,
 add_line(*phi_harm_lines_texto(fv9, tv9, Sl9.min()), '#44AAFF', 'φ-Razões', width=2)
 vis_map['txt_codigo'] = list(range(trace_idx, trace_idx+2)); trace_idx += 2
 
+# ── MODO 10: COMPARE — φ-Filos (piso) vs α-Código (teto +3) ─────────────────
+# Normalização comum — mesma escala para comparação válida
+Sl8_n = Sl8 / (max(Sl8.max(), Sl9.max()) + 1e-9)   # piso: 0 → ~1
+Sl9_n = Sl9 / (max(Sl8.max(), Sl9.max()) + 1e-9)   # teto: offset +3
+# Garantir que fv8/tv8 e fv9/tv9 têm o mesmo shape (ambos vêm de stft_texto)
+T8c, F8c = np.meshgrid(tv8, fv8)
+T9c, F9c = np.meshgrid(tv9, fv9)
+add_surf(T8c, F8c, Sl8_n,
+         cs=[[0,'rgb(20,10,0)'],[0.4,'rgb(140,80,0)'],[1,'rgb(255,210,60)']],
+         opacity=0.90, name='φ Narrativa (piso)',
+         hover='φ · pos=%{x:.0f} · ciclos=%{y:.2f} · z=%{z:.3f}<extra>φ-Filos</extra>')
+add_surf(T9c, F9c, Sl9_n + 3.0,
+         cs=[[0,'rgb(0,0,30)'],[0.4,'rgb(0,60,160)'],[1,'rgb(80,200,255)']],
+         opacity=0.90, name='α Código (teto +3)',
+         hover='α · pos=%{x:.0f} · ciclos=%{y:.2f} · z=%{z:.3f}<extra>α-Código</extra>')
+# Linha divisória no limiar Z=1.5 (entre os dois andares)
+_tx_c = np.linspace(tv8[0], tv8[-1], 60)
+_fy_c = np.full(60, (fv8[0] + fv8[-1]) / 2)
+_fz_c = np.full(60, 1.5)
+fig.add_trace(go.Scatter3d(
+    x=_tx_c, y=_fy_c, z=_fz_c, mode='lines',
+    line=dict(color='rgba(180,180,180,0.35)', width=2, dash='dash'),
+    name='Limiar φ|α', visible=False,
+    hovertemplate='Limiar entre os dois modos<extra></extra>',
+))
+# Harmônicos φ em ambos os andares
+ph_c_lo = phi_harm_lines_texto(fv8, tv8, 0.0,    dz=0.15)
+ph_c_hi = phi_harm_lines_texto(fv9, tv9, 3.0,    dz=0.15)
+add_line(*ph_c_lo, '#FFD700', 'φ-Razões (piso)', width=2)
+add_line(*ph_c_hi, '#44AAFF', 'φ-Razões (teto)', width=2)
+vis_map['compare'] = list(range(trace_idx, trace_idx+5)); trace_idx += 5
+
 print(f"  {trace_idx} traces criados.")
 
 # ─── Dropdown ─────────────────────────────────────────────────────────────────
@@ -439,6 +471,9 @@ MODOS = [
     ('txt_codigo', 'α Linguagem de Programação',
      'Funções do scanner em Python · mesmo encoding · mesma escala · observação agnóstica',
      dict(x=1.4, y=-1.4, z=0.90)),
+    ('compare',   'COMPARE — φ vs α (visão dupla)',
+     'φ-Narrativa (piso dourado) + α-Código (teto azul, +3) · mesma escala · observação agnóstica',
+     dict(x=1.6, y=-1.8, z=1.10)),
 ]
 
 n_total = trace_idx
@@ -449,11 +484,12 @@ for key, label, desc, cam in MODOS:
     for idx in vis_map[key]:
         vis_list[idx] = True
 
-    x_label = 'Tempo (s)' if key not in ('txt_filos', 'txt_codigo') else 'Posição no texto'
-    y_label = 'Freq (Hz)' if key not in ('txt_filos', 'txt_codigo') else 'Ciclos/janela'
+    x_label = 'Tempo (s)' if key not in ('txt_filos', 'txt_codigo', 'compare') else 'Posição no texto'
+    y_label = 'Freq (Hz)' if key not in ('txt_filos', 'txt_codigo', 'compare') else 'Ciclos/janela'
     z_label = ('Sl_max−logE' if key == 'teto'
                 else '∇²(Sl)' if key == 'lap'
                 else 'Piso+Teto' if key == 'unif'
+                else 'φ(piso) / α(teto)' if key == 'compare'
                 else 'log(E)')
 
     buttons.append(dict(
