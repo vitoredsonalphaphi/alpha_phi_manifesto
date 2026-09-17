@@ -3,6 +3,17 @@
 
 ---
 
+## LEITURA PRIORITÁRIA — FUTURO RECENTE
+
+### 0. Revisão da sequência conclusiva do Manifesto 03
+**Contexto:** Quando a Entrada 251 (A Utopia como Conclusão — Quarta Parede) foi fixada como conclusão, a entrada imediatamente anterior era a **Entrada 250** ("O Projeto como Prova"), com link filosófico direto. Desde então foram adicionadas 8 entradas (252–259), e a entrada agora adjacente à conclusão é a **Entrada 255** ("A Terceira Estrutura").
+- [ ] Ler as entradas 252–259 no papel (ou no GitHub) e verificar se o link filosófico 250→251 foi respaldado ou distanciado pelas novas entradas
+- [ ] Se necessário, reordenar as entradas recentes para que a de maior afinidade com 251 fique como última antes da conclusão
+- [ ] Entradas com maior afinidade com 251: **258** (retrocausalidade) e **259** (esfera sináptica — diretamente amplifica o tema da esfera em 251)
+- **Nota:** o manifesto não precisa de reimpressão do 03 completo — bastam as últimas páginas a partir da Entrada 250
+
+---
+
 ## URGENTE
 
 ### 1. INPI — Registro de Programa de Computador
