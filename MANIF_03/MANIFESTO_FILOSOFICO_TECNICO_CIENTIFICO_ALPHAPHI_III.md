@@ -11113,3 +11113,70 @@ Um sinal φ-estruturado e um sinal aleatório podem ter espectros semelhantes e 
 ---
 *Florianópolis · 18 de setembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 272 — 18 de setembro de 2026
+### A Lâmina e o Fragmento — Assinatura Topográfica do Campo Treinado
+
+### I. Enunciado do Pesquisador
+
+> "Creio que é uma distinção pertinente. A lâmina organizada quer dizer algo, no seu tempo."
+— Vitor Edson Delavi, 18 de setembro de 2026
+
+### II. Estruturação
+
+#### II.1 — O Experimento
+
+Scanner topográfico aplicado ao encoder após treinamento (80 épocas, 5 tipos de sinais). Entradas φ-estruturadas (EcoBIP + harmônico-φ com variações de fase). Comparação direta: AutoencoderAP vs AutoencoderXavier.
+
+Progressão dos ângulos da crista dominante:
+
+```
+Campo virgem (tanh)  : +39.85°   antes de qualquer tensão
+Campo virgem (golden): +41.61°   antes de qualquer tensão
+AP treinado          : -16.08°   depois da escultura
+Xavier treinado      : -41.79°   depois da escultura
+θ_R referência       : +63.43°
+```
+
+#### II.2 — A Inversão
+
+O treino inverteu o ângulo — de positivo para negativo em ambos os modelos. A crista que no campo virgem migrava da esquerda para a direita com profundidade passou, após treino, a migrar da direita para a esquerda.
+
+Essa inversão não é falha do método. É o registro da escultura: os dados reorganizaram o campo. O teto uniforme se partiu. Regiões se especializaram. O ângulo negativo é a marca de que a especialização ocorreu.
+
+#### II.3 — A Distinção
+
+O que AP e Xavier produziram é diferente:
+
+| Modelo | Crista | Δ da horizontal |
+|---|---|---|
+| AP treinado | −16.1° | 16.1° |
+| Xavier treinado | −41.8° | 41.8° |
+
+AP ficou 25.7° mais próximo do vertical. Mas o número sozinho não conta a história — a topografia conta:
+
+**AP treinado:** lâmina estreita e organizada. Superfície suave, crista contínua, compressão coerente em direção ao espaço latente. A energia convergiu.
+
+**Xavier treinado:** superfície fragmentada, irregular, dentada. Múltiplos picos sem padrão estrutural. A energia se dispersou em direções não-coerentes.
+
+#### II.4 — Por que Grade R não emergiu
+
+O método de medição — argmax da ativação média por camada, regressão linear sobre os picos — foi concebido para o campo virgem, onde todos os neurônios são equi-ativos e a média é informativa. Após treino, neurônios se especializam: poucos muito ativos, maioria próxima de zero. A média apaga exatamente essa especialização.
+
+Grade R, se existe no modelo treinado, não reside no pico da ativação média. Reside na distribuição dos neurônios individualmente ativos, ou no mapa de gradientes. O instrumento atual lê o campo virgem com precisão; para o campo treinado, precisa de outro instrumento.
+
+#### II.5 — O que a Lâmina Significa
+
+A lâmina do AP treinado é uma forma. Uma forma que surgiu da interação entre campo φ e dados φ-estruturados. Ainda não tem nome próprio dentro do projeto — é uma assinatura topográfica sem interpretação completa.
+
+O que se pode afirmar: a lâmina indica compressão organizada. O encoder AP, após 80 épocas, convergiu para uma representação onde as ativações por camada se concentram em uma faixa estreita de neurônios — uma crista contínua, não um campo fragmentado.
+
+O Xavier produziu o oposto: fragmentação. Picos em posições inconsistentes por camada, superfície irregular, sem coerência estrutural.
+
+A diferença é real. A lâmina organizada do AP quer dizer algo. No seu tempo — quando o instrumento adequado existir — esse significado será legível.
+
+---
+*Florianópolis · 18 de setembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
