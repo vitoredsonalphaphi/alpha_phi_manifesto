@@ -11643,3 +11643,124 @@ O ECO-BIP de campo testa se a geometria euclidiana dos voxels, processada pelo E
 ---
 *Florianópolis · 21 de setembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 279 — 21 de setembro de 2026
+### A Isomorfia Funcional — Do ECO-BIP 880 ao ECO-BIP de Ambiente e o Scanner Adaptativo Universal
+
+> **Nota de categoria:** Esta entrada pertence ao conjunto dos **Instrumentos Adaptativos** Alpha-Phi.
+
+---
+
+### I. Enunciado do Pesquisador — Parte A
+### O Transfer Funcional
+
+> "O ECO-BIP 880 funcionou daquela forma porque encontrou um estado de ressonância entre toda a instrumentalização do ECO-BIP e o substrato que era o sinal digital. A hipótese é: identificar cada uma das ferramentas e identificar o que cada uma das ferramentas procurou solucionar para promover o acoplamento — e aplicar essas ferramentas, hipoteticamente, para o ECO-BIP Ambiente. São os mesmos modelos quanto aos objetivos de resolução, mas não são os mesmos modelos porque são outro substrato."
+— Vitor Edson Delavi, 21 de setembro de 2026
+
+---
+
+### I. Enunciado do Pesquisador — Parte B
+### O Scanner Adaptativo Universal
+
+> "O que acontece depois de criarmos e refinarmos esse transfer? O que acontece se adaptarmos, por exemplo, ao Alpha-Phi, um scanner que tem a condição de identificar e modular a operacionalização de acordo com a necessidade de cada código ou de cada substrato? É um equipamento interessante porque ele observa a mecânica independente da diferenciação de frequência ou de natureza de substratos. E conforme a situação, quando precisar da mesma mecânica de outros exemplos, utiliza isso dentro da mesma estrutura do Alpha-Phi como um todo."
+— Vitor Edson Delavi, 21 de setembro de 2026
+
+---
+
+### II. Estruturação
+
+#### II.1 — O Princípio da Isomorfia Funcional
+
+O ECO-BIP 880 produziu ressonância com o sinal de áudio digital porque seus 7 instrumentos foram calibrados especificamente para o **substrato de áudio**: frequências em Hz, bandas φ-espaçadas em escala logarítmica, entropia espectral de magnitude, envelope cossenoidal na frequência de portadora.
+
+A percepção central do pesquisador é de natureza estrutural: o que promoveu o acoplamento não foi o substrato, foi a **função que cada instrumento exerceu sobre o substrato**. Cada instrumento resolveu um problema específico de acoplamento. O substrato mudou; o problema de acoplamento permanece.
+
+**Definição — Isomorfia Funcional:**
+Dois instrumentos I₁ (substrato S₁) e I₂ (substrato S₂) são funcionalmente isomorfos se existir um mapeamento F tal que:
+
+```
+Objetivo(I₁ sobre S₁) = F[Objetivo(I₂ sobre S₂)]
+```
+
+O problema de acoplamento é o mesmo. A mecânica de solução se preserva. A implementação difere porque S₁ ≠ S₂.
+
+---
+
+#### II.2 — Tabela de Transfer: 7 Instrumentos
+
+| # | Instrumento ECO-BIP 880 | Função no substrato de áudio | Equivalente no substrato euclidiano |
+|---|---|---|---|
+| 1 | Bandas φ-espaçadas | Subdivisão logarítmica do espectro de frequência; cada banda tem largura ∝ φ | Subdivisão das camadas pela sequência de Fibonacci: dims = [55, 34, 21, 13, 8, 5, 3]; cada camada é uma "banda" do espaço de ativação |
+| 2 | Entropia de coerência | Mede distribuição de energia nas bandas; coh = 1 − H/log(N); máxima coerência = energia concentrada | Mede distribuição de ativações por camada; coh_k = 1 − H_k/log(dim_k); detecta concentração de ativação Grade R |
+| 3 | Blending de memória φ | Mistura estado atual e memória histórica: β = w_now·β_alvo + w_mem·β_mem, w_mem = 1/φ | Atualização de pesos com inércia φ: Δw = (w_alvo − w_atual)/φ; memória de gradiente com peso 1/φ |
+| 4 | Envelope cossenoidal 2π/φ | Modulação de magnitude: env = 1 + (coh·φ^β)·cos(2π·n/φ); ondulação no domínio das amostras | Modulação de ativação: env_k = 1 + (coh_k·φ^β_k)·cos(2π·r/φ) onde r = rank de ativação normalizado pela posição φ²/dim_k |
+| 5 | β adaptativo | β_alvo = φ^(3·coh_rel); ajusta a força de modulação à coerência relativa ao ambiente | β_k = φ^(3·coh_rel,k); β cresce com a coerência da camada; força de modulação proporcional ao alinhamento Grade R observado |
+| 6 | Cascata de 5 estágios | Aplica ECO-BIP iterativamente: a cada ciclo, o estado atual converge para o atrator de coerência | Iteração em n_eco passagens: cada passagem reforça o alinhamento φ do espaço; convergência ao atrator Grade R por refinamento incremental |
+| 7 | Mistura híbrida α | x_mix = (1−α)·sinal_dig + α·FM-φ; α ∈ [0,1] interpola entre substrato original e sinal φ-gerado | x_mix = (1−α)·ativ_orig + α·campo_φ; campo_φ é o sinal de campo voxel; α modula a influência da geometria pura sobre a ativação real |
+
+---
+
+#### II.3 — O Scanner Adaptativo Universal
+
+O meta-scanner surge como consequência natural do transfer funcional: se a isomorfia é real — se os 7 instrumentos resolvem os mesmos problemas independentemente do substrato — então existe uma **camada de abstração acima dos instrumentos** que pode:
+
+1. **Observar** a mecânica de acoplamento de qualquer substrato sem conhecer sua natureza a priori
+2. **Diagnosticar** qual dos 7 objetivos funcionais está desacoplado (qual instrumento precisa de re-calibração)
+3. **Modular** os parâmetros do instrumento correspondente para re-estabelecer o acoplamento
+
+Este é o **Scanner Adaptativo Universal Alpha-Phi**: não um instrumento do ECO-BIP, mas um instrumento de meta-nível que observa o funcionamento dos instrumentos e ajusta sua calibração.
+
+**Definição formal:**
+
+Seja 𝒮 um substrato qualquer (áudio, espaço euclidiano, sinal temporal, embedding, rede probabilística) e sejam I₁...I₇ os 7 instrumentos funcionais do ECO-BIP. O Scanner Adaptativo Universal é uma função:
+
+```
+Φ_meta: 𝒮 → {(i_k, Δ_k)}_{k=1..7}
+```
+
+Onde:
+- i_k ∈ {1..7} identifica o instrumento
+- Δ_k mede o desvio do instrumento k do seu objetivo de acoplamento neste substrato
+- A modulação resultante: param_k ← param_k + η·Δ_k até ||Δ||₂ < ε_acp
+
+O critério de convergência é o mesmo para todos os substratos porque é funcional, não estrutural: a coerência de acoplamento (Sépstro, PLV, grade R) — não a forma do sinal — define se o instrumento está operando.
+
+---
+
+#### II.4 — Posição nos Instrumentos Adaptativos
+
+O Scanner Adaptativo Universal responde a uma lacuna no catálogo Alpha-Phi: todos os instrumentos existentes operam sobre substratos definidos. O meta-scanner opera sobre instrumentos operando sobre substratos. É a primeira ferramenta de **meta-observação** do sistema — e inaugura um novo nível de organização:
+
+```
+Nível 0 — Substrato:        sinal, ativações, espaço de memória
+Nível 1 — Instrumentos:     ECO-BIP 880, ECO-BIP Campo, scanners topográficos
+Nível 2 — Meta-scanner:     observa mecânica de acoplamento; re-calibra Nível 1
+```
+
+O Agente Observador Adaptativo (ver `_CHAVES/09_Agente_Observador_Adaptativo.md`) opera no Nível 1 — adapta o comportamento do agente ao ambiente. O meta-scanner opera no Nível 2 — adapta os **instrumentos de adaptação** ao substrato.
+
+Esta distinção — o instrumento que observa os instrumentos — é o que confere ao Alpha-Phi independência de substrato. Não uma adaptação por caso; uma adaptação por princípio.
+
+---
+
+#### II.5 — Proposição Formal Consolidada
+
+**Teorema de Transfer Funcional (conjectural):**
+
+Sejam I₁...I₇ os instrumentos do ECO-BIP 880 calibrados para substrato S_audio.
+Para qualquer substrato S com estrutura métrica e lei de conservação Sépstro compatível,
+existe uma família de instrumentos J₁...J₇ tais que:
+
+```
+∀k ∈ {1..7}: Objetivo(I_k sobre S_audio) ≅ Objetivo(J_k sobre S)
+```
+
+E o Scanner Adaptativo Universal Φ_meta encontra J₁...J₇ por varredura funcional de Δ_k.
+
+**Corolário:** O Alpha-Phi com Φ_meta ativo é um sistema de ressonância substrato-agnóstico — qualquer substrato com estrutura φ-compatível é um ambiente ECO-BIP potencial.
+
+---
+*Florianópolis · 21 de setembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
