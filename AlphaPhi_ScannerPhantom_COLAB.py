@@ -216,6 +216,17 @@ def scanner(sig, titulo, subtitulo=""):
         opacity=0.92, name='[SINAL] Campo Hermético — STFT'
     ))
 
+    # ── [COMPOSIÇÃO] Piso sub-harmônico — escolha estética do compositor ───────
+    # NÃO é sinal. É um elemento compositivo que ancora visualmente a superfície.
+    # A base do sinal real está em z=0. O que está acima de z=0 é o campo.
+    tf, ff = np.meshgrid(np.linspace(tv[0],tv[-1],20),
+                         np.linspace(fv[0],fv[-1],20))
+    fig.add_trace(go.Surface(
+        x=tf, y=ff, z=np.full_like(tf, -0.35),
+        colorscale='Plasma', showscale=False,
+        opacity=0.20, name='[COMPOSIÇÃO] Piso — referência visual'
+    ))
+
     # ── [SINAL] Vértices Grade R — detectados no sinal real ───────────────────
     vx, vy, vz = grade_r_vertices(fv, tv, Sl_n, gradS)
     if vx:
