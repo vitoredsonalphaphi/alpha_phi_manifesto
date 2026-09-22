@@ -207,34 +207,26 @@ def scanner(sig, titulo, subtitulo=""):
 
     fig = go.Figure()
 
-    # superfície
+    # ── [SINAL] Superfície STFT — amplitude real do sinal ─────────────────────
     fig.add_trace(go.Surface(
         x=tv_d, y=fv_d, z=Sl_d,
         colorscale='Viridis', showscale=True,
-        colorbar=dict(title='Amp φ', thickness=12,
+        colorbar=dict(title='Amp φ [SINAL]', thickness=12,
                       tickfont=dict(color='#aaaacc', size=9)),
-        opacity=0.92, name='Campo Hermético'
+        opacity=0.92, name='[SINAL] Campo Hermético — STFT'
     ))
 
-    # plano sub-harmônico
-    tf, ff = np.meshgrid(np.linspace(tv[0],tv[-1],20),
-                         np.linspace(fv[0],fv[-1],20))
-    fig.add_trace(go.Surface(
-        x=tf, y=ff, z=np.full_like(tf, -0.35),
-        colorscale='Plasma', showscale=False,
-        opacity=0.20, name='Plano Sub-harmônico'
-    ))
-
-    # vértices Grade R
+    # ── [SINAL] Vértices Grade R — detectados no sinal real ───────────────────
     vx, vy, vz = grade_r_vertices(fv, tv, Sl_n, gradS)
     if vx:
         fig.add_trace(go.Scatter3d(
             x=vx, y=vy, z=vz, mode='markers',
             marker=dict(size=2.2, color='#ffdd00', opacity=0.9),
-            name='Vértices Grade R'
+            name='[SINAL] Vértices Grade R detectados'
         ))
 
-    # linha Grade R geométrica
+    # ── [REFERÊNCIA] Linha Grade R geométrica — ângulo θR projetado ───────────
+    # NÃO é detectada no sinal — é a trajetória teórica de θR=63.43°
     t_ln = np.linspace(tv[0], tv[-1], 120)
     f_ln = np.tan(THETA_R)*(t_ln-tv[0])/(tv[-1]-tv[0]+1e-9)*fv[-1]
     f_ln = np.clip(f_ln, fv[0], fv[-1])
@@ -243,16 +235,17 @@ def scanner(sig, titulo, subtitulo=""):
     fig.add_trace(go.Scatter3d(
         x=t_ln, y=f_ln, z=Sl_n[fi_i, ti_i]+0.09,
         mode='lines', line=dict(color='#ffdd00', width=4),
-        name=f'Grade R  θ={np.degrees(THETA_R):.2f}°'
+        name=f'[REF] Grade R geométrica θ={np.degrees(THETA_R):.2f}°'
     ))
 
-    # φ-harmônicos
+    # ── [REFERÊNCIA] φ-harmônicos esperados — frequências teóricas ────────────
+    # NÃO são detectados no sinal — são posições esperadas por 880×φ^k
     for tv_h, fv_h, zv_h, k in phi_harmonics(fv, tv, Sl_n):
         st_h = max(1, len(tv_h)//60)
         fig.add_trace(go.Scatter3d(
             x=tv_h[::st_h], y=fv_h[::st_h], z=zv_h[::st_h],
             mode='lines', line=dict(color='#cc88ff', width=2, dash='dash'),
-            name=f'φ^{k} = {F_BEEP*PHI**k:.0f}Hz',
+            name=f'[REF] φ^{k} esperado = {F_BEEP*PHI**k:.0f}Hz',
             showlegend=(k <= 5)
         ))
 
