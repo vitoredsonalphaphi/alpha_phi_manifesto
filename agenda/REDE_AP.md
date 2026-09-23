@@ -70,15 +70,28 @@
 
 ## IV. FUNDAMENTOS FILOSÓFICO-MATEMÁTICOS A INCORPORAR
 
-- [ ] **α agnóstico por substrato** *(Entrada 288 + agenda/pendentes.md item 6)*
-  - Não fixar o valor 1/137 — preservar a **arquitetura da tensão**
-  - O operador expansivo e o contrátil, em proporção de emergência para cada substrato
-  - Forma prática no código:
+- [ ] **α agnóstico por substrato — Família Adaptativa de α** *(Entrada 288 + pendentes.md item 6)*
+  - Não fixar o valor 1/137 — preservar a **arquitetura da tensão** (expansão/contração)
+  - Em vez de um α único, construir uma **família de α adaptativos** — um por substrato,
+    análogo aos parâmetros adaptativos do Scanner (que já se ajusta ao input recebido)
+  - Cada membro da família mantém a mesma estrutura dual (inteiro/decimal = atrator/entropia)
+    mas com valores calibrados empiricamente para cada ocasião/substrato
+  - Esboço da estrutura:
     ```python
-    ALPHA_EXPANSAO   = 137        # inteiro ímpar — normalização, campo, atrator
-    ALPHA_CONTRACAO  = 1/137.036  # decimal — granularidade mínima, introspecção
-    # Para outros substratos: calibrar estes valores empiricamente
+    ALPHA_FAMILIA = {
+        # substrato          : (α_expansao, α_contracao)  ← a calibrar experimentalmente
+        'audio_ecobeep'      : (137,        1/137.036),   # baseline atual
+        'eeg_sintetico'      : (None,       None),        # a determinar
+        'fala_quadrada'      : (None,       None),        # a determinar
+        'ruido_fmphi'        : (None,       None),        # a determinar
+        'texto_estruturado'  : (None,       None),        # a determinar
+    }
+    # A rede AP seleciona o α correto para cada substrato que entra
+    # Como o Scanner seleciona seus parâmetros adaptativos para cada input
     ```
+  - **Quando desenvolver:** ao tratar a seção V (Acoplamento Multi-Substrato)
+  - **Referências:** Entrada 288 (Collatz) · `MANIF_02/FILOSOFICA_alpha_inteiro_e_constante.md`
+    · hipótese de universalidade (item V abaixo)
 
 - [ ] **Collatz como referência estrutural da tensão** *(Entrada 288)*
   - par → ÷2 = contração = .035999... = entropia
