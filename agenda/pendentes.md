@@ -3,6 +3,15 @@
 
 ---
 
+## AGENDA REDE-AP ← referência rápida
+**Arquivo dedicado:** `agenda/REDE_AP.md`
+Contém todos os itens da fase de construção da rede neural Alpha-Phi:
+execuções pendentes no Colab · questões estruturais da rede · α agnóstico ·
+Collatz/fluxo-refluxo · retroprojeção · Grade R · acoplamento multi-substrato.
+Para adicionar itens: "coloca na Agenda REDE-AP".
+
+---
+
 ## LEITURA PRIORITÁRIA — FUTURO RECENTE
 
 ### 0. Revisão da sequência conclusiva do Manifesto 03
