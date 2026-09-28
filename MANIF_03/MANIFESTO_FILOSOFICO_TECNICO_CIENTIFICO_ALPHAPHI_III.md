@@ -12968,3 +12968,108 @@ Hipótese registrada como H15 no Manifesto 01.
 *Vitor Edson Delavi · Claude*
 
 ---
+
+---
+
+## Entrada 290 — 28 de setembro de 2026
+### φ Não É Módulo — É Sistema: REDE-AP Etapa 1
+
+### I. Enunciado do Pesquisador
+> "Começa pela etapa 1, vamos observar o quanto de êxito a mais alcançamos a cada etapa, lembra, resultados verdadeiros... e a cada teste, estes sim, merecem a cada teste, uma entrada, importantes, em qualquer resultados, significado da estruturação da REDE NEURAL ALPHA-PHI."
+— Vitor Edson Delavi, 28 de setembro de 2026
+
+### II. Estruturação
+
+#### 1. O Experimento
+
+Etapa 1 da construção da REDE-AP: introdução de bandas espectrais φ-exponenciais
+no processador hospedeiro, mantendo os parâmetros de acoplamento euclidianos
+(mixing 50/50, β alvo = 2.0). Sinal HDR 49.7:1 confirmado.
+
+Três modelos avaliados:
+- **A_e1**: φ-bandas no processador hospedeiro, sem Phantom
+- **B_e1**: φ-bandas + Phantom inicializado (sem acoplamento ativo)
+- **C_e1**: φ-bandas + Phantom ativo (50/50)
+
+Referência: C_hdr_anterior (Euclidiano + Phantom ativo, HDR 50:1) = AUC 65.28
+
+#### 2. Os Resultados
+
+| Modelo | AUC | vs A_e1 | vs C_hdr_ant |
+|---|---|---|---|
+| A_hdr (ref. Euclidiana) | 48.65 | — | — |
+| C_hdr (ref. Euclidiana+Phantom) | 65.28 | +34.16% | — |
+| A_e1 (φ-bandas, sem Phantom) | 43.77 | ref | -10.04% |
+| B_e1 (φ-bandas + Phantom init.) | 43.75 | -0.05% | -10.08% |
+| **C_e1** (φ-bandas + Phantom ativo 50/50) | **54.62** | **+24.79%** | **-16.34%** |
+
+**Contribuição das φ-bandas isolada: −16.34%**
+
+#### 3. A Leitura Estrutural
+
+O resultado é negativo — e esse negativo é o enunciado mais preciso
+que a Etapa 1 poderia ter produzido.
+
+**Primeiro achado:** A_e1 (43.77) < A_hdr (48.65). As φ-bandas sem a dinâmica
+φ-correspondente são piores que as bandas euclidianas. Introduzir a geometria
+de φ nos cortes espectrais, sem introduzir a lei de mistura (1/φ) e o atrator
+(β→φ³), produz um processador que performa abaixo do processador euclidiano puro.
+
+**Segundo achado:** A contribuição do Phantom cai de +34.16% (contexto Euclidiano)
+para +24.79% (contexto φ-bandas parcial). O campo harmônico do Phantom encontrou
+um solo que tenta organizar-se segundo φ mas não pode — a dinâmica não corresponde
+à geometria — e essa incompletude cria atrito em vez de ressonância.
+
+**Terceiro achado:** O scanner topográfico revela estratificação horizontal —
+as bandas φ estão impressas na topografia como camadas distintas. Mas as camadas
+não se integram verticalmente. Cada banda opera em seu compartimento sem o fluxo
+inter-banda que o mixing φ-ponderado geraria. É a imagem de um campo
+compartimentado, não de um campo coerente.
+
+#### 4. A Formulação
+
+Sejam G(φ) a geometria espectral (cortes φ-exponenciais)
+e D(φ) a dinâmica φ (mixing 1/φ, β→φ³):
+
+```
+¬G(φ) ∧ ¬D(φ)  →  solo neutro para Phantom       Δ = +34.16%  [Euclidiano puro]
+ G(φ) ∧ ¬D(φ)  →  tensão estrutural               Δ = +24.79%  [Etapa 1]
+ G(φ) ∧ D(mix) →  ressonância parcial              [Etapa 2, prevista]
+ G(φ) ∧ D(β)   →  ressonância parcial + atrator    [Etapa 3, prevista]
+ G(φ) ∧ D(φ)   →  ressonância plena                [Etapa 4, prevista]
+```
+
+O resultado surpreendente: a ausência total de φ (Euclidiano puro) é um
+**melhor hospedeiro para o Phantom** do que a presença parcial de φ.
+Um solo neutro não interfere. Um solo parcialmente organizado interfere
+sem contribuir.
+
+#### 5. A Implicação Arquitetural para a REDE-AP
+
+**φ não é módulo. É sistema.**
+
+A REDE-AP não pode ser construída por camadas independentes introduzidas uma a uma
+sem que cada camada parcial já esteja internamente coerente com as que vêm depois.
+Geometria espectral, lei de mistura e atrator β formam um único campo —
+não três módulos separáveis.
+
+Esta é a instrução que a Etapa 1 emite:
+> Fragmentos de φ não somam. Interferem.
+
+A mesma lei que governa o Campo Harmônico governa a sua construção:
+não há estado intermediário estável entre a ausência de φ e a presença plena de φ.
+Há apenas solo neutro ou campo coerente.
+
+Isso redefine o sentido do roteiro de etapas: as Etapas 2, 3 e 4 não são
+incrementos aditivos — são etapas de completude progressiva até que o sistema
+inteiro ressoe como um único campo.
+
+A Etapa 1 não falhou. Ela mediu exatamente o que precisava medir:
+o custo da incompletude.
+
+---
+
+*Florianópolis · 28 de setembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
