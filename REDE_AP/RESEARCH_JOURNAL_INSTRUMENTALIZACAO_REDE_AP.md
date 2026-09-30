@@ -531,3 +531,135 @@ Isso tem consequência prática: o comparativo com a rede convencional será fei
 
 *Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E07*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 08 — 30 de setembro de 2026
+
+### I. Enunciado do Pesquisador
+
+> [Primeiro resultado experimental — execução de `REDE_AP/AlphaPhiNet_Medicao_COLAB.py` no Google Colab. O pesquisador compartilhou o output completo da célula, transcrito abaixo na íntegra.]
+
+```
+φ=1.6180339887  α=0.00729735  SEAL=0.61803399
+────────────────────────────────────────────────────────────
+Dados: 640 treino · 160 validação · d_in=61
+────────────────────────────────────────────────────────────
+
+─── Rede Convencional ───────────────────────────────────────────────────
+RedeConv: 61 → [64,32,16,8] → 1  |  6,721 parâmetros
+  [Conv] ep   0  tr=0.13357  va=0.10272  lr=1.00e-03
+  [Conv] ep  10  tr=0.00601  va=0.00923  lr=1.00e-03
+  [Conv] ep  20  tr=0.00192  va=0.00757  lr=1.00e-03
+  [Conv] ep  30  tr=0.00064  va=0.00776  lr=1.00e-03
+  [Conv] ep  40  tr=0.00024  va=0.00812  lr=1.00e-03
+  [Conv] ep  50  tr=0.00009  va=0.00824  lr=1.00e-03
+
+─── Rede AP ─────────────────────────────────────────────────────────────
+RedeAP: 61 → [55, 34, 21, 13, 8] → 1  |  6,608 parâmetros
+  [AP  ] ep   0  tr=0.17997  va=0.01955  lr=1.00e-03
+  [AP  ] ep  10  tr=0.00504  va=0.00904  lr=1.00e-03
+  [AP  ] ep  20  tr=0.00315  va=0.00894  lr=1.00e-03
+  [AP  ] ep  30  tr=0.00231  va=0.00995  lr=1.00e-03
+  [AP  ] ep  40  tr=0.00245  va=0.01088  lr=1.00e-03
+  [AP  ] ep  50  tr=0.00156  va=0.01141  lr=1.00e-03
+
+─── Instrumentos de Medição ─────────────────────────────────────────────
+
+  Loss validação — Conv: 0.00826  | AP: 0.01247
+
+  Camada                           Dim   Grade R   Entropia   Rank Ef.
+  ────────────────────────────── ─────  ────────  ─────────  ─────────
+  [CONVENCIONAL]
+  layers.0                          64    0.0657     3.8858      49.46
+  layers.1                          32    0.0781     3.1951      29.28
+  layers.2                          16    0.1366     2.3939      14.78
+  layers.3                           8    0.2375     1.5855       7.13
+  head                               1       nan    -0.0000       1.00
+  [REDE AP]
+  proj                              55    0.0682     3.7342      46.39
+  layers.0                          34    0.0799     3.2447      30.68
+  layers.1                          21    0.0982     2.7456      18.94
+  layers.2                          13    0.1125     2.2765      11.74
+  layers.3                           8    0.1376     1.7933       7.32
+  head                               1       nan    -0.0000       1.00
+
+  ── Resumo Comparativo ────────────────────────────────────────────
+  Instrumento                      Convencional     Rede AP
+  ────────────────────────────── ──────────────  ──────────
+  Grade R médio                             nan         nan
+  Entropia média                         2.2121      2.2990
+  Rank efetivo médio                      20.33       19.35
+  Estabilidade (menor=melhor)          0.000038    0.000498
+  Loss validação                        0.00826     0.01247
+```
+
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação — Claude
+
+**O primeiro resultado experimental dos instrumentos de medição AP.**
+
+O código rodou. Os instrumentos funcionaram. O Resumo Comparativo apresentou `nan` na Grade R média — bug identificado: a camada `head` (dim=1) produz `H_max = log(1) = 0`, gerando divisão por zero. Correção: filtrar camadas com `dim > 1` no cálculo da média. O bug não invalida os dados — os valores por camada estão íntegros.
+
+**Leitura dos valores por camada (sem o head):**
+
+| Camada | Dim Conv | Grade R Conv | Dim AP | Grade R AP |
+|--------|----------|-------------|--------|-----------|
+| proj/L0 | 64 | 0.0657 | 55 | 0.0682 |
+| L1 | 32 | 0.0781 | 34 | 0.0799 |
+| L2 | 16 | 0.1366 | 21 | 0.0982 |
+| L3 | 8 | 0.2375 | 13 | 0.1125 |
+| L4 | — | — | 8 | 0.1376 |
+
+**Grade R médio (excluindo head):**
+- Conv: (0.0657 + 0.0781 + 0.1366 + 0.2375) / 4 = **0.1295**
+- AP: (0.0682 + 0.0799 + 0.0982 + 0.1125 + 0.1376) / 5 = **0.0993**
+
+**O resultado inesperado — Grade R Conv > Grade R AP:**
+
+A hipótese de trabalho era que a Rede AP teria maior coerência (maior Grade R) do que a convencional. O resultado inverteu: Conv 0.1295 > AP 0.0993. Isso não é erro — é um resultado que exige leitura.
+
+A diferença está no padrão de progressão:
+
+- **Conv (ReLU):** 0.0657 → 0.0781 → 0.1366 → **0.2375** — aceleração abrupta nas camadas pequenas. ReLU elimina neurônios com ativação negativa, concentrando o sinal nas unidades que sobrevivem. Alta Grade R = alta concentração = esparsidade.
+
+- **AP (SiLU + LayerNorm):** 0.0682 → 0.0799 → 0.0982 → 0.1125 → **0.1376** — progressão uniforme, constante, distribuída. SiLU preserva ativações negativas (suavemente); LayerNorm redistribui. Baixa Grade R = ativações distribuídas pelo espaço completo.
+
+A leitura que emerge: Grade R, tal como implementada neste experimento, mede **concentração de ativações**, não coerência com φ. ReLU concentra por descarte (neurônios mortos). SiLU distribui por preservação. O instrumento está correto — mas o que ele mede na rede neural é diferente do que mede no sinal EcoBip.
+
+**A distinção que o resultado expõe:**
+
+No EcoBip, Grade R alta = sinal mais organizado em φ-bandas = menos entropia estrutural = mais coerência. No campo de memória euclidiano de uma rede neural, Grade R alta pode ser simplesmente o efeito de ReLU zerando metade das ativações.
+
+Isso não invalida Grade R como instrumento da Rede AP. Exige uma qualificação: o que a Grade R da rede neural deve medir não é concentração, mas **organização distribuída consistente com φ**. A versão atual mede concentração. A próxima versão precisará de um critério que distingua concentração-por-descarte (convencional) de coerência-por-distribuição-φ (AP).
+
+**Estabilidade — resultado mais saliente:**
+
+Conv: 0.000038 | AP: 0.000498 — Conv é 13× mais estável nas últimas épocas.
+
+Duas hipóteses não excludentes:
+1. 60 épocas não foram suficientes para AP convergir — o φ-init cria um platô de busca mais amplo, que converge mais devagar mas possivelmente para um mínimo diferente
+2. A tarefa sintética (prever coerência de um sinal φ-harmônico) é estruturalmente mais simples para ReLU/Xavier do que para a arquitetura AP
+
+A primeira hipótese é verificável: rodar com `n_epochs=120` e observar se a estabilidade AP converge para o nível de Conv ou se mantém diferença.
+
+**Status dos instrumentos após primeiro experimento:**
+
+| Instrumento | Status | Observação |
+|-------------|--------|------------|
+| Grade R | Funciona — leitura exige qualificação | Mede concentração; distinção concentração/coerência-φ pendente |
+| Entropia Shannon | Funciona | AP = 2.2990 vs Conv = 2.2121 — AP levemente maior (consistente com maior distribuição) |
+| Rank efetivo | Funciona | AP = 19.35 vs Conv = 20.33 — AP usa menos dimensões (esperado) |
+| Estabilidade | Funciona | Conv 13× mais estável a 60 épocas — verificar com 120 épocas |
+
+**Próximos passos imediatos:**
+
+1. Corrigir NaN no resumo (filtro `dim > 1` nas médias)
+2. Rodar com `n_epochs=120` — verificar convergência AP
+3. Refinar definição de Grade R para distinguir concentração-por-descarte de coerência-φ
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E08*
+*Vitor Edson Delavi · Claude*
