@@ -271,7 +271,7 @@ def treinar(model, loader_tr, loader_va, n_epochs=60, lr=1e-3, nome=""):
     optim = torch.optim.AdamW(model.parameters(), lr=lr,
                                weight_decay=1/PHI**3)
     sched = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optim, factor=1/PHI, patience=8, verbose=False
+        optim, factor=1/PHI, patience=8
     )
     crit = nn.MSELoss()
     history = []
