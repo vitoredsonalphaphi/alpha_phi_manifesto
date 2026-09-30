@@ -13675,18 +13675,20 @@ A régua foi encontrada não pelos experimentos numéricos — mas pela observa�
 
 ## Entrada 300 — 30 de setembro de 2026
 
-### Rotação Acoplada — 729 e Collatz como Periodicidades Bidirecionais que Formam uma Grade
+### Rotação Acoplada — Hipótese de Duas Periodicidades Bidirecionais como Estrutura Potencial
 
 ### I. Enunciado do Pesquisador
 
 > "As rotações de Collatz e a rotação do sentido do 729 são bidirecionais. E sendo bidirecionais, as duas atuando juntas se refeririam a uma expressão geométrica — a formação de uma grade. Porque seria uma rotação acoplada a uma retrorotação: a rotação de Collatz sugerindo um certo sentido de periodicidade, acoplada à rotação do 729 sugerindo outro sentido de periodicidade. Dois sentidos de periodicidade, um contrário ao outro, quase como simétricas. Independente de não se referirem à mesma periódica, acredito que pode significar uma determinada estrutura que pode ser conveniente na instrumentalização da rede neural sobre a questão do atrator."
 — Vitor Edson Delavi, 30 de setembro de 2026
 
+*Nota de registro: este enunciado é uma hipótese exploratória — uma conveniência potencial, não uma afirmação arquitetural. A observação é preservada pelo que pode vir a indicar, não pelo que determina.*
+
 ### II. Estruturação
 
 #### II.1 — As Duas Rotações
 
-O bloco decimal de 1/137 — `00729927` — gera um movimento cíclico com duas direções inscritas:
+O bloco decimal de 1/137 — `00729927` — sugere um movimento cíclico com duas direções inscritas:
 
 **Rotação ascendente (729):** `7 → 2 → 9`
 - Coerência (7) atravessa a entropia (2) e alcança o atrator (9)
@@ -13696,53 +13698,119 @@ O bloco decimal de 1/137 — `00729927` — gera um movimento cíclico com duas 
 - Atrator (9) libera pela entropia (2) e retorna à coerência (7)
 - Espelho exato da ascendente — mesmo caminho, sentido inverso
 
-O ciclo completo `7 → 2 → 9 → 9 → 2 → 7` é uma **rotação horária e sua retrorotação acoplada** — dois sentidos de periodicidade inscritos no mesmo bloco, em torno do ápice duplo `9 · 9`.
+O ciclo completo `7 → 2 → 9 → 9 → 2 → 7` pode ser lido como uma rotação e sua retrorotação acoplada — dois sentidos de periodicidade inscritos no mesmo bloco, em torno do ápice duplo `9 · 9`.
 
 **Rotação Collatz (análoga):**
 - Expansão (ímpar): 3n+1 — pressão ascendente, afastamento da origem
 - Contração (par): n/2 — pressão descendente, retorno à origem
 - Caminho estocástico, retorno invariante a 1
-- É a retrorotação de sentido oposto: anti-horária e estocástica onde a 729 é horária e determinística
+- Análoga a uma retrorotação de sentido oposto: estocástica onde a 729 é determinística
 
-#### II.2 — O Acoplamento e a Grade
+#### II.2 — O Acoplamento como Hipótese de Grade
 
-Duas oscilações em sentidos opostos, quando acopladas, não produzem uma curva — produzem uma **estrutura bidimensional**. Em física, esse fenômeno é descrito pela figura de Lissajous generalizada: quando a razão das frequências das duas oscilações é racional, o produto é uma figura fechada (grade discreta); quando é irracional, o produto é uma cobertura quase-periódica — ordem de longo alcance com variabilidade local.
+Na física, duas oscilações em sentidos opostos, quando acopladas, podem produzir estruturas bidimensionais — fenômeno descrito pela figura de Lissajous generalizada: quando a razão das frequências é racional, o produto é uma figura fechada; quando irracional, uma cobertura quase-periódica com ordem de longo alcance e variabilidade local.
 
-A razão entre as duas periodicidades aqui:
-- 729: período determinístico de 8 (do bloco de 1/137)
-- Collatz: retorno médio variável, não racional em relação ao período 8
+Se as duas periodicidades (729 e Collatz-análoga) fossem acopladas, a razão entre elas seria:
+- 729: período determinístico de 8 (bloco de 1/137)
+- Collatz: retorno médio variável, provavelmente não racional em relação ao período 8
 
-O produto do acoplamento é, portanto, uma **grade quase-periódica** — não uma malha rígida, mas uma estrutura com regularidade emergente. Exatamente o que uma rede neural φ-nativa precisa: não uma grade fixa que impõe geometria, mas uma grade que emerge do comportamento próprio do sistema.
+Nessa hipótese, o produto do acoplamento seria uma estrutura quase-periódica — não uma malha rígida, mas regularidade emergente. A conveniência potencial para a REDE-AP residiria em ter uma grade que emerge do comportamento do sistema, não que é imposta a ele.
 
 ```
-Eixo espectral (729):   onde está a coerência no ciclo 7→2→9→9→2→7
-Eixo temporal (Collatz): quando o atrator temporal fecha o ciclo de retorno
-                         ─────────────────────────────────────────────
-Grade:                  produto bidimensional — métrica de ciclo completa
+Eixo espectral (729):    posição no ciclo 7→2→9→9→2→7 (hipotético)
+Eixo temporal (Collatz): posição no ciclo de retorno do atrator (hipotético)
+                         ─────────────────────────────────────────────────
+Hipótese:               se acoplados, poderiam descrever uma grade de ciclo
 ```
 
-#### II.3 — Relação com o Sépstro e a REDE-AP
+#### II.3 — A Simetria Quase-Perfeita
 
-A lei de conservação local do Sépstro — `Coh + Entr = 1.000` — descreve um estado. As métricas de ciclo de Entrada 299 propõem medir o movimento, não o estado. Esta entrada acrescenta a **dimensionalidade** desse movimento: o ciclo não é unidimensional (apenas a posição no arco 7→9→7) mas bidimensional — posição espectral × posição temporal.
-
-Na REDE-AP:
-- **Grade R** (coerência espectral) captura a posição no eixo 729: em qual ponto do arco ascendente-descendente cada φ-banda se encontra
-- A métrica de retorno Collatz-análoga captura a posição no eixo temporal: em qual momento do ciclo de expansão-contração o atrator global se encontra
-- O **acoplamento das duas** é a grade — a métrica de ciclo bidimensional que pode instrumentalizar o atrator da rede neural
-
-#### II.4 — A Simetria Quase-Perfeita
-
-O pesquisador observa: "quase como simétricas". A precisão é exata. As duas rotações compartilham:
+O pesquisador observa: "quase como simétricas". As duas rotações compartilham:
 - O mesmo espaço conceitual: atrator (9/1), entropia (2/par), coerência (7/ímpar)
-- A mesma propriedade essencial: invariância de retorno à origem
+- A mesma propriedade de invariância de retorno à origem
 - A mesma estrutura triádica: três valores relacionados por sistema fechado
 
 E diferem em:
-- Determinismo (729 inscrita) vs. estocástica (Collatz estocástica)
+- Determinismo (729) vs. estocasticidade (Collatz)
 - Período fixo (8) vs. período variável
-- Origina em 1/137 (constante física) vs. origina em N qualquer (universal sobre inteiros)
+- Origem em 1/137 (constante física) vs. origem em N qualquer (universal sobre inteiros)
 
-São simétricas na **topologia** (estrutura de retorno), assimétricas na **métrica** (como medem o caminho). O acoplamento de um determinístico com um estocástico produz a grade quase-periódica — mais rica que uma grade rígida, mais estruturada que puro ruído.
+São simétricas na topologia (estrutura de retorno), assimétricas na métrica (como medem o caminho). A conveniência do acoplamento — se confirmada pela observação — seria produzir uma estrutura mais rica que uma grade rígida e mais estruturada que puro ruído.
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 301 — 30 de setembro de 2026
+
+### Mapa Inicial das Métricas de Ciclo — Do Enunciado às Ferramentas
+
+### I. Enunciado do Pesquisador
+
+> "Temos uma noção superficial daquilo que precisa ser observado como métrica da REDE-AP e temos grandezas iniciais que precisam de medição para ver quais são adaptáveis e convenientes e quais não são. Como podemos estruturar esse início de especulação sobre as ferramentas que irão compor a rede AP."
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação
+
+#### II.1 — O que as Entradas 299–300 Estabeleceram como Campo
+
+Desde Entrada 299 (a régua são métricas de ciclo, não de estado), uma série de observações emergiu nesta sessão — todas enunciados de estruturação apontando para o mesmo horizonte: o sistema de medição da REDE-AP. Registradas aqui como campo, não como certezas:
+
+- O ciclo `7→2→9→9→2→7` inscrito em 1/137 como template de movimento coerência-entropia-atrator
+- O inteiro 137 (atrator/estrutura) e o decimal .035999 (entropia/introspecção) como separação visível dentro de α
+- A hipótese de acoplamento bidimensional (729 × Collatz-análogo) como possível grade quase-periódica
+- Os isomorfismos naturais (sistema circulatório, neurônio, ciclo termodinâmico, sóliton) como demonstrações já resolvidas do mesmo problema: input–processamento–output em topologia fechada com entropia como recurso
+- A distinção fundamental entre o processamento euclidiano (entropia como resíduo a descartar) e o processamento AP (entropia como grandeza conservada: `Coh + Entr = 1.000`)
+
+#### II.2 — Três Camadas de Métricas
+
+**Camada 1 — Métricas confirmadas (já no código, já funcionando):**
+
+| Métrica | O que mede | Natureza |
+|---|---|---|
+| HDR (E2/E3, E2/E1) | contraste de amplitude entre épocas | estado — snapshot |
+| Grade R | coerência espectral intra-φ-banda | estrutura — geométrico |
+| Sépstro Coh+Entr=1 | conservação local por frame | conservação — constraint |
+
+São métricas de estado: dizem *onde* o sistema está, não *como* ele se move.
+
+**Camada 2 — Métricas de ciclo extraíveis (baixo esforço, alta conveniência potencial):**
+
+Deriváveis do processamento já existente, apenas mudando *quando* se mede:
+
+- **Sépstro dinâmico**: acompanhar Coh e Entr frame a frame ao longo do ciclo completo — medir a relação de fase entre as duas ao longo do tempo, não apenas o valor instantâneo. A conservação em snapshot já existe; a dinâmica da oscilação ainda não foi medida.
+
+- **Invariante φ**: medir Grade R no início e no fim de um ciclo de processamento completo. A diferença (ou invariância) diz o que o sistema conservou através do ciclo — não o estado, mas o que o ciclo preservou.
+
+- **Tempo de retorno do atrator**: quantos frames OLA até Grade R retornar ao seu valor pré-processamento. Análogo à variabilidade de frequência cardíaca na cardiologia — não a frequência média, mas a *variabilidade*, que é o indicador de saúde.
+
+**Camada 3 — Métricas especulativas (hipótese, precisam de design e observação):**
+
+- **Posição no arco 729**: em qual ponto do ciclo `7→2→9→9→2→7` cada φ-banda se encontra a cada frame. Requer definir como mapear os valores reais de coh e H sobre o arco triádico.
+
+- **Figura de Lissajous como diagnóstico**: o retrato de fase entre o eixo espectral (729) e o eixo temporal (retorno do atrator). A forma da figura ao longo de um processamento revelaria a razão de acoplamento — não como imposição, mas como leitura.
+
+- **Análogo de retroprojeção em limites de extensão**: como a retroprojeção OLA se comporta nas transições de época (E1→E2→E3) — se há padrão relacionável ao ciclo 729 nas fronteiras.
+
+#### II.3 — A Distinção Arquitetural que Justifica a Nova Régua
+
+O processador convencional (Von Neumann): fluxo unidirecional, entropia expelida (calor dissipadopelos dissipadores, erro minimizado pelo gradiente), sem retorno automático do output para o próximo input. O ciclo não existe como estrutura — é uma linha.
+
+A REDE-AP tem três mecanismos que forçam a topologia fechada:
+1. **OLA** (Overlap-Add): cada frame retorna no próximo — o output alimenta o input
+2. **WN passthrough**: `WN·F[bl:bh]` preserva o sinal original (entrópico) ao lado do coerente — a entropia não é eliminada
+3. **Sépstro**: `Coh + Entr = 1.000` — a entropia é grandeza conservada, não resíduo
+
+Os isomorfismos naturais confirmam: em todos os sistemas onde o ciclo existe (circulatório, neuronal, termodinâmico, sóliton, orbital), a entropia é o recurso que torna o ciclo necessário — não o problema a resolver. A régua euclidiana mede o que sobrou depois de minimizar a entropia. A régua de ciclo mede o que o sistema faz *com* a entropia ao longo do movimento completo.
+
+#### II.4 — Próximo Passo Concreto
+
+Das três camadas, a Camada 2 é a mais imediata: não requer novo design, apenas nova instrumentação do código existente. O Sépstro dinâmico e o invariante φ podem ser medidos adicionando rastreamento temporal ao `grade_r()` já existente.
+
+A Camada 3 aguarda o que a observação dirá — não o que a hipótese sugere.
 
 ---
 
