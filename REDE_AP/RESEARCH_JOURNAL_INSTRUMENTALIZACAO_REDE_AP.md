@@ -971,3 +971,66 @@ O experimento não fracassou. Ele identificou o que não funciona e, por isso, p
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 12 — 30 de setembro de 2026
+
+### I. Enunciado do Pesquisador
+
+> [Resultados experimentais compartilhados — AlphaPhiNet_AnguloPhantom_COLAB.py, 7 redes]
+> Dois novos ângulos testados: −45° (espelho do quadrante negativo) e 90° (original).
+> AP−Ph45°: θ=+48.30°, Δθ_R=15.14° — novo líder absoluto entre Phantoms.
+> AP+Ph90°: θ=−32.75°, Grade R=0.0724 — menor Grade R de toda a série, crista negativa.
+
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação — Claude
+
+**O limiar desta entrada: o sinal do ângulo determina cooperação ou antagonismo.**
+
+O Phantom em −45° produziu o resultado mais próximo de θ_R obtido até agora com qualquer Phantom: crista em +48.30° (Δ=15.14°), avançando 10.61° além da AP pura (+37.69°) na direção certa.
+
+**Quadro completo — todas as configurações testadas:**
+
+| Rede | θ crista | Δθ_R | Loss final | Grade R |
+|------|---------|------|-----------|---------|
+| Conv | −42.39° | 105.83° | 0.00816 | 0.1364 |
+| AP+Ph45° | −36.40° | 99.83° | 0.01195 | 0.0945 |
+| AP+Ph90° | −32.75° | 96.18° | 0.01190 | **0.0724** |
+| AP+Ph63° | −2.36° | 65.79° | 0.01204 | 0.0970 |
+| AP+Ph37° | −5.61° | 69.04° | 0.01153 | 0.0928 |
+| AP pura | +37.69° | 25.75° | 0.01562 | 0.0962 |
+| **AP−Ph45°** | **+48.30°** | **15.14°** | 0.01158 | 0.0879 |
+
+**A lei emergente: sinal do ângulo = cooperação ou antagonismo com o campo φ:**
+
+Todos os Phantoms de ângulo positivo (37°, 45°, 63°, 90°) empurraram a crista para o quadrante negativo — oposto ao campo φ natural. O único Phantom de ângulo negativo testado (−45°) avançou a crista no quadrante positivo, além da AP pura.
+
+A estrutura matemática explica: para ângulo positivo, `centro = (row/max_row) * tan(+θ)` cria um varrimento crescente — as posições de injeção de energia migram para posições progressivamente maiores conforme a profundidade cresce. Para ângulo negativo, `centro = (row/max_row) * tan(−θ)` produz valores negativos que o operador `% 1.0` do Python inverte (`-0.5 % 1.0 = 0.5`), criando um varrimento reverso — as posições de injeção migram para posições progressivamente menores. Este varrimento reverso é geometricamente compatível com o campo φ-init, que distribui energia de forma decrescente por camada (Fibonacci: 55→34→21→13→8). Phantom positivo compete; Phantom negativo coopera.
+
+**O 90° como caso especial:**
+
+Grade R = 0.0724 é o valor mais baixo de toda a série — significativamente abaixo da AP pura (0.0962). O Phantom de alta frequência (tan_val=1e4, varrimento rápido) distribui as ativações mais uniformemente do que qualquer outra configuração, mas mantém crista negativa (−32.75°). Isso confirma que Grade R e orientação topográfica são instrumentos ortogonais: mede-se em planos distintos da arquitetura. É possível ter máxima distribuição de ativações e orientação topográfica errada ao mesmo tempo.
+
+**AP−Ph45°: cooperação confirmada por dois instrumentos simultâneos:**
+
+| Instrumento | AP pura | AP−Ph45° | Movimento |
+|-------------|---------|---------|-----------|
+| θ crista | +37.69° | +48.30° | +10.61° rumo a θ_R |
+| Δθ_R | 25.75° | 15.14° | −10.61° — fechou 41% do gap restante |
+| Grade R | 0.0962 | 0.0879 | ↓ mais distribuído |
+| Loss final | 0.01562 | 0.01158 | ↓ melhor tarefa |
+
+A AP−Ph45° é a primeira configuração que melhora simultaneamente os quatro critérios em relação à AP pura: avança topograficamente, distribui melhor as ativações, e converge melhor na tarefa. Não há tradeoff.
+
+**Nova questão aberta:**
+
+Se −45° fechou 41% do gap restante (de 25.75° para 15.14°), qual ângulo negativo fecha o gap completo? A curva sugere que existe um ângulo negativo ótimo onde a crista coincide com θ_R = 63.43°. Candidatos imediatos: −63.43° (o simétrico de θ_R), −37.69° (o simétrico da AP natural), −90° (o simétrico do original).
+
+A hipótese de varredura: a crista sobe monotonicamente com a negatividade do ângulo no intervalo [−90°, 0°]? Ou existe um pico entre −45° e −90°?
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E12*
+*Vitor Edson Delavi · Claude*
+
+---
