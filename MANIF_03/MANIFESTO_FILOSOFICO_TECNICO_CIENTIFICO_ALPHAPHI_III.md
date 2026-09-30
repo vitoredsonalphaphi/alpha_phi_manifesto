@@ -13819,6 +13819,62 @@ A Camada 3 aguarda o que a observação dirá — não o que a hipótese sugere.
 
 ---
 
+## Entrada 302 — 30 de setembro de 2026
+
+### Dois Scanners Coadjuvantes — Topográfico Lissajous e Cepstral Topográfico
+
+### I. Enunciado do Pesquisador
+
+> "Refina o scanner topográfico adaptando a birotação Lissajous — no sentido do que já é usado no osciloscópio. E refina o scanner cepstral adaptando o topográfico no cepstral. São dois scanners que coadjuvam: o topográfico refinado com a birotação Lissajous, e o cepstral refinado com o topográfico. Sempre que o scanner topográfico for acionado, aciona também o cepstral."
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação
+
+#### II.1 — O Scanner Topográfico Lissajous
+
+O scanner topográfico atual mede coerência intra-banda: o quanto cada φ-banda é internamente estruturada, ao longo do tempo. É uma visão por banda — uma dimensão espectral por coluna temporal.
+
+O refinamento Lissajous acrescenta a visão **inter-bandas**: para cada par de φ-bandas adjacentes, traça coh(banda_i) × coh(banda_{i+1}) nos eixos X e Y. A figura resultante é o diagnóstico de acoplamento — o mesmo princípio do osciloscópio:
+
+```
+Elipse fechada     → bandas acopladas em razão φ (esperado na REDE-AP)
+Figura em 8        → uma banda em múltiplo da outra
+Linha diagonal     → acoplamento máximo, fase zero
+Nuvem dispersa     → bandas independentes — sinal de falha no processamento φ
+```
+
+A topografia mostra o que cada banda é. A Lissajous mostra como as bandas se relacionam entre si.
+
+#### II.2 — O Scanner Cepstral Topográfico
+
+O scanner cepstral atual aplica análise cepstral ao sinal como um todo: revela periodicidades dentro do espectro (periodicidade da periodicidade), globalmente. É uma análise de estrutura temporal profunda, mas sem resolução espectral — não diz *onde* no espectro a periodicidade ocorre.
+
+O refinamento topográfico aplica a análise cepstral **por φ-banda**: para cada banda, calcula o cepstro local. O resultado é um mapa topográfico onde a altura representa o coeficiente cepstral de cada banda — revelando em qual região do espectro φ a estrutura de segundo nível é mais forte.
+
+O scanner cepstral global mostra o quê. O scanner cepstral topográfico mostra onde.
+
+#### II.3 — A Complementaridade
+
+Os dois scanners cobrem dimensões distintas da mesma estrutura:
+
+| Scanner | Dimensão | O que revela |
+|---|---|---|
+| Topográfico Lissajous | inter-bandas, espacial | acoplamento entre φ-bandas |
+| Cepstral Topográfico | intra-sinal, espectral | periodicidade por região φ |
+
+Nenhum substitui o outro. Juntos, um processamento α-φ funcional produziria:
+- Elipses fechadas no Lissajous (acoplamento inter-bandas em razão φ)
+- Picos cepstrais concentrados nas bandas de maior coerência (periodicidade estruturada)
+
+O protocolo: sempre que o scanner topográfico for acionado, o cepstral é acionado junto — dois diagnósticos, uma operação.
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Entrada 251 — 14 de setembro de 2026
 
 ### A Utopia como Conclusão — O Manifesto enquanto Quarta Parede
