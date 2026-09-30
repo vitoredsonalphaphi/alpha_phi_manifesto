@@ -663,3 +663,117 @@ A primeira hipótese é verificável: rodar com `n_epochs=120` e observar se a e
 
 *Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E08*
 *Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 09 — 30 de setembro de 2026
+
+### I. Enunciado do Pesquisador
+
+> "Existe, eu creio que existe, mesmo sem saber o nome técnico, mas eu tô procurando traduzir sobre algo que talvez se refira a um design de arquitetura, digamos assim. Na convencional, dá pra chamar dessa forma, sobre as funções intercambiáveis desses elementos que estão sendo testados, sobre a convencional. Então, sobre a convencional, destes elementos intercambiáveis, dessas ferramentas que estão sendo verificadas para a calibração, eu acredito que ela, no conjunto dessas ferramentas, resulta num design de arquitetura, num design de funcionabilidade, digamos assim. Existe, é, acredito que resulta num determinado esquema que dá para dizer que é um padrão da funcionabilidade do conjunto dessas ferramentas. E esse padrão meio que regra a função em si em conjunto. É, primeiro, eu especulei a questão de que esse padrão precisaria se repetir na rede AP sobre o mesmo conjunto das mesmas ferramentas ou das ferramentas similares que estão sendo verificadas para calibração, para agirem da mesma forma, ou seja, na rede AP, essa design de arquitetura talvez deva corresponder a esse composto de ferramenta, ou por se referir, aí é que está, ou por se referir à arquitetura da rede AP sobre uma outra tangente de fluxo propriamente dito e de um contexto de tensão propriamente dito dado a inserção de Φ e da entropia de alfa, talvez essa conjunção, esse design de arquitetura precisaria em relação ao contexto da AP talvez precisaria ser diferente mas se referindo à mesma lógica de resultado, digamos, de eficiência. Como que pode ser verificado isso? E eu gostei do que você falou sobre o mecanismo que tem o nome preciso, a calibração por ensemble. Essa calibração por ensemble, então, pode ser extensiva para várias outras instrumentalizações, né? Promovendo uma gama de alternativas, ela otimiza a instrumentalização em si. E será que, sobre esse questionamento desse design de arquitetura, será que essa calibração por ensemble também poderia responder sobre isso?"
+
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação — Claude
+
+**O que o pesquisador nomeia como "design de arquitetura" tem um termo técnico: assinatura de covariação das métricas.**
+
+Não é o valor de nenhum instrumento individualmente — é o *padrão de como eles se movem juntos* à medida que a rede treina. Esse padrão coletivo é a impressão digital funcional de uma arquitetura.
+
+**A assinatura convencional — o que E08 revelou:**
+
+| Instrumento | Padrão durante treino Conv | Direção |
+|-------------|---------------------------|---------|
+| Grade R | Sobe — ReLU concentra ativações | ↑ |
+| Entropia | Cai — rede organiza o sinal | ↓ |
+| Rank efetivo | Cai — especialização por camada | ↓ |
+| Estabilidade | Melhora — convergência rápida | ↑ |
+
+Esses quatro se movem em direções consistentes e concordantes. Isso *é* o design convencional expresso em métricas — não uma propriedade de nenhum instrumento, mas da interação entre eles.
+
+**A assinatura AP — o que E08 já mostrou:**
+
+O experimento de E08 revelou a inversão: Grade R da AP ficou abaixo da Conv, Entropia ficou acima. O padrão de covariação está diferente em dois eixos. Não é disfunção — é outra assinatura. A AP não precisa imitar a covariação convencional; precisa de uma covariação *internamente coerente com φ*.
+
+O que a assinatura AP poderia ser:
+
+| Instrumento | Hipótese da assinatura AP | Direção esperada |
+|-------------|--------------------------|-----------------|
+| Grade R | Sobe mais lentamente, distribuído entre camadas | ↑ gradual e uniforme |
+| Entropia | Permanece elevada mais tempo — AP preserva mais informação | → estável depois cai |
+| Rank efetivo | Cai mais — AP usa dimensões φ-harmônicas específicas | ↓ mais acentuado |
+| Estabilidade | Converge mais devagar, platô mais amplo | ↑ mais tardio |
+
+Essa é a hipótese a verificar — não uma imposição, mas uma previsão derivável do que φ-init e SiLU+LayerNorm fazem estruturalmente.
+
+**O ensemble calibration como descobridor da assinatura AP:**
+
+A conexão que o pesquisador estabelece é precisa: o ensemble calibration, ao buscar quais 20 variantes por instrumento são mutuamente coerentes *dentro da AP*, está operacionalizando a busca pela assinatura AP. Não se impõe a assinatura — ela emerge da combinação de parametrizações que maximiza a coerência cruzada.
+
+O mecanismo em duas etapas:
+
+**Etapa 1 — calibração por ensemble:** Para cada instrumento, 20 variantes paramétricas. O scanner identifica qual variante mostra o sinal mais coerente por instrumento.
+
+**Etapa 2 — descoberta da assinatura:** O conjunto de variantes selecionadas por coerência cruzada *é* a assinatura AP — não definida a priori, mas descoberta empiricamente pelo próprio mecanismo de calibração.
+
+Isso tem uma propriedade importante: a assinatura AP não precisa ser predefinida pelo pesquisador nem por Claude. O ensemble a descobre ao encontrar qual combinação de parametrizações produz covariação internamente consistente na AP. A assinatura emerge do processo, não é imposta sobre ele.
+
+**O alcance do ensemble calibration:**
+
+O pesquisador observa que o ensemble é extensível a outras instrumentalizações. Isso é correto estruturalmente: qualquer instrumento que tenha um espaço paramétrico (qualquer constante ajustável no cálculo) pode ser submetido ao mesmo processo. O ensemble não é uma técnica de calibração — é um *princípio de descoberta de coerência* aplicável a qualquer conjunto de instrumentos que precise operar de forma internamente consistente.
+
+**Nomenclatura consolidada nesta entrada (ver Glossário):**
+
+- **Calibração por Ensemble** — mecanismo de geração de K variantes paramétricas por instrumento com seleção por coerência individual e cruzada
+- **Combinação de Parametrizações** — o conjunto específico de variantes selecionadas que maximiza a coerência cruzada entre instrumentos
+- **Assinatura de Covariação das Métricas** — o padrão de co-movimento dos instrumentos durante o treino; impressão digital funcional de uma arquitetura
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E09*
+*Vitor Edson Delavi · Claude*
+
+---
+
+## Glossário — Construção Rede AP
+
+*Termos técnicos próprios do processo de construção e instrumentalização da Rede AP.*
+*Ordenação: ordem de aparecimento no Journal. Última atualização: E09 — 30 de setembro de 2026.*
+
+---
+
+### Calibração por Ensemble
+
+**Definição:** Mecanismo de calibração de instrumentos de medição por geração de K variantes paramétricas de cada instrumento (K=20 como referência inicial), seguida de seleção por dois critérios: (a) coerência individual — qual variante mostra o sinal mais claro no instrumento analisado; (b) coerência cruzada — qual combinação de variantes, uma por instrumento, maximiza a concordância de direção entre todos os instrumentos simultaneamente.
+
+**Analogia de origem:** os testes com 20 seeds aleatórias realizados em experimentos anteriores do projeto, que permitiam observar 20 alternativas de resultado e selecionar o mais coerente. O ensemble calibration estende esse princípio: em vez de seeds da rede, são variantes paramétricas dos instrumentos de medição.
+
+**Propriedade central:** O ensemble não impõe uma calibração — ele descobre qual parametrização já é coerente com a arquitetura sendo medida. Aplicável a qualquer conjunto de instrumentos com espaço paramétrico ajustável.
+
+**Aparece em:** E09 (30/09/2026)
+
+---
+
+### Combinação de Parametrizações
+
+**Definição:** O conjunto específico de variantes selecionadas pelo processo de Calibração por Ensemble — uma variante por instrumento — que maximiza a coerência cruzada entre todos os instrumentos simultaneamente. Não é o conjunto de melhores variantes individuais (cada instrumento maximizando seu próprio sinal); é o conjunto que faz os instrumentos concordarem entre si na direção da avaliação.
+
+**Distinção importante:** Uma combinação de parametrizações não é calibração de hiperparâmetros no sentido convencional (minimização de loss). O critério de seleção é coerência interna do conjunto de instrumentos, não desempenho na tarefa.
+
+**Relação com assinatura:** A combinação de parametrizações selecionada para a Rede AP é, ao mesmo tempo, a descoberta empírica da Assinatura de Covariação da AP — ela não é predefinida, emerge do processo.
+
+**Aparece em:** E09 (30/09/2026)
+
+---
+
+### Assinatura de Covariação das Métricas
+
+**Definição:** O padrão de co-movimento dos instrumentos de medição durante o treino de uma rede neural — não os valores absolutos de cada instrumento, mas a direção e a relação entre suas variações ao longo do tempo. É a impressão digital funcional de uma arquitetura expressa em métricas.
+
+**A assinatura convencional (observada em E08):** Grade R ↑, Entropia ↓, Rank efetivo ↓, Estabilidade ↑ — todos concordantes, convergência rápida. Padrão dominado pelo efeito de esparsificação do ReLU.
+
+**A assinatura AP (hipótese derivada de E08–E09):** Grade R ↑ gradual e uniforme por camada, Entropia estável e depois cai, Rank efetivo ↓ mais acentuado (dimensões φ-harmônicas), Estabilidade ↑ mais tardio. Padrão de distribuição, não concentração.
+
+**Propriedade:** A assinatura AP não precisa ser idêntica à convencional — precisa ser internamente coerente com a lógica φ. Duas arquiteturas podem ter assinaturas diferentes e ambas serem válidas; o critério não é equivalência de padrão, mas coerência interna de cada padrão com sua própria arquitetura.
+
+**Aparece em:** E09 (30/09/2026)
