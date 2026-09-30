@@ -262,40 +262,52 @@ def scanner(model, nome_rede, cor='ap', n_ent=200, n_grid=55, mostrar=True):
     return angulo, delta
 
 # ══════════════════════════════════════════════════════════════════════════════
-#  TREINO — 5 redes
+#  TREINO — varredura de ângulos negativos
 # ══════════════════════════════════════════════════════════════════════════════
 
 print("═"*62)
-print("  Treinando 7 redes — 120 épocas cada")
+print("  Treinando 10 redes — 120 épocas cada")
 print("═"*62)
 
-print("\n[1/7] Conv (sem Phantom)")
+print("\n[1/10] Conv (sem Phantom)")
 rede_conv = RedeConvencional()
 hist_conv = treinar(rede_conv, nome="Conv   ")
 
-print("\n[2/7] AP (sem Phantom)")
+print("\n[2/10] AP (sem Phantom)")
 rede_ap = RedeAP(phantom_deg=None)
 hist_ap  = treinar(rede_ap, nome="AP     ")
 
-print(f"\n[3/7] AP + Phantom {np.degrees(THETA_R):.2f}° (θ_R — destino direto)")
+print(f"\n[3/10] AP + Phantom {np.degrees(THETA_R):.2f}° (θ_R — destino direto)")
 rede_63 = RedeAP(phantom_deg=np.degrees(THETA_R))
 hist_63  = treinar(rede_63, nome="AP+63° ")
 
-print("\n[4/7] AP + Phantom 45° (atrator intermediário)")
+print("\n[4/10] AP + Phantom 45° (atrator intermediário)")
 rede_45 = RedeAP(phantom_deg=45.0)
 hist_45  = treinar(rede_45, nome="AP+45° ")
 
-print("\n[5/7] AP + Phantom 37.69° (reforço do natural)")
+print("\n[5/10] AP + Phantom 37.69° (reforço do natural)")
 rede_37 = RedeAP(phantom_deg=37.69)
 hist_37  = treinar(rede_37, nome="AP+37° ")
 
-print("\n[6/7] AP + Phantom −45° (espelho — quadrante negativo)")
+print("\n[6/10] AP + Phantom −45° (espelho — quadrante negativo)")
 rede_m45 = RedeAP(phantom_deg=-45.0)
 hist_m45 = treinar(rede_m45, nome="AP-45° ")
 
-print("\n[7/7] AP + Phantom 90° (original — oscilação rápida)")
+print("\n[7/10] AP + Phantom 90° (original — oscilação rápida)")
 rede_90 = RedeAP(phantom_deg=90.0)
 hist_90  = treinar(rede_90, nome="AP+90° ")
+
+print("\n[8/10] AP + Phantom −63.43° (simétrico de θ_R)")
+rede_m63 = RedeAP(phantom_deg=-np.degrees(THETA_R))
+hist_m63 = treinar(rede_m63, nome="AP-63° ")
+
+print("\n[9/10] AP + Phantom −37.69° (simétrico do natural)")
+rede_m37 = RedeAP(phantom_deg=-37.69)
+hist_m37 = treinar(rede_m37, nome="AP-37° ")
+
+print("\n[10/10] AP + Phantom −90° (espelho do original)")
+rede_m90 = RedeAP(phantom_deg=-90.0)
+hist_m90 = treinar(rede_m90, nome="AP-90° ")
 
 # ── Métricas ──────────────────────────────────────────────────────────────────
 
@@ -307,6 +319,9 @@ redes = [
     (rede_37,   hist_37,   "AP+Ph37°"),
     (rede_m45,  hist_m45,  "AP−Ph45°"),
     (rede_90,   hist_90,   "AP+Ph90°"),
+    (rede_m63,  hist_m63,  "AP−Ph63°"),
+    (rede_m37,  hist_m37,  "AP−Ph37°"),
+    (rede_m90,  hist_m90,  "AP−Ph90°"),
 ]
 meds = [(nome, medir(r, ld_va), hist) for r, hist, nome in redes]
 
@@ -329,7 +344,7 @@ print("═"*62)
 print(f"  θ_R referência = {np.degrees(THETA_R):.2f}°\n")
 
 resultados_scan = []
-for (r, hist, nome), cor in zip(redes, ['conv','ap','ap','ap','ap','ap','ap']):
+for (r, hist, nome), cor in zip(redes, ['conv','ap','ap','ap','ap','ap','ap','ap','ap','ap']):
     ang, dlt = scanner(r, nome, cor=cor, mostrar=True)
     resultados_scan.append((nome, ang, dlt))
 
