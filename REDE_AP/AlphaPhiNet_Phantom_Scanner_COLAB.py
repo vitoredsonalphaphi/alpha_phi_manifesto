@@ -306,8 +306,11 @@ def scanner_topografico(model, nome_rede, n_entradas=200, n_grid=55,
             _ = model(inp)
     for h in hooks_s: h.remove()
 
-    # Monta mapa (camadas × n_grid)
-    nomes_camadas = list(ativacoes_scan.keys())
+    # Monta mapa (camadas × n_grid) — ignora camadas com dim=1 (head)
+    nomes_camadas = [
+        n for n in ativacoes_scan.keys()
+        if np.concatenate(ativacoes_scan[n], axis=0).shape[-1] > 1
+    ]
     n_layers = len(nomes_camadas)
     mapa = np.zeros((n_layers, n_grid))
     for lv, nome_c in enumerate(nomes_camadas):
