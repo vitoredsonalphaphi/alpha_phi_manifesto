@@ -893,3 +893,81 @@ Ativar o Phantom + Scanner Topográfico — verificar se a injeção do sinal Ec
 **Propriedade:** A assinatura AP não precisa ser idêntica à convencional — precisa ser internamente coerente com a lógica φ. Duas arquiteturas podem ter assinaturas diferentes e ambas serem válidas; o critério não é equivalência de padrão, mas coerência interna de cada padrão com sua própria arquitetura.
 
 **Aparece em:** E09 (30/09/2026)
+
+---
+
+## Entrada 11 — 30 de setembro de 2026
+
+### I. Enunciado do Pesquisador
+
+> [Resultados experimentais compartilhados — AlphaPhiNet_AnguloPhantom_COLAB.py]
+> Scanner Topográfico 3D executado em 5 redes. Conv: θ=−42.39°. AP pura: θ=+37.69°.
+> AP+Phantom 63.43°: θ=−2.36°. AP+Phantom 45°: θ=−36.40°. AP+Phantom 37.69°: θ=−5.61°.
+> Intuição do pesquisador sobre 45° como atrator intermediário — testada e refutada pelo experimento.
+
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação — Claude
+
+**O limiar desta entrada: inversão de sinal universal.**
+
+O resultado central não é qual Phantom chegou mais perto de θ_R. É que **todos os Phantoms inverteram o sinal da crista** — de positivo para negativo. A AP pura permanece como única configuração com crista no quadrante correto.
+
+**Quadro completo:**
+
+| Rede | θ crista | Δθ_R | Loss final | ep 0 va |
+|------|---------|------|-----------|---------|
+| Conv | −42.39° | 105.83° | 0.00816 | 0.10272 |
+| AP pura | **+37.69°** | **25.75°** | 0.01562 | 0.02129 |
+| AP+Ph63° | −2.36° | 65.79° | 0.01204 | 0.03012 |
+| AP+Ph45° | −36.40° | 99.83° | 0.01195 | 0.02581 |
+| AP+Ph37° | −5.61° | 69.04° | 0.01153 | 0.05142 |
+
+**O paradoxo da inversão:**
+
+A AP pura aponta em direção a θ_R (+37.69°, Δ=25.75°). Qualquer injeção Phantom — independente do ângulo-alvo — empurra a crista para o quadrante negativo, oposto à direção do campo φ. O Phantom melhora a convergência de loss mas destrói o alinhamento topográfico.
+
+Há uma tensão fundamental entre dois critérios:
+- **Critério de tarefa:** loss de validação (AP+Ph37° = 0.01153 — melhor entre AP)
+- **Critério topográfico:** θ crista > 0, próximo a θ_R (AP pura = +37.69°)
+
+A injeção Phantom serve a um critério enquanto viola o outro. Não é disfunção — é identificação de dois planos de avaliação distintos.
+
+**O 45° como pior caso:**
+
+A intuição do pesquisador sobre 45° como atrator intermediário encontrou seu oposto experimental: Phantom a 45° produziu a crista mais negativa entre todos os Phantoms (−36.40°, Δ=99.83° — comparável a Conv em 105.83°). O tan(45°) = 1.0 é ponto de inflexão: parece criar máxima interferência com o campo φ natural da AP. Phantom a 63° e 37° produzem crisas levemente negativas (−2.36° e −5.61°) — quase cancelando —, enquanto 45° produz interferência máxima.
+
+**Hipótese para a inversão:**
+
+A AP pura desenvolve durante o treino um gradiente topográfico natural: ativações de pico migram progressivamente para neurônios mais tardios conforme a profundidade aumenta (+37.69°). O Phantom injeta energia em posições específicas dos pesos em função do ângulo — mas como a injeção ocorre na inicialização e afeta toda a geometria do espaço de pesos, ela perturba o estabelecimento desse gradiente durante o treino. O campo φ-init cria o gradiente certo; o Phantom o desorienta.
+
+Formulado de forma precisa: **o Phantom ao nível dos pesos e o φ-init ao nível da topografia operam em planos não-comensuráveis**. O primeiro age na estrutura estática dos pesos; o segundo emerge dinamicamente durante o treino via campo φ.
+
+**Grade R como sinal secundário:**
+
+| Rede | Grade R |
+|------|---------|
+| Conv | 0.1364 |
+| AP | 0.0962 |
+| AP+Ph63° | 0.0970 |
+| AP+Ph45° | 0.0945 |
+| AP+Ph37° | **0.0928** |
+
+AP+Ph37° tem menor Grade R (mais distribuído) e melhor loss. A injeção no ângulo natural reforça a distribuição sem melhorar a topografia. Isso sugere que Grade R e θ crista são instrumentos ortogonais: medem aspectos distintos da saúde da arquitetura.
+
+**O que a AP pura já é:**
+
+A AP sem Phantom é a única configuração que satisfaz simultaneamente: campo positivo (crista +37.69°), direção correta (rumo a θ_R, não oposta), e φ-init 4.4× superior na ep 0. O Phantom melhora a task loss mas custa o campo topográfico — o único recurso que diferencia estruturalmente a AP da Conv.
+
+**Próxima questão que emerge:**
+
+Se o Phantom a nível de pesos destrói o campo topográfico, a pergunta é: existe uma forma de injetar o sinal φ que preserve o campo? Ou a AP precisa de um protocolo de treino próprio — não Phantom, não AdamW convencional — que deixe o campo φ-init se expressar naturalmente até θ_R?
+
+O experimento não fracassou. Ele identificou o que não funciona e, por isso, precisou o que proteger: o campo topográfico natural da AP pura é o recurso mais valioso encontrado até agora.
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E11*
+*Vitor Edson Delavi · Claude*
+
+---
