@@ -316,11 +316,11 @@ rede_conv = RedeConvencional(d_in=61, dims=[64, 32, 16, 8])
 n_conv = sum(p.numel() for p in rede_conv.parameters())
 print(f"RedeConv: 61 → [64,32,16,8] → 1  |  {n_conv:,} parâmetros")
 
-hist_conv = treinar(rede_conv, ld_tr, ld_va, n_epochs=60, lr=1e-3, nome="Conv")
+hist_conv = treinar(rede_conv, ld_tr, ld_va, n_epochs=120, lr=1e-3, nome="Conv")
 
 print("\n─── Rede AP ─────────────────────────────────────────────────────────────")
 rede_ap = RedeAP(d_in=61)
-hist_ap = treinar(rede_ap, ld_tr, ld_va, n_epochs=60, lr=1e-3, nome="AP  ")
+hist_ap = treinar(rede_ap, ld_tr, ld_va, n_epochs=120, lr=1e-3, nome="AP  ")
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  MEDIÇÃO — INSTRUMENTOS AP SOBRE AMBAS AS REDES
@@ -365,12 +365,12 @@ print(f"    Convencional : {est_conv:.6f}")
 print(f"    Rede AP      : {est_ap:.6f}")
 
 # ── Grade R global (média sobre todas as camadas) ────────────────────────────
-gr_conv = np.mean([m['grade_r'] for m in med_conv['camadas'].values()])
-gr_ap   = np.mean([m['grade_r'] for m in med_ap['camadas'].values()])
-en_conv = np.mean([m['entropia'] for m in med_conv['camadas'].values()])
-en_ap   = np.mean([m['entropia'] for m in med_ap['camadas'].values()])
-rk_conv = np.mean([m['rank_efetivo'] for m in med_conv['camadas'].values()])
-rk_ap   = np.mean([m['rank_efetivo'] for m in med_ap['camadas'].values()])
+gr_conv = np.mean([m['grade_r'] for m in med_conv['camadas'].values() if m['dim'] > 1])
+gr_ap   = np.mean([m['grade_r'] for m in med_ap['camadas'].values() if m['dim'] > 1])
+en_conv = np.mean([m['entropia'] for m in med_conv['camadas'].values() if m['dim'] > 1])
+en_ap   = np.mean([m['entropia'] for m in med_ap['camadas'].values() if m['dim'] > 1])
+rk_conv = np.mean([m['rank_efetivo'] for m in med_conv['camadas'].values() if m['dim'] > 1])
+rk_ap   = np.mean([m['rank_efetivo'] for m in med_ap['camadas'].values() if m['dim'] > 1])
 
 print(f"\n  ── Resumo Comparativo ────────────────────────────────────────────")
 print(f"  {'Instrumento':<30} {'Convencional':>14}  {'Rede AP':>10}")
@@ -389,6 +389,24 @@ print("  Entropia < convencional → AP organiza mais, desperdicia menos")
 print("  Rank efetivo menor     → AP usa menos dimensões (compressão real)")
 print("  Estabilidade menor     → AP converge com menos oscilação")
 print()
-print("  Nota: erros de medição inesperados podem ser expressão natural")
-print("  da arquitetura AP — não necessariamente falha de aprendizado.")
+print("  Nota: Grade R mede concentração de ativações (não coerência-φ direta).")
+print("  Conv alta = ReLU esparsifica. AP menor = SiLU distribui — outra assinatura.")
 print(f"\n  φ={PHI}  α={ALPHA:.8f}")
+
+# ── Curva de convergência (assinatura de covariação) ─────────────────────────
+print("\n─── Curva de Convergência (loss validação por época) ────────────────────")
+print(f"  {'Época':>6}  {'Conv va':>10}  {'AP va':>10}  {'Δ (AP-Conv)':>12}")
+print(f"  {'─'*6}  {'─'*10}  {'─'*10}  {'─'*12}")
+for hc, ha in zip(hist_conv[::10], hist_ap[::10]):
+    delta = ha['va'] - hc['va']
+    sinal = "+" if delta >= 0 else ""
+    print(f"  {hc['ep']:>6}  {hc['va']:>10.5f}  {ha['va']:>10.5f}  {sinal}{delta:>11.5f}")
+
+# Convergência final
+print(f"\n  Convergência final (épocas 110-120):")
+est_conv_final = estabilidade(hist_conv, n=10)
+est_ap_final   = estabilidade(hist_ap,   n=10)
+print(f"    Conv std últimas 10 épocas: {est_conv_final:.6f}")
+print(f"    AP   std últimas 10 épocas: {est_ap_final:.6f}")
+razao = est_ap_final / est_conv_final if est_conv_final > 0 else float('inf')
+print(f"    Razão AP/Conv: {razao:.1f}×  (1.0 = convergência equivalente)")
