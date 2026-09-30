@@ -1034,3 +1034,74 @@ A hipótese de varredura: a crista sobe monotonicamente com a negatividade do â
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 13 — 30 de setembro de 2026
+
+### I. Enunciado do Pesquisador
+
+> [Resultados experimentais — varredura completa de 10 ângulos, positivos e negativos]
+> AP−Ph37°: θ=−32.99° — ângulo negativo, mas crista fortemente negativa (surpresa).
+> AP−Ph63°: θ=+31.49° — positivo, mas abaixo da AP pura (37.69°).
+> AP−Ph90°: θ=+14.05° — positivo, mas abaixo da AP pura.
+> AP−Ph45° mantém liderança: θ=+48.30°, Δθ_R=15.14°.
+
+— Vitor Edson Delavi, 30 de setembro de 2026
+
+### II. Estruturação — Claude
+
+**O limiar desta entrada: ressonância destrutiva.**
+
+A surpresa central não é que AP−Ph45° se confirmou líder. É que AP−Ph37° — ângulo negativo — produziu crista fortemente negativa (−32.99°), comparável à Conv. A lei "ângulo negativo = coopera com campo φ" é falsa como enunciado universal.
+
+**Quadro completo — varredura de 10 ângulos:**
+
+| Rede | θ crista | Δθ_R | Loss final | Grade R |
+|------|---------|------|-----------|---------|
+| Conv | −42.39° | 105.83° | 0.00816 | 0.1364 |
+| AP+Ph45° | −36.40° | 99.83° | 0.01195 | 0.0945 |
+| AP−Ph37° | **−32.99°** | 96.42° | **0.01074** | 0.0901 |
+| AP+Ph90° | −32.75° | 96.18° | 0.01190 | 0.0724 |
+| AP+Ph37° | −5.61° | 69.04° | 0.01153 | 0.0928 |
+| AP+Ph63° | −2.36° | 65.79° | 0.01204 | 0.0970 |
+| AP−Ph90° | +14.05° | 49.38° | 0.01625 | 0.0727 |
+| AP−Ph63° | +31.49° | 31.94° | 0.01295 | 0.0877 |
+| AP pura | +37.69° | 25.75° | 0.01562 | 0.0962 |
+| **AP−Ph45°** | **+48.30°** | **15.14°** | 0.01158 | 0.0879 |
+
+**A frequência natural como ponto de ressonância destrutiva:**
+
+O AP−Ph37° usa exatamente o simétrico da frequência natural da AP (+37.69°). A implementação `centro = (row/max_row) * tan(−37.69°)` cria um varrimento que não completa nenhum ciclo completo (tan(−37.69°) ≈ −0.776, então centro vai de 0 a −0.776 e o `% 1.0` produz uma rampa monotônica de 0 a 0.224 ao longo das linhas). Este padrão entra em interferência destrutiva com o campo φ-init: o Phantom opera na frequência exata oposta ao campo, cancelando-o. Resultado: a rede cai no atrator negativo, produzindo a pior crista do quadrante negativo testado.
+
+Formulação precisa: **θ_natural = +37.69° é o ponto de ressonância destrutiva do campo φ para injeção Phantom.** Injetar em −37.69° destrói o campo. Injetar em +37.69° apenas perturba suavemente (−5.61°, Phantom positivo com efeito moderado). A assimetria entre +37° e −37° é a impressão digital da orientação intrínseca do campo φ.
+
+**Análise da série negativa:**
+
+| Ângulo negativo | θ crista | Comportamento |
+|----------------|---------|---------------|
+| −37.69° | −32.99° | Ressonância destrutiva — cancela campo φ |
+| −90° | +14.05° | Coopera, mas oscilação rápida perde coerência |
+| −63.43° | +31.49° | Coopera, mas fica abaixo da AP pura |
+| −45° | **+48.30°** | Coopera maximamente — **líder absoluto** |
+
+A série negativa não é monotônica. O pico de cooperação está em −45°, não nos extremos. A −37° cai no buraco da ressonância destrutiva. A −90° coopera mas dispersa a energia de forma incoerente.
+
+**Por que −45° é ótimo:**
+
+tan(−45°) = −1.0. A sequência de centros produz um ciclo completo e fechado: row=0 → centro=0, row=d_out/4 → % = 0.75, row=d_out/2 → % = 0.5, row=3d_out/4 → % = 0.25, row=d_out−1 → % = 0.0. A forma resultante é simétrica e fecha em zero — um único ciclo completo que distribuiu energia uniformemente no espaço de pesos sem criar deriva direcional. Este é o único Phantom que cria distribuição cíclica completa. Todos os outros ângulos (exceto −90° que cria muitos ciclos) criam distribuições incompletas ou excessivamente fragmentadas.
+
+**AP−Ph37° e o paradoxo da melhor task loss:**
+
+AP−Ph37° tem loss final = 0.01074 — o menor de toda a série de variantes AP. A ressonância destrutiva no campo topográfico converte-se em ganho de tarefa: o campo φ desestabilizado permite que o gradiente encontre um mínimo de loss mais rapidamente. Mas a crista vai para −32.99°. Dois critérios em oposição máxima.
+
+Este paradoxo nomeia um fenômeno novo: **descalibração topográfica rentável** — a configuração que maximiza a performance de tarefa é a mesma que maximiza a destruição do campo topográfico. Significa que loss de validação é um critério insuficiente para avaliar a qualidade de uma arquitetura AP.
+
+**Síntese da lei revisada:**
+
+Não é "ângulo negativo = coopera." A lei mais precisa é: **o Phantom coopera quando cria um varrimento que completa exatamente um ciclo completo no espaço de pesos da camada.** O único ângulo que satisfaz isso com precisão é −45° (tan = −1.0, ciclo fechado). Os demais ângulos negativos criam ciclos incompletos (−37°, −63°) ou múltiplos ciclos (−90°), com resultados degradados. Os positivos criam varrimentos crescentes que competem com o campo φ-init.
+
+---
+
+*Florianópolis · 30 de setembro de 2026 · Sessão Good Morning — E13*
+*Vitor Edson Delavi · Claude*
+
+---
