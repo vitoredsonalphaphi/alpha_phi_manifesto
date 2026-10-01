@@ -195,48 +195,51 @@ class RedeAP(nn.Module):
             x = F.silu(l(x)); x = n(x)
         return self.head(x)
 
-# ── Campo FI — Precondicionador Riemanniano φ ──────────────────────────────────
+# ── Campo FI — Precondicionador Icosaédrico φ ──────────────────────────────────
 
 class PhiPrecondicionador:
     """
     Aplica a métrica icosaédrica φ aos gradientes antes de cada step.
 
-    G_φ diagonal por camada Fibonacci:
-      proj    → escala SEAL^1 = 1/φ
-      layer i → escala SEAL^(i+2) = 1/φ^(i+2)
+    Cada neurônio (linha da matriz de pesos) é atribuído a uma das três
+    direções icosaédricas pelo índice modular:
+      índice % 3 == 0 → v₁ = coerência   → escala 1.0     (movimento livre)
+      índice % 3 == 1 → v₂ = entropia    → escala SEAL     (movimento moderado)
+      índice % 3 == 2 → v₃ = atrator     → escala SEAL²    (movimento restrito)
 
-    Resultado: gradientes no espaço Riemanniano φ em vez do euclidiano plano.
-    Distâncias no espaço de parâmetros passam a ser medidas pelo tensor G_φ.
+    Resultado: neurônios de coerência adaptam livremente; neurônios de atrator
+    são os mais resistentes à mudança — a estrutura estável do campo.
+
+    Diferença da versão anterior (errada): antes escalava por CAMADA (profundidade
+    Fibonacci), que apenas diminuía o learning rate das camadas profundas sem
+    implementar a geometria icosaédrica. Agora escala por DIREÇÃO (tipo de neurônio).
     """
-    def __init__(self, model):
-        self.model = model
+    def __init__(self):
+        self.escalas = torch.tensor([1.0, SEAL, SEAL**2])  # v₁, v₂, v₃
 
-    def aplicar(self):
-        m = self.model
+    def aplicar(self, model):
         with torch.no_grad():
-            # Camada de projeção (entrada no campo φ)
-            if m.proj.weight.grad is not None:
-                m.proj.weight.grad.mul_(SEAL)
-            if m.proj.bias.grad is not None:
-                m.proj.bias.grad.mul_(SEAL)
-            # Camadas Fibonacci
-            for i, layer in enumerate(m.layers):
-                s = SEAL ** (i + 2)
-                if layer.weight.grad is not None:
-                    layer.weight.grad.mul_(s)
-                if layer.bias.grad is not None:
-                    layer.bias.grad.mul_(s)
-            # LayerNorm: mesma escala da camada correspondente
-            for i, norm in enumerate(m.norms):
-                s = SEAL ** (i + 2)
-                for p in norm.parameters():
-                    if p.grad is not None:
-                        p.grad.mul_(s)
+            for module in model.modules():
+                if not isinstance(module, nn.Linear):
+                    continue
+                if module.weight.grad is None:
+                    continue
+                G = module.weight.grad  # (d_out, d_in)
+                d_out = G.shape[0]
+                # Aplica escala icosaédrica por tipo de neurônio de saída (linha)
+                for tipo in range(3):
+                    idx = torch.arange(tipo, d_out, 3)
+                    if len(idx):
+                        G[idx, :] *= self.escalas[tipo].item()
+                # Bias: mesma escala do tipo de neurônio
+                if module.bias is not None and module.bias.grad is not None:
+                    tipos = torch.arange(d_out) % 3
+                    module.bias.grad.mul_(self.escalas[tipos])
 
 # ── Treinamento ────────────────────────────────────────────────────────────────
 
 def treinar(model, n_epochs=120, lr=1e-3, nome="", campo_fi=False):
-    precond = PhiPrecondicionador(model) if campo_fi else None
+    precond = PhiPrecondicionador() if campo_fi else None
     opt  = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1/PHI**3)
     sch  = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, factor=1/PHI, patience=8)
     crit = nn.MSELoss()
@@ -249,7 +252,7 @@ def treinar(model, n_epochs=120, lr=1e-3, nome="", campo_fi=False):
             loss = crit(model(xb).squeeze(-1), yb)
             loss.backward()
             if precond is not None:
-                precond.aplicar()          # ← campo FI aplicado ANTES do clip
+                precond.aplicar(model)     # ← campo FI icosaédrico ANTES do clip
             torch.nn.utils.clip_grad_norm_(model.parameters(), PHI)
             opt.step()
             tl += loss.item()
