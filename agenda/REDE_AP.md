@@ -14,12 +14,6 @@
   - Observar: a estrutura φ do serial sobrevive à mistura com ruído igual? O PLV subgrave persiste?
   - Responde se o serial tem "peso estrutural" mensurável antes do acoplamento completo
 
-- [ ] **Scanner Geométrico Latente — Grade R**
-  - Código fornecido na sessão de 23/09/2026
-  - 4 painéis: canvas Z(t,log_f) · autocorrelação 2D · mapa de gradiente · histograma polar
-  - Observar: picos em Δt≈inter-cone e Δlog_f≈log₂φ na autocorrelação → Grade R confirmada
-  - Histograma polar: picos a ~60° → simetria romboédrica
-
 ---
 
 ## II. QUESTÕES ESTRUTURAIS DA REDE (Entrada 287, Seção 04)
