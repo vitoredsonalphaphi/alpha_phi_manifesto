@@ -1169,3 +1169,29 @@ Esta é a formalização que ainda não existe na literatura — e que a Rede AP
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## E15 — 01 de outubro de 2026
+### Dois Experimentos Futuros — Campo FI como Inicialização Fractal e Grade R como Assinatura Estrutural
+
+**Experimento Futuro 1 — Geometria Icosaédrica como Regra de Inicialização por Camada**
+
+Em vez de aplicar o campo FI apenas como pré-condicionador do gradiente (implementação atual em `AlphaPhiNet_CampoFI_COLAB.py`), aplicar a mesma geometria icosaédrica como **regra de inicialização dos pesos em cada camada** — fazendo com que cada camada seja uma instância da mesma estrutura fractal, não uma etapa de uma sequência linear de compressão.
+
+Princípio: se o fractal existe porque a mesma regra se aplica recursivamente em cada escala, então a rede AP deve inicializar cada camada com a mesma orientação icosaédrica (PHI_BASES), não apenas corrigir o gradiente durante o treino. A filotaxia aplica 137.5° a cada folha independentemente de qual folha é — a rede deve aplicar a geometria φ a cada camada independentemente de qual camada é.
+
+Hipótese: a inicialização fractal produz um campo topográfico com Grade R desde a época 0, sem precisar emergir pelo treino.
+
+**Experimento Futuro 2 — Grade R como Assinatura Fractal da Regra φ**
+
+A Grade R (romboédrica) que emergiu nos experimentos (seed-invariante, Entrada 282) pode ser a **assinatura fractal da regra φ replicando-se em cada escala de profundidade** — não um artefato de treino, mas uma propriedade estrutural do campo, análoga ao ângulo 137.5° na filotaxia: invariante independentemente da planta, da espécie, do substrato.
+
+Hipótese: assim como o ângulo de ouro é invariante na filotaxia porque é uma propriedade matemática da minimização de interferência entre folhas (não uma escolha da planta), a Grade R é invariante na rede AP porque é uma propriedade matemática da geometria φ operando em profundidade — não uma escolha do treino.
+
+Verificação: aplicar o Scanner Geométrico Latente (agenda item II) à rede inicializada com geometria icosaédrica por camada (Experimento 1) e verificar se a Grade R aparece antes mesmo do treino começar.
+
+---
+
+*Florianópolis · 01 de outubro de 2026 · Sessão Good Morning — E15*
+*Vitor Edson Delavi · Claude*
+
+---
