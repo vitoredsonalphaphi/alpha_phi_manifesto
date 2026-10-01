@@ -72,7 +72,7 @@ print(f"Dados: {len(X_tr)} treino · {len(X_va)} validação · d_in={X.shape[1]
 #  INSTRUMENTOS DE MEDIÇÃO
 # ══════════════════════════════════════════════════════════════════════════════
 
-def grade_r(activations):
+def ativacao_coerencia(activations):
     if activations.shape[-1] <= 1:
         return float('nan')
     mag  = torch.abs(activations) + 1e-10
@@ -124,7 +124,7 @@ def medir_rede(model, loader):
     for nome, ats in ativacoes.items():
         all_at = torch.cat(ats, dim=0)
         resultado['camadas'][nome] = {
-            'grade_r':      grade_r(all_at),
+            'ativ_coh':     ativacao_coerencia(all_at),
             'entropia':     entropia_shannon(all_at),
             'rank_efetivo': rank_efetivo(pesos[nome]),
             'dim':          all_at.shape[-1],
@@ -134,8 +134,8 @@ def medir_rede(model, loader):
 def imprimir_resumo(med_c, med_a, hist_c, hist_a, titulo=""):
     if titulo:
         print(f"\n  ══ {titulo} ══")
-    gr_c = np.mean([m['grade_r'] for m in med_c['camadas'].values() if m['dim'] > 1])
-    gr_a = np.mean([m['grade_r'] for m in med_a['camadas'].values() if m['dim'] > 1])
+    gr_c = np.mean([m['ativ_coh'] for m in med_c['camadas'].values() if m['dim'] > 1])
+    gr_a = np.mean([m['ativ_coh'] for m in med_a['camadas'].values() if m['dim'] > 1])
     en_c = np.mean([m['entropia'] for m in med_c['camadas'].values() if m['dim'] > 1])
     en_a = np.mean([m['entropia'] for m in med_a['camadas'].values() if m['dim'] > 1])
     rk_c = np.mean([m['rank_efetivo'] for m in med_c['camadas'].values() if m['dim'] > 1])
@@ -445,9 +445,9 @@ hist_ap_ph = treinar(rede_ap_ph, ld_tr, ld_va, n_epochs=120, lr=1e-3, nome="AP+P
 med_ap_ph = medir_rede(rede_ap_ph, ld_va)
 
 # Resumo comparativo: Conv / AP / AP+Phantom
-gr_c  = np.mean([m['grade_r'] for m in med_conv['camadas'].values() if m['dim'] > 1])
-gr_a  = np.mean([m['grade_r'] for m in med_ap['camadas'].values() if m['dim'] > 1])
-gr_ap2= np.mean([m['grade_r'] for m in med_ap_ph['camadas'].values() if m['dim'] > 1])
+gr_c  = np.mean([m['ativ_coh'] for m in med_conv['camadas'].values() if m['dim'] > 1])
+gr_a  = np.mean([m['ativ_coh'] for m in med_ap['camadas'].values() if m['dim'] > 1])
+gr_ap2= np.mean([m['ativ_coh'] for m in med_ap_ph['camadas'].values() if m['dim'] > 1])
 en_c  = np.mean([m['entropia'] for m in med_conv['camadas'].values() if m['dim'] > 1])
 en_a  = np.mean([m['entropia'] for m in med_ap['camadas'].values() if m['dim'] > 1])
 en_a2 = np.mean([m['entropia'] for m in med_ap_ph['camadas'].values() if m['dim'] > 1])

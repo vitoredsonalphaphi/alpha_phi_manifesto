@@ -93,10 +93,10 @@ print("─" * 60)
 #  INSTRUMENTOS DE MEDIÇÃO AP
 # ══════════════════════════════════════════════════════════════════════════════
 
-def grade_r(activations: torch.Tensor) -> float:
+def ativacao_coerencia(activations: torch.Tensor) -> float:
     """
-    Grade R de um tensor de ativações (batch × dim).
-    Coerência φ: 1 - H_normalizada das magnitudes absolutas.
+    Coerência de ativação via Sépstro: 1 - H_normalizada das magnitudes absolutas.
+    Mede concentração energética, não geometria Grade R.
     """
     mag  = torch.abs(activations) + 1e-10
     norm = mag / (mag.sum(dim=-1, keepdim=True) + 1e-10)
@@ -173,11 +173,11 @@ def medir_rede(model, loader, device='cpu'):
 
     for nome, ats in ativacoes.items():
         all_at = torch.cat(ats, dim=0)
-        gr = grade_r(all_at)
+        gr = ativacao_coerencia(all_at)
         en = entropia_shannon(all_at)
         rk = rank_efetivo(pesos[nome])
         resultado['camadas'][nome] = {
-            'grade_r':       gr,
+            'ativ_coh':      gr,
             'entropia':      en,
             'rank_efetivo':  rk,
             'dim':           all_at.shape[-1],
@@ -343,13 +343,13 @@ print(f"  {'─'*30} {'─'*5}  {'─'*8}  {'─'*9}  {'─'*9}")
 print("  [CONVENCIONAL]")
 for nome, m in med_conv['camadas'].items():
     print(f"  {nome:<30} {m['dim']:>5}  "
-          f"{m['grade_r']:>8.4f}  {m['entropia']:>9.4f}  "
+          f"{m['ativ_coh']:>8.4f}  {m['entropia']:>9.4f}  "
           f"{m['rank_efetivo']:>9.2f}")
 
 print("  [REDE AP]")
 for nome, m in med_ap['camadas'].items():
     print(f"  {nome:<30} {m['dim']:>5}  "
-          f"{m['grade_r']:>8.4f}  {m['entropia']:>9.4f}  "
+          f"{m['ativ_coh']:>8.4f}  {m['entropia']:>9.4f}  "
           f"{m['rank_efetivo']:>9.2f}")
 
 # ── Estabilidade do treino (variação da loss nos últimos 10 ciclos) ──────────
@@ -364,9 +364,9 @@ print(f"\n  Estabilidade (std loss últimos 10 ciclos):")
 print(f"    Convencional : {est_conv:.6f}")
 print(f"    Rede AP      : {est_ap:.6f}")
 
-# ── Grade R global (média sobre todas as camadas) ────────────────────────────
-gr_conv = np.mean([m['grade_r'] for m in med_conv['camadas'].values() if m['dim'] > 1])
-gr_ap   = np.mean([m['grade_r'] for m in med_ap['camadas'].values() if m['dim'] > 1])
+# ── Coerência de ativação global (média sobre todas as camadas) ───────────────
+gr_conv = np.mean([m['ativ_coh'] for m in med_conv['camadas'].values() if m['dim'] > 1])
+gr_ap   = np.mean([m['ativ_coh'] for m in med_ap['camadas'].values() if m['dim'] > 1])
 en_conv = np.mean([m['entropia'] for m in med_conv['camadas'].values() if m['dim'] > 1])
 en_ap   = np.mean([m['entropia'] for m in med_ap['camadas'].values() if m['dim'] > 1])
 rk_conv = np.mean([m['rank_efetivo'] for m in med_conv['camadas'].values() if m['dim'] > 1])

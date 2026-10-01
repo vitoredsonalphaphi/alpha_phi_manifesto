@@ -64,7 +64,7 @@ print(f"Dados: 640 treino · 160 validação · d_in=61\n")
 
 # ── Instrumentos ──────────────────────────────────────────────────────────────
 
-def grade_r(act):
+def ativacao_coerencia(act):
     if act.shape[-1] <= 1: return float('nan')
     mag  = torch.abs(act) + 1e-10
     norm = torch.clamp(mag / mag.sum(dim=-1, keepdim=True), 1e-10, 1.0)
@@ -92,12 +92,12 @@ def medir(model, loader):
     res = {'loss': loss_t / max(nb, 1), 'gr': {}}
     for n, ats in ativ.items():
         a = torch.cat(ats, dim=0)
-        res['gr'][n] = {'grade_r': grade_r(a), 'dim': a.shape[-1]}
+        res['gr'][n] = {'ativ_coh': ativacao_coerencia(a), 'dim': a.shape[-1]}
     return res
 
 def gr_medio(med):
-    vals = [v['grade_r'] for v in med['gr'].values()
-            if v['dim'] > 1 and not np.isnan(v['grade_r'])]
+    vals = [v['ativ_coh'] for v in med['gr'].values()
+            if v['dim'] > 1 and not np.isnan(v['ativ_coh'])]
     return float(np.mean(vals)) if vals else float('nan')
 
 # ── Redes ─────────────────────────────────────────────────────────────────────
