@@ -105,6 +105,23 @@
   - Separação explícita ALPHA_INTEIRO / ALPHA_CONSTANTE já justificada no arquivo
   - Candidato a capítulo arXiv — integrar com resultados experimentais da rede
 
+- [ ] **Arquétipos como parâmetros estruturais — isomorfismo com AP** *(01/10/2026)*
+  - A filosofia AP já está pronta como **arquétipo** — modelo pré-existente que a rede segue
+  - Tradições relevantes e seus isomorfismos com AP:
+
+  | Tradição | Mecânica | Parâmetro | Isomorfismo AP |
+  |---|---|---|---|
+  | Jung (individuação) | ego↔Self como tensão motora | Shadow integrado (entropia→recurso) | α↔φ como gradiente; entropia como recurso |
+  | Thom (Catástrofes) | 7 arquetipos topológicos; bifurcação na superfície | dobra (fold) = salto entre estados | Sépstro Coh+Entr=1 é superfície de catástrofe |
+  | Bohm (ordem implicada) | desdobramento centro→superfície→ambiente | implicado/explicado | r=0→r=1→r>1 (modelo espacial AP) |
+  | Eliade (eterno retorno) | re-encenação periódica = recalibração | axis mundi = âncora central | α no centro; ciclo de época como re-encenação |
+
+  - **Parâmetros candidatos para arquitetura:**
+    - Ciclo de retorno ao centro por época (não progressão linear — re-encenação eliadiana)
+    - Gradiente α↔φ como tensor de tensão no treino (análogo à tensão ego↔Self de Jung)
+    - Superfície de catástrofe como critério de transição de estado no Sépstro (Thom)
+  - **Quando desenvolver:** ao formalizar a mecânica do ciclo de treino (Seção II item de injeção)
+
 ---
 
 ## V. ACOPLAMENTO MULTI-SUBSTRATO (hipótese universalidade)
