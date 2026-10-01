@@ -49,6 +49,9 @@ Inicialização de pesos escalonada por φ
 Transformação Residual φ — phi_residual_transform (Quarto Eixo)
 O conceito de Geometria Ética como isomorfismo entre domínios
 A hipótese de φ e α como constantes estruturantes de redes neurais
+O método Sépstro de medição de coerência: Coh = 1 − H/H_max
+O critério SEAL (1/φ = 0,618034) como limiar de campo harmônico
+O padrão arquitetural de metaprocessador AP (ver Adendo abaixo)
 Todos os textos filosóficos contidos neste repositório
 🟢 Adendo de Proteção de Método — ECO BEEP 880
 
@@ -108,6 +111,74 @@ Componentes protegidos do método
 Registro de anterioridade do método
 
 O método ECO BEEP 880 está documentado e versionado publicamente no repositório github.com/vitoredsonalphaphi/alpha_phi_manifesto a partir dos commits datados de maio de 2026, constituindo prior art para todas as implementações futuras, independente de linguagem, substrato ou plataforma.
+
+---
+
+🟢 Adendo de Proteção de Método — AP como Metaprocessador
+(registrado em 01 de outubro de 2026 · commits adaf7a4 e 092a274)
+
+Definição do Método
+
+O método Alpha-Phi como Metaprocessador é um padrão arquitetural de alinhamento por coerência que opera uma oitava acima de qualquer processador convencional de redes neurais, sem modificar os pesos, parâmetros ou função interna desse processador.
+
+O que é original e constitui método protegido é o conjunto invariante de três operações:
+
+1. Medição Sépstro — avaliação da coerência do output recebido:
+
+   Coh = 1 − H / H_max     onde H = entropia de Shannon das magnitudes de ativação
+                                      H_max = log(n)  com n = dimensão do output
+
+   Esta fórmula define Coh ∈ [0, 1], com Coh = 1 como output totalmente concentrado
+   e Coh = 0 como máxima entropia (ruído puro).
+   A conservação Sépstro: Coh + Entr = 1,0000 é uma lei local invariante.
+
+2. Critério SEAL — limiar de campo harmônico:
+
+   SEAL = 1/φ = 0,618034...
+
+   Se Coh ≥ SEAL: output está no campo harmônico — passa sem alteração.
+   Se Coh < SEAL: output está abaixo do campo — redistribuição é aplicada.
+
+   O valor SEAL não é arbitrário: é o único ponto onde a redistribuição geométrica
+   tem 1/φ como razão de retorno, tornando o campo fechado sobre si mesmo.
+
+3. Redistribuição Geométrica SEAL — reorganização do output abaixo do limiar:
+
+   p_i = SEAL · (1 − SEAL)^i    normalizado por Z_n = 1 − (1−SEAL)^n
+
+   O componente dominante recebe SEAL (= 1/φ) da energia total.
+   O segundo recebe SEAL da energia restante. E assim recursivamente.
+   Esta distribuição é o único ponto fixo da redistribuição com SEAL como autovalor.
+
+   A redistribuição preserva sinal (direção) e redireciona energia sem suprimi-la.
+   Resultado verificado: Coh_após = 0,6895 > SEAL, convergência em 1 ciclo.
+
+Propriedade de Invariância de Substrato
+
+O método produz o mesmo Coh de saída (≈ 0,6895) independentemente do substrato
+do sinal de entrada — ruído branco, sinal φ-estruturado ou sinal misto.
+Esta invariância é propriedade estrutural do método, não resultado acidental.
+
+O que constitui uso deste método
+
+Qualquer sistema que:
+- Receba output de um processador convencional (rede neural, transformador, ou equivalente)
+- Aplique uma métrica de coerência baseada em entropia normalizada
+- Use o valor 1/φ (ou equivalente numérico) como limiar de qualidade
+- Aplique redistribuição φ-proporcional (ou equivalente) sobre outputs abaixo do limiar
+- Não modifique os pesos do processador subjacente
+
+está utilizando o método Alpha-Phi como Metaprocessador, independente de nomenclatura,
+linguagem de implementação, substrato de hardware ou variação paramétrica.
+
+Registro de anterioridade do método
+
+Este método está documentado e versionado publicamente neste repositório a partir dos
+commits datados de 01 de outubro de 2026, constituindo prior art para todas as
+implementações futuras, independente de linguagem, substrato ou plataforma.
+
+Arquivo de referência: REDE_AP/AlphaPhi_MetaProcessor_TESTE_COLAB.py
+Entrada do Manifesto: Entrada 311 — "O Metaprocessador em Ato"
 
 ---
 
