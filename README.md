@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="1775593114753.png" alt="Manifesto Alpha-Phi" width="400">
+</p>
+
+---
+
 **→ Acesso direto aos três Manifestos:**
 [Volume I](MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI.md) · [Volume II](MANIF_02_COMPILADO.md) · [Volume III — ativo](MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) · [Índice completo](MANIFESTOS_ACESSO.md)
 
