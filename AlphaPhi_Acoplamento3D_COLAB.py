@@ -23,6 +23,8 @@
 
 import numpy as np
 import plotly.graph_objects as go
+import plotly.io as pio
+pio.renderers.default = "colab"
 
 PHI   = 1.6180339887
 ALPHA = 1 / 137.035999084
@@ -167,7 +169,7 @@ fig1.update_layout(
 )
 
 print("\n── FIGURA 1: Acoplamento em Dois Planos ──────────────────")
-fig1.show()
+fig1.show(renderer="colab")
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -305,4 +307,4 @@ fig2.update_layout(
 )
 
 print("\n── FIGURA 2: Modelo Radial (r=0 → r<SEAL → r=SEAL) ──────")
-fig2.show()
+fig2.show(renderer="colab")
