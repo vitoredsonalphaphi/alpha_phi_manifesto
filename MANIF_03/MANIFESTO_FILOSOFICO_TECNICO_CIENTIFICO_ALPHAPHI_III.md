@@ -14349,9 +14349,10 @@ A síntese: o método vale **somente se** (a) a antecipação for escrita antes 
 
 Para que esta entrada passe de hipótese de método a resultado:
 
-1. No próximo experimento (testes 1–3 da reestruturação), antes de rodar, Claude registra em commit uma lista de **falhas previstas** — onde a auditoria provavelmente encontrará viés.
+1. No próximo experimento (testes 1–3 da reestruturação), antes de rodar, Claude apresenta ao pesquisador, na conversa, uma lista de **falhas previstas** — onde a auditoria provavelmente encontrará viés.
 2. O experimento é executado; a auditoria adversarial é feita **depois**, sem consultar a lista.
 3. Mede-se a **taxa de antecipação**: fração das falhas encontradas na auditoria que constavam da lista prévia.
+4. Todo o ciclo — previsão, execução, auditoria, síntese — ocorre **antes do commit**. Ao repositório sobem apenas os resultados que passaram pela auditoria e foram considerados fidedignos pelo pesquisador.
 
 Critério de fracasso, declarado agora: se a taxa de antecipação for inferior a 50%, a máquina não consegue prever os próprios vieses de construção com utilidade, e o argumento reverso não se sustenta como método.
 

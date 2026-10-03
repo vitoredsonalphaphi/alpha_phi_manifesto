@@ -49,6 +49,15 @@ qualquer enunciado que sinalize retorno ao projeto.
 
 ---
 
+### Regra de resultados (03/10/2026)
+
+Código experimental e resultados NÃO sobem ao repositório antes do ciclo completo:
+previsão de falhas (na conversa) → execução → auditoria adversarial → síntese.
+Só sobe o que passou pela auditoria e o pesquisador considerou fidedigno.
+Nenhum número entra em documento sem ter sido impresso por código executado na mesma sessão.
+
+---
+
 ### Critério de entrada
 
 Um enunciado merece entrada quando:
