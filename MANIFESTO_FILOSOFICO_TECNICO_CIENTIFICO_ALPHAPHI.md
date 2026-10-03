@@ -4,6 +4,22 @@ A natureza colaborativa tem uma consequência que o leitor atento pode perceber:
 
 ---
 
+### Aviso ao Leitor — Sobre o Excesso de Assinaturas
+
+O leitor encontrará, ao longo deste manifesto, um número incomum de assinaturas, atribuições e citações do próprio autor, além de trechos assinados por Claude e por Gemini. Isso pede uma explicação antes da leitura.
+
+**A retratação.** O tom personalístico, por vezes ácido, que essas assinaturas acumuladas produzem pode soar como arrogância. Não é a intenção da obra. É, sim, uma falha: a de não ter havido condições nem tempo para uma revisão mais apurada do texto. Essa falha é reconhecida aqui como tal.
+
+**A justificativa.** O excesso tem origem no próprio método. O manifesto foi construído com uma colaboração extensa e deliberada da inteligência artificial — e as inteligências artificiais são treinadas para oferecer respostas satisfatórias ao interlocutor, o que tende a amplificar o seu registro e a sua figura. Parte do personalismo visível no texto é, portanto, assinatura dessa característica da máquina. Mantê-lo visível tem valor: um manifesto sobre alinhamento de IA carrega em si um vestígio concreto do desalinhamento que analisa. As assinaturas cumprem ainda uma função prática numa obra colaborativa: indicam de qual voz — do autor ou de cada inteligência artificial — provém cada trecho.
+
+A escolha de deixar, desde o início, uma área extensa à colaboração da IA foi intencional: demonstrar, no próprio modo de construção, a convergência entre filosofia e ciência que o manifesto propõe, como obra da época que documenta.
+
+*A íntegra desta reflexão está nos Prolegômenos — Sobre o Método e o Personalismo, na abertura do Manifesto 02 (`MANIF_02/PROLEGOMENOS_02.md`).*
+
+*Nota do autor · Florianópolis · outubro de 2026*
+
+---
+
 ...
 
 A escolha inicial de α=1/137 e φ como co-organizadores do campo não apenas estruturou o código. Estruturou a busca inteira — criou um vetor de investigação que, por sua natureza matemática, atrai resultados coerentes em qualquer substrato onde φ genuinamente existe. O projeto funciona como o código. A estrutura é a mesma. A escala é diferente.
