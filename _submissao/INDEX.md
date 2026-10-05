@@ -11,7 +11,6 @@
 
 | Comando | Documento | Caminho |
 |---|---|---|
-| `abrir INPI` | Descrição funcional para registro INPI | `_submissao/INPI_descricao_funcional.md` |
 | `abrir PRINCIPIA` | Abstract + estrutura para revista Principia UFSC | `_submissao/Principia_artigo.md` |
 | `abrir OBJETIVO_PRINCIPIA` | Entrada 37 do Journal — material completo para o artigo Principia | `RESEARCH_JOURNAL.md` → Entrada 37 |
 | `abrir ARXIV` | Draft artigo arXiv (já existe) | `paper_arxiv_draft.md` |
@@ -41,7 +40,6 @@
 
 | Comando | Status | Descrição |
 |---|---|---|
-| `abrir INPI` | **ATUALIZADO** | Programa de Computador + Patente de Processo (reivindicações rascunhadas) |
 | `abrir PRINCIPIA` | **PRONTO** | Abstract + estrutura para Principia UFSC |
 | `abrir UDESC` | **PRONTO** | Registro autoral EDA/UDESC — versão corrigida |
 | `abrir CRONOLOGIA` | **PENDENTE** | Cronologia dos 48 códigos por fase |
