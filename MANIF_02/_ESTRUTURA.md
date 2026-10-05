@@ -67,7 +67,7 @@ O que o AlphaPhi propõe construir, testar, submeter e publicar. Não "próximos
 
 **Agenda em aberto do primeiro ciclo:**
 - Paper para arXiv
-- Submissão UFSC / Santa Fe Institute
+- Submissão UFSC / Santa Fe Institute *(rascunho para futuras apresentações — não submetido nem agendado)*
 - Registro INPI — programa de computador
 - Experimento Vale da Estranheza
 

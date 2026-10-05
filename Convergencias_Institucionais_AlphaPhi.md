@@ -21,6 +21,9 @@ Esta convergência não é exclusiva de uma única disciplina. Ela atravessa fil
 ## I. UFSC — Universidade Federal de Santa Catarina
 
 ### 1. Principia — Revista Internacional de Epistemologia
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
+
 **Departamento de Filosofia · desde 1997**  
 https://periodicos.ufsc.br/index.php/principia
 
@@ -184,7 +187,7 @@ Cada uma dessas dimensões tem respaldo em departamentos e publicações identif
 
 1. **Registro literário** — Biblioteca Nacional (federal) — manifesto + código + resultados
 2. **Contato com PPGMUS/UDESC** — proposta de experimento comparativo vinil × digital × campo φ
-3. **Submissão à Principia** — questão epistemológica sobre emergência de β → φ³
+3. **Submissão à Principia** — questão epistemológica sobre emergência de β → φ³ *(rascunho para futuras apresentações — não submetido nem agendado)*
 4. **Contato com ILHA** — caso antropológico documentado
 5. **Exposição CEART** — visualizações do campo harmônico como obra de arte científica
 

@@ -4,6 +4,8 @@
 **Para:** Departamento de Física / Engenharia — CFM ou CTC/UFSC
 **Assunto:** Pré-processamento adaptativo por coerência espectral coletiva
 
+> **Aviso:** este ofício é um rascunho, construído para futuras apresentações. Não constitui submissão oficial nem agendamento junto à UFSC. O texto é mantido como registro da construção do projeto.
+
 ---
 
 Boa tarde,

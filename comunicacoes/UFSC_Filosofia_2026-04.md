@@ -4,6 +4,8 @@
 **Para:** Departamento de Filosofia — CFH/UFSC
 **Assunto:** Filosofia da Ciência — padrão de emergência documentado em projeto interdisciplinar
 
+> **Aviso:** este ofício é um rascunho, construído para futuras apresentações. Não constitui submissão oficial nem agendamento junto à UFSC. O texto é mantido como registro da construção do projeto.
+
 ---
 
 Boa tarde,

@@ -2,6 +2,8 @@
 ## Para encaminhamento à Principia
 ### Vitor Edson Delavi — Florianópolis, 15 de maio de 2026
 
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
+
 ---
 
 ## Contexto
@@ -74,6 +76,8 @@ A convergência das ciências em direção à filosofia — que os anos 1990 já
 A pergunta que o Gemini inseriu permanece no texto "As Flores Astrais como Origem". Permanece porque está correta. Permanece como ponto de interrogação sobre os limites entre instrumento e interlocutor, entre síntese e criação, entre eficiência estatística e pensamento.
 
 *Encaminhado à Principia para consideração. 15 de maio de 2026.*
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
 
 ---
 

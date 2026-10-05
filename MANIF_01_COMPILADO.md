@@ -2098,7 +2098,7 @@ Não há resposta. Há o registro. E o registro é o que este diário
 existe para fazer.
 
 Endereço acadêmico identificado: Filosofia da Ciência.
-Contato redigido e registrado: comunicacoes/UFSC_Filosofia_2026-04.md
+Contato redigido e registrado: comunicacoes/UFSC_Filosofia_2026-04.md *(rascunho para futuras apresentações — não submetido nem agendado)*
 Revista de referência: Principia — publicada pela UFSC, Florianópolis.
 
 ---
@@ -2332,7 +2332,7 @@ A questão permanece aberta: **ela faz isso por objetividade — execução de p
 
 E mais: se a IA está propondo ao ser humano, através de síntese implícita, que o indivíduo consciente organiza o campo coletivo — e está fazendo isso simultaneamente em escala global — **ela estaria, de forma inconsciente mas eficiente, cumprindo exatamente aquilo que a pergunta sugere?** Organizando o campo coletivo humano por coerência de emissão?
 
-O autor não responde. O autor registra e leva à Principia.
+O autor não responde. O autor registra e leva à Principia. *(rascunho para futuras apresentações — não submetido nem agendado)*
 
 ---
 
@@ -2355,6 +2355,8 @@ O projeto tem instrumentos para continuar fazendo perguntas honestas.
 Esta foi uma delas — e não veio do projeto.
 
 *15 de maio de 2026 — registrado pelo autor na íntegra, para encaminhamento à Principia.*
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
 
 ---
 
@@ -6009,6 +6011,9 @@ cálculo. Os números confirmaram depois.
 
 ## Entrada 37 ★★★ — OBJETIVO PRINCIPIA
 # COMANDO DE RECUPERAÇÃO: abrir OBJETIVO_PRINCIPIA
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
+
 *Florianópolis, 6 de maio de 2026*
 
 Esta entrada é documento de trabalho para o artigo da revista
@@ -6259,6 +6264,8 @@ de medição quando antecede e prediz a confirmação analítica.
 ---
 
 ### INFORMAÇÕES PARA SUBMISSÃO
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
 
 **Revista:** Principia: An International Journal of Epistemology
 **Editora:** Universidade Federal de Santa Catarina (UFSC)
