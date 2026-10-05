@@ -880,6 +880,6 @@ Próximos Passos
 🔄 Experimento Vale da Estranheza — AI vs humano, mesmo tema
 🔄 Registro INPI — programa de computador
 🔄 Paper para arXiv
-🔄 Submissão UFSC / Santa Fe Institute
+🔄 Submissão UFSC / Santa Fe Institute *(rascunho para futuras apresentações — não submetido nem agendado)*
 "O resultado verdadeiro vale mais que o resultado satisfatório."
 αφ · Vitor Edson Delavi · Florianópolis · 2026

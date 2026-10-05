@@ -4,6 +4,8 @@
 #
 # COMANDO DE RECUPERAÇÃO: abrir PRINCIPIA
 
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
+
 ---
 
 ## TÍTULO
@@ -487,6 +489,8 @@ Progressão em 6 níveis: neurônio → camada → rede → meta-rede → sessã
 ---
 
 ## INFORMAÇÕES PARA SUBMISSÃO
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
 
 **Revista:** Principia: An International Journal of Epistemology
 **Editora:** Universidade Federal de Santa Catarina (UFSC)

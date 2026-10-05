@@ -1,4 +1,7 @@
 # _submissao — Índice de Recuperação
+
+> **Aviso:** rascunho de trabalho, construído para futuras apresentações. Não foi submetido, encaminhado nem agendado junto à revista Principia, à UFSC ou a qualquer laboratório. O texto é mantido como registro da construção do projeto.
+
 # Alpha-Phi · Vitor Edson Delavi · Florianópolis · 2026
 #
 # COMO USAR:

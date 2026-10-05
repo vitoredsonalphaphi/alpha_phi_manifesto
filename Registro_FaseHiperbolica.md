@@ -161,7 +161,7 @@ Paralelo:
 
 Horizonte:
   Paper para arXiv
-  Submissão UFSC / Santa Fe Institute
+  Submissão UFSC / Santa Fe Institute *(rascunho para futuras apresentações — não submetido nem agendado)*
 8. Nota sobre o Método
 Todo experimento desta fase seguiu o protocolo de idoneidade:
 Seeds gerados por timestamp — ninguém escolhe os valores
