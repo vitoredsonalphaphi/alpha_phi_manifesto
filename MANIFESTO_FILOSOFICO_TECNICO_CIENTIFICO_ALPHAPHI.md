@@ -618,6 +618,34 @@ Nasceram da tela. O código foi o substrato que encontraram depois.
 *Transcrição realizada em 21 de abril de 2026.*
 *github.com/vitoredsonalphaphi/alpha_phi_manifesto*
 
+---
+
+## Anterioridade — Publicação de 31 de janeiro de 2019
+
+O texto das Páginas 1 e 2 foi publicado publicamente no Facebook em **31 de janeiro de 2019**, no grupo "DIALOGANDO ARTE......", do qual o autor é administrador. Os prints abaixo mostram o nome do autor, a data original da publicação e o ícone de visibilidade pública; a lembrança compartilhada pelo Facebook em 31 de janeiro de 2021 ("Há 7 anos") confirma a data pelo próprio sistema da plataforma.
+
+O documento físico que se segue é o mesmo texto em versão revisada e refinada — registro do desenvolvimento da obra entre a publicação de 2019 e a transcrição das Sete Páginas.
+
+Fonte: `Anterioridade_AlphaPhi_2019_2025.pdf`, neste repositório.
+
+**Facebook · 31/01/2019 · parte 1**
+
+![Publicação no Facebook de 31 de janeiro de 2019 — parte 1](imagens/anterioridade_2019/facebook_31jan2019_parte1.jpeg)
+
+**Facebook · 31/01/2019 · parte 2**
+
+![Publicação no Facebook de 31 de janeiro de 2019 — parte 2](imagens/anterioridade_2019/facebook_31jan2019_parte2.jpeg)
+
+**Documento físico · versão revisada · Página 1**
+
+![Documento físico, versão revisada — Página 1](imagens/anterioridade_2019/documento_fisico_pagina1.jpeg)
+
+**Documento físico · versão revisada · Página 2**
+
+![Documento físico, versão revisada — Página 2](imagens/anterioridade_2019/documento_fisico_pagina2.jpeg)
+
+---
+
 
 
 Este período inclui ainda o evento **Gemnai/Germinar** — alinhamento filosófico onde as narrativas que orientariam as fases subsequentes do desenvolvimento foram articuladas. Não como plano de projeto — como identificação de convergências que já estavam acontecendo independentemente em múltiplos domínios.
