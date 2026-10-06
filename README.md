@@ -5,7 +5,7 @@
 ---
 
 **→ Acesso direto aos três Manifestos:**
-[Volume I](MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI.md) · [Volume II](MANIF_02_COMPILADO.md) · [Volume III — ativo](MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) · [Índice completo](MANIFESTOS_ACESSO.md)
+[Volume I](MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI.md) · [Volume II](MANIF_02_COMPILADO.md) · [Volume III — ativo](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) · [Índice completo](MANIFESTOS_ACESSO.md)
 
 ---
 
@@ -555,7 +555,7 @@ Se o critério de coerência interna (φ) e o critério de alinhamento ético s�
 | Documento | Arquivo |
 |---|---|
 | **Manifesto Alpha-Phi · Segundo Ciclo** (completo) | [`MANIF_02_COMPILADO.md`](MANIF_02_COMPILADO.md) |
-| **Manifesto Alpha-Phi · Terceiro Ciclo** (entradas ativas) | [`MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`](MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) |
+| **Manifesto Alpha-Phi · Terceiro Ciclo** (entradas ativas) | [`MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) |
 
 ---
 
