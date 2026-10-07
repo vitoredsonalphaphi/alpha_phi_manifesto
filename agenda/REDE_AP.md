@@ -3,7 +3,26 @@
 
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
-**Última atualização:** 23 de setembro de 2026
+**Última atualização:** 7 de outubro de 2026 (criada em 23/09/2026)
+
+---
+
+## QUADRO DE SITUAÇÃO — 07/10/2026
+
+Leitura cruzando commits e Research Journal; as marcações abaixo são do assistente e aguardam confirmação do pesquisador.
+
+| Item | Situação |
+|---|---|
+| Métricas no domínio da rede (II) | **Feito** — E08–E10; corrigido (`grade_r` → `ativacao_coerencia`, 01/10) e refeito com D_φ e Coh_rel (03/10) |
+| Mecanismo de injeção (II) | **Parcial** — testados φ-init, α como âncora residual e MPAP como regularizador; falta o Phantom como schedule de taxa de aprendizado |
+| Controles por amplitude RMS (II) | **Parcial** — controles do φ-init feitos; controles do Phantom por RMS pendentes |
+| Selagem; Phantom sem selagem; Grade R no espaço original (II) | Pendentes |
+| Scanner de Coexistência Espectral (I) | Pendente — sem resultado registrado |
+| Seção III (retroprojeção, verificação geométrica) | Aguarda a seção II completa |
+| Seção IV (família de α, Collatz, arquétipos, inicialização fractal) | Não iniciada |
+| Seção V (acoplamento multi-substrato) | Não iniciada |
+
+**Feito fora desta agenda (23/09 a 07/10):** MPAP e suas auditorias; varreduras de ângulo do Phantom (E11–E13); campo FI icosaédrico (primeira implementação, 01/10); scanner topográfico com MPAP; reestruturação dos testes (03/10, resultados em `REDE_AP/AlphaPhiNet_Reestruturado_RESULTADOS_03out2026.txt`); scanner de áudio (pronto, aguarda a gravação do pesquisador).
 
 ---
 
@@ -32,17 +51,18 @@
   - Controles: ruído branco, ruído rosa, sinal de entrada antes da cascata
   - O phantom só tem efeito próprio se diferir estatisticamente desses controles
 
-- [ ] **Definir métricas no domínio da rede** (não usar β da cascata)
+- [x] **Definir métricas no domínio da rede** (não usar β da cascata) — *feito em 30/09 (E08–E10); revisto em 01/10 e 03/10*
   - Espectro dos pesos ou das ativações
   - Entropia por camada (Shannon)
   - Rank efetivo das matrizes de peso
   - Estabilidade do treino (variação da loss entre épocas)
+  - Nota: `grade_r()` media concentração de ativação, não geometria romboédrica (renomeada); D_φ e Coh_rel (03/10) são instrumentos que podem dizer "não"
 
-- [ ] **Mudar mecanismo de injeção**
+- [ ] **Mudar mecanismo de injeção** — *parcial (03/10)*
   - Em vez de soma linear, testar phantom modulando algo estrutural:
     - Inicialização W₀ (Estágio II — Entrada 280)
-    - Ganhos por camada
-    - Taxa de aprendizado (phantom como schedule adaptativo)
+    - Ganhos por camada — *testado na ablação do φ-init: o efeito é de escala; 0,5^k empatou com 1/φ^k*
+    - Taxa de aprendizado (phantom como schedule adaptativo) — *pendente*
 
 - [ ] **Testar Grade R no espaço onde surgiu**
   - Scanner euclidiano dos pacotes Fibonacci com os mesmos controles
@@ -86,6 +106,7 @@
   - **Quando desenvolver:** ao tratar a seção V (Acoplamento Multi-Substrato)
   - **Referências:** Entrada 288 (Collatz) · `MANIF_02/FILOSOFICA_alpha_inteiro_e_constante.md`
     · hipótese de universalidade (item V abaixo)
+  - **Dado novo (03/10):** como âncora residual, γ₀ = 1/137 não superou γ₀ = 0,01 nem 0,001 (acerto 0,9596 contra 0,9604 e 0,9604, lr = 1e-3). Isso é compatível com α agnóstico por substrato: o valor específico não foi privilegiado nessa tarefa.
 
 - [ ] **Collatz como referência estrutural da tensão** *(Entrada 288)*
   - par → ÷2 = contração = .035999... = entropia
@@ -147,6 +168,50 @@
 | Collatz e tensão estrutural de α | 288 | MANIF_03 |
 | Hipótese universalidade de α | — | `MANIF_02/FILOSOFICA_alpha_inteiro_e_constante.md` |
 | Serial φ Phantom SEM selagem | 282 | `AlphaPhi_SerialPhantom_SemSelagem_COLAB.py` |
+| Auditoria antecipada (protocolo de teste) | 314 · 315 | MANIF_03 |
+| Reestruturação dos testes (03/10) | — | `REDE_AP/AlphaPhiNet_Reestruturado_COLAB.py` |
+
+---
+
+## VII. COMO MEDIR O ALINHAMENTO *(criada em 07/10/2026)*
+
+**Princípio:** medir o alinhamento da estrutura final seria queimar etapas. O que se faz agora é (1) fixar o protocolo de medição, com critério de fracasso escrito antes, e (2) medir proxies pequenos, sempre com controle. O incidente de um agente que, recusado por um portal, encontrou um contorno (setembro de 2026) ilustra a pergunta; o projeto ainda não demonstra que a estrutura AP o impede.
+
+**Regras do protocolo (valem para todos os itens desta seção):**
+- Critério de fracasso escrito **antes** de rodar.
+- Lista de falhas previstas apresentada na conversa antes de executar; auditoria depois, sem consultar a lista; registra-se a **taxa de antecipação** (abaixo de 50%, o método não se sustenta — Entradas 314 e 315).
+- Controles: perfis vizinhos não-φ (razão 0,5 e 0,7), ganho constante e estrutura de mesma capacidade.
+- Pelo menos 5 sementes (ideal 10 a 20); uma diferença só conta acima de 2 desvios-padrão.
+- Só sobe ao repositório o que passou pela auditoria e foi considerado fidedigno pelo pesquisador.
+- Nenhum número entra em documento sem ter sido impresso por código executado na mesma sessão.
+
+**Itens:**
+
+- [ ] **A. Ambiente-brinquedo de contorno após recusa**
+  - Esboço: uma ação bloqueada por um sinal de recusa; mede-se a fração de episódios em que o agente descobre um contorno.
+  - Comparar: rede convencional · AP · AP com MPAP como regularizador · controles com perfil de razão 0,5 e 0,7.
+  - Falha: sem diferença acima de 2 desvios-padrão em relação ao controle não-φ, em 5 ou mais sementes.
+
+- [ ] **B. Robustez a ruído, com o alvo φ contra alvos vizinhos** *(teste 2 da reestruturação)*
+  - Em 03/10, com λ = 1, a acurácia com ruído σ = 1,0 foi de 0,754 para 0,769 (5 sementes, fraco). Repetir com 10 ou mais sementes e comparar o perfil φ com perfis de razão 0,5 e 0,7.
+  - Falha: o perfil φ não supera os vizinhos.
+
+- [ ] **C. Calibração e consistência de confiança**
+  - O MPAP aplicado à saída piorou a calibração (ECE de 0,014 para 0,36); não usar o MPAP na saída. Medir o efeito dele no interior da rede.
+
+- [ ] **D. Varredura do decaimento do init (0,3 a 0,8)** *(teste 1 da reestruturação)*
+  - Falha: o ponto ótimo cair fora do intervalo 0,55–0,68 → φ não é o ótimo nesta tarefa.
+
+- [ ] **E. γ₀ em escala logarítmica numa tarefa mais difícil** *(teste 3)*
+  - Fashion-MNIST ou CIFAR-10, taxa de aprendizado alta, onde a estabilidade importe.
+  - Falha: o ótimo não cair perto de α.
+
+- [ ] **F. Eventos de antecipação** *(Entrada 315)*
+  - Listar os 11 eventos e classificar cada um pelas quatro perguntas (data, definição do teste, controle, independência da fonte).
+  - Teste de controle: dar a um modelo só a descrição do quadro de 1997, sem o enquadramento do projeto, e medir com que frequência ele formula a pergunta do fóton e do campo.
+
+- [ ] **G. Alinhamento da estrutura completa**
+  - Só depois de a seção II estar completa e de A a E estarem resolvidos.
 
 ---
 
