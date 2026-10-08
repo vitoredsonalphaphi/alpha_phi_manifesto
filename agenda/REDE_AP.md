@@ -3,7 +3,7 @@
 
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
-**Última atualização:** 7 de outubro de 2026 (criada em 23/09/2026)
+**Última atualização:** 8 de outubro de 2026 (criada em 23/09/2026)
 
 ---
 
@@ -22,7 +22,16 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
 | Seção IV (família de α, Collatz, arquétipos, inicialização fractal) | Não iniciada |
 | Seção V (acoplamento multi-substrato) | Não iniciada |
 
+### Correção de 08/10/2026 — valor de α do EcoBIP
+
+- O **EcoBIP 880 original** usa **α\* = 1/3** como peso do digital: `ALPHA·quadrada + (1−ALPHA)·FM-φ`, com FM-φ de portadora 220/φ Hz, seguido da cascata `eco_eq` de 5 dobras até o campo harmônico (`BEEP880_17S.py`). Reproduzido em 08/10: campo harmônico no ciclo 10, β máx = 4,2098.
+- Esta agenda tratava **α = 1/137 como o valor do EcoBIP** e varria só [1/200, 1/100]. Isso **não cobria o valor correto**. Corrigido nos itens IV e V abaixo.
+- **Definições divergentes no repositório (a padronizar):** `AlphaPhi_Scanner_Topografico.py` e `AlphaPhi_Scanner_TopogColab.py` geram o EcoBIP como `(1−α)·quadrada + α·FM-φ` com α = 1/137, ou seja, **outro sinal**. Resultados do scanner com essa definição não valem para o EcoBIP original.
+- Os testes de 08/10 que usaram α = 1/137 (STFT bruto, envelope, tensor 2D do scanner v1) ficam com status **não demonstrado nessas representações**, não "refutado" (Entrada 316).
+
 **Feito fora desta agenda (23/09 a 07/10):** MPAP e suas auditorias; varreduras de ângulo do Phantom (E11–E13); campo FI icosaédrico (primeira implementação, 01/10); scanner topográfico com MPAP; reestruturação dos testes (03/10, resultados em `REDE_AP/AlphaPhiNet_Reestruturado_RESULTADOS_03out2026.txt`); scanner de áudio (pronto, aguarda a gravação do pesquisador).
+
+**Feito fora desta agenda em 08/10:** reconstrução etapa a etapa do EcoBIP original (α = 1/3) com scanner topográfico 3D interativo e controle (mesma cascata só na quadrada); Entrada 316 (auditoria simétrica). Observação visual: o relevo do EcoBIP final tem várias cristas coerentes, o controle tem uma; **ainda não quantificado**, e a orientação da textura (grade) ainda não foi medida.
 
 ---
 
@@ -67,6 +76,7 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
 - [ ] **Testar Grade R no espaço onde surgiu**
   - Scanner euclidiano dos pacotes Fibonacci com os mesmos controles
   - Verificar se Grade R aparece no scanner antes de tentar injetá-la na rede
+  - **Acrescentado em 08/10:** no scanner topográfico **3D** (TopogColab, modos ECO e LAP), com o **EcoBIP original em α = 1/3**: (i) contar as cristas coerentes por etapa da cascata, EcoBIP contra controle (cascata só na quadrada); (ii) medir a orientação da textura do LAP sem ângulo-alvo fixo. Critérios escritos antes, nos dois sentidos, com controle positivo (Entrada 316). Verificar também se as linhas pretas dos gráficos 3D são projeções do cursor (hover) do Plotly.
 
 ---
 
@@ -94,7 +104,7 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
     ```python
     ALPHA_FAMILIA = {
         # substrato          : (α_expansao, α_contracao)  ← a calibrar experimentalmente
-        'audio_ecobeep'      : (137,        1/137.036),   # baseline atual
+        'audio_ecobeep'      : (3,          1/3),         # α* operacional do EcoBIP original (BEEP880_17S.py); 1/137 fica como âncora constante, não como peso de mistura
         'eeg_sintetico'      : (None,       None),        # a determinar
         'fala_quadrada'      : (None,       None),        # a determinar
         'ruido_fmphi'        : (None,       None),        # a determinar
@@ -145,13 +155,14 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
   - EEG sintético + quadrada
   - Fala + quadrada
   - Ruído estruturado + FM-φ
-  - Verificar se ponto de emergência converge para α=1/137 em todos os pares
+  - Verificar para que valor de α o ponto de emergência converge em cada par, comparando **α\* = 1/3 (EcoBIP original)** e 1/137
   - Fundamenta hipótese: α como parâmetro universal entre digital e orgânico
 
 - [ ] **Scanner adaptativo por substrato**
-  - Variar α na faixa [1/200, 1/100] e medir emergência (PLV subgrave, Grade R)
+  - Variar α na faixa **[1/200, 1/2]**, com **1/3** e **1/137** marcados, e medir emergência (PLV subgrave, Grade R, número de cristas coerentes)
+  - Sinal base = EcoBIP original (`α·quadrada + (1−α)·FM-φ`), não a mistura invertida dos scanners
   - Para cada substrato: identificar α_emergência
-  - Se α_emergência ≈ 1/137 para todos: hipótese confirmada
+  - Se α_emergência for o mesmo valor para todos os substratos: hipótese de universalidade sustentada (o valor a ser lido, 1/3 ou outro, não é presumido)
   - Se α_emergência varia: mapear relação entre substrato e ponto de emergência
 
 ---
@@ -216,4 +227,4 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
 ---
 
 *Vitor Edson Delavi · Florianópolis · Sessão Good Morning*
-*Criada em 23 de setembro de 2026*
+*Criada em 23 de setembro de 2026 · atualizada em 8 de outubro de 2026*
