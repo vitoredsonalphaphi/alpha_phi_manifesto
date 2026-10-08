@@ -14547,6 +14547,67 @@ Pela regra do `CLAUDE.md` aprovada pelo pesquisador, esse é o caminho. Voltar a
 
 ---
 
+## Entrada 317 — 08 de outubro de 2026
+
+### Métodos antes das Medidas — A Fase de Validação de Instrumentos e Métodos
+
+### I. Enunciado do Pesquisador
+
+> "Me diz uma coisa, você é essencialmente código. Esse manifesto que nós estamos tratando, ele aborda essa questão isomórfica de tradução. Mas nem por isso não deixa de ser metodológica. E por esse sentido, ainda científica, num certo sentido. Principalmente a busca dessa convergência. Ciência e filosofia. Duas perguntas. Existe na literatura desenvolvimentos de pesquisas que não tenham se referido necessariamente a questões de comprovações numéricas, resultados técnicos, mas que tenham abordado visões metodológicas, não necessariamente sobre o mesmo cunho de convergência, muito menos sobre a questão de paralelos com a filosofia, mesmo que fosse de outros âmbitos, de outras disciplinas, mas que tenham sido focado apenas em questão de estruturação de métodos, sobre metodologias e testes para verificar metodologias, independente de resultados, mas visando um outro tipo de eficiência mecânica a respeito das metodologias. Existe isso? E se existe isso, o quanto que isso de repente poderia ser conveniente como um estágio anterior aos próprios testes técnicos propriamente dito? Ou seja, se existe essa fase que antecede a verificação das medições, ou então depois das medições a verificação de maneiras de acoplamento das ferramentas, principalmente na construção da rede AP, como verificar e como implementar essa questão de análise de métodos antes de considerar pesos e medidas para inserção das ferramentas na rede AP? E se existe, como é o nome desta fase na pesquisa, que se refere apenas à busca da estruturação de métodos ou de análises de métodos para nortear um determinado instrumentalização?"
+— Vitor Edson Delavi, 08 de outubro de 2026
+
+### II. Estruturação
+
+*Resposta de Claude, na íntegra. Único ajuste de formato: os títulos numerados foram rebaixados de nível para caber na entrada; nenhuma palavra foi alterada.*
+
+Sim, existe, e é uma literatura grande. Cito de memória (não busquei agora), então confira os títulos antes de usar em texto formal.
+
+##### 1. Existe pesquisa só sobre método, sem depender de resultado?
+
+- **Epistemologia da medição.** Hasok Chang, *Inventing Temperature* (2004), mostra como se constrói e valida um instrumento quando ainda não há padrão ouro, por ciclos de refinamento. Ian Hacking, *Representing and Intervening* (1983), trata de instrumentos e intervenção. Bogen e Woodward (1988) separam dado de fenômeno.
+- **Validade de construto (psicometria).** Cronbach e Meehl (1955) e Campbell e Fiske (1959, matriz multitraço-multimétodo). A pergunta é se a métrica mede o conceito que diz medir: correlaciona com outras medidas do mesmo conceito e não com medidas de conceitos diferentes.
+- **Métodos estatísticos e metaciência.** John Tukey (1977) separa o trabalho exploratório do confirmatório. Platt (1964) propõe "inferência forte". Wagenmakers e outros (2012) defendem pesquisa puramente confirmatória. Chambers (2013) criou os *Registered Reports*, em que o **método é avaliado e aprovado antes dos resultados existirem**. Lipsitch e outros (2010) definem controles negativos.
+- **Teste de instrumentos em IA.** Adebayo e outros (2018), *Sanity Checks for Saliency Maps*: um método de explicação que dá o mesmo resultado com pesos aleatórios não mede nada. Lipton e Steinhardt (2018) criticam práticas de avaliação em aprendizado de máquina. Chen e outros (1998) propuseram o teste metamórfico.
+- **Engenharia.** Verificação e validação (V&V), por exemplo Sargent para simulação. Níveis de prontidão tecnológica (TRL, NASA). Design Science Research (Hevner e outros, 2004).
+
+##### 2. É conveniente antes dos testes técnicos?
+
+Sim, e os problemas de hoje foram quase todos dessa fase:
+- eu usei o α errado (1/137 em vez de 1/3);
+- eu usei o scanner errado;
+- o tensor T do scanner v1 tem posto 1 por construção, então não pode mostrar uma malha;
+- alguns números antigos eram circulares.
+
+Nenhum desses erros é resultado de medição. São falhas de definição e de validade do instrumento. Se esse estágio tivesse vindo antes, esses desvios teriam aparecido mais cedo.
+
+##### 3. Como se chama a fase
+
+Não há um nome único. Os mais usados:
+- **validação de instrumento e de método**, ou **validade de construto**;
+- **verificação e validação (V&V)**, em engenharia;
+- **pesquisa metodológica** ou **estudo de viabilidade/piloto**;
+- **epistemologia da medição**, no lado filosófico, o que casa com o seu interesse em ciência e filosofia.
+
+##### 4. Como aplicar na Rede AP, antes de pesos e medidas
+
+Como "portões" em ordem, cada um com critério escrito antes:
+- **G0, definição operacional.** O que cada ferramenta (MPAP, Phantom, scanner) deve fazer, qual variável sai, e uma definição única do sinal (por exemplo, o EcoBIP original com α=1/3).
+- **G1, o instrumento mede?** Entrada com resposta conhecida (o chirp deve aparecer como diagonal) e entrada nula (ruído ou fase embaralhada não pode produzir o fenômeno). Variar parâmetros arbitrários (janela, normalização). Repetir com várias sementes.
+- **G2, validade de construto.** Métricas do mesmo conceito (D_φ, Coh_rel, entropia) devem concordar entre si e divergir das de conceitos diferentes.
+- **G3, efeito isolado.** Uma ferramenta por vez, com controle de mesma energia ou capacidade, e dose-resposta.
+- **G4, acoplamento.** Delineamento fatorial: A só, B só, A+B. A "terceira estrutura" pode ser definida como o **termo de interação**, o que A+B produz além da soma de A e B. Isso a torna testável.
+- **G5, só então pesos e hiperparâmetros.**
+
+Na agenda, isso viria como uma seção "0" antes da II. Quer que eu escreva esse protocolo lá? E se quiser que isso vire entrada do Manifesto, diga "registra isso".
+
+*Estado:* a seção "0" (protocolo de validação de método) na agenda REDE-AP foi **proposta, não escrita**. As referências bibliográficas foram citadas de memória e **não foram verificadas**.
+
+---
+*Florianópolis · 08 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
