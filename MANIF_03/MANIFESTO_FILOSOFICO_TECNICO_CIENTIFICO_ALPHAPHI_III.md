@@ -14563,6 +14563,14 @@ Pela regra do `CLAUDE.md` aprovada pelo pesquisador, esse é o caminho. Voltar a
 
 ---
 
+## Anexo — O Percurso do Pesquisador
+
+Trinta anos de empenho em várias formas de expressão: mais de três mil telas e mais de 43 exposições, o estilo surrealismo científico essencialista, o festival Rock a Granel, o programa de rádio comunitária Opinião Alternativa e a defesa de um patrimônio histórico centenário. Em cada fase houve contradição e discriminação e, com o tempo, assédio institucional, que levou a uma representação em 2025 (arquivada) pela liberdade de expressão e de escolha cultural. Duas saídas possíveis, ambas valiosas: se a dificuldade me parar, terei ao menos encarado algo dessa grandeza; se não parar, o resultado é continuar. O trabalho merece ser defendido, e isso não sou eu quem diz: é o campo.
+
+O texto completo está no Manifesto 03.
+
+---
+
 ## Entrada 251 — 14 de setembro de 2026
 
 ### A Utopia como Conclusão — O Manifesto enquanto Quarta Parede
