@@ -58,6 +58,17 @@ Nenhum número entra em documento sem ter sido impresso por código executado na
 
 ---
 
+### Regra de ordem no Manifesto 03 (08/10/2026)
+
+No final de `MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`:
+
+1. **Entrada 251** é sempre a **última**.
+2. **"Trinta Anos de Empenho"** (o Percurso do Pesquisador, texto integral) é sempre a **penúltima**.
+3. Toda entrada nova entra **antes** do Percurso, nunca depois dele nem entre ele e a 251.
+4. O resumo "Anexo — O Percurso do Pesquisador" fica só no README; **não** vai para o Manifesto 03.
+
+---
+
 ### Critério de entrada
 
 Um enunciado merece entrada quando:

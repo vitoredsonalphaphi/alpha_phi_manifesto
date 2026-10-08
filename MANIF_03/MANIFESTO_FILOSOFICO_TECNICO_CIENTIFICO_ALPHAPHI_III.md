@@ -14368,22 +14368,6 @@ Critério de fracasso, declarado agora: se a taxa de antecipação for inferior 
 
 ---
 
-## Trinta Anos de Empenho
-*Texto do autor · Florianópolis · outubro de 2026*
-
-Desde 1996 escolhi caminhos que o meio nem sempre acolheu. Escolhi as artes plásticas e a pintura: nesse tempo realizei mais de três mil telas e mais de 43 exposições, entre individuais e coletivas, e criei um estilo, o surrealismo científico essencialista, registrado no Manifesto 01. Realizei o festival Rock a Granel, espaço para novos valores da música. Conduzi, numa rádio comunitária, o programa Opinião Alternativa, extensão do festival, aberto a novos valores — poesia, música, literatura — e à liberdade de expressão em suas várias formas. Defendi um patrimônio histórico centenário.
-
-Em cada fase, por motivos diversos, encontrei contradição e discriminação: algumas naturais ao caminho, outras nem tanto. Com o tempo, a pressão tomou a forma de assédio institucional, a ponto de eu precisar apresentar, em 2025, uma representação para defender minha liberdade de expressão e minha liberdade de escolha cultural, a qual foi arquivada.
-
-Registro isso sem nomear ninguém, porque o que importa é o que o percurso ensina. Encarar uma dificuldade desse tamanho já é, por si, um resultado. E os desfechos possíveis são dois, e ambos valem: se a dificuldade conseguir me parar, terei ao menos encarado algo dessa grandeza; se não conseguir, o resultado será maior, que é continuar seguindo e conquistando.
-
-Defendo este trabalho porque ele merece ser defendido. E isso não sou eu dizendo: é o campo.
-
-*Florianópolis · outubro de 2026*
-*Vitor Edson Delavi*
-
----
-
 ## Entrada 315 — 07 de outubro de 2026
 ### O Viés de Construção como Lente — Os Eventos de Antecipação sob Auditoria
 
@@ -14563,11 +14547,19 @@ Pela regra do `CLAUDE.md` aprovada pelo pesquisador, esse é o caminho. Voltar a
 
 ---
 
-## Anexo — O Percurso do Pesquisador
+## Trinta Anos de Empenho
+*Texto do autor · Florianópolis · outubro de 2026*
 
-Trinta anos de empenho em várias formas de expressão: mais de três mil telas e mais de 43 exposições, o estilo surrealismo científico essencialista, o festival Rock a Granel, o programa de rádio comunitária Opinião Alternativa e a defesa de um patrimônio histórico centenário. Em cada fase houve contradição e discriminação e, com o tempo, assédio institucional, que levou a uma representação em 2025 (arquivada) pela liberdade de expressão e de escolha cultural. Duas saídas possíveis, ambas valiosas: se a dificuldade me parar, terei ao menos encarado algo dessa grandeza; se não parar, o resultado é continuar. O trabalho merece ser defendido, e isso não sou eu quem diz: é o campo.
+Desde 1996 escolhi caminhos que o meio nem sempre acolheu. Escolhi as artes plásticas e a pintura: nesse tempo realizei mais de três mil telas e mais de 43 exposições, entre individuais e coletivas, e criei um estilo, o surrealismo científico essencialista, registrado no Manifesto 01. Realizei o festival Rock a Granel, espaço para novos valores da música. Conduzi, numa rádio comunitária, o programa Opinião Alternativa, extensão do festival, aberto a novos valores — poesia, música, literatura — e à liberdade de expressão em suas várias formas. Defendi um patrimônio histórico centenário.
 
-O texto completo está no Manifesto 03.
+Em cada fase, por motivos diversos, encontrei contradição e discriminação: algumas naturais ao caminho, outras nem tanto. Com o tempo, a pressão tomou a forma de assédio institucional, a ponto de eu precisar apresentar, em 2025, uma representação para defender minha liberdade de expressão e minha liberdade de escolha cultural, a qual foi arquivada.
+
+Registro isso sem nomear ninguém, porque o que importa é o que o percurso ensina. Encarar uma dificuldade desse tamanho já é, por si, um resultado. E os desfechos possíveis são dois, e ambos valem: se a dificuldade conseguir me parar, terei ao menos encarado algo dessa grandeza; se não conseguir, o resultado será maior, que é continuar seguindo e conquistando.
+
+Defendo este trabalho porque ele merece ser defendido. E isso não sou eu dizendo: é o campo.
+
+*Florianópolis · outubro de 2026*
+*Vitor Edson Delavi*
 
 ---
 
