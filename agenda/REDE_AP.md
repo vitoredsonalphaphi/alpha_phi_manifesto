@@ -4,7 +4,7 @@
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
 **Última atualização:** 8 de outubro de 2026 (criada em 23/09/2026)
-**Ver também:** `agenda/REDE_AP_METODO.md` ("Agenda REDE-AP Método"): fichas de método, portões G0–G5 e critérios de validação.
+**Ver também:** `agenda/REDE_AP_METODO.md` ("Agenda REDE-AP (Fichas Método)"): fichas de método, portões G0–G5 e critérios de validação.
 
 ---
 

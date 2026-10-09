@@ -1,9 +1,9 @@
-# Agenda REDE-AP Método
+# Agenda REDE-AP (Fichas Método)
 ## Construção da Rede Alpha-Phi — Fichas de Método e Portões de Validação
 
-**Como referenciar:** "coloca na Agenda REDE-AP Método" ou "verifica na Agenda REDE-AP Método"
+**Como referenciar:** "coloca na Agenda REDE-AP (Fichas Método)" ou "verifica na Agenda REDE-AP (Fichas Método)"
 **Arquivo:** `agenda/REDE_AP_METODO.md`
-**Relação com a outra agenda:** a `agenda/REDE_AP.md` diz **o que fazer**; esta diz **como verificar** (método, critérios de falha, controles).
+**Relação com as outras agendas:** a `agenda/REDE_AP.md` ("Agenda REDE-AP") diz **o que fazer**; esta, uma das agendas da família REDE-AP, diz **como verificar** (método, critérios de falha, controles). Outras agendas da família entram com o mesmo padrão: **Agenda REDE-AP (tema)**.
 **Criada em:** 9 de outubro de 2026
 **Base:** Entrada 317 (fase de validação de instrumentos e métodos) · Entrada 316 (auditoria simétrica)
 
