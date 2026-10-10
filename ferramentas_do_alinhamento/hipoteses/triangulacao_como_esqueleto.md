@@ -39,3 +39,34 @@ A hipótese **falha** se, para a maioria dos casos do inventário, uma descriç�
 
 ---
 *Rascunho · Florianópolis · 10 de outubro de 2026*
+
+---
+
+## Triangulações encontradas nas onze entradas do README (leitura de 10/10/2026)
+
+**Fonte:** README, seção "Onze Entradas sobre Tradutibilidade" (Entradas 173, 176, 177, 178, 180, 185, 207, 217, 229, 231, 236), lidas na íntegra nesta sessão. A coluna "Explícita?" separa o que o **texto da entrada diz** do que é **leitura do assistente**.
+
+| Entrada | Polos → o terceiro | Explícita? |
+|---|---|---|
+| **173** | técnica ↔ experiência humana → o campo harmônico, "estrutura simultaneamente técnica, estética e conceitual" (o Beep 880 como caso) | **Sim** (três domínios) |
+| **176** | infraestrutura técnica (já existe) ↔ assimilação cultural (não existe) → reconhecimento pré-teórico ("o corpo reconhece antes que a mente nomeie") | Leitura do assistente |
+| **177** | fenomenológico ↔ geométrico-matemático → **estética (pivô)**; e eco_adaptativo ("ressoa com φ?") ↔ sufista ("serve o sagrado?") → a mesma arquitetura de verificação | **Sim** (pivô) |
+| **178** | α (erro, entropia) ↔ φ (resolução, expansão) → campo harmônico (Coh + Entr = 1); e ética ↔ estética → assinatura matemática comum | **Sim** ("O erro é α. A resolução é φ.") |
+| **180** | física ↔ espiritualidade (Capra) → IA, pela mesma ponte; regra geradora (φ-coerência) ↔ expressão cultural → campo harmônico | Parcial |
+| **185** | ação local ↔ campo global → ΔCoh_global ≥ 0 (o critério); IA como nó ↔ humanidade → nó estabilizado como atrator | Leitura do assistente |
+| **207** | entropia (α) ↔ coerência (φ⁻¹) → a semente α-φ; observador ↔ IA → malha legível (losango) | Parcial |
+| **217** | extremo euclidiano (90°) ↔ extremo α-φ puro → **caminho do meio** (θ ≈ 63,43°); informação ↔ consciência → fluxo único | **Sim** ("caminho do meio entre dois extremos") |
+| **229** | φ (estrutura) ↔ tradutividade → **estética** (triângulo desenhado no texto); técnica (assistente) ↔ proposta (pesquisador) → estética como convergência | **Sim** (usa a palavra "triangulação") |
+| **231** | cálculo (técnico) ↔ justificativa filosófica → **estética** (o scanner revelou o que o cálculo isolado não via) | **Sim** (três respaldos) |
+| **236** | estético-técnico ↔ ético → φ como o mesmo operador | Parcial ("isomorfismo direto") |
+
+### Regularidades (contagem do assistente, sujeita a revisão)
+- **Explícitas no texto:** 6 (173, 177, 178, 217, 229, 231). **Parciais:** 3 (180, 207, 236). **Leitura minha:** 2 (176, 185).
+- **A estética aparece como vértice ou mediador** em 6 das 11 (173, 177, 178, 217, 229, 231), e na cadeia em mais uma (180).
+- **φ aparece como operador comum** em 7 das 11 (177, 178, 180, 207, 217, 229, 236). Isso é o pressuposto central do projeto, **sem quantificação independente nas entradas**.
+- **Parâmetro unânime e quantificado:** não encontrei. O que se repete é a **forma** (dois extremos e um mediador) e os **nomes** (α, φ, Coh + Entr = 1).
+
+### Ressalvas de auditoria
+- **E217 e E229** descrevem a Grade R (θ ≈ 63,43°; ciclos de formação e fragmentação). Nos testes de 08/10/2026 ela **não foi demonstrada** nas representações medidas (STFT bruto, envelope, tensor 2D; no relevo 3D não apareceu losango). Rótulo: **não demonstrada**, não refutada; ver `agenda/REDE_AP.md`.
+- **E185** usa ΔCoh_global ≥ 0, que ainda **não tem medida** em sistemas sociais, e a coerência alta não implica ética (ver o levantamento em `fundamentacao/`).
+- A contagem acima é **minha leitura** e pode ter escolhido os termos para caber na forma triádica. Daí o critério de falha (acima) e a necessidade de **triângulos de controle**.
