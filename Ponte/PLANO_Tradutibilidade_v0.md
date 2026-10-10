@@ -1,5 +1,5 @@
 # Plano de Pesquisa da Tradutibilidade — v0.1
-## Primeiro documento da pasta `ferramentas_do_alinhamento/`
+## Primeiro documento da pasta `Ponte/`
 
 **Status:** **RASCUNHO para revisão do pesquisador** · atualizado em 10/10/2026 com as respostas do pesquisador (seção 0); o que não foi respondido continua em aberto
 **Redigido em:** 10 de outubro de 2026 (assistente), a partir do pedido do pesquisador

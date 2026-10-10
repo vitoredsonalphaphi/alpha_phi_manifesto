@@ -1,7 +1,7 @@
-# Ferramentas do Alinhamento
-## Laboratório de Tradutibilidade — base de organização
+# Ponte
+## Ferramentas do Alinhamento · Laboratório de Tradutibilidade — base de organização
 
-**Criada em:** 10 de outubro de 2026
+**Criada em:** 10 de outubro de 2026 (como `ferramentas_do_alinhamento/`; renomeada para `Ponte/` em 10/10/2026)
 **Propósito:** reunir, em um só lugar, as ferramentas do alinhamento do projeto Alpha-Phi e tudo o que as sustenta: fundamentações, hipóteses, critérios e diretrizes técnicas e filosóficas.
 
 ---
