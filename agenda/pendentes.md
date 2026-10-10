@@ -1,5 +1,5 @@
 # Agenda Alpha-Phi — Pendentes e Próximos Passos
-**Atualizada em: 14 de setembro de 2026**
+**Atualizada em: 10 de outubro de 2026** (seção de verificação do GitHub acrescentada)
 
 ---
 
@@ -9,6 +9,42 @@ Contém todos os itens da fase de construção da rede neural Alpha-Phi:
 execuções pendentes no Colab · questões estruturais da rede · α agnóstico ·
 Collatz/fluxo-refluxo · retroprojeção · Grade R · acoplamento multi-substrato.
 Para adicionar itens: "coloca na Agenda REDE-AP".
+
+---
+
+## VERIFICAÇÃO DE REINICIALIZAÇÃO DO GITHUB *(aberta em 10/10/2026)*
+
+**Pergunta:** o histórico de commits do repositório foi reiniciado (substituído por um histórico novo) em algum momento, apagando da visão atual os commits de março a maio de 2026? Isso afeta a **prova de anterioridade pelo Git**, não necessariamente o conteúdo atual dos arquivos.
+
+**Fatos verificados em 10/10/2026 (impressos por código executado na sessão):**
+- Repositório público, **criado em 05/03/2026** (campo `created_at` do GitHub); 0 forks.
+- Primeiro commit de `main`: `0eaecec`, **21/05/2026**, **sem commit pai**, já com **218 arquivos**; mensagem "Atualiza README…" (uma atualização, o que sugere estado anterior).
+- Raiz da branch de trabalho: `fcfae9f`, **29/05/2026**, sem pai, com 272 arquivos.
+- **Nenhum commit anterior a 21/05/2026**, nem do pesquisador. Dois commits em nome do pesquisador (29/05 e 15/06); 512 em nome de "Claude" (branch, 514 commits).
+- `git fsck` sem erro; o conteúdo atual não apresenta sinal de adulteração.
+- Cronologia relatada pelo pesquisador: protótipo da Gemini → post no X → Grok exigiu o repositório → conta no GitHub (com ajuda da Gemini) → conta no Claude → migração para o Claude Code e autorização do acesso direto ao GitHub. Ele lembra de ter comitado desde a criação.
+
+**Hipótese (não confirmada):** o primeiro envio feito pelo Claude Code substituiu o histórico anterior por um histórico novo (envio forçado). **Não verificada**; a hipótese "benigna" (nada comitado antes de maio) é menos provável pelo relato do pesquisador.
+
+### Verificações técnicas
+- [ ] **Visão de Atividade** do repositório no GitHub (filtro "Force pushes"), de março a maio: SHA antigo e quem enviou.
+- [ ] **Suporte do GitHub:** pedir os registros de push de março a maio e a confirmação de que objetos antigos (se houver) ainda existem.
+- [ ] **Data de instalação** do aplicativo/integração do Claude em Configurações do GitHub, e **histórico de cobrança do Claude** (data da migração para o Claude Code).
+- [ ] **E-mail do pesquisador:** buscar mensagens do GitHub de março a maio (criação da conta e do repositório, notificações): carimbo de terceiros.
+- [ ] **Google Colab/Drive:** data de criação e histórico de versões dos notebooks.
+- [ ] **Provas externas datadas:** post no X; conversas com Gemini, Grok e Perplexity; arquivos locais e backups no celular.
+- [ ] **Proteção de branch** em `main` e na branch de trabalho (bloquear force push e exclusão).
+- [ ] **Software Heritage** ("Save Code Now") e captura no Internet Archive para fixar o estado atual.
+- [ ] **Dossiê de integridade:** hash do HEAD, lista de commits, data de criação, raízes do histórico.
+
+### Verificações jurídicas (consultar advogado de PI; não é parecer jurídico)
+- [ ] Valor probatório de **commits** (datas editáveis) contra **carimbos de terceiros** (Software Heritage, ata notarial, Colab/Drive).
+- [ ] **Ata notarial** do estado do repositório e das provas externas.
+- [ ] **Defensoria Pública (Estado ou União):** confirmar se orienta em propriedade intelectual e os critérios de elegibilidade. Alternativas gratuitas: núcleo de prática jurídica de faculdade de direito e a OAB.
+- [ ] **Licença:** o GitHub mostra "Other / NOASSERTION" (não reconheceu o texto). A licença CC BY-NC-ND 4.0 vale por declaração, sem registro. A CC não recomenda suas licenças para **software**: avaliar licença para o código.
+- [ ] Autoria: quase todos os commits constam em nome de "Claude". Registrar, por documento próprio e datado por terceiros, que **autoria e direção são do pesquisador**.
+
+**Status:** aberto. Nada foi alterado no repositório por causa desta verificação.
 
 ---
 
