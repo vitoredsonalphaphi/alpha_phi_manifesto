@@ -15,6 +15,10 @@
 
 ---
 
+## Documentos
+
+- **`PLANO_Tradutibilidade_v0.md`**: plano de pesquisa e proposta de nomenclatura da notação `[f ○ c]` (rascunho para revisão do pesquisador)
+
 ## Estrutura
 
 | Pasta | Conteúdo |
