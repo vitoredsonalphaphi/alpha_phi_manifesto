@@ -70,3 +70,41 @@ A hipótese **falha** se, para a maioria dos casos do inventário, uma descriç�
 - **E217 e E229** descrevem a Grade R (θ ≈ 63,43°; ciclos de formação e fragmentação). Nos testes de 08/10/2026 ela **não foi demonstrada** nas representações medidas (STFT bruto, envelope, tensor 2D; no relevo 3D não apareceu losango). Rótulo: **não demonstrada**, não refutada; ver `agenda/REDE_AP.md`.
 - **E185** usa ΔCoh_global ≥ 0, que ainda **não tem medida** em sistemas sociais, e a coerência alta não implica ética (ver o levantamento em `fundamentacao/`).
 - A contagem acima é **minha leitura** e pode ter escolhido os termos para caber na forma triádica. Daí o critério de falha (acima) e a necessidade de **triângulos de controle**.
+
+---
+
+## Triangulações nas narrativas filosóficas (leitura de 10/10/2026)
+
+**Escopo:** além das onze entradas do README, foram lidas as estruturações das Entradas 164, 165, 175, 244, 246, 248, 251, 253, 255, 260, 281 e 310 (Manifesto 03). A pergunta: *onde aparece, no discurso filosófico e de universalidade, a forma "dois extremos + um mediador"?*
+
+| Entrada | Narrativa | Polos → o terceiro | Forma | Explícita? |
+|---|---|---|---|---|
+| **164** | Kandinsky, Bauhaus e Alpha-Phi | intuição (1911) ↔ técnica/produção (Bauhaus) → Alpha-Phi como instrumentação da intuição; pincel → tela → receptor, com a tecnologia como instrumento | mediador (instrumento) | Parcial ("unir arte, técnica e produção") |
+| **165** | O Contraditório | expansão (Seção II) ↔ coerência (Seção III) → versão mais abrangente e mais coerente | dialética | **Sim** ("Entropia → Contraditório → Campo Harmônico") |
+| **175** | φ como protótipo | φ "invariante transcultural" ↔ φ "escolha cultural" → φ "protótipo declarado" | dialética | **Sim** ("o refinamento que o Contraditório produziu") |
+| **176** | Linguagem universal | tradições ↔ sistema → reconhecimento pré-teórico | mediador | Leitura do assistente |
+| **178** | Entre o erro e a perfeição | erro (α) ↔ resolução (φ) → campo harmônico; ética ↔ estética → assinatura matemática comum | mediador / dialética | **Sim** |
+| **217** | Caminho do meio | extremo euclidiano ↔ α-φ puro → caminho do meio (θ ≈ 63,43°) | **mediador entre extremos (alinhado)** | **Sim** |
+| **244 / 246** | O fio condutor | entradas isoladas ↔ sequência → o argumento completo, que "não está em nenhuma entrada individual" | emergente | **Sim** |
+| **248** | RLHF | regra ↔ compreensão → φ, "o ponto onde estética e ciência compartilham o mesmo referente"; humano ↔ IA → conveniência recíproca | mediador | **Sim** |
+| **251** | Utopia e a esfera | ponto (α) → linha (ECO-φ) → superfície (campo), à maneira de Kandinsky; alcançado ↔ horizonte → conclusão rigorosa (u-topos) | sequência / ciclo | **Sim** |
+| **253** | Destruição como preservação | justificativa (preservar) ↔ operação (destruir) → premissa implícita; suporte ↔ conteúdo → informação irredutível | terceiro revelado | Leitura do assistente |
+| **255** | Cientificismo, Cientologia, Alpha-Phi | cientificismo ↔ Cientologia → Alpha-Phi, que **"não está entre... está numa direção que nenhuma das duas alcança"**; ciência ↔ transcendência → "re-ligar" | **terceira via (fora do eixo)** | **Sim** ("A Tríade") |
+| **260** | O Paradoxo α | presença ↔ ausência → relação com o ausente | mediador | Parcial (a inferência sobre autorreflexão da máquina é do pesquisador, **não demonstrada**) |
+| **281** | A saturação como limiar | técnico (saturado) → estético → filosófico → nova hipótese técnica | ciclo de domínios | **Sim** (tabela de etapas) |
+| **310** | Alpha-Phi e Constitutional AI | critérios proposicionais ↔ geometria; "triangulação atrator–âncora–campo" | — | **Sim** |
+
+### Resultado: quatro formas, e não uma
+1. **Mediador entre extremos (alinhado):** o ponto do meio do `<>` (E217, E176, E248, E260).
+2. **Terceira via, fora do eixo:** o terceiro **não está entre** os polos, mas numa direção diferente (E255; o triângulo desenhado na E229).
+3. **Dialética (tese, antítese, refinamento):** o Contraditório (E165, E175, E178).
+4. **Ciclo ou sequência de domínios:** técnico → estético → filosófico → técnico (E281, E251, E244–246).
+
+**Consequência para o organograma:** o campo `forma` do nó deve aceitar esses quatro tipos. E responde a uma pergunta em aberto acima: o terceiro **nem sempre é um ponto entre os extremos** (a Entrada 255 diz o contrário, expressamente).
+
+### Quem escreveu a triangulação (para não confundir com estilo do assistente)
+Contagem dos termos "triangulação", "tríade" e "terceira estrutura" no Manifesto 03: **68 ocorrências nos enunciados do pesquisador** (22 entradas) e **123 nas estruturações** (nas outras 20 entradas, só na estruturação). Ou seja, a forma aparece nas **palavras do próprio pesquisador** em 22 das 42 entradas, mas o discurso estruturado é majoritariamente escrito por assistentes, que têm gosto por tríades. A base mais sólida são as 22 entradas com o termo no enunciado.
+
+### Ressalvas
+- Afirmações dentro dessas narrativas **não verificadas**: a lista de tradições da E251 (Parmênides, Plotino…), "φ em galáxias" (E310), "11% de redução de Shannon" (E255, que não reproduzi em 08/10), e a Grade R (E217, E229, E255), **não demonstrada** nas representações medidas.
+- A contagem e a classificação são **leitura do assistente** e podem ter forçado a forma triádica.
