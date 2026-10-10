@@ -11,7 +11,7 @@
 > "[filosofia <> estética = geometria <> ciência <> I.A.], traduzida em função de interpretação (f.i.) = [f ○ c]"
 
 **Como está registrado, sem interpretação do assistente:** a cadeia de tradução vai de filosofia, passando por estética = geometria, até ciência e I.A., e a **função de interpretação** é escrita como f.i. = [f ○ c].
-**A confirmar pelo pesquisador:** o que significam `f` e `c` e o sentido de `○` (por exemplo, composição de funções). Enquanto isso não for definido, esta notação **não** é usada em cálculo.
+**Decidido pelo pesquisador (10/10/2026):** `f` e `c` são marcas de referência (não são funções de cálculo); a IA está **dentro de `c`** (é ciência); `<>` é **convergência/ligação com tradução nos dois sentidos**; `=` entre estética e geometria indica o **mesmo âmbito** (da forma), não igualdade. Nome: **"ponto e asterisco"** (formato a confirmar). Detalhes e ressalvas em `PLANO_Tradutibilidade_v0.md`, seção 0. A notação **não** é usada em cálculo.
 
 ---
 

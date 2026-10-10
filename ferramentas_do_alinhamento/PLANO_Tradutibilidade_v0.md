@@ -1,9 +1,35 @@
-# Plano de Pesquisa da Tradutibilidade — v0
+# Plano de Pesquisa da Tradutibilidade — v0.1
 ## Primeiro documento da pasta `ferramentas_do_alinhamento/`
 
-**Status:** **RASCUNHO para revisão do pesquisador** · nada aqui está decidido
+**Status:** **RASCUNHO para revisão do pesquisador** · atualizado em 10/10/2026 com as respostas do pesquisador (seção 0); o que não foi respondido continua em aberto
 **Redigido em:** 10 de outubro de 2026 (assistente), a partir do pedido do pesquisador
 **Regra de leitura:** rótulos *demonstrado / não demonstrado / refutado / hipótese*. Neste documento **não há resultado novo**.
+
+---
+
+## 0. Decisões e respostas do pesquisador (10/10/2026)
+
+| # | Pergunta | Resposta do pesquisador (palavras dele) | Como fica registrado |
+|---|---|---|---|
+| 1 | A IA está dentro de `c` ou é um terceiro polo? | "A inteligência artificial está dentro de si. Ela é um resultado da ciência. Ela é ciência." | **Decidido:** a IA está **dentro de `c`**. `[f ○ c]` não precisa de terceiro polo |
+| 2a | O que significa `<>`? | "Uma convergência para um ponto entre que liga dois extremos." Confirma que é tradução nos dois sentidos: "é uma ligação, né? É uma convergência" | **Decidido:** `<>` = **convergência / ligação** entre dois extremos, com tradução nos dois sentidos |
+| 2b | O que significa `=` em "estética = geometria"? | "estética e geometria estariam no mesmo âmbito nessa tradutibilidade ou numa subsequência de desenvolvimento." **Não** é equivalência: "Estética é uma coisa e geometria é outra." | **Decidido:** `=` **não** é igualdade; indica o **mesmo âmbito** (a tendência ao âmbito da *forma*). Ver 0.1 |
+| 3 | Qual nome fica? | "Ponto e asterisco sempre vai se referir a esta interpretação de tradutibilidade." | **Anotado, formato a confirmar** (ver 0.2) |
+| 4 | O que conta como valor ético operacionalizável? | "Isto eu vou ter que verificar amanhã." | **Em aberto**, para 11/10/2026 |
+| 5 | Quem fará o juízo humano independente? | "Eu." | **Anotado.** Ver ressalva em 0.3 |
+
+### 0.1 Notação revisada (proposta do assistente, a confirmar)
+O pesquisador explica que, da estética para a geometria, há uma **progressão**: a estética pode ser abstrata e extensiva (na literatura, em um arranjo matemático); a geometria é "mais metodizada, mais matemática, e por isso mais próxima do que pode ser compreensível pela inteligência artificial". Por isso sugere que entre estética e geometria entre também `<>`. Escrita fiel a isso:
+
+`[filosofia <> estética <> geometria <> ciência]`, com a IA contida em *ciência*, e o par *estética–geometria* pertencendo ao mesmo **âmbito da forma**.
+
+**A confirmar:** se esta é a grafia que o pesquisador quer (com `<>` no lugar de `=`), e se vale registrar o "âmbito da forma" como uma marca à parte.
+
+### 0.2 O nome: "ponto e asterisco"
+Entendi que o nome escolhido é **"ponto e asterisco"** e que ele sempre se refere a esta interpretação de tradutibilidade. **Não vou supor o formato exato.** Preciso que o pesquisador confirme como se escreve: `.*`? Outra grafia? Observação prática: em programação, `.*` significa "qualquer sequência" (expressões regulares), então pode haver confusão em código; se for essa a grafia, basta usá-la com atenção ao contexto.
+
+### 0.3 Ressalva sobre o "juízo humano independente"
+O pesquisador será o avaliador. Isso é possível e útil, mas ele também é o **autor e observador interno** do projeto, e a própria Entrada 171 já registra que a posição interna cria viés estrutural de coerência. Por isso o juízo dele deve ser rotulado **"juízo do pesquisador (não independente)"**, até que se acrescentem avaliadores de fora (uma ou duas pessoas) e/ou uma avaliação **às cegas** (sem saber qual item é qual). Isso não invalida o juízo dele; só ajusta o rótulo.
 
 ---
 
@@ -74,13 +100,13 @@ Agentes de apoio poderiam executar P1 (leitores), P2 (verificadores de fontes) e
 - **Nenhum teste feito por IA pode, sozinho, mostrar que uma tradução preserva o conteúdo ético.** Isso exige julgamento humano e revisão filosófica.
 - A ideia de φ como "melhor" proporção é declarada pelo próprio manifesto como **protótipo e escolha cultural** (Entrada 175).
 
-## 6. Perguntas abertas ao pesquisador
-1. A **IA** está dentro de `c` ou é um terceiro polo (por exemplo `[f ○ c] ○ IA`)?
-2. Na notação original, `<>` significa tradução **nos dois sentidos** e `=` (estética = geometria) significa **equivalência**? Confirmar.
-3. **Qual nome** fica: A (Ponte), B, C ou D?
-4. O que conta como **valor ético operacionalizável** para o P0?
-5. Quem fará o **juízo humano independente** do P5?
+## 6. Perguntas ainda em aberto
+1. ~~IA dentro de `c`?~~ **Respondida** (seção 0): dentro de `c`.
+2. ~~Sentido de `<>` e `=`?~~ **Respondida**; resta confirmar a grafia revisada (0.1).
+3. **Formato exato de "ponto e asterisco"** (0.2).
+4. **Valor ético operacionalizável**: o pesquisador verifica em **11/10/2026**.
+5. ~~Quem fará o juízo?~~ **O pesquisador**; resta decidir se haverá avaliadores externos ou avaliação às cegas (0.3).
 
 ---
-*Rascunho v0 · Florianópolis · 10 de outubro de 2026*
+*Rascunho v0.1 · Florianópolis · 10 de outubro de 2026*
 *Vitor Edson Delavi · Claude*
