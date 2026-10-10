@@ -19,6 +19,7 @@
 
 - **`diretrizes/ordem_esqueleto_estetico_geometrico_antes_da_matematica.md`**: a forma (estética e geometria) vem antes da matemática (rascunho)
 - **`hipoteses/triangulacao_como_esqueleto.md`**: a triangulação como esqueleto comum (hipótese, rascunho)
+- **`organograma/`**: o organograma da Ponte (arquivo de dados `.yaml` + imagens geradas, com versões datadas; rascunho v0)
 - **`PLANO_Tradutibilidade_v0.md`**: plano de pesquisa e proposta de nomenclatura da notação `[f ○ c]` (rascunho para revisão do pesquisador)
 
 ## Estrutura

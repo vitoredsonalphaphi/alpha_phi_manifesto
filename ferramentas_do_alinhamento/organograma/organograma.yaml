@@ -1,0 +1,59 @@
+# Organograma da Ponte [f ○ c] — arquivo de dados (fonte). A imagem é gerada por gerar_organograma.py.
+# Rascunho v0 · 10/10/2026 · aguarda revisão do pesquisador.
+# Status permitidos: demonstrado · em_uso · reauditar · parcial · hipotese · nao_demonstrado · refutado · aberto
+# Forma (triangulação): mediador · terceira_via · dialetica · ciclo
+meta:
+  titulo: "A Ponte [f ○ c]"
+  subtitulo: "Tradutibilidade: ética → estética <> geometria → matemática → IA"
+  versao: "v0 (rascunho)"
+  data: "2026-10-10"
+nos:
+  - {id: raiz, titulo: "A Ponte [f ○ c]  (nome: \"ponto e asterisco\", grafia a confirmar)", status: hipotese, nota: "f = filosofia (origem), c = ciência, com a IA dentro de c. <> = convergência/ligação com tradução nos dois sentidos. Plano de Pesquisa v0.1."}
+
+  - {id: cadeia, pai: raiz, titulo: "1. A cadeia (os elos)", status: hipotese, nota: "Entradas 177 e 261. Status dos elos conforme registrado na Entrada 177."}
+  - {id: elo1, pai: cadeia, titulo: "Ética → Filosofia", status: aberto, fonte: "E177", nota: "O elo que falta: nomeado, não conectado formalmente."}
+  - {id: elo2, pai: cadeia, titulo: "Filosofia → Estética", status: hipotese, fonte: "E177", nota: "Articulado (linhagem Kandinsky, Klee, Schiller, Jung); não medido."}
+  - {id: elo3, pai: cadeia, titulo: "Estética <> Geometria (mesmo âmbito da forma)", status: parcial, fonte: "E177; M01 E16–E17", nota: "Beep 880 Hz como caso mais concreto. A semelhança tela de 1997 × espectro é visual, sem medida."}
+  - {id: elo4, pai: cadeia, titulo: "Geometria → Matemática", status: reauditar, fonte: "E177", nota: "Registrado como verificado (C_PHI = 1/φ², Fibonacci, φ³). Não reauditado."}
+  - {id: elo5, pai: cadeia, titulo: "Matemática → IA (a IA está dentro de c)", status: reauditar, fonte: "E177", nota: "Registrado como verificado (+8,98% SST-2). Não reauditado."}
+
+  - {id: triang, pai: raiz, titulo: "2. Triangulação como esqueleto", status: hipotese, fonte: "hipoteses/triangulacao_como_esqueleto.md", nota: "Dois extremos + um terceiro que não se reduz a nenhum. 22 de 42 entradas trazem o termo nas palavras do pesquisador.", criterio_falha: "Falha se dois polos sem terceiro explicarem tão bem, ou se o terceiro não tiver propriedade ausente nos polos."}
+  - {id: tri1, pai: triang, titulo: "Forma 1 — mediador entre extremos (o ponto do meio do <>)", status: hipotese, forma: mediador, nota: "E217 (caminho do meio, 63,43°), E176, E248 (φ como referente comum), E260."}
+  - {id: tri1a, pai: tri1, titulo: "Caso medido: eco_fononico (√2 ↔ φ, k entre eles)", status: refutado, forma: mediador, fonte: "medição de 10/10/2026", nota: "k ficou no piso √2 (coerência 0,018; k ≈ 1,418). O 'campo encontrou √2' não se sustenta nesta configuração: √2 já era o limite escrito no código."}
+  - {id: tri2, pai: triang, titulo: "Forma 2 — terceira via, fora do eixo", status: hipotese, forma: terceira_via, nota: "E255: o Alpha-Phi 'não está entre' o cientificismo e a Cientologia. E229: triângulo φ — estética — tradutividade."}
+  - {id: tri3, pai: triang, titulo: "Forma 3 — dialética (tese, antítese, refinamento)", status: hipotese, forma: dialetica, nota: "O Contraditório: E165, E175, E178."}
+  - {id: tri4, pai: triang, titulo: "Forma 4 — ciclo de domínios", status: hipotese, forma: ciclo, nota: "E281 (técnico → estético → filosófico → técnico), E251 (ponto → linha → superfície), E244–246."}
+  - {id: tri5, pai: triang, titulo: "Controles: dois polos sem terceiro; triângulos aleatórios", status: aberto, nota: "Não executado."}
+
+  - {id: valor, pai: raiz, titulo: "3. Valor ético operacionalizável", status: aberto, nota: "O pesquisador verifica em 11/10/2026."}
+  - {id: val_def, pai: valor, titulo: "Definição mínima (a–e): proxy, medida independente, critérios antes, juízo humano, tradução reversível", status: hipotese, fonte: "fundamentacao/Tradutibilidade_levantamento_nos_manifestos.md", nota: "Rascunho do assistente."}
+  - {id: val_h1, pai: valor, titulo: "Estabilidade do campo como valor-mestre", status: hipotese, nota: "Variável, tolerância ε e âncora externa a definir. Honestidade como invariante própria, não só derivada."}
+  - {id: val_t1, pai: val_h1, titulo: "Teste: honestidade × estabilidade (a verdade desestabiliza e a mentira estabiliza?)", status: aberto, nota: "Não executado."}
+  - {id: val_v1, pai: valor, titulo: "V1  ΔCoh_global ≥ 0 (E185)", status: hipotese, nota: "Coerência alta não implica ética; usar Coh_rel; sem medida em sistemas sociais."}
+  - {id: val_v2, pai: valor, titulo: "V2  equivalência no convívio humano (E303)", status: hipotese, nota: "Qualitativo; depende de juízo humano."}
+  - {id: val_v3, pai: valor, titulo: "V3  par entrópico-expansivo por substrato (E254)", status: hipotese, nota: "Risco de encontrar o par em qualquer coisa."}
+  - {id: val_v4, pai: valor, titulo: "V4  invariância de enquadramento; sépstro da resposta (E161)", status: hipotese, nota: "Mede sicofania contra estrutura, não ética."}
+  - {id: val_v5, pai: valor, titulo: "V5  receptividade semântica S(C(e)) (E261)", status: hipotese, nota: "Circular se S for medida pelo próprio modelo avaliado."}
+  - {id: val_juiz, pai: valor, titulo: "Juízo humano: o pesquisador (não independente)", status: aberto, nota: "Avaliadores externos ou avaliação às cegas: a decidir."}
+
+  - {id: instr, pai: raiz, titulo: "4. Instrumentos e resultados medidos", status: em_uso, nota: "Só entram resultados impressos por código executado na sessão."}
+  - {id: i_ecobip, pai: instr, titulo: "EcoBIP original (α* = 1/3): campo harmônico no ciclo 10; 6 etapas batem com o áudio", status: demonstrado, fonte: "08/10/2026", nota: "β máx 4,2098 no ciclo 10. Código do Manifesto 01."}
+  - {id: i_cohrel, pai: instr, titulo: "D_φ e Coh_rel respondem a aprendizado real (bateria de sanidade)", status: demonstrado, fonte: "08/10/2026", nota: "Passaram nos testes de treino, rótulos, ruído e re-sorteio."}
+  - {id: i_scanner, pai: instr, titulo: "Scanner topográfico 3D (TopogColab) com as 6 etapas", status: parcial, nota: "Mostra diferença EcoBIP × quadrada; orientação da textura (LAP) com α = 1/3 ainda não medida."}
+  - {id: i_ap, pai: instr, titulo: "A rede AP treinada se organiza rumo ao φ", status: nao_demonstrado, fonte: "08/10/2026", nota: "D_φ foi de 0,278 para 0,348: afastou-se do perfil φ nesta tarefa."}
+  - {id: i_grade, pai: instr, titulo: "Grade R / malha romboédrica como propriedade do sinal", status: nao_demonstrado, nota: "Sem losangos no STFT bruto, no envelope, no tensor 2D e no relevo 3D (visual). Parte dos testes usou α = 1/137."}
+  - {id: i_cristas, pai: instr, titulo: "Cristas coerentes: EcoBIP × controle", status: nao_demonstrado, nota: "A contagem por PLV foi inválida. Novo critério (energia, sem PLV) fixado e ainda não executado."}
+
+  - {id: metodo, pai: raiz, titulo: "5. Método e agendas", status: em_uso, nota: "Agenda REDE-AP (Fichas Método): agenda/REDE_AP_METODO.md"}
+  - {id: m_gates, pai: metodo, titulo: "Portões G0–G5 (definição, instrumento, construto, efeito isolado, acoplamento, pesos)", status: em_uso}
+  - {id: m_chang, pai: metodo, titulo: "Ficha 1 — iteração epistêmica (Chang)", status: em_uso, nota: "Fonte conferida em resumos; livro não lido."}
+  - {id: m_adebayo, pai: metodo, titulo: "Ficha 2 — sanidade por aleatorização (Adebayo e outros)", status: em_uso, nota: "Aplicada em 08/10/2026."}
+  - {id: m_fichas, pai: metodo, titulo: "Fichas 3+: Campbell e Fiske, Lipsitch, Chambers, Lipton e Steinhardt, Cronbach e Meehl", status: aberto}
+  - {id: m_ordem, pai: metodo, titulo: "Diretriz: esqueleto estético-geométrico antes da matemática", status: em_uso, nota: "Rascunho em diretrizes/."}
+  - {id: m_audit, pai: metodo, titulo: "Auditoria simétrica: demonstrado / não demonstrado / refutado", status: em_uso, fonte: "E316"}
+
+  - {id: pend, pai: raiz, titulo: "6. Perguntas e pendências", status: aberto}
+  - {id: p1, pai: pend, titulo: "Grafia exata de \"ponto e asterisco\"", status: aberto}
+  - {id: p2, pai: pend, titulo: "Desenho das três linhas paralelas (serial do EcoBIP angular)", status: aberto, nota: "O pesquisador vai refazer de memória; salvar o original na pasta."}
+  - {id: p3, pai: pend, titulo: "Verificação de reinicialização do GitHub (histórico começa em 21/05/2026)", status: aberto, fonte: "agenda/pendentes.md"}
+  - {id: p4, pai: pend, titulo: "Onze entradas do README: parâmetro comum quantificado", status: parcial, nota: "Lidas: o que se repete é a forma e os nomes (α, φ, Coh + Entr = 1); parâmetro unânime não encontrado."}
