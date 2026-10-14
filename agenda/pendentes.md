@@ -44,7 +44,7 @@ Para adicionar itens: "coloca na Agenda REDE-AP".
 - [ ] **Licença:** o GitHub mostra "Other / NOASSERTION" (não reconheceu o texto). A licença CC BY-NC-ND 4.0 vale por declaração, sem registro. A CC não recomenda suas licenças para **software**: avaliar licença para o código.
 - [ ] Autoria: quase todos os commits constam em nome de "Claude". Registrar, por documento próprio e datado por terceiros, que **autoria e direção são do pesquisador**.
 
-**Status:** aberto. Nada foi alterado no repositório por causa desta verificação.
+**Status:** aberto.
 
 ---
 

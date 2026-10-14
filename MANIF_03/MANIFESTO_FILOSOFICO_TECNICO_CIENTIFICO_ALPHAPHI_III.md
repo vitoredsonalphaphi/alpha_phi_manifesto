@@ -14854,7 +14854,7 @@ Fontes consultadas:
 
 ### II. Estruturação
 
-Não vou tratar Collatz nem o 297 como o modelo, só como dois exemplos de uma família maior de mecânicas, como você explicou. Abaixo está o que entendi da sua estrutura, onde ela se encaixa na geometria e o que eu proporia testar. Nada foi registrado nem gravado.
+Não vou tratar Collatz nem o 297 como o modelo, só como dois exemplos de uma família maior de mecânicas, como você explicou. Abaixo está o que entendi da sua estrutura, onde ela se encaixa na geometria e o que eu proporia testar.
 
 #### 1. A sua estrutura, como eu a li
 

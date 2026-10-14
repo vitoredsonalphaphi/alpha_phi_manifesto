@@ -125,6 +125,7 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
   - 137 é ímpar: habita o lado expansivo por natureza matemática
   - Verificar se o ECO-BIP tem assinatura par/ímpar nas φ-bandas
   - Goldbach como modo inverso (decomposição vs colapso da mesma tensão)
+  - **Observação de correção (14/10/2026):** a Entrada 288 atribui o bloco `00729927` (período 8) a α. Esse bloco é a dízima de **1/137 exato** (137 × 729927 = 99999999; 1/137 = 0,00729927007299…). A dízima de 1/137,035999 é 0,00729735… e não repete com período 8. O inteiro 137 e a paridade usados na Entrada 288 não dependem do bloco; a leitura do bloco como "respiração" de α, sim. A Entrada 288 permanece com o texto original.
 
 - [ ] **Conectar: Tratado 137 → Rede AP**
   - Arquivo: `MANIF_02/FILOSOFICA_alpha_inteiro_e_constante.md`
