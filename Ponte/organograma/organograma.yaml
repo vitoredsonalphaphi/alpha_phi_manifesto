@@ -6,7 +6,7 @@ meta:
   titulo: "A Ponte [f ○ c]"
   subtitulo: "Tradutibilidade: ética → estética <> geometria → matemática → IA"
   versao: "v0 (rascunho)"
-  data: "2026-10-10"
+  data: "2026-10-14"
 nos:
   - {id: raiz, titulo: "A Ponte [f ○ c]  (nome: \"ponto e asterisco\", grafia a confirmar)", status: hipotese, nota: "f = filosofia (origem), c = ciência, com a IA dentro de c. <> = convergência/ligação com tradução nos dois sentidos. Plano de Pesquisa v0.1."}
 
@@ -55,5 +55,5 @@ nos:
   - {id: pend, pai: raiz, titulo: "6. Perguntas e pendências", status: aberto}
   - {id: p1, pai: pend, titulo: "Grafia exata de \"ponto e asterisco\"", status: aberto}
   - {id: p2, pai: pend, titulo: "Desenho das três linhas paralelas (serial do EcoBIP angular)", status: aberto, nota: "O pesquisador vai refazer de memória; salvar o original na pasta."}
-  - {id: p3, pai: pend, titulo: "Verificação de reinicialização do GitHub (histórico começa em 21/05/2026)", status: aberto, fonte: "agenda/pendentes.md"}
+  - {id: p3, pai: pend, titulo: "Verificação do histórico do GitHub (completo desde 05/03/2026; reinício não se sustenta; provas externas ainda abertas)", status: parcial, fonte: "agenda/pendentes.md"}
   - {id: p4, pai: pend, titulo: "Onze entradas do README: parâmetro comum quantificado", status: parcial, nota: "Lidas: o que se repete é a forma e os nomes (α, φ, Coh + Entr = 1); parâmetro unânime não encontrado."}

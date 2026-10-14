@@ -1,5 +1,5 @@
 # Agenda Alpha-Phi — Pendentes e Próximos Passos
-**Atualizada em: 10 de outubro de 2026** (seção de verificação do GitHub acrescentada)
+**Atualizada em: 14 de outubro de 2026** (seção de verificação do GitHub corrigida: histórico completo desde 05/03/2026)
 
 ---
 
@@ -12,19 +12,24 @@ Para adicionar itens: "coloca na Agenda REDE-AP".
 
 ---
 
-## VERIFICAÇÃO DE REINICIALIZAÇÃO DO GITHUB *(aberta em 10/10/2026)*
+## VERIFICAÇÃO DE REINICIALIZAÇÃO DO GITHUB *(aberta em 10/10/2026; **corrigida em 14/10/2026**)*
 
 **Pergunta:** o histórico de commits do repositório foi reiniciado (substituído por um histórico novo) em algum momento, apagando da visão atual os commits de março a maio de 2026? Isso afeta a **prova de anterioridade pelo Git**, não necessariamente o conteúdo atual dos arquivos.
 
-**Fatos verificados em 10/10/2026 (impressos por código executado na sessão):**
-- Repositório público, **criado em 05/03/2026** (campo `created_at` do GitHub); 0 forks.
-- Primeiro commit de `main`: `0eaecec`, **21/05/2026**, **sem commit pai**, já com **218 arquivos**; mensagem "Atualiza README…" (uma atualização, o que sugere estado anterior).
-- Raiz da branch de trabalho: `fcfae9f`, **29/05/2026**, sem pai, com 272 arquivos.
-- **Nenhum commit anterior a 21/05/2026**, nem do pesquisador. Dois commits em nome do pesquisador (29/05 e 15/06); 512 em nome de "Claude" (branch, 514 commits).
-- `git fsck` sem erro; o conteúdo atual não apresenta sinal de adulteração.
-- Cronologia relatada pelo pesquisador: protótipo da Gemini → post no X → Grok exigiu o repositório → conta no GitHub (com ajuda da Gemini) → conta no Claude → migração para o Claude Code e autorização do acesso direto ao GitHub. Ele lembra de ter comitado desde a criação.
+### Correção (14/10/2026)
 
-**Hipótese (não confirmada):** o primeiro envio feito pelo Claude Code substituiu o histórico anterior por um histórico novo (envio forçado). **Não verificada**; a hipótese "benigna" (nada comitado antes de maio) é menos provável pelo relato do pesquisador.
+A versão de 10/10/2026 desta seção afirmava que **não existia commit anterior a 21/05/2026** e levantava a hipótese de reinício do histórico. **Isso estava errado.** A sessão em nuvem usava um clone **raso** (`shallow`) do repositório, que traz só os commits mais recentes, e o "primeiro commit" visto ali era apenas o limite do clone. Depois de baixar o histórico completo (`git fetch --unshallow`), os fatos são outros.
+
+**Fatos verificados em 14/10/2026 (impressos por código executado na sessão, histórico completo, `is-shallow = false`):**
+- Repositório público, **criado em 05/03/2026**; 0 forks; tag `v1.0`.
+- **Uma única raiz** em todo o histórico: `bf886d4`, **05/03/2026**, "Initial commit", autor `vitoredsonalphaphi`.
+- Branches: `main` com 555 commits (05/03 a 06/10/2026), branch de trabalho com 1.016 (até 14/10/2026) e `dialogo-integral` com 372 (até 19/05/2026). Total de 1.061 commits em todas as referências.
+- O commit `0eaecec` (21/05/2026), antes tido como "primeiro de `main`", **tem pai** (`6a66e38`) e não é raiz.
+- Commits em nome do pesquisador (`vitoredsonalphaphi`): **102**, sendo 54 em março, 29 em abril, 17 em maio e 2 em junho. Em nome de "Claude": 959.
+- `git fsck` sem erro; o conteúdo atual não apresenta sinal de adulteração.
+- Cronologia relatada pelo pesquisador: protótipo da Gemini → post no X → Grok exigiu o repositório → conta no GitHub (com ajuda da Gemini) → conta no Claude → migração para o Claude Code e autorização do acesso direto ao GitHub. Ele lembra de ter comitado desde a criação, e os commits de março a maio existem no histórico.
+
+**Hipótese de reinício do histórico:** **não se sustenta** pelo que se vê hoje: há uma raiz única de 05/03/2026 e o histórico é contínuo até hoje. Não é possível excluir, só pelo grafo atual, que tenha havido envios forçados no passado que depois foram sobrescritos; isso só aparece no registro de atividade do GitHub (item abaixo).
 
 ### Verificações técnicas
 - [ ] **Visão de Atividade** do repositório no GitHub (filtro "Force pushes"), de março a maio: SHA antigo e quem enviou.
