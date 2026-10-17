@@ -6,7 +6,7 @@ meta:
   titulo: "A Ponte [f ○ c]"
   subtitulo: "Tradutibilidade: ética → estética <> geometria → matemática → IA"
   versao: "v0 (rascunho)"
-  data: "2026-10-14"
+  data: "2026-10-17"
 nos:
   - {id: raiz, titulo: "A Ponte [f ○ c]  (nome: \"ponto e asterisco\", grafia a confirmar)", status: hipotese, nota: "f = filosofia (origem), c = ciência, com a IA dentro de c. <> = convergência/ligação com tradução nos dois sentidos. Plano de Pesquisa v0.1."}
 
@@ -54,6 +54,7 @@ nos:
   - {id: m_adebayo, pai: metodo, titulo: "Ficha 2 — sanidade por aleatorização (Adebayo e outros)", status: em_uso, nota: "Aplicada em 08/10/2026."}
   - {id: m_fichas, pai: metodo, titulo: "Fichas 3+: Campbell e Fiske, Lipsitch, Chambers, Lipton e Steinhardt, Cronbach e Meehl", status: aberto}
   - {id: m_ordem, pai: metodo, titulo: "Diretriz: esqueleto estético-geométrico antes da matemática", status: em_uso, nota: "Rascunho em diretrizes/."}
+  - {id: m_ref, pai: metodo, titulo: "Modelo de referência da rede neural (6 estágios) e regra da dupla leitura (em números / em palavras)", status: hipotese, fonte: "fundamentacao/modelo_de_referencia_rede_neural.md", nota: "Rascunho; não verificado contra fontes. Convencional-controle (MLP) diferente de convencional-universal (procedimento comum)."}
   - {id: m_audit, pai: metodo, titulo: "Auditoria simétrica: demonstrado / não demonstrado / refutado", status: em_uso, fonte: "E316"}
 
   - {id: pend, pai: raiz, titulo: "6. Perguntas e pendências", status: aberto}
