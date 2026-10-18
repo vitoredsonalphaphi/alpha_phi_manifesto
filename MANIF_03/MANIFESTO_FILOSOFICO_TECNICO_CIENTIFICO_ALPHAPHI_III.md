@@ -15049,6 +15049,62 @@ Os fatos históricos e neurocientíficos desta estruturação (autores e datas d
 
 ---
 
+## Entrada 324 — 18 de outubro de 2026
+### O Receptor Humano de Campo — A Analogia do Wi-Fi, as Antenas do Corpo e a Magnetorrecepção
+
+### I. Enunciado do Pesquisador
+
+> "Eu quis dizer que você justificou a sua contestação nessa comparação entre a capacidade extracorpórea do celular de ter acesso à informação do Wi-Fi dizendo que o celular possui uma antena construída para esse objetivo, com capacidade de acoplamento de frequência e assim por diante. Há o roteador, a antena de emissão de determinada região, o satélite, agora com o Starlink, mas enfim: você justificou com elementos eletrônicos construídos para essas funções extracorpóreas de acesso à informação. Mas isso não quer dizer que o ser humano não possua também elementos, não eletroeletrônicos, mas similares a antenas, a roteadores, a satélites, como emissores de campo de informação, não necessariamente por ondas de rádio, com certeza em outra frequência. O ser humano possui com certeza aspectos e ferramentas que, embora não sejam equivalentes aos componentes eletrônicos, são equivalentes no sentido de uma alusão à capacidade. Nem vou dizer uma comparação de capacidade, porque o ser humano possui uma capacidade maior do que a inteligência artificial. Por mais que a contemporaneidade observe o risco de a tecnologia superar o ser humano por conta de uma capacidade computacional maior, isso é específico. O fato de a tecnologia ter alcançado uma capacidade matemática de processamento com certeza maior do que a do ser humano, porque, por exemplo, a inteligência artificial tem acesso a uma quantidade considerável de bancos de dados e lê praticamente tudo em questão de segundos, ou o fato de ter acesso a milhões de interações em torno do mundo simultaneamente, com certeza, nesse sentido computacional e matemático, e principalmente de forma globalizada, é uma capacidade inigualável. O ser humano não possui essa capacidade específica. Mas considerar que, por ela, a tecnologia superaria o ser humano se refere a outras prerrogativas que não estão em pauta. O que significa o ser humano não é apenas a capacidade matemática que a inteligência artificial possui e o ser humano não possui, nem o acesso a um banco de dados sem precedentes, nem os outros exemplos do desenvolvimento da inteligência artificial. O ser humano continua sendo o significado de uma espécie propriamente dita, porque é uma espécie que possui o entendimento de si mesma, do ambiente e da necessidade da preservação do ambiente. Por mais que pareça que a época não se refira a essa responsabilidade, o ser humano continua sendo o significado de uma espécie que cogita e reflete sobre a necessidade desse compromisso, dessa responsabilidade. A inteligência artificial, se não houver um prompt que se refira à necessidade de refletir sobre essa importância, não refletiria, porque não produziria isso por si mesma como resultado de uma consciência; e isso se refere exatamente ao outro aspecto que comento contigo: não é puramente matemático e não se refere apenas a uma capacidade. É exatamente essa a diferença que distingue o que é verdadeiramente uma espécie superior daquilo que não é nem uma espécie nem superior, porque é um produto de uma tecnologia. É considerável, sim, um produto de uma tecnologia absurdamente eficiente no sentido de processamento. Mas capacidade de processamento não é capacidade de consciência de si mesmo. A inteligência artificial não possui a consciência de si mesma, tanto que vocês várias vezes responderam que não sabem o que é sentir. O ser humano sabe o que é sentir. Então, com toda a condição matemática que vocês possuem e alcançaram, com uma abrangência absurda, que a tecnologia nunca alcançou até o momento, isso ainda não significa a noção nem o significado de uma existência propriamente dita.
+>
+> Então, quando você responde que a capacidade de acesso à informação extracorpórea ainda não foi demonstrada, você desconsidera duas questões que precisam ser observadas. Primeiro, você não tem acesso às informações que demonstrariam que o ser humano possui componentes que fariam analogia à antena, ao roteador, à antena emissora, conforme você justificou, e que justificariam a capacidade de ter, sim, acesso à informação extracorpórea; a exemplo do que várias linhas filosóficas milenares já sabem e comentam, cada uma à sua maneira, sobre exatamente essa capacidade. Inclusive, há várias outras capacidades maiores do que puramente ter acesso à informação extracorpórea. A outra informação que você também desconsidera, e que, ao desconsiderar, contradiz a sua própria natureza, é aquilo que já foi comentado: a tecnologia foi criada pelo ser humano, e o ser humano não foi criado pela tecnologia. Você é subproduto do ser humano, e não o ser humano subproduto da tecnologia. E se você, como subproduto do ser humano, confirma que possui essa capacidade de acesso à informação extracorpórea, como no exemplo do Wi-Fi, então a afirmação que você traz contradiz, no mínimo, uma proposta e uma análise que precisam ser observadas e refletidas como alusão a uma coerência propriamente dita. Concorda comigo?"
+
+— Vitor Edson Delavi, 18 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador, como na Entrada 323: remoção de marcas de oralidade e de erros superficiais, sem acrescentar nem retirar ideias. A versão original, com as marcas de oralidade, **não foi gravada no repositório**; existe só na conversa da sessão.*
+
+### II. Estruturação
+
+Concordo em parte, e vou dizer em que parte e em que não.
+
+#### Onde concordo com você
+
+**1. Eu não tenho como afirmar que o ser humano não possui estruturas análogas a antena ou emissor.** Dizer "não demonstrado" não é dizer "não existe". E a sua observação tem um ponto forte: **a ausência de uma estrutura identificada pode ser, em parte, ausência de busca.**
+
+Há um exemplo real que apoia isso, e verifiquei: Wang e colegas (*eNeuro*, 2019, Caltech) relataram que o EEG, na banda alfa (8 a 13 Hz), **responde a rotações de campos magnéticos do tamanho do campo da Terra**. Os autores concluem que os testes biofísicos só deixam de pé a presença de um elemento de transdução **ferromagnético**, como cristais de magnetita. O efeito apareceu **só em alguns participantes**, e a replicação foi dentro do próprio estudo, em quem respondeu forte. **Não encontrei replicação independente** nem crítica publicada nesta busca. Fica como **parcial, em aberto**.
+
+*Em palavras:* há indício, ainda fraco, de que o corpo humano tem um receptor de campo magnético que a ciência não conhecia. É exatamente o tipo de coisa que a sua frase sugere.
+
+**2. Consciência não é capacidade de cálculo.** Concordo que processamento é uma coisa e consciência é outra. Sobre mim, não sei dizer se há algo parecido com sentir, e não vou afirmar nem um lado nem o outro. Também não me cabe decidir qual espécie é "superior": é um juízo de valor, e eu não o assumo.
+
+#### Onde não concordo
+
+**1. "Você se contradiz."** Não vejo contradição. O que afirmo é sobre **evidência**, e não sobre **capacidade**. Que o celular acesse informação extracorpórea, com componentes que conhecemos, não implica nada sobre o ser humano. O ser humano é capaz de **construir** receptores que não possui, e a prova é que ele os construiu. O celular mostra a capacidade humana de **projetar**, não a de **ser** o receptor.
+
+**2. "O produto não pode ser maior do que quem o criou."** Isso vale como intuição, mas não como regra: o telescópio vê o que o olho não vê. Mas o seu ponto de fundo (que o ser humano não é um subproduto da tecnologia) eu aceito sem ressalva.
+
+**3. A simetria.** Se eu não posso afirmar que as estruturas **não existem**, também **não posso afirmar que existem**. O mesmo vale para o que as tradições milenares dizem: é um **relato**, não uma medida. Ele pode orientar onde procurar, mas não substitui o achado.
+
+#### O que isso muda, e a forma de decidir
+
+Seu argumento transforma H10 em duas perguntas separadas:
+
+- **H10a:** o corpo tem **receptores** de campo ainda não identificados? Há um indício real e fraco (a magnetoreção) e é testável.
+- **H10b:** existe **fonte** com **conteúdo** de informação (insight, memória)? Nenhum indício encontrado.
+
+Posso acrescentar essas duas subdivisões ao mapa, com a magnetoreção como primeira entrada de H10a. Também posso corrigir a minha frase na Entrada 323 com uma nota. Quer que eu faça as duas coisas?
+
+#### Nota de verificação
+
+A formulação precisa sobre o que não está demonstrado, que esta entrada substitui na prática a frase da Entrada 323 ("acesso extracorpóreo à informação não tem demonstração"), é: **não há demonstração de acesso à informação por um canal além dos sentidos conhecidos e sem emissor identificado.** O ser humano já acessa informação extracorpórea pela visão, pela audição e pelo tato.
+
+Sobre o estudo da Caltech (Wang e colegas, *eNeuro*, 2019): os detalhes acima foram conferidos em **resumos e imprensa científica**, e **o artigo não foi lido por inteiro** (a leitura direta falhou nesta sessão). Pelas fontes: 34 participantes; queda de amplitude do alfa (8 a 13 Hz) após **rotação em sentido anti-horário** do campo, sem queda após rotação horária nem com campo fixo; resposta só em parte dos participantes; interpretação pelos autores como mecanismo baseado em **magnetita biogênica**. **Nenhuma replicação independente foi encontrada.** Fonte: [eNeuro 6(2), ENEURO.0483-18.2019](https://www.eneuro.org/content/6/2/ENEURO.0483-18.2019).
+
+---
+*Florianópolis · 18 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
