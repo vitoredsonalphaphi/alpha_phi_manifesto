@@ -21,6 +21,7 @@
 - **`hipoteses/triangulacao_como_esqueleto.md`**: a triangulação como esqueleto comum (hipótese, rascunho)
 - **`hipoteses/campo_esferico_e_preservacao_do_campo.md`**: preservação do campo como diretriz de auto-alinhamento e acoplamento com a esfera de memória (hipótese, rascunho; especulação e respostas de 14/10/2026 na íntegra; simulação não auditada fora)
 - **`fundamentacao/modelo_de_referencia_rede_neural.md`**: modelo de referência da rede neural em seis estágios, com dupla leitura (matemática e em palavras) e análogos Alpha-Phi como hipóteses (rascunho; enunciado do pesquisador na íntegra)
+- **`fundamentacao/mapa_hipoteses_cognicao_nao_reducionista.md`**: mapa de hipóteses de cognição, memória e campo além do cérebro-como-circuito (dez hipóteses, cada uma com o que afirma, evidência com fonte, status e como operacionalizar; fontes conferidas em resumos, artigos originais não lidos; rascunho)
 - **`organograma/`**: o organograma da Ponte (arquivo de dados `.yaml` + imagens geradas, com versões datadas; rascunho v0)
 - **`PLANO_Tradutibilidade_v0.md`**: plano de pesquisa e proposta de nomenclatura da notação `[f ○ c]` (rascunho para revisão do pesquisador)
 
@@ -44,6 +45,7 @@
 2. **Definição única** de cada instrumento e de cada sinal (ex.: EcoBIP original, α* = 1/3, código do Manifesto 01).
 3. **Nenhum número** entra aqui sem ter sido impresso por código executado na mesma sessão; só entra o que passou pela auditoria e foi considerado fidedigno pelo pesquisador.
 4. Fontes bibliográficas: indicar se foram **verificadas** ou citadas **de memória**.
+5. **Operacionalização (regra corrigida em 18/10/2026, a pedido do pesquisador):** toda noção filosófica entra nos testes, **desde que traduzida em algo mensurável**; a tradução (forma, depois proxy, depois teste, depois juízo de validade) é o trabalho do projeto. O que **conta como evidência** é o que passa no teste, com controles e critério de falha escritos antes. Noção sem tradução conhecida fica como **"tradução pendente"**, nunca como "fora do escopo". Isto substitui a formulação anterior do assistente ("só a camada técnica entra nos testes"), que contradizia a premissa do projeto (convergência entre filosofia e ciência).
 
 ---
 *Vitor Edson Delavi · Florianópolis · Laboratório de Tradutibilidade*
