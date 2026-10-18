@@ -1,6 +1,6 @@
 # Mapa de hipóteses: cognição, memória e campo além do cérebro-como-circuito
 
-**Status:** rascunho · **fontes conferidas em resumos de busca; os artigos originais NÃO foram lidos** (como na Ficha 1 do método) · classificação feita pelo assistente, a revisar pelo pesquisador
+**Status:** rascunho (atualizado em 18/10/2026: H10 dividida em H10a e H10b, com a magnetorrecepção da Caltech) · **fontes conferidas em resumos de busca; os artigos originais NÃO foram lidos** (como na Ficha 1 do método) · classificação feita pelo assistente, a revisar pelo pesquisador
 **Data:** 18 de outubro de 2026
 **Origem:** pedido do pesquisador (18/10/2026), depois da discussão sobre memória, campo e reducionismo (Entrada 323 e mensagens seguintes). O pesquisador apontou que o assistente reflete a literatura dominante e que isso pode ser um viés; este mapa responde conferindo fontes, uma a uma.
 **Ligações:** `../README.md` (regra de operacionalização) · `campo_organizador_entre_ambitos.md` · `modelo_de_referencia_rede_neural.md` · Entrada 323.
@@ -98,25 +98,38 @@ Estados usados (a auditoria simétrica do projeto, com dois intermediários):
 - **Status:** **não demonstrado**, com replicações negativas pré-registradas. **Não refutado em geral.**
 - **Fontes:** [Replicação no Goldsmiths](https://research.gold.ac.uk/id/eprint/7055) · [Artigo no PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC3303812)
 
-### H10. O campo como canal de informação para insights e memórias (a hipótese do pesquisador)
+### H10a. O corpo humano tem receptores de campo ainda não identificados (magnetorrecepção)
+- **Afirma:** o cérebro humano responde a campos magnéticos do tamanho do campo da Terra, o que sugere um transdutor biológico ainda não conhecido (hipótese dos autores: cristais de magnetita biogênica).
+- **Evidência (Wang, Kirschvink, Shimojo e colegas, *eNeuro*, 2019, Caltech e Universidade de Tóquio):** 34 participantes; EEG durante rotações de um campo do tamanho do da Terra. A amplitude do alfa (8 a 13 Hz) **cai** depois de rotações horizontais em sentido **anti-horário**, **somente quando a componente vertical estática aponta para baixo** (a orientação do Hemisfério Norte); **não** houve resposta com a mesma rotação e a vertical para cima, nem com rotação horária, nem com campo fixo. O efeito depende da componente **estática** do campo, o que, segundo os autores, afasta a indução elétrica. Eles testaram o artefato de indução (flutuação de 10 a 40 μV durante a rotação de 100 ms) com experimentos com fantoma e dizem que ele não explica o efeito. O efeito apareceu **só em parte dos participantes**; a "replicação" foi **dentro do próprio estudo**, em quem respondeu forte. O artigo original **não foi lido por inteiro** (a leitura direta falhou na sessão); os detalhes vêm de resumos e da imprensa científica.
+- **Replicação independente:** **não encontrada** em duas buscas (2021 a 2025). **Crítica publicada:** **não encontrada** (só imprensa, que trata o resultado de forma mais forte do que o próprio artigo). Existe uma página do laboratório (Human Magnetic Reception Laboratory, Caltech) e o repositório do Caltech lista material suplementar; **dados abertos não verificados**.
+- **Hipótese de apoio:** magnetita no tecido cerebral humano. Kirschvink e colegas (*PNAS*, 1992) a relataram em tecido de cadáveres. O debate posterior é se ela é biogênica ou poluição de combustão (Maher e colegas, 2016, citado de memória, não conferido); um estudo mais recente (*Scientific Reports*) relata distribuição semelhante em vários cérebros, o que Kirschvink leu como indício contra contaminação simples (detalhes e ano não verificados).
+- **Status:** **parcial, não replicado.** Um indício real e fraco.
+- **O que não mostra:** o resultado é de **detecção de orientação de um campo físico conhecido** (como uma bússola). **Não é um canal de conteúdo** (insight, memória). O alfa cair é uma resposta **inespecífica** a muitos estímulos.
+- **Operacionalizar (proposta):** (a) pedir ou acompanhar uma **replicação independente** com os mesmos controles (direção oposta, vertical para cima, campo fixo, fantoma); (b) usar o **desenho de controle por assimetria** como modelo nos experimentos do projeto; (c) para a rede AP, o análogo é um teste de **sensibilidade direcional** a uma entrada que gira, com o controle de sentido oposto de mesma energia.
+- **Fontes:** [Wang e colegas, *eNeuro* 6(2), 2019](https://www.eneuro.org/content/6/2/ENEURO.0483-18.2019) · [Laboratório de Recepção Magnética Humana (Caltech)](https://maglab.caltech.edu/human-magnetic-reception-laboratory/) · [Registro no repositório do Caltech](https://authors.library.caltech.edu/records/whbb7-57e98) · [Kirschvink e colegas, 1992 (PNAS, PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC49775)
+
+### H10b. Existe uma fonte de campo com conteúdo de informação (insight, memória) acessada pelo indivíduo (a hipótese do pesquisador)
 - **Afirma:** do mesmo modo que o Wi-Fi é um campo acessível pelo celular, o indivíduo acessa um campo do qual vêm informações (insight, intuição), mediante predisposição.
-- **Evidência:** **nenhum estudo direto encontrado nesta busca.** A analogia técnica é consistente em si (o Wi-Fi é um campo externo ao aparelho, com fonte e receptor conhecidos); falta o equivalente de **emissor e receptor** para o cérebro. H5 mostra sensibilidade do cérebro a campos fortes; H6 e H9 não sustentam efeitos de campos fracos ou de acesso extracorpóreo.
+- **Evidência:** **nenhum estudo direto encontrado.** A analogia técnica é consistente em si (o Wi-Fi é um campo externo ao aparelho, com fonte e receptor conhecidos). Falta o equivalente de **emissor e de conteúdo** para o caso humano. H5 mostra sensibilidade do cérebro a campos fortes; H10a, um indício de sensibilidade a campos fracos de orientação; H6 e H9 não sustentam efeitos de campos fracos sobre a cognição nem acesso extracorpóreo.
 - **Status:** **não demonstrado; tradução pendente.**
-- **Operacionalizar (proposta, não executada):** (a) estudos com **blindagem** de campos (eletromagnética e magnética) e tarefas de evocação de memória, intuição e resolução de problemas, com controle e avaliação cega; (b) em redes artificiais, **canal de campo** entre unidades, com versão com canal bloqueado como controle; (c) critério de falha escrito antes. Qualquer efeito precisaria ser replicado por terceiros.
+- **Operacionalizar (proposta, não executada):** (a) estudos com **blindagem** de campos e tarefas de evocação de memória, intuição e resolução de problemas, com controle e avaliação cega; (b) em redes artificiais, **canal de campo** entre unidades, com versão com canal bloqueado como controle; (c) critério de falha escrito antes. Qualquer efeito precisaria ser replicado por terceiros.
+- **Formulação precisa do que não está demonstrado:** não há demonstração de acesso à informação **por um canal além dos sentidos conhecidos e sem emissor identificado**. O ser humano já acessa informação extracorpórea pela visão, pela audição e pelo tato.
 
 ---
 
 ## 4. O que o mapa mostra
 
 - As hipóteses que **ampliam o suporte da cognição** dentro do corpo e do ambiente material (H1 a H5) têm literatura publicada, com graus diferentes de evidência. **Não são todas marginais.**
-- As que **atribuem à cognição um canal de informação fora do corpo** (H9, H10) não têm, nesta busca, demonstração; H9 tem replicações negativas pré-registradas.
-- **O ponto de apoio mais firme** para o projeto, por ser demonstrado e mensurável, é H5 (a sensibilidade do cérebro a campos) e a parte parcial de H4 e H3.
+- As que **atribuem à cognição um canal de informação fora do corpo** (H9, H10b) não têm, nesta busca, demonstração; H9 tem replicações negativas pré-registradas.
+- **O ponto de apoio mais firme** para o projeto, por ser demonstrado e mensurável, é H5 (a sensibilidade do cérebro a campos) e a parte parcial de H4, H3 e H10a (magnetorrecepção, não replicada).
 - Esta busca **não esgota** a literatura: foi um conjunto de buscas simples, com fontes em resumo.
 
 ## 5. Itens abertos
 
 - [ ] Ler os artigos originais de H3, H4, H8 e H9 (não lidos).
 - [ ] Buscar meta-análises de H9 e críticas revisadas por pares de H7.
-- [ ] Buscar estudos de blindagem eletromagnética e cognição (H10).
+- [ ] Buscar estudos de blindagem eletromagnética e cognição (H10b).
+- [ ] Ler o artigo da Caltech por inteiro (grupos de resposta, intensidade do campo, câmara de blindagem, tamanho do efeito) e verificar se há dados abertos (H10a).
+- [ ] Buscar replicações da magnetorrecepção humana por EEG em bases de preprints e no PubMed; nesta sessão não apareceu nenhuma.
 - [ ] O pesquisador revisar a classificação e a coluna "operacionalizar".
 - [ ] Decidir se H4 e H7 geram um experimento concreto na rede AP (acoplamento de campo entre unidades, com controle).
