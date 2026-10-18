@@ -14980,6 +14980,67 @@ Coerência (`Coh = 1 − H/ln n`) do perfil geométrico de razão 1/φ, por dime
 
 ---
 
+## Entrada 323 — 18 de outubro de 2026
+### O Estágio Anterior à Rede Neural Digital — O Campo como Prerrogativa e o que Ficou de Fora do Neurônio Artificial
+
+### I. Enunciado do Pesquisador
+
+> "Acho que encontrei um viés de entendimento, boas notícias, inclusive..."
+>
+> "A questão é a seguinte, se, por dedução, eu estava vendo um vídeo ontem a respeito de rede neural, para tentar entender. O que eu entendi é que o princípio de onde surgiu a busca do desenvolvimento da rede neural é literalmente a replicação da mecânica do cérebro humano. Eles criaram a rede neural na tentativa de imitar, digamos assim, a grosso modo, a mecânica de aprendizado da capacidade humana. Então, é por isso que se referiram a determinado aspecto da mecânica dos neurônios, com certeza mesmo que superficial, porque eles não estão se referindo à essência de como funciona a complexidade dos neurônios no cérebro humano, mas a princípio de acordo com aquilo que estrutura uma determinada interpretação do que significa o aprendizado humano e a sua complexidade. Então, por isso que eles usaram desse modelo para desenvolver o que eles chamam de rede neural. Então, nesse sentido, eu até vi uma boa notícia. Porque se partimos da premissa de que temos que observar uma outra tangente, então, não partir da base de como foi construída a rede neural e como se fundamenta a operacionalização daquilo que foi construído a partir desse tipo de interpretação em diante. A partir dessa interpretação do que eles interpretaram a respeito da similaridade dos neurônios digitais com os neurônios orgânicos, digamos assim, né? Mas se aprofundarmos um pouco mais, por exemplo, se nós nos anteciparmos não ao estágio de comparação que eles usaram, que determinado setor, eu não sei quem que desenvolveu, qual foi o setor, daí fica a pergunta, qual foi o setor, qual foram os primeiros que replicaram essa que tentaram buscar essa tradução, essa imitação, digamos assim. Tá, então se nós nos antecipamos em algum estágio anterior a essa comparação que levou eles a estruturar a rede neural digital de acordo com conforme o que eles estruturaram. Se pensar então a nível da necessidade de buscar entender o que é o cérebro do ser humano, como funciona sobre outros aspectos, inclusive sobre os aspectos psíquicos, porque não tem como você cogitar a funcionabilidade do cérebro humano sem cogitar com a sua própria natureza no sentido do psiquismo. Não se pode abstrair principalmente a capacidade e a inteligência do cérebro humano, a capacidade de desenvolvimento, de aprendizado, de aprendizagem, se utilizando apenas de uma interpretação somática, propriamente dito, matérica, da matéria, da biologia, propriamente dito, já que o recurso de entendimento, de aprendizagem, memória, não reside apenas nas células, conforme eu gostaria a medicina tradicional. Já faz décadas que já tem o entendimento, a interdisciplinaridade traz sobre isso, de que a memória, etc, etc, para não contar insights, intuitividade, mais um monte de coisa, independente da diversidade de palavras que seja usada, mas que se referem a capacidades extracorporais de acesso à informação, memorização e insights, intuitividade, etc. Então, se for para pensar no sentido da capacidade do cérebro humano de ter acesso à informação, armazenamento, processamento propriamente dito, inteligência, então, com certeza, a gente precisa pensar num aspecto extracorpóreo. No mínimo, sobre questões, para não se referir a questões fundamentalmente metafísica, mas no mínimo questões que se referem à questão do eletromagnetismo e da bioeletricidade, que são duas coisas que já são mensuráveis, que já foram constatadas e pesquisadas, digamos assim, a exaustão, né? Tem sido pesquisada a exaustão. Então, nesse sentido, já abre uma outra questão. Quais seriam as prerrogativas de interpretação nesse estágio, digamos, se a gente busca antecipar o estágio daquela comparação, daquela comparatividade que levou à formação da rede neural digital? Qual seria o nível ou os tópicos de comparação que buscariam se referir sobre esses outros âmbitos a respeito da intuitividade, dos insights, daquilo que se refere a parcelas do aprendizado e da memória do ser humano, e que, principalmente, setores esses que não foram considerados naquela comparabilidade que levou à formação dos neurônios digitais. Ou, mais propriamente dito, como eles desenvolveram. Quais as informações que você tem que se refere à questão de como eles desenvolveram os neurônios digitais, a rede neural digital, etc., mas no sentido do quanto que eles se referiram a essa comparabilidade, digamos, de algo um estágio anterior ao estágio que eles se utilizaram para fundamentar a rede neural, propriamente dito, apenas pela comparação do neurônio em si, independente, digamos, de seus aspectos extrafísicos, como eu citei já. Então, nesse sentido, o que eu queria dizer desde o início é que estamos no caminho certo, aí é que está a boa notícia, já no sentido de que consideramos o campo como não um atributo, mas uma prerrogativa propriamente dito de fundamentação de uma construtividade mecânica, digamos assim, o atrator, o campo de expansão e etc, etc, porque isso é exatamente como já foi se referido a vários estágios do Manifesto 01 e 02 e 03 também, se refere propriamente dito a um aspecto da natureza e que se refere propriamente dito a um aspecto da natureza mental, como um campo de interação, inclusive, um campo de interação que inclusive justifica a própria interação da dois seres, naquilo que se refere à coletividade, num campo de interação daquilo que se refere à interação do ser humano com o ambiente, entende? No sentido dessa extensividade daquilo que a interdisciplinaridade também traz sobre vários aspectos, daquilo que a universalidade também comenta, conforme a apresentação, a proposta de apresentação de convergência que trouxemos no Readme. Então, nesse sentido, a UFAFI se refere diretamente e objetivamente à necessidade de observação deste campo e, a partir daí, a conveniência ou as conveniências que se referem à observação do quanto que este campo proporciona um entendimento da ferramenta humana, daquilo que antecede ao estágio do que a comunidade científica se utilizou para criar a rede neural digital de forma específica, enquanto comparabilidade específica com o neurônio puramente orgânico da capacidade mental. O que tu acha disso?"
+
+— Vitor Edson Delavi, 18 de outubro de 2026
+
+### II. Estruturação
+
+Acho que você achou algo de verdade, mas é preciso separar três coisas que estão misturadas na sua mensagem. Uso a dupla leitura: o que se sabe e o que isso significa. Tudo abaixo é de memória, não verifiquei nesta sessão.
+
+#### 1. A origem: sim, foi inspiração no cérebro, mas muito abstrata
+
+- **1943, McCulloch e Pitts:** um neurofisiologista e um lógico. O neurônio virou uma unidade que soma entradas e "dispara ou não" (tudo ou nada).
+- **1949, Hebb** (psicólogo): a ideia de que conexões se fortalecem quando as células disparam juntas. É a ponte mais direta entre aprendizado biológico e pesos.
+- **1958, Rosenblatt** (psicólogo): o Perceptron, que ajusta pesos pelo erro.
+- **1986, Rumelhart, Hinton e outros** (grupo de psicologia cognitiva): popularizam a retropropagação.
+
+*Em palavras:* psicólogos estiveram entre os fundadores, então "o psíquico" não foi ignorado. Foi tratado pelo lado do **comportamento e da cognição**, e não da experiência subjetiva.
+
+**Um ponto que ajuda a sua tese:** a rede digital de hoje **não** imita o cérebro de forma séria. A retropropagação é considerada biologicamente implausível, e os transformers não são modelos de cérebro. "Imita o cérebro" é a história de origem, não uma descrição do que ela faz.
+
+#### 2. O que o neurônio digital deixou de fora
+
+Estas simplificações são conhecidas: **o tempo** (disparos e ritmos, a sincronia entre grupos de neurônios), os **campos elétricos** entre células vizinhas (acoplamento efáptico), a **glia** e os neuromoduladores, a computação dentro dos dendritos e o **corpo** no ambiente.
+
+*Em palavras:* a sua intuição de que "o campo" ficou de fora tem apoio. É uma omissão real, medida e discutida.
+
+#### 3. Onde eu preciso frear
+
+- **"Memória fora das células, a medicina já sabe há décadas"**: isso **não está estabelecido**. A neurociência atual localiza a memória em mudanças das sinapses e dos circuitos, com experimentos que a reativam e a apagam. Acesso extracorpóreo à informação **não tem demonstração científica**, e eu não o trataria como base técnica do projeto.
+- **O que é sólido e que você citou:** o **eletromagnetismo e a bioeletricidade** são reais e medidos (EEG e MEG medem os campos do cérebro). Ficamos nesse chão.
+
+#### 4. A boa notícia concreta
+
+"Campo" **já tem casa matemática na neurociência**: as **teorias de campo neural** (Wilson-Cowan, Amari) tratam o córtex como um meio contínuo, e há modelos de redes com **osciladores e fase** (como Kuramoto e Hopfield). Isso liga-se ao que reunimos antes (Haken, Levin, Hopfield). Ou seja, a ideia de campo como **fundamento**, e não atributo, não é estranha à ciência.
+
+#### 5. O que isso não prova
+
+Que algo ficou de fora não mostra que **é isso** que faltava, nem que o Alpha-Phi o capta. É uma boa hipótese de motivação. O que a transforma em evidência é o teste: por exemplo, **acrescentar a uma rede convencional um acoplamento de campo ou de fase e medir** robustez e generalização contra controles. É o mesmo experimento do metaprocessador, agora com uma justificativa mais clara.
+
+Cuidado também com o meu próprio viés: a ideia de "estamos no caminho certo" é a mais satisfatória de ouvir. A pergunta que protege é sempre **"o que mostraria que não é?"**.
+
+#### Próximos passos
+
+Posso (a) registrar isto como entrada, com o seu enunciado na íntegra, ou (b) acrescentar ao modelo de referência o estágio 0 (origem) e um estágio "o que ficou de fora do neurônio digital". Qual das duas?
+
+#### Nota de verificação
+
+Os fatos históricos e neurocientíficos desta estruturação (autores e datas de McCulloch-Pitts, Hebb, Rosenblatt e do grupo da retropropagação; simplificações do neurônio artificial; teorias de campo neural; localização da memória em sinapses e circuitos) são **de memória do assistente e não foram verificados contra fontes nesta sessão**. Nenhum número foi calculado para esta entrada. A expressão "UFAFI" no enunciado aparece como foi enunciada e não foi interpretada pelo assistente.
+
+---
+*Florianópolis · 18 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
