@@ -15467,7 +15467,7 @@ Prints da página "Cultivo do Campo", etapa de 233 pontos, repetição 0. Pontos
 | ![Cultivado, esfera](../imagens/etapaC_cultivado_esfera_233.jpg) | ![Construído, esfera](../imagens/etapaC_construido_esfera_233.jpg) |
 | ![Cultivado, mapa topográfico](../imagens/etapaC_cultivado_mapa_233.jpg) | ![Construído, mapa topográfico](../imagens/etapaC_construido_mapa_233.jpg) |
 
-*Em palavras:* no cultivado, duas grandes regiões opostas (grau 2) que continuam a forma das etapas anteriores; no construído, mais regiões e mais curtas (grau 3). As linhas em leque que aparecem em algumas vistas da esfera vêm da malha de desenho perto dos polos (a grade de latitude e longitude se concentra ali) e não são informação do campo.
+*Em palavras:* no cultivado, duas grandes regiões opostas (grau 2) que continuam a forma das etapas anteriores; no construído, mais regiões e mais curtas (grau 3). As listras em leque, a faixa diagonal e o rendilhado pontilhado que aparecem em algumas vistas da esfera **não são informação do campo**: um teste de renderização (superfície semitransparente, opaca e sem os neurônios) mostrou que vêm da leve transparência da superfície, que deixava ver a face de trás, e da malha de desenho, cujos anéis convergem num polo. Com a superfície opaca, desaparecem; o padrão acompanha a rotação porque está preso à malha 3D, não à tela. A página foi corrigida para superfície opaca.
 
 #### Nota de verificação
 
