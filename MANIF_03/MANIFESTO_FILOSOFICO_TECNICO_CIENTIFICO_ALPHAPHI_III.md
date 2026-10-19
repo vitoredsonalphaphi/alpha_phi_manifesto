@@ -15292,6 +15292,49 @@ Nenhum número foi calculado para esta entrada. As referências à rede de Hopfi
 
 ---
 
+## Entrada 328 — 19 de outubro de 2026
+### O Campo Antes dos Valores — A Pré-Análise do Ambiente e a Regra de Construção
+
+### I. Enunciado do Pesquisador
+
+> Deixa eu perguntar uma coisa. Na construção de uma rede convencional, de acordo com a inserção de CPPN, seria esse método que você utilizou, seria o método que normalmente seria utilizado para tentar definir os valores? Porque o que eu penso é que é uma forma meio que aleatória, uma coisa meio que contando com a sorte sobre como que está sendo definido os pesos e valores dos neurônios. Principalmente numa rede onde não tem parâmetro, né? Tipo assim, se você estivesse inserindo esses valores numa rede convencional, já tem um parâmetro, porque já possui toda uma trajetória de outros exemplos de construção na rede convencional. Mas aí a gente está tentando numa rede alfa-fi, acredito, né? Você tentou inserir isso numa rede esférica, né? Então, o que eu vejo é que, assim, de repente a gente está tentando inserir valores e dados numa rede que eu não sei se não precisaria uma outra pré-análise antes da inserção dos valores, antes da inserção dos neurônios e dessa construtividade toda, no sentido de verificar, propriamente dito, primeiro o campo e ver o que esse campo, quais as características que esse campo oferece e quais destas características é conveniente para adaptar esses valores, esses neurônios, toda essa ferramenta. Isso foi feito, isso seria conveniente fazer, isso seria uma pré-função, digamos. Volto a comentar de novo no eco ressonante. Foi aplicado um eco ressonante no campo ambiente para verificar sobre quais os pesos mais apropriados para se utilizar, que não que alcançasse o resultado exato propriamente dito, mas que alcançasse resultados mais aproximados do que esses que foram alcançados. Que fica a pergunta: como que você estipulou cada um dos pesos que você inseriu, cada um dos valores dos neurônios e ambientes onde foram acoplados? Sobre qual regra que você se utilizou para orquestrar, digamos assim, essa construção?
+
+— Vitor Edson Delavi, 19 de outubro de 2026
+
+*Texto na íntegra, como ditado (sem revisão).*
+
+### II. Estruturação
+
+#### 1. As regras que foram usadas
+
+Na memória esférica (etapa 1 e teste com orçamento), nada foi deixado à sorte nos pesos: as posições vêm da esfera de Fibonacci (fórmula fixa); os pesos vêm da **regra de Hebb** (o peso entre dois neurônios é a soma, em todas as memórias, de "concordam ou discordam", multiplicada pelo mapa de ligações); o mapa de ligações (CPPN) foi escolhido entre cinco fórmulas **definidas a priori pelo assistente**, e o eco escolheu uma delas. O acaso entra só nas memórias, nas pistas e nos controles, como exige a estatística.
+
+#### 2. Não é como o CPPN é usado de verdade
+
+No HyperNEAT, o CPPN é **buscado** (a evolução testa milhares de variações). Cinco fórmulas fixas e uma sondagem curta são a versão mínima do método.
+
+#### 3. Onde a crítica do pesquisador acerta
+
+Faltou a **pré-análise do campo**. E há um motivo mais forte: as memórias eram **padrões aleatórios**, que não têm forma no espaço. Nenhuma geometria podia ajudar **por construção**: o ambiente não tinha forma para o campo acompanhar. A razão para a geometria é a forma do mundo que a rede processa.
+
+#### 4. A pré-função proposta
+
+Primeiro ouvir o ambiente (dados com forma), depois construir o campo a partir dessa leitura (as ligações acompanham a estrutura dos dados), comparando com a escolha a priori, com o acaso e com os dados embaralhados.
+
+#### 5. O que o teste com orçamento mostrou
+
+Com o mesmo número de ligações (2.464), a vizinhança pura e os saltos de Fibonacci **perderam** para ligações ao acaso; φ não superou os mesmos saltos em ordem embaralhada (nulo para φ). Observação sem critério prévio: os saltos de Fibonacci lembraram o mesmo que o seu embaralhado com **45% do fio**. Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 1.
+
+#### Nota de verificação
+
+Números impressos por código executado nesta sessão. Referências ao HyperNEAT conferidas em resumos (ver `Ponte/fundamentacao/ficha_hyperneat_campo_como_estrutura.md`).
+
+---
+*Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
