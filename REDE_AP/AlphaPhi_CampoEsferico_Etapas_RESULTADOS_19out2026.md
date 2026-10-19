@@ -131,13 +131,29 @@ Pontos **encaixados** (ângulo áureo + altura frac(i·√2)): os pontos de cada
 
 **Leitura.** O estágio 2 passa a ter previsor: antes de instalar uma ferramenta, é possível calcular se a memória dela se sustenta e quanto recupera, conhecendo o que ela traz e como é o ambiente. Válido para as ligações de vizinhança testadas; o teste no campo cultivado vem a seguir.
 
+## 6. Etapa E — o previsor no campo cultivado, ferramentas instaladas por etapas (`AlphaPhi_CampoEsferico_EtapaE_Ferramentas.py`)
+
+Campo: os 233 pontos encaixados da Etapa C, com a ligação do campo da etapa final como **fundo** (peso β ∈ {0; 0,02; 0,05}). Quatro ferramentas, cada uma com 4 padrões com forma e escala própria (comprimento de correlação 0,3 / 0,5 / 0,7 / 0,9), instaladas uma por vez por Hebb sobre a ligação de vizinhança (σ = 0,35). Previsor condicional **heterogêneo** (cada ferramenta com a sua correlação, de 200 padrões separados; o fundo entra exatamente na média), comparado à correlação única da mistura. Sementes 20–29; 30 combinações.
+
+| Critério | Resultado | Veredito |
+|---|---|---|
+| E1 previsão × estabilidade: Spearman ≥ 0,8 e erro ≤ 0,05 | 0,995; 0,0055 | **cumprido** |
+| E2 previsão × recuperação: Spearman ≥ 0,7 | 0,735 | **cumprido, no limite** |
+| E3 erro com correlação própria < erro com correlação única | 0,0055 < 0,0138 | **cumprido** |
+
+**O fundo do campo.** Sem fundo (β = 0), a ferramenta 1 cai de 0,999 (sozinha) para 0,883 (com as quatro). Com fundo fraco (β = 0,02), custa no começo (0,964) e ajuda com a carga (0,918 com as quatro): o campo cultivado age como âncora. Com fundo forte (β = 0,05), os atratores do campo competem com as memórias e tudo piora (0,69 a 0,93) — previsto antes, e acompanhado pelo previsor.
+
+**Estabilidade com as quatro ferramentas, sem fundo:** escala 0,3 → 0,883; 0,5 → 0,925; 0,7 → 0,951; 0,9 → 0,971.
+
+**Auditoria e correção.** A auditoria inicial apontou uma confusão entre ordem de instalação e escala (a ferramenta 1 era a mais antiga e a de escala mais curta). **Correção posterior:** a regra de Hebb soma as memórias, e a soma não depende da ordem; com as quatro instaladas, a ligação final é idêntica em qualquer ordem. Logo, as diferenças na etapa final são de **natureza** (a ferramenta de escala curta é mais frágil), não de idade; a confusão vale só para as etapas intermediárias. A previsão feita antes do teste, de que as ferramentas de escala grande interfeririam mais, **estava errada**: ocorreu o contrário. Limite declarado: o estado cultivado não entra na estabilidade das memórias; o "cultivado" entra pelos pontos encaixados e pelo fundo.
+
 ## Exploração sem registro como resultado
 
 Comparação de disposições encaixadas (condição do medidor e uniformidade, N = 34 a 233): Fibonacci padrão (não encaixa) 1,1 / 0,91–0,93; ângulo áureo + altura √2 (encaixa) 1,6–4,5 / 0,57–0,93; ângulo áureo + van der Corput (encaixa) 1,6–5,1 / 0,27–0,75. Uma primeira tentativa com 1/φ e 1/φ² nas duas coordenadas foi **inválida**: os dois números são dependentes (1/φ² = 1 − 1/φ) e todos os pontos caíram numa espiral.
 
 ## Próximo passo
 
-**Feito (seção 5).** Próximo: o previsor no campo cultivado, com ferramentas instaladas por etapas. *Proposta original:* separar cada padrão com forma em envelope (harmônicos de grau baixo, previstos modo a modo) e conteúdo fino (quase aleatório, onde T2 já funciona), para prever a memória com forma antes de as ferramentas entrarem no campo cultivado.
+**Feito (seções 5 e 6).** Próximo: ferramentas instaladas durante o crescimento do campo; depois, o eixo radial (cascas internas, α no centro). *Proposta original:* separar cada padrão com forma em envelope (harmônicos de grau baixo, previstos modo a modo) e conteúdo fino (quase aleatório, onde T2 já funciona), para prever a memória com forma antes de as ferramentas entrarem no campo cultivado.
 
 ---
 *Florianópolis · 19 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
