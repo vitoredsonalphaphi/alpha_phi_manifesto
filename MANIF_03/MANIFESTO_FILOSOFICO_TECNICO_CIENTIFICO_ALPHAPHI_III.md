@@ -15105,6 +15105,64 @@ Sobre o estudo da Caltech (Wang e colegas, *eNeuro*, 2019): os detalhes acima fo
 
 ---
 
+## Entrada 325 — 19 de outubro de 2026
+### O Campo que Precede a Forma, Aplicado à Formação da Rede Neural — O Que a Literatura Já Cogita
+
+### I. Enunciado do Pesquisador
+
+> "Voltamos pensar em misturar levin, campo que antecede a forma. E o inventor da rede neural, pit,  citar a questão de que se a rede neural foi uma criação de uma busca de uma replicação da capacidade humana de raciocínio, a exemplo da rede neural do cérebro humano. Então, se Levin comenta de que o campo precede a forma, então por que não cogitar de que, a exemplo do ser humano, por mais que não exista uma comprovação científica, em partes, mesmo Levin citando de que o campo precede a forma, também na formação do ser humano, como você mesmo comentou, de que há estudos e há pesquisas que demonstraram que na formação das células da rã foi percebido os aspectos da formação dos olhos e dos órgãos da cabeça antes da formação biológica propriamente dito, comprovando Levin quando diz que o campo precede a forma. Então, se seguir essa sequência, por mais que seja uma comparação superficial, e considerado que um campo precede a forma da própria capacidade da formação do cérebro humano, então por que não replicar esta previsão, esta antecedência, digamos assim? Por que não procurar cogitar em refletir sobre como que o campo precede a forma do cérebro para replicar esse aspecto na questão da formação da rede neural? Se a rede neural foi criada, de certa forma, a grosso modo, para imitar a capacidade de computação do ser humano, de raciocínio do ser humano, por que não buscar replicar de acordo com uma, mesmo que seja uma hipótese, daquilo que se refere a um campo que precede a questão do raciocínio, um campo que precede a questão da ideia?"
+>
+> (a mensagem terminou com a pergunta, em outra mensagem do mesmo turno:) "Quais pesquisas cogitam com algo parecido com essa proposta?"
+
+— Vitor Edson Delavi, 19 de outubro de 2026
+
+*Texto na íntegra, como ditado (sem revisão). Marcas de oralidade preservadas.*
+
+### II. Estruturação
+
+Há pesquisa que se aproxima de partes da proposta, mas **nenhuma que faça exatamente o que o enunciado descreve** (um campo bioelétrico ou eletromagnético que precede e organiza a formação de uma rede artificial). Os trabalhos achados cobrem pedaços, e a proposta ocupa o espaço entre eles. Foram lidos resumos e páginas das buscas, não os artigos inteiros.
+
+#### 1. O que "o campo precede a forma" demonstra, de fato
+
+No sapo (*Xenopus*), um grupo de Tufts (Vandenberg, Adams e Levin, 2011) viu, com corante sensível a voltagem, um **padrão de voltagem e pH que desenha um "rosto elétrico"** antes de as estruturas faciais se formarem. Alterar esse padrão correlacionou-se com malformações cranianas. *Em palavras:* o padrão aparece **antes** e é **necessário**. Isso vale para a **forma do corpo**. Que valha para o pensamento ou a ideia é **extrapolação do pesquisador**, sem estudo direto encontrado.
+
+#### 2. Pesquisas próximas
+
+**Redes artificiais que se formam por desenvolvimento.** Programas de desenvolvimento neural (Najarro, Sudhakaran e Risi, 2023) e HyperNCA (2022): a rede é **cultivada** por regras locais. HyperNEAT e CPPN (Stanley): os pesos são **função da posição** dos neurônios no espaço; a geometria vem antes dos pesos.
+
+**Estrutura antes do aprendizado.** Zador (2019), "gargalo genômico": os animais nascem com conectividade estruturada. Acompanhamento de 2024 (PNAS): redes padrão podem ser comprimidas por ordens de grandeza e o pré-treino se aproxima do desempenho da rede treinada.
+
+**Atividade espontânea antes da experiência.** Ondas retinianas: pré-treinar redes artificiais com essas ondas melhora o aprendizado posterior (May, Dauphin e Gjorgjieva; Ligeralde e colegas). São pré-impressões e trabalhos de oficina, sem replicação ampla nem comparação com ruído branco encontrada.
+
+**O próprio Levin.** Memória de padrão e atratores (Pezzulo e Levin, 2015 e 2016); Manicka e Levin (2025), "Field-mediated bioelectric basis of morphogenetic prepatterning" (*Cell Reports Physical Science*, DOI 10.1016/j.xcrp.2025.102865), **cujo resumo e resultados não foram lidos**; autômatos celulares neurais (Mordvintsev, Randazzo, Niklasson e Levin, 2020).
+
+#### 3. Onde está a lacuna
+
+| | Já existe | Não encontrado |
+|---|---|---|
+| Geometria ou função espacial gerando a conexão | sim (HyperNEAT, CPPN) | com **φ ou campo** como gerador |
+| Estrutura anterior ao aprendizado melhora a aprendizagem | sim (Zador, ondas retinianas) | com campo bioelétrico como origem da estrutura |
+| Campo precede a forma em tecidos | sim (Levin) | em **redes artificiais** ou no **raciocínio** |
+
+*Em palavras:* a lacuna é real, há apoio de cada lado, e falta o elo entre eles.
+
+#### 4. Como virar teste (proposta, não executada)
+
+1. **Pré-padrão de campo na inicialização:** pesos iniciais como função da posição das unidades na esfera de Fibonacci, contra pesos aleatórios, grade regular e o mesmo núcleo embaralhado.
+2. **"Ondas" de pré-treino:** padrões espaço-temporais estruturados (com φ ou não) contra ruído branco e contra nada.
+
+Alerta: a ablação anterior do repositório mostrou que a vantagem da inicialização φ era de **escala**, não de φ. Os controles precisam incluir isso.
+
+#### Nota de verificação
+
+Fontes conferidas por **resumos de busca**; os artigos originais não foram lidos. Nenhum número foi calculado para esta entrada. Fontes: [Programas de desenvolvimento neural (arXiv 2307.08197)](https://arxiv.org/abs/2307.08197v1) · [HyperNCA (arXiv 2204.11674)](https://arxiv.org/pdf/2204.11674) · [HyperNEAT (arXiv 1312.5355)](https://arxiv.org/pdf/1312.5355) · [Zador, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6704116/) · [PNAS 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11420173/) · [Ondas retinianas (bioRxiv)](https://www.biorxiv.org/content/10.1101/2024.06.15.599143.full.pdf) · [Ligeralde e colegas (arXiv 2312.02791)](https://arxiv.org/abs/2312.02791v1) · [Rosto elétrico, Tufts 2011](https://now.tufts.edu/2011/07/18/face-frog-time-lapse-video-reveals-never-seen-bioelectric-pattern) · [Bioeletricidade do desenvolvimento (PMC7935058)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7935058).
+
+---
+*Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
