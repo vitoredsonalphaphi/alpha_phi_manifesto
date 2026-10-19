@@ -15458,7 +15458,16 @@ O campo cresceu em pontos encaixados (34, 55, 89, 144, 233), com a previsão **g
 - **O cultivo deixa história.** Na etapa final, onde a previsão admitia os graus 2 e 3, o campo construído de uma vez foi ao grau 3 (o mais forte) e o cultivado permaneceu no grau 2 (a forma que já tinha), preservando 90% dos pontos — a semente e o caminho escolheram, **dentro da faixa prevista**, a alternativa de continuidade (observação descritiva, sem critério prévio).
 - O cultivo **não aprofundou** o atrator (C3 não cumprido) e, quando a forma prevista mudou de natureza (grau 1 → 2), o campo se reorganizou e preservou só 71% (C4 não cumprido, exatamente onde fora previsto).
 
-Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 4. *Imagem do scanner topográfico da Etapa C: a acrescentar quando o pesquisador enviar o registro.*
+Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 4. #### 6. O scanner topográfico da Etapa C (registro do pesquisador, 19/10/2026)
+
+Prints da página "Cultivo do Campo", etapa de 233 pontos, repetição 0. Pontos: neurônios no estado real (dourado +1, azul −1). Superfície: a forma suavizada por harmônicos esféricos até o grau 9.
+
+| Cultivado (grau 2, preservou 90%) | Construído de uma vez (grau 3) |
+|---|---|
+| ![Cultivado, esfera](../imagens/etapaC_cultivado_esfera_233.jpg) | ![Construído, esfera](../imagens/etapaC_construido_esfera_233.jpg) |
+| ![Cultivado, mapa topográfico](../imagens/etapaC_cultivado_mapa_233.jpg) | ![Construído, mapa topográfico](../imagens/etapaC_construido_mapa_233.jpg) |
+
+*Em palavras:* no cultivado, duas grandes regiões opostas (grau 2) que continuam a forma das etapas anteriores; no construído, mais regiões e mais curtas (grau 3). As linhas em leque que aparecem em algumas vistas da esfera vêm da malha de desenho perto dos polos (a grade de latitude e longitude se concentra ali) e não são informação do campo.
 
 #### Nota de verificação
 
