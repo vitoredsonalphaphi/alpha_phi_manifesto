@@ -15374,6 +15374,49 @@ Números impressos por código executado nesta sessão. Fototropismo e gravitrop
 
 ---
 
+## Entrada 330 — 19 de outubro de 2026
+### A Régua do Campo Ainda Inexistente — Da Tentativa à Teoria: o Previsor
+
+### I. Enunciado do Pesquisador
+
+> Mas com qual parâmetro que você está realizando essas medições? Com qual parâmetro que você observa que este ou aquele teste não passou, não foi nulo, etc, etc, etc? Se a construção do ambiente de memória esférico de AlphaFi está sendo implementado talvez a primeira vez. Conforme que a gente já conversou, você não estaria usando os critérios, a régua do ambiente da rede neural convencional? Porque nós não temos os parâmetros do campo AlphaFi para dizer que alcançou ou não. Não teria que, de repente, analisar sobre uma outra perspectiva, em vez de repente, usar essa régua que você está usando, que eu não sei nem qual é, já que não existia um campo AlphaFi antes dessa nossa tentativa de estruturação. Como poderia fazer para saber se uma estruturação poderia alcançar eficiência? Pois é, mas daí teria que saber como é que você vai estar estruturando. Teria que ter alguma ferramenta para prever o funcionamento e o êxito desse funcionamento, de acordo com, mesmo com a mudança de campo. Deve ter um caminho. Deve ter um caminho que não que pule as etapas, mas que se utilize de um outro método, diferente de um método de uma tentativa aleatória de implementação e de testificação, inclusive sem uma métrica precedente, porque não existia um campo AlphaFi antes desse. Entende? Deve ter uma maneira. Alguma maneira que... Deve ter na literatura alguma coisa que algum instrumento que tenha formalizado o campo antes. Meu Deus do céu. Deve ter alguma forma. Deve ter alguma maneira. Como é que a gente vai achar essa solução? Como a gente vai achar essa solução? Vamos fazer uma reza para a santa do digital. Na oração pro binário.
+
+— Vitor Edson Delavi, 19 de outubro de 2026
+
+*Texto na íntegra, como ditado (sem revisão).*
+
+### II. Estruturação
+
+#### 1. Qual régua foi usada
+
+A régua foi a **função**: a memória lembra ou não lembra (sobreposição entre o padrão recuperado e o guardado). Ela não vem da rede convencional; é a definição de memória em qualquer substrato. "Nulo" significou: a geometria não fez diferença **em relação aos próprios controles**, não que o AlphaFi perdeu para alguém.
+
+#### 2. Onde o pesquisador tem razão
+
+Faltou a segunda régua, a do **caráter AlphaFi** (Coh + Entr, D_φ, Coh_rel, SEAL). As duas precisam andar juntas, como na dupla leitura: só a função ignora o que o AlphaFi é; só o caráter cai na "régua errada" da Entrada 322.
+
+#### 3. O caminho que existe: prever antes de construir
+
+Turing (1952) e Amari (1977) calculam, pela forma de ligação de um campo (reforço perto, inibição longe), qual padrão ele vai formar; Amit, Gutfreund e Sompolinsky (1985) calcularam a capacidade da memória de Hopfield **por teoria**, antes da simulação; a relação sinal/ruído prevê se a recuperação funciona. Calcula-se primeiro o que o campo vai fazer; a simulação vem depois e o critério passa a ser **a teoria acertar**.
+
+#### 4. O que a Etapa T mostrou
+
+- **O campo vazio foi previsto.** A fórmula do campo, pelo teorema de Funk–Hecke, previu que ele preferiria padrões de grau 3 na esfera; na esfera de Fibonacci, 943 de 1.000 atratores caíram exatamente no grau 3 e os demais no grau 2 (T1 cumprido). **A forma foi prevista antes de existir.**
+- **A esfera de Fibonacci é a disposição em que o campo é previsível e mensurável:** a auditoria mostrou que, com pontos aleatórios, o próprio medidor falha (acerta 18% a 40% de padrões de grau conhecido). Esse é, até aqui, o papel concreto de φ: não melhora a memória, torna o campo previsível.
+- **A memória sem forma foi prevista** (Spearman 0,98 e 0,96); **a memória com forma, não** (a aproximação gaussiana satura).
+
+Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 3.
+
+#### Nota de verificação
+
+Fontes conferidas em resumos: Turing 1952; Amari 1977 (doi 10.1007/BF00337259); Amit, Gutfreund e Sompolinsky 1985 (capacidade ≳ 0,14 no resumo; o valor 0,138 é o da literatura posterior); Derrida, Gardner e Zippelius 1987. O teorema de Funk–Hecke é citado de memória. Números impressos por código executado nesta sessão.
+
+---
+*Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
