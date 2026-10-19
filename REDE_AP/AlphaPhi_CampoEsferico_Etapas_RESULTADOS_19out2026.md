@@ -2,7 +2,7 @@
 
 **Status:** auditado · registrado com aval do pesquisador
 **Antecedente:** `AlphaPhi_MemoriaEsferica_Etapa1_RESULTADOS_19out2026.md` (memória esférica, etapa 1: nulo para a geometria)
-**Entradas do Manifesto 03:** 328 a 332 (os enunciados que antecederam cada teste)
+**Entradas do Manifesto 03:** 328 a 331 (os enunciados que antecederam cada teste)
 **Regra comum:** critérios escritos na conversa antes de cada execução; comparação pareada = diferença média > 2 erros-padrão e vantagem em ≥ 80% das sementes ou repetições; todos os números abaixo foram impressos por código executado na sessão de 19/10/2026.
 
 ## Síntese

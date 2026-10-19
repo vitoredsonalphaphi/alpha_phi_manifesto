@@ -15325,6 +15325,10 @@ Primeiro ouvir o ambiente (dados com forma), depois construir o campo a partir d
 
 Com o mesmo número de ligações (2.464), a vizinhança pura e os saltos de Fibonacci **perderam** para ligações ao acaso; φ não superou os mesmos saltos em ordem embaralhada (nulo para φ). Observação sem critério prévio: os saltos de Fibonacci lembraram o mesmo que o seu embaralhado com **45% do fio**. Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 1.
 
+#### 6. O que a cartografia do campo (Etapa 0) mostrou
+
+A pré-análise proposta foi testada: mapear o campo vazio, medir a forma do ambiente, medir a ressonância entre os dois e só então construir. A pergunta central (a ressonância medida antes prevê a memória) **não foi demonstrada**, com uma falha de desenho reconhecida: a ligação que mediu o campo não era a que construiu a memória. Observação sem critério prévio: **com ambiente com forma, a geometria passa a ajudar a memória** (+0,062 contra o mesmo campo embaralhado, 9/10), o que confirma o argumento desta entrada; mas posições aleatórias na esfera lembraram mais que a de Fibonacci: não é φ. Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 2.
+
 #### Nota de verificação
 
 Números impressos por código executado nesta sessão. Referências ao HyperNEAT conferidas em resumos (ver `Ponte/fundamentacao/ficha_hyperneat_campo_como_estrutura.md`).
@@ -15336,45 +15340,6 @@ Números impressos por código executado nesta sessão. Referências ao HyperNEA
 ---
 
 ## Entrada 329 — 19 de outubro de 2026
-### O Campo Atrator como Orientação — A Nave-Mãe, a Planta e a Cartografia do Campo
-
-### I. Enunciado do Pesquisador
-
-> Pelo que eu estou entendendo, é a necessidade de estabelecer o campo primeiro, o campo como diretriz, e a diretriz para exercer, propriamente dito, o atrator, e o atrator para não para regrar de forma estática os dados, os neurônios e os valores, mas para iluminar o caminho, digamos assim, para orientar numa escala de alternativas, de N alternativas em cada uma das instrumentalizações, para que dentro dessas alternativas, não que seja um resultado tendenciado, mas que possa significar o atrator, propriamente dito. Porque o que é o atrator? O que é um campo atrator? Se a gente fizer análise, vamos puxar pela questão do cinema, análise das naves da Star Trek ou da Star Wars, quando existem as naves-mãe e as naves de reconhecimento chegam para ancorar na nave-mãe. Eles desligam a nave antes de chegar e o campo atrator da nave-mãe atrai a nave. Eles não precisam manobrar para entrar no compartimento do estacionamento da nave-mãe. Ou seja, o campo atrator atrai as naves de reconhecimento. As naves de reconhecimento que chegam próximo da nave-mãe não precisam conhecer o caminho, a porta de entrada e onde se acoplar dentro do estacionamento. O campo atrator faz tudo isso para eles. É por isso que chamam de atrator, campo atrator. E eu acho que em outros aspectos, em outros exemplos, apesar de parecer um exemplo fraco, mas pelo que eu entendo, é assim que acontece. O campo atrator da circunstância, ou que move o fluxo, digamos, do crescimento das plantas, acredito que seja da mesma forma. É um campo ambiental da ecologia que atrai o crescimento das formas, o crescimento das plantas. E não é de dentro para fora. É uma questão em conjunto. Tanto a questão da biologia de dentro para fora, da questão das células, daquilo que se refere ao desenvolvimento e o que proporciona o desenvolvimento da planta e, por isso, o crescimento. Mas tem também a questão do campo atrator. Um deles seria, por exemplo, a inserção do sol, a influência do sol. O sol é um atrator para o crescimento. Não é apenas uma questão de providência de determinadas substâncias para o crescimento da planta. É uma questão de uma atração magnética para o crescimento da planta. E desde a semente também, para romper a questão da terra, para brotar os primeiros brotos, é tudo uma questão de uma imanência magnética de atração, num certo sentido. Claro que tem todo um contexto. Claro que tem o contexto do germe de cada planta, que se refere à necessidade da expansão, à necessidade de vir a ser, de vir a nascer. Ou seja, é uma soma. Então dá para dizer que é uma soma entre um campo atrator e um impulso de dentro para fora, no sentido do esforço que a própria planta faz gradativamente no seu próprio desenvolvimento, na construção de cada vez mais células, para demonstrar as células que representam o crescimento de cada um dos elementos de sua própria planta, etc, etc, etc. Então, nesse sentido, eu penso que seria interessante até analisar, porque foi exatamente uma análise parecida com essa, uma questão de análise de como funciona a questão biológica, que eles se utilizaram para se referir na construção da rede neural. E, se não me engano, foi isso que tu sugeriu também a respeito do CPPN e da HyperNet. Então, se todas essas análises se referiram sempre a uma questão de uma comparatividade com as questões de como funciona mecanicamente o crescimento das células, etc, etc, etc, etc. Então, eu acho que, por extensão, a instrumentalização dos neurônios e dos valores precisam seguir, se não igual, mas algo que faça alusão a esse método, a esse exemplo. Então, eu volto a dizer que eu acho que seria uma prerrogativa procurar identificar não os testes antes, um acoplamento, não uma instrumentalização antes e depois fazer um teste, sem saber onde e o que está sendo instrumentalizado num campo, se o que precisa primeiro é estabelecer o campo atrator. Então, a questão que fica é essa: como que poderia observar sobre isso? Estabelecer, achar uma alternativa e fazer os testes necessários para verificar se as alternativas de estabelecimento do campo é o viável. E daí fica a pergunta: o que que existe na literatura? O próprio CPPN não comenta sobre isso? Quando você comentou que através do CPPN eles estabeleceram a geometria como diretriz, onde a geometria seria o campo geométrico, seria uma forma de atrator a respeito dos dados e dos valores para o desenvolvimento da rede. Então, eu volto a dizer, eu acho que seria uma das questões prioritárias é procurar identificar como formalizar o campo de expansão, que seria o atrator. Na verdade, não. O campo de expansão é uma coisa e o atrator é outra. Mas, enfim, teria que ver primeiro, acho que isso, para depois pensar em instrumentalizar os neurônios e os valores e quais os tipos de pesos e correlações com isso, com aquilo, aquele e outro. Eu não sei se eu estou certo, é o que está me vindo para mim como hipótese.
-
-— Vitor Edson Delavi, 19 de outubro de 2026
-
-*Texto na íntegra, como ditado (sem revisão).*
-
-### II. Estruturação
-
-#### 1. O que está certo
-
-**O atrator orienta, não impõe.** Matematicamente, um atrator é um estado para onde o sistema converge sozinho a partir de uma região inteira de pontos de partida (a bacia); quem está dentro da bacia não precisa conhecer o caminho. A nave que desliga o motor e é puxada para o hangar descreve isso. **Campo de expansão e atrator são coisas diferentes:** o campo é o espaço e as regras de crescimento (onde as coisas podem estar); o atrator é para onde a dinâmica converge (onde as coisas se assentam). **Campo externo + impulso interno** está certo para as plantas.
-
-#### 2. Um ajuste
-
-O Sol não atrai a planta magneticamente: a planta percebe a luz com receptores, um hormônio (auxina) se acumula no lado da sombra e as células desse lado crescem mais; a semente rompe a terra guiada pela gravidade (de memória do assistente). A estrutura da ideia — um campo externo orienta e o impulso interno executa — continua valendo.
-
-#### 3. Literatura
-
-O CPPN e o HyperNEAT tratam a geometria como **substrato**. A paisagem de atratores que vem antes aparece em Waddington (paisagem epigenética), Levin (forma-alvo como atrator) e Hopfield (paisagem de energia). A peça que juntaria tudo — definir a paisagem primeiro, a partir do ambiente, e só depois a rede — não foi encontrada pronta.
-
-#### 4. A cartografia do campo (Etapa 0) e o que ela mostrou
-
-Mapear o campo vazio, medir a forma do ambiente, medir a ressonância entre os dois e só então construir. Resultado: a pergunta central (a ressonância medida antes prevê a memória, Z4) **não foi demonstrada**, com uma falha de desenho reconhecida (a ligação que mediu o campo não era a que construiu a memória). Observação sem critério prévio: **com ambiente com forma, a geometria passa a ajudar a memória** (+0,062 contra o mesmo campo embaralhado, 9/10) — o que confirma o argumento da Entrada 328 —, mas posições aleatórias na esfera lembraram mais que a de Fibonacci: não é φ. Detalhes em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 2.
-
-#### Nota de verificação
-
-Números impressos por código executado nesta sessão. Fototropismo e gravitropismo de memória do assistente.
-
----
-*Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
-*Vitor Edson Delavi · Claude*
-
----
-
-## Entrada 330 — 19 de outubro de 2026
 ### A Régua do Campo Ainda Inexistente — Da Tentativa à Teoria: o Previsor
 
 ### I. Enunciado do Pesquisador
@@ -15417,7 +15382,7 @@ Fontes conferidas em resumos: Turing 1952; Amari 1977 (doi 10.1007/BF00337259); 
 
 ---
 
-## Entrada 331 — 19 de outubro de 2026
+## Entrada 330 — 19 de outubro de 2026
 ### O Previsor como Atrator do Desenvolvimento — Cultivar o Campo Antes de Instrumentalizá-lo
 
 ### I. Enunciado do Pesquisador
@@ -15444,11 +15409,11 @@ O "sem forma" do previsor da memória refere-se **ao que é guardado**, não ao 
 
 #### 4. O que ficou para testar
 
-Se o campo cultivado segue a forma prevista em cada etapa e se difere do construído de uma vez. Problema técnico identificado: os pontos da esfera de Fibonacci padrão **não se encaixam** de uma etapa para outra (a disposição de 89 pontos não contém a de 34). O teste e a solução estão na Entrada 332.
+Se o campo cultivado segue a forma prevista em cada etapa e se difere do construído de uma vez. Problema técnico identificado: os pontos da esfera de Fibonacci padrão **não se encaixam** de uma etapa para outra (a disposição de 89 pontos não contém a de 34). O teste e a solução estão na Entrada 331.
 
 #### Nota de verificação
 
-A organização do embrião do grosseiro para o fino é citada de memória. Esta entrada não traz números próprios; os resultados estão na Entrada 332 e em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 4.
+A organização do embrião do grosseiro para o fino é citada de memória. Esta entrada não traz números próprios; os resultados estão na Entrada 331 e em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`, seção 4.
 
 ---
 *Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
@@ -15456,7 +15421,7 @@ A organização do embrião do grosseiro para o fino é citada de memória. Esta
 
 ---
 
-## Entrada 332 — 19 de outubro de 2026
+## Entrada 331 — 19 de outubro de 2026
 ### O Encaixe Fractal, as Alternativas Próximas da Previsão e o Envelopamento — O Campo Cultivado Segue a Forma Prevista
 
 ### I. Enunciado do Pesquisador
