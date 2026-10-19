@@ -1,0 +1,14 @@
+
+estado do Phantom   preservação  recup. 25%  recup. 40%
+desligado               0.7089       0.6265       0.4191 
+inscrito                0.6040       0.5573       0.3712 
+Phantom ativo           0.5978       0.5398       0.3871 
+ruído ativo             0.5952       0.5541       0.3946 
+seno 880 ativo          0.6113       0.5611       0.3952 
+
+=== CRITÉRIOS ===
+A1 recuperação 40%: Phantom ativo − desligado: -0.0320 (EP 0.0113, 2/10) -> NÃO cumprido
+A2 recuperação 40%: Phantom ativo − ruído ativo: -0.0075 (EP 0.0103, 5/10) -> NÃO cumprido
+A3 recuperação 40%: Phantom ativo − seno 880 ativo: -0.0080 (EP 0.0117, 3/10) -> NÃO cumprido
+A4 preservação: ativo − desligado = -0.1111 (>= −0,01) -> NÃO cumprido
+(descritivo) inscrito − desligado, recuperação 40%: -0.0479 (EP 0.0140, 2/10)
