@@ -15220,6 +15220,78 @@ O valor de 50,9% é citado do documento do Manifesto 02 indicado acima, e não f
 
 ---
 
+## Entrada 327 — 19 de outubro de 2026
+### A Memória Esférica como Simulação e Modelo — O Autoalinhamento pela Geometria como Segundo Estágio
+
+### I. Enunciado do Pesquisador
+
+> "É interessante porque essa memória esférica, ela já serve então de simulação para observar o contexto da ferramentalização, né, como um todo, e já serve também, depois da verificação do êxito, para modelo da instrumentalização propriamente dito, né, da rede AP, porque ela serve como uma estrutura da própria memória de atrator, como você explicou. Ela serve como uma ferramenta que pode servir para outros substratos com o mesmo mecanismo, acredito. É interessante. E o que seria interessante deixar registrado, então, desde já, uma outra hipótese, não necessariamente nessa primeira etapa, sobre o sentido da necessidade da observação a respeito do alinhamento, de como e o que precisaria inserir nessa simulação, num segundo estágio, depois dessa primeira etapa, o que poderia inserir e como poderia inserir sobre as questões das ferramentas que façam, como é que eu posso dizer, que efetivem um método, uma mecânica da própria rede observar sobre sua própria estrutura, de não se permitir se desviar daquilo que tem como diretriz, ou seja, um autoalinhamento, né? Ou seja, aquilo que a gente já está perseguindo também há alguns meses. Como que poderia instrumentalizar esse modelo para que pudesse inserir aquilo que a gente já está cogitando de como, através principalmente da questão geométrica, questão da estética, como que poderia instrumentalizar através da estética um método de autorregulamentação da rede. Eu acho que seria, com certeza, conveniente para um segundo estágio, né? O que tu acha? Registra enunciado de estruturação antes do teste, por gentileza, antes da estruturação do teste."
+
+— Vitor Edson Delavi, 19 de outubro de 2026
+
+*Texto na íntegra, como ditado (sem revisão).*
+
+### II. Estruturação
+
+#### 0. Contexto
+
+A proposta em discussão é uma **simulação de memória associativa no campo esférico**: neurônios na esfera de Fibonacci, ligações desenhadas por um CPPN antes de qualquer memória (estágio 1, campo φ), um termo de estabilização com peso α (estágio 2), memórias guardadas como atratores, com o eco sondando fórmulas de CPPN e o Sépstro medindo Coh + Entr (estágio 3). O objetivo mensurável é guardar padrões e recuperá-los a partir de pistas incompletas. Os critérios do teste ainda não foram escritos.
+
+#### 1. A memória esférica como simulação e como modelo
+
+Concordo com a sequência, com uma condição: ela só vira **modelo** da instrumentalização da Rede AP **se passar nos critérios** da primeira etapa. Antes disso, é simulação.
+
+Sobre servir a **outros substratos**: a matemática de uma memória por atratores não depende do que os números representam (pixels, sons, palavras). Isso torna a transferência possível, mas não a garante. Cada substrato novo é um teste novo.
+
+#### 2. O que seria autoalinhamento numa memória por atratores
+
+*Em palavras:* a rede tem uma **diretriz**, percebe quando está se afastando dela e se corrige **sem que alguém de fora diga o que está certo**.
+
+Para virar mecanismo, são precisos três elementos:
+
+1. **A diretriz**, escrita como algo mensurável no estado da rede. Pela via geométrica e estética, candidatos:
+   - a distribuição de coerência e entropia do estado (Sépstro);
+   - a proporção entre reforço e inibição de cada neurônio (por exemplo, fixada em φ);
+   - simetrias do padrão de atividade na esfera.
+2. **O monitor**: o eco ou o metaprocessador mede, a cada passo, o **desvio** entre o estado atual e a diretriz.
+3. **A correção**: quando o desvio passa de um limiar (por exemplo, SEAL = 1/φ), a âncora α puxa o estado de volta.
+
+É uma malha fechada: observar, medir o desvio, corrigir.
+
+Já existem análogos conhecidos (de memória do assistente): na rede de Hopfield, a dinâmica sempre desce uma **função de energia**, uma lei interna que a rede não pode violar; na biologia, a **plasticidade homeostática** devolve a atividade dos neurônios a uma faixa-alvo. A proposta do pesquisador difere por fazer a diretriz ser **geométrica e estética**, e não só uma faixa numérica de atividade.
+
+#### 3. A estética como instrumento de autorregulação
+
+Pela regra de operacionalização da Ponte, "estética" entra no teste quando vira medida: proporção, simetria, coerência. A pergunta que o segundo estágio faria é:
+
+> **Uma rede que preserva seus invariantes estéticos preserva também a sua função quando é perturbada?**
+
+Se a resposta for sim, contra controles, a estética funciona como **mecanismo de alinhamento**, e não só como descrição. É a ponte entre filosofia e técnica posta à prova.
+
+#### 4. Como testar no segundo estágio
+
+- **Perturbação:** tentar desviar a rede (implantar uma memória espúria, inclinar a recuperação para um padrão errado, injetar ruído dirigido).
+- **Medidas:** a rede resiste ao desvio? A recuperação das memórias legítimas se mantém?
+- **Controles:** a mesma malha com uma diretriz **não geométrica** (uma faixa numérica comum); a rede sem malha; a malha com a diretriz embaralhada.
+
+#### 5. O risco que precisa ser evitado
+
+As Entradas 314 e 315 registraram o caso do MPAP: a correção **reescrevia** o estado com o perfil-alvo, e o teste só podia dar certo. Aqui, uma correção que simplesmente apague o conteúdo e imponha a forma da diretriz daria "autoalinhamento" perfeito e memória nenhuma. Por isso as duas medidas têm de andar juntas: **aderência à diretriz** e **recuperação correta**. Se a primeira sobe e a segunda cai, o mecanismo está sobrescrevendo, não alinhando.
+
+#### 6. Posição na sequência
+
+O autoalinhamento entra como **segundo estágio**, depois que a memória esférica passar (ou não) nos critérios da primeira etapa. Registrado como hipótese, sem critérios numéricos ainda.
+
+#### Nota de verificação
+
+Nenhum número foi calculado para esta entrada. As referências à rede de Hopfield, à função de energia e à plasticidade homeostática são de memória do assistente e não foram verificadas nesta sessão. SEAL = 1/φ vem das constantes do projeto.
+
+---
+*Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
