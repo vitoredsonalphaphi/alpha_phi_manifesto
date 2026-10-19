@@ -147,13 +147,36 @@ Campo: os 233 pontos encaixados da Etapa C, com a ligação do campo da etapa fi
 
 **Auditoria e correção.** A auditoria inicial apontou uma confusão entre ordem de instalação e escala (a ferramenta 1 era a mais antiga e a de escala mais curta). **Correção posterior:** a regra de Hebb soma as memórias, e a soma não depende da ordem; com as quatro instaladas, a ligação final é idêntica em qualquer ordem. Logo, as diferenças na etapa final são de **natureza** (a ferramenta de escala curta é mais frágil), não de idade; a confusão vale só para as etapas intermediárias. A previsão feita antes do teste, de que as ferramentas de escala grande interfeririam mais, **estava errada**: ocorreu o contrário. Limite declarado: o estado cultivado não entra na estabilidade das memórias; o "cultivado" entra pelos pontos encaixados e pelo fundo.
 
+## 7. Etapa F — ferramentas instaladas durante o crescimento (`AlphaPhi_CampoEsferico_EtapaF_Crescimento.py`)
+
+Cultivo da Etapa C (34 → 233 pontos encaixados), fundo β = 0,02. As quatro ferramentas da Etapa E entram em etapas do crescimento e ligam **só os neurônios que existiam quando entraram** (território). Cronogramas: **A** (escala curta cedo) 0,3@55, 0,5@89, 0,7@144, 0,9@233; **B** (invertido); **C** (todas em 233). Previsor condicional com máscara de território e correlação própria de cada ferramenta. Sementes 30–39; 24 combinações. Importa a versão canônica v1 sem alterá-la.
+
+| Critério | Resultado | Veredito |
+|---|---|---|
+| F1 previsão × estabilidade: Spearman ≥ 0,8 e erro ≤ 0,05 | 0,950; 0,0093 | **cumprido** |
+| F2 previsão × recuperação: Spearman ≥ 0,7 | 0,784 | **cumprido** |
+| F3 o momento de entrada muda o destino (ferramentas 0,3 e 0,9, entre A e B) | 0,3: 0,851 × 0,975 (10/10); 0,9: 0,925 × 0,942 (9/10) | **cumprido** |
+
+**Estabilidade final (quatro instaladas):**
+
+| Escala | A | B | C |
+|---|---|---|---|
+| 0,3 | 0,851 (entrou com 55) | 0,975 (entrou com 233) | 0,923 |
+| 0,5 | 0,934 | 0,949 | 0,956 |
+| 0,7 | 0,978 | 0,951 | 0,976 |
+| 0,9 | 0,925 (entrou com 233) | 0,942 (entrou com 55) | 0,972 |
+
+**Leitura.** (1) Com território, a ordem importa: a ferramenta fina que entra cedo fica presa nos neurônios que todas as outras também ocupam e é a mais frágil; entrando no fim, ocupa o campo inteiro e é a mais estável. (2) **Do grosseiro para o fino, também nas ferramentas** (descritivo, sem critério prévio): o cronograma B — ferramentas largas quando o campo é grosseiro, finas quando o campo tem resolução — protege a ferramenta frágil; é a lógica do cultivo da Etapa C aplicada à instalação. (3) A previsão feita antes ("quem entra cedo fica mais frágil") acertou para a ferramenta fina e **errou para a larga** (entrar cedo foi um pouco melhor): há uma interação entre escala e momento de entrada. (4) O previsor erra mais em territórios pequenos (ex.: B com 55 pontos, previsto 0,838, medido 0,805), como previsto.
+
+**Limite.** Cada ferramenta foi avaliada no seu território, com os demais neurônios em estado neutro. Sanidade: o cronograma C reproduz a Etapa E com sementes novas.
+
 ## Exploração sem registro como resultado
 
 Comparação de disposições encaixadas (condição do medidor e uniformidade, N = 34 a 233): Fibonacci padrão (não encaixa) 1,1 / 0,91–0,93; ângulo áureo + altura √2 (encaixa) 1,6–4,5 / 0,57–0,93; ângulo áureo + van der Corput (encaixa) 1,6–5,1 / 0,27–0,75. Uma primeira tentativa com 1/φ e 1/φ² nas duas coordenadas foi **inválida**: os dois números são dependentes (1/φ² = 1 − 1/φ) e todos os pontos caíram numa espiral.
 
 ## Próximo passo
 
-**Feito (seções 5 e 6).** Próximo: ferramentas instaladas durante o crescimento do campo; depois, o eixo radial (cascas internas, α no centro). *Proposta original:* separar cada padrão com forma em envelope (harmônicos de grau baixo, previstos modo a modo) e conteúdo fino (quase aleatório, onde T2 já funciona), para prever a memória com forma antes de as ferramentas entrarem no campo cultivado.
+**Feito (seções 5 a 7).** Próximo: o eixo radial (cascas internas, ferramentas no interior, α no centro). *Proposta original:* separar cada padrão com forma em envelope (harmônicos de grau baixo, previstos modo a modo) e conteúdo fino (quase aleatório, onde T2 já funciona), para prever a memória com forma antes de as ferramentas entrarem no campo cultivado.
 
 ---
 *Florianópolis · 19 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
