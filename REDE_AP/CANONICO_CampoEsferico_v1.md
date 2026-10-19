@@ -1,6 +1,7 @@
 # Campo Esférico AlphaPhi — Versão Canônica v1 (congelada em 19/10/2026)
 
-**Etiqueta Git:** `campo-esferico-v1` · **Branch:** `claude/good-morning-N6f3S`
+**Commit de congelamento:** `f796a3e` · **Branch:** `claude/good-morning-N6f3S`
+*(Uma etiqueta Git `campo-esferico-v1` foi criada, mas o ambiente desta sessão só permite enviar o branch de trabalho; a referência fixa é o commit acima, permanente no histórico. A etiqueta pode ser criada depois pelo próprio GitHub, apontando para esse commit.)*
 **Resultados:** `AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md` (seções 1 a 6) e `AlphaPhi_MemoriaEsferica_Etapa1_RESULTADOS_19out2026.md`
 **Entradas do Manifesto 03:** 326 a 332
 
@@ -37,7 +38,7 @@ Qualquer alteração em qualquer arquivo, mesmo de uma vírgula, muda a impress�
 ## Regra
 
 1. Testes novos **importam** estes arquivos; não os copiam nem os editam.
-2. Uma mudança necessária gera uma **v2**, com arquivos novos, nova etiqueta e registro do que mudou e por quê. A v1 permanece intacta.
+2. Uma mudança necessária gera uma **v2**, com arquivos novos, novo commit de congelamento e registro do que mudou e por quê. A v1 permanece intacta.
 3. Antes de cada teste novo, conferir as impressões digitais.
 
 ---
