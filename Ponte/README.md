@@ -21,6 +21,7 @@
 - **`hipoteses/triangulacao_como_esqueleto.md`**: a triangulação como esqueleto comum (hipótese, rascunho)
 - **`hipoteses/campo_esferico_e_preservacao_do_campo.md`**: preservação do campo como diretriz de auto-alinhamento e acoplamento com a esfera de memória (hipótese, rascunho; especulação e respostas de 14/10/2026 na íntegra; simulação não auditada fora)
 - **`fundamentacao/modelo_de_referencia_rede_neural.md`**: modelo de referência da rede neural em seis estágios, com dupla leitura (matemática e em palavras) e análogos Alpha-Phi como hipóteses (rascunho; enunciado do pesquisador na íntegra)
+- **`fundamentacao/ficha_hyperneat_campo_como_estrutura.md`**: ficha de HyperNEAT, ES-HyperNEAT e pesquisas parecidas que usam um campo como estrutura prévia da rede, lidas por um esquema único (espaço, campo, o que gera, fixo ou aprendido, resultado, limites); base de método para o campo da Rede AP (rascunho; originais não lidos)
 - **`fundamentacao/mapa_hipoteses_cognicao_nao_reducionista.md`**: mapa de hipóteses de cognição, memória e campo além do cérebro-como-circuito (dez hipóteses, cada uma com o que afirma, evidência com fonte, status e como operacionalizar; fontes conferidas em resumos, artigos originais não lidos; rascunho)
 - **`organograma/`**: o organograma da Ponte (arquivo de dados `.yaml` + imagens geradas, com versões datadas; rascunho v0)
 - **`PLANO_Tradutibilidade_v0.md`**: plano de pesquisa e proposta de nomenclatura da notação `[f ○ c]` (rascunho para revisão do pesquisador)
