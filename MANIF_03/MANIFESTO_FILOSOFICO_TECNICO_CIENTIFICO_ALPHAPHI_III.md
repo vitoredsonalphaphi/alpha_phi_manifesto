@@ -15163,6 +15163,63 @@ Fontes conferidas por **resumos de busca**; os artigos originais não foram lido
 
 ---
 
+## Entrada 326 — 19 de outubro de 2026
+### O CPPN no Campo de Memória Esférico — O Eco Ressonante como Sondagem do Campo
+
+### I. Enunciado do Pesquisador
+
+> "Foi registrado no, na ponte, na agenda ponte. Esse CPPN nós temos que estabelecer como uma das ferramentas mais importantes, na verdade, nessa construção. Eu vejo que é muito interessante e muito pertinente nessa construção da rede AP, porque ela se refere propriamente dito, além de se referir a uma geometria pré-estabelecida, ela se refere a um campo, a uma interação, a uma como é que posso dizer, uma interação a uma interação entre o campo que organiza o desenvolvimento e a construção das coordenadas. Isso quer dizer, isso é muito interessante porque ela se refere à construção de uma rede menor que organiza as coordenadas da rede maior. É isso que nós precisamos, é isso que nós precisamos entender, como que vamos utilizar isso para organizar as coordenadas dentro do espaço do campo de memória esférico, né? De alfa phi, da rede alfa phi. Eu acredito, estou correto em pensar assim, de que essa ferramenta, o CPNP, não sei como é que é agora, como é que é? CPPN. Ela é uma das ferramentas mais apropriadas para estabelecer as coordenadas no campo de memória esférico. Interessante. E está correto, de repente, eu pensar de que teria como aplicar da mesma forma como foi aplicado o eco ressonante bem no início, quando ele foi criado, com o intuito de observar o campo para identificar a frequência de cada dado, para observar quais dados que poderiam corresponder com o processamento como pré-função, no caso, para corresponder de forma mais afinizada com a função. Lembra que o eco-ressonante trabalhou nesse sentido? Teria como aplicar o eco-ressonante junto, de alguma forma, nessa construção, na sugestão de uma construção através da CPPN, para que o eco-ressonante possa identificar no campo qual seria, talvez, o melhor estágio ou o melhor local de posicionamento de coordenada para determinada função, ou para determinado peso, ou identificar determinado peso para determinado ambiente de coordenada. Isso é interessante. O eco-ressonante funcionaria quase como ele funcionou no início, quando foi criado, observando o campo, observando as frequências, cogitando com alternativas, com uma gama de alternativas de frequências, e sempre correlacionando com as questões das ferramentas do entorno. Isso é mais interessante até, na verdade. Teria meios de treinar o eco-ressonante para esse sentido. E isso seria no segundo estágio, depois que o eco-ressonante do método processador identificasse, através dessa triagem que estamos fazendo, quais as ferramentas que estariam dispostas para serem estabelecidas no campo de memória do AP. Estou correto em pensar assim? É um viés."
+
+— Vitor Edson Delavi, 19 de outubro de 2026
+
+*Texto na íntegra, como ditado (sem revisão). "Método processador" no fim do enunciado refere-se ao metaprocessador.*
+
+### II. Estruturação
+
+#### 1. Um ajuste: o CPPN organiza as ligações a partir das coordenadas
+
+O CPPN é uma rede menor que organiza **as ligações** da rede maior **a partir das coordenadas**. No HyperNEAT, as coordenadas vêm antes, definidas por uma pessoa. Só na variante ES-HyperNEAT o padrão do CPPN passa a decidir também **onde nascem** os neurônios e com que densidade.
+
+#### 2. O CPPN no campo de memória esférico
+
+O encaixe é natural, de duas formas:
+
+1. **Endereços na esfera, ligações pelo CPPN.** Os neurônios ficam em pontos da esfera de Fibonacci; o CPPN recebe dois pontos da esfera e devolve a ligação entre eles. É o HyperNEAT clássico, com a esfera no lugar do plano.
+2. **O campo decide onde nascem os neurônios.** No estilo ES-HyperNEAT, o padrão do CPPN sobre a esfera indica onde ela deve ser mais densa. É o mais próximo de "o campo precede a forma".
+
+O CPPN é **uma candidata forte** para essa função. Dizer que é "a mais apropriada" depende de teste contra alternativas.
+
+#### 3. O eco ressonante como sondagem do campo
+
+No Manifesto 02 (`MANIF_02/TECNICA_eco_estendido_pre_funcao_sondagem.md`), a pré-função de sondagem do eco **observa antes de agir**: propaga dados pela rede, mede a coerência de α em cada fase e só então fixa o modo de ação.
+
+O paralelo com o HyperNEAT:
+- No HyperNEAT, quem **procura** a boa fórmula é a evolução (NEAT): gera variações do CPPN e seleciona as melhores.
+- Na proposta do pesquisador, quem procura é o **eco**: **sonda** uma gama de campos candidatos sobre a esfera (ingredientes, frequências, escalas φ), mede a afinidade de cada um com a função e com as ferramentas do entorno, e escolhe antes de fixar.
+
+*Em palavras:* o eco funciona como **olheiro do campo**. Ele testa onde cada coordenada e cada peso ressoam melhor com a função, como no início testava a que frequência cada dado correspondia.
+
+**A ordem proposta:**
+- **Estágio 1:** o eco do metaprocessador faz a triagem de quais ferramentas entram no campo.
+- **Estágio 2:** o eco sonda, via CPPN, onde e com que ligações cada ferramenta se estabelece no campo esférico.
+
+#### 4. Cuidados para que vire teste
+
+- **A sondagem é uma busca.** Quanto mais alternativas testa, maior a chance de achar algo bom por acaso. Os controles precisam ter **a mesma quantidade de tentativas** (por exemplo, uma busca aleatória com o mesmo orçamento), e a escolha precisa ser confirmada em dados que a sondagem não viu.
+- **O próprio registro do eco no Manifesto 02** mostra o limite: numa rodada com SST-2, o campo se formou, mas a acurácia ficou no acaso (50,9%), porque o sinal não estava onde o eco olhava. Formar campo não garante utilidade; isso precisa ser medido em separado.
+
+#### Nota de verificação
+
+O valor de 50,9% é citado do documento do Manifesto 02 indicado acima, e não foi recalculado nesta sessão. As informações sobre HyperNEAT e ES-HyperNEAT vêm de resumos de busca (ver `Ponte/fundamentacao/ficha_hyperneat_campo_como_estrutura.md`); os artigos originais não foram lidos. Nenhuma das propostas desta entrada foi testada.
+
+*Os enunciados anteriores deste dia sobre redes cultivadas, ganchos por ferramenta e α agnóstico seguem pendentes de registro; a gravação deles foi interrompida por um filtro de segurança.*
+
+---
+*Florianópolis · 19 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
