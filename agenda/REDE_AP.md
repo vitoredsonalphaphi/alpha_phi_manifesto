@@ -72,6 +72,7 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
   - Em vez de soma linear, testar phantom modulando algo estrutural:
     - Inicialização W₀ (Estágio II — Entrada 280)
       - *19/10: CPPN como campo prévio (Entradas 326 e 327). Memória esférica, etapa 1: **nulo para a geometria** (`REDE_AP/AlphaPhi_MemoriaEsferica_Etapa1_RESULTADOS_19out2026.md`). Próximo: teste com orçamento de ligações.*
+      - *19/10: orçamento (nulo para φ), Etapa 0 (não demonstrado), **Etapa T (previsor do campo vazio confirmado na esfera de Fibonacci)** e **Etapa C (campo cultivado segue a forma prevista em todas as etapas)** — `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md`; Entradas 328–332. Próximo: previsor envelopado (estágio 2).*
     - Ganhos por camada — *testado na ablação do φ-init: o efeito é de escala; 0,5^k empatou com 1/φ^k*
     - Taxa de aprendizado (phantom como schedule adaptativo) — *pendente*
 
