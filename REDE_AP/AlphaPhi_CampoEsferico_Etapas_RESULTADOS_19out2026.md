@@ -107,13 +107,37 @@ Pontos **encaixados** (ângulo áureo + altura frac(i·√2)): os pontos de cada
 
 **Leitura.** (1) O previsor funciona como **atrator do desenvolvimento**: o campo cresce do grosseiro para o fino seguindo, em cada etapa, a forma calculada antes de existir. (2) **O cultivo deixa história:** na etapa final, onde a previsão admitia os graus 2 e 3, o campo construído de uma vez foi ao grau 3 (o mais forte) e o cultivado permaneceu no grau 2 (a forma que já tinha), preservando 90% dos pontos, ao custo de um atrator um pouco menos fundo — observação descritiva, sem critério prévio. (3) Quando a forma prevista muda de natureza, o campo se reorganiza (71% preservado).
 
+## 5. Previsor envelopado — a memória com forma prevista antes (`AlphaPhi_CampoEsferico_PrevisorEnvelopado.py`)
+
+**Previsão condicional:** a estabilidade de uma memória conhecida é prevista sabendo que as outras vêm do mesmo ambiente (cuja correlação é estimada de 200 padrões separados). Variantes: **P-env** (correlação modelada como envelope de harmônicos esféricos até o grau 8 + conteúdo fino local), **P-amostra** (correlação bruta da amostra), **P-antigo** (fórmula da Etapa T). Desenho da Etapa T, sementes novas 10–19.
+
+| Ambiente | Variante | Spearman × estabilidade | Erro médio | Spearman × recuperação |
+|---|---|---|---|---|
+| com forma (36) | **P-env** | **0,994** | **0,0016** | **0,942** |
+| com forma | P-amostra | 0,994 | 0,0017 | 0,954 |
+| com forma | P-antigo | 0,280 | 0,0304 | 0,380 |
+| sem forma (45) | **P-env** | **0,995** | **0,0004** | 0,984 |
+| sem forma | P-amostra | 0,994 | 0,0049 | 0,985 |
+| sem forma | P-antigo | 0,983 | 0,0061 | 0,976 |
+
+| Critério | Resultado | Veredito |
+|---|---|---|
+| V1 P-env × estabilidade (com forma): Spearman ≥ 0,8 e erro ≤ 0,05 | 0,994; 0,0016 | **cumprido** |
+| V2 P-env × recuperação (com forma): Spearman ≥ 0,7 | 0,942 | **cumprido** |
+| V3 P-env sem forma: Spearman ≥ 0,8 e erro ≤ 0,05 | 0,995; 0,0004 | **cumprido** |
+| V4 erro P-env < erro P-amostra (com forma) | 0,0016 < 0,0017 | cumprido **por margem desprezível** |
+
+**Auditoria.** (1) **Quem resolveu foi a previsão condicional, não o envelope:** com forma, envelope e correlação bruta empatam; a fórmula antiga saturava porque tirava a média também sobre a memória testada. (2) O envelope reduz o erro onde há ruído de amostra (sem forma: 0,0049 → 0,0004). (3) A previsão não usa as outras memórias guardadas, só a memória prevista e a estatística do ambiente.
+
+**Leitura.** O estágio 2 passa a ter previsor: antes de instalar uma ferramenta, é possível calcular se a memória dela se sustenta e quanto recupera, conhecendo o que ela traz e como é o ambiente. Válido para as ligações de vizinhança testadas; o teste no campo cultivado vem a seguir.
+
 ## Exploração sem registro como resultado
 
 Comparação de disposições encaixadas (condição do medidor e uniformidade, N = 34 a 233): Fibonacci padrão (não encaixa) 1,1 / 0,91–0,93; ângulo áureo + altura √2 (encaixa) 1,6–4,5 / 0,57–0,93; ângulo áureo + van der Corput (encaixa) 1,6–5,1 / 0,27–0,75. Uma primeira tentativa com 1/φ e 1/φ² nas duas coordenadas foi **inválida**: os dois números são dependentes (1/φ² = 1 − 1/φ) e todos os pontos caíram numa espiral.
 
 ## Próximo passo
 
-**Previsor envelopado** (estágio 2): separar cada padrão com forma em envelope (harmônicos de grau baixo, previstos modo a modo) e conteúdo fino (quase aleatório, onde T2 já funciona), para prever a memória com forma antes de as ferramentas entrarem no campo cultivado.
+**Feito (seção 5).** Próximo: o previsor no campo cultivado, com ferramentas instaladas por etapas. *Proposta original:* separar cada padrão com forma em envelope (harmônicos de grau baixo, previstos modo a modo) e conteúdo fino (quase aleatório, onde T2 já funciona), para prever a memória com forma antes de as ferramentas entrarem no campo cultivado.
 
 ---
 *Florianópolis · 19 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
