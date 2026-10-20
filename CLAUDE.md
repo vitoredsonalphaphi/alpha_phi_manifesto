@@ -6,6 +6,12 @@
 
 ---
 
+## INÍCIO DE TODA SESSÃO — ler a diretriz
+
+**Antes de qualquer tarefa**, tenha a sessão sido compactada ou não, ler `DIRETRIZ_PROGRAMA_ALPHAPHI.md`: o que e por que estamos construindo, o método, o núcleo duro, o status de cada hipótese e onde estamos. Atualizar a seção "Onde estamos" sempre que o caminho avançar.
+
+---
+
 ## PROTOCOLO ATIVO — Sessão Good Morning
 
 ### Regra padrão (estado ativo por default)
