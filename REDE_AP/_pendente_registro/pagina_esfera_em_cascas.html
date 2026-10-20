@@ -24,7 +24,7 @@ input[type=range]{accent-color:var(--acc);width:100%}
 <main>
 <header>
   <h1>Esfera em Cascas</h1>
-  <p class="note">A leitura dentro da grade esférica de referência. O campo contínuo da rede, enquanto a 5ª dobra do EcoBIP 880 toca, é separado nas formas da esfera: cada grau L vira uma casca, do centro para fora (grau 0 perto do centro, grau 14 na borda), como no modelo canônico. Na superfície de cada casca, a parte do campo daquele grau: dourado positivo, azul negativo, com relevo. O ponto central marca r = 0, o lugar de α, ainda não implementado.</p>
+  <p class="note">A leitura dentro da grade esférica de referência. O campo contínuo da rede, enquanto a 5ª dobra do EcoBIP 880 toca, é separado nas formas da esfera: cada grau L vira uma casca, do centro para fora (grau 0 perto do centro, grau 14 na borda), como no modelo canônico. Na superfície de cada casca, a parte do campo daquele grau: dourado positivo, azul negativo. O ponto central marca r = 0, o lugar de α, ainda não implementado.</p>
 </header>
 <section class="ctl" aria-label="Controles">
   <div class="grp" id="gc"><span class="lbl">Casca (grau L)</span></div>
@@ -49,20 +49,23 @@ var D = {"th":[0.0,0.2618,0.5236,0.7854,1.0472,1.309,1.5708,1.8326,2.0944,2.3562
     b.onclick=function(){ sel=val; gc.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed', x===b);}); draw(); }; gc.appendChild(b); }
   chip('todas',-1); for(var L=0;L<15;L++) chip(String(L),L);
   var CS=[[0,'#38c6e0'],[0.5,'#3a3f4c'],[1,'#ffc247']];
-  function shell(Q,L){ var r=0.18+0.82*L/14, X=[],Y=[],Z=[];
-    for(var i=0;i<th.length;i++){ var x=[],y=[],z=[]; for(var j=0;j<ph.length;j++){ var rr=r*(1+0.06*Q[i][j]);
-      x.push(rr*Math.sin(th[i])*Math.cos(ph[j])); y.push(rr*Math.sin(th[i])*Math.sin(ph[j])); z.push(rr*Math.cos(th[i])); } X.push(x);Y.push(y);Z.push(z); }
-    var op = sel<0 ? 0.3 : (L===sel?1:0.07);
-    return {type:'surface',x:X,y:Y,z:Z,surfacecolor:Q,cmin:-1,cmax:1,colorscale:CS,showscale:false,opacity:op,hoverinfo:'skip',name:'grau '+L}; }
-  function traces(nome){ var F=D.redes[nome][k], tr=[]; for(var L=0;L<15;L++) tr.push(shell(F[L],L));
+  var GEO=[]; for(var L=0;L<15;L++){ var r=0.18+0.82*L/14, X=[],Y=[],Z=[];
+    for(var i=0;i<th.length;i++){ var x=[],y=[],z=[]; for(var j=0;j<ph.length;j++){ x.push(r*Math.sin(th[i])*Math.cos(ph[j])); y.push(r*Math.sin(th[i])*Math.sin(ph[j])); z.push(r*Math.cos(th[i])); } X.push(x);Y.push(y);Z.push(z); }
+    GEO.push([X,Y,Z]); }
+  function op(L){ return sel<0 ? 0.3 : (L===sel?1:0.07); }
+  function traces(nome){ var F=D.redes[nome][k], tr=[];
+    for(var L=0;L<15;L++) tr.push({type:'surface',x:GEO[L][0],y:GEO[L][1],z:GEO[L][2],surfacecolor:F[L],cmin:-1,cmax:1,colorscale:CS,showscale:false,opacity:op(L),hoverinfo:'skip'});
     tr.push({type:'scatter3d',mode:'markers',x:[0],y:[0],z:[0],marker:{size:5,color:'#f2b33d'},hovertemplate:'r = 0 · α<extra></extra>'}); return tr; }
   var lay=function(){return {margin:{l:0,r:0,t:0,b:0},paper_bgcolor:'#0b0f14',showlegend:false,scene:{xaxis:{visible:false},yaxis:{visible:false},zaxis:{visible:false},aspectmode:'data',camera:{eye:{x:1.45,y:1.25,z:0.85}},bgcolor:'#0b0f14'}};};
-  var cfg={displayModeBar:false,responsive:true};
+  var cfg={displayModeBar:false,responsive:true}, pronto=false;
   function draw(){ document.getElementById('tv').textContent=(k*7/NQ).toFixed(2).replace('.',',')+' s';
-    Plotly.react('p-ap',traces('AlphaFi esférica'),lay(),cfg); Plotly.react('p-cv',traces('convencional'),lay(),cfg); }
+    if(!pronto){ Plotly.newPlot('p-ap',traces('AlphaFi esférica'),lay(),cfg); Plotly.newPlot('p-cv',traces('convencional'),lay(),cfg); pronto=true; return; }
+    var idx=[], sc=[], oo=[]; for(var L=0;L<15;L++){ idx.push(L); oo.push(op(L)); }
+    ['p-ap','p-cv'].forEach(function(id,n){ var F=D.redes[n===0?'AlphaFi esférica':'convencional'][k];
+      Plotly.restyle(id,{surfacecolor:F.map(function(x){return x;}),opacity:oo},idx); }); }
   var sl=document.getElementById('tsl'); sl.max=NQ-1; sl.addEventListener('input',function(){k=+sl.value; draw();});
   var pb=document.getElementById('play'); pb.onclick=function(){ if(timer){clearInterval(timer);timer=null;pb.textContent='Tocar';pb.setAttribute('aria-pressed','false');return;}
-    pb.textContent='Parar'; pb.setAttribute('aria-pressed','true'); timer=setInterval(function(){k=(k+1)%NQ; sl.value=k; draw();},450); };
+    pb.textContent='Parar'; pb.setAttribute('aria-pressed','true'); timer=setInterval(function(){k=(k+1)%NQ; sl.value=k; draw();},350); };
   draw();
 })();
 </script>

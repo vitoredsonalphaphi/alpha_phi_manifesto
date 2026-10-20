@@ -66,7 +66,7 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 
 ## 6. Onde estamos (atualizar a cada sessão)
 
-**20/10/2026:** campo esférico cultivado e memória com previsão confirmados no modelo; Phantom testado como fundo e como sinal ativo (pendente de registro em `REDE_AP/_pendente_registro/`). **Próximo:** o EcoBIP 880 original (`BEEP880_17S.py`, α\* = 1/3) como tarefa comum à rede AP esférica e à rede convencional, com scanner topográfico.
+**20/10/2026:** campo esférico cultivado e memória com previsão confirmados no modelo; Phantom (Etapas P e A) e EcoBIP 880 nas duas redes (Etapa B: empate com o EcoBIP, desvantagem da AlphaFi no controle) executados e pendentes de registro em `REDE_AP/_pendente_registro/`. **Grade Esférica de Referência v1** criada (`REDE_AP/AlphaPhi_GradeEsferica_v1.py`, SHA-256 `0512264d7d3ede7ab3563fa17eb7b8ac551e6556063ab86afd6cbe2cf2dbf299`): posição (r, θ, φ), pontos encaixados, harmônicos, cascas radiais; todo teste novo importa este módulo. Leitura em cascas (scanner esférico) feita. **Próximo:** a Hopfield moderna (o eco do dado) sobre a grade esférica, com as memórias mais ricas da Etapa B2.
 
 ---
 *Florianópolis · 20 de outubro de 2026 · Vitor Edson Delavi · Claude*
