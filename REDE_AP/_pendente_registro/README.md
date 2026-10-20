@@ -45,6 +45,14 @@ O serial do Phantom é gerado pelo **código original** `AlphaPhi_SerialPhantom_
 
 **Auditoria (descritiva):** a AlphaFi junta as 6 memórias em 2 grupos (pistas 0–2 → memória 1; 3–5 → memória 4); com ou sem fundo, idêntico; o eco mais forte ajuda (λ = 2 → 0,500; λ = 8 → 0,633). Leitura: a vizinhança da memória (σ = 0,35, fixa) filtra as formas finas, onde as memórias ricas diferem; a regra de escala da Etapa C (σ ∝ 1/√N) não foi aplicada à ligação de memória. **Próximo proposto:** vizinhança escalada pela resolução e eco com força declarada em 0,5 / 2 / 8.
 
+## Etapa RP — a reprojeção (233 → 610 pontos encaixados), 20/10/2026
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaRP_Reprojecao.py`, `EtapaRP_saida_20out2026.txt`, `EtapaRP_auditoria_20out2026.txt`, `EtapaRP_resultados.json`. Memórias da Etapa H (6, EcoBIP). Vizinhança da memória = 2 × espaçamento médio (σ = 0,148 em 233; 0,091 em 610). Sem eco. Sementes 90–99.
+
+**Resultado (identificação, pista 40%; acaso 0,17):** A233-H (σ 0,35) 0,333 · A233 0,417 · A610-reproj 0,400 · A610-zero 0,467 · C233 0,367 · C610 0,417. **R0 cumprido** (14 > 9 e ≤ 16; memórias idênticas nos 233 pontos antigos). **R1 não** (+0,083, 5/10), **R2 não** (−0,017), **R3 não** (−0,067, abaixo de −0,05), **R4 não difere** de C610 (−0,017).
+
+**Auditoria (descritiva):** (1) as 6 memórias não são independentes: correlação média −0,13, mas um par chega a +0,86, e todas as redes, incluindo a convencional, juntam as pistas em 2 ou 3 grupos; a tarefa limita mais do que a vizinhança. (2) A vizinhança escalada **abre** os grupos (A233: a pista 0 volta à memória 0 em 8/10, contra 0/10 com σ 0,35), mas não o bastante para os critérios. (3) Em 610 pontos, a sobreposição cai (0,40 e 0,24 contra 0,65 em 233): com σ estreito e só 6 memórias, a dinâmica fica em estados mistos. (4) O bloco antigo foi multiplicado por 233/610 para ficar na escala 1/N da rede maior; essa escolha está no código, mas não foi discutida antes. (5) A medida é grosseira: 6 memórias, logo cada semente vale múltiplos de 1/6. **Leitura:** a reprojeção é **implementável e preserva o antigo** (R0), mas nesta tarefa **não trouxe ganho** de memória. Próximo sugerido: memórias menos correlacionadas (quadros do STFT) antes de repetir.
+
 **Próximos passos combinados:** varredura de amplitude do Phantom ativo (1/φ³, 1/φ⁵, 1/φ⁷) ou o Phantom ativo no lugar do fundo; depois, registro conjunto como nas etapas anteriores.
 
 ---

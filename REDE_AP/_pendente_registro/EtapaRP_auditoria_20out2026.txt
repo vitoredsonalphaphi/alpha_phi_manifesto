@@ -1,0 +1,37 @@
+correlação média entre memórias (233): -0.133  máx +0.863
+correlação média entre memórias (610): -0.136  máx +0.862
+A233-H pista→memória final (linhas = pista 0..5; 10 sementes):
+[[ 0 10  0  0  0  0]
+ [ 0 10  0  0  0  0]
+ [ 0  6  0  0  4  0]
+ [ 0  0  0  0 10  0]
+ [ 0  0  0  0 10  0]
+ [ 0  0  0  0 10  0]]
+A233 pista→memória final (linhas = pista 0..5; 10 sementes):
+[[ 8  2  0  0  0  0]
+ [ 4  6  0  0  0  0]
+ [ 2  2  0  2  4  0]
+ [ 0  0  0  1  9  0]
+ [ 0  0  0  0 10  0]
+ [ 0  0  0  0 10  0]]
+A610-reproj pista→memória final (linhas = pista 0..5; 10 sementes):
+[[4 6 0 0 0 0]
+ [2 8 0 0 0 0]
+ [2 3 1 2 1 1]
+ [0 0 0 2 5 3]
+ [0 0 0 0 7 3]
+ [0 0 0 0 8 2]]
+A610-zero pista→memória final (linhas = pista 0..5; 10 sementes):
+[[6 4 0 0 0 0]
+ [2 8 0 0 0 0]
+ [4 3 1 1 1 0]
+ [0 0 0 3 5 2]
+ [0 0 0 0 6 4]
+ [0 0 0 0 6 4]]
+C610 pista→memória final (linhas = pista 0..5; 10 sementes):
+[[ 0 10  0  0  0  0]
+ [ 0 10  0  0  0  0]
+ [ 0  4  5  0  1  0]
+ [ 0  0  0  0 10  0]
+ [ 0  0  0  0 10  0]
+ [ 0  0  0  0 10  0]]
