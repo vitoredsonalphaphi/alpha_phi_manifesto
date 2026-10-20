@@ -83,6 +83,15 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
 
 ---
 
+- [ ] **Reprojeção — o instrumento de expansão no limite** *(acrescentado em 20/10/2026; antes só no Research Journal da Rede AP, Entradas 02, 06 e 07, e no Manifesto 03, Entradas 312–313)*
+  - Protocolo de início (RJ 02/06): **estabelecer o limite** → φ conforme o ambiente → α por substrato (eco ressonante) → acoplar o atrator; o limite (pré-estágio) **precisa ser adaptado para reprojetar** quando necessário
+  - RJ 07: "[Pré-estágio] Limite declarado + instrumento de reprojeção" — nunca implementado
+  - Manifesto 312–313: r = 1 vê a borda primeiro e aciona o reprojeto; gatilho proposto dCoh/dt < 0 por vários ciclos; cada ciclo de reprojeção = volta ao mesmo ponto em coerência mais alta (espiral de Vico)
+  - Tradução na esfera (20/10): detectar o limite (regra da grade: graus pedidos > grau medível; ou previsor; ou queda de coerência) → crescer para a próxima etapa de Fibonacci com pontos encaixados → reavaliar o campo nos pontos novos → reescalar vizinhança e ferramentas (σ ∝ 1/√N) → liberar os graus novos
+  - Primeiro teste: Etapa RP (critérios na conversa de 20/10/2026)
+
+---
+
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
 
 - [ ] **Retroprojeção do atrator E do serial na rede AP**
