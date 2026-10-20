@@ -53,6 +53,8 @@ O serial do Phantom é gerado pelo **código original** `AlphaPhi_SerialPhantom_
 
 **Auditoria (descritiva):** (1) as 6 memórias não são independentes: correlação média −0,13, mas um par chega a +0,86, e todas as redes, incluindo a convencional, juntam as pistas em 2 ou 3 grupos; a tarefa limita mais do que a vizinhança. (2) A vizinhança escalada **abre** os grupos (A233: a pista 0 volta à memória 0 em 8/10, contra 0/10 com σ 0,35), mas não o bastante para os critérios. (3) Em 610 pontos, a sobreposição cai (0,40 e 0,24 contra 0,65 em 233): com σ estreito e só 6 memórias, a dinâmica fica em estados mistos. (4) O bloco antigo foi multiplicado por 233/610 para ficar na escala 1/N da rede maior; essa escolha está no código, mas não foi discutida antes. (5) A medida é grosseira: 6 memórias, logo cada semente vale múltiplos de 1/6. **Leitura:** a reprojeção é **implementável e preserva o antigo** (R0), mas nesta tarefa **não trouxe ganho** de memória. Próximo sugerido: memórias menos correlacionadas (quadros do STFT) antes de repetir.
 
+**Scanner em cascas da Etapa RP** (`pagina_cascas_da_reprojecao.html`, descritivo, sem critério): A233 × A610 reprojetada, semente 90, pista 40%; o filme da dinâmica termina no mesmo estado da execução registrada (conferido nas duas redes). Em 233 pontos só aparecem as cascas 0–9; em 610, 0–14.
+
 **Próximos passos combinados:** varredura de amplitude do Phantom ativo (1/φ³, 1/φ⁵, 1/φ⁷) ou o Phantom ativo no lugar do fundo; depois, registro conjunto como nas etapas anteriores.
 
 ---
