@@ -27,6 +27,16 @@ O serial do Phantom é gerado pelo **código original** `AlphaPhi_SerialPhantom_
 3. A rede da Etapa A está perto do limite (16 memórias com forma; preservação de 0,709 mesmo desligada).
 4. A tradução banda φ → grau esférico é uma escolha do assistente, não a única possível.
 
+## Etapa B — o EcoBIP 880 nas duas redes (20/10/2026)
+
+**Arquivos:** `AlphaPhi_EcoBIP_B0_gera_dobras.py` (roda o EcoBIP original e guarda as 5 dobras e o controle; rodar primeiro), `AlphaPhi_CampoEsferico_EtapaB_EcoBIP.py`, `EtapaB_saida_tentativa1_degenerada_20out2026.txt`, `EtapaB_saida_corrigida_20out2026.txt`, `EtapaB_resultados.json`, `pagina_ecobip_na_esfera.html`.
+
+**B0:** o `BEEP880_17S.py` original reproduz o registro (campo harmônico no ciclo 10, β máx 4,2098). **Primeira tentativa: degenerada** — a tradução pela energia por banda deixou as memórias quase iguais (correlação 0,84; controle sem cascata 1,000) e as duas redes caíram no mesmo estado (identificação = acaso). **Correção aprovada:** log da energia menos o perfil médio das 5 dobras; critério novo B00 (correlação < 0,3); controle = a mesma cascata na quadrada.
+
+**Resultado corrigido (10 sementes):** B00 cumprido (−0,174 e −0,177). EcoBIP: convencional 0,824 · AlphaFi 0,822 (B1 **não difere**: empate). Controle: convencional 0,869 · AlphaFi 0,757. B2 **cumprido** (+0,110, 8/10), lido como: a desvantagem da AlphaFi desaparece com o EcoBIP — não é vantagem.
+
+**Auditoria pendente:** (1) a recuperação é igual com ou sem pista e igual à preservação: a rede vai sempre aos mesmos estados; só 2 das 5 memórias são estáveis (identificação 0,40); (2) cada memória nasce de 15 números (as bandas), pouco para 233 neurônios; (3) o empate pode vir da suavidade dos padrões (ligação de vizinhança), não do EcoBIP como tal — não verificado. **Próximo:** memórias mais ricas (por exemplo, quadros do STFT ao longo do tempo).
+
 **Próximos passos combinados:** varredura de amplitude do Phantom ativo (1/φ³, 1/φ⁵, 1/φ⁷) ou o Phantom ativo no lugar do fundo; depois, registro conjunto como nas etapas anteriores.
 
 ---

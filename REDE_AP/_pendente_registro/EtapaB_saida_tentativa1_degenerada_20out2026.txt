@@ -1,0 +1,18 @@
+correlação média entre as memórias (mesma semente 60):
+   EcoBIP 880                           +0.842
+   controle A (quadrada sem cascata)    +1.000
+   controle B (quadrada com cascata)    +0.792
+
+sinal                               rede               preserv. recup.25% recup.40% identif.    Coh
+EcoBIP 880                          convencional          0.909     0.909     0.909     0.20  0.323
+EcoBIP 880                          AlphaFi esférica      0.909     0.909     0.909     0.20  0.323
+controle A (quadrada sem cascata)   convencional          1.000     1.000     1.000     0.20  0.284
+controle A (quadrada sem cascata)   AlphaFi esférica      1.000     1.000     1.000     0.20  0.284
+controle B (quadrada com cascata)   convencional          0.859     0.859     0.859     0.20  0.362
+controle B (quadrada com cascata)   AlphaFi esférica      0.859     0.859     0.843     0.20  0.362
+
+=== CRITÉRIOS ===
+B0 código original: campo harmônico no ciclo 10, β máx 4,2098 -> cumprido (impresso pelo script original)
+B1 AlphaFi − convencional (EcoBIP, pista 25%): +0.0000 (EP 0.0000, mesmo sinal 0/10) -> não difere
+B2 vantagem com EcoBIP − vantagem com controle A (quadrada sem cascata): +0.0000 (EP 0.0000, 0/10) -> NÃO cumprido
+(informativo) vantagem com EcoBIP − vantagem com controle B (quadrada com cascata): +0.0003 (EP 0.0002, 2/10) -> NÃO cumprido
