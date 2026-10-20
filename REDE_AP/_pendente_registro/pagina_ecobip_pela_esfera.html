@@ -41,7 +41,7 @@ var D = {"orig":{"f":[0.0,43.0,86.0,129.0,172.0,215.0,258.0,301.0,345.0,388.0,43
   if(!window.Plotly){ document.querySelectorAll('.plot').forEach(function(p){p.textContent='O desenho 3D não carregou.';}); return; }
   var ax=function(t){return {title:{text:t,font:{size:10,color:'#8e98a6'}},tickfont:{size:8,color:'#8e98a6'},gridcolor:'#1c2430',zerolinecolor:'#1c2430',backgroundcolor:'#0b0f14',showbackground:true};};
   var cfg={displayModeBar:false,responsive:true};
-  function sup(id,x,y,z,xt,yt,zmin){ Plotly.newPlot(id,[{type:'surface',x:x,y:y,z:z,cmin:zmin,cmax:0,colorscale:'Inferno',showscale:false,
+  function sup(id,x,y,z,xt,yt,zmin){ Plotly.newPlot(id,[{type:'surface',x:x,y:y,z:z,cmin:zmin,cmax:0,colorscale:[[0,'#000004'],[0.15,'#1b0c41'],[0.3,'#4a0c6b'],[0.45,'#781c6d'],[0.6,'#a52c60'],[0.72,'#cf4446'],[0.84,'#ed6925'],[0.93,'#fb9b06'],[1,'#fcffa4']],showscale:false,
       contours:{z:{show:true,usecolormap:true,project:{z:true}}},hovertemplate:xt+' %{x:.2f} · '+yt+' %{y} · %{z:.0f} dB<extra></extra>'}],
       {margin:{l:0,r:0,t:0,b:0},paper_bgcolor:'#0b0f14',scene:{xaxis:ax(xt),yaxis:ax(yt),zaxis:Object.assign(ax('dB'),{range:[zmin,0]}),aspectratio:{x:1.4,y:1,z:0.55},camera:{eye:{x:1.5,y:-1.6,z:0.9}},bgcolor:'#0b0f14'},font:{family:'IBM Plex Mono, monospace',color:'#e4e8ee'}},cfg); }
   sup('p-orig', D.orig.t, D.orig.f, D.orig.A, 'tempo (s)', 'frequência (Hz)', -80);
