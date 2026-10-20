@@ -56,4 +56,4 @@ Qualquer alteração em qualquer arquivo, mesmo de uma vírgula, muda a impress�
 2. **A vizinhança acompanha a resolução** (σ ∝ 1/√N), no campo e na ligação de memória (lição da Etapa H).
 3. **O grau medível segue a regra da grade:** (L+1)² ≤ N/2. Um sinal que pede graus acima disso pede uma esfera maior (gatilho da reprojeção).
 
-**Ainda fora do canônico** (executados, pendentes de registro em `_pendente_registro/`): Etapas P, A, B, H e o scanner em cascas. Entram aqui quando forem registrados.
+**Ainda fora do canônico** (executados e registrados em 20/10/2026 em `AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`; código em `CampoEsferico_Etapas_P_A_B_H_RP/`): Etapas P, A, B, H e o scanner em cascas. Entram aqui quando forem registrados.

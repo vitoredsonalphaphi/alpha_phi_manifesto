@@ -1,6 +1,6 @@
-# Pendente de registro — Etapas P e A (o Phantom no campo esférico), 19/10/2026
+# Campo Esférico — Etapas P, A, B, H e RP (19 e 20/10/2026)
 
-**Status:** executado, **ainda não registrado**. O pesquisador pediu para registrar junto com resultados futuros. Esta pasta existe só para que código e números **não se percam** quando a sessão terminar. Nada aqui foi incorporado ao arquivo de resultados nem ao Manifesto.
+**Status:** **registrado** em 20/10/2026, a pedido do pesquisador, em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md` (Entradas 333–339 do Manifesto 03). Esta pasta, antes `_pendente_registro/`, guarda o código, as saídas e as páginas. Os pontos de auditoria em aberto continuam listados abaixo. Reprodução: rodar primeiro `AlphaPhi_EcoBIP_B0_gera_dobras.py` (gera os `.npy`); a Etapa RP foi refeita a partir desta pasta em 20/10 e deu saída idêntica.
 
 ## O que está aqui
 

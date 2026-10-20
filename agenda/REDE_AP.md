@@ -3,7 +3,7 @@
 
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
-**Última atualização:** 8 de outubro de 2026 (criada em 23/09/2026)
+**Última atualização:** 20 de outubro de 2026 (criada em 23/09/2026)
 **Ver também:** `agenda/REDE_AP_METODO.md` ("Agenda REDE-AP (Fichas Método)"): fichas de método, portões G0–G5 e critérios de validação.
 
 ---
@@ -33,6 +33,28 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
 **Feito fora desta agenda (23/09 a 07/10):** MPAP e suas auditorias; varreduras de ângulo do Phantom (E11–E13); campo FI icosaédrico (primeira implementação, 01/10); scanner topográfico com MPAP; reestruturação dos testes (03/10, resultados em `REDE_AP/AlphaPhiNet_Reestruturado_RESULTADOS_03out2026.txt`); scanner de áudio (pronto, aguarda a gravação do pesquisador).
 
 **Feito fora desta agenda em 08/10:** reconstrução etapa a etapa do EcoBIP original (α = 1/3) com scanner topográfico 3D interativo e controle (mesma cascata só na quadrada); Entrada 316 (auditoria simétrica). Observação visual: o relevo do EcoBIP final tem várias cristas coerentes, o controle tem uma; **ainda não quantificado**, e a orientação da textura (grade) ainda não foi medida.
+
+---
+
+## QUADRO DE SITUAÇÃO — 20/10/2026
+
+Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_RESULTADOS_19out2026.md` e `REDE_AP/AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`).
+
+| Item | Situação |
+|---|---|
+| Mecanismo de injeção / inicialização W₀ (II) | **Feito de outro modo:** o campo esférico é cultivado antes e a rede nasce dentro dele (Etapas T, C) |
+| Phantom sem selagem na rede (II) | **Feito** (Etapas P e A): como fundo ajuda pouco, sem especificidade de forma; ativo em 1/φ³ atrapalha como ruído |
+| Controles de mesma amplitude (II) | **Feito** nessas etapas (ruído, seno, embaralhado) |
+| Reprojeção (II) | **Implementada pela primeira vez** (Etapa RP): preserva o antigo, sem ganho de memória nesta tarefa |
+| Selagem; Grade R no espaço original; Phantom como ritmo do aprendizado (II) | Pendentes |
+| Scanner de Coexistência Espectral (I) | Pendente |
+| Seção III | Pendente |
+| α agnóstico (IV) | Parcial: α\* = 1/3 do EcoBIP corrigido e usado; família de α não iniciada |
+| Collatz, arquétipos, Tratado 137 (IV); multi-substrato (V); itens A–G (VII) | Não iniciados |
+
+**Feito além desta agenda (19 e 20/10):** previsor da forma do campo antes de existir (Etapa T); cultivo encaixado de Fibonacci (Etapa C); previsor da memória, inclusive com forma; regra de resolução (L+1)² ≤ N/2, que é também o gatilho da reprojeção; Grade Esférica de Referência v1; canônico congelado com impressões digitais; diretriz do programa (Lakatos); Hopfield moderna (eco do dado) sobre a esfera; leitura em cascas (scanner esférico).
+
+**Comparação com a convencional até aqui:** a AlphaFi empata (Etapa B, EcoBIP) ou fica atrás (Etapas H e RP). O ganho real está na previsibilidade e na mensurabilidade do campo, não no desempenho de memória.
 
 ---
 
@@ -88,7 +110,7 @@ Leitura cruzando commits e Research Journal; as marcações abaixo são do assis
   - RJ 07: "[Pré-estágio] Limite declarado + instrumento de reprojeção" — nunca implementado
   - Manifesto 312–313: r = 1 vê a borda primeiro e aciona o reprojeto; gatilho proposto dCoh/dt < 0 por vários ciclos; cada ciclo de reprojeção = volta ao mesmo ponto em coerência mais alta (espiral de Vico)
   - Tradução na esfera (20/10): detectar o limite (regra da grade: graus pedidos > grau medível; ou previsor; ou queda de coerência) → crescer para a próxima etapa de Fibonacci com pontos encaixados → reavaliar o campo nos pontos novos → reescalar vizinhança e ferramentas (σ ∝ 1/√N) → liberar os graus novos
-  - Primeiro teste: Etapa RP (critérios na conversa de 20/10/2026)
+  - Primeiro teste: Etapa RP (critérios na conversa de 20/10/2026) — **executada em 20/10:** gatilho cumprido e o formado preservado; sem ganho de memória nesta tarefa (memórias correlacionadas). Ver `REDE_AP/AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`, seção 5
 
 ---
 

@@ -121,3 +121,5 @@ A proposta é um **esqueleto geométrico** de uma função de tradutibilidade, n
 | Ganho de Coh do MPAP na figura | por construção (independente da ativação) |
 | Mapa vértice → esfera | proposta, a confirmar |
 | Normalização r = SEAL contra r = 1 | a confirmar |
+| Vizinhança em Fibonacci para N pequeno (item IV.3) | **resolvido em 19 e 20/10/2026:** medidor bem condicionado de 34 a 233 pontos (número de condição 1,6 a 4,5) e regra de resolução (L+1)² ≤ N/2 (Grade Esférica v1) |
+| Representação 3D (item IV.7) | **feita em 20/10/2026:** leitura em cascas na grade esférica e scanner do EcoBIP em três camadas (páginas em `REDE_AP/CampoEsferico_Etapas_P_A_B_H_RP/`) |

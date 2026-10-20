@@ -36,7 +36,11 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 | A memória com forma pode ser prevista antes de instalada | **confirmada** (previsão condicional) | idem, seções 5–7 |
 | Do grosseiro para o fino, também na instalação das ferramentas | observação descritiva, a confirmar | idem, seção 7 |
 | φ na disposição dos pontos melhora a memória | **não detectada** (três testes) | idem, seções 1–2; etapa 1 |
-| O Phantom ativo preserva o sinal da rede | **não demonstrada** na amplitude 1/φ³ | `REDE_AP/_pendente_registro/` |
+| O Phantom ativo preserva o sinal da rede | **não demonstrada** na amplitude 1/φ³; como fundo, ajuda pouco e sem especificidade de forma | `REDE_AP/AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`, seções 1–2 |
+| A AlphaFi esférica difere da convencional na mesma tarefa (EcoBIP 880) | **empate** no EcoBIP (Etapa B); **atrás** com memórias ricas (Etapa H); tarefa limitada por memórias correlacionadas | idem, seções 3–5 |
+| O eco do dado (Hopfield moderna) melhora a AlphaFi | **não demonstrada** com λ = 0,5; o eco puro funciona | idem, seção 4 |
+| A vizinhança acompanha a resolução (σ ∝ 1/√N) | regra adotada no canônico; abre os grupos de memória, sem cumprir R1 | idem, seção 5 |
+| A reprojeção (crescer a esfera e reprojetar o formado) melhora a memória | **implementada e preserva o antigo**; **sem ganho** nesta tarefa | idem, seção 5 |
 | O eco ressonante + Ecoatrator como portão do estágio 2 | proposta, não testada | Research Journal da Rede AP |
 | O eixo radial (cascas internas, α no centro) | proposta, não testada | conversa de 19/10 |
 
@@ -66,7 +70,7 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 
 ## 6. Onde estamos (atualizar a cada sessão)
 
-**20/10/2026:** campo esférico cultivado e memória com previsão confirmados no modelo; Phantom (Etapas P e A) e EcoBIP 880 nas duas redes (Etapa B: empate com o EcoBIP, desvantagem da AlphaFi no controle) executados e pendentes de registro em `REDE_AP/_pendente_registro/`. **Grade Esférica de Referência v1** criada (`REDE_AP/AlphaPhi_GradeEsferica_v1.py`, SHA-256 `0512264d7d3ede7ab3563fa17eb7b8ac551e6556063ab86afd6cbe2cf2dbf299`): posição (r, θ, φ), pontos encaixados, harmônicos, cascas radiais; todo teste novo importa este módulo. Leitura em cascas (scanner esférico) feita. Etapa H (Hopfield moderna) e Etapa RP (reprojeção 233 → 610) executadas e pendentes de registro: a reprojeção funciona e preserva o antigo, mas não melhorou a memória nesta tarefa; as 6 memórias do EcoBIP são correlacionadas demais (um par em +0,86) e todas as redes as juntam em grupos. **Próximo:** memórias menos correlacionadas (quadros do STFT) e repetir H e RP; depois, o registro conjunto P, A, B, H, RP.
+**20/10/2026:** campo esférico cultivado e memória com previsão confirmados no modelo; Phantom (Etapas P e A) e EcoBIP 880 nas duas redes (Etapa B: empate com o EcoBIP, desvantagem da AlphaFi no controle) executados. **Grade Esférica de Referência v1** criada (`REDE_AP/AlphaPhi_GradeEsferica_v1.py`, SHA-256 `0512264d7d3ede7ab3563fa17eb7b8ac551e6556063ab86afd6cbe2cf2dbf299`): posição (r, θ, φ), pontos encaixados, harmônicos, cascas radiais; todo teste novo importa este módulo. Leitura em cascas (scanner esférico) feita. Etapa H (Hopfield moderna) e Etapa RP (reprojeção 233 → 610) executadas. **P, A, B, H e RP registradas** em 20/10 (`REDE_AP/AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`; Entradas 333–339): a reprojeção funciona e preserva o antigo, mas não melhorou a memória nesta tarefa; as 6 memórias do EcoBIP são correlacionadas demais (um par em +0,86) e todas as redes as juntam em grupos. **Próximo:** memórias menos correlacionadas (quadros do STFT) e repetir H e RP;
 
 ---
 *Florianópolis · 20 de outubro de 2026 · Vitor Edson Delavi · Claude*
