@@ -37,6 +37,14 @@ O serial do Phantom é gerado pelo **código original** `AlphaPhi_SerialPhantom_
 
 **Auditoria pendente:** (1) a recuperação é igual com ou sem pista e igual à preservação: a rede vai sempre aos mesmos estados; só 2 das 5 memórias são estáveis (identificação 0,40); (2) cada memória nasce de 15 números (as bandas), pouco para 233 neurônios; (3) o empate pode vir da suavidade dos padrões (ligação de vizinhança), não do EcoBIP como tal — não verificado. **Próximo:** memórias mais ricas (por exemplo, quadros do STFT ao longo do tempo).
 
+## Etapa H — Hopfield moderna (o eco do dado) sobre a Grade Esférica v1 (20/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaH_Hopfield.py`, `EtapaH_saida_20out2026.txt`. Memórias: entrada + 5 dobras do EcoBIP, 225 faixas → 225 harmônicos (sem sorteio). Versão aprovada (233 pontos) e versão pela regra da grade (610 pontos), declarada antes de rodar.
+
+**Resultado (identificação, pista 40%, EcoBIP; acaso 0,17):** eco puro 0,667 / 0,650; convencional+eco 0,467 / 0,500; convencional 0,400 / 0,400; AlphaFi+eco 0,333 / 0,333; AlphaFi 0,333 / 0,333 (233 / 610 pontos). H00 cumprido; H1, H2, H4 **não**; H3 **difere** (AlphaFi atrás: −0,13 / −0,17).
+
+**Auditoria (descritiva):** a AlphaFi junta as 6 memórias em 2 grupos (pistas 0–2 → memória 1; 3–5 → memória 4); com ou sem fundo, idêntico; o eco mais forte ajuda (λ = 2 → 0,500; λ = 8 → 0,633). Leitura: a vizinhança da memória (σ = 0,35, fixa) filtra as formas finas, onde as memórias ricas diferem; a regra de escala da Etapa C (σ ∝ 1/√N) não foi aplicada à ligação de memória. **Próximo proposto:** vizinhança escalada pela resolução e eco com força declarada em 0,5 / 2 / 8.
+
 **Próximos passos combinados:** varredura de amplitude do Phantom ativo (1/φ³, 1/φ⁵, 1/φ⁷) ou o Phantom ativo no lugar do fundo; depois, registro conjunto como nas etapas anteriores.
 
 ---

@@ -1,0 +1,48 @@
+
+######## 233 pontos (grau medível até 9; versão aprovada) ########
+EcoBIP 880: H00 correlação entre memórias -0.133 -> cumprido
+   condição       ident. 25% ident. 40% sobrep. 40%
+   C                   0.483      0.400       0.801
+   A                   0.333      0.333       0.732
+   C+eco               0.500      0.467       0.864
+   A+eco               0.333      0.333       0.733
+   A+eco errado        0.333      0.317       0.590
+   eco puro            0.983      0.667       0.928
+controle (quadrada com cascata): H00 correlação entre memórias -0.160 -> cumprido
+   condição       ident. 25% ident. 40% sobrep. 40%
+   C                   0.333      0.333       0.771
+   A                   0.333      0.333       0.771
+   C+eco               0.333      0.333       0.789
+   A+eco               0.333      0.333       0.783
+   A+eco errado        0.333      0.300       0.509
+   eco puro            1.000      0.717       0.918
+   === CRITÉRIOS (EcoBIP, identificação com pista 40%) ===
+   H1 A+eco − A: +0.000 (EP 0.000, 0/10) -> NÃO cumprido
+   H2 A+eco − A+eco errado: +0.017 (EP 0.017, 1/10) -> NÃO cumprido
+   H3 A+eco − C+eco: -0.133 (EP 0.022, 8/10) -> difere
+   H4 A+eco − eco puro: -0.333 (EP 0.035, 0/10) -> NÃO cumprido
+   (descritivo) A+eco − C+eco: EcoBIP -0.133 | controle +0.000
+
+######## 610 pontos (grau medível até 16; versão pela regra da grade) ########
+EcoBIP 880: H00 correlação entre memórias -0.136 -> cumprido
+   condição       ident. 25% ident. 40% sobrep. 40%
+   C                   0.500      0.400       0.801
+   A                   0.333      0.333       0.738
+   C+eco               0.500      0.500       0.894
+   A+eco               0.383      0.333       0.740
+   A+eco errado        0.333      0.333       0.714
+   eco puro            1.000      0.650       0.931
+controle (quadrada com cascata): H00 correlação entre memórias -0.161 -> cumprido
+   condição       ident. 25% ident. 40% sobrep. 40%
+   C                   0.333      0.333       0.782
+   A                   0.333      0.333       0.766
+   C+eco               0.333      0.333       0.777
+   A+eco               0.333      0.333       0.775
+   A+eco errado        0.333      0.333       0.695
+   eco puro            1.000      0.700       0.924
+   === CRITÉRIOS (EcoBIP, identificação com pista 40%) ===
+   H1 A+eco − A: +0.000 (EP 0.000, 0/10) -> NÃO cumprido
+   H2 A+eco − A+eco errado: +0.000 (EP 0.000, 0/10) -> NÃO cumprido
+   H3 A+eco − C+eco: -0.167 (EP 0.000, 10/10) -> difere
+   H4 A+eco − eco puro: -0.317 (EP 0.046, 0/10) -> NÃO cumprido
+   (descritivo) A+eco − C+eco: EcoBIP -0.167 | controle +0.000
