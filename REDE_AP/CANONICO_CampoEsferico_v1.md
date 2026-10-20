@@ -43,3 +43,17 @@ Qualquer alteração em qualquer arquivo, mesmo de uma vírgula, muda a impress�
 
 ---
 *Florianópolis · 19 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
+
+## Acréscimos canônicos (20/10/2026) — sem alterar nenhum arquivo da v1
+
+| Arquivo | Papel | SHA-256 |
+|---|---|---|
+| `AlphaPhi_GradeEsferica_v1.py` | **Grade Esférica de Referência v1**: posição (r, θ, φ), raios canônicos (0, 1/φ, 1), pontos encaixados, harmônicos, decomposição por grau, cascas de leitura. Autoverificação: mesmos pontos da Etapa C e mesma base da Etapa T | `0512264d7d3ede7ab3563fa17eb7b8ac551e6556063ab86afd6cbe2cf2dbf299` |
+| `AlphaPhi_CampoEsferico_EtapaF_Crescimento.py` | Etapa F (ferramentas instaladas durante o crescimento), registrada em 19/10 | `9bfaa146936b1d3165ade58e1f2cd3cfed850a3b9586d1c1215c502896707bb1` |
+
+**Regras que entram no canônico a partir de 20/10:**
+1. **Todo teste novo importa a Grade Esférica v1.**
+2. **A vizinhança acompanha a resolução** (σ ∝ 1/√N), no campo e na ligação de memória (lição da Etapa H).
+3. **O grau medível segue a regra da grade:** (L+1)² ≤ N/2. Um sinal que pede graus acima disso pede uma esfera maior (gatilho da reprojeção).
+
+**Ainda fora do canônico** (executados, pendentes de registro em `_pendente_registro/`): Etapas P, A, B, H e o scanner em cascas. Entram aqui quando forem registrados.
