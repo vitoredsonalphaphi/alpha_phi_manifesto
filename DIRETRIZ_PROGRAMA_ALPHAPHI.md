@@ -26,6 +26,14 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 - **Modelo espacial:** centro α (r = 0) → interior do processamento (0 < r < 1) → superfície do campo harmônico (r = 1) → efeito no ambiente (r > 1). Sempre do centro para fora.
 - **Tradutibilidade:** toda noção filosófica entra nos testes quando é traduzida em algo mensurável (regra de operacionalização da Ponte).
 
+### 3.1.1 O que o AlphaPhi não é *(acrescentado em 21/10/2026; ver Entrada 340)*
+
+- **Não é transumanismo nem pós-humanismo.** O projeto não propõe prolongar artificialmente a vida, substituir o corpo, nem transferir a consciência para um suporte biológico ou sintético.
+- **A vida humana é considerada na sua naturalidade, não na sua negação.** Isso inclui a morte, entendida como **continuidade** e não como finitude, como na filosofia clássica e nas tradições espiritualistas milenares.
+- **A técnica é instrumento, nunca substituto.** A rede AP traduz noções filosóficas em termos técnicos por meio da estética e está a serviço dessa tradução. Ela não ocupa o lugar do humano, do espírito nem da alma.
+- **Fundamento declarado não é resultado medido.** A posição sobre o espírito e a continuidade é fundamento filosófico do projeto. Os testes técnicos (campo, memória, comparação com redes convencionais) não a demonstram nem a refutam, e nenhum resultado deve ser apresentado como prova dela.
+- **Regra de leitura:** comparar o AlphaPhi com outro movimento exige partir do que cada um **afirma sobre o ser humano**. Semelhanças de forma, como "superar um limite" ou "geometria superior", não bastam.
+
 ### 3.2 Cinturão protetor (hipóteses que se testam e podem cair sem derrubar o núcleo)
 
 | Hipótese | Status em 20/10/2026 | Onde |
