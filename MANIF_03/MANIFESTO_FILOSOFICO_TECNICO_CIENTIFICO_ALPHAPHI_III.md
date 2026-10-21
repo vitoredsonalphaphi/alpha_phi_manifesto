@@ -15927,6 +15927,69 @@ A reconsideração da Gemini concorda com o pesquisador, mas exagera em sentido 
 
 ---
 
+## Entrada 341 — 21 de outubro de 2026
+### A Régua que Vê Dez Por Cento — As Duas Fontes do Erro
+
+### I. Enunciado do Pesquisador
+
+> "É aquela história, né? É aquela história, de repente, tipo assim, uma coisa é o que os números parecem que dizem a respeito de uma integridade que parece que está sendo analisada por completo, que parece que está sendo analisada numa abrangência que se refere ao fidedigno. E outra coisa é esta abrangência que talvez não esteja sendo observado por critérios que não foram refinados ao ponto de cogitar com o que acontece nos resultados orbitais dos próprios resultados. Outra coisa é aquela mesma questão do que eu me refiro, de qual régua está sendo utilizado para esta medição. Você está comparando o campo alfa-fi com o convencional. Eu não sei o quanto isso beneficia. Você está impondo talvez você esteja impondo um critério da convencional para dizer que a alfa-fi perdeu a metade da memória. Eu não sei. Por mais que você use aquela tangente que não se refere a uma regra de equiparação entre a convencional e a AP, e que você se referiu, por exemplo, à observação dos resultados da própria memória em si, independente da régua da quadrada, mas ainda assim eu acho que é um critério prematuro, porque nós nem sabemos se já instrumentalizamos os detalhes das ferramentas que de repente se referem a observação ou a conquista do resultado mais aproximado com aquilo que a eficiência da própria memória do AlphaFi permite ser alcançado. Ou seja, é uma questão de refinar. Será que existe, então, o que fica a questão? Será que existe uma maneira de refinar essa observação para observar aquilo que não está sendo observado? Lembra daquilo que já foi comentado, dos resultados que, de repente, se existe hipoteticamente um campo com 100% de uma estatística e um determinado ferramenta de medição esteja observando 10%, e de acordo com aquilo que é observado de 10% do campo, considera apenas os prós e contras daquilo que foi observado diante de 10%. E se todo o ganho de um resultado positivo estaria disposto nos outros 90% ou 75%, e não foi observado porque a régua e a medição, a métrica, sem o refinamento, observou só 10% do campo. Eu não sei se é isso, mas algo me diz que, de repente, talvez, provavelmente, a exemplo de outros momentos, talvez seja isso. Eu prefiro, então, dizer no meio termo que um pouco talvez seja isso e um pouco talvez seja, sim, com certeza, uma necessidade de refinar a estruturação do acesso a essa memória, o caminho, não sei qual é a ferramenta, qual é a mecânica dessa questão de memória. Mas acredito que, com certeza, cogitar em ambas as possibilidades é mais acertado do que cogitar em apenas uma como fonte do erro."
+
+— Vitor Edson Delavi, 21 de outubro de 2026
+
+*Texto na íntegra, como ditado (sem revisão).*
+
+### II. Estruturação
+
+#### 1. As duas fontes do erro
+
+Diante do resultado da Etapa K (com pista de 40% e memórias distintas, a AlphaFi identifica 0,48; as convencionais, perto de 1,00), o pesquisador recusa escolher uma só explicação:
+
+- **Fonte 1, a régua:** a medida pode estar vendo só uma parte do que a rede faz (os "10% do campo"), e o ganho, se houver, estaria no que não é medido.
+- **Fonte 2, o mecanismo:** o acesso à memória na AlphaFi (o caminho do estado até ela) pode estar mal construído e precisar de refinamento.
+
+Considerar as duas ao mesmo tempo é a posição metodologicamente correta: é a regra de não aceitar uma causa única antes de testar as alternativas.
+
+#### 2. O que a régua atual de fato vê
+
+A "identificação" e a "sobreposição" usadas nas Etapas H a K olham o **estado final**, neurônio por neurônio, com o **mesmo peso para todos**, como ±1, e só **no fim** da dinâmica. Essa é a régua natural da rede convencional, em que não há geometria. Ela é cega a quatro coisas que a AlphaFi, por construção, pode ter:
+
+| O que a régua não vê | Por que pode importar na AlphaFi | Medida refinada |
+|---|---|---|
+| **A memória por regiões** | as ligações são locais; a memória pode estar recuperada em partes da esfera e não em outras | mapa da sobreposição local na esfera; fração da esfera recuperada |
+| **A memória por forma** | as memórias têm forma; a rede pode recuperar a forma grosseira (graus baixos) e errar o fino | sobreposição por grau L (a régua das cascas) |
+| **O campo, não só o sinal** | o campo local contínuo pode carregar a memória melhor do que o estado ±1 | sobreposição do campo com a memória |
+| **O caminho, não só o fim** | a rede pode passar perto da memória e depois se afastar | sobreposição máxima ao longo da dinâmica e o momento em que acontece |
+
+E falta a régua que a própria diretriz pede: o **caráter AlphaFi** (Coh + Entr, a régua dupla), nunca calculado nessas etapas.
+
+#### 3. O cuidado: refinar a régua sem procurar a régua que favorece
+
+Inventar medidas depois de ver o resultado tem um risco: encontrar sempre alguma em que a AlphaFi ganha. Três regras protegem contra isso:
+
+1. As medidas novas são **escritas antes** e aplicadas **igualmente às três redes** (AlphaFi, Hebb, pseudo-inversa).
+2. A medida antiga **continua relatada**; nenhuma substitui outra.
+3. Se a AlphaFi for melhor numa medida nova, isso define uma **capacidade diferente** (por exemplo, recuperar a forma grosseira, que se parece com reconhecer uma categoria), e não "a mesma memória medida melhor". Essa capacidade precisa de uma tarefa em que ela importe.
+
+*Em palavras:* a régua refinada pode mostrar os outros 90% do campo; ela não pode ser escolhida para mostrar só o que agrada.
+
+#### 4. A fonte 2: refinar o acesso à memória
+
+Três mecanismos candidatos, todos já presentes no projeto:
+
+- **Do grosseiro para o fino na própria recuperação:** começar com vizinhança larga (a forma) e estreitar até a resolução (o detalhe), como no cultivo da Etapa C e na instalação da Etapa F.
+- **Ligações em várias escalas:** somar vizinhanças de raios diferentes, uma por casca, em vez de uma só largura.
+- **O eco do dado orientado pelo campo:** a Hopfield moderna, já testada (Etapa H), com força declarada.
+
+#### 5. Ordem proposta
+
+A fonte 1 é **barata**: as medidas refinadas podem ser calculadas sobre a mesma Etapa K, gravando os estados durante a dinâmica. Ela também diz onde a fonte 2 deve agir (se a memória falha por regiões, por graus ou no caminho). Por isso, primeiro a observação refinada, depois o mecanismo, cada um com critérios escritos antes.
+
+---
+*Florianópolis · 21 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
