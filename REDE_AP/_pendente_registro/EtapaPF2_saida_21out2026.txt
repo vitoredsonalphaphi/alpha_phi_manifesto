@@ -1,0 +1,50 @@
+
+##### nível 0.0 · pista 40%   (PF0, área |h| na V0: 0.585)
+versão  conclusão grosseiro    fino  firmeza×acerto  coerência  identificação
+V0          0.221     0.190   0.227             nan      0.112          0.750
+V1          0.217     0.159   0.224           0.567      0.124          0.717
+V2          0.203     0.174   0.209           0.566      0.141          0.608
+V3          0.261     0.228   0.268           0.587      0.122          0.867
+V4          0.420     0.338   0.445           0.676      0.117          0.825
+V5          0.382     0.312   0.399           0.667      0.117          0.908
+V6          0.314     0.251   0.332           0.611      0.122          0.625
+
+##### nível 0.0 · pista 25%   (PF0, área |h| na V0: 0.677)
+versão  conclusão grosseiro    fino  firmeza×acerto  coerência  identificação
+V0          0.477     0.479   0.484             nan      0.115          1.000
+V1          0.450     0.432   0.461           0.641      0.127          1.000
+V2          0.381     0.384   0.382           0.633      0.139          0.983
+V3          0.508     0.495   0.525           0.681      0.125          1.000
+V4          0.794     0.761   0.819           0.812      0.107          1.000
+V5          0.724     0.667   0.753           0.801      0.110          1.000
+V6          0.678     0.628   0.699           0.733      0.113          0.983
+
+##### nível 0.4 · pista 40%   (PF0, área |h| na V0: 0.702)
+versão  conclusão grosseiro    fino  firmeza×acerto  coerência  identificação
+V0          0.479     0.446   0.513             nan      0.095          0.267
+V1          0.491     0.457   0.531           0.730      0.099          0.258
+V2          0.508     0.434   0.553           0.738      0.105          0.083
+V3          0.519     0.489   0.562           0.740      0.101          0.258
+V4          0.585     0.523   0.642           0.767      0.115          0.125
+V5          0.569     0.504   0.622           0.763      0.108          0.192
+V6          0.578     0.479   0.636           0.764      0.115          0.083
+
+##### nível 0.4 · pista 25%   (PF0, área |h| na V0: 0.752)
+versão  conclusão grosseiro    fino  firmeza×acerto  coerência  identificação
+V0          0.608     0.543   0.658             nan      0.108          0.350
+V1          0.597     0.552   0.659           0.763      0.114          0.217
+V2          0.577     0.481   0.639           0.768      0.115          0.108
+V3          0.608     0.567   0.671           0.770      0.114          0.258
+V4          0.598     0.525   0.658           0.768      0.118          0.175
+V5          0.609     0.543   0.668           0.774      0.118          0.217
+V6          0.585     0.498   0.645           0.767      0.118          0.092
+
+=== CRITÉRIOS (conclusão; nível 0,0; pista 40%) ===
+PF0 área |h| distingue certos de errados (V0, 1ª volta): 0.585 -> NÃO cumprido
+PF1 V1 − V0: -0.004 (EP 0.003, 5/10) -> NÃO cumprido
+PF2 V3 − V1: +0.044 (EP 0.004, 10/10) -> cumprido
+PF3a V5 − V3: +0.120 (EP 0.006, 10/10) -> cumprido
+PF3b V5 − V4: -0.038 (EP 0.009, 1/10) -> NÃO cumprido
+PF3 -> NÃO cumprido
+PF4 V5 − V6: +0.068 (EP 0.013, 9/10) -> cumprido
+PF5 firmeza × acerto na V5: 0.667 -> NÃO cumprido

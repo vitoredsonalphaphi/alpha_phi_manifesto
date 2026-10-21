@@ -1,4 +1,4 @@
-# Pendente de registro — Etapas S, K e PF (20 e 21/10/2026)
+# Pendente de registro — Etapas S, K, PF e a afinação (20 e 21/10/2026)
 
 **Status:** executada, **não registrada**. Os critérios de sanidade **S00 e S01 falharam**; pela regra aprovada antes de rodar, o teste para aí, sem conclusão. Esta pasta existe para que código e números não se percam.
 
@@ -48,6 +48,16 @@ A regra corrigida (parar quando a próxima memória teria correlação ≥ 0,5) 
 **Conclusão da memória (nível 0,0, pista 40%):** V0 0,122 · V1 0,109 · V2 0,100 · V3 0,120 · V4 0,221 · V5 0,231 · V6 0,218. **Critérios:** PF0 não (área 0,546); PF1 não (−0,013); PF2 cumprido (+0,011, 9/10); PF3 cumprido (+0,111 e +0,010); PF4 não (+0,013, 7/10); PF5 não (0,584). Leitura: o previsor faz quase todo o ganho; o batedor acrescenta pouco, e o batedor enganado quase não atrapalha; o ponto e campo sozinho não ajuda.
 
 **Auditoria — erro de calibração do assistente:** quando a vizinhança da memória foi estreitada pela resolução (regra de 20/10), o peso do fundo do campo (0,02) não foi ajustado. Na esfera de 610 pontos, o campo do fundo ficou 2,12 vezes maior que o da memória (no desenho original, com σ 0,35: 0,20 a 0,26); com esse fundo, só 71% dos neurônios ficam estáveis na própria memória (sem ele, 92%). Isso afeta as Etapas RP, S, K e PF e pode explicar por que a AlphaFi "para longe da memória". As versões contínuas também chegaram ao limite de 50 voltas sem convergir (tolerância 0,001). **Correção proposta:** peso do fundo escalado pela massa da vizinhança, para manter a razão do desenho original; repetir K e PF.
+
+## A afinação — Etapas K e PF repetidas com o fundo escalado (21/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaK2_Afinada.py`, `AlphaPhi_CampoEsferico_EtapaPF2_Afinada.py`, saídas `EtapaK2_saida_21out2026.txt` e `EtapaPF2_saida_21out2026.txt`, os `.json`, e a página `pagina_pre_funcao_na_esfera.html` (agora com "afinada" e "antes"). Correção aprovada pelo pesquisador: peso do fundo = 0,02 × (vizinhança com σ 0,091) / (vizinhança com σ 0,35) = 0,0015. Razão fundo/memória 0,16 (antes 2,12); neurônios estáveis na própria memória 91,5% (antes 71%). Mesmas sementes e critérios.
+
+**Etapa K afinada (identificação, com forma, pista 25%):** a AlphaFi passa a identificar 1,000 com memórias distintas (antes 0,925; sobreposição 0,47, antes 0,26), mas cai mais depressa com memórias parecidas (0,4: 0,417, antes 0,583) — o fundo forte protegia contra a semelhança. K1–K4 **não cumpridos**. Descritivo, não previsto: a AlphaFi com pseudo-inversa (A-PI) chega a 1,000 / 1,000 / 0,992 / 0,875 / 0,692 nos cinco níveis.
+
+**Etapa PF afinada (conclusão, nível 0,0, pista 40%):** V0 0,221 · V1 0,217 · V2 0,203 · V3 0,261 · V4 0,420 · V5 0,382 · V6 0,314 (todas acima do antes). **PF2 cumprido** (+0,044, 10/10), **PF4 cumprido** (+0,068, 9/10: o batedor certo importa); PF0, PF1, PF3 (V5 < V4: −0,038), PF5 (0,667) **não**. Com pista de 25%, o previsor leva a conclusão a 0,794 e a firmeza × acerto a 0,812.
+
+**Leitura:** a afinação firma a memória da AlphaFi e torna o batedor útil; o previsor sozinho continua sendo a via mais forte, e somar o batedor a ele não acrescenta. O ponto e campo sozinho segue sem efeito. A conclusão ainda fica longe de 1,0 com pista de 40% (0,42 no melhor caso). As versões contínuas continuam sem estabilizar em 50 voltas.
 
 ---
 *Florianópolis · 21 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
