@@ -1,0 +1,46 @@
+estrutura de êxito: 25 de 225 coeficientes (11.1%)
+
+##### nível 0.0 · pista 40%
+versão     conclusão  grosseiro    fino  identificação
+V0             0.218      0.229   0.219          0.767
+SP             0.210      0.189   0.214          0.767
+T              0.427      0.404   0.450          0.917
+EX-G           0.259      0.448   0.224          0.667
+EX-H           0.236      0.228   0.241          0.775
+EX-acaso       0.185      0.165   0.192          0.700
+
+##### nível 0.0 · pista 25%
+versão     conclusão  grosseiro    fino  identificação
+V0             0.484      0.484   0.492          1.000
+SP             0.459      0.437   0.468          1.000
+T              0.791      0.782   0.817          1.000
+EX-G           0.466      0.764   0.429          1.000
+EX-H           0.485      0.491   0.497          1.000
+EX-acaso       0.382      0.366   0.396          1.000
+
+##### nível 0.4 · pista 40%
+versão     conclusão  grosseiro    fino  identificação
+V0             0.476      0.409   0.512          0.233
+SP             0.502      0.447   0.547          0.142
+T              0.577      0.489   0.634          0.108
+EX-G           0.523      0.503   0.568          0.192
+EX-H           0.517      0.457   0.564          0.192
+EX-acaso       0.488      0.397   0.538          0.125
+
+##### nível 0.4 · pista 25%
+versão     conclusão  grosseiro    fino  identificação
+V0             0.607      0.511   0.659          0.375
+SP             0.586      0.492   0.648          0.167
+T              0.592      0.493   0.653          0.158
+EX-G           0.584      0.528   0.643          0.250
+EX-H           0.584      0.478   0.645          0.183
+EX-acaso       0.569      0.436   0.635          0.192
+
+=== CRITÉRIOS (nível 0,0; pista 40%) ===
+EX0 T − SP: +0.216 (EP 0.010, 10/10) -> cumprido
+EX1 EX-G − SP: +0.049 (EP 0.007, 10/10) -> cumprido
+EX2 fração do ganho recuperada pela estrutura de êxito: 0.225 (>= 0,5) -> NÃO cumprido
+EX3 EX-G − SP (forma fina, graus 5–14): +0.010 (EP 0.007, 6/10) -> NÃO cumprido
+EX4 EX-H − SP: +0.026 (EP 0.007, 9/10) -> cumprido
+EX5 EX-G − EX-acaso: +0.074 (EP 0.008, 10/10) -> cumprido
+(descritivo) EX-G − EX-H: +0.023
