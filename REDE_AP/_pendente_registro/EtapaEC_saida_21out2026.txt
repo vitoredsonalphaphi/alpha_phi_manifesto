@@ -1,0 +1,43 @@
+
+##### nível 0.0 · pista 40%
+versão       conclusão  grosseiro    fino  identificação
+SP               0.237      0.233   0.240          0.767
+T                0.444      0.392   0.467          0.892
+EX-G             0.277      0.434   0.239          0.708
+EC-3             0.339      0.408   0.340          0.708
+EC-2             0.316      0.419   0.299          0.692
+EC-inverso       0.414      0.328   0.459          0.908
+
+##### nível 0.0 · pista 25%
+versão       conclusão  grosseiro    fino  identificação
+SP               0.466      0.413   0.476          1.000
+T                0.801      0.772   0.826          1.000
+EX-G             0.470      0.740   0.434          0.983
+EC-3             0.599      0.675   0.627          0.983
+EC-2             0.526      0.680   0.526          0.983
+EC-inverso       0.711      0.640   0.760          1.000
+
+##### nível 0.4 · pista 40%
+versão       conclusão  grosseiro    fino  identificação
+SP               0.499      0.463   0.547          0.167
+T                0.581      0.488   0.644          0.142
+EX-G             0.515      0.482   0.563          0.150
+EC-3             0.553      0.475   0.611          0.133
+EC-2             0.533      0.480   0.590          0.142
+EC-inverso       0.570      0.481   0.632          0.125
+
+##### nível 0.4 · pista 25%
+versão       conclusão  grosseiro    fino  identificação
+SP               0.588      0.513   0.656          0.158
+T                0.587      0.517   0.654          0.117
+EX-G             0.583      0.546   0.646          0.217
+EC-3             0.577      0.523   0.645          0.108
+EC-2             0.578      0.531   0.645          0.158
+EC-inverso       0.578      0.513   0.646          0.125
+
+=== CRITÉRIOS (nível 0,0; pista 40%) ===
+EC0 T − SP: +0.207 (EP 0.009, 10/10) -> cumprido
+EC1 EC-3 − T: -0.105 (EP 0.013, 0/10) -> NÃO cumprido
+EC2 EC-3 − EC-inverso: -0.076 (EP 0.015, 0/10) -> NÃO cumprido
+EC3 fração do ganho com duas camadas (44%): 0.381 (>= 0,8) -> NÃO cumprido
+EC4 EC-2 − EX-G (forma fina): +0.060 (EP 0.004, 10/10) -> cumprido
