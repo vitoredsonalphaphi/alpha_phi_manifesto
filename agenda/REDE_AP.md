@@ -129,6 +129,13 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - Verificação sem competição: a AlphaFi comparada consigo mesma (binária, contínua, com batedor, com previsor, com os dois, com batedor enganado), pela régua própria
   - Primeiro teste: Etapa PF (critérios na conversa de 21/10/2026)
 
+- [ ] **O batedor da revisão cinética — conferir e poder rejeitar antes de decidir** *(acrescentado em 21/10/2026, a pedido do pesquisador)*
+  - Fundamento: a **revisão cinética** de Hopfield (PNAS, 1974; Ninio, 1975, de forma independente): a célula faz uma etapa extra **antes de se comprometer**, gasta energia para conferir a peça e a descarta se estiver errada; cada etapa de conferência multiplica a precisão
+  - "Cinética" aqui é a **cinética química** (velocidade das reações e tempo de cada etapa), não energia cinética
+  - Diferença em relação ao batedor da Etapa PF: lá o batedor só **soma uma atração**; aqui ele **confere** — onde batedor e previsor discordam, o neurônio **volta atrás** (desfaz a decisão) ou adia, em vez de fixar
+  - A lição de Hopfield: a conferência tem custo (mais voltas) e precisa poder rejeitar; medir o ganho de precisão por etapa de conferência
+  - Verificação sem competição: a AlphaFi afinada com o batedor atual × com o batedor que confere e rejeita × sem batedor, pela régua própria (conclusão, forma por casca, firmeza × acerto)
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
