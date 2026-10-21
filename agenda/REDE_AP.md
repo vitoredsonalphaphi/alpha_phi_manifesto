@@ -148,6 +148,23 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - A fazer: uma **régua própria nova** para a AlphaFi — medir, ao longo da dinâmica, os instantes de coerência do campo com cada memória (pico de sincronia), em vez de só o estado final; aplicar igualmente a todas as versões, escrita antes
   - Conferir as fontes antes de usar (artigos não lidos nesta sessão)
 
+- [ ] **Modelos de difusão — a forma que surge do ruído guiada por um campo** *(acrescentado em 21/10/2026, a pedido do pesquisador)*
+  - Fundamento (citado de memória: Sohl-Dickstein e colegas, 2015; Song e Ermon, 2019; Ho e colegas, 2020): da termodinâmica da difusão; um **campo de gradientes**, aprendido antes, aponta em cada ponto para onde a forma está, e conduz o ruído até a forma
+  - Ligação: a forma mais bem-sucedida hoje, na tecnologia, de "o campo precede a forma" (Entrada 345, família "o campo que orienta"); mesma estrutura do previsor e do campo cultivado
+  - A fazer: ficha com fontes verificadas; testar a recuperação na esfera como um campo de gradientes por casca (do grosseiro para o fino), pela régua própria
+
+- [ ] **Redes de estado de eco e computação de reservatório — o parente do eco ressonante** *(acrescentado em 21/10/2026)*
+  - Fundamento (citado de memória: Jaeger, 2001, echo state networks; Maass, 2002, máquinas de estado líquido; Fernando e Sojakka, 2003, um balde de água que reconheceu voz): um meio dinâmico rico "ecoa" a entrada, e só a leitura da resposta é aprendida
+  - Ligação: o eco ressonante e o EcoBIP; o campo esférico como **reservatório**, sem treinar as ligações; ponte direta entre o projeto e a literatura de redes neurais
+  - A fazer: ficha com fontes; o campo cultivado como reservatório para uma tarefa de processamento própria (item 3 de "o que falta" para a rede AP)
+
+- [ ] **O laser de Haken — o parâmetro de ordem como modelo de coerência** *(acrescentado em 21/10/2026)*
+  - Fundamento (citado de memória: Hermann Haken, sinergética, anos 1970–1990; o "computador sinergético"): no laser, um único campo coletivo (o **parâmetro de ordem**) põe em fase milhões de átomos e "escraviza" as partes; o mesmo princípio reconhece padrões
+  - Ligação: coerência e fase; a relação entre o ponto e o campo dita em física; família "o campo que orienta"
+  - A fazer: ficha com fontes; medir, na rede AP, um parâmetro de ordem (a sobreposição com a memória ou a coerência por casca) como variável que comanda a dinâmica
+
+- **Referências para consulta futura** *(da conversa de 21/10/2026, todas de memória, a conferir)*: Gabor (holografia, 1948) e Pribram (cérebro holonômico, não confirmado); Lin, Ozcan e colegas (redes ópticas difrativas, 2018); Khatib (campos potenciais na robótica, 1986: os dois polos); Xu e colegas (geração por fluxo de Poisson, 2022: linhas de campo elétrico); Shannon (entropia da informação, 1948); Kirkpatrick, Gelatt e Vecchi (recozimento simulado, 1983); Prigogine (estruturas dissipativas); Lorenz (atrator estranho, 1963); Bak, Tang e Wiesenfeld (criticalidade auto-organizada, 1987). Os "campos mórficos" de Sheldrake não são aceitos pela ciência atual: se entrarem, com esse rótulo.
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
