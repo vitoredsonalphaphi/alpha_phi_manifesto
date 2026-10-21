@@ -40,6 +40,7 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 | A AlphaFi esférica difere da convencional na mesma tarefa (EcoBIP 880) | **empate** no EcoBIP (Etapa B); **atrás** com memórias ricas (Etapa H); tarefa limitada por memórias correlacionadas | idem, seções 3–5 |
 | O eco do dado (Hopfield moderna) melhora a AlphaFi | **não demonstrada** com λ = 0,5; o eco puro funciona | idem, seção 4 |
 | A vizinhança acompanha a resolução (σ ∝ 1/√N) | regra adotada no canônico; abre os grupos de memória, sem cumprir R1 | idem, seção 5 |
+| A AlphaFi resiste melhor a memórias parecidas (Etapa K, 21/10) | **não se sustenta** contra a pseudo-inversa (1,000 em todos os níveis); supera só a Hebb clássica, que desaba em 0,2 | `REDE_AP/_pendente_registro/` |
 | A reprojeção (crescer a esfera e reprojetar o formado) melhora a memória | **implementada e preserva o antigo**; **sem ganho** nesta tarefa | idem, seção 5 |
 | O eco ressonante + Ecoatrator como portão do estágio 2 | proposta, não testada | Research Journal da Rede AP |
 | O eixo radial (cascas internas, α no centro) | proposta, não testada | conversa de 19/10 |
