@@ -3,7 +3,7 @@
 
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
-**Última atualização:** 20 de outubro de 2026 (criada em 23/09/2026)
+**Última atualização:** 21 de outubro de 2026 (criada em 23/09/2026)
 **Ver também:** `agenda/REDE_AP_METODO.md` ("Agenda REDE-AP (Fichas Método)"): fichas de método, portões G0–G5 e critérios de validação.
 
 ---
@@ -111,6 +111,23 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - Manifesto 312–313: r = 1 vê a borda primeiro e aciona o reprojeto; gatilho proposto dCoh/dt < 0 por vários ciclos; cada ciclo de reprojeção = volta ao mesmo ponto em coerência mais alta (espiral de Vico)
   - Tradução na esfera (20/10): detectar o limite (regra da grade: graus pedidos > grau medível; ou previsor; ou queda de coerência) → crescer para a próxima etapa de Fibonacci com pontos encaixados → reavaliar o campo nos pontos novos → reescalar vizinhança e ferramentas (σ ∝ 1/√N) → liberar os graus novos
   - Primeiro teste: Etapa RP (critérios na conversa de 20/10/2026) — **executada em 20/10:** gatilho cumprido e o formado preservado; sem ganho de memória nesta tarefa (memórias correlacionadas). Ver `REDE_AP/AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`, seção 5
+
+- [ ] **Codificação preditiva — fundamento para instrumentalizar todas as ferramentas** *(acrescentado em 21/10/2026, a pedido do pesquisador; Entrada 344)*
+  - Princípio (citado de memória: Rao e Ballard, 1999; Friston): uma **previsão desce**, a **evidência sobe**, e o processamento segue a **diferença** entre as duas
+  - As ferramentas do projeto já têm essa forma (antecipar, comparar, corrigir): eco ressonante (pré-função), previsor do campo (Etapas T e C), eco do dado / Hopfield moderna (Etapa H), Ecoatrator
+  - A fazer: ficha de fundamentação (com fontes **verificadas**) e releitura de cada ferramenta por esse esquema
+
+- [ ] **Neurônio ponto e campo — Hopfield com valores contínuos** *(acrescentado em 21/10/2026; Entrada 343)*
+  - Hoje cada neurônio guarda só o sinal (±1) e descarta a força do campo local; o neurônio ponto e campo guarda os dois (valor contínuo entre −1 e +1)
+  - Variantes a considerar (de memória): neurônios graduados (Hopfield, 1984); neurônios com temperatura e resfriamento lento (do grosseiro para o fino, no tempo); neurônios de fase (ligação com coerência e fase)
+  - Hipótese: o indeciso espera perto de zero em vez de fixar o erro; pode ser a causa de a AlphaFi chegar perto da memória sem completá-la (Etapas H, RP, S, K)
+  - Não é quântico: a analogia com o ponto e campo vale como estrutura, não como física
+
+- [ ] **O batedor — pré-função de cada neurônio, com duas vias de atração** *(acrescentado em 21/10/2026; Entrada 344)*
+  - Origem: o eco ressonante como pré-função (emite, escuta o que volta, depois a função opera)
+  - Mecânica: versão tênue da rede percorre as ligações sem decidir (a via do dado) + o previsor projeta o esperado (a via do campo); o neurônio firma onde as duas concordam e espera onde discordam
+  - Verificação sem competição: a AlphaFi comparada consigo mesma (binária, contínua, com batedor, com previsor, com os dois, com batedor enganado), pela régua própria
+  - Primeiro teste: Etapa PF (critérios na conversa de 21/10/2026)
 
 ---
 
