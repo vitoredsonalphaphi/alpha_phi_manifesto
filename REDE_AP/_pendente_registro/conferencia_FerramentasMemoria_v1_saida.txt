@@ -1,0 +1,6 @@
+ligações idênticas: True
+batedor idêntico: True
+V3 idêntico: True conclusão 0.278
+V4 idêntico: True conclusão 0.42
+V5 idêntico: True conclusão 0.397
+V0 idêntico: True

@@ -83,5 +83,7 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 
 **21/10/2026:** Etapa S (memórias com quadros do STFT): sanidade falhou, sem conclusão (os quadros do EcoBIP são quase iguais dentro de cada sinal). Etapa K (memórias com semelhança controlada): a AlphaFi resiste melhor que a Hebb clássica, mas **não** supera a pseudo-inversa, que acerta tudo; a forma esférica ajuda a AlphaFi; ponto fraco recorrente: a AlphaFi acerta qual memória, mas o estado final fica longe dela. S e K pendentes de registro em `REDE_AP/_pendente_registro/`. Entrada 340 e seção 3.1.1 (o que o AlphaPhi não é). **Próximo (a decidir):** investigar a baixa sobreposição final da AlphaFi; ou memórias de sons diferentes (agenda V); depois, eixo radial e verificação independente.
 
+**21/10/2026, tarde:** Etapa PF (o batedor) e a **afinação do fundo do campo** (erro de calibração do assistente desde 20/10: fundo 2,1× a memória). Afinada, a rede estabiliza a memória (91,5% dos neurônios estáveis, antes 71%); a conclusão quase dobra; o previsor é a via mais forte e o batedor passa a acrescentar. **Canônico provisório:** `REDE_AP/AlphaPhi_FerramentasMemoria_v1.py` (campo afinado, previsor, batedor), regras 4–6. **Próximo:** memórias parecidas pioraram com a afinação (o fundo forte protegia); estabilizar o neurônio contínuo; registrar S, K, PF; outros substratos (agenda V).
+
 ---
 *Florianópolis · 20 de outubro de 2026 · Vitor Edson Delavi · Claude*

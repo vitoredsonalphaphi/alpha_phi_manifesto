@@ -57,3 +57,22 @@ Qualquer alteração em qualquer arquivo, mesmo de uma vírgula, muda a impress�
 3. **O grau medível segue a regra da grade:** (L+1)² ≤ N/2. Um sinal que pede graus acima disso pede uma esfera maior (gatilho da reprojeção).
 
 **Ainda fora do canônico** (executados e registrados em 20/10/2026 em `AlphaPhi_CampoEsferico_Etapas_P_A_B_H_RP_RESULTADOS_20out2026.md`; código em `CampoEsferico_Etapas_P_A_B_H_RP/`): Etapas P, A, B, H e o scanner em cascas. Entram aqui quando forem registrados.
+
+## Acréscimos canônicos (21/10/2026) — provisórios, sem alterar nenhum arquivo da v1
+
+A pedido do pesquisador: as ferramentas que responderam de forma positiva na estabilização da memória entram no canônico **até que sejam refinadas**.
+
+| Arquivo | Papel | SHA-256 |
+|---|---|---|
+| `AlphaPhi_FerramentasMemoria_v1.py` | **Ferramentas de Memória v1**: o campo afinado (peso do fundo escalado), o previsor, o batedor, a dinâmica de recuperação (contínua) e a binária, e a régua da conclusão. Importa a Grade Esférica v1. Conferido: reproduz **exatamente** o código da Etapa PF afinada (ligações, batedor e as dinâmicas V0, V3, V4, V5 idênticos; `_pendente_registro/conferencia_FerramentasMemoria_v1_saida.txt`) | `d8dc24674b55d127b4e9ad1b989194c4cbfafefc3e6d5c00f3fbbf4d7bbba295` |
+
+**Regras que entram no canônico a partir de 21/10:**
+4. **O fundo do campo acompanha a vizinhança:** peso = 0,02 × (massa da vizinhança da memória) / (massa com σ = 0,35), para manter a razão fundo/memória do desenho original (≈ 0,16–0,26). Corrige o erro de calibração das Etapas RP, S, K e PF. Ganho medido: neurônios estáveis na própria memória de 71% para 91,5%.
+5. **O previsor é a via padrão de recuperação** (força 0,5, β = 8): a ferramenta mais forte da Etapa PF (conclusão 0,420 com pista de 40%; 0,794 com pista de 25%).
+6. **O batedor está disponível** (força 0,5): acrescenta quando usado sem o previsor (PF2, +0,044, 10/10), e o batedor certo importa (PF4, +0,068, 9/10); somado ao previsor **não** acrescenta (PF3). Usar declarado em cada teste.
+
+**Não entram** (sem efeito positivo): o neurônio contínuo sozinho, o "ponto e campo" sem outra via (PF1, duas vezes), e o resfriamento lento (V2). Continuam como hipótese na agenda.
+
+**Agnóstico:** por construção, nenhuma ferramenta depende do sinal de origem (as memórias entram como padrões ±1 nos pontos da grade). Até aqui só foi **testado** com memórias derivadas do EcoBIP 880; a verificação em outros substratos é a agenda V.
+
+**Resultados de origem:** Etapas K, PF e a afinação, em `_pendente_registro/` (ainda não registradas no documento de resultados).
