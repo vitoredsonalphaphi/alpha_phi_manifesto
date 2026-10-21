@@ -1,4 +1,4 @@
-# Pendente de registro — Etapas S e K (20 e 21/10/2026)
+# Pendente de registro — Etapas S, K e PF (20 e 21/10/2026)
 
 **Status:** executada, **não registrada**. Os critérios de sanidade **S00 e S01 falharam**; pela regra aprovada antes de rodar, o teste para aí, sem conclusão. Esta pasta existe para que código e números não se percam.
 
@@ -40,6 +40,14 @@ A regra corrigida (parar quando a próxima memória teria correlação ≥ 0,5) 
 **Leitura:** a hipótese nascida da Etapa S **não se sustenta** contra a convencional melhorada: a pseudo-inversa identifica 1,000 em todos os níveis. Descritivo: a Hebb clássica desaba já em 0,2 (vai à parte comum das memórias), enquanto a AlphaFi decai aos poucos (0,817 em 0,2; 0,583 em 0,4) — a observação da Etapa S era real, mas é vantagem só sobre a versão mais simples. A forma esférica ajuda a AlphaFi (nível 0,0: 0,925 com forma, 0,675 sem forma), e a pseudo-inversa dentro da AlphaFi (A-PI) melhora, sem alcançar a C-PI. A sobreposição final da AlphaFi no nível 0,0 é baixa (0,26): ela acerta qual é a memória, mas para longe dela.
 
 **Auditoria em aberto:** (1) a pseudo-inversa usa a inversa da matriz de correlação das memórias (informação global), o que a AlphaFi local não usa: a comparação é dura por desenho, como combinado; (2) uma só tradução (a entrada do EcoBIP como parte comum); (3) a baixa sobreposição final da AlphaFi, já vista nas Etapas H, RP e S, não foi investigada.
+
+## Etapa PF — o batedor, a pré-função (21/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaPF_Batedor.py`, `EtapaPF_saida_21out2026.txt`, `EtapaPF_resultados.json`, `EtapaPF_auditoria_fundo_21out2026.txt`, `pagina_pre_funcao_na_esfera.html`. A AlphaFi de 610 pontos comparada só consigo mesma, em sete versões (V0 binária a V6 batedor enganado), pela régua própria. Sementes 120–129.
+
+**Conclusão da memória (nível 0,0, pista 40%):** V0 0,122 · V1 0,109 · V2 0,100 · V3 0,120 · V4 0,221 · V5 0,231 · V6 0,218. **Critérios:** PF0 não (área 0,546); PF1 não (−0,013); PF2 cumprido (+0,011, 9/10); PF3 cumprido (+0,111 e +0,010); PF4 não (+0,013, 7/10); PF5 não (0,584). Leitura: o previsor faz quase todo o ganho; o batedor acrescenta pouco, e o batedor enganado quase não atrapalha; o ponto e campo sozinho não ajuda.
+
+**Auditoria — erro de calibração do assistente:** quando a vizinhança da memória foi estreitada pela resolução (regra de 20/10), o peso do fundo do campo (0,02) não foi ajustado. Na esfera de 610 pontos, o campo do fundo ficou 2,12 vezes maior que o da memória (no desenho original, com σ 0,35: 0,20 a 0,26); com esse fundo, só 71% dos neurônios ficam estáveis na própria memória (sem ele, 92%). Isso afeta as Etapas RP, S, K e PF e pode explicar por que a AlphaFi "para longe da memória". As versões contínuas também chegaram ao limite de 50 voltas sem convergir (tolerância 0,001). **Correção proposta:** peso do fundo escalado pela massa da vizinhança, para manter a razão do desenho original; repetir K e PF.
 
 ---
 *Florianópolis · 21 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
