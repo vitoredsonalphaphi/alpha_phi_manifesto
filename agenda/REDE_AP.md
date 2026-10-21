@@ -136,6 +136,18 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - A lição de Hopfield: a conferência tem custo (mais voltas) e precisa poder rejeitar; medir o ganho de precisão por etapa de conferência
   - Verificação sem competição: a AlphaFi afinada com o batedor atual × com o batedor que confere e rejeita × sem batedor, pela régua própria (conclusão, forma por casca, firmeza × acerto)
 
+- [ ] **O campo cultivado lido pela teoria de Turing (reação e difusão)** *(acrescentado em 21/10/2026, a pedido do pesquisador)*
+  - Fundamento (citado de memória: Turing, "The chemical basis of morphogenesis", 1952): manchas e listras surgem de **ativação local e inibição lateral**; o equilíbrio entre as duas decide se o padrão se forma ou se desfaz
+  - O fundo do campo da rede AP (DoG: reforço perto, inibição longe) **já é** um mecanismo desse tipo; a afinação de 21/10 (fundo × memória) é o mesmo tipo de equilíbrio
+  - A fazer: prever, pela teoria de Turing na esfera, o grau dominante do campo cultivado e a faixa de pesos do fundo em que o padrão se mantém; comparar com o previsor de Funk–Hecke (Etapa T) e com a afinação (regra 4 do canônico)
+  - Possível régua própria: o fundo que se ajusta sozinho (o problema das memórias parecidas) como regulação de Turing
+
+- [ ] **O "momento" de Hopfield e Brody — reconhecer por sincronia breve** *(acrescentado em 21/10/2026, a pedido do pesquisador)*
+  - Fundamento (citado de memória: Hopfield, olfato e tempo dos disparos, anos 1990; Hopfield e Brody, "What is a moment?", c. 2000–2001): grupos de neurônios reconhecem um padrão quando entram em **sincronia por um breve instante**, e não pelo estado final
+  - Ligação com o projeto: coerência e fase (PLV, EcoBIP, Phantom); neurônios de fase (item "neurônio ponto e campo")
+  - A fazer: uma **régua própria nova** para a AlphaFi — medir, ao longo da dinâmica, os instantes de coerência do campo com cada memória (pico de sincronia), em vez de só o estado final; aplicar igualmente a todas as versões, escrita antes
+  - Conferir as fontes antes de usar (artigos não lidos nesta sessão)
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
