@@ -1,4 +1,4 @@
-# Pendente de registro — Etapas EX e EC (a estrutura de êxito), 21/10/2026
+# Pendente de registro — Etapas EX, EC e VL, 21/10/2026
 
 **Status:** executada, **não registrada**. Esta pasta existe para que código e números não se percam.
 
@@ -38,3 +38,15 @@
 **Leitura:** a previsão "do centro para fora" falhou. O campo da rede já sustenta sozinho a forma grosseira (o fundo e a vizinhança favorecem o suave); o que falta é o detalhe fino, onde a pista ruidosa estraga mais. A guia ajuda mais quando dá à rede o que ela não tem: guia e campo se complementam.
 
 **Notas declaradas:** a camada 0–14 é a projeção da memória nos 225 harmônicos, não o padrão ±1 do previsor T; as versões em camadas não podem parar antes da volta 21 (todas as camadas precisam ter entrado).
+
+## Etapa VL — o violão na rede AP (21/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaVL_Violao.py`, `EtapaVL_sanidade_21out2026.txt`, `EtapaVL_saida_21out2026.txt`, `EtapaVL_resultados.json`, `pagina_violao_na_esfera.html` (cebola, sonificação, resultados). Gravação: `violao_20260513.wav` (do pesquisador). Primeira tarefa com sinal real: guardar a forma harmônica de 12 trechos e recuperar um deles com ruído no próprio áudio.
+
+**Sanidade:** VL00 cumprido (12 memórias; correlação média −0,010, máxima +0,170). VL01 a 0 dB **não** (pista 0,124, abaixo de 0,2): com aval do pesquisador, antes de rodar a rede, o nível principal passou a +10 dB (pista 0,242).
+
+**Resultado (+10 dB):** pista 0,242 → SP 0,258 (limpou +0,016) · **T 0,514 (limpou +0,272)** · EX-G 0,247 · V0 0,282. **VL1 cumprido** (a rede sozinha limpa, +0,016, 9/10); **VL2 cumprido** (+0,256, 10/10); VL3 **não** (−0,011); VL4 **não** (identificação com o previsor 0,642; acaso 0,083).
+
+**Leitura:** com sinal real, o previsor tira ruído de verdade: de 62% para 76% das faixas certas. A rede sozinha limpa muito pouco. A estrutura de êxito firma a forma grosseira (0,183 → 0,406), mas não a conclusão. Reconhecer o trecho certo entre 12 fica em 64%.
+
+**Notas:** a sonificação é a forma tornada audível (ruído moldado pelo perfil de faixas), não o violão reconstruído; o trecho do scanner é o primeiro não silencioso (0,00 s), não escolhido pelo ouvido.

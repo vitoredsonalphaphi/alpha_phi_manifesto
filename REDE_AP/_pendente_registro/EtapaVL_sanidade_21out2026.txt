@@ -1,0 +1,5 @@
+335 quadros não silenciosos; 12 memórias; trechos (s): 0.00 4.25 74.00 6.50 48.75 32.50 25.25 14.50 39.75 7.50 62.50 65.50
+VL00 memórias 12 · correlação média -0.010 · máxima +0.170 -> cumprido
+  pista a +10 dB: sobreposição com a forma limpa 0.242 (mín -0.043, máx 0.472)
+  pista a +0 dB: sobreposição com a forma limpa 0.124 (mín -0.151, máx 0.367)
+  pista a -5 dB: sobreposição com a forma limpa 0.090 (mín -0.190, máx 0.348)

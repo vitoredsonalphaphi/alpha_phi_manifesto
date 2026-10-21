@@ -1,0 +1,27 @@
+
+##### pista a +10 dB
+versão    pista  conclusão   limpou  grosseiro    fino  identificação
+V0        0.242      0.282    0.040      0.210   0.320          0.617
+SP        0.242      0.258    0.016      0.183   0.292          0.550
+T         0.242      0.514    0.272      0.463   0.540          0.642
+EX-G      0.242      0.247    0.005      0.406   0.264          0.533
+
+##### pista a +0 dB
+versão    pista  conclusão   limpou  grosseiro    fino  identificação
+V0        0.124      0.176    0.053      0.098   0.209          0.408
+SP        0.124      0.164    0.040      0.075   0.188          0.400
+T         0.124      0.359    0.235      0.359   0.392          0.367
+EX-G      0.124      0.145    0.021      0.131   0.163          0.383
+
+##### pista a -5 dB
+versão    pista  conclusão   limpou  grosseiro    fino  identificação
+V0        0.090      0.138    0.048      0.139   0.163          0.325
+SP        0.090      0.134    0.044      0.100   0.152          0.375
+T         0.090      0.307    0.217      0.358   0.331          0.350
+EX-G      0.090      0.114    0.023      0.149   0.123          0.292
+
+=== CRITÉRIOS (pista a +10 dB) ===
+VL1 SP limpa (conclusão − pista): +0.016 (EP 0.005, 9/10) -> cumprido
+VL2 T − SP: +0.256 (EP 0.006, 10/10) -> cumprido
+VL3 EX-G − SP: -0.011 (EP 0.005, 2/10) -> NÃO cumprido
+VL4 identificação com o previsor: 0.642 (>= 0,8) -> NÃO cumprido
