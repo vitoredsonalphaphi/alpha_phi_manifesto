@@ -1,6 +1,6 @@
-# Pendente de registro — Etapas S, K, PF e a afinação (20 e 21/10/2026)
+# Campo Esférico — Etapas S, K, PF e a afinação (20 e 21/10/2026)
 
-**Status:** executada, **não registrada**. Os critérios de sanidade **S00 e S01 falharam**; pela regra aprovada antes de rodar, o teste para aí, sem conclusão. Esta pasta existe para que código e números não se percam.
+**Status:** **registrado** em 21/10/2026, a pedido do pesquisador, em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_S_K_PF_RESULTADOS_21out2026.md`. Esta pasta, antes `_pendente_registro/`, guarda código, saídas e páginas. Reprodução: rodar `../CampoEsferico_Etapas_P_A_B_H_RP/AlphaPhi_EcoBIP_B0_gera_dobras.py` e copiar os `.npy` para esta pasta. A conferência do canônico provisório foi refeita a partir desta pasta em 21/10 (saída idêntica).
 
 | Arquivo | Conteúdo |
 |---|---|

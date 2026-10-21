@@ -64,7 +64,7 @@ A pedido do pesquisador: as ferramentas que responderam de forma positiva na est
 
 | Arquivo | Papel | SHA-256 |
 |---|---|---|
-| `AlphaPhi_FerramentasMemoria_v1.py` | **Ferramentas de Memória v1**: o campo afinado (peso do fundo escalado), o previsor, o batedor, a dinâmica de recuperação (contínua) e a binária, e a régua da conclusão. Importa a Grade Esférica v1. Conferido: reproduz **exatamente** o código da Etapa PF afinada (ligações, batedor e as dinâmicas V0, V3, V4, V5 idênticos; `_pendente_registro/conferencia_FerramentasMemoria_v1_saida.txt`) | `d8dc24674b55d127b4e9ad1b989194c4cbfafefc3e6d5c00f3fbbf4d7bbba295` |
+| `AlphaPhi_FerramentasMemoria_v1.py` | **Ferramentas de Memória v1**: o campo afinado (peso do fundo escalado), o previsor, o batedor, a dinâmica de recuperação (contínua) e a binária, e a régua da conclusão. Importa a Grade Esférica v1. Conferido: reproduz **exatamente** o código da Etapa PF afinada (ligações, batedor e as dinâmicas V0, V3, V4, V5 idênticos; `CampoEsferico_Etapas_S_K_PF/conferencia_FerramentasMemoria_v1_saida.txt`) | `d8dc24674b55d127b4e9ad1b989194c4cbfafefc3e6d5c00f3fbbf4d7bbba295` |
 
 **Regras que entram no canônico a partir de 21/10:**
 4. **O fundo do campo acompanha a vizinhança:** peso = 0,02 × (massa da vizinhança da memória) / (massa com σ = 0,35), para manter a razão fundo/memória do desenho original (≈ 0,16–0,26). Corrige o erro de calibração das Etapas RP, S, K e PF. Ganho medido: neurônios estáveis na própria memória de 71% para 91,5%.
@@ -75,4 +75,4 @@ A pedido do pesquisador: as ferramentas que responderam de forma positiva na est
 
 **Agnóstico:** por construção, nenhuma ferramenta depende do sinal de origem (as memórias entram como padrões ±1 nos pontos da grade). Até aqui só foi **testado** com memórias derivadas do EcoBIP 880; a verificação em outros substratos é a agenda V.
 
-**Resultados de origem:** Etapas K, PF e a afinação, em `_pendente_registro/` (ainda não registradas no documento de resultados).
+**Resultados de origem:** Etapas S, K, PF e a afinação, registradas em 21/10/2026 em `AlphaPhi_CampoEsferico_Etapas_S_K_PF_RESULTADOS_21out2026.md`; código em `CampoEsferico_Etapas_S_K_PF/`.
