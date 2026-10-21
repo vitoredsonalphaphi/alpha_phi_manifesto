@@ -165,6 +165,17 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
 
 - **Referências para consulta futura** *(da conversa de 21/10/2026, todas de memória, a conferir)*: Gabor (holografia, 1948) e Pribram (cérebro holonômico, não confirmado); Lin, Ozcan e colegas (redes ópticas difrativas, 2018); Khatib (campos potenciais na robótica, 1986: os dois polos); Xu e colegas (geração por fluxo de Poisson, 2022: linhas de campo elétrico); Shannon (entropia da informação, 1948); Kirkpatrick, Gelatt e Vecchi (recozimento simulado, 1983); Prigogine (estruturas dissipativas); Lorenz (atrator estranho, 1963); Bak, Tang e Wiesenfeld (criticalidade auto-organizada, 1987). Os "campos mórficos" de Sheldrake não são aceitos pela ciência atual: se entrarem, com esse rótulo.
 
+- [ ] **O eco adaptativo holográfico na rede AP** *(acrescentado em 21/10/2026, a pedido do pesquisador)*
+  - Origem: `AlphaPhi_EcoAdaptativo_Holografico.py` (27/08/2026, Entrada 182): o eco adaptativo como arquitetura que se contém a si mesma (cada nó com a mesma forma em qualquer profundidade; Sépstro local Coh + Entr = 1 em cada nó; selagem por φ; níveis 3^(n+1)); a função `selecionar()` foi deixada como ponto de acoplamento com a rede de atratores
+  - Fundamentos de "a parte contém o todo" (citados de memória, a conferir): a holografia de Gabor (1948); as representações holográficas reduzidas de Plate (1995) e as arquiteturas de vetores simbólicos (Kanerva); na esfera, a transformada por harmônicos é o "domínio de Fourier" do campo, onde cada coeficiente fala do todo
+  - A fazer: acoplar o protótipo à Grade Esférica v1 e às Ferramentas de Memória v1; verificar se a autossimilaridade se mantém na esfera
+
+- [ ] **A estrutura de êxito — um fragmento holográfico que contém a forma do todo, instalado no campo como alvo** *(acrescentado em 21/10/2026, proposta do pesquisador)*
+  - A ideia: em vez de o previsor conhecer a memória inteira, o campo guarda só uma **microestrutura** dela, uma parcela que contém o código do todo, como **estrutura de êxito prévio**: a forma que o conjunto dos neurônios deve alcançar; seria o pré-start do neurônio, mas acoplado no campo (no previsor ou no atrator)
+  - Tradução na esfera (proposta do assistente): a parcela que contém o todo, em resolução baixa, são os **coeficientes de grau baixo** da memória (por exemplo, graus 0–4: 25 de 225 números, cerca de 11%); outra opção, mais holográfica, é uma projeção aleatória curta da memória inteira (cada número fala de todos os neurônios)
+  - Teste proposto, sem competição: o previsor guiado pela memória inteira × pela estrutura de êxito (graus baixos) × pela projeção holográfica curta × sem previsor; pergunta: quanto do ganho do previsor a parcela recupera, e se ela ajuda também na forma fina (o "isento de perda")
+  - Ligação: Entradas 337 (o eco do dado), 343 (o ponto e campo), 344 (o batedor), 345 (a condição prévia: família "a previsão que antecipa")
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
