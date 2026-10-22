@@ -1,0 +1,15 @@
+F1 campo afinado: estáveis na própria memória 0.931 (>= 0,88) · fundo/memória 0.157 (0,12–0,26) -> cumprido
+
+versão   v2: conclusão 40%      v1  diferença  v2: identificação 25%
+V0                   0.224   0.221     +0.003                  1.000
+V1                   0.218   0.217     +0.000                  1.000
+V2                   0.223   0.203     +0.019                  0.967
+V3                   0.271   0.261     +0.010                  0.992
+V4                   0.433   0.420     +0.013                  1.000
+V5                   0.395   0.382     +0.013                  1.000
+V6                   0.318   0.314     +0.004                  0.992
+
+F2 equivalência (V0, V3, V4, V5 a até ±0,05 da v1) -> cumprido
+F3 V4 − V0 (o previsor ajuda): +0.209 (EP 0.009, 10/10) -> cumprido
+F4 V5 − V6 (o batedor certo importa): +0.077 (EP 0.016, 10/10) -> cumprido
+F5 identificação da binária com pista 25%: 1.000 (>= 0,95) -> cumprido

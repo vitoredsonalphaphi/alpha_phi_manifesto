@@ -195,5 +195,19 @@ Cada elemento com **o que deve fazer**, **o teste da própria grade (sem rede e 
 
 **Decisão (combinada antes de rodar):** a **Grade Esférica v2 entra no canônico** (`AlphaPhi_GradeEsferica_v2.py`, SHA-256 `dfa16b5b…`), com a altura por √3, as cascas em proporção áurea, a extensão harmônica, as células por escala, os pesos pela área e o endereço por anéis. **Status dos elementos B1–B6 e G1–G8: CANÔNICO.** A v1 continua congelada.
 
+### Passo 1 — as Ferramentas de Memória v1 sobre a Grade v2 (22/10/2026)
+
+**Arquivos:** `_pendente_registro/AlphaPhi_Passo1_FerramentasMemoria_sobre_GradeV2.py`, saída e resultados. Mesmas memórias, pistas e sementes da Etapa PF afinada; a forma das memórias calculada nos pontos da v2.
+
+| Critério | Resultado | Veredito |
+|---|---|---|
+| F1 campo afinado | 93,1% estáveis na própria memória (v1: 91,5%); fundo/memória 0,157 | cumprido |
+| F2 equivalência (pista 40%) | binária 0,224 (v1 0,221) · batedor 0,271 (0,261) · previsor 0,433 (0,420) · as duas vias 0,395 (0,382) | cumprido |
+| F3 o previsor ajuda | +0,209 (10/10) | cumprido |
+| F4 o batedor certo importa | +0,077 (10/10) | cumprido |
+| F5 identificação com pista 25% | 1,000 | cumprido |
+
+**Leitura:** sobre a grade nova, as ferramentas fazem o mesmo, um pouco melhor em todas as versões (+0,003 a +0,019). **Regra 9 do canônico atualizada: as Ferramentas de Memória v1 valem sobre a Grade v2.**
+
 ---
 *Florianópolis · 22 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*

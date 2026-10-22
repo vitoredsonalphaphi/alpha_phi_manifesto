@@ -88,4 +88,4 @@ A pedido do pesquisador: as ferramentas que responderam de forma positiva na est
 **Regras que entram no canônico a partir de 22/10:**
 7. **Todo teste novo importa a Grade Esférica v2.** A v1 continua congelada e é a base dos resultados canônicos de 19 a 21/10.
 8. **Médias e energias pesam cada ponto pela área da sua célula.**
-9. **As Ferramentas de Memória v1 foram verificadas nos pontos da v1;** usá-las sobre a v2 pede, antes, a conferência de que reproduzem o comportamento (a fazer).
+9. **As Ferramentas de Memória v1 valem sobre a Grade v2** (conferido em 22/10, passo 1: campo afinado com 93,1% dos neurônios estáveis na própria memória; conclusões a até 0,02 das da v1; o previsor e o batedor com os mesmos efeitos, 10/10; identificação 1,000 com pista de 25%). `_pendente_registro/AlphaPhi_Passo1_FerramentasMemoria_sobre_GradeV2.py`.
