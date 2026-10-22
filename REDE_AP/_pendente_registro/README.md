@@ -70,3 +70,13 @@
 **Resultado (altura recuperada, ruído principal):** N0 0,633 (saturação 93,6%) · N1 ganho ajustado (g ≈ 0,53) 0,551 (13,3%) · N2 âncora α 0,630 (0,0%) · N3 0,553 (0,1%). **NA0 cumprido** (o defeito reproduzido); **NA1, NA2, NA3, NA4 não**. O ganho ajustado e a âncora **acabam com a saturação**, mas a altura recuperada **piora**; e **todas as versões terminam abaixo da própria pista** (0,716).
 
 **Auditoria:** o problema não está no neurônio, está nas **ligações**. Uma memória intacta, passada uma única vez pelo campo de ligações (regra de Hebb com vizinhança), já sai com correlação 0,849: as ligações locais deformam as memórias contínuas, e as voltas acumulam a deformação. A memória contínua não é um ponto estável da rede. Descritivo, não previsto: ler o resultado no fim pelo previsor (a mistura das memórias pesada pela ressonância) dá 0,884, acima da pista. **Próximo proposto:** (1) uma regra de ligação em que as memórias contínuas sejam pontos estáveis; (2) a leitura no além pelo campo (Entrada 347), com critérios escritos antes.
+
+## Etapa LA — as ligações para alturas e a leitura no além (22/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaLA_LigacoesAlturas.py`, `EtapaLA_auditoria.py`, saídas e resultados. Mesma base da Etapa NA; sementes 190–199. Regra delta local: ~54 vizinhos por neurônio.
+
+**Resultado (ruído principal; altura da pista 0,718):** H-estado 0,540 · H-campo 0,864 · **D-estado 0,978** · **D-campo 0,999** · pista-campo (controle) 0,988 · PI-local 0,613. **LA0 cumprido** (memória intacta pelas ligações delta: 1,0000; Hebb 0,848); **LA1 cumprido** (+0,260, 10/10: a rede limpa); **LA2 cumprido** (+0,438); **LA3 cumprido** (+0,324: ler pelo campo é melhor); **LA4 cumprido, por pouco** (+0,011, 10/10; a previsão do assistente era que falharia).
+
+**Auditoria (descritiva):** sem o previsor, a rede com a regra delta **desaba** (altura 0,128; identificação 0,342). A limpeza vem do **encontro** das duas coisas: as ligações delta deixam de deformar a memória, e o previsor reconhece e guia. As ligações sozinhas tornam a memória um ponto **estável**, mas não um **atrator** (a rede não volta a ela por conta própria). E ler direto da pista pelo campo já dá 0,988: com memórias distintas, o reconhecimento faz quase tudo.
+
+**Próximo proposto:** (1) testar em trechos que a rede **nunca viu** (onde só reconhecer não basta); (2) o violão sobre esta base; (3) entender por que as ligações delta não atraem sem o previsor.
