@@ -176,6 +176,12 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - Teste proposto, sem competição: o previsor guiado pela memória inteira × pela estrutura de êxito (graus baixos) × pela projeção holográfica curta × sem previsor; pergunta: quanto do ganho do previsor a parcela recupera, e se ela ajuda também na forma fina (o "isento de perda")
   - Ligação: Entradas 337 (o eco do dado), 343 (o ponto e campo), 344 (o batedor), 345 (a condição prévia: família "a previsão que antecipa")
 
+- [ ] **A estrutura de endereçamento esférico — a base que antecede as ferramentas (Grade Esférica v2)** *(acrescentado em 22/10/2026, a pedido do pesquisador; Entrada 346)*
+  - Diagnóstico: a Grade v1 tem pontos e harmônicos, mas **não tem endereço**; cada faixa vai a um harmônico que se espalha pela esfera inteira, por isso a esfera não mostra barras de sinais e a memória guarda só a silhueta do espectro
+  - Estruturas do euclidiano a observar (de memória, a conferir): coordenadas cartesianas; grade e amostragem (Nyquist, Shannon); Fourier; **células de tempo e frequência de Gabor (1946)**; base ortogonal; endereçamento por forma e passo
+  - Parentes esféricos (de memória): **HEALPix** (Górski e colegas, 2005); **needlets** (Narcowich, Petrushev e Ward, 2006); a esfera de Fibonacci encaixada já é uma divisão quase de área igual e hierárquica
+  - A fazer: células esféricas com endereço; regra de lugar para frequência e tempo (frequência no raio, do centro α para fora; tempo na volta em torno); modo local × modo holográfico, pela régua própria e pela imagem; guardar a altura de cada faixa (valores contínuos; Etapa VL2, o violão audível); vistas novas: espectro radial (as barras dentro da esfera), mapa dos atratores (o rastro do estado e o peso do previsor), o topográfico euclidiano ao lado; a página passa a se chamar **Corte Radial**
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
