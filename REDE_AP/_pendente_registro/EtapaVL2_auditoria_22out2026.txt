@@ -1,0 +1,7 @@
+L-SP: fração de neurônios saturados (|valor| > 0,95): 0.865
+   correlação do estado final com a forma limpa: 0.165
+L-T: fração de neurônios saturados (|valor| > 0,95): 0.867
+   correlação do estado final com a forma limpa: 0.226
+pista: saturados 0.196; memórias: saturados 0.076
+se a rede devolvesse a memória limpa exata: ganho de nitidez +7.16 dB
+se a rede devolvesse a própria pista (não fizesse nada): +0.52 dB

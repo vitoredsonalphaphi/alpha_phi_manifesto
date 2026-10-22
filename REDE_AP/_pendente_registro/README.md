@@ -50,3 +50,15 @@
 **Leitura:** com sinal real, o previsor tira ruído de verdade: de 62% para 76% das faixas certas. A rede sozinha limpa muito pouco. A estrutura de êxito firma a forma grosseira (0,183 → 0,406), mas não a conclusão. Reconhecer o trecho certo entre 12 fica em 64%.
 
 **Notas:** a sonificação é a forma tornada audível (ruído moldado pelo perfil de faixas), não o violão reconstruído; o trecho do scanner é o primeiro não silencioso (0,00 s), não escolhido pelo ouvido.
+
+## Etapa VL2 — a Grade Esférica v2 e o violão audível (22/10/2026)
+
+**Arquivos:** `AlphaPhi_GradeEsferica_v2_proposta.py` (proposta, **não canônica**), `AlphaPhi_CampoEsferico_EtapaVL2_ViolaoAudivel.py`, `EtapaVL2_saida_22out2026.txt`, `EtapaVL2_auditoria_22out2026.txt`, `EtapaVL2_resultados.json`. A grade dá endereço a cada dado: 75 anéis de latitude = faixas de frequência; 8 posições em volta = instantes de 0,125 s; altura contínua. A saída é um ganho aplicado ao próprio som.
+
+**Sanidade:** V2-00 cumprido (12 memórias; correlação máxima 0,186); V2-01 cumprido (0,483 a +10 dB).
+
+**Resultado (ganho de nitidez, +10 dB, trechos guardados):** local sem guia −4,80 dB · local com previsor **−4,28 dB** · holográfico −3,58 / −3,86 dB · o teto (com a energia limpa verdadeira) +7,14 dB. A 0 dB: local +0,83 / +0,89 dB; holográfico +2,26 / +2,14 dB. **V2-1 não** (a rede piorou o som); **V2-2 não**; **V2-3 cumprido** (+0,52 dB, 9/10).
+
+**Auditoria:** a dinâmica do canônico (feita para memórias de + e −) empurra 87% dos neurônios aos extremos, enquanto só 8% das alturas do violão estão nos extremos: a rede apaga as alturas e se afasta da forma limpa (correlação 0,23, contra 0,48 da pista). A grade e o filtro funcionam: se a rede devolvesse a memória limpa, o ganho seria de +7,16 dB.
+
+**Decisão do pesquisador (22/10):** parar os testes e estruturar antes o fundamento da grade esférica (Entradas 346–355; agenda REDE-AP).

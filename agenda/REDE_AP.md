@@ -193,6 +193,18 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - **O ciclo completo (proposta):** ambiente → superfície → interior → α → interior → superfície (campo harmônico) → além; como uma respiração (recolher e expandir)
   - A fazer: escrever no documento de fundamento da Grade Esférica v2; para cada fase, o que a mostraria errada; depois implementar e testar a grade sozinha (sem rede), e só então voltar às ferramentas
 
+- [ ] **O neurônio α central** *(acrescentado em 22/10/2026; Entrada 354)*
+  - Ligado a todos os neurônios; valor = a **média do campo** (o resumo, a semente; pelo teorema do valor médio, o centro de um campo harmônico é a média da superfície)
+  - Função de âncora: regulação de conjunto (atividade total estável; impedir que tudo vá aos extremos, o defeito da Etapa VL2); medir o Sépstro do todo
+
+- [ ] **A entrada pela superfície e a pegada da entrada** *(acrescentado em 22/10/2026; Entrada 355)*
+  - O dado entra pela superfície (a regra de escrita da Grade v2), sintetiza rumo a α e ressurge para fora
+  - Cada camada do interior guarda o **traço** do dado na entrada; no caminho de volta, recebe o que vem de dentro, o traço e o previsor — as "ligações de salto" AlphaPhi (parentes, de memória: autocodificador; U-Net, Ronneberger e colegas, 2015)
+
+- [ ] **Decidir cedo × decidir no além** *(acrescentado em 22/10/2026; Entrada 347)*
+  - Manter a multiplicidade como campo dentro da esfera e ler a resultante só no além (r > 1), em vez de colapsar numa alternativa dentro da rede
+  - Teste: pela régua própria, incluindo os trechos que a rede nunca viu (Etapa VL2)
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA

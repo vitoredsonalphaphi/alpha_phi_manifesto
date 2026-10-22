@@ -1,0 +1,33 @@
+
+##### +10 dB · trechos guardados · ganho de nitidez em dB (média de 10 ruídos; correlação da pista 0.483)
+   L-SP       -4.80 dB   (EP 0.22)
+   L-T        -4.28 dB   (EP 0.19)
+   H-SP       -3.58 dB   (EP 0.07)
+   H-T        -3.86 dB   (EP 0.05)
+   oraculo    +7.14 dB   (EP 0.00)
+
+##### +0 dB · trechos guardados · ganho de nitidez em dB (média de 10 ruídos; correlação da pista 0.347)
+   L-SP       +0.83 dB   (EP 0.10)
+   L-T        +0.89 dB   (EP 0.13)
+   H-SP       +2.26 dB   (EP 0.07)
+   H-T        +2.14 dB   (EP 0.03)
+   oraculo    +8.81 dB   (EP 0.01)
+
+##### +10 dB · trechos novos · ganho de nitidez em dB (média de 10 ruídos; correlação da pista 0.445)
+   L-SP       -6.08 dB   (EP 0.20)
+   L-T        -6.12 dB   (EP 0.20)
+   H-SP       -4.06 dB   (EP 0.06)
+   H-T        -4.24 dB   (EP 0.04)
+   oraculo    +7.18 dB   (EP 0.00)
+
+##### +0 dB · trechos novos · ganho de nitidez em dB (média de 10 ruídos; correlação da pista 0.311)
+   L-SP       +0.60 dB   (EP 0.10)
+   L-T        +0.52 dB   (EP 0.12)
+   H-SP       +2.15 dB   (EP 0.05)
+   H-T        +2.08 dB   (EP 0.04)
+   oraculo    +8.82 dB   (EP 0.01)
+
+=== CRITÉRIOS (+10 dB, trechos guardados) ===
+V2-1 local com previsor: ganho de nitidez: -4.28 dB (EP 0.19, 0/10) -> NÃO cumprido
+V2-2 local − holográfico (com previsor): -0.42 dB (EP 0.18, 2/10) -> NÃO cumprido
+V2-3 local: com previsor − sem guia: +0.52 dB (EP 0.14, 9/10) -> cumprido
