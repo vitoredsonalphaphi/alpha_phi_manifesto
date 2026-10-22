@@ -87,5 +87,7 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 
 **21/10/2026, tarde:** Etapa PF (o batedor) e a **afinação do fundo do campo** (erro de calibração do assistente desde 20/10: fundo 2,1× a memória). Afinada, a rede estabiliza a memória (91,5% dos neurônios estáveis, antes 71%); a conclusão quase dobra; o previsor é a via mais forte e o batedor passa a acrescentar. **S, K e PF registradas** em `REDE_AP/AlphaPhi_CampoEsferico_Etapas_S_K_PF_RESULTADOS_21out2026.md`. **Canônico provisório:** `REDE_AP/AlphaPhi_FerramentasMemoria_v1.py` (campo afinado, previsor, batedor), regras 4–6. **Próximo:** memórias parecidas pioraram com a afinação (o fundo forte protegia); estabilizar o neurônio contínuo; outros substratos (agenda V).
 
+**22/10/2026:** violão do pesquisador como tarefa própria (Etapa VL: o previsor limpa de 62% para 76% das faixas; o áudio revelou que a memória guardava só a silhueta do espectro); a Etapa VL2 mostrou que faltava a **estrutura que antecede as ferramentas**. O pesquisador parou os testes para fundar a grade: Entradas 346–355; **Registro dos Elementos da Rede AP** (`REDE_AP/REGISTRO_ELEMENTOS_REDE_AP.md`); **Grade Esférica v2 canônica** (altura por √3, cascas em proporção áurea, células por escala, pesos pela área, endereço), verificada contra as Etapas T e C. **Próximo:** conferir as Ferramentas de Memória sobre a v2; o neurônio contínuo ajustado às alturas; voltar ao violão sobre a grade nova.
+
 ---
 *Florianópolis · 20 de outubro de 2026 · Vitor Edson Delavi · Claude*

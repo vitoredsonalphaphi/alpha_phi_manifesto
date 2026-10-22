@@ -181,5 +181,19 @@ Cada elemento com **o que deve fazer**, **o teste da própria grade (sem rede e 
 
 **Status:** a altura por √3 é **candidata** da Grade v2; **não substitui a v1**. A adoção exige antes repetir a verificação do previsor (Etapa T) nos pontos novos. Os pesos pela área entram como candidatos para as médias e as energias (o neurônio α; o Sépstro; a conservação).
 
+### A verificação das Etapas T e C nos pontos com altura por √3 (22/10/2026) — e a entrada no canônico
+
+**Arquivos:** `_pendente_registro/verificacao_EtapaT_altura_raiz3.py` e a saída `..._saida_22out2026.txt`. Código canônico das Etapas T e C importado sem alteração; só os pontos trocados. Nota declarada antes de rodar: a Etapa T original usou 256 pontos (não 233).
+
+| Critério | √3 | √2 (referência) | Veredito |
+|---|---|---|---|
+| V1 medidor (graus 2, 3, 4) | 100%, condição 7,81 | 100%, condição 16,94 | cumprido |
+| V2 campo vazio (\|L_dom − 3\| ≤ 1) | 1,000 | 1,000 | cumprido |
+| V3 memória sem forma | Spearman 0,978; erro 0,006 | (original: 0,981; 0,006) | cumprido |
+| V4 cultivo (34 → 233) | 100% em todas as etapas | 100% | cumprido |
+| V5 sem perda | +0,000 | — | cumprido |
+
+**Decisão (combinada antes de rodar):** a **Grade Esférica v2 entra no canônico** (`AlphaPhi_GradeEsferica_v2.py`, SHA-256 `dfa16b5b…`), com a altura por √3, as cascas em proporção áurea, a extensão harmônica, as células por escala, os pesos pela área e o endereço por anéis. **Status dos elementos B1–B6 e G1–G8: CANÔNICO.** A v1 continua congelada.
+
 ---
 *Florianópolis · 22 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*

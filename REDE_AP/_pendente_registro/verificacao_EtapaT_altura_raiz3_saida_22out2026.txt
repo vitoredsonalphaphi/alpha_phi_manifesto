@@ -1,0 +1,15 @@
+V1 medidor (√2, 256 pontos, até o grau 14): acerto 1.000 · condição 16.94
+V1 medidor (√3, 256 pontos, até o grau 14): acerto 1.000 · condição 7.81
+V2 previsão: L* = 3
+V2 campo vazio (√2): fração com |L_dom − L*| <= 1 = 1.000 · contagem (0..9): [0, 0, 91, 909, 0, 0, 0, 0, 0, 0]
+V2 campo vazio (√3): fração com |L_dom − L*| <= 1 = 1.000 · contagem (0..9): [0, 0, 85, 915, 0, 0, 0, 0, 0, 0]
+V3 memória sem forma (45 combinações): Spearman 0.978 · erro médio 0.0062
+V4 cultivo (√2): 34: faixa [1] → 1.00 (condição 1.6) · 55: faixa [1] → 1.00 (condição 3.3) · 89: faixa [2] → 1.00 (condição 2.2) · 144: faixa [2] → 1.00 (condição 4.5) · 233: faixa [2, 3] → 1.00 (condição 2.9)
+V4 cultivo (√3): 34: faixa [1] → 1.00 (condição 1.6) · 55: faixa [1] → 1.00 (condição 2.6) · 89: faixa [2] → 1.00 (condição 1.7) · 144: faixa [2] → 1.00 (condição 2.1) · 233: faixa [2, 3] → 1.00 (condição 2.2)
+
+=== CRITÉRIOS (pontos com altura por √3) ===
+V1 medidor: acerto 1.000, condição 7.81 -> cumprido
+V2 campo vazio: 1.000 (>= 0,90) -> cumprido
+V3 memória sem forma: Spearman 0.978, erro 0.0062 -> cumprido
+V4 cultivo: pior etapa 1.00 (>= 0,90) -> cumprido
+V5 sem perda em relação a √2: V2 +0.000; V4 pior etapa +0.000 (>= −0,05) -> cumprido

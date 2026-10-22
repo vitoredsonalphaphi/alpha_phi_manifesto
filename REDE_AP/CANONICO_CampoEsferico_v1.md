@@ -76,3 +76,16 @@ A pedido do pesquisador: as ferramentas que responderam de forma positiva na est
 **Agnóstico:** por construção, nenhuma ferramenta depende do sinal de origem (as memórias entram como padrões ±1 nos pontos da grade). Até aqui só foi **testado** com memórias derivadas do EcoBIP 880; a verificação em outros substratos é a agenda V.
 
 **Resultados de origem:** Etapas S, K, PF e a afinação, registradas em 21/10/2026 em `AlphaPhi_CampoEsferico_Etapas_S_K_PF_RESULTADOS_21out2026.md`; código em `CampoEsferico_Etapas_S_K_PF/`.
+
+## Acréscimos canônicos (22/10/2026) — a Grade Esférica v2, sem alterar nenhum arquivo da v1
+
+| Arquivo | Papel | SHA-256 |
+|---|---|---|
+| `AlphaPhi_GradeEsferica_v2.py` | **Grade Esférica de Referência v2**, a base que antecede as ferramentas (Entrada 346): pontos encaixados com longitude pelo ângulo áureo e **altura por √3**; **cascas em proporção áurea** (r = φ^(−k), com 610, 233, 89, 34, 13, 5, 2 pontos); **extensão harmônica** para o interior; **células por escala** de Fibonacci; **pesos pela área da célula** nas médias e nas energias (o centro α como média pesada; a conservação da energia); **endereço** por anéis para escrita e leitura. Construída sobre a v1, que importa sem alteração | `dfa16b5b65ea5e6b18c829cfb35e25bfd2be1ab9c85124d3327dfc84c8244054` |
+
+**Como entrou:** testes G1–G8 e as duas correções (critérios aprovados antes de rodar; `_pendente_registro/teste_GradeEsferica_v2*.py`) e a **verificação das Etapas T e C nos pontos novos**, com o código canônico importado sem alteração (`_pendente_registro/verificacao_EtapaT_altura_raiz3.py`): V1 medidor 100% (condição 7,8; com √2, 16,9 em 256 pontos até o grau 14); V2 campo vazio 1,000 dentro de ±1 de L\* = 3; V3 memória sem forma Spearman 0,978 e erro 0,006; V4 cultivo na faixa prevista em 100% das repetições em todas as etapas; V5 sem nenhuma perda em relação a √2. Decisão combinada antes de rodar: se V1–V5 passassem, a v2 entraria com a altura por √3.
+
+**Regras que entram no canônico a partir de 22/10:**
+7. **Todo teste novo importa a Grade Esférica v2.** A v1 continua congelada e é a base dos resultados canônicos de 19 a 21/10.
+8. **Médias e energias pesam cada ponto pela área da sua célula.**
+9. **As Ferramentas de Memória v1 foram verificadas nos pontos da v1;** usá-las sobre a v2 pede, antes, a conferência de que reproduzem o comportamento (a fazer).
