@@ -61,6 +61,8 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 4. **Comparação com a rede convencional na mesma tarefa** — sem isto, não se sabe se a rede AP funciona.
 5. **Autoalinhamento:** a rede observa a própria estrutura e não se desvia da diretriz (Entrada 327).
 
+**Registro dos elementos:** `REDE_AP/REGISTRO_ELEMENTOS_REDE_AP.md` — cada elemento proposto para a rede, canônico ou não, com origem, teste, resultado e status, em ordem; a Parte I traz a base (as estruturas que fundam uma rede e a forma AlphaPhi de cada uma).
+
 ## 4. Como (o método de trabalho)
 
 1. **Critérios escritos antes** de cada execução, na conversa, com as falhas previstas.
