@@ -1,0 +1,17 @@
+=== CORREÇÃO 1: pesos pela área da célula ===
+áreas: soma 12.566371 (4π = 12.566371); menor/maior célula 0.66 / 1.60 da média
+G5' o centro α como média pesada: simples 1.052% (pior 3.923%) · pesada 0.240% (pior 1.024%) · pesos embaralhados 1.457% (pior 5.862%) -> cumprido
+   casca de 610 pontos (até o grau 16): simples 1.69% · pesada 0.96% (pior 2.88%) · embaralhados 2.08%
+   casca de 233 pontos (até o grau 9): simples 1.43% · pesada 0.58% (pior 2.08%) · embaralhados 1.95%
+   casca de 89 pontos (até o grau 5): simples 1.35% · pesada 0.63% (pior 3.07%) · embaralhados 2.21%
+   casca de 34 pontos (até o grau 3): simples 2.61% · pesada 0.71% (pior 3.71%) · embaralhados 2.82%
+G8' conservação com pesos pela área -> cumprido · controle (embaralhados piores que os certos em todas as cascas): sim
+
+=== CORREÇÃO 2: a altura dos pontos ===
+reprodução da v1 pela fórmula genérica (√2): True
+√2 (atual)      G1': pior 1.58 · mediana 1.28 · começos acima de 1,5: 14 · encaixe True · aninhamento 0.82 · condição máx 4.50 -> não passa
+√3              G1': pior 1.43 · mediana 1.25 · começos acima de 1,5: 0 · encaixe True · aninhamento 0.82 · condição máx 2.60 -> PASSA em tudo
+van der Corput  G1': pior 1.94 · mediana 1.54 · começos acima de 1,5: 330 · encaixe True · aninhamento 0.85 · condição máx 5.05 -> não passa
+plástico        G1': pior 1.95 · mediana 1.55 · começos acima de 1,5: 377 · encaixe True · aninhamento 0.83 · condição máx 6.14 -> não passa
+
+escolha: √3

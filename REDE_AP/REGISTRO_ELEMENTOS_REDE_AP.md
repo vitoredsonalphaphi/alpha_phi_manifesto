@@ -152,5 +152,34 @@ Cada elemento com **o que deve fazer**, **o teste da própria grade (sem rede e 
 
 **O que isso indica:** G5 e G8 têm a mesma causa e o mesmo remédio provável: **pesar cada ponto pela área da sua célula** (as células do G6). O G1 pede comparar outras sequências de altura para o endereço (proposta: a altura também pelo número de ouro, em vez de √2). As duas correções são **propostas**, a testar com critérios escritos antes. Ainda não entra nada no canônico.
 
+### As duas correções (22/10/2026)
+
+**Arquivos:** `_pendente_registro/teste_GradeEsferica_v2_correcoes.py` e a saída `..._correcoes_saida_22out2026.txt`. Critérios aprovados antes de rodar. A proposta "altura pelo número de ouro" foi descartada antes de rodar (com a longitude também pelo ângulo áureo, os pontos se alinhariam numa espiral).
+
+**Correção 1 — o peso de cada ponto pela área da sua célula (Voronoi esférico, áreas exatas):**
+
+| | Média simples | **Pesada pela área** | Pesos embaralhados |
+|---|---|---|---|
+| G5' centro α × média (pior caso) | 3,92% | **1,02%** | 5,86% |
+| G8' energia, superfície (grau 16) | 1,69% | **0,96%** | 2,08% |
+| G8' casca de 233 pontos (grau 9) | 1,43% | **0,58%** | 1,95% |
+| G8' casca de 89 pontos (grau 5) | 1,35% | **0,63%** | 2,21% |
+| G8' casca de 34 pontos (grau 3) | 2,61% | **0,71%** | 2,82% |
+
+**G5' cumprido; G8' cumprido; o controle confirma** (os pesos embaralhados pioram em todas as cascas: o que importa é a área de cada célula). As células variam de 0,66 a 1,60 vezes a área média.
+
+**Correção 2 — a altura dos pontos (longitude pelo ângulo áureo, encaixe mantido):**
+
+| Altura | Pior vão | Começos acima de 1,5 | Encaixe | Aninhamento | Condição máx. | Veredito |
+|---|---|---|---|---|---|---|
+| √2 (a atual, v1) | 1,58 | 14 de 577 | sim | 0,82 | 4,50 | não passa |
+| **√3** | **1,43** | **0** | sim | 0,82 | **2,60** | **passa em tudo** |
+| van der Corput | 1,94 | 330 | sim | 0,85 | 5,05 | não passa |
+| plástico | 1,95 | 377 | sim | 0,83 | 6,14 | não passa |
+
+**Escolha pela regra declarada: √3.** Cobre todos os começos e ainda melhora o medidor (condição 2,60 contra 4,50). A previsão do assistente (van der Corput melhor) estava errada.
+
+**Status:** a altura por √3 é **candidata** da Grade v2; **não substitui a v1**. A adoção exige antes repetir a verificação do previsor (Etapa T) nos pontos novos. Os pesos pela área entram como candidatos para as médias e as energias (o neurônio α; o Sépstro; a conservação).
+
 ---
 *Florianópolis · 22 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
