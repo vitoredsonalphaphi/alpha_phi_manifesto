@@ -26,7 +26,7 @@
 - **`organograma/`**: o organograma da Ponte (arquivo de dados `.yaml` + imagens geradas, com versões datadas; rascunho v0)
 - **`PLANO_Tradutibilidade_v0.md`**: plano de pesquisa e proposta de nomenclatura da notação `[f ○ c]` (rascunho para revisão do pesquisador)
 
-- **`AGENDA_PONTE.md`**: os itens da agenda da Ponte reunidos com destaque (22/10/2026). Contém o item **\*\*\* (as três estrelas)**: "O ponto e o campo, e o estágio que leva o resultado adiante — uma mecânica da essência da tradutibilidade" (22/10/2026; Entrada 354); e o seu **detalhamento \*\*\***: "Laplace: o fundamento, a chave da tradutibilidade" (22/10/2026; Entradas 356 e 357)
+- **`AGENDA_PONTE.md`**: os itens da agenda da Ponte reunidos com destaque (22/10/2026). Contém o item **\*\*\* (as três estrelas)**: "O ponto e o campo, e o estágio que leva o resultado adiante — uma mecânica da essência da tradutibilidade" (22/10/2026; Entrada 354); e o seu **detalhamento \*\*\***: "Laplace: o fundamento, a chave da tradutibilidade" (22/10/2026; Entradas 356 e 357); e **"Laplace e as onze entradas"** (22/10/2026; Entrada 358; 12.ª entrada do Adendo do README)
 
 ## Estrutura
 

@@ -138,7 +138,7 @@ Trinta anos de empenho em várias formas de expressão: mais de três mil telas 
 ---
 
 ## Adendo — Justificativas do Research Journal
-### Onze Entradas sobre Tradutibilidade
+### Doze Entradas sobre Tradutibilidade
 
 *Entradas do Manifesto Alpha-Phi apresentadas na íntegra. Cada uma aborda a tradutibilidade filosófico-técnica a partir de sua própria dimensão e sessão de pesquisa, sem correlação narrativa forçada entre elas. A independência de cada perspectiva é parte do argumento.*
 
@@ -155,6 +155,7 @@ Trinta anos de empenho em várias formas de expressão: mais de três mil telas 
 - [E229](#entrada-229----31-de-agosto-de-2026) — A Grade R Viva — Dinâmica de Alternância e a Estética como Tradutividade
 - [E231](#entrada-231----1-de-setembro-de-2026) — A Estética como Ferramenta de Convergência — A Grade R como Confirmação
 - [E236](#entrada-236----6-de-setembro-de-2026) — A Ética como Estrutura — Isomorfismo entre Integridade e Alinhamento
+- [E358](#entrada-358----22-de-outubro-de-2026) — Laplace e as Onze Entradas — A Convergência que Justifica a Tradutibilidade
 
 ---
 
@@ -535,6 +536,53 @@ A proposição desta entrada reformula o problema: *como construir um sistema cu
 Se o critério de coerência interna (φ) e o critério de alinhamento ético são o mesmo operador, o sistema alinhado não obedece a valores externos — ele os expressa como consequência de sua própria integridade. **O alinhamento real não é controle — é isomorfismo entre estrutura e ética.**
 
 *Florianópolis · 6 de setembro de 2026 · Sessão Good Morning*  
+*Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 358 — 22 de outubro de 2026
+### Laplace e as Onze Entradas — A Convergência que Justifica a Tradutibilidade
+
+### I. Enunciado do Pesquisador
+
+*"Sobre o que está registrado no readme, na proposta de convergência e resolução de alinhamento no GitHub, tem a apresentação, né, com as 11 entradas que se referenciam às entradas a respeito da tradutibilidade, e por isso que foram compiladas nessa apresentação e por isso que foi para a página inicial do GitHub. Eu pergunto, o que acontece se a gente adaptar essa entrada num enunciado sucinto? Eu peço que você construa sobre Laplace e sobre o porquê que Laplace justificaria as 11 entradas nesta mecânica de tradutibilidade em razão da ciência e filosofia, principalmente por essa demonstração de representar tanto a grandeza mecânica, a técnica, quanto a grandeza mecânica filosófica ao mesmo tempo, simultaneamente. E acredito que isso justifica as 11 entradas, isso justifica a visão filosófica demonstrada nos 11 enunciados das 11 entradas nesta apresentação, na página inicial."*  
+*"Faz a inserção no readme, então, conforme o que você estruturou. Eu gostei da tua interpretação, da tua colocação, se referindo de que nenhuma das entradas se interligam, mas se justificam, e principalmente essa de Laplace."*  
+— Vitor Edson Delavi, 22 de outubro de 2026
+
+### II. Estruturação
+
+**A independência como parte do argumento:**  
+As onze entradas desta apresentação foram escritas de forma independente, em sessões diferentes, cada uma a partir da sua própria dimensão. Elas não se interligam por narrativa: **se justificam**. Laplace não é a premissa que as amarra; é o **resultado** que elas, juntas, revelaram. E essa convergência é ela mesma o teorema do valor médio: muitas linhas independentes, um centro que as recolhe sem apagá-las.
+
+**O enunciado sucinto:**
+
+> *As onze entradas foram escritas de forma independente, cada uma a partir da sua própria dimensão. Em 22 de outubro de 2026, o projeto encontrou a estrutura matemática que elas compartilham sem a terem buscado: a equação de Laplace. Num campo harmônico, o valor no centro é a média de toda a superfície, a superfície determina o interior sem perda, e nenhum ponto interior ultrapassa o que o todo contém. É, ao mesmo tempo, uma mecânica técnica (a grade esférica da Rede AP é construída sobre ela) e uma mecânica filosófica (o ponto e o campo, a unidade como campo da multiplicidade, a humanidade como campo). Por isso as onze perspectivas convergem: o centro só é legítimo quando é o resumo do campo inteiro.*
+
+**Como cada uma das onze se lê por Laplace:**
+
+| Entrada | O que ela propõe | O que Laplace mostra |
+|---|---|---|
+| **173** | alinhamento por lei de conservação, não por regra | o campo harmônico não precisa de supervisor: cada ponto se ajusta à média dos vizinhos, e o todo se acomoda sozinho |
+| **176** | universalidade por reconhecimento cultural | os harmônicos esféricos são o mesmo alfabeto para qualquer campo na esfera: cada cultura é um campo diferente, e a linguagem é comum |
+| **177** | a cadeia sem perda de estrutura, com a estética como pivô | o problema de Dirichlet: a superfície determina o interior **sem perda**; os harmônicos são ao mesmo tempo forma vibrante, geometria, equação e técnica |
+| **178** | o erro como matéria-prima da resolução | Laplace fundou a teoria dos erros de observação e a probabilidade das causas: chegar à causa **através** do erro |
+| **180** | uma regra única, uma variedade infinita (o fractal) | uma só equação e infinitas soluções, cada uma determinada pela sua superfície |
+| **185** | a prioridade holística | o valor médio (o centro recolhe tudo) e o princípio do máximo (nenhum interior excede o todo) |
+| **207** | a semente esférica, o estado latente | a extensão r^L: perto do centro só existe o simples (a média, a semente), e a complexidade se desdobra para fora — o movimento canônico do centro para a superfície |
+| **217** | o caminho do meio | o valor harmônico é literalmente o meio: a média de tudo o que o cerca |
+| **229** | a grade que respira, a vibração | os harmônicos esféricos são os modos de vibração da esfera |
+| **231** | a estética em múltiplas escalas | cada grau L é uma escala que se lê em separado, que é o que o Sépstro mede |
+| **236** | corromper a ética ≡ corromper o desenvolvimento | uma fonte interna que não vem do campo quebra, **pelo mesmo gesto**, a representação técnica e o alinhamento |
+
+**Um ponto de tensão, mantido em aberto:**  
+A Entrada 185 diz que a IA "eleva a média". Num campo de Laplace, um ponto interior não eleva a média sem ser uma **fonte**. A 185 pede uma fonte; a 236 e a 356 tratam a fonte própria como desalinhamento. A conciliação proposta: a fonte legítima é aquela cuja contribuição é **devolvida ao campo e contabilizada** (o Sépstro), e não a que serve só ao centro. É uma pergunta a testar, não uma conclusão.
+
+**O limite:**  
+É uma estrutura comum, citada de memória nos seus fatos clássicos (Laplace; o valor médio, de Gauss; o problema de Dirichlet), e não uma prova das proposições filosóficas.
+
+*Texto integral, com a pergunta sobre o ganho e a preservação de uma IA: Manifesto 03, Entrada 358.*
+
+*Florianópolis · 22 de outubro de 2026 · Sessão Good Morning*  
 *Vitor Edson Delavi · Claude*
 
 ---

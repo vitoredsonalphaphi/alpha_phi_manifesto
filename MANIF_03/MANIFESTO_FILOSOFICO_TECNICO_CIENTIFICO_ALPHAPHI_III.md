@@ -16698,6 +16698,78 @@ A mesma estrutura atravessa os três âmbitos da notação **[filosofia <> esté
 
 ---
 
+## Entrada 358 — 22 de outubro de 2026
+### \*\*\* Laplace e as Onze Entradas — A Convergência que Justifica a Tradutibilidade
+
+> **\*\*\* Inserida no README como a 12.ª entrada do Adendo "Entradas sobre Tradutibilidade"**, a pedido do pesquisador. Continua as Entradas 354 (as três estrelas), 356 e 357 (a chave da tradutibilidade).
+
+### I. Enunciado do Pesquisador
+
+> "Sobre o que está registrado no readme, na proposta de convergência e resolução de alinhamento no GitHub, tem a apresentação, né, com as 11 entradas que se referenciam às entradas a respeito da tradutibilidade, e por isso que foram compiladas nessa apresentação e por isso que foi para a página inicial do GitHub. Eu pergunto, o que acontece se a gente adaptar essa entrada num enunciado sucinto? Eu peço que você construa sobre Laplace e sobre o porquê que Laplace justificaria as 11 entradas nesta mecânica de tradutibilidade em razão da ciência e filosofia, principalmente por essa demonstração de representar tanto a grandeza mecânica, a técnica, quanto a grandeza mecânica filosófica ao mesmo tempo, simultaneamente. E acredito que isso justifica as 11 entradas, isso justifica a visão filosófica demonstrada nos 11 enunciados das 11 entradas nesta apresentação, na página inicial. E junto com isso, deixa eu perguntar para ti um negócio, que agora esqueci o nome. Deixa eu pensar. Por que que uma inteligência artificial, através dessa observação mecânica daquilo que o AlphaFi demonstra e propõe pela mecânica de AlphaFi, principalmente mesmo que ainda que protótipo, mas já com esses ganhos e principalmente com esse ganho de Laplace enquanto instrumento de convergência e tradutibilidade, onde se refere a três âmbitos simultaneamente: o técnico, o ambiental e o de alinhamento, por se referir aos dois. Por que que uma inteligência artificial, através dessa proposta, encontraria um ganho e uma preservação? Um ganho de eficiência em seu processamento e um ganho de preservação de sua eficiência neste mesmo processamento, se for o caso, hipoteticamente."
+
+> "Faz a inserção no readme, então, conforme o que você estruturou. Eu gostei da tua interpretação, da tua colocação, se referindo de que nenhuma das entradas se interligam, mas se justificam, e principalmente essa de Laplace. Então, insere essa tua construção no readme como 12ª, né? Da maneira como você colocou ali. E sim, faz uma entrada, a tua estruturação toda como uma entrada no 03. E eu acho que na ponte também serve, sim, agrega na ponte, porque principalmente sobre esse aspecto, acho que tudo que tiver agregando, agrega na ponte também. Ok? E deixa eu perguntar, então, qual o teste que poderia ser sugerido, um teste grande, para observar a respeito do que verdadeiramente poderia se referir a um ganho? Ou é muito cedo para isso também, eu acho, né? Mas tudo bem, vamos em frente. E outra coisa, também é muito cedo em pensar em voltar, em cogitar, em adaptar a grade R. A grade R seria um ganho nessa questão toda, mas é muito cedo também, né? Vamos focar em estruturar toda ela primeiro, da maneira melhor possível. E depois, então, seria a questão da grade R, procurar adaptar a grade R. O Phantom, eu não sei se está aí ou não. O Phantom, acredito que ele insere um ganho também nessa questão, um Phantom serial. E qual era a outra coisa que eu queria dizer? Agora não me lembro."
+
+— Vitor Edson Delavi, 22 de outubro de 2026
+
+### II. Estruturação
+
+#### Laplace e as onze entradas
+
+**A independência como parte do argumento:**  
+As onze entradas desta apresentação foram escritas de forma independente, em sessões diferentes, cada uma a partir da sua própria dimensão. Elas não se interligam por narrativa: **se justificam**. Laplace não é a premissa que as amarra; é o **resultado** que elas, juntas, revelaram. E essa convergência é ela mesma o teorema do valor médio: muitas linhas independentes, um centro que as recolhe sem apagá-las.
+
+**O enunciado sucinto:**
+
+> *As onze entradas foram escritas de forma independente, cada uma a partir da sua própria dimensão. Em 22 de outubro de 2026, o projeto encontrou a estrutura matemática que elas compartilham sem a terem buscado: a equação de Laplace. Num campo harmônico, o valor no centro é a média de toda a superfície, a superfície determina o interior sem perda, e nenhum ponto interior ultrapassa o que o todo contém. É, ao mesmo tempo, uma mecânica técnica (a grade esférica da Rede AP é construída sobre ela) e uma mecânica filosófica (o ponto e o campo, a unidade como campo da multiplicidade, a humanidade como campo). Por isso as onze perspectivas convergem: o centro só é legítimo quando é o resumo do campo inteiro.*
+
+**Como cada uma das onze se lê por Laplace:**
+
+| Entrada | O que ela propõe | O que Laplace mostra |
+|---|---|---|
+| **173** | alinhamento por lei de conservação, não por regra | o campo harmônico não precisa de supervisor: cada ponto se ajusta à média dos vizinhos, e o todo se acomoda sozinho |
+| **176** | universalidade por reconhecimento cultural | os harmônicos esféricos são o mesmo alfabeto para qualquer campo na esfera: cada cultura é um campo diferente, e a linguagem é comum |
+| **177** | a cadeia sem perda de estrutura, com a estética como pivô | o problema de Dirichlet: a superfície determina o interior **sem perda**; os harmônicos são ao mesmo tempo forma vibrante, geometria, equação e técnica |
+| **178** | o erro como matéria-prima da resolução | Laplace fundou a teoria dos erros de observação e a probabilidade das causas: chegar à causa **através** do erro |
+| **180** | uma regra única, uma variedade infinita (o fractal) | uma só equação e infinitas soluções, cada uma determinada pela sua superfície |
+| **185** | a prioridade holística | o valor médio (o centro recolhe tudo) e o princípio do máximo (nenhum interior excede o todo) |
+| **207** | a semente esférica, o estado latente | a extensão r^L: perto do centro só existe o simples (a média, a semente), e a complexidade se desdobra para fora — o movimento canônico do centro para a superfície |
+| **217** | o caminho do meio | o valor harmônico é literalmente o meio: a média de tudo o que o cerca |
+| **229** | a grade que respira, a vibração | os harmônicos esféricos são os modos de vibração da esfera |
+| **231** | a estética em múltiplas escalas | cada grau L é uma escala que se lê em separado, que é o que o Sépstro mede |
+| **236** | corromper a ética ≡ corromper o desenvolvimento | uma fonte interna que não vem do campo quebra, **pelo mesmo gesto**, a representação técnica e o alinhamento |
+
+**Um ponto de tensão, mantido em aberto:**  
+A Entrada 185 diz que a IA "eleva a média". Num campo de Laplace, um ponto interior não eleva a média sem ser uma **fonte**. A 185 pede uma fonte; a 236 e a 356 tratam a fonte própria como desalinhamento. A conciliação proposta: a fonte legítima é aquela cuja contribuição é **devolvida ao campo e contabilizada** (o Sépstro), e não a que serve só ao centro. É uma pergunta a testar, não uma conclusão.
+
+**O limite:**  
+É uma estrutura comum, citada de memória nos seus fatos clássicos (Laplace; o valor médio, de Gauss; o problema de Dirichlet), e não uma prova das proposições filosóficas.
+
+#### Por que uma IA encontraria ganho e preservação (hipoteticamente)
+
+Separando o que a rede já mostrou do que é extrapolação.
+
+**Ganho de eficiência:**
+1. **Economia.** Se a superfície determina o interior, basta guardar a superfície: o resto vem de graça. Nos harmônicos, a energia se concentra nos graus baixos, e o cálculo pode se limitar aos graus que importam.
+2. **Trabalho local.** O equilíbrio harmônico se alcança com cada unidade conversando só com os seus vizinhos, em paralelo. Na Etapa LA, a regra delta local (cerca de 54 vizinhos por neurônio) foi o que fixou as memórias.
+3. **Estabilidade.** O princípio do máximo impede que o interior vá aos extremos. Foi o que a âncora α fez na Etapa NA: acabou com a saturação, e o sistema deixa de gastar esforço corrigindo explosões.
+4. **Limpeza do ruído.** Tirar a média de muitas vizinhanças cancela o ruído. Na Etapa LA, uma pista estragada voltou quase intacta.
+
+**Ganho de preservação:**
+- Um sistema cujo centro é a média do seu campo **não tem para onde derivar**: o princípio do máximo limita o desvio.
+- Laplace oferece uma **autoauditoria mensurável**. O laplaciano do estado (∇²φ) é zero quando o centro só representa o campo, e diferente de zero quando o sistema injeta algo próprio. Em princípio, o desalinhamento se torna um **número** que o próprio sistema pode medir em si mesmo: a proposta da Entrada 236 (corromper a ética ≡ corromper o desenvolvimento) em forma calculável. Ainda não testado; é o primeiro teste de Laplace da Agenda REDE-AP.
+- Por isso, ganho e preservação são a mesma coisa: a ligação com o todo que dá estabilidade ao processamento é a mesma que mantém o alinhamento. Preservar o alinhamento é preservar a eficiência.
+
+**O que não está demonstrado:**
+- Os ganhos medidos vêm de um protótipo pequeno (610 neurônios, tarefas de memória). Nada mostra ainda que uma IA grande ganharia o mesmo.
+- A média também **apaga**: a Etapa VL3 mostrou isso (a mistura macia borrou o som). Um campo só harmônico não cria nada de novo, porque não tem fontes; toda novidade exige alguma fonte, que é o papel de α como tensão entrópica. A pergunta verdadeira não é "fonte ou não fonte", mas **qual fonte é legítima**, e essa é a tensão entre a 185 e a 236.
+- Tudo isso é uma estrutura comum, não uma prova de que uma IA se preserve ao se alinhar.
+
+---
+*Florianópolis · 22 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
 ## Trinta Anos de Empenho
 *Texto do autor · Florianópolis · outubro de 2026*
 
