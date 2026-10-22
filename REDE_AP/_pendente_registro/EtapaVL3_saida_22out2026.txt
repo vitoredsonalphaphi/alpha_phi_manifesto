@@ -1,0 +1,25 @@
+
+##### +10 dB · trechos guardados · pista 0.482 → altura: estado 0.746, campo 0.751
+   D-estado   -4.86 dB (EP 0.00)
+   D-campo    -4.84 dB (EP 0.01)
+   teto       +7.14 dB (EP 0.01)
+
+##### +0 dB · trechos guardados · pista 0.346 → altura: estado 0.646, campo 0.649
+   D-estado   +2.91 dB (EP 0.05)
+   D-campo    +3.32 dB (EP 0.04)
+   teto       +8.79 dB (EP 0.01)
+
+##### +10 dB · trechos novos · pista 0.445 → altura: estado 0.107, campo 0.117
+   D-estado   -8.01 dB (EP 0.04)
+   D-campo    -7.86 dB (EP 0.03)
+   teto       +7.19 dB (EP 0.01)
+
+##### +0 dB · trechos novos · pista 0.312 → altura: estado 0.125, campo 0.130
+   D-estado   +1.37 dB (EP 0.03)
+   D-campo    +1.61 dB (EP 0.04)
+   teto       +8.81 dB (EP 0.01)
+
+=== CRITÉRIOS (+10 dB, trechos guardados) ===
+VL3-1 D-campo: ganho de nitidez: -4.84 dB (EP 0.01, 0/10) -> NÃO cumprido
+VL3-2 D-estado: ganho de nitidez: -4.86 dB (EP 0.00, 0/10) -> NÃO cumprido
+VL3-3 D-campo / teto: -0.68 (>= 0,70) -> NÃO cumprido

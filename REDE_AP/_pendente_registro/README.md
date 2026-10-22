@@ -80,3 +80,15 @@
 **Auditoria (descritiva):** sem o previsor, a rede com a regra delta **desaba** (altura 0,128; identificação 0,342). A limpeza vem do **encontro** das duas coisas: as ligações delta deixam de deformar a memória, e o previsor reconhece e guia. As ligações sozinhas tornam a memória um ponto **estável**, mas não um **atrator** (a rede não volta a ela por conta própria). E ler direto da pista pelo campo já dá 0,988: com memórias distintas, o reconhecimento faz quase tudo.
 
 **Próximo proposto:** (1) testar em trechos que a rede **nunca viu** (onde só reconhecer não basta); (2) o violão sobre esta base; (3) entender por que as ligações delta não atraem sem o previsor.
+
+## Etapa VL3 — o violão sobre a base nova (22/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaVL3_ViolaoBaseNova.py`, `EtapaVL3_auditoria.py`, saídas e resultados. Grade v2 (endereço por anéis), memória com alturas, regra delta, neurônio N3, previsor, leitura pelo estado e pelo campo; sementes 200–209.
+
+**Sanidade:** 12 memórias (correlação máxima 0,186); pista a +10 dB com correlação 0,482. Cumprida.
+
+**Resultado (ganho de nitidez):** +10 dB, guardados: estado −4,86 dB · campo −4,84 dB · teto +7,14 dB. 0 dB, guardados: estado +2,91 · campo **+3,32** · teto +8,79. Trechos novos: +10 dB, −8,0; 0 dB, +1,4 a +1,6. **VL3-1, VL3-2, VL3-3 não cumpridos.** A altura recuperada subiu (de 0,48 para 0,75), mas não o bastante para o filtro.
+
+**Auditoria (semente 200):** o previsor reconhece o trecho certo em 75% (na pista, 83%); se a leitura devolvesse a memória certa exata, o ganho seria +7,12 dB; a memória que a rede reconheceu, exata, daria +3,28 dB. Mesmo nos trechos reconhecidos o ganho é negativo: a leitura pelo campo é uma **mistura macia** de várias memórias (β = 8 é fraco para memórias tão pouco separadas na pista do violão), e a mistura borra as alturas. Nos trechos novos, a altura fica em 0,11: a rede aplica a forma de um trecho guardado (sem generalização), como previsto.
+
+**Próximo proposto:** a força do reconhecimento (β) calibrada à separação das memórias, declarada antes; e a questão de fundo da Entrada 347: no além, o meio pede **um** som — a leitura como resultante macia borra; a leitura que decide, só no além, pode ser necessária.

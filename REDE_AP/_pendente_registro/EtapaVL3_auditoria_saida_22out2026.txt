@@ -1,0 +1,4 @@
+identificação pelo previsor no fim (trecho certo): 0.75 [9, 1, 2, 3, 4, 5, 9, 4, 8, 9, 10, 11]
+identificação já na pista: 0.8333333333333334
+ganho se a leitura devolvesse a memória certa exata: +7.12 dB · a memória que a rede reconheceu, exata: +3.28 dB
+ganho por trecho (D-campo): [np.float64(-5.4), np.float64(-6.6), np.float64(-4.0), np.float64(-3.7), np.float64(-0.7), np.float64(-4.2), np.float64(-8.2), np.float64(-8.7), np.float64(-3.4), np.float64(-4.0), np.float64(-4.2), np.float64(-4.8)]
