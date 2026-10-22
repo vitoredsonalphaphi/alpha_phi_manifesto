@@ -3,7 +3,7 @@
 
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
-**Última atualização:** 21 de outubro de 2026 (criada em 23/09/2026)
+**Última atualização:** 22 de outubro de 2026 (criada em 23/09/2026)
 **Ver também:** `agenda/REDE_AP_METODO.md` ("Agenda REDE-AP (Fichas Método)"): fichas de método, portões G0–G5 e critérios de validação.
 
 ---
@@ -55,6 +55,22 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
 **Feito além desta agenda (19 e 20/10):** previsor da forma do campo antes de existir (Etapa T); cultivo encaixado de Fibonacci (Etapa C); previsor da memória, inclusive com forma; regra de resolução (L+1)² ≤ N/2, que é também o gatilho da reprojeção; Grade Esférica de Referência v1; canônico congelado com impressões digitais; diretriz do programa (Lakatos); Hopfield moderna (eco do dado) sobre a esfera; leitura em cascas (scanner esférico).
 
 **Comparação com a convencional até aqui:** a AlphaFi empata (Etapa B, EcoBIP) ou fica atrás (Etapas H e RP). O ganho real está na previsibilidade e na mensurabilidade do campo, não no desempenho de memória.
+
+---
+
+## \*\*\* A CHAVE — LAPLACE, O PONTO E O CAMPO (22/10/2026)
+
+**Destaque a pedido do pesquisador:** a estruturação sobre Laplace é reconhecida como **o fundamento, a chave da tradutibilidade** (técnica, filosofia, estética; técnica e socioambiental). Texto na íntegra: Entrada 357 do Manifesto 03 e `Ponte/AGENDA_PONTE.md` (detalhamento das três estrelas). Ver também as Entradas 354 e 356.
+
+**Onde Laplace está hoje na rede (conferido no código):**
+- **Construído e verificado na grade:** `extensao` (o campo da superfície levado ao interior por Σ c·r^L·Y, a solução de Laplace na esfera; teste G8) e `centro_alfa` (o neurônio α como média pesada pela área; teste G5'). Centro = média é verdadeiro por construção.
+- **Em parte no processamento:** a âncora α (Etapas NA e LA), com o ganho ajustado, resolveu a saturação: o princípio do máximo aplicado à mão; regula também o espalhamento; é imposta, não nasce da dinâmica.
+- **Ausente:** a memória roda só na superfície (610 neurônios); o interior não é usado no processamento; o princípio do máximo nunca foi testado como propriedade da rede.
+
+**Testes propostos (critérios a escrever e aprovar antes de rodar):**
+1. **A âncora contra a fonte interna (Poisson):** injetar no α um viés que não vem do campo e medir se a recuperação piora — o desalinhamento da Entrada 356 em forma mensurável.
+2. **O processamento pelo interior:** o estado desce até α e sobe de volta pelas cascas da Grade v2; comparar com o processamento só na superfície (liga-se à respiração e à pegada da entrada, Entrada 355).
+3. **O resumo não substitui o campo:** já há um primeiro resultado (Etapa VL3: a leitura macia, uma média, borrou o som); completar com a leitura decisiva no além (a "probabilidade das causas" de Laplace: entregar a média ponderada ou a causa mais provável).
 
 ---
 
