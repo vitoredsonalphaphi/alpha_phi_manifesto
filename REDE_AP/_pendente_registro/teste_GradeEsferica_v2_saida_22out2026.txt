@@ -1,0 +1,12 @@
+G1 endereço progressivo: maior vão / vão de referência — mediana 1.28, pior 1.58 (n = 59); acima de 1,5 em 14 de 577 começos -> NÃO cumprido
+    (comparação: pontos ao acaso dão 2.17 vezes o vão de referência)
+G2 crescer não move os pontos antigos: cumprido
+G3 cascas áureas: r=1.000: 610 pts · r=0.618: 233 pts · r=0.382: 89 pts · r=0.236: 34 pts · r=0.146: 13 pts · r=0.090: 5 pts · r=0.056: 2 pts · maior desvio de densidade 5.6% -> cumprido
+G4 base para o interior: grau dominante certo em todas as cascas que o medem: True; maior erro da amplitude r^L 0.00% -> cumprido
+G5 o neurônio α central é a média da superfície: diferença média 0.820%, pior 3.473% do desvio -> NÃO cumprido
+G6 células por escala, aninhamento: 34→55: 0.85 · 55→89: 0.84 · 89→144: 0.86 · 144→233: 0.78 · 233→377: 0.79 · 377→610: 0.83 · média 0.82 -> cumprido
+G7 escrita e leitura: harmônicos até o grau 16, erro 7.3e-15; endereço faixa × instante, erro 0.0e+00 -> cumprido
+G8 conservação da energia: superfície (até o grau 16) 1.87% (pior 7.14%); casca r=0.618 (233 pts, até o grau 9): 1.99% (pior 6.84%) · casca r=0.382 (89 pts, até o grau 5): 1.61% (pior 5.78%) · casca r=0.236 (34 pts, até o grau 3): 2.93% (pior 11.03%) -> NÃO cumprido
+    Sépstro de um campo ao acaso: Coh 0.074 + Entr 0.926 = 1.000 (por construção)
+
+RESUMO: G1 ✗ · G2 ✓ · G3 ✓ · G4 ✓ · G5 ✗ · G6 ✓ · G7 ✓ · G8 ✗

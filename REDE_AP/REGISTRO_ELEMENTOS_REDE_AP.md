@@ -84,7 +84,7 @@
 | # | Elemento | Origem | Teste | Resultado | Status | Arquivo |
 |---|---|---|---|---|---|---|
 | E26 | **A tarefa própria com sinal real:** o violão do pesquisador (13/05/2026) | Entrada 350 | Etapa VL | 12 memórias distintas; com o previsor, de 62% para 76% das faixas certas; a rede sozinha limpa pouco | TESTADO parcial | `_pendente_registro/` |
-| E27 | **A Grade Esférica v2: o endereçamento** (75 anéis de latitude = faixas; 8 posições = instantes; altura contínua) | Entrada 346 | Etapa VL2 | a grade e o filtro funcionam (+7,16 dB com a memória limpa); a dinâmica do canônico apaga as alturas (87% dos neurônios nos extremos) e **piora o som** (−4,28 dB) | PROPOSTO · TESTADO parcial | `_pendente_registro/AlphaPhi_GradeEsferica_v2_proposta.py` |
+| E27 | **A Grade Esférica v2: o endereçamento** (ver Parte V para os testes da estrutura) (75 anéis de latitude = faixas; 8 posições = instantes; altura contínua) | Entrada 346 | Etapa VL2 | a grade e o filtro funcionam (+7,16 dB com a memória limpa); a dinâmica do canônico apaga as alturas (87% dos neurônios nos extremos) e **piora o som** (−4,28 dB) | PROPOSTO · TESTADO parcial | `_pendente_registro/AlphaPhi_GradeEsferica_v2_proposta.py` |
 | E28 | **A leitura da superfície (o além) para o som:** a estimativa da rede como ganho aplicado ao próprio som | Entradas 351, 353 | Etapa VL2 | funciona quando recebe a forma certa | TESTADO parcial | idem |
 | E29 | Corte Radial (vistas: espectro na esfera, mapa dos atratores, topográfico euclidiano ao lado) | Entradas 351, 346 | — | projetado; páginas anteriores: cascas, cebola (nome retirado) | INSTRUMENTO | — |
 
@@ -132,6 +132,25 @@ Cada elemento com **o que deve fazer**, **o teste da própria grade (sem rede e 
 3. **Os testes G1–G8** da própria grade.
 4. **O que passar entra no canônico**, com impressão digital (como a v1).
 5. **As ferramentas sobre a grade nova** (o previsor, o neurônio contínuo ajustado às alturas, a estrutura de êxito, o neurônio α, a pegada, decidir no além), com critérios escritos antes; o que funcionar entra no canônico como regra.
+
+---
+
+## Parte V — Os testes da Grade Esférica v2 (22/10/2026)
+
+**Arquivos:** `_pendente_registro/AlphaPhi_GradeEsferica_v2.py` (módulo, sobre a v1), `_pendente_registro/teste_GradeEsferica_v2.py`, `_pendente_registro/teste_GradeEsferica_v2_saida_22out2026.txt`. Limites numéricos declarados no código antes de rodar (a Parte III não tinha números). Correção antes de interpretar: na primeira execução, a linha das cascas internas do G8 repetia a superfície; refeito medindo cada casca até o grau que ela resolve.
+
+| Teste | Resultado | Veredito | Leitura |
+|---|---|---|---|
+| G1 endereço progressivo | o maior vão de cada começo fica, na mediana, 1,28 × o de uma esfera feita para aquele número de pontos; pior 1,58 (n = 59); acima de 1,5 em 14 de 577 começos; pontos ao acaso: 2,17 | **não cumprido** | o endereço progressivo funciona (muito melhor que o acaso), mas não no padrão declarado em alguns começos |
+| G2 crescer não move os pontos | idêntico para todo n ≤ 610 | cumprido | herdado da v1 |
+| G3 cascas em proporção áurea | 610 · 233 · 89 · 34 · 13 · 5 · 2 pontos nos raios 1, 1/φ, 1/φ², …; desvio de densidade 5,6% | cumprido | **por construção**: os números de pontos por casca são números de Fibonacci (F15, F13, F11, …), porque φ^(−2k) × 610 ≈ F(15−2k) |
+| G4 base para o interior | grau certo em todas as cascas; amplitude r^L sem erro | cumprido | verifica a implementação (exata por construção nos graus que cada casca resolve) |
+| G5 o neurônio α é a média da superfície | média simples dos 610 valores × centro: diferença média 0,82%, pior 3,47% | **não cumprido** | o teorema é exato; o que falha é a **média simples** dos pontos como estimativa: cada ponto deveria pesar pela área da sua célula |
+| G6 células por escala | aninhamento médio 0,82 (de 0,78 a 0,86 entre estágios) | cumprido | as escalas de Fibonacci formam, quase, uma árvore de células |
+| G7 escrita e leitura | erro 7,3 × 10⁻¹⁵ (harmônicos); 0 (endereço faixa × instante) | cumprido | ida e volta sem perda |
+| G8 conservação da energia | superfície 1,87%; cascas de 233 e 89 pontos: 1,99% e 1,61%; casca de 34 pontos: **2,93%** | **não cumprido** | mesma causa do G5: o peso igual para todos os pontos; o erro cresce nas cascas pequenas |
+
+**O que isso indica:** G5 e G8 têm a mesma causa e o mesmo remédio provável: **pesar cada ponto pela área da sua célula** (as células do G6). O G1 pede comparar outras sequências de altura para o endereço (proposta: a altura também pelo número de ouro, em vez de √2). As duas correções são **propostas**, a testar com critérios escritos antes. Ainda não entra nada no canônico.
 
 ---
 *Florianópolis · 22 de outubro de 2026 · Rede AP · Vitor Edson Delavi · Claude*
