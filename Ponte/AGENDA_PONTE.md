@@ -1,6 +1,7 @@
 # Agenda da Ponte — Laboratório de Tradutibilidade
 
-**Arquivo:** `Ponte/AGENDA_PONTE.md` · criado em 22/10/2026, a pedido do pesquisador · itens da Ponte que pedem desenvolvimento.
+**Onde fica:** dentro da **Ponte** (`Ponte/`), o Laboratório de Tradutibilidade que já existe desde **10/10/2026** (criado como `ferramentas_do_alinhamento/` e renomeado para `Ponte/` no mesmo dia). É a agenda da tradutibilidade entre filosofia e ciência: a Ponte reúne o Plano de Pesquisa da Tradutibilidade (`PLANO_Tradutibilidade_v0.md`, com os portões P0–P6), as fundamentações, as hipóteses e os critérios; os itens de agenda já registrados estão também em `hipoteses/campo_esferico_e_preservacao_do_campo.md` (seção IV, "Itens para a agenda da Ponte").
+**Este arquivo:** criado em 22/10/2026 para reunir, num só lugar, os itens da agenda da Ponte com destaque.
 **Como recuperar:** quando o pesquisador pedir **"o arquivo das três estrelas"** (ou "\*\*\*"), trazer o item marcado com \*\*\* abaixo.
 
 ---
