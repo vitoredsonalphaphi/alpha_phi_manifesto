@@ -1,0 +1,3 @@
+ressonância entre memórias (máx fora da diagonal por memória): [0.044, 0.095, 0.073, 0.091, 0.073, 0.042, 0.083, 0.032, 0.065, 0.075, 0.069, 0.08]
+semente 210 escolha na pista [9, 1, 2, 3, 4, 5, 10, 7, 8, 9, 10, 11] · no fim [9, 1, 2, 3, 4, 5, 9, 9, 8, 9, 10, 11] · peso máx (β cal.) no fim 0.987
+semente 215 escolha na pista [9, 1, 2, 3, 4, 5, 10, 10, 8, 9, 10, 11] · no fim [9, 1, 2, 3, 4, 5, 9, 9, 8, 9, 10, 11] · peso máx (β cal.) no fim 0.987

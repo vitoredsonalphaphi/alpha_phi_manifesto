@@ -92,3 +92,17 @@
 **Auditoria (semente 200):** o previsor reconhece o trecho certo em 75% (na pista, 83%); se a leitura devolvesse a memória certa exata, o ganho seria +7,12 dB; a memória que a rede reconheceu, exata, daria +3,28 dB. Mesmo nos trechos reconhecidos o ganho é negativo: a leitura pelo campo é uma **mistura macia** de várias memórias (β = 8 é fraco para memórias tão pouco separadas na pista do violão), e a mistura borra as alturas. Nos trechos novos, a altura fica em 0,11: a rede aplica a forma de um trecho guardado (sem generalização), como previsto.
 
 **Próximo proposto:** a força do reconhecimento (β) calibrada à separação das memórias, declarada antes; e a questão de fundo da Entrada 347: no além, o meio pede **um** som — a leitura como resultante macia borra; a leitura que decide, só no além, pode ser necessária.
+
+## Etapa VL4 — a decisão no além (22/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaVL4_DecisaoNoAlem.py` (importa a VL3 pelo caminho do scratchpad da sessão; a mesma VL3 está nesta pasta), `EtapaVL4_auditoria.py`, saídas e resultados. Base da VL3; sementes 210–219. O além entrega: M (mistura, β = 8), Bc (mistura com β calibrado só pelas memórias: 15,5), DC (a memória de maior ressonância, exata), DS (decide só com peso ≥ 0,5), DP (controle: decisão direto na pista), teto.
+
+**Resultado (ganho de nitidez, trechos guardados):** +10 dB: M −4,84 · Bc +2,42 · **DC +3,28** · DS +3,28 · DP **+4,10** · teto +7,14 dB. 0 dB: M +3,35 · Bc +6,07 · **DC +6,22** · DS +6,22 · DP +5,87 · teto +8,79 dB. Identificação (+10 dB): pista 0,792, fim 0,750; (0 dB): pista 0,542, fim 0,625. Trechos novos: +10 dB, de −7,9 a −6,5 dB em todas as versões; 0 dB, +1,6 a +2,9.
+
+**Critérios:** VL4-1 cumprido (+3,28 dB, 10/10); VL4-2 cumprido (DC − M +8,12 dB); VL4-3 cumprido (Bc − M +7,26 dB); **VL4-4 não cumprido** (DC − DP −0,82 dB, 0/10: com ruído leve a rede reconhece pior que a pista); VL4-5 cumprido nos números (+3,28 e +6,22 dB), **mas a auditoria mostra que a DS decidiu em 100% dos casos, inclusive nos trechos novos**: é idêntica à DC e não protegeu nada; o critério passou porque a DC é positiva, não pela proteção.
+
+**Auditoria:** o erro de pesos baixos (EP ≈ 0,01) vem de a rede cair sempre no mesmo atrator para cada trecho (identificação no fim 0,75 em todas as 10 sementes). Memória 9 é um **atrator-sumidouro**: os trechos 0, 6 e 7 terminam nela; o trecho 0 já é confundido com a 9 na pista; o 7, reconhecido certo na pista na semente 210, é puxado para a 9 pela rede. As memórias são bem separadas entre si (ressonância cruzada máxima 0,03 a 0,10), então o problema não é a separação: é a pista ruidosa parecer mais com algumas memórias e o atrator puxar para elas. O peso de confiança com β calibrado fica ≥ 0,987 no fim: a rede termina sempre "certa de si", mesmo quando errada.
+
+**Leitura:** a decisão no além resolveu a mistura que borrava (de −4,8 para +3,3 dB a +10 dB; de +3,4 para +6,2 dB a 0 dB, 71% do teto). Com ruído forte, o processamento da rede acrescenta ao reconhecimento (0,54 → 0,63; DC > DP); com ruído leve, tira (0,79 → 0,75; DC < DP), pelo sumidouro. Continua sendo memória: nos trechos novos, nenhuma versão ajuda a +10 dB.
+
+**Próximo proposto:** entender e corrigir o sumidouro (por que a memória 9 atrai; equilíbrio dos atratores); uma confiança que meça a dúvida de verdade (a confiança do estado final não serve, porque é sempre alta; talvez a da pista, ou a mudança entre pista e fim).

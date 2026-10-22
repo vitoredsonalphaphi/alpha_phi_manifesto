@@ -1,0 +1,41 @@
+β calibrado: 15.5 · memórias: 12
+
+##### +10 dB · trechos guardados · identificação: pista 0.792, fim 0.750 · DS decide em 1.000
+   M      -4.84 dB (EP 0.00) · fração do teto -0.68
+   Bc     +2.42 dB (EP 0.01) · fração do teto +0.34
+   DC     +3.28 dB (EP 0.01) · fração do teto +0.46
+   DS     +3.28 dB (EP 0.01) · fração do teto +0.46
+   DP     +4.10 dB (EP 0.23) · fração do teto +0.57
+   teto   +7.14 dB (EP 0.01) · fração do teto +1.00
+
+##### +0 dB · trechos guardados · identificação: pista 0.542, fim 0.625 · DS decide em 1.000
+   M      +3.35 dB (EP 0.04) · fração do teto +0.38
+   Bc     +6.07 dB (EP 0.09) · fração do teto +0.69
+   DC     +6.22 dB (EP 0.10) · fração do teto +0.71
+   DS     +6.22 dB (EP 0.10) · fração do teto +0.71
+   DP     +5.87 dB (EP 0.09) · fração do teto +0.67
+   teto   +8.79 dB (EP 0.01) · fração do teto +1.00
+
+##### +10 dB · trechos novos · identificação: pista 0.142, fim 0.217 · DS decide em 1.000
+   M      -7.89 dB (EP 0.03) · fração do teto -1.10
+   Bc     -7.67 dB (EP 0.06) · fração do teto -1.07
+   DC     -7.66 dB (EP 0.06) · fração do teto -1.07
+   DS     -7.66 dB (EP 0.06) · fração do teto -1.07
+   DP     -6.54 dB (EP 0.04) · fração do teto -0.91
+   teto   +7.19 dB (EP 0.01) · fração do teto +1.00
+
+##### +0 dB · trechos novos · identificação: pista 0.083, fim 0.167 · DS decide em 1.000
+   M      +1.62 dB (EP 0.03) · fração do teto +0.18
+   Bc     +1.84 dB (EP 0.06) · fração do teto +0.21
+   DC     +1.84 dB (EP 0.06) · fração do teto +0.21
+   DS     +1.84 dB (EP 0.06) · fração do teto +0.21
+   DP     +2.94 dB (EP 0.06) · fração do teto +0.33
+   teto   +8.81 dB (EP 0.00) · fração do teto +1.00
+
+=== CRITÉRIOS (trechos guardados) ===
+VL4-1 DC (+10 dB): +3.28 dB (EP 0.01, 10/10 a favor) -> cumprido
+VL4-2 DC − M (+10 dB): +8.12 dB (EP 0.01, 10/10 a favor) -> cumprido
+VL4-3 Bc − M (+10 dB): +7.26 dB (EP 0.01, 10/10 a favor) -> cumprido
+VL4-4 DC − DP (+10 dB), não negativo: -0.82 dB (EP 0.23, 0/10 a favor) -> NÃO cumprido
+VL4-5 DS (+10 dB) >= 0: +3.28 dB (EP 0.01, mínimo +3.25) -> cumprido
+VL4-5 DS (+0 dB) >= 0: +6.22 dB (EP 0.10, mínimo +5.84) -> cumprido
