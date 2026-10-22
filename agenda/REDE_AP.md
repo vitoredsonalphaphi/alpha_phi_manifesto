@@ -182,6 +182,17 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
   - Parentes esféricos (de memória): **HEALPix** (Górski e colegas, 2005); **needlets** (Narcowich, Petrushev e Ward, 2006); a esfera de Fibonacci encaixada já é uma divisão quase de área igual e hierárquica
   - A fazer: células esféricas com endereço; regra de lugar para frequência e tempo (frequência no raio, do centro α para fora; tempo na volta em torno); modo local × modo holográfico, pela régua própria e pela imagem; guardar a altura de cada faixa (valores contínuos; Etapa VL2, o violão audível); vistas novas: espectro radial (as barras dentro da esfera), mapa dos atratores (o rastro do estado e o peso do previsor), o topográfico euclidiano ao lado; a página passa a se chamar **Corte Radial**
 
+- [ ] **O fluxo da ordem e da desordem na esfera — as fases do processamento AlphaPhi** *(acrescentado em 22/10/2026, a pedido do pesquisador; conversa de 22/10)*
+  - **A diferença de direção:** a convencional sintetiza **contraindo** (muitos dados → um ponto: a saída, o vale); o AlphaPhi sintetiza **expandindo** (α, a tensão entrópica, no centro → a coerência como **campo** na superfície). O mesmo fenômeno (a entropia diminui, a coerência aumenta; Sépstro Coh + Entr = 1), em direções opostas
+  - **As duas sínteses da esfera:** no **centro α**, o resumo de tudo (a média, a semente; o grau 0 que sobrevive rumo ao centro) — o equivalente da "base" convencional; na **superfície r = 1**, a síntese como campo (o todo organizado sem perder a extensão)
+  - **As duas direções da árvore:** para **dentro** (reconhecer: os galhos convergem ao tronco) e para **fora** (expressar: o tronco se ramifica); o modelo AlphaPhi é a árvore que cresce; uma rede completa precisa das duas (como as duas vias do batedor e da codificação preditiva)
+  - **Fase 1 — a entrada:** onde o dado entra na esfera (proposta: pela superfície, vindo do ambiente) e a regra de escrita (o endereço da Grade v2)
+  - **Fase 2 — o recolhimento:** da superfície para o centro, sintetizando por escalas até α (o raio como escala: resumo no centro, detalhe na borda)
+  - **Fase 3 — a expansão:** do centro para fora, até o campo harmônico na superfície (a ordem expressa como campo)
+  - **Fase 4 — o além (r > 1), a expressão:** a **leitura da superfície** e a sua conversão para o meio (som, imagem, texto). No convencional: a camada de saída e o espaço latente → a **decodificação** (leitura) → a **síntese ou renderização** (a transformada inversa, o vocoder, o desenho na tela) → o hardware (conversor digital-analógico, tela). No AlphaPhi: a regra de **leitura** da Grade v2 (o caminho inverso do endereço) e o conversor para o meio — o filtro da Etapa VL2 já foi um primeiro "além" para o som
+  - **O ciclo completo (proposta):** ambiente → superfície → interior → α → interior → superfície (campo harmônico) → além; como uma respiração (recolher e expandir)
+  - A fazer: escrever no documento de fundamento da Grade Esférica v2; para cada fase, o que a mostraria errada; depois implementar e testar a grade sozinha (sem rede), e só então voltar às ferramentas
+
 ---
 
 ## III. QUESTÕES PARA QUANDO CHEGADA A HORA
