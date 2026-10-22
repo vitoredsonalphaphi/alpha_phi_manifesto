@@ -1,0 +1,25 @@
+
+##### ruído 1.0 × o desvio da memória · ganho ajustado g = 0.53 (de 0.50 a 0.55) · saturação das memórias 0.068 · altura na pista 0.716
+versão              altura  saturação    erro  identificação
+N0                   0.633      0.936   0.762          1.000
+N1                   0.551      0.133   0.661          0.942
+N2                   0.630      0.000   0.638          1.000
+N3                   0.553      0.001   0.625          0.925
+N0-sem previsor      0.555      0.933   0.823          1.000
+N3-sem previsor      0.395      0.003   0.722          0.925
+
+##### ruído 0.5 × o desvio da memória · ganho ajustado g = 0.53 (de 0.50 a 0.55) · saturação das memórias 0.068 · altura na pista 0.904
+versão              altura  saturação    erro  identificação
+N0                   0.665      0.928   0.734          1.000
+N1                   0.570      0.074   0.623          0.958
+N2                   0.662      0.000   0.612          1.000
+N3                   0.572      0.008   0.601          0.950
+N0-sem previsor      0.587      0.925   0.797          1.000
+N3-sem previsor      0.395      0.013   0.710          0.967
+
+=== CRITÉRIOS (ruído principal) ===
+NA0 a N0 satura: 0.936 (> 0,50) -> cumprido
+NA1 N1 − N0: -0.081 (EP 0.008, 0/10) -> NÃO cumprido
+NA2 N2 − N0: -0.003 (EP 0.001, 3/10) -> NÃO cumprido
+NA3 N3: altura 0.553 (>= 0,8) · saturação 0.001 contra 0.068 das memórias (até 0,10) -> NÃO cumprido
+NA4 N3 − N1: +0.001 (EP 0.001, 6/10) -> NÃO cumprido

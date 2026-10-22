@@ -62,3 +62,11 @@
 **Auditoria:** a dinâmica do canônico (feita para memórias de + e −) empurra 87% dos neurônios aos extremos, enquanto só 8% das alturas do violão estão nos extremos: a rede apaga as alturas e se afasta da forma limpa (correlação 0,23, contra 0,48 da pista). A grade e o filtro funcionam: se a rede devolvesse a memória limpa, o ganho seria de +7,16 dB.
 
 **Decisão do pesquisador (22/10):** parar os testes e estruturar antes o fundamento da grade esférica (Entradas 346–355; agenda REDE-AP).
+
+## Etapa NA — o neurônio que guarda alturas (22/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaNA_NeuronioAlturas.py`, `EtapaNA_auditoria.py`, saídas e resultados. Grade v2 + Ferramentas de Memória v1; 12 memórias contínuas com forma (saturação das memórias 6,8%); pista com ruído (principal: 1,0 × o desvio; altura da pista 0,716); previsor ligado. Sementes 180–189.
+
+**Resultado (altura recuperada, ruído principal):** N0 0,633 (saturação 93,6%) · N1 ganho ajustado (g ≈ 0,53) 0,551 (13,3%) · N2 âncora α 0,630 (0,0%) · N3 0,553 (0,1%). **NA0 cumprido** (o defeito reproduzido); **NA1, NA2, NA3, NA4 não**. O ganho ajustado e a âncora **acabam com a saturação**, mas a altura recuperada **piora**; e **todas as versões terminam abaixo da própria pista** (0,716).
+
+**Auditoria:** o problema não está no neurônio, está nas **ligações**. Uma memória intacta, passada uma única vez pelo campo de ligações (regra de Hebb com vizinhança), já sai com correlação 0,849: as ligações locais deformam as memórias contínuas, e as voltas acumulam a deformação. A memória contínua não é um ponto estável da rede. Descritivo, não previsto: ler o resultado no fim pelo previsor (a mistura das memórias pesada pela ressonância) dá 0,884, acima da pista. **Próximo proposto:** (1) uma regra de ligação em que as memórias contínuas sejam pontos estáveis; (2) a leitura no além pelo campo (Entrada 347), com critérios escritos antes.
