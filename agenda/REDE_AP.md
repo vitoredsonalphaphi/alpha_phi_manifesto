@@ -86,6 +86,11 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
 - Cada neurônio com Coh_i (concordância com o que o campo espera dele, no meio do processamento) e Entr_i = 1 − Coh_i; coerência alta → expansão (ganho sobe); entropia alta → abertura (ganho baixa). Modular, e não somar; regula a abertura, não impõe o valor.
 - Teste proposto (critérios a escrever e aprovar): memória da Etapa LA no ruído 3,0 e com memórias parecidas; neurônio atual × Sépstro próprio × ganho variável ao acaso; medidas: recuperação, identificação e **se a entropia do campo prevê os erros**.
 
+### O horizonte — a noção do todo que orienta sem interferir (Entrada 365; pedra bruta a lapidar)
+- O todo chega ao neurônio como **horizonte** (a perspectiva aérea): sutil (baixa amplitude, como o campo infinitesimal de quebra de simetria), lento, em formas não delineadas (só as formas largas: **o interior como horizonte, e não como lugar de processamento**, à luz da Etapa IN) e gradativo (cada neurônio com a sua sensibilidade).
+- Pesa **só na dúvida** (entropia alta do neurônio, Entrada 364); nos casos claros, não interfere na trajetória.
+- Teste proposto (critérios a escrever): horizonte sempre × só na dúvida × nenhum × sinal fraco ao acaso; não interferência nos casos claros; menos sumidouros nos ambíguos.
+
 ### \*\*\* Para um futuro próximo — depois de efetivada a construção da rede
 > **Adendo do pesquisador:** com certeza para um futuro próximo, **depois de efetivada a construção da Rede AP propriamente dita**; registrado para não perder o fio de uma das boas propostas de verificação mais detalhada.
 
