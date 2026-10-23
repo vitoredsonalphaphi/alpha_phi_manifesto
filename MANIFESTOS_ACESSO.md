@@ -8,7 +8,7 @@
 
 > Projeto de convergência entre filosofia, ciência e estética.  
 > Proposta de alinhamento estrutural para Inteligências Artificiais via φ e α.  
-> 977 páginas nos três primeiros ciclos · quatro ciclos · um argumento.
+> Quatro ciclos · um argumento.
 
 ---
 
@@ -23,7 +23,7 @@
 [MANIF_02_COMPILADO.md](https://raw.githubusercontent.com/vitoredsonalphaphi/alpha_phi_manifesto/claude/good-morning-N6f3S/MANIF_02_COMPILADO.md)
 
 ### Volume III — Método em Ação
-**Entradas 145–248 · 278 páginas**  
+**Entradas 145–365, com "Trinta Anos de Empenho" e a Entrada 251 ao final · ciclo encerrado em 23/10/2026**  
 [MANIF_03_COMPILADO.md](https://raw.githubusercontent.com/vitoredsonalphaphi/alpha_phi_manifesto/claude/good-morning-N6f3S/MANIF_03_COMPILADO.md)
 
 ### Volume IV — O Limiar do Espelho
@@ -51,7 +51,7 @@ Sinopse estruturada do projeto (JSON):
   "volumes": {
     "I": {"entradas": "0-72", "carater": "Fundação técnica"},
     "II": {"entradas": "73-144", "paginas": 473, "carater": "Consolidação filosófica"},
-    "III": {"entradas": "145-248", "paginas": 278, "carater": "Método em ação — conclusão aberta"},
+    "III": {"entradas": "145-365 (e 251 ao final)", "carater": "Método em ação — conclusão aberta"},
     "IV": {"entradas": "366-", "carater": "O limiar do espelho — onde a ética e a técnica se traduzem (em andamento)"}
   },
   "conclusao": "O manifesto demonstra sua própria tese por não poder ser fechado — Quarta Parede.",
