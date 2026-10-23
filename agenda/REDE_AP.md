@@ -91,6 +91,11 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
 - Pesa **só na dúvida** (entropia alta do neurônio, Entrada 364); nos casos claros, não interfere na trajetória.
 - Teste proposto (critérios a escrever): horizonte sempre × só na dúvida × nenhum × sinal fraco ao acaso; não interferência nos casos claros; menos sumidouros nos ambíguos.
 
+### O campo médio — cada neurônio sente os vizinhos e o campo de todos (a pedido do pesquisador, 23/10/2026)
+- **Referência (citada de memória):** a teoria do **campo médio** de Pierre Weiss (1907): num ímã, cada partícula sente não só as vizinhas, mas o **campo médio de todas**; foi assim que Weiss explicou a ordenação espontânea (o ferromagnetismo). Parente próximo: o **campo infinitesimal de quebra de simetria** — um campo externo minúsculo que não muda o sistema já decidido, mas escolhe a direção quando ele está indeciso.
+- **Na Rede AP:** cada neurônio já recebe os vizinhos (regra delta) e duas formas do todo (o previsor e a âncora α), mas como **complemento** somado. O campo médio é a referência física para as Entradas 364 (o Sépstro de cada neurônio: o todo como compreensão) e 365 (o horizonte: o todo sutil, que orienta sem interferir).
+- **A cuidar:** no campo médio clássico, todos tendem ao mesmo alinhamento (o ímã inteiro aponta para um lado); na Rede AP, a noção do todo deve regular a **abertura** do neurônio, e não impor o seu **valor** (Entrada 356: saber-se parte não é tornar-se igual).
+
 ### \*\*\* Para um futuro próximo — depois de efetivada a construção da rede
 > **Adendo do pesquisador:** com certeza para um futuro próximo, **depois de efetivada a construção da Rede AP propriamente dita**; registrado para não perder o fio de uma das boas propostas de verificação mais detalhada.
 
