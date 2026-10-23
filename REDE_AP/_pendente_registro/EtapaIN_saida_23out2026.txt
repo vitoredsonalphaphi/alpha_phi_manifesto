@@ -1,0 +1,29 @@
+
+##### ruído 2.0 × o desvio · altura da pista 0.431 · na casca 233: altura recuperada 0.151 · memória que sobe (formas largas) vs memória na superfície 0.666
+versão     altura  identif.  saturação   voltas
+SUP         0.964     1.000      0.000     50.0
+IN          0.313     0.292      0.000    100.0
+IN-sp       0.164     0.142      0.000    100.0
+CO          0.645     0.908      0.000     50.0
+IN2         0.729     0.808      0.000    150.0
+
+##### ruído 1.0 × o desvio · altura da pista 0.718 · na casca 233: altura recuperada 0.306 · memória que sobe (formas largas) vs memória na superfície 0.666
+versão     altura  identif.  saturação   voltas
+SUP         0.978     1.000      0.000     50.0
+IN          0.576     0.575      0.000    100.0
+IN-sp       0.276     0.267      0.000    100.0
+CO          0.862     1.000      0.000     50.0
+IN2         0.886     0.942      0.000    150.0
+
+##### ruído 3.0 × o desvio · altura da pista 0.284 · na casca 233: altura recuperada 0.150 · memória que sobe (formas largas) vs memória na superfície 0.666
+versão     altura  identif.  saturação   voltas
+SUP         0.927     0.975      0.000     50.0
+IN          0.228     0.208      0.000    100.0
+IN-sp       0.159     0.133      0.000    100.0
+CO          0.415     0.650      0.000     50.0
+IN2         0.453     0.517      0.000    150.0
+
+=== CRITÉRIOS === IN0 SUP altura no ruído 2,0: 0.964 (< 0,95) -> NÃO cumprido; principal passa a 3,0
+IN1 IN − SUP (ruído 3.0): -0.699 (EP 0.026, 0/10) -> NÃO cumprido
+IN2 IN − CO (ruído 3.0): -0.187 (EP 0.028, 0/10) -> NÃO cumprido
+IN3 IN − IN-sp (ruído 3.0): +0.069 (EP 0.024, 8/10) -> cumprido

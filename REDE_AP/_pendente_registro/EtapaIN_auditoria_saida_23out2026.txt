@@ -1,0 +1,5 @@
+energia da memória por faixa de grau (fração): <=9 0.45 · resíduo acima de 14 (fora do ajuste): 0.028
+na casca 233: desvio das memórias 0.067 · correlação pista×memória 0.541 · ganho ajustado 0.1
+memória intacta pelas ligações da casca: 0.9997
+recuperada na casca: 0.204 · voltas 50 · desvio do estado final 0.397
+ressonância cruzada máxima relativa à própria, na casca: 0.845
