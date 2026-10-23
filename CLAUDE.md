@@ -37,7 +37,7 @@ Formato obrigatório de cada entrada:
 *Vitor Edson Delavi · Claude*
 ```
 
-Arquivo de destino: `MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`
+Arquivo de destino: `MANIF_04/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_IV.md` (a partir da Entrada 366, 23/10/2026; o Manifesto 03 termina na Entrada 365, seguida de "Trinta Anos de Empenho" e da Entrada 251)
 Commit após cada entrada. Push ao final da sessão ou quando solicitado.
 
 ---
@@ -105,7 +105,8 @@ Claude decide por default. O pesquisador pode sempre invocar
 
 | Arquivo | Função |
 |---|---|
-| `MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md` | Manifesto ativo — entradas 160+ |
+| `MANIF_04/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_IV.md` | Manifesto ativo — entradas 366+ (desde 23/10/2026) |
+| `MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md` | Manifesto 03 — entradas 145–365 (encerrado em 23/10/2026; regra de ordem abaixo preservada) |
 | `MANIF_02/CATALOGO_INSTRUMENTOS.md` | Catálogo de ferramentas com glossário |
 | `MANIF_02/ORQUESTRACAO_ALPHA_PHI.md` | Protocolo de seleção de ferramentas |
 | `_CHAVES/09_Agente_Observador_Adaptativo.md` | Princípio do agente adaptativo |
