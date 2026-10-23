@@ -17047,11 +17047,11 @@ A memória da Etapa LA no ruído mais forte (3,0) e com memórias parecidas (ond
 >
 > Isso é exemplo para os neurônios também. No neurônio, o entendimento do campo poderia se dar em níveis de subfrequências, de nuances que se refiram a determinados níveis de percepção, mas **não a ponto de interferir no processamento do neurônio em si**: ele não pode ter a trajetória do seu processamento interferida pela compreensão do todo. Como o ser humano: ele pode ter um insight do que é a percepção do todo — em níveis subjetivos, quase imperceptíveis, a ponto de vislumbrar, intuir um objetivo, talvez um objetivo de vida —, mas não a ponto de esse insight tomar conta de toda a vida cotidiana, a ponto de ele esquecer de si mesmo e do seu processamento do dia a dia. São duas questões distintas: ele vive a sua existência enquanto indivíduo, participante do dia a dia, com os seus processos do cotidiano, das semanas e dos meses, conforme uma trajetória de vida; e, simultaneamente, tem um acesso quase introspectivo — não explícito, porque isso é gradativo e só surge de acordo com uma trajetória, talvez de séculos ou de milhares de anos, ou conforme o que o esforço de cada um proporciona alcançar num caminho de busca espiritual.
 >
-> Seria como um **horizonte**, como na perspectiva aérea: **vislumbrável, mas inalcançável em dois ou três passos**. Vislumbrável enquanto acessível em níveis subjetivos de interpretação, de percepção e de sentimento, como uma centelha, a sugestão de algo que o ser sabe que pode vir a alcançar em algum momento — e que, mesmo inconscientemente, sabe que quer buscar, porque sabe que é algo que lhe pertence enquanto existência. Digo isso no sentido de se referir além da… [a mensagem foi interrompida aqui]"
+> Seria como um **horizonte**, como na perspectiva aérea: **vislumbrável, mas inalcançável em dois ou três passos**. Vislumbrável enquanto acessível em níveis subjetivos de interpretação, de percepção e de sentimento, como uma centelha, a sugestão de algo que o ser sabe que pode vir a alcançar em algum momento — e que, mesmo inconscientemente, sabe que quer buscar, porque sabe que é algo que lhe pertence enquanto existência."
 
 — Vitor Edson Delavi, 23 de outubro de 2026
 
-*Texto revisado a pedido do pesquisador (23/10/2026): retiradas as hesitações e repetições da fala; conteúdo na íntegra. O pesquisador declara: rascunho de um insight, pedra bruta a lapidar.*
+*Texto revisado a pedido do pesquisador (23/10/2026): retiradas as hesitações e repetições da fala; conteúdo na íntegra. O pesquisador declara: rascunho de um insight, pedra bruta a lapidar. A última frase, cortada no envio, apenas repetiria o já concluído (o pesquisador, 23/10/2026): o enunciado está completo. As referências místicas são **referência**, e não critério: a contraparte que importa é a mensurável e adaptável às mecânicas.*
 
 ### II. Estruturação
 
@@ -17078,7 +17078,6 @@ O ser humano vive o cotidiano (o primeiro plano) e, ao mesmo tempo, intui um hor
 
 Na memória da Etapa LA (ruído 3,0, memórias parecidas): o **horizonte** como um sinal de baixa amplitude vindo das formas largas do campo (o interior), aplicado (a) sempre, (b) só na dúvida (entropia alta do neurônio), contra (c) nenhum horizonte e (d) um controle com um sinal fraco ao acaso. Critério de não interferência: nos casos claros, a trajetória não muda; critério de ganho: menos sumidouros e melhor recuperação nos casos ambíguos.
 
-*A mensagem do pesquisador foi interrompida no fim; esta entrada será completada quando o restante chegar.*
 
 ---
 *Florianópolis · 23 de outubro de 2026 · Sessão Good Morning*
