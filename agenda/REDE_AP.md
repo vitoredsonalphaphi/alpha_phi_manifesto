@@ -3,7 +3,7 @@
 
 **Como referenciar:** "coloca na Agenda REDE-AP" ou "verifica na Agenda REDE-AP"
 **Arquivo:** `agenda/REDE_AP.md`
-**Última atualização:** 22 de outubro de 2026 (criada em 23/09/2026)
+**Última atualização:** 23 de outubro de 2026 (criada em 23/09/2026)
 **Ver também:** `agenda/REDE_AP_METODO.md` ("Agenda REDE-AP (Fichas Método)"): fichas de método, portões G0–G5 e critérios de validação.
 
 ---
@@ -71,6 +71,27 @@ Balanço feito na conversa de 20/10/2026 (resultados em `REDE_AP/AlphaPhi_CampoE
 1. **A âncora contra a fonte interna (Poisson):** injetar no α um viés que não vem do campo e medir se a recuperação piora — o desalinhamento da Entrada 356 em forma mensurável.
 2. **O processamento pelo interior:** o estado desce até α e sobe de volta pelas cascas da Grade v2; comparar com o processamento só na superfície (liga-se à respiração e à pegada da entrada, Entrada 355).
 3. **O resumo não substitui o campo:** já há um primeiro resultado (Etapa VL3: a leitura macia, uma média, borrou o som); completar com a leitura decisiva no além (a "probabilidade das causas" de Laplace: entregar a média ponderada ou a causa mais provável).
+
+---
+
+## ITENS DE 23/10/2026 (a pedido do pesquisador)
+
+### A triangulação como esqueleto da construção (Entrada 319; Entrada 361)
+- A ordem da tradução: **ética → estética → geometria → matemática → linguagem de máquina**; a forma (estética e geométrica) antes dos pesos.
+- O esqueleto comum: **dois extremos e um terceiro que não se reduz a nenhum dos dois** (centro α / superfície / processamento; entropia / expansão / proporção; filosofia / ciência / estética = geometria).
+- Critério de falha (Entrada 319): o terceiro precisa mostrar uma propriedade ausente nos dois polos; e é preciso um caso em que dois polos sem terceiro expliquem tão bem quanto.
+- Rascunhos já existentes: `Ponte/diretrizes/ordem_esqueleto_estetico_geometrico_antes_da_matematica.md` e `Ponte/hipoteses/triangulacao_como_esqueleto.md` (criados em 10/10/2026 em `ferramentas_do_alinhamento/`, hoje `Ponte/`).
+
+### O neurônio com Sépstro próprio — o todo como compreensão (Entrada 364)
+- Cada neurônio com Coh_i (concordância com o que o campo espera dele, no meio do processamento) e Entr_i = 1 − Coh_i; coerência alta → expansão (ganho sobe); entropia alta → abertura (ganho baixa). Modular, e não somar; regula a abertura, não impõe o valor.
+- Teste proposto (critérios a escrever e aprovar): memória da Etapa LA no ruído 3,0 e com memórias parecidas; neurônio atual × Sépstro próprio × ganho variável ao acaso; medidas: recuperação, identificação e **se a entropia do campo prevê os erros**.
+
+### \*\*\* Para um futuro próximo — depois de efetivada a construção da rede
+> **Adendo do pesquisador:** com certeza para um futuro próximo, **depois de efetivada a construção da Rede AP propriamente dita**; registrado para não perder o fio de uma das boas propostas de verificação mais detalhada.
+
+1. **A integração de verdade num modelo pequeno (Entrada 362, opção 3):** treinar um modelo de linguagem pequeno e aberto **com** a estrutura AlphaPhi dentro dele (na arquitetura ou no treino) e compará-lo com o mesmo modelo sem ela. O único caminho em que a estrutura passa a fazer parte do processamento. Possível no Colab; projeto grande.
+2. **Um agente de IA com a estrutura AlphaPhi:** um modelo já existente, com um laço de decisão que segue o protocolo de Laplace (todos os afetados; sem fonte própria; sem extremos; na dúvida, não agir de forma irreversível), que consulta a Rede AP como ferramenta e tem permissões mínimas. Diferente do item 1: a estrutura fica **em volta** do modelo, não dentro dele; é mais próximo e diretamente ligado aos riscos dos agentes noticiados em outubro de 2026.
+3. **O protocolo de Laplace como modo de raciocinar (Entrada 362, opção 2):** os mesmos dilemas éticos respondidos do modo comum e pelo protocolo, comparados por um avaliador independente que não sabe qual é qual. Pode vir antes dos itens 1 e 2.
 
 ---
 

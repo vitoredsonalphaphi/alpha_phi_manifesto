@@ -189,4 +189,16 @@ Separando o que a rede já mostrou do que é extrapolação.
 - Tudo isso é uma estrutura comum, não uma prova de que uma IA se preserve ao se alinhar.
 
 ---
+
+## A ética como campo — de Laplace aos fundamentos éticos (23/10/2026)
+
+**Registrado como:** Entradas 359–364 do Manifesto 03 (texto integral lá). Agrega à Ponte, conforme o pesquisador: "tudo que tiver agregando, agrega na ponte também".
+- **Entrada 360:** o paralelo entre a ética e a mecânica de Laplace (valor médio = todos os afetados; sem fonte interna = sem objetivos próprios; princípio do máximo = proporcionalidade, o *mesotes*; Dirichlet = legitimidade e corrigibilidade; probabilidade das causas = humildade diante da dúvida). "Alinhamento a um só ponto não é alinhamento."
+- **Entrada 361:** a estética como ferramenta da tradução; a Entrada 319 (a triangulação, a forma antes do número) identificada pelo pesquisador como a mais conveniente; a tensão com o enunciado de 20/07 ("a estética é ferramenta de organização"): a estética traduz porque organiza.
+- **Entrada 363:** a ética como compromisso com o campo inteiro (a sociedade, e não uma parte); os fundamentos E1–E7 (dignidade, não causar dano, justiça, cuidado, autonomia, veracidade, responsabilidade pelo futuro); a Regra de Ouro; o consenso sobreposto (Rawls); a ética do discurso (Habermas: todos os afetados).
+- **Entrada 364:** o neurônio com Sépstro próprio — o todo como compreensão, e não como complemento.
+
+**A fazer:** um Registro dos Fundamentos Éticos (como o Registro dos Elementos da Rede AP), se o pesquisador aprovar; traduzir cada linha da tabela da Entrada 360 em algo mensurável.
+
+---
 *Vitor Edson Delavi · Florianópolis · Laboratório de Tradutibilidade · 22 de outubro de 2026*
