@@ -198,7 +198,7 @@ Separando o que a rede já mostrou do que é extrapolação.
 - **Entrada 363:** a ética como compromisso com o campo inteiro (a sociedade, e não uma parte); os fundamentos E1–E7 (dignidade, não causar dano, justiça, cuidado, autonomia, veracidade, responsabilidade pelo futuro); a Regra de Ouro; o consenso sobreposto (Rawls); a ética do discurso (Habermas: todos os afetados).
 - **Entrada 364:** o neurônio com Sépstro próprio — o todo como compreensão, e não como complemento.
 
-**A fazer:** um Registro dos Fundamentos Éticos (como o Registro dos Elementos da Rede AP), se o pesquisador aprovar; traduzir cada linha da tabela da Entrada 360 em algo mensurável.
+**Feito (23/10/2026):** o `REGISTRO_FUNDAMENTOS_ETICOS.md` (E1–E7, U1–U3, O1, o paralelo e os cuidados). **A fazer:** traduzir cada linha da tabela da Entrada 360 em algo mensurável.
 
 ---
 *Vitor Edson Delavi · Florianópolis · Laboratório de Tradutibilidade · 22 de outubro de 2026*
