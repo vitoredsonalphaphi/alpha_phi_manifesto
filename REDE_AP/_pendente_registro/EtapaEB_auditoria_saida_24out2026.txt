@@ -1,0 +1,4 @@
+auditoria: previsor atual com β fixo = 12.6 (a média final da EB): altura 0.9054 · identificação 0.9417
+EB − β fixo 12,6 (altura): -0.0211 (EP 0.0097, 0/10 a favor) -> NÃO cumprido
+EB − β fixo 12,6 (identificação): -0.0167 (EP 0.0111, 0/10 a favor) -> NÃO cumprido
+sementes com identificação igual entre EB e SUP: 5 de 10

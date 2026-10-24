@@ -130,3 +130,13 @@
 **Leitura HZ:** o horizonte vindo das formas largas do próprio estado reforça o erro (previsão de falha 1) e carrega pouco (18% da energia do estado nos graus ≤ 5); quanto maior ε, pior. Não se sustentou nesta forma.
 
 **O que fica (as duas):** na Rede AP atual, a recuperação depende de um atrator **decisivo desde o início**; todo amolecimento ou sinal adicional de conjunto, por mais sutil, desvia a trajetória. Não há entrada no Manifesto (regra do pesquisador, 24/10: entrada só com resultado coerente).
+
+## Etapa EB — o previsor com a estrutura do EcoBIP (24/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaEB_PrevisorEcoBIP.py` (importa as Etapas SA/HZ e LA pelo caminho do scratchpad da sessão), `EtapaEB_auditoria.py`, saídas e resultados. Sementes 260–269; 50 voltas fixas. EB: força por neurônio β_i (começo 8), alvo 8·φ^(3·c_rel − 3/2) pela concordância com o previsor, transição com memória 1/φ (a mistura do EcoBIP).
+
+**Resultado (ruído 4,0):** SUP altura 0,801, identificação 0,850 · **EB 0,884 / 0,925** · EB-R 0,843 / 0,892 · CT 0,884 / 0,917. β médio no fim: EB 12,6 (desvio 2,7); CT 12,1. **EB1 não cumprido** (+0,075 na identificação, mas só 5/10 a favor: 5 sementes empatadas); **EB2 cumprido** (+0,083 na altura, 10/10); **EB3 não cumprido** (EB ≈ CT: a coerência não acrescenta).
+
+**Auditoria:** o previsor atual com β fixo = 12,6 (a média final da EB) dá altura 0,905 e identificação 0,942 — **melhor que a EB** (EB − β fixo: −0,021 na altura, 0/10; −0,017 na identificação). **Todo o ganho veio de o previsor ficar mais decisivo (β médio maior), e não da estrutura do EcoBIP** (força por região guiada pela coerência, memória 1/φ). A rotação áurea na ordem de atualização (EB-R) foi pior que a ordem ao acaso no ruído 4,0.
+
+**Leitura:** a estrutura do EcoBIP, nesta adaptação, não se sustentou no previsor. O que apareceu é coerente com as Etapas SA e HZ: **o atrator decisivo ajuda**; um β maior que 8 melhora a recuperação neste ruído. Esse último ponto é observação da auditoria, não critério escrito antes: precisa de teste próprio (varredura de β com critérios), e o β = 8 vem da Etapa PF (Ferramentas de Memória v1).

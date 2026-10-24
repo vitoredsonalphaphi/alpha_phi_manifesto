@@ -1,0 +1,19 @@
+
+##### ruído 4.0
+versão   altura  identif.  β médio no fim  β desvio
+SUP      0.8011    0.8500            8.00      0.00
+EB       0.8844    0.9250           12.61      2.74
+EB-R     0.8433    0.8917           12.59      2.77
+CT       0.8837    0.9167           12.11      1.49
+
+##### ruído 3.0
+versão   altura  identif.  β médio no fim  β desvio
+SUP      0.9317    0.9833            8.00      0.00
+EB       0.9495    0.9917           12.65      2.70
+EB-R     0.9497    0.9917           12.63      2.71
+CT       0.9452    0.9833           12.16      1.49
+
+=== CRITÉRIOS (ruído 4,0) ===
+EB1 identificação EB − SUP: +0.0750 (EP 0.0290, 5/10 a favor) -> NÃO cumprido
+EB2 altura EB − SUP, não negativo: +0.0832 (EP 0.0208, 10/10 a favor) -> cumprido
+EB3 identificação EB − CT: +0.0083 (EP 0.0361, 4/10 a favor) -> NÃO cumprido
