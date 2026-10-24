@@ -1,0 +1,8 @@
+ruído 2,0, semente 250 — altura média ao longo das voltas (a pista começa em 0.437 )
+  SUP  [0.766, 0.917, 0.954, 0.967, 0.966, 0.966, 0.965]
+  SN   [0.713, 0.764, 0.743, 0.656, 0.522, 0.443, 0.427]
+  SE   [0.698, 0.746, 0.717, 0.587, 0.462, 0.366, 0.412]
+  SNE  [0.696, 0.74, 0.708, 0.571, 0.373, 0.241, 0.297]
+  INV  [0.766, 0.917, 0.954, 0.967, 0.953, 0.911, 0.731]
+previsor com β = 8/φ⁴ na pista: peso da memória certa (média) 0.108 · (com β = 8: 0.384 )
+separação das ressonâncias na pista: certa 0.248 · maior errada 0.051

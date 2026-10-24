@@ -116,3 +116,17 @@
 **Auditoria:** três causas. (1) **A premissa falhou para estas memórias:** só 45% da energia delas está nos graus ≤ 9; a memória mora sobretudo nos detalhes finos (o tanh cria detalhe), então as formas largas que sobem carregam só 0,67 da memória, e até a simples suavização (CO) piora. (2) **Erro de desenho do assistente:** na casca, r^L encolhe as memórias (desvio 0,067, contra cerca de 0,6 na superfície); o ganho ajustado bateu no mínimo da grade (0,10) e o estado final ficou seis vezes maior que as memórias; a recuperação na casca não funcionou (0,20), embora as ligações guardem a memória (0,9997). Faltou normalizar a amplitude no interior. (3) **Um achado de Laplace, não um erro:** no interior, as memórias ficam parecidas entre si (ressonância cruzada 0,85 da própria): quanto mais perto do centro, mais o campo é a média, e as diferenças se apagam. A distinção entre memórias vive na superfície.
 
 **Leitura:** o interior, como foi feito, atrapalha. A superfície sozinha já recupera bem (0,93 mesmo com ruído 3,0). O que fica de verdadeiro: o centro resume e unifica (a média); a diferença está na superfície — o processamento não deve buscar distinguir no interior.
+
+## Etapas SA (o serial de atratores) e HZ (o horizonte) — 24/10/2026
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapasSA_HZ_SerialHorizonte.py` (importa a Etapa LA pelo caminho do scratchpad da sessão), `EtapasSA_HZ_auditoria.py`, saídas e resultados. Base da Etapa LA. SA: sementes 250–259, 50 voltas fixas. HZ: sementes 240–249.
+
+**SA (identificação; ruído 4,0, o principal pelo SA0):** SUP 0,892 · SN 0,250 · SE 0,258 · SNE 0,242 · INV 0,758. No ruído 2,0: SUP 1,000 · SN 0,508 · INV 1,000. **SA0 cumprido só no ruído 4,0; SA1, SA2 e SA3 não cumpridos** (SN muito pior que SUP e que o controle ao contrário). Captura precoce perto de zero em todas: os sumidouros desta tarefa são raros.
+
+**Auditoria SA:** com β baixo, o previsor dá à memória certa só cerca de 1/12 do peso (0,108 na pista; com β = 8, 0,384): ele vira a **média de todas as memórias**, e o estado se degrada volta a volta (altura 0,76 → 0,43 no ruído 2,0); quando o β sobe, a informação da pista já se perdeu. O controle ao contrário (decisivo primeiro) chega a 0,967 e depois se degrada ao amolecer. **Leitura:** nesta rede, o previsor só funciona decisivo; o começo macio não é "multiplicidade preservada", é a média que apaga (Entrada 356). A hipótese do serial do macio ao decisivo não se sustentou.
+
+**HZ (altura; ruído 3,0):** SUP 0,937 · HZ-S 0,486 · HZ-D 0,775 · CT 0,832 · HZ-D com ε = 1/φ⁶ 0,915 · com ε = 1/φ² 0,230. **HZ1 não cumprido** (nos 100 casos claros, correlação média 0,817 entre os finais com e sem horizonte; mínima perto de 0: o horizonte, mesmo sutil, muda a trajetória de casos decididos); **HZ2 e HZ3 não cumpridos** (o horizonte do próprio campo é pior que um sinal ao acaso); HZ4 cumprido (só na dúvida é melhor que sempre). Dúvida média no fim 0,36: o d_i não é seletivo.
+
+**Leitura HZ:** o horizonte vindo das formas largas do próprio estado reforça o erro (previsão de falha 1) e carrega pouco (18% da energia do estado nos graus ≤ 5); quanto maior ε, pior. Não se sustentou nesta forma.
+
+**O que fica (as duas):** na Rede AP atual, a recuperação depende de um atrator **decisivo desde o início**; todo amolecimento ou sinal adicional de conjunto, por mais sutil, desvia a trajetória. Não há entrada no Manifesto (regra do pesquisador, 24/10: entrada só com resultado coerente).
