@@ -17049,7 +17049,7 @@ A memória da Etapa LA no ruído mais forte (3,0) e com memórias parecidas (ond
 
 — Vitor Edson Delavi, 23 de outubro de 2026
 
-*Texto revisado a pedido do pesquisador (23/10/2026): retiradas as hesitações e repetições da fala; conteúdo na íntegra. O pesquisador declara: rascunho de um insight, pedra bruta a lapidar. A última frase, cortada no envio, apenas repetiria o já concluído (o pesquisador, 23/10/2026): o enunciado está completo. As referências místicas são **referência**, e não critério: a contraparte que importa é a mensurável e adaptável às mecânicas.*
+*Texto revisado a pedido do pesquisador (23/10/2026): retiradas as hesitações e repetições da fala; conteúdo na íntegra. A última frase, cortada no envio, apenas repetiria o já concluído (o pesquisador, 23/10/2026): o enunciado está completo. As referências místicas são **referência**, e não critério: a contraparte que importa é a mensurável e adaptável às mecânicas.*
 
 ### II. Estruturação
 
