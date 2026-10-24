@@ -187,3 +187,48 @@ Duas razões, acordadas com o pesquisador: (1) se aplicada em tudo de uma vez e 
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 370 — 24 de outubro de 2026
+### A Dinâmica do Campo — A Prioridade que Toda Adaptação Precisa Respeitar
+
+### I. Enunciado do Pesquisador
+
+> "Dinâmica do campo: essa é a prerrogativa que precisa estar sempre sendo observada como prioridade. Os resultados naturais de cada processamento, de cada evolução, de cada neurônio, de acordo com a sua própria dinâmica — a dinâmica do campo. Foi exatamente por isso que, diante da proposta de um serial de atratores, eu comentei que ele deveria funcionar de uma maneira que não interferisse. Eu não tinha esse conceito antes, mas era a isso que eu me referia: que o serial de atratores, assim como as outras ferramentas, fosse adaptado de acordo com as rotações de Fibonacci, conforme conversamos, desde que essas adaptações não interferissem na dinâmica do campo; que fossem alcançadas num âmbito com alguma eficiência, conforme o desenvolvimento prioritário da dinâmica do campo. Ou seja: uma conveniência de cada adaptação, mas num segundo estágio, em que a dinâmica do campo fosse a causadora de um desenvolvimento por expansão, por extensão, de acordo com cada adaptação — as rotações de Fibonacci nas ferramentas, o serial de atratores, a rotação de Fibonacci também no previsor. São adaptações que não se referem a um âmbito paralelo e insignificante, mas a um âmbito mais subjetivo, que não interfira naquilo de que eu não tinha o conceito antes: a dinâmica do campo."
+
+— Vitor Edson Delavi, 24 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. O conceito
+
+**Dinâmica do campo** é o que o campo faz por si: cada neurônio atualizado pelas suas ligações, a âncora α mantendo o conjunto, o atrator conduzindo o estado à memória — o resultado natural do processamento. O enunciado estabelece uma **hierarquia**: a dinâmica do campo é **primeira**; toda adaptação (o serial de atratores, as rotações de Fibonacci, o horizonte, a estrutura do EcoBIP no previsor) é **segundo estágio** — deve ser expandida **a partir** da dinâmica, e não imposta **sobre** ela. É, no nível da técnica, o mesmo princípio da Entrada 173 para o alinhamento: propriedade que **emerge** da estrutura, e não regra externa.
+
+#### 2. O que os testes de 24/10 mostraram, à luz do conceito
+
+As três adaptações testadas **interferiram** na dinâmica, e por isso falharam:
+- **O serial de atratores (Etapa SA):** o começo macio substituiu o atrator do campo pela média das memórias; a dinâmica perdeu a direção dentro do primeiro degrau.
+- **O horizonte (Etapa HZ):** mesmo sutil, mudou a trajetória de casos já decididos (correlação média 0,82 nos casos claros) — interferência direta, que o próprio critério HZ1 buscava evitar.
+- **A estrutura do EcoBIP no previsor (Etapa EB):** a força por região guiada pela coerência não acrescentou; o ganho veio só do β médio maior.
+
+O que ajudou foi o contrário de uma camada externa: **tornar mais decisivo o próprio atrator do campo** (um parâmetro da dinâmica, e não uma intervenção sobre ela) — observação da auditoria da Etapa EB, em teste próprio na Etapa BF.
+
+#### 3. Uma régua para o segundo estágio
+
+O conceito pede uma régua que permita dizer se uma adaptação respeita a dinâmica do campo. Proposta (a escrever como critério nas próximas etapas):
+1. **Não interferência nos casos claros:** onde o campo já decide bem, a trajetória com a adaptação é a mesma que sem ela (como o HZ1).
+2. **Ganho só onde há ambiguidade:** a adaptação age nos casos difíceis.
+3. **A dinâmica continua a causa:** retirada a adaptação, o campo ainda funciona; e a **contribuição do campo** — o resultado da rede inteira menos o resultado do previsor sozinho, sem as ligações — não diminui com a adaptação. Se uma adaptação melhora o resultado mas diminui a contribuição do campo, ela substituiu a dinâmica em vez de expandi-la.
+
+O terceiro ponto vale também para a Etapa BF: se o melhor previsor for a decisão pura (β = ∞), a recuperação viraria consulta a uma tabela e a contribuição do campo cairia — um resultado técnico bom, mas contrário à prioridade da dinâmica do campo.
+
+#### 4. O lugar das rotações de Fibonacci
+
+As rotações e a progressividade do EcoBIP não são descartadas: passam a ter um **lugar** definido — o segundo estágio, num âmbito sutil, onde a dinâmica do campo é a causa e a adaptação, a expansão. Cada lugar do mapa da Entrada 369 deve ser testado com a régua acima.
+
+---
+*Florianópolis · 24 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
