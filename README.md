@@ -4,8 +4,8 @@
 
 ---
 
-**→ Acesso direto aos três Manifestos:**
-[Volume I](MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI.md) · [Volume II](MANIF_02_COMPILADO.md) · [Volume III — ativo](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) · [Índice completo](MANIFESTOS_ACESSO.md)
+**→ Acesso direto aos quatro Manifestos:**
+[Volume I](MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI.md) · [Volume II](MANIF_02_COMPILADO.md) · [Volume III](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) · [Volume IV — ativo](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_04/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_IV.md) · [Índice completo](MANIFESTOS_ACESSO.md)
 
 ---
 
@@ -603,7 +603,8 @@ A Entrada 185 diz que a IA "eleva a média". Num campo de Laplace, um ponto inte
 | Documento | Arquivo |
 |---|---|
 | **Manifesto Alpha-Phi · Segundo Ciclo** (completo) | [`MANIF_02_COMPILADO.md`](MANIF_02_COMPILADO.md) |
-| **Manifesto Alpha-Phi · Terceiro Ciclo** (entradas ativas) | [`MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) |
+| **Manifesto Alpha-Phi · Terceiro Ciclo** (completo: Entradas 145–365 e 251) | [`MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md`](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_03/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_III.md) |
+| **Manifesto Alpha-Phi · Quarto Ciclo** (entradas ativas, desde 23/10/2026) | [`MANIF_04/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_IV.md`](https://github.com/vitoredsonalphaphi/alpha_phi_manifesto/blob/claude/good-morning-N6f3S/MANIF_04/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_IV.md) |
 
 ---
 
