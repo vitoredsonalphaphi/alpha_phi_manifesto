@@ -140,3 +140,13 @@
 **Auditoria:** o previsor atual com β fixo = 12,6 (a média final da EB) dá altura 0,905 e identificação 0,942 — **melhor que a EB** (EB − β fixo: −0,021 na altura, 0/10; −0,017 na identificação). **Todo o ganho veio de o previsor ficar mais decisivo (β médio maior), e não da estrutura do EcoBIP** (força por região guiada pela coerência, memória 1/φ). A rotação áurea na ordem de atualização (EB-R) foi pior que a ordem ao acaso no ruído 4,0.
 
 **Leitura:** a estrutura do EcoBIP, nesta adaptação, não se sustentou no previsor. O que apareceu é coerente com as Etapas SA e HZ: **o atrator decisivo ajuda**; um β maior que 8 melhora a recuperação neste ruído. Esse último ponto é observação da auditoria, não critério escrito antes: precisa de teste próprio (varredura de β com critérios), e o β = 8 vem da Etapa PF (Ferramentas de Memória v1).
+
+## Etapa BF — a força do previsor (24/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaBF_ForcaPrevisor.py`, `EtapaBF_auditoria.py`, saídas e resultados. Sementes 270–279; 50 voltas fixas.
+
+**Resultado (altura / identificação):** ruído 4,0: β = 8/φ 0,429/0,517 · **8 0,796/0,817** · **8φ 0,931/0,967** · 8φ² 0,955/0,992 · 8φ³ 0,963/1,000 · ∞ 0,963/1,000. Ruído 3,0: 8 0,930/0,975 · 8φ 0,963/1,000. Ruído 2,0: 8 0,965 · 8φ 0,967. **BF1, BF2 e BF3 cumpridos** (BF1: +0,134 na altura, 10/10; BF3: +0,150 na identificação, 9/10). A curva sobe até a decisão pura (β = ∞), como previsto na falha 3.
+
+**Auditoria — a contribuição do campo (Entrada 370):** a **consulta direta** (a memória mais parecida com a pista, sem dinâmica nenhuma) dá **altura 1,000 e identificação 1,000 em todos os ruídos**. A rede inteira fica **abaixo** dela em todos os casos: contribuição do campo na altura, ruído 4,0: β = 8 −0,204; β = 8φ −0,069; β = ∞ −0,037 (ruído 2,0: cerca de −0,03). **Nesta tarefa, a dinâmica do campo não acrescenta à consulta direta: só a deforma** (a âncora e o tanh impedem o estado de chegar exatamente à memória); quanto mais decisivo o previsor, mais a rede se aproxima da consulta e menos o campo pesa.
+
+**Leitura:** o critério técnico passou (um previsor mais decisivo recupera melhor), mas a auditoria muda o sentido de toda a linha de memória (Etapas LA a BF): com 12 memórias bem separadas e a pista inteira, a tarefa é fácil demais para mostrar o valor do campo — a consulta direta já resolve. O valor de uma memória de campo teria de aparecer onde a consulta direta falha: pista parcial (só parte dos neurônios), muitas memórias ou memórias sobrepostas, completar o que nunca foi guardado. **O β canônico (8) não muda**: mudar só aproximaria a rede da consulta direta, contra a prioridade da dinâmica do campo.

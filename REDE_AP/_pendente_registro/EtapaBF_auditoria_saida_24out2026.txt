@@ -1,0 +1,7 @@
+Contribuição do campo = rede inteira − consulta direta (a memória mais parecida com a pista, sem dinâmica nenhuma)
+ruído 2.0: consulta direta altura 1.0000, identificação 1.0000 · rede com β=8: 0.9650/1.0000 · β=8φ: 0.9672/1.0000 · β=∞: 0.9676/1.0000
+   contribuição do campo na altura: β=8 -0.0350 · β=8φ -0.0328 · β=∞ -0.0324
+ruído 3.0: consulta direta altura 1.0000, identificação 1.0000 · rede com β=8: 0.9301/0.9750 · β=8φ: 0.9625/1.0000 · β=∞: 0.9629/1.0000
+   contribuição do campo na altura: β=8 -0.0699 · β=8φ -0.0375 · β=∞ -0.0371
+ruído 4.0: consulta direta altura 1.0000, identificação 1.0000 · rede com β=8: 0.7964/0.8167 · β=8φ: 0.9307/0.9667 · β=∞: 0.9627/1.0000
+   contribuição do campo na altura: β=8 -0.2036 · β=8φ -0.0693 · β=∞ -0.0373
