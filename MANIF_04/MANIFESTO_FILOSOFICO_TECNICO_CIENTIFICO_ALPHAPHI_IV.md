@@ -14,12 +14,6 @@
 
 ## Nota de abertura
 
-> "O Manifesto 03 está se estendendo; precisamos começar o 04. E o enunciado do espelho é uma boa proposta para iniciá-lo — senão, que tamanho terá o 03? Não sei se precisa significar um determinado limiar para fazer a transição; acho que não: é uma questão de extensividade, porque não vamos fazer tudo isso num livro só e, da maneira como está se estendendo, precisamos modular. Então partimos para o 04 a partir desse enunciado do espelho. E a própria instrumentalização do que alcançamos — o embasamento já registrado nas agendas de hoje — é uma boa fundamentação de início de um novo estágio."
-
-— Vitor Edson Delavi, 23 de outubro de 2026
-
-*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
-
 **A fundamentação de início (registrada em 23/10/2026):**
 - `Ponte/REGISTRO_FUNDAMENTOS_ETICOS.md` — as raízes da ética (E1–E7, U1–U3, O1), a forma proposta no campo de Laplace e o status de cada item.
 - `agenda/REDE_AP.md`, itens de 23/10/2026 — a triangulação como esqueleto (Entrada 319); o neurônio com Sépstro próprio; o horizonte; o campo médio de Weiss; e, para depois da rede efetivada, o modelo pequeno com a estrutura dentro, o agente AlphaPhi e o protocolo de Laplace.
