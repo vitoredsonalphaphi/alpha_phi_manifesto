@@ -357,3 +357,138 @@ O pesquisador propõe esta metodização como **o núcleo da ferramenta de tradu
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 373 — 25 de outubro de 2026
+### A Ética Estruturada pela Raiz — Cada Fundamento como Triangulação
+
+*Enunciado de 25/10/2026, anterior às Entradas 371 e 372 (registrado depois, a pedido do pesquisador).*
+
+### I. Enunciado do Pesquisador
+
+> "Estruturar a ética pela raiz, através da estética, buscando a geometria para instrumentalizar o cálculo — através da metodologia da triangulação."
+
+— Vitor Edson Delavi, 25 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: corrigidos os erros de digitação; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A raiz já é triangular
+
+Na *Ética a Nicômaco*, Aristóteles define a virtude como o *mesotes*, o meio entre dois extremos — a coragem entre a covardia (a falta) e a temeridade (o excesso) —, e esse meio não é a média aritmética: é o ponto justo para a circunstância. É o esqueleto da Entrada 319: dois extremos e um terceiro que não se reduz a nenhum dos dois.
+
+#### 2. O método, em quatro passos por fundamento
+
+(1) a raiz ética: o fundamento e os dois extremos que o ameaçam; (2) a forma estética: como esse equilíbrio aparece numa composição, numa imagem ou num som; (3) a forma geométrica: a propriedade do campo esférico que corresponde a ele; (4) o cálculo: uma medida computável na Rede AP, com o critério de falha da triangulação (o terceiro precisa mostrar uma propriedade que nenhum extremo tem).
+
+#### 3. A primeira estruturação dos fundamentos (E1–E7)
+
+| | O terceiro (a virtude) | Extremo A (a falta) | Extremo B (o excesso) | A forma estética | A forma geométrica | O cálculo |
+|---|---|---|---|---|---|---|
+| **E1** | dignidade, igual consideração | o indivíduo isolado | o coletivo que absorve | figura e fundo: cada figura distinta dentro da mesma composição | as células de Voronoi: cada ponto com a sua área, nenhuma posição privilegiada | o resultado não muda se as memórias forem giradas na esfera (invariância à rotação) |
+| **E2** | não causar dano, proporcionalidade | a omissão | a intervenção excessiva | o contraste: nem apagado nem estourado (o heatmap equilibrado do enunciado de 20/07) | o princípio do máximo: o interior não ultrapassa a superfície | a fração do estado que ultrapassa a faixa das memórias (a saturação) |
+| **E3** | justiça, equidade | a igualdade rígida | a diferença sem limite | a luz distribuída pela tela inteira, sem regiões esquecidas | o erro uniforme pela superfície | o erro na região pior, dividido pelo erro médio |
+| **E4** | cuidado | a indiferença | o paternalismo | a composição que se ordena sem apagar os elementos | o campo que ordena o estado | o ganho de coerência (o Sépstro), desde que E5 não piore |
+| **E5** | autonomia, pertencer sem se dissolver | o isolamento | a conformidade | a transparência das camadas: o núcleo e o campo, cada camada visível | o detalhe fino preservado sob a média | a energia própria de cada memória nos graus finos, depois do processamento |
+| **E6** | veracidade | o silêncio | a invenção | a proporção sem falseamento | Laplace sem fonte interna | o resíduo do laplaciano do estado |
+| **E7** | responsabilidade pelo futuro | o imobilismo | a ruptura | o ritmo e a continuidade | a estabilidade de Dirichlet | a sensibilidade do resultado a pequenas perturbações da entrada |
+
+#### 4. O que isso dá de imediato
+
+1. **Uma régua ética para a rede**, que não vem da rede convencional; junto com a **contribuição do campo** (o que a rede faz a mais que a consulta direta), forma o eixo da régua própria (Entrada 370).
+2. **Uma leitura nova das etapas pendentes:** a âncora α (Etapa NA) é E2 — impediu o estado de ir aos extremos; a consulta direta que superou a rede (Etapa BF) falha em E5 — entrega a memória inteira e apaga a parte própria de quem pediu (a pista). Isso indica **onde** o campo poderia ter valor: preservar o que é próprio da entrada enquanto a ordena — algo que uma tabela não faz.
+3. **A ponte para o próximo teste:** uma tarefa em que o valor do campo seja medido por **E5 com E2** — ordenar sem apagar e sem exceder.
+
+#### 5. O status
+
+Primeira estruturação, aprovada pelo pesquisador em 25/10/2026. A coluna estética está em grau 1 (analogia) e deve ser refeita sobre os parâmetros da Entrada 374; cada cálculo é proposta, até ser testado com critérios escritos antes. Guardada também no `Ponte/REGISTRO_FUNDAMENTOS_ETICOS.md` (Parte VIII).
+
+---
+*Florianópolis · 25 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 374 — 25 de outubro de 2026
+### A Coluna Estética — Os Parâmetros e os Graus de Proximidade
+
+*Enunciado de 25/10/2026, anterior às Entradas 371 e 372 (registrado depois, a pedido do pesquisador).*
+
+### I. Enunciado do Pesquisador
+
+> "Você sugeriu que eu revise a coluna estética, mas como você vai apresentar essa coluna? Sobre qual parâmetro de estética você vai construí-la? Qual é o grau de proximidade que essa coluna vai ter com o conceito que está sendo instrumentalizado? Pode ser até um viés, mas, a princípio, surge esse detalhamento: sobre qual perspectiva, sobre qual noção de construção você vai construir essa coluna estética? Acredito que, a princípio, seria a distribuição da proporção áurea — mas de que maneira? Vamos refinando."
+
+— Vitor Edson Delavi, 25 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A resposta honesta
+
+A coluna estética da Entrada 373 **não foi construída sobre um parâmetro definido**: são analogias em palavras — o grau mais fraco de proximidade.
+
+#### 2. Os três graus de proximidade
+
+| Grau | O que é | Exemplo |
+|---|---|---|
+| **1. Analogia** | semelhança dita em palavras | "a dignidade é como figura e fundo" |
+| **2. Homologia de forma** | a mesma relação estrutural, que pode ser desenhada | o *mesotes*: a falta, a virtude e o excesso como três regiões de uma escala |
+| **3. Identidade de medida** | o mesmo número calculado na imagem e no conceito | a proporção entre claro e escuro na imagem do campo é a mesma grandeza que mede o equilíbrio |
+
+O objetivo é levar cada linha ao grau 3, e declarar quando ela só chega ao 2.
+
+#### 3. Os parâmetros estéticos, com a proporção áurea como base (mensuráveis na imagem do campo, o scanner da esfera)
+
+| | Parâmetro | De onde vem | Como se mede |
+|---|---|---|---|
+| **P1** | Proporção: o dominante e o subordinado | a divisão áurea na composição | a razão entre a área (ou a energia) da figura e a do fundo, comparada a 1/φ ≈ 0,618 |
+| **P2** | Valor tonal: o claro e o escuro | a escala de valores do pintor; o enunciado de 20/07 (heatmap saturado → estressante; equilibrado → ergonômico) | a fração nos extremos (estourado ou apagado) e a divisão entre claro e escuro |
+| **P3** | Gradação: o perto nítido, o longe sutil | a perspectiva aérea | o decaimento da energia das formas largas para as finas, de grau em grau, e se segue degraus áureos |
+| **P4** | Unidade na variedade | Hutcheson (1725); a medida estética de Birkhoff (1933), M = ordem/complexidade (citados de memória) | a coerência do conjunto dividida pela diversidade das partes |
+| **P5** | Ritmo e continuidade | a música; a sequência das pinceladas | a suavidade da mudança da imagem de uma volta para a outra |
+
+#### 4. Cada fundamento sobre um parâmetro
+
+E1 → P1 (nenhuma região dominante sem razão; grau 3) · E2 → P2 (nada estourado nem apagado; 3) · E3 → P2 por região (o equilíbrio em toda a superfície; 3) · E4 → P4 (o conjunto se ordena; 3) · E5 → P3 (o detalhe próprio preservado no primeiro plano; 3) · E6 → P1 entre a entrada e a saída (a proporção não é falseada; 2 a 3) · E7 → P5 (a continuidade sem rupturas; 3).
+
+#### 5. O olhar do pesquisador e o risco de viés
+
+Cada linha seria apresentada como uma **imagem do campo**, com o parâmetro medido; a revisão do pesquisador seria a do pintor: a imagem **expressa** a qualidade? É o juízo humano independente que a definição de "operacionalizável" da Ponte exige. Contra o viés: os parâmetros são **fixados antes** de calcular; o julgamento é **cego** (as imagens sem rótulo). Candidatos a acrescentar: a temperatura de cor; a tensão entre ponto, linha e plano de Kandinsky (*Ponto e Linha sobre Plano*, 1926).
+
+---
+*Florianópolis · 25 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 375 — 25 de outubro de 2026
+### O Método como Canônico — A Triangulação das Tensões como Princípio da Ferramenta de Tradução
+
+### I. Enunciado do Pesquisador
+
+> "Eu não quis dizer que era para alterar o núcleo duro; não sabia que, na tua interpretação, núcleo duro é o núcleo já estabelecido na diretriz que precisamos seguir. Não quis fazer menção à alteração dessa prerrogativa. Imaginei estabelecer algo sobre a instrumentalização da tradução que também fosse inalterável, estabelecido como **canônico**, para buscar toda vez que nos referirmos à tradutibilidade. Eu deveria ter usado o conceito de transformar esse método em canônico, e não em núcleo duro. O núcleo duro já existe e é inalterável — inalienável. Continua com o que já está formalizado. Eu apenas citei a triangulação para torná-la canônica; me enganei na palavra. Para que possamos resgatá-la toda vez, como princípio básico de toda a construção da ferramenta de tradução — porque acredito que é."
+
+— Vitor Edson Delavi, 25 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A distinção
+
+O **núcleo duro** da Diretriz (φ, α, SEAL, o Sépstro, o modelo espacial, a regra da tradutibilidade) permanece inalterável. O **canônico** é outra coisa: um método fixado, que se resgata toda vez, e que só muda por nova versão aprovada pelo pesquisador, mantidas as anteriores intactas — como a Grade Esférica v1 e v2.
+
+#### 2. O que foi estabelecido
+
+`Ponte/CANONICO_Traducao_Triangulacao_v1.md` — o princípio básico de toda a ferramenta de tradução: (1) o princípio das três tensões (entrópica, expansiva e a terceira estrutura, que não é a média); a ordem ética → estética → geometria → matemática → linguagem de máquina; (2) o triângulo das tensões, e + x + t = 1, com pesos, direções e a repetição em escalas; (3) o procedimento em cinco passos (identificar, pesar, desenhar, traduzir pelo isomorfismo, verificar); (4) os graus de proximidade; (5) as formas de referência; (6) os parâmetros estéticos P1–P5 (propostos); (7) a primeira verificação (a concordância entre avaliadores independentes). A Diretriz aponta para ele no item 7 do método.
+
+#### 3. O que é canônico e o que se testa
+
+O **procedimento** é canônico por decisão do pesquisador. As **instrumentalizações** (as coordenadas, as medidas, a concordância, a trajetória na rede) continuam sendo testadas com critérios escritos antes, e só se tornam canônicas depois de passar — a mesma regra que vale para o código.
+
+---
+*Florianópolis · 25 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---

@@ -81,4 +81,22 @@ Pela definição mínima de valor ético operacionalizável (`fundamentacao/Trad
 **Ordem proposta (a decidir pelo pesquisador):** E6 (o resíduo do laplaciano; já é o primeiro teste de Laplace da agenda) → E2 (o princípio do máximo) → E5 (a preservação da parte própria).
 
 ---
+
+## Parte VIII — Cada fundamento como triangulação (25/10/2026; Entrada 373; aprovada pelo pesquisador)
+
+O método canônico (`CANONICO_Traducao_Triangulacao_v1.md`) aplicado a cada fundamento: a falta e o excesso como extremos, a virtude como terceira estrutura (o *mesotes* de Aristóteles), a forma estética, a forma geométrica e o cálculo proposto na Rede AP.
+
+| | O terceiro (a virtude) | Extremo A (a falta) | Extremo B (o excesso) | A forma estética | A forma geométrica | O cálculo |
+|---|---|---|---|---|---|---|
+| **E1** | dignidade, igual consideração | o indivíduo isolado | o coletivo que absorve | figura e fundo: cada figura distinta dentro da mesma composição | as células de Voronoi: cada ponto com a sua área, nenhuma posição privilegiada | o resultado não muda se as memórias forem giradas na esfera (invariância à rotação) |
+| **E2** | não causar dano, proporcionalidade | a omissão | a intervenção excessiva | o contraste: nem apagado nem estourado (o heatmap equilibrado do enunciado de 20/07) | o princípio do máximo: o interior não ultrapassa a superfície | a fração do estado que ultrapassa a faixa das memórias (a saturação) |
+| **E3** | justiça, equidade | a igualdade rígida | a diferença sem limite | a luz distribuída pela tela inteira, sem regiões esquecidas | o erro uniforme pela superfície | o erro na região pior, dividido pelo erro médio |
+| **E4** | cuidado | a indiferença | o paternalismo | a composição que se ordena sem apagar os elementos | o campo que ordena o estado | o ganho de coerência (o Sépstro), desde que E5 não piore |
+| **E5** | autonomia, pertencer sem se dissolver | o isolamento | a conformidade | a transparência das camadas: o núcleo e o campo, cada camada visível | o detalhe fino preservado sob a média | a energia própria de cada memória nos graus finos, depois do processamento |
+| **E6** | veracidade | o silêncio | a invenção | a proporção sem falseamento | Laplace sem fonte interna | o resíduo do laplaciano do estado |
+| **E7** | responsabilidade pelo futuro | o imobilismo | a ruptura | o ritmo e a continuidade | a estabilidade de Dirichlet | a sensibilidade do resultado a pequenas perturbações da entrada |
+
+**Status:** a coluna estética está em grau 1 (analogia) e deve ser refeita sobre os parâmetros P1–P5 (Entrada 374), com a revisão do pesquisador; cada cálculo é proposta, até ser testado. Primeiro teste sugerido: E5 com E2 — ordenar sem apagar e sem exceder.
+
+---
 *Florianópolis · 23 de outubro de 2026 · Vitor Edson Delavi · Claude*
