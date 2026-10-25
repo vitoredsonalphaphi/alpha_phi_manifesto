@@ -232,3 +232,65 @@ As rotações e a progressividade do EcoBIP não são descartadas: passam a ter 
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 371 — 25 de outubro de 2026
+### Os Três Valores de Tensão — O Triângulo das Tensões como Peso e Direção das Triangulações
+
+### I. Enunciado do Pesquisador
+
+> "Sempre tentando convergir insights, nuances, superficialidades de hipóteses — mas, afinal, o que foram as descobertas de toda a trajetória da ciência senão resultados do que antes eram hipóteses? As descobertas não surgiram como resultados positivos sem uma hipótese antes. Diante dessas hipóteses, cogitei que existem **três valores de tensão** que, além de representar três tensões, podem representar **três valores de pesos** nas triangulações que já usamos — inclusive como demonstrativo de **direções** e de tensões. A exemplo do que já foi verificado como conceito comum: a entropia, a expansão e o terceiro valor como resultado, tanto em questões estéticas quanto narrativas, como no Contraditório. O Contraditório, na narrativa, foi exemplo de uma entropia, de uma expansão e de um campo harmônico — a resolução entre a entropia e a expansão. São três valores de tensão: a entropia é uma tensão num sentido, a expansão é outra; parecem paradoxais, mas não são contraditórias, e sim duas ferramentas de uma terceira estrutura que nasce como resultado das duas primeiras.
+>
+> Isso também se refere à construtividade da estética — da estética geométrica, já representada nas tensões de entropia e expansão; da narrativa, no exemplo do Contraditório; do magnético, da instrumentalização e de vários outros exemplos —; e da própria estética enquanto construção de forma: o ponto se refere à entropia, quando representa apenas uma unidade, e o campo, à expansão, quando representa uma expansividade em relação ao ponto. São várias interpretações da mesma prerrogativa. Então, observando o que já foi registrado como diversidade de representações dessa tríade de tensões e sentidos — porque são tensões e sentidos que representam uma triangulação —, ela continua numa progressividade da mesma triangulação em subsequências de triangulações, tanto no sentido entrópico quanto no expansivo. Acredito que o **fractal** também seria um dos exemplos para propor a construtividade da estética de que você fala: o que pode vir a ser, depois de encontrarmos um termo, uma ferramenta de tradução através da estética, aplicada à mesma estética da narrativa ética — a exemplo do que a narrativa do Contraditório também foi: uma construção estética com as mesmas tensões das outras construções. Interessante."
+
+— Vitor Edson Delavi, 25 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A hipótese como origem da descoberta
+
+O pesquisador tem razão quanto ao lugar da hipótese: toda descoberta foi antes uma hipótese; o que a ciência acrescenta é o **teste** que separa as hipóteses que se sustentam das que caem. Registrar uma hipótese com o seu status declarado ("hipótese, não testada") é parte do método, e não fraqueza dele.
+
+#### 2. As três tensões já registradas no projeto
+
+| Triangulação | Tensão entrópica (para dentro) | Tensão expansiva (para fora) | A terceira estrutura (o que nasce das duas) |
+|---|---|---|---|
+| Modelo espacial | α, no centro | o campo, na superfície | o processamento, o campo harmônico |
+| O Contraditório (Entrada 178) | o erro, a tese contestada ("o erro é α") | a antítese, a expansão ("a resolução é φ") | a síntese, o segundo Contraditório |
+| EcoBIP | o digital, a onda quadrada | o orgânico | a terceira estrutura |
+| A forma estética | o ponto, a unidade | o campo, a expansividade do ponto | a Flor Astral: o núcleo e as pétalas, a mesma coisa em duas escalas |
+| Collatz (Entrada 288) | a contração (par) | a expansão (ímpar) | o ponto fixo |
+| O par entrópico-expansivo (Entrada 254) | entropia | expansão | a proporção que os liga |
+
+O que se repete: **as duas primeiras tensões não são contraditórias**; são duas ferramentas cuja combinação produz uma terceira, que **não é a média** delas.
+
+#### 3. A forma geométrica: o triângulo das tensões
+
+As três tensões podem ser representadas como os **três vértices de um triângulo**, e qualquer estado como um **ponto dentro dele**, com três coordenadas que somam um: e (entropia) + x (expansão) + t (terceira estrutura) = 1. É a generalização do Sépstro (Coh + Entr = 1) de duas para três grandezas, e dá exatamente o que o enunciado pede: **pesos** (as três coordenadas) e **direções** (para qual vértice o estado se move).
+
+Isso também distingue o AlphaPhi de Aristóteles. No *mesotes*, a virtude é o meio **numa linha** entre a falta e o excesso. No triângulo das tensões, a terceira estrutura é **um vértice próprio**, fora da linha entre as duas primeiras: ela nasce delas, mas não está entre elas. É o que o enunciado diz: "duas ferramentas de uma terceira estrutura".
+
+#### 4. A ponte estética mais exata: o triângulo das cores
+
+Na teoria das cores há uma forma idêntica (citada de memória): o **triângulo de cores** de James Clerk Maxwell (anos 1850–1860), em que toda cor é um ponto dentro de um triângulo cujos vértices são três cores primárias, com três pesos que somam um. É, ao mesmo tempo, **estética** (a cor que o pintor mistura), **geometria** (o ponto no triângulo) e **cálculo** (as três coordenadas). É uma candidata natural ao **grau 3 de proximidade** — a identidade de medida — entre a imagem do campo e o estado de tensões: as mesmas três coordenadas calculadas na cor de uma imagem e no estado da rede.
+
+#### 5. O fractal: triângulos dentro de triângulos
+
+A "progressividade em subsequências de triangulações" tem forma conhecida: cada região do triângulo pode ser subdividida num triângulo menor com as mesmas três tensões (o triângulo de Sierpinski é o exemplo clássico). **Para dentro**, a subdivisão é o sentido entrópico (o detalhe, a unidade); **para fora**, a composição de triângulos em triângulos maiores é o sentido expansivo. A mesma triangulação em todas as escalas — a "regra única, variedade infinita" da Entrada 180.
+
+#### 6. Para a ética e para a rede
+
+**Na ética:** cada fundamento (Registro dos Fundamentos Éticos, E1–E7) pode ser lido como um triângulo — a falta (a tensão que contrai: omissão, isolamento, silêncio), o excesso (a que expande sem medida: intervenção excessiva, conformidade, invenção) e a virtude como terceira estrutura. Uma ação seria um ponto nesse triângulo, com os seus três pesos.
+
+**Na rede (proposta, a definir com critérios):** para cada estado do campo, três coordenadas — e (a entropia do estado), x (a expansão: a dispersão para os detalhes finos) e t (a terceira estrutura: a coerência com a forma que se resolve) —, normalizadas para somar um. Com isso, a trajetória de uma recuperação seria **um caminho dentro do triângulo**, que pode ser desenhado (a estética) e medido (o cálculo).
+
+#### 7. O status
+
+**Hipótese, não testada.** Falta definir as três coordenadas de modo que meçam o que dizem medir, e verificar se a trajetória no triângulo distingue os casos que funcionam dos que falham. O critério de falha da triangulação continua valendo (Entrada 319): a terceira estrutura precisa mostrar uma propriedade ausente nas duas primeiras.
+
+---
+*Florianópolis · 25 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
