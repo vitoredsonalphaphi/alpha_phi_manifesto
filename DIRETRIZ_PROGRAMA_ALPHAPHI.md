@@ -70,8 +70,8 @@ A forma desta diretriz segue o **programa de pesquisa** de Imre Lakatos (filosof
 3. **Auditoria adversarial** depois de cada resultado; nenhum número entra em documento sem ter sido impresso por código executado.
 4. **Régua dupla:** a **função** (a rede faz o que deveria) e o **caráter AlphaFi** (os invariantes do núcleo se mantêm).
 5. **Verificação independente de Claude:** o pesquisador roda no Colab, e outra IA audita o **código**, não o relato (como a Perplexity na Entrada 287).
-7. **Método canônico de tradução:** toda tradução entre a filosofia e a técnica segue `Ponte/CANONICO_Traducao_Triangulacao_v1.md` (a triangulação das tensões: entrópica, expansiva e a terceira estrutura; o triângulo e + x + t = 1; os cinco passos; os graus de proximidade). Estabelecido em 25/10/2026; não altera o núcleo duro.
 6. **Versão canônica:** testes novos importam os arquivos congelados (`REDE_AP/CANONICO_CampoEsferico_v1.md`), nunca cópias editadas — a lição do EcoBIP 880.
+7. **Método canônico de tradução:** toda tradução entre a filosofia e a técnica segue `Ponte/CANONICO_Traducao_Triangulacao_v1.md` (a triangulação das tensões: entrópica, expansiva e a terceira estrutura; o triângulo e + x + t = 1; os cinco passos; os graus de proximidade). Estabelecido em 25/10/2026; não altera o núcleo duro.
 
 ## 5. Como saber se deu certo
 
