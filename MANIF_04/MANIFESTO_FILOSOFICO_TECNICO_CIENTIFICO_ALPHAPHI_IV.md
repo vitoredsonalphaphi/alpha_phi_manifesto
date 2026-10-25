@@ -350,6 +350,8 @@ A pergunta decisiva é se as tensões ternárias são **objetivas** — se pesso
 
 O pesquisador propõe esta metodização como **o núcleo da ferramenta de tradutibilidade**. No programa de pesquisa (Diretriz, seção 3), isso tem uma consequência precisa: o núcleo duro não se testa — ele é a decisão de trabalhar a partir dessa forma —; o que se testa são as suas **instrumentalizações** (o cinturão protetor): as coordenadas, a concordância entre avaliadores, a trajetória na rede. Incluir a metodização das tensões ternárias no núcleo duro da Diretriz é uma decisão do pesquisador; até lá, ela fica registrada como **proposta de núcleo**, com o teste da seção 4 como primeira verificação da sua instrumentalização.
 
+**Correção do pesquisador (25/10/2026):** a intenção não era alterar o núcleo duro da Diretriz, que permanece inalterável, mas tornar este método **canônico** — o princípio básico, resgatado toda vez que se tratar da tradutibilidade. Estabelecido como `Ponte/CANONICO_Traducao_Triangulacao_v1.md`.
+
 ---
 *Florianópolis · 25 de outubro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
