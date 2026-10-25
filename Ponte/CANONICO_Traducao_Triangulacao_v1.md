@@ -52,7 +52,6 @@ Cada estado (de uma narrativa, de uma imagem, do campo da rede) é um **ponto nu
 | A dialética | a tese | a antítese | a síntese |
 | A retórica (Aristóteles) | o *logos* | o *pathos* | o *ethos* |
 | O Direito | a acusação | a defesa | o julgamento |
-| A cor (a tinta e a luz) | a mistura subtrativa (a tinta tende ao escuro) | a mistura aditiva (a luz tende ao branco) | a composição: a tríade de tinta com o ponto de luz (as Flores Astrais, 1997) |
 | A música tonal | a tônica | a dominante | a cadência |
 | A Rede AP (proposta) | a entropia do estado | a dispersão para os detalhes | a coerência com a forma que se resolve |
 
