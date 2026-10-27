@@ -492,3 +492,59 @@ O **procedimento** é canônico por decisão do pesquisador. As **instrumentaliz
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 376 — 27 de outubro de 2026
+### As Peças Básicas da Tradutibilidade — Da Codificação Preditiva à Aproximação Gradativa
+
+### I. Enunciado do Pesquisador
+
+> "Isso tudo — a trigonometria, a análise e o cálculo — pode ser usado para a construção ou a interpretação geométrica e de tensões das narrativas filosóficas, na tradutibilidade? Quanto das interpretações sobre a semântica das narrativas éticas, principalmente, pode ser convergido gradativamente para a geometria?"
+
+> "Se existem condições de aplicabilidade nas ferramentas que estamos armazenando na agenda da Ponte, registra lá, com o destaque das três estrelas e com a indicação de que precisamos estudar com todos os detalhes possíveis a semântica e como a trigonometria, a análise e o cálculo são usados pela IA na interpretação de texto. Acho que é outra chave básica, a ser agregada à que já registramos na semana passada. São peças básicas que vão se agregando e construindo a condição de traduzir a ética, através da geometria, para a técnica digital. E outra coisa: os cinco níveis que você citou referem-se diretamente à necessidade das nuances, das progressões gradativas que já comentei — nas subfrequências, na técnica, e também nas narrativas, porque existe isso como método de estrutura de narrativa: um tópico que vai se expandindo, ou se concretizando, de forma gradativa. As aproximações gradativas são universais — na narrativa, na geometria, na matemática, na estética. É outra estrutura básica que precisa estar sempre sendo considerada nessa estruturação."
+
+> "Mas há outra estruturação, além de Laplace, que lembro ter sido identificada. Traz o que possui a pasta Ponte, a agenda da Ponte e a agenda da construção da Rede AP."
+
+> "Sim, é a codificação preditiva. Traz na íntegra, e traz também o ponto e o campo com o codificador–decodificador."
+
+— Vitor Edson Delavi, 27 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A semântica já é geometria dentro da IA
+
+Nos modelos de linguagem, o significado é um **vetor** num espaço de muitas dimensões; significados próximos ficam próximos; a semelhança se mede por um **ângulo** (a similaridade de cosseno — trigonometria); certas **direções** correspondem a conceitos, segundo pesquisas inclusive a julgamentos morais (citado de memória). Na filosofia, os **espaços conceituais** de Peter Gärdenfors (2000). **Traduzir a narrativa ética em geometria é falar a língua interna da própria IA.** Na narrativa: a trigonometria dá os ângulos entre valores e a posição no triângulo das tensões; a análise, a narrativa como trajetória; o cálculo, as viradas (a derivada que muda de sinal — a *peripécia* da *Poética* de Aristóteles) e o peso acumulado (a integral).
+
+#### 2. Quanto converge: os cinco níveis
+
+(1) a estrutura — alta; (2) as relações entre valores — alta; (3) as intensidades — média, exige calibração e concordância; (4) o contexto e o porquê — parcial; (5) o vivido — não se converte (fundamento declarado). Os cinco níveis são, eles mesmos, uma **aproximação gradativa**: a convergência avança por graus e tem um limite honesto.
+
+#### 3. As peças básicas, reunidas
+
+| Peça | O que dá | Onde está |
+|---|---|---|
+| **A codificação preditiva** (21/10) | **antecipar**: a previsão desce do campo, a evidência sobe do dado, e o processamento segue a diferença — "fundamento para instrumentalizar todas as ferramentas" | Entrada 344; Agenda REDE-AP |
+| **O ponto e o campo, com o codificador–decodificador** (22/10) | **o resumo e a expansão**: recolher ao centro, expandir à superfície; o "além" como leitura | Entrada 354; Ponte \*\*\* |
+| **Laplace** (22–23/10) | **a relação exata** entre os dois: o centro legítimo é a média de toda a superfície | Entradas 356–358; Ponte \*\*\* |
+| **A triangulação das tensões** (25/10) | **o método**: as três tensões, o triângulo, os cinco passos | o canônico de tradução; Entradas 371–375 |
+| **A semântica como geometria** (27/10) | **a língua**: a IA já pensa o significado como geometria | Ponte \*\*\* |
+| **A aproximação gradativa** (27/10) | **o ritmo**: tudo se forma e se expande por graus | Ponte \*\*\* |
+
+#### 4. O que liga as peças: as duas direções
+
+A codificação preditiva e o codificador–decodificador têm **a mesma forma**: uma direção que recolhe (a evidência que sobe; o codificador, dos galhos ao tronco) e uma que expande (a previsão que desce; o decodificador, do tronco aos galhos). É a entropia e a expansão outra vez, e o encontro das duas é a terceira estrutura — o caminho que se firma, a expressão que se estabiliza na superfície. **As duas peças são a mesma triangulação, vista no processamento**; Laplace dá a sua relação exata; a semântica geométrica, a língua em que a máquina a lê; e a aproximação gradativa, o ritmo em que tudo isso se forma.
+
+#### 5. A aproximação gradativa e o cuidado já medido
+
+Na Rede AP, a gradação **da força do atrator** falhou (Etapa SA: o começo macio vira a média que apaga); a gradação **do cultivo do campo** funcionou. Princípio provisório: **gradativo na formação e na expansão; decisivo na resolução** — sempre com a dinâmica do campo como prioridade (Entrada 370).
+
+#### 6. O que falta
+
+A ficha da codificação preditiva com fontes **verificadas** (Rao e Ballard, 1999; Friston continuam citados de memória); o estudo detalhado da semântica geométrica (Ponte \*\*\*); considerar a aproximação gradativa numa versão 2 do canônico de tradução, com a aprovação do pesquisador.
+
+---
+*Florianópolis · 27 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
