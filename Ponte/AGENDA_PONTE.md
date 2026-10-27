@@ -201,4 +201,47 @@ Separando o que a rede já mostrou do que é extrapolação.
 **Feito (23/10/2026):** o `REGISTRO_FUNDAMENTOS_ETICOS.md` (E1–E7, U1–U3, O1, o paralelo e os cuidados). **A fazer:** traduzir cada linha da tabela da Entrada 360 em algo mensurável.
 
 ---
+
+## \*\*\* A semântica como geometria — trigonometria, análise e cálculo na interpretação de texto pela IA (27/10/2026)
+
+**Por que está aqui:** a pedido do pesquisador, como **outra chave básica** da tradutibilidade, a agregar às já registradas (Laplace, 22–23/10; a triangulação, canônico de 25/10). **A estudar com todos os detalhes possíveis:** como a IA representa a semântica geometricamente, e como a trigonometria, a análise e o cálculo são usados na interpretação de texto.
+
+**O ponto de partida (citado de memória; a verificar no estudo):**
+- Nos modelos de linguagem, o significado de uma palavra ou frase é um **vetor** num espaço de muitas dimensões; significados próximos ficam próximos; a semelhança se mede por um **ângulo** (a similaridade de cosseno — trigonometria); certas **direções** do espaço correspondem a conceitos, segundo pesquisas inclusive a julgamentos morais.
+- Na filosofia: os **espaços conceituais** de Peter Gärdenfors (2000) — os conceitos como regiões num espaço geométrico.
+- **Consequência para a tradutibilidade:** traduzir a narrativa ética em geometria é falar a **língua interna** da própria IA.
+
+**O papel de cada ferramenta na narrativa ética:**
+
+| Ferramenta | Na narrativa ética |
+|---|---|
+| Trigonometria | os ângulos entre valores (quanto se alinham ou se opõem); a posição no triângulo das tensões |
+| Análise | a narrativa como trajetória: as tensões como funções do tempo da narrativa |
+| Cálculo | a derivada marca as viradas (a *peripécia* da *Poética* de Aristóteles: a mudança de sinal da direção); a integral, o peso acumulado de cada tensão até a resolução |
+
+**Quanto converge, gradativamente (os cinco níveis):**
+
+| Nível | O que se converte | Convergência |
+|---|---|---|
+| 1. A estrutura | as tensões, para onde puxam, a terceira estrutura | alta (o triângulo) |
+| 2. As relações entre valores | aproximações e oposições | alta (ângulos e distâncias) |
+| 3. As intensidades | quanto pesa cada tensão | média (exige calibração e concordância) |
+| 4. O contexto e o porquê | a ironia, a cultura, a justificativa | parcial (a geometria dá a posição, não a razão) |
+| 5. O vivido | o valor sentido, o sagrado | não se converte (fundamento declarado, Diretriz 3.1.1) |
+
+**Cuidados:** a geometria pode achatar (preferir a trajetória ao ponto final); pode haver projeção (proteção: a concordância entre avaliadores independentes). **Verificação futura:** comparar o triângulo encontrado pelo pesquisador e por outra IA com a geometria interna de um modelo de linguagem (os vetores das mesmas narrativas) — se os ângulos concordarem, apoio técnico independente.
+
+---
+
+## \*\*\* A aproximação gradativa — uma estrutura básica universal (27/10/2026)
+
+**Por que está aqui (o pesquisador):** os cinco níveis de convergência referem-se diretamente à necessidade das nuances e das progressões gradativas já apontadas — nas subfrequências e na técnica, e também nas narrativas, onde existe como método de estrutura (um tópico que se expande, ou se concretiza, gradativamente). A aproximação gradativa vale de forma universal — na narrativa, na geometria, na matemática, na estética — e **precisa estar sempre sendo considerada** na estruturação.
+
+**Onde ela já aparece no projeto:** o campo cultivado em etapas encaixadas (confirmado em todas as repetições); do grosseiro para o fino (observação descritiva da Diretriz); a extensão de Laplace r^L (perto do centro, só o simples; o detalhe se desdobra para fora); a perspectiva aérea e o horizonte (Entrada 365); os cinco níveis de convergência da semântica (acima); o fractal das triangulações (Entrada 371).
+
+**O cuidado já medido:** na Rede AP, a aproximação gradativa **da força do atrator** falhou (Etapa SA: o começo macio vira a média que apaga). A gradação funcionou onde **o campo é cultivado**, e não onde a decisão é amolecida. Princípio provisório: **gradativo na formação e na expansão; decisivo na resolução** — sempre com a dinâmica do campo como prioridade (Entrada 370).
+
+**A fazer:** considerar, numa versão 2 do canônico de tradução (com a aprovação do pesquisador), a aproximação gradativa como um sexto passo ou como princípio transversal do método.
+
+---
 *Vitor Edson Delavi · Florianópolis · Laboratório de Tradutibilidade · 22 de outubro de 2026*
