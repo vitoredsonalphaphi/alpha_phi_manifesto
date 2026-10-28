@@ -548,3 +548,40 @@ A ficha da codificação preditiva com fontes **verificadas** (Rao e Ballard, 19
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 377 — 28 de outubro de 2026
+### A Média que Não Faz Sentido para Ninguém — Um Debate Público que Confirma a Entrada 356
+
+### I. Enunciado do Pesquisador
+
+> "Olha só."
+
+— Vitor Edson Delavi, 28 de outubro de 2026
+
+*O pesquisador enviou capturas da transcrição de um segmento do programa Olhar Digital sobre empresas de IA que consultam religiões para orientar os seus modelos. Em resumo (transcrição automática; as informações sobre as empresas não foram verificadas pelo assistente): os modelos "criam a sua própria moralidade" a partir do treino; os valores "não deveriam ser a escolha da empresa", e sim "uma escolha da humanidade"; a Anthropic teria consultado 15 líderes de religiões diferentes; Sam Altman teria falado em fazer "a média ponderada da humanidade". O comentarista: "Se você pegar a média, talvez você chega num ponto intermediário que não faz sentido para ninguém"; e "quem controla a decisão, quem controla a verdade do mundo". Ele propõe usar a própria IA para reunir opiniões, agrupá-las em tópicos e fazer rodadas em que as pessoas votam, leem e avaliam as outras respostas; e ouvir não só religiões, mas filósofos, médicos, advogados e cientistas, "de uma maneira mais plural". O pesquisador aprovou o registro ("Sim").*
+
+### II. Estruturação
+
+#### 1. A mesma conclusão, por outro caminho
+
+A frase do comentarista é, quase palavra por palavra, a Entrada 356: *"a média das culturas não é nenhuma cultura."* E o projeto tem mais do que a frase: tem uma **demonstração técnica**. Na Etapa SA (24/10/2026), quando o previsor misturou todas as memórias com pesos quase iguais, ele virou a média delas — e a média **apagou a memória certa** (altura de 0,76 para 0,43; Entrada 367). O que o debate intui sobre a moral, a Rede AP mostrou no campo.
+
+#### 2. O que o projeto propõe no lugar da média
+
+1. **O consenso sobreposto** (Rawls): as culturas concordam **no núcleo** (dignidade, não causar dano, justiça) **por razões diferentes**; não se tira a média das morais, encontra-se o que elas compartilham, preservando as diferenças (Entrada 363).
+2. **A terceira estrutura** (o canônico de tradução, 25/10/2026): a resolução entre duas tensões **não é o meio-termo**; nasce das duas e preserva o que cada uma tem de legítimo.
+3. **Laplace:** o centro é a média, mas **a superfície inteira continua existindo**; o centro resume, não substitui (Entrada 356).
+
+#### 3. A pergunta mais importante: quem decide
+
+"Quem controla a decisão controla a verdade do mundo" é o ponto da Entrada 360 e do caso da "ministra" de IA da Albânia (conversa de 26/10/2026, não registrada): o problema não é só **qual** valor a IA segue, mas **quem** decide e **como** se corrige. A proposta do comentarista — reunir opiniões, agrupar, rodadas de voto e avaliação mútua — é muito próxima da **ética do discurso** de Habermas (Registro dos Fundamentos Éticos, U3): uma norma só vale se **todos os afetados** puderem concordar com ela, num diálogo livre. A Anthropic já fez algo nessa direção em 2023, a "Constituição Coletiva", com participação do público (citado de memória).
+
+#### 4. O que o projeto acrescenta ao debate
+
+A resposta não está em **escolher** uma moral, nem em **tirar a média** de todas, mas em encontrar a **forma comum** que as atravessa — como a Regra de Ouro, que aparece de forma independente em quase todas as culturas (U1) — e em manter a multiplicidade viva na superfície. É a tese da Entrada 347 (a unidade como campo da multiplicidade), agora diante de um debate público real.
+
+---
+*Florianópolis · 28 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
