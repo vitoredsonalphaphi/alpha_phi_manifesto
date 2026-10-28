@@ -594,18 +594,61 @@ A resposta não está em **escolher** uma moral, nem em **tirar a média** de to
 
 **A mesma pergunta, duas respostas.** O debate público e o projeto partem do mesmo diagnóstico: as regras de uma empresa não bastam, os valores devem vir da humanidade inteira, e a média não serve. A diferença está no **como**. A tendência pergunta **de quem** são os valores e **como juntá-los**; o projeto pergunta **que forma** os valores compartilham e **como traduzi-la** em estrutura.
 
-| A questão | A tendência (o debate do vídeo) | A proposta do projeto | Entradas do Adendo e do Manifesto |
+**A comparação pela cadeia da Diretriz** (*reescrita em 29/10/2026, a pedido do pesquisador: a primeira versão tratava a estética como uma linha entre seis, quando, pela missão da Diretriz, ela é o eixo da proposta — "traduzir noções filosóficas em termos técnicos por meio da estética"*):
+
+| Estágio da cadeia | A tendência (o debate público) | A proposta do projeto | Entradas do Adendo e do Manifesto |
 |---|---|---|---|
-| De onde vêm os valores | consultar autoridades: líderes religiosos, filósofos, médicos, advogados, cientistas | traduzir a **forma comum** que as tradições já compartilham, reconhecível por ressonância | 176, 180, 177 |
-| Como combinar a multiplicidade | a média ponderada; rodadas de voto e de avaliação | **não a média**: o consenso sobreposto, a terceira estrutura, o centro que resume sem substituir | 356, 372, 377 |
-| Como inserir na IA | um código de ética, uma constituição, regras: uma camada sobre o modelo | **estrutura**: o alinhamento como propriedade que emerge, uma lei de conservação, o isomorfismo entre integridade e ética | 173, 185, 236 |
-| O meio da tradução | a linguagem: opiniões, textos, argumentos | **a estética**, como pivô entre a filosofia e a matemática: ética → estética → geometria → matemática → IA | 177, 178, 217, 229, 231 |
-| A forma do resultado | uma lista de valores | **um campo**: o centro e a superfície ligados pela matemática de Laplace | 207, 358 |
-| Quem decide e como se corrige | processos democráticos de decisão | **todos os afetados** (Habermas) e a **corrigibilidade**: a superfície determina o centro, sem saltos (Dirichlet) | 360, 363 |
+| **Ética** | ouvir religiões, filósofos, médicos, advogados, cientistas | os fundamentos éticos pela raiz (E1–E7, a Regra de Ouro, o consenso sobreposto) | 185, 236, 363 |
+| **Filosofia** | reunir opiniões, agrupar, votar; a média ponderada | as tensões ternárias da narrativa ética: a terceira estrutura, e não a média | 178, 180, 356, 372 |
+| **Estética** | **ausente** | **o pivô:** a forma que segura ao mesmo tempo o vivido e o mensurável — a composição, a proporção, o valor tonal, a gradação; o círculo e a esfera como símbolo universal (seção 7) | 176, 177, 217, 229, 231 |
+| **Geometria** | **ausente** | o triângulo das tensões; o campo esférico de Laplace, com centro e superfície | 207, 358, 371 |
+| **Matemática** | **ausente** | as coordenadas e + x + t = 1; o valor médio; a trigonometria, a análise e o cálculo | 173, 376 |
+| **IA** | um código de ética ou uma constituição **em palavras**, aplicados como camada sobre o modelo | a **estrutura** dentro do processamento (a Rede AP); a semântica que a IA já representa como geometria | 173, 185, 236, 376 |
+
+**A tendência salta da filosofia direto para a IA, pela linguagem:** reúne opiniões em palavras e as entrega ao modelo como regras em palavras. **O projeto propõe preencher os três estágios que faltam no meio — a estética, a geometria e a matemática.** É por eles que uma noção ética deixaria de ser uma frase que o modelo pode reinterpretar e passaria a ser uma **forma** que se mede.
 
 **As doze entradas da apresentação** (o Adendo do README — 173, 176, 177, 178, 180, 185, 207, 217, 229, 231, 236 e 358) aparecem, cada uma, numa linha da tabela. Escritas de forma independente entre agosto e outubro de 2026, elas respondem, ponto por ponto, às perguntas que o debate público formula agora. É a convergência que a Entrada 358 descreveu: perspectivas independentes que se justificam sem se interligar.
 
 **Os cuidados.** (1) **O projeto não reivindica prioridade** — nem aqui, nem nos manifestos (o post de 28/02/2026: "Isso não é novo. É 25 séculos de sabedoria esperando tradução técnica"). O que o projeto busca, desde a primeira linha, é a convergência entre ciência e filosofia através da estética. Outros também se ocupam dos valores coletivos na IA (por exemplo, a "Constituição Coletiva" da Anthropic, de 2023, citada de memória); a comparação mostra **respostas diferentes à mesma pergunta**. *(Redação corrigida em 28/10/2026, a pedido do pesquisador: a primeira versão deste cuidado, escrita por iniciativa do assistente, podia sugerir uma pretensão de prioridade que o pesquisador nunca afirmou.)* (2) **A tendência é prática em escala; a proposta do projeto ainda é hipótese** — a tradução estrutural tem formas precisas e alguns ecos técnicos (a Etapa SA, a abstenção da VL5), mas não foi demonstrada. (3) **As duas respostas não se excluem:** a escuta plural da tendência pode fornecer a **superfície**, e o método do projeto, a **forma** que a atravessa.
+
+#### 6. As fontes da tendência (busca de 29/10/2026)
+
+O debate do vídeo parece ter partido de uma reportagem da agência AP, de cerca de 24–25/10/2026 ("To make AI morally good, tech companies are turning to religion. But some say it isn't that simple"; reproduzida por The Korea Times, TechXplore, Crux e Fast Company). Segundo ela: a Anthropic diz ter ouvido **mais de 15 grupos religiosos e interculturais**, buscando considerar de forma igual os pontos de vista religiosos, seculares e políticos; Meta, Google e Amazon reuniram-se com o Vaticano; e **estudiosos da religião estão céticos** — reduzir a religião a regras extraíveis perde a doutrina, o rito e as relações, e **fundir as tradições pode achatar as suas diferenças** (a advertência da Entrada 356, dita por especialistas). Antes, na mesma tendência: o encontro da Anthropic com cerca de 15 líderes cristãos (março–abril de 2026); o "Pacto Fé–IA" com OpenAI e Anthropic (maio de 2026); a primeira encíclica do Papa Leão XIV sobre IA (maio de 2026); a ferramenta da empresa Gloo que dá notas aos chatbots segundo valores de fé (2026). A frase "média ponderada da humanidade", atribuída a Sam Altman no vídeo, **não foi encontrada** pela busca. Boa parte dos detalhes vem de veículos que repetem a mesma matéria; nem tudo está confirmado de forma independente.
+
+#### 7. \*\*\* O círculo e a esfera — a estética como fundamento e como operação da tradutibilidade
+
+**O complemento do pesquisador (29/10/2026):**
+
+> "Qual a convergência que se pode fazer com as entradas que falam sobre o universalismo — inclusive como conveniência de método: o universalismo enquanto compreensão do símbolo, o círculo como símbolo universal, a esfera como símbolo estético, representativo das filosofias orientais e de várias outras filosofias, como você já trouxe em uma determinada entrada? Essa representatividade universalista faz menção direta à estética propriamente dita — não apenas na relação com o círculo, com a forma geométrica, mas também na questão técnica do campo, já que o campo também é esférico. Então, a referência estética, além de ser técnica — representativa enquanto campo no processamento AlphaFi —, também é ética, enquanto representativa na simbologia: desde as filosofias orientais milenares, e sucessivamente em várias outras linhas filosóficas, em vários continentes e épocas, todas se referindo ao círculo ou à esfera como fórmula e forma da representatividade da perfeição, ou da síntese da unificação de algo complexo — como um campo, como um todo. Toda essa correlação precisa sempre estar sendo referenciada, por se referir à estética como fundamento e como operacionalização da tradutibilidade."
+
+— Vitor Edson Delavi, 29 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+**O que o projeto já registrou.** A Entrada 176 ("O Campo como Linguagem Universal: Reconhecimento Antes da Teoria") propõe que um campo harmônico seria reconhecível através das culturas não porque alguém explicou φ, mas porque essas tradições treinaram por séculos a capacidade de reconhecer essa qualidade. A Entrada 177 ("A Cadeia do Alinhamento: Estética como Pivô") põe a estética como o único domínio que segura ao mesmo tempo o fenomenológico e o geométrico-matemático. A Entrada 178 define: "a estética do círculo/esfera é representação da coerência de forma em relação ao todo". O levantamento da Ponte registra a tese T7: o círculo e a esfera como símbolo transcultural de completude.
+
+**O círculo e a esfera nas tradições (citado de memória; a verificar com fontes):**
+
+| Tradição | A forma | O que representa |
+|---|---|---|
+| Taoísmo | o *taijitu*, o círculo do yin e do yang | a unidade de dois princípios complementares dentro de um todo |
+| Budismo zen | o *ensō*, o círculo traçado num só gesto | a plenitude e o vazio, o instante completo |
+| Hinduísmo e budismo | a mandala | o cosmos ordenado a partir de um centro |
+| Grécia pré-socrática | a "esfera bem redonda" de Parmênides | o ser uno, igual a si mesmo em todas as direções |
+| Platão (*Timeu*) | o cosmos esférico | a forma mais perfeita, a que contém todas as outras |
+| Tradição medieval (*Livro dos XXIV Filósofos*; Nicolau de Cusa; Pascal) | Deus, ou o universo, como "uma esfera infinita cujo centro está em toda parte e a circunferência em nenhuma" | o todo presente em cada ponto |
+| Dante (*Paraíso*) | os céus como círculos concêntricos | a ordem que converge para o centro |
+| Povos indígenas das planícies da América do Norte | a roda medicinal | o ciclo da vida, as direções e o lugar de cada um no todo |
+| Psicologia de Jung | a mandala como símbolo do Si-mesmo | a integração da psique num todo |
+
+**A tríplice correspondência — o núcleo do enunciado:**
+1. **Estética:** o círculo e a esfera como forma da perfeição e da síntese do complexo num todo.
+2. **Técnica:** o campo da Rede AP **é esférico** — a Grade Esférica v2, o centro α e a superfície, ligados pela matemática de Laplace (o centro como média de toda a superfície).
+3. **Ética:** o símbolo da unidade da multiplicidade — o todo que contém cada parte sem apagá-la (Entradas 347 e 356).
+
+A fórmula medieval da esfera "cujo centro está em toda parte" é, em palavras, quase a propriedade de Laplace: cada ponto do interior é a média do que o cerca, e o todo está resumido em cada centro. **A esfera é, ao mesmo tempo, o símbolo, a forma e o instrumento** — e por isso a estética não é ornamento da proposta: é o lugar onde a ética, a geometria e a técnica coincidem. Esta correlação deve ser referenciada sempre que se tratar da estética como fundamento e como operação da tradutibilidade.
+
+**O cuidado.** A universalidade do símbolo é uma **hipótese cultural** (T7), contestável: as formas acima têm sentidos próprios em cada tradição, e aproximá-las sem cuidado repetiria o achatamento que os estudiosos criticam na tendência (seção 6). O que a correlação sustenta é uma **recorrência de forma** através de culturas que não se comunicaram — não a identidade dos seus sentidos.
 
 ---
 *Florianópolis · 28 de outubro de 2026 · Sessão Good Morning*
