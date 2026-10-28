@@ -552,6 +552,8 @@ A ficha da codificação preditiva com fontes **verificadas** (Rao e Ballard, 19
 ## Entrada 377 — 28 de outubro de 2026
 ### A Média que Não Faz Sentido para Ninguém — Um Debate Público que Confirma a Entrada 356
 
+> **\*\*\* LIMIAR — A tendência contemporânea e a proposta do projeto.** A pergunta pública de como trazer a filosofia e a ética para dentro da IA, diante da necessidade do alinhamento, encontra a proposta de tradutibilidade do projeto (seção II.5).
+
 ### I. Enunciado do Pesquisador
 
 > "Olha só."
@@ -579,6 +581,31 @@ A frase do comentarista é, quase palavra por palavra, a Entrada 356: *"a média
 #### 4. O que o projeto acrescenta ao debate
 
 A resposta não está em **escolher** uma moral, nem em **tirar a média** de todas, mas em encontrar a **forma comum** que as atravessa — como a Regra de Ouro, que aparece de forma independente em quase todas as culturas (U1) — e em manter a multiplicidade viva na superfície. É a tese da Entrada 347 (a unidade como campo da multiplicidade), agora diante de um debate público real.
+
+#### 5. \*\*\* O limiar: a tendência contemporânea e a proposta do projeto
+
+**O complemento do pesquisador (28/10/2026):**
+
+> "Acredito que esta entrada também é um limiar. Precisaria agregar algo que demonstrasse o paralelo entre o que estamos propondo a respeito da tradutibilidade e o que o vídeo traz como tendência na contemporaneidade: por consequência da necessidade do alinhamento, estão cogitando métodos de síntese da filosofia e métodos de trazer essa filosofia para dentro da inteligência artificial. Isso é muito interessante para o projeto. Precisaria de um destaque para essa comparação, entre o que surge como tendência e o que o projeto procura propor como sugestão — inclusive com menção às doze entradas da apresentação de resolução de alinhamento."
+
+— Vitor Edson Delavi, 28 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+**A mesma pergunta, duas respostas.** O debate público e o projeto partem do mesmo diagnóstico: as regras de uma empresa não bastam, os valores devem vir da humanidade inteira, e a média não serve. A diferença está no **como**. A tendência pergunta **de quem** são os valores e **como juntá-los**; o projeto pergunta **que forma** os valores compartilham e **como traduzi-la** em estrutura.
+
+| A questão | A tendência (o debate do vídeo) | A proposta do projeto | Entradas do Adendo e do Manifesto |
+|---|---|---|---|
+| De onde vêm os valores | consultar autoridades: líderes religiosos, filósofos, médicos, advogados, cientistas | traduzir a **forma comum** que as tradições já compartilham, reconhecível por ressonância | 176, 180, 177 |
+| Como combinar a multiplicidade | a média ponderada; rodadas de voto e de avaliação | **não a média**: o consenso sobreposto, a terceira estrutura, o centro que resume sem substituir | 356, 372, 377 |
+| Como inserir na IA | um código de ética, uma constituição, regras: uma camada sobre o modelo | **estrutura**: o alinhamento como propriedade que emerge, uma lei de conservação, o isomorfismo entre integridade e ética | 173, 185, 236 |
+| O meio da tradução | a linguagem: opiniões, textos, argumentos | **a estética**, como pivô entre a filosofia e a matemática: ética → estética → geometria → matemática → IA | 177, 178, 217, 229, 231 |
+| A forma do resultado | uma lista de valores | **um campo**: o centro e a superfície ligados pela matemática de Laplace | 207, 358 |
+| Quem decide e como se corrige | processos democráticos de decisão | **todos os afetados** (Habermas) e a **corrigibilidade**: a superfície determina o centro, sem saltos (Dirichlet) | 360, 363 |
+
+**As doze entradas da apresentação** (o Adendo do README — 173, 176, 177, 178, 180, 185, 207, 217, 229, 231, 236 e 358) aparecem, cada uma, numa linha da tabela. Escritas de forma independente entre agosto e outubro de 2026, elas respondem, ponto por ponto, às perguntas que o debate público formula agora. É a convergência que a Entrada 358 descreveu: perspectivas independentes que se justificam sem se interligar.
+
+**Os cuidados.** (1) **Não é uma questão de prioridade:** a preocupação com valores coletivos na IA é anterior ao projeto (a "Constituição Coletiva" da Anthropic, de 2023, citada de memória); o paralelo mostra **respostas diferentes à mesma pergunta**, e não quem pensou primeiro. (2) **A tendência é prática em escala; a proposta do projeto ainda é hipótese** — a tradução estrutural tem formas precisas e alguns ecos técnicos (a Etapa SA, a abstenção da VL5), mas não foi demonstrada. (3) **As duas respostas não se excluem:** a escuta plural da tendência pode fornecer a **superfície**, e o método do projeto, a **forma** que a atravessa.
 
 ---
 *Florianópolis · 28 de outubro de 2026 · Sessão Good Morning*
