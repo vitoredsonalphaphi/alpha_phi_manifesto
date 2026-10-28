@@ -1,0 +1,47 @@
+=== PARTE A (descritiva) ===
+tamanho de cada memória, |valor| médio nas células: [0.765, 0.504, 0.486, 0.546, 0.584, 0.563, 0.586, 0.562, 0.497, 0.555, 0.576, 0.525]
+fração de células com |valor| > 0,5: [0.818, 0.543, 0.485, 0.563, 0.652, 0.605, 0.602, 0.59, 0.518, 0.607, 0.6, 0.552]
+base (ressonância com estados aleatórios): média [-0.0004, -0.0, -0.0013, 0.0, -0.0007, 0.0001, 0.0012, 0.0001, -0.0012, -0.001, 0.0022, -0.0001] · desvio [0.0342, 0.022, 0.0227, 0.0245, 0.0246, 0.025, 0.0267, 0.0252, 0.0232, 0.026, 0.026, 0.0248]
+pista só de ruído (nível de +10 dB de cada trecho, 50 × 12): memória escolhida — comum [0, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, 0] · equilibrada [0, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, 0]
+pista só de ruído (nível de +0 dB de cada trecho, 50 × 12): memória escolhida — comum [0, 0, 0, 0, 0, 0, 0, 0, 237, 359, 0, 4] · equilibrada [0, 0, 0, 0, 0, 0, 0, 0, 303, 296, 0, 1]
+
+##### +10 dB · trechos guardados · identificação: DP 0.783, EQ-P 0.792, DC 0.750, EQ 0.750 · DS2 decide em 0.833
+   DC     +3.29 dB (EP 0.00) · fração do teto +0.46
+   EQ     +3.29 dB (EP 0.00) · fração do teto +0.46
+   DP     +3.97 dB (EP 0.22) · fração do teto +0.56
+   EQ-P   +4.10 dB (EP 0.23) · fração do teto +0.57
+   DS2    +4.65 dB (EP 0.00) · fração do teto +0.65
+   teto   +7.15 dB (EP 0.00) · fração do teto +1.00
+   confusão (semente 220): DC [9, 1, 2, 3, 4, 5, 9, 4, 8, 9, 10, 11] · EQ [9, 1, 2, 3, 4, 5, 9, 4, 8, 9, 10, 11] · DP [9, 1, 2, 3, 4, 5, 10, 10, 8, 9, 10, 11] · EQ-P [9, 1, 2, 3, 4, 5, 10, 10, 8, 9, 10, 11]
+
+##### +0 dB · trechos guardados · identificação: DP 0.533, EQ-P 0.583, DC 0.633, EQ 0.683 · DS2 decide em 0.700
+   DC     +6.27 dB (EP 0.10) · fração do teto +0.71
+   EQ     +6.56 dB (EP 0.07) · fração do teto +0.74
+   DP     +5.85 dB (EP 0.09) · fração do teto +0.66
+   EQ-P   +6.17 dB (EP 0.01) · fração do teto +0.70
+   DS2    +5.38 dB (EP 0.03) · fração do teto +0.61
+   teto   +8.81 dB (EP 0.01) · fração do teto +1.00
+   confusão (semente 220): DC [9, 1, 2, 3, 9, 5, 9, 9, 8, 9, 10, 11] · EQ [9, 1, 2, 3, 9, 5, 9, 2, 8, 9, 10, 11] · DP [9, 10, 2, 3, 8, 10, 10, 10, 8, 9, 10, 11] · EQ-P [9, 1, 2, 3, 8, 10, 10, 10, 8, 9, 10, 11]
+
+##### +10 dB · trechos novos · identificação: DP 0.175, EQ-P 0.200, DC 0.258, EQ 0.283 · DS2 decide em 0.492
+   DC     -7.69 dB (EP 0.05) · fração do teto -1.07
+   EQ     -7.42 dB (EP 0.09) · fração do teto -1.03
+   DP     -6.49 dB (EP 0.04) · fração do teto -0.90
+   EQ-P   -6.29 dB (EP 0.07) · fração do teto -0.87
+   DS2    -3.33 dB (EP 0.14) · fração do teto -0.46
+   teto   +7.19 dB (EP 0.00) · fração do teto +1.00
+
+##### +0 dB · trechos novos · identificação: DP 0.083, EQ-P 0.083, DC 0.158, EQ 0.217 · DS2 decide em 0.275
+   DC     +1.89 dB (EP 0.06) · fração do teto +0.21
+   EQ     +2.01 dB (EP 0.04) · fração do teto +0.23
+   DP     +2.97 dB (EP 0.05) · fração do teto +0.34
+   EQ-P   +3.07 dB (EP 0.05) · fração do teto +0.35
+   DS2    +0.75 dB (EP 0.05) · fração do teto +0.08
+   teto   +8.82 dB (EP 0.01) · fração do teto +1.00
+
+=== CRITÉRIOS (+10 dB) ===
+VL5-1 identificação EQ − DC: +0.000 (EP 0.000, 0/10 a favor) -> NÃO cumprido
+VL5-2 ganho EQ − DC (dB): +0.002 (EP 0.001, 5/10 a favor) -> NÃO cumprido
+VL5-3 ganho EQ − EQ-P (dB), não negativo: -0.817 (EP 0.228, 0/10 a favor) -> NÃO cumprido
+VL5-4a novos: ganho DS2 − DC (dB): +4.357 (EP 0.160, 10/10 a favor) -> cumprido
+VL5-4b guardados: ganho DS2 (dB): +4.648 (EP 0.004, 10/10 a favor) -> cumprido
