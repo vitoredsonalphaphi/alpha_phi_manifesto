@@ -99,23 +99,4 @@ O método canônico (`CANONICO_Traducao_Triangulacao_v1.md`) aplicado a cada fun
 **Status:** a coluna estética está em grau 1 (analogia) e deve ser refeita sobre os parâmetros P1–P5 (Entrada 374), com a revisão do pesquisador; cada cálculo é proposta, até ser testado. Primeiro teste sugerido: E5 com E2 — ordenar sem apagar e sem exceder.
 
 ---
-
-## Parte IX — Os fundamentos da humanidade, lidos pela tensão ternária (30/10/2026; Entrada 381)
-
-Não a ética **da** IA, mas a ética **da humanidade**, que a IA precisa observar — da era clássica a Ricoeur.
-
-| Fundamento | Entropia (recolhe) | Expansão (abre) | Realização (a terceira estrutura) |
-|---|---|---|---|
-| Ricoeur ("visar a vida boa, com e para os outros, em instituições justas") | o si | com e para os outros | as instituições justas |
-| Hiérocles (os círculos da *oikeiosis*) | o centro: o si | os círculos até a humanidade | puxar os círculos para o centro |
-| Platão (*A República*) | a razão | o apetite | a justiça como harmonia |
-| Aristóteles (o *mesotes*) | a falta | o excesso | o justo meio, pela *phronesis* |
-| As três famílias da ética normativa | o dever | as consequências | a virtude |
-| O Tao | o yin | o yang | o círculo que os contém |
-| Kant, noutra oitava | a lei | a inclinação | a autonomia: a vontade que se dá a lei |
-| Levinas, noutra oitava | o eu | o outro (a responsabilidade infinita) | o terceiro: a justiça e as instituições |
-
-**Princípio (do pesquisador):** o ternário é premissa da tradutibilidade. O que parece assimétrico numa tangente revela-se uma das tensões de uma tríade noutra oitava de observação; a tarefa é refinar o medidor de α até encontrá-la.
-
----
 *Florianópolis · 23 de outubro de 2026 · Vitor Edson Delavi · Claude*
