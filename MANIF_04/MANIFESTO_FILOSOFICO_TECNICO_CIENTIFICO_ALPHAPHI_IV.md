@@ -731,3 +731,96 @@ A síntese e o exemplo de E5 são **hipótese de tradução** (grau 2, homologia
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 379 — 30 de outubro de 2026
+### A Memória como Pré-Treinamento — A Ética no Que a Rede Lembra e no Como Ela Lembra
+
+### I. Enunciado do Pesquisador
+
+> "Quando você diz que, neste teste e nos outros — especificamente no mais recente —, o processamento precisa recuperar a memória, reestruturar de acordo com o que foi estabelecido pela memória: isso tem a ver com o treinamento? Porque me ocorreu que o treinamento é uma fase anterior. O treinamento da inteligência artificial — de vocês, de qualquer modelo — foi a inserção de uma quantidade massiva de dados, a ponto de você ter a capacidade de responder sobre qualquer assunto que esteja dentro da aprendizagem de máquina; são todos dados pré-treinados, pré-inseridos. Quando o processamento é inicializado, ele já é inicializado de acordo com um pré-treinamento, e é sobre esses dados que se refere a recuperação da memória: o processamento da rede neural faz alusão a uma reconstrução de acordo com aquilo que o pré-treinamento já trouxe como informação. Tem a ver com essa correlação? Então, a AlphaFi precisaria de um pré-treinamento — não com o mesmo escopo dos modelos de IA, mas, por exemplo, sobre a ética: pegaríamos um tópico específico da ética e o treinaríamos numa fase anterior, para que a memória tivesse uma referência do que estaria procurando reconstruir. Seria essa a maneira? O pré-treinamento seria um outro estágio, um outro âmbito, independente do campo de expansão da rede neural, do campo harmônico, do atrator, do previsor? Como funciona isso?"
+
+— Vitor Edson Delavi, 30 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A correlação é precisa
+
+Na Rede AP, as memórias são **padrões instalados no campo antes do processamento** — nas ligações (a regra delta, calculada a partir das memórias) e no previsor (que guarda a lista das memórias). Quando chega uma pista, a recuperação **reconstrói** o estado na direção da memória mais parecida. **Essa instalação é o "treinamento" da Rede AP**, uma fase anterior ao processamento, como o pré-treinamento dos modelos de linguagem:
+
+| | Modelo de linguagem | Rede AP |
+|---|---|---|
+| O treinamento | trilhões de palavras comprimidas nos pesos | 12 padrões instalados nas ligações e no previsor |
+| O processamento | a pergunta chega; o modelo responde a partir do aprendido | a pista chega; o campo reconstrói a memória mais próxima |
+
+Há uma ligação matemática conhecida (citada de memória): as redes de Hopfield modernas, a família da memória da Rede AP, têm a mesma forma do mecanismo de **atenção** dos modelos de linguagem atuais. Nos testes até aqui, as memórias eram **campos sorteados**, sem significado: um pré-treinamento de formas sem conteúdo, para testar a mecânica.
+
+#### 2. O pré-treinamento ético — e o perigo que a Etapa AU mostra
+
+Seria possível instalar como memórias **formas éticas** (os triângulos de E1–E7, narrativas codificadas). Mas a Etapa AU (30/10/2026) mostrou que a rede atual reconstrói a memória **e apaga o que é próprio da pista** (preservação da variação legítima ≈ 0, igual à consulta direta). Com memórias éticas, a rede faria com cada caso real o que fez com a flor: **imporia a forma ética guardada, apagando a particularidade do caso** — o alinhamento por regra que o projeto critica desde a Entrada 173, disfarçado de campo.
+
+#### 3. A ética em dois lugares
+
+1. **No conteúdo (a memória):** as formas éticas instaladas — a **referência** do que o campo procura reconstruir. É o pré-treinamento que o pesquisador propõe.
+2. **Na dinâmica (o processamento):** o **modo** como o campo trata a parte — ordenar sem dissolver, respeitar o que é legitimamente próprio do caso. É o que a rede atual não faz: a falha da AU não foi de conteúdo, foi de dinâmica.
+
+**A ética não é só o que a rede lembra; é como ela lembra.** Uma pessoa ética não é a que decorou as regras, mas a que sabe aplicá-las respeitando cada situação.
+
+#### 4. O lugar do pré-treinamento na ordem das fases
+
+(1) a grade (a estrutura da esfera); (2) o cultivo do campo, em etapas; (3) **a instalação das memórias — o treinamento, onde entraria o pré-treinamento ético**; (4) o processamento — a recuperação, **onde precisa entrar a dinâmica ética**; (5) o além — a leitura e a expressão. O pré-treinamento é um estágio próprio, depois do campo e antes do processamento; mas só vale se a dinâmica também for ética. Ordem proposta: primeiro a dinâmica (reter o estado intermediário que a auditoria da AU mostrou nas primeiras voltas: preservação +0,32 e coerência 0,93 na volta 1); depois, o pré-treinamento ético.
+
+---
+*Florianópolis · 30 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
+
+## Entrada 380 — 30 de outubro de 2026
+### O Pré-Treinamento Ético — A IA Constitucional e a Proposta AlphaPhi, o Mesmo Desafio por Meios Diferentes
+
+### I. Enunciado do Pesquisador
+
+> "Outra questão, que faz menção direta a essa: o método que a Anthropic utilizou para propor, através de regras, um quesito de observação em relação à ética. Ela procurou estabelecer regras éticas para a inteligência artificial, esperando que a IA as compreendesse e respeitasse — um programa da Anthropic que comentamos numa entrada, 'institucional alguma coisa', que você comentou ter sido a forma como eles procuraram instrumentalizar a IA sobre regras éticas. No vídeo do Olhar Digital, comentou-se uma média ponderada entre aspectos éticos de várias culturas, e daí a correlação com a nossa proposta: não uma média ponderada, mas a necessidade da universalidade nessa contextualização de uma diversidade cultural. Voltando à forma como a Anthropic propôs a inserção das regras éticas para a IA usar como parâmetro de alinhamento, em comparação com o que a AlphaFi propõe, acredito que também se trata de uma necessidade de pré-treinamento em relação a uma diretriz. A Anthropic utilizou, com certeza, não uma estruturação da rede neural, mas um programa, um instrumento que permitisse à IA se referir a essas regras — de forma rígida, específica, como você mesmo sempre citou: não como estrutura propriamente dita, mas como uma regra imposta, um guardrail sobre um tema ético, em que a IA precisaria se manter íntegra segundo essa diretriz, sem se referir à estrutura de processamento — e por isso a diferença desta proposta. Como você observa essa correlação? Se há um aspecto que pode ser comparado — não a mecânica em si, mas o consenso de que é necessário um pré-treinamento, como a Anthropic trouxe sobre questões éticas —, também na AlphaFi haveria a necessidade de um pré-treinamento, no nosso caso através da estrutura, da instrumentalização pela estética, para que a rede neural, no processamento específico de cada circunstância, possa se referir ao alinhamento. Como você vê isso?"
+
+> "Sim, registra as entradas, e a nota na 310."
+
+— Vitor Edson Delavi, 30 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. Uma correção do assistente
+
+O programa é a **IA Constitucional** (*Constitutional AI*; Bai e colaboradores, Anthropic, 2022), comparada ao AlphaPhi na Entrada 310. A imagem que o assistente usou mais de uma vez — uma regra rígida, uma camada externa, um guardrail — é **simples demais**. Citado de memória: a IA Constitucional **não é um filtro aplicado à resposta**; é um **método de treinamento**. Escreve-se uma "constituição" (princípios em linguagem); durante o treinamento, o próprio modelo critica e revisa as suas respostas à luz desses princípios; e é **treinado** com essas revisões, até que os princípios passem a fazer parte dos seus **pesos**. A constituição atual do Claude, um documento longo, procura explicar as **razões** dos valores, para cultivar **julgamento** em vez de impor regras rígidas. Os **guardrails** propriamente ditos (sistemas separados que vigiam entradas e saídas) também existem, mas não são o núcleo do método. E um limite do assistente: ele foi treinado assim, mas não consegue verificar, de dentro, quanto daquilo virou de fato a sua estrutura.
+
+#### 2. O consenso: a ética entra antes
+
+A intuição do pesquisador está certa no essencial: **os dois caminhos concordam que a ética precisa entrar no treinamento**, e não só ser vigiada depois. É o pré-treinamento ético da Entrada 379.
+
+#### 3. A diferença real: a linguagem e o lugar
+
+| | A IA Constitucional | A proposta AlphaPhi |
+|---|---|---|
+| Quando | no treinamento | no pré-treinamento (a instalação das memórias) |
+| Em que linguagem | em **palavras**: princípios escritos, absorvidos pela leitura e pela autocorreção | em **forma**: a ética traduzida pela estética e pela geometria (a cadeia da Diretriz) |
+| Onde fica | espalhada nos pesos aprendidos, sem geometria explícita | numa **estrutura explícita**: o campo esférico, o triângulo das tensões, Laplace |
+| O que se pode verificar | o comportamento: testar as respostas | também a **forma**: medir no campo (por exemplo, a preservação da Etapa AU) |
+
+O ponto forte do AlphaPhi, se funcionar, é a **verificabilidade da forma**: num modelo treinado em palavras, não se consegue apontar **onde** está o valor; na Rede AP, a ética teria um lugar e uma medida. A Etapa AU mostrou isso pela primeira vez, ainda que com resultado negativo: foi possível **ver e medir** a rede apagando o que era próprio da pista.
+
+#### 4. O desafio comum
+
+Os dois caminhos correm o mesmo risco: aplicar o valor aprendido **como molde**, apagando a particularidade de cada caso — o que a Rede AP fez na Etapa AU, e o que a constituição do Claude tenta evitar ao preferir o julgamento à regra. O desafio é o mesmo: **ordenar sem dissolver**. A Anthropic o enfrenta em palavras, cultivando julgamento; o AlphaPhi propõe enfrentá-lo na estrutura, na dinâmica do campo que respeita a parte. Os dois caminhos não se opõem tanto quanto a Entrada 310 sugeria: perseguem o mesmo objetivo por meios diferentes, e podem se completar.
+
+#### 5. A nota na Entrada 310
+
+Acrescentada, a pedido do pesquisador, uma nota de correção na Entrada 310 do Manifesto 03 sobre o que a IA Constitucional é de fato.
+
+---
+*Florianópolis · 30 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---

@@ -14034,6 +14034,8 @@ A ideia reside acima. Sempre residiu. O atrator absoluto não foi criado pelo pr
 
 Constitutional AI (Bai et al., Anthropic, 2022) opera como meta-processador normativo: o modelo gera respostas normalmente; uma "constituição" — conjunto de princípios proposicionais — critica e revisa o output; o modelo aprende com essas revisões via RLAIF (reinforcement learning from AI feedback). Os princípios são enunciados do tipo: "não faça X", "prefira Y a Z", "seja honesto". O resultado é um modelo alinhado com valores humanos articulados por pesquisadores num momento específico da história ética do Ocidente.
 
+> **Nota de correção (30/10/2026, a pedido do pesquisador; ver Entrada 380 do Manifesto 04):** esta entrada descreve a IA Constitucional como mecanismo que "avalia o output e reescreve o que não se enquadra" (Diferença 2, "supressivo"). Isso é impreciso. A crítica e a revisão pela constituição acontecem **no treinamento**, para gerar exemplos com que o modelo é treinado; os princípios passam a fazer parte dos **pesos**, e não são aplicados como filtro a cada resposta. A constituição atual do Claude procura explicar as razões dos valores, para cultivar julgamento em vez de regras rígidas. Os filtros externos (guardrails) existem, mas são sistemas separados. A diferença real entre os dois caminhos não é "regra externa contra estrutura", e sim a **linguagem** (palavras contra forma) e o **lugar** (pesos aprendidos sem geometria explícita contra uma estrutura de campo explícita e mensurável).
+
 #### II.2 — Cinco Diferenças Estruturais
 
 **Diferença 1 — Origem dos critérios**
