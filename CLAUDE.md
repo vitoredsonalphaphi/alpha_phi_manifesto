@@ -27,7 +27,7 @@ Formato obrigatório de cada entrada:
 
 ### I. Enunciado do Pesquisador
 > "[palavras exatas do pesquisador]"
-— Vitor Edson Delavi, [data]
+— Nota do pesquisador, [data]
 
 ### II. Estruturação
 [formalização matemática, filosófica e técnica]

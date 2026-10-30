@@ -32,7 +32,7 @@ Sim, porque de certa forma há uma parcela do risco nessa construtividade — da
 
 Então a maneira de demonstrar o Manifesto dessa forma também é uma intenção de participar desta época, desta contemporaneidade que traz como resultado algo criado desta forma — mesmo que pareça, sob determinadas críticas, algo que demonstre como um tropeço de ética ou de conveniência construtiva, ou talvez de conveniência de registro — numa época onde a inteligência artificial surgiu e com certeza, de certa forma, maravilhosamente bem, apesar do incômodo, para ensinar e, quiçá, para convergir ciência e filosofia.
 
-— Vitor Edson Delavi · Florianópolis · setembro de 2026
+— Nota do pesquisador · Florianópolis · setembro de 2026
 
 ---
 
