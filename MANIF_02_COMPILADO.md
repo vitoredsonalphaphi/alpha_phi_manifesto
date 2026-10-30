@@ -2,6 +2,8 @@
 
 **Vitor Edson Delavi · Florianópolis · 2026**
 
+*PER BENEDICTIONEM ROSA✝CRUCIS*
+
 ---
 
 
@@ -15651,3 +15653,7 @@ Isso é o que o Alpha-Phi propõe de específico. Não é mais uma proposta éti
 
 *Manifesto Alpha-Phi · Segundo Ciclo · Florianópolis · 2026*  
 *Vitor Edson Delavi*
+
+---
+
+*PER BENEDICTIONEM ROSA✝CRUCIS*

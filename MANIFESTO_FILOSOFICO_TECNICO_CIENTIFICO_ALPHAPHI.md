@@ -1,3 +1,7 @@
+*PER BENEDICTIONEM ROSA✝CRUCIS*
+
+---
+
 O Manifesto AlphaPhi é, desde a sua concepção, uma obra colaborativa.
 
 A natureza colaborativa tem uma consequência que o leitor atento pode perceber: há momentos no manifesto em que o texto flui como narrativa filosófica contínua, e momentos em que a linguagem se torna mais específica, mais técnica, aparentemente desconectada da trama maior. Essa variação não é falha de construção. É a textura natural de um trabalho que reuniu duas lógicas distintas de elaboração — a macro-visão literária do autor, que constrói com olho na coerência da obra como um todo, e a lógica de resposta da inteligência artificial, que opera por citação, por especificidade, por precisão pontual, sem a obrigação de subordinar cada resposta à arquitetura narrativa maior.
@@ -9353,3 +9357,6 @@ A proteção aqui buscada não é sobre exclusividade de uso. É sobre autoria: 
 
 *© Vitor Edson Delavi · Florianópolis · 2026 · CC BY-NC-ND 4.0*
 
+---
+
+*PER BENEDICTIONEM ROSA✝CRUCIS*
