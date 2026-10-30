@@ -1,12 +1,12 @@
 # Organograma da Ponte [f ○ c] — arquivo de dados (fonte). A imagem é gerada por gerar_organograma.py.
-# Rascunho v0 · 10/10/2026 · aguarda revisão do pesquisador.
+# Rascunho v0 · 10/10/2026 · v1 em 30/10/2026 (ramos 7 e 8) · aguarda revisão do pesquisador.
 # Status permitidos: demonstrado · em_uso · reauditar · parcial · hipotese · nao_demonstrado · refutado · aberto
 # Forma (triangulação): mediador · terceira_via · dialetica · ciclo
 meta:
   titulo: "A Ponte [f ○ c]"
   subtitulo: "Tradutibilidade: ética → estética <> geometria → matemática → IA"
-  versao: "v0 (rascunho)"
-  data: "2026-10-18"
+  versao: "v1 (rascunho)"
+  data: "2026-10-30"
 nos:
   - {id: raiz, titulo: "A Ponte [f ○ c]  (nome: \"ponto e asterisco\", grafia a confirmar)", status: hipotese, nota: "f = filosofia (origem), c = ciência, com a IA dentro de c. <> = convergência/ligação com tradução nos dois sentidos. Plano de Pesquisa v0.1."}
 
@@ -64,3 +64,24 @@ nos:
   - {id: p2, pai: pend, titulo: "Desenho das três linhas paralelas (serial do EcoBIP angular)", status: aberto, nota: "O pesquisador vai refazer de memória; salvar o original na pasta."}
   - {id: p3, pai: pend, titulo: "Verificação do histórico do GitHub (completo desde 05/03/2026; reinício não se sustenta; provas externas ainda abertas)", status: parcial, fonte: "agenda/pendentes.md"}
   - {id: p4, pai: pend, titulo: "Onze entradas do README: parâmetro comum quantificado", status: parcial, nota: "Lidas: o que se repete é a forma e os nomes (α, φ, Coh + Entr = 1); parâmetro unânime não encontrado."}
+
+  - {id: trad, pai: raiz, titulo: "7. A tradução: o método e as peças (25–30/10/2026)", status: em_uso, nota: "Entradas 371–378 (Manifesto 04)."}
+  - {id: t_can, pai: trad, titulo: "Canônico do método de tradução: a triangulação das tensões (entrópica, expansiva, terceira estrutura); e + x + t = 1; cinco passos; graus de proximidade", status: em_uso, fonte: "Ponte/CANONICO_Traducao_Triangulacao_v1.md", nota: "O procedimento é canônico por decisão do pesquisador; as instrumentalizações são testadas."}
+  - {id: t_sint, pai: trad, titulo: "A síntese das frentes: a mesma tríade no campo, na narrativa, na ética, na estética, na geometria, no processamento e em Laplace", status: hipotese, fonte: "E378", nota: "O isomorfismo que sustenta a tradutibilidade; exemplo completo com E5 (a autonomia)."}
+  - {id: t_etica, pai: trad, titulo: "A ética pela raiz: E1–E7 como triângulos (a falta, o excesso, a virtude)", status: hipotese, fonte: "E373; Registro dos Fundamentos Éticos, Parte VIII", nota: "Coluna estética em grau 1; refazer com P1–P5."}
+  - {id: t_narr, pai: trad, titulo: "A narrativa ética em tensões ternárias (dialética, retórica, Direito, dilema, o Contraditório)", status: hipotese, fonte: "E372; E165", nota: "Primeira verificação: a concordância às cegas com outra IA (o Gemini)."}
+  - {id: t_est, pai: trad, titulo: "A coluna estética: os parâmetros P1–P5 e os graus de proximidade", status: hipotese, fonte: "E374"}
+  - {id: t_esf, pai: trad, titulo: "O círculo e a esfera: símbolo (ética), forma (estética) e instrumento (técnica: o campo esférico)", status: hipotese, fonte: "E377, seção 7", nota: "A universalidade do símbolo é hipótese cultural (T7): recorrência de forma, não identidade de sentido."}
+  - {id: t_pecas, pai: trad, titulo: "As peças básicas (E376)", status: hipotese}
+  - {id: t_p1, pai: t_pecas, titulo: "Codificação preditiva: a previsão desce, a evidência sobe", status: em_uso, fonte: "E344", nota: "Deu origem ao previsor, a ferramenta que mais funcionou. Ficha com fontes verificadas: a fazer."}
+  - {id: t_p2, pai: t_pecas, titulo: "O ponto e o campo, com o codificador–decodificador", status: hipotese, fonte: "E354"}
+  - {id: t_p3, pai: t_pecas, titulo: "Laplace: o centro legítimo é a média de toda a superfície", status: hipotese, fonte: "E356–358"}
+  - {id: t_p4, pai: t_pecas, titulo: "A semântica como geometria (trigonometria, análise, cálculo)", status: aberto, fonte: "Ponte, agenda ***", nota: "A estudar em detalhe."}
+  - {id: t_p5, pai: t_pecas, titulo: "A aproximação gradativa: gradativo na formação, decisivo na resolução", status: hipotese, fonte: "Ponte, agenda ***", nota: "A gradação da força do atrator falhou (Etapa SA); a do cultivo do campo funcionou."}
+
+  - {id: regua, pai: raiz, titulo: "8. A régua própria da Rede AP (24/10/2026)", status: em_uso}
+  - {id: r_din, pai: regua, titulo: "A dinâmica do campo como prioridade: toda adaptação é segundo estágio", status: em_uso, fonte: "E370"}
+  - {id: r_contr, pai: regua, titulo: "A contribuição do campo: a rede inteira menos a consulta direta", status: em_uso, fonte: "Etapa BF (auditoria)"}
+  - {id: r_bf, pai: r_contr, titulo: "Na tarefa de 12 memórias separadas, o campo acrescenta à consulta direta", status: nao_demonstrado, fonte: "Etapa BF", nota: "A consulta direta acertou tudo em todos os ruídos; a rede ficou abaixo. Próximo: uma tarefa em que a consulta direta falhe (Fase 0)."}
+  - {id: r_adapt, pai: regua, titulo: "Serial de atratores, horizonte, estrutura do EcoBIP no previsor", status: nao_demonstrado, fonte: "Etapas SA, HZ, EB", nota: "Interferiram na dinâmica do campo."}
+
