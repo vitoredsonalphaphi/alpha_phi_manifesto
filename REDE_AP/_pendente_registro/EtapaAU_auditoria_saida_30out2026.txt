@@ -1,0 +1,9 @@
+ruído 1,0, região 10%, semente 280 — preservação e coerência ao longo das voltas (com previsor)
+  volta  1: preservação +0.320 · coerência 0.927
+  volta  2: preservação +0.187 · coerência 0.962
+  volta  3: preservação +0.082 · coerência 0.970
+  volta  5: preservação -0.005 · coerência 0.974
+  volta 10: preservação -0.056 · coerência 0.973
+  volta 50: preservação -0.074 · coerência 0.972
+sem previsor (só as ligações e a âncora): preservação -0.015 · coerência 0.092 · total 0.081
+uma passagem pelas ligações delta (sem neurônio): preservação +0.376 · coerência 0.872

@@ -156,3 +156,13 @@
 **Arquivos:** `AlphaPhi_CampoEsferico_EtapaVL5_EquilibrioConfianca.py` (importa a VL4 pelo caminho do scratchpad da sessão), saída e resultados. Sementes 220–229. **Sem auditoria adversarial completa**: guardada a pedido do pesquisador para não se perder (o scratchpad se apaga ao fim da sessão).
 
 **Resultado (resumo da saída):** o sumidouro é a **assinatura do ruído** — uma pista só de ruído escolhe a memória 9 em 600 de 600 vezes (+10 dB). A ressonância equilibrada por estados aleatórios não mudou nada (VL5-1, VL5-2, VL5-3 não cumpridos). A confiança pela concordância entre pista e fim (DS2) cumpriu VL5-4a (nos trechos novos, evita 4,4 dB de estrago: de −7,7 para −3,3 dB) e VL5-4b (+4,7 dB nos guardados a +10 dB); a 0 dB, perde para a decisão simples (+5,4 contra +6,3 dB).
+
+## Etapa AU — a autonomia: ordenar sem dissolver (30/10/2026)
+
+**Origem:** a tradução de E5 (Entrada 378) desenhou a tarefa: a pista é uma memória com uma **variação legítima** numa calota (forma nova, nunca guardada) mais ruído; o alvo é a memória com a variação. **Arquivos:** `AlphaPhi_CampoEsferico_EtapaAU_Autonomia.py`, `EtapaAU_auditoria.py`, saídas e resultados. Sementes 280–289.
+
+**Resultado (ruído 1,0, região 10%; coerência fora / preservação dentro / total):** pista 0,718 / 0,707 / 0,718 · consulta direta 1,000 / 0,010 / 0,901 · filtro local 0,600 / 0,564 / 0,598 · **Rede AP 0,974 / 0,007 / 0,877** · Rede AP com β = 8φ 0,976 / 0,008 / 0,878. O mesmo padrão no ruído 2,0 e nas regiões de 5% e 20%. **AU0 cumprido** (os polos falham onde devem); **AU1 não** (a Rede fica abaixo da consulta direta no total, −0,024, 0/10); **AU2 e AU3 cumpridos** (a Rede supera a pista, +0,159, e o filtro local, +0,279, ambos 10/10); **AU4 não**: a coerência supera a pista (+0,256, 10/10), mas **a preservação é a da consulta direta** (−0,002): a Rede apaga a variação por inteiro.
+
+**Leitura:** a Rede AP atual é **conformista** — completa a memória guardada e dissolve o que é próprio da pista, exatamente como a consulta direta (a falha prevista em primeiro lugar).
+
+**Auditoria (semente 280; observação, não critério):** a variação **existe no começo e é apagada pela dinâmica**: preservação +0,320 e coerência 0,927 na volta 1; +0,187 / 0,962 na volta 2; +0,082 na 3; −0,005 na 5; −0,074 na 50. **Uma única passagem pelas ligações delta** dá preservação +0,376 e coerência 0,872 — um estado intermediário que tem algo dos dois polos. Sem o previsor, a rede desaba (coerência 0,092). Ou seja: a "realização" aparece **por um instante no início** e o atrator, ao completar a memória, a desfaz. Pergunta para a próxima etapa: um modo de leitura ou de dinâmica que retenha esse estado — ordenar sem ir até o fim do atrator onde a pista diverge da memória.
