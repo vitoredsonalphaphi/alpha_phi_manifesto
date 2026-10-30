@@ -1,0 +1,64 @@
+
+##### ruído 1.0 · região 10% · fração protegida (previsor < 0,5) 0.070 · do que foi protegido, na calota: 0.592
+versão      coerência  preservação    total
+pista          0.7175       0.7132   0.7179
+consulta       1.0000       0.0105   0.9033
+filtro         0.5973       0.5743   0.5953
+SUP            0.9756       0.0045   0.8801
+SEL            0.9708       0.0325   0.8853
+SEL+P          0.9614       0.2401   0.8970
+SEL-AC         0.9738       0.0256   0.8818
+V1             0.9312       0.3468   0.8833
+
+##### ruído 1.0 · região 0% · fração protegida (previsor < 0,5) 0.042
+versão      coerência  preservação    total
+pista          0.7171       0.0000   0.7171
+consulta       1.0000       0.0000   1.0000
+filtro         0.6006       0.0000   0.6006
+SUP            0.9788       0.0000   0.9788
+SEL            0.9771       0.0000   0.9771
+SEL+P          0.9756       0.0000   0.9756
+SEL-AC         0.9778       0.0000   0.9778
+V1             0.9427       0.0000   0.9427
+
+##### ruído 2.0 · região 10% · fração protegida (previsor < 0,5) 0.047 · do que foi protegido, na calota: 0.374
+versão      coerência  preservação    total
+pista          0.4249       0.4312   0.4257
+consulta       1.0000       0.0105   0.9033
+filtro         0.4459       0.4361   0.4443
+SUP            0.9637       0.0051   0.8692
+SEL            0.9474       0.0186   0.8578
+SEL+P          0.9259       0.0993   0.8470
+SEL-AC         0.9608       0.0073   0.8672
+V1             0.7280       0.2559   0.6857
+
+##### ruído 1.0 · região 5% · fração protegida (previsor < 0,5) 0.056 · do que foi protegido, na calota: 0.337
+versão      coerência  preservação    total
+pista          0.7165       0.6894   0.7163
+consulta       1.0000      -0.0223   0.9494
+filtro         0.5989       0.4944   0.5960
+SUP            0.9767      -0.0173   0.9276
+SEL            0.9740       0.0113   0.9306
+SEL+P          0.9663       0.1870   0.9330
+SEL-AC         0.9753       0.0005   0.9277
+V1             0.9359       0.2667   0.9092
+
+##### ruído 1.0 · região 20% · fração protegida (previsor < 0,5) 0.096 · do que foi protegido, na calota: 0.790
+versão      coerência  preservação    total
+pista          0.7162       0.7125   0.7160
+consulta       1.0000       0.0106   0.8003
+filtro         0.5984       0.5855   0.5945
+SUP            0.9714       0.0100   0.7777
+SEL            0.9639       0.0494   0.7891
+SEL+P          0.9418       0.2389   0.8085
+SEL-AC         0.9686       0.0369   0.7830
+V1             0.9189       0.3967   0.8291
+
+=== CRITÉRIOS (ruído 1,0, região 10%) ===
+DN1 preservação SEL+P − SUP: +0.2356 (EP 0.0191, 10/10 a favor) -> cumprido
+DN2 coerência SEL+P − pista: +0.2439 (EP 0.0030, 10/10 a favor) -> cumprido
+DN3a coerência SEL+P − pista: +0.2439 (EP 0.0030, 10/10 a favor) -> cumprido
+DN3b preservação SEL+P − consulta: +0.2296 (EP 0.0187, 10/10 a favor) -> cumprido
+DN3c total SEL+P − consulta: -0.0064 (EP 0.0016, 1/10 a favor) -> NÃO cumprido
+DN4 preservação SEL+P − SEL-AC: +0.2145 (EP 0.0193, 10/10 a favor) -> cumprido
+DN5 (região 0%) total SEL+P − SUP, não negativo: -0.0032 (EP 0.0003, 0/10 a favor) -> NÃO cumprido

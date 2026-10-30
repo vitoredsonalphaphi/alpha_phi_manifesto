@@ -166,3 +166,15 @@
 **Leitura:** a Rede AP atual é **conformista** — completa a memória guardada e dissolve o que é próprio da pista, exatamente como a consulta direta (a falha prevista em primeiro lugar).
 
 **Auditoria (semente 280; observação, não critério):** a variação **existe no começo e é apagada pela dinâmica**: preservação +0,320 e coerência 0,927 na volta 1; +0,187 / 0,962 na volta 2; +0,082 na 3; −0,005 na 5; −0,074 na 50. **Uma única passagem pelas ligações delta** dá preservação +0,376 e coerência 0,872 — um estado intermediário que tem algo dos dois polos. Sem o previsor, a rede desaba (coerência 0,092). Ou seja: a "realização" aparece **por um instante no início** e o atrator, ao completar a memória, a desfaz. Pergunta para a próxima etapa: um modo de leitura ou de dinâmica que retenha esse estado — ordenar sem ir até o fim do atrator onde a pista diverge da memória.
+
+## Etapa DN — a dinâmica que ordena sem dissolver (30/10/2026)
+
+**Arquivos:** `AlphaPhi_CampoEsferico_EtapaDN_OrdenarSemDissolver.py` (importa a Etapa AU pelo caminho do scratchpad da sessão), saída e resultados. Sementes 290–299. Mecânica fixada antes: discordância local (pista − memória reconhecida, média na vizinhança); força do previsor w_i = clip(1 − (z_i − 2)/2, 0, 1); pegada da entrada λ = 0,5 onde o previsor se retira.
+
+**Resultado (ruído 1,0, região 10%; coerência / preservação / total):** consulta direta 1,000 / 0,011 / 0,903 · rede atual (SUP) 0,976 / 0,005 / 0,880 · **SEL+P 0,961 / 0,240 / 0,897** · SEL-AC (controle, lugares ao acaso) 0,974 / 0,026 / 0,882 · V1 (parada na volta 1) 0,931 / 0,347 / 0,883. A seleção protege 7% da esfera, 59% dela dentro da calota.
+
+**Critérios:** **DN1 cumprido** (preservação +0,236 sobre a rede atual, 10/10); **DN2 cumprido** (coerência +0,244 sobre a pista); **DN3: a e b cumpridos** (coerência > pista; preservação > consulta, +0,230, 10/10), **c não cumprido** (total −0,006 abaixo da consulta direta, 1/10 — por pouco); **DN4 cumprido** (a seleção acerta o lugar: +0,215 sobre o controle ao acaso); **DN5 não cumprido** (sem variação, custo de −0,003 no total, pequeno mas consistente).
+
+**Descritivo:** na região de **20%**, SEL+P (0,809) e V1 (0,829) **superam a consulta direta no total** (0,800); na de 5%, ficam abaixo (0,933 contra 0,949). Com ruído 2,0, a seleção acerta menos (37% na calota) e a preservação cai (0,099).
+
+**Leitura:** pela primeira vez a Rede AP **preserva uma parte própria da pista** enquanto limpa o ruído — a realização aparece, de forma parcial (a seleção cobre só parte da calota). O campo ainda não supera a consulta direta no total na condição principal, mas chega a 0,006 dela, e a supera quando a parte própria é maior (20%). A mecânica nasceu da tradução de E5 (Entrada 378). O custo nos casos sem variação (DN5) é pequeno e precisa ser reduzido.
