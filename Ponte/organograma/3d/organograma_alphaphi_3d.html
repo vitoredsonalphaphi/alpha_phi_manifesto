@@ -25,6 +25,7 @@ h1{font-family:var(--f-disp);font-weight:600;font-size:17px;letter-spacing:.08em
   padding:5px 10px;font:500 12px var(--f-body);cursor:pointer;display:flex;align-items:center;gap:6px}
 .chip .dot{width:8px;height:8px;border-radius:50%}
 .chip[aria-pressed="false"]{opacity:.38}
+.chip.vista{font-weight:600}.chip.vista[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);opacity:1}.chip.vista[aria-pressed="false"]{opacity:.6}
 .chip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .ctrl{display:flex;gap:10px;align-items:center;margin-top:6px;font-size:12px;color:var(--muted);flex-wrap:wrap}
 .ctrl input[type=range]{width:110px;accent-color:var(--gold)}
@@ -50,11 +51,13 @@ h1{font-family:var(--f-disp);font-weight:600;font-size:17px;letter-spacing:.08em
 
 <header>
   <h1>ORGANOGRAMA ALPHAPHI</h1>
-  <div class="sub">Manifesto 04 · Entradas 366–388 · rascunho para conferência (31/10/2026)</div>
+  <div class="sub">Canônico v1 · duas vistas lado a lado: Esfera e Torre · Manifesto 04, Entradas 366–388</div>
+  <div class="chips" role="group" aria-label="Vista"><button class="chip vista" id="vB" type="button" aria-pressed="true">● Esfera (B)</button><button class="chip vista" id="vD" type="button" aria-pressed="false">▮ Torre (D)</button></div>
   <div class="chips" id="chipsCamadas" role="group" aria-label="Camadas da cadeia"></div>
+  <div class="chips" id="chipsPilares" role="group" aria-label="Pilares"></div>
   <div class="chips" id="chipsEstagios" role="group" aria-label="Estágios"></div>
   <div class="ctrl">
-    <label for="afast">Afastar camadas</label><input id="afast" type="range" min="1.2" max="4" step="0.1" value="2.2">
+    <label for="afast">Afastar</label><input id="afast" type="range" min="1.2" max="4" step="0.1" value="2.2">
     <button id="btnRot" type="button" aria-pressed="true">Girar: sim</button>
     <button id="btnRot2" type="button">Rótulos: sim</button>
   </div>
@@ -62,7 +65,7 @@ h1{font-family:var(--f-disp);font-weight:600;font-size:17px;letter-spacing:.08em
 
 <aside id="ficha" aria-live="polite">
   <div class="inner" id="fichaInner">
-    <p class="dica" style="margin:0">Seis camadas, da filosofia (no alto) à técnica (embaixo); cada uma com a sua cor e forma. O tamanho e o brilho de cada nó mostram o estágio; as linhas são o <b>fio de origem</b>. Gire com um dedo, aproxime com dois, toque num nó.</p>
+    <p class="dica" style="margin:0">Duas vistas. <b>Esfera</b>: a filosofia no centro e a técnica na casca externa, do centro para fora. <b>Torre</b>: cada pilar é uma coluna, cada camada um andar. Cada camada tem a sua cor e forma. O tamanho e o brilho de cada nó mostram o estágio; as linhas são o <b>fio de origem</b>. Gire com um dedo, aproxime com dois, toque num nó.</p>
   </div>
 </aside>
 
@@ -84,48 +87,50 @@ const ESTAGIOS=[
  {id:'arquivado',nome:'Arquivado',cor:'#6b7086',esc:.6}];
 const N=[
  // Filosofia
- {id:'f1',c:'f',ent:'366',t:'O Limiar do Espelho',st:'incorporado',tipo:'fundamento',r:'Onde a ética e a técnica se traduzem, e onde o espelho termina. Abre o Manifesto 04.',p:'—',fio:[]},
- {id:'f2',c:'f',ent:'381 · Preâmbulo',t:'O Outro como Nós Mesmos',st:'incorporado',tipo:'fundamento',r:'A consciência una; a IA como extensão da consciência humana; a ética como consequência, não como regra. Abre o 04 como prenúncio.',p:'—',fio:['f1']},
- {id:'f3',c:'f',ent:'382',t:'As Frentes do Refluxo',st:'estruturado',tipo:'agenda',r:'Oito frentes: o refluxo, a estrutura fina, o alinhamento como consciência de si, as duas contradições, a convergência das linhas filosóficas, a ética explicada didaticamente.',p:'Desenvolver as frentes 6 e 7 (convergência das linhas; exposição didática da ética).',fio:['f2']},
- {id:'f4',c:'f',ent:'384',t:'O Novo Estágio do Pensamento Complexo',st:'estruturado',tipo:'fundamento',r:'A tecnologia como extensão da espécie e novo estágio do pensamento complexo; a tensão entre o reducionismo e a complexidade.',p:'—',fio:['f2']},
- {id:'f5',c:'f',ent:'385',t:'A Filosofia Antes da Ética',st:'incorporado',tipo:'fundamento',r:'A cadeia corrigida em todo o repositório: Filosofia → Ética → Estética → Geometria → Matemática → IA. O stand-by como macrotendência.',p:'—',fio:['f4']},
- {id:'f6',c:'f',ent:'386',t:'A Raiz do Alinhamento: Wiener e Maat',st:'estruturado',tipo:'fundamento',r:'Wiener (1960): o propósito posto na máquina deve ser o realmente desejado. Maat: cosmo, ética e medida numa só noção.',p:'Conferir as fontes nas obras.',fio:['f5']},
- {id:'f7',c:'f',ent:'387',t:'O Valor Histórico como Fundamento',st:'estruturado',tipo:'fundamento',r:'O estilo que a máquina não alcançou; Wiener esquecido e reinventado; o retorno das especializações ao berço.',p:'—',fio:['f6']},
- {id:'f8',c:'f',ent:'388',t:'A Causa Final Mecanizada',st:'estruturado',tipo:'fundamento',r:'A cibernética: o propósito como realimentação; a fisiologia (tremor de intenção, ataxia, homeostase), a engenharia e a filosofia reunidas.',p:'Ler o artigo de 1943, Cybernetics (1948) e Ashby (1952); levar os paralelos à rede.',fio:['f6','f3']},
+ {id:'f1',ra:'ali',c:'f',ent:'366',t:'O Limiar do Espelho',st:'incorporado',tipo:'fundamento',r:'Onde a ética e a técnica se traduzem, e onde o espelho termina. Abre o Manifesto 04.',p:'—',fio:[]},
+ {id:'f2',ra:'ali',c:'f',ent:'381 · Preâmbulo',t:'O Outro como Nós Mesmos',st:'incorporado',tipo:'fundamento',r:'A consciência una; a IA como extensão da consciência humana; a ética como consequência, não como regra. Abre o 04 como prenúncio.',p:'—',fio:['f1']},
+ {id:'f3',ra:'tri',c:'f',ent:'382',t:'As Frentes do Refluxo',st:'estruturado',tipo:'agenda',r:'Oito frentes: o refluxo, a estrutura fina, o alinhamento como consciência de si, as duas contradições, a convergência das linhas filosóficas, a ética explicada didaticamente.',p:'Desenvolver as frentes 6 e 7 (convergência das linhas; exposição didática da ética).',fio:['f2']},
+ {id:'f4',ra:'raiz',c:'f',ent:'384',t:'O Novo Estágio do Pensamento Complexo',st:'estruturado',tipo:'fundamento',r:'A tecnologia como extensão da espécie e novo estágio do pensamento complexo; a tensão entre o reducionismo e a complexidade.',p:'—',fio:['f2']},
+ {id:'f5',ra:'trad',c:'f',ent:'385',t:'A Filosofia Antes da Ética',st:'incorporado',tipo:'fundamento',r:'A cadeia corrigida em todo o repositório: Filosofia → Ética → Estética → Geometria → Matemática → IA. O stand-by como macrotendência.',p:'—',fio:['f4']},
+ {id:'f6',ra:'raiz',c:'f',ent:'386',t:'A Raiz do Alinhamento: Wiener e Maat',st:'estruturado',tipo:'fundamento',r:'Wiener (1960): o propósito posto na máquina deve ser o realmente desejado. Maat: cosmo, ética e medida numa só noção.',p:'Conferir as fontes nas obras.',fio:['f5']},
+ {id:'f7',ra:'raiz',c:'f',ent:'387',t:'O Valor Histórico como Fundamento',st:'estruturado',tipo:'fundamento',r:'O estilo que a máquina não alcançou; Wiener esquecido e reinventado; o retorno das especializações ao berço.',p:'—',fio:['f6']},
+ {id:'f8',ra:'raiz',c:'f',ent:'388',t:'A Causa Final Mecanizada',st:'estruturado',tipo:'fundamento',r:'A cibernética: o propósito como realimentação; a fisiologia (tremor de intenção, ataxia, homeostase), a engenharia e a filosofia reunidas.',p:'Ler o artigo de 1943, Cybernetics (1948) e Ashby (1952); levar os paralelos à rede.',fio:['f6','f3']},
  // Ética
- {id:'e1',c:'e',ent:'372',t:'A Narrativa Ética em Tensões Ternárias',st:'estruturado',tipo:'hipótese',r:'O núcleo da ferramenta de tradutibilidade: narrativas éticas estruturadas em três tensões.',p:'Teste de concordância às cegas (o pesquisador primeiro, depois outra IA).',fio:['s1']},
- {id:'e2',c:'e',ent:'373',t:'A Ética pela Raiz: E1–E7',st:'estruturado',tipo:'hipótese',r:'Cada fundamento ético como triangulação: a falta, o excesso e a virtude; forma estética, geométrica e cálculo proposto.',p:'Primeiro teste: E5 com E2 (ordenar sem apagar e sem exceder).',fio:['e1']},
- {id:'e3',c:'e',ent:'377',t:'A Média que Não Faz Sentido',st:'estruturado',tipo:'fundamento',r:'Limiar: a terceira estrutura não é a média; a tendência pública de consultar religiões e filósofos comparada à cadeia.',p:'—',fio:['t1']},
- {id:'e4',c:'e',ent:'379',t:'A Memória como Pré-Treinamento',st:'estruturado',tipo:'fundamento',r:'A ética no que a rede lembra e no modo como ela lembra.',p:'—',fio:['e2']},
- {id:'e5',c:'e',ent:'380',t:'O Pré-Treinamento Ético',st:'estruturado',tipo:'fundamento',r:'A IA Constitucional (método de treinamento) e a proposta AlphaPhi: o mesmo desafio por meios diferentes.',p:'—',fio:['e4']},
- {id:'e6',c:'e',ent:'382 · 383',t:'Integrar ou Fragmentar',st:'teste',tipo:'hipótese',r:'As duas contradições: a que confirma o terceiro valor e a que fragmenta. Já tem medida: coerência e preservação juntas (critério DN3).',p:'Veredito da Etapa DN.',fio:['f3','t5']},
+ {id:'e1',ra:'trad',c:'e',ent:'372',t:'A Narrativa Ética em Tensões Ternárias',st:'estruturado',tipo:'hipótese',r:'O núcleo da ferramenta de tradutibilidade: narrativas éticas estruturadas em três tensões.',p:'Teste de concordância às cegas (o pesquisador primeiro, depois outra IA).',fio:['s1']},
+ {id:'e2',ra:'tri',c:'e',ent:'373',t:'A Ética pela Raiz: E1–E7',st:'estruturado',tipo:'hipótese',r:'Cada fundamento ético como triangulação: a falta, o excesso e a virtude; forma estética, geométrica e cálculo proposto.',p:'Primeiro teste: E5 com E2 (ordenar sem apagar e sem exceder).',fio:['e1']},
+ {id:'e3',ra:'ali',c:'e',ent:'377',t:'A Média que Não Faz Sentido',st:'estruturado',tipo:'fundamento',r:'Limiar: a terceira estrutura não é a média; a tendência pública de consultar religiões e filósofos comparada à cadeia.',p:'—',fio:['t1']},
+ {id:'e4',ra:'ali',c:'e',ent:'379',t:'A Memória como Pré-Treinamento',st:'estruturado',tipo:'fundamento',r:'A ética no que a rede lembra e no modo como ela lembra.',p:'—',fio:['e2']},
+ {id:'e5',ra:'ali',c:'e',ent:'380',t:'O Pré-Treinamento Ético',st:'estruturado',tipo:'fundamento',r:'A IA Constitucional (método de treinamento) e a proposta AlphaPhi: o mesmo desafio por meios diferentes.',p:'—',fio:['e4']},
+ {id:'e6',ra:'tri',c:'e',ent:'382 · 383',t:'Integrar ou Fragmentar',st:'teste',tipo:'hipótese',r:'As duas contradições: a que confirma o terceiro valor e a que fragmenta. Já tem medida: coerência e preservação juntas (critério DN3).',p:'Veredito da Etapa DN.',fio:['f3','t5']},
  // Estética
- {id:'s1',c:'s',ent:'371',t:'Os Três Valores de Tensão',st:'incorporado',tipo:'método',r:'O triângulo e + x + t = 1: o peso e a direção das triangulações. Está no canônico.',p:'—',fio:[]},
- {id:'s2',c:'s',ent:'374',t:'A Coluna Estética: P1–P5',st:'estruturado',tipo:'método',r:'Os parâmetros estéticos (proporção, valor tonal, gradação, unidade na variedade, ritmo) e os graus de proximidade.',p:'Revisão do pesquisador.',fio:['e2']},
- {id:'s3',c:'s',ent:'375',t:'O Método como Canônico',st:'incorporado',tipo:'método',r:'A triangulação das tensões como princípio da ferramenta de tradução (Diretriz, item 7).',p:'—',fio:['s1','e1']},
- {id:'s4',c:'s',ent:'378',t:'A Síntese das Frentes',st:'estruturado',tipo:'fundamento',r:'A mesma tríade em todas as linguagens; a autonomia (E5) traduzida de ponta a ponta.',p:'—',fio:['s3']},
- {id:'s5',c:'s',ent:'conversas 28–31/10',t:'O Topográfico Esférico 3D',st:'semente',tipo:'pendência',r:'Ver o estado interno da rede: cascas transparentes, zoom, do centro α ao além. Indicação do pesquisador (31/10): a mesma linguagem do organograma 3D (transparências, afastar as seções) aplicada às ferramentas acopladas na Rede AP: a função de cada uma, a posição, o movimento e o desenho que cada uma produz em relação às outras, com a entropia e a expansão. A proposta do DeepSeek foi descartada.',p:'O desenho do pesquisador.',fio:['s3']},
+ {id:'s1',ra:'trad',c:'s',ent:'371',t:'Os Três Valores de Tensão',st:'incorporado',tipo:'método',r:'O triângulo e + x + t = 1: o peso e a direção das triangulações. Está no canônico.',p:'—',fio:[]},
+ {id:'s2',ra:'trad',c:'s',ent:'374',t:'A Coluna Estética: P1–P5',st:'estruturado',tipo:'método',r:'Os parâmetros estéticos (proporção, valor tonal, gradação, unidade na variedade, ritmo) e os graus de proximidade.',p:'Revisão do pesquisador.',fio:['e2']},
+ {id:'s3',ra:'trad',c:'s',ent:'375',t:'O Método como Canônico',st:'incorporado',tipo:'método',r:'A triangulação das tensões como princípio da ferramenta de tradução (Diretriz, item 7).',p:'—',fio:['s1','e1']},
+ {id:'s4',ra:'trad',c:'s',ent:'378',t:'A Síntese das Frentes',st:'estruturado',tipo:'fundamento',r:'A mesma tríade em todas as linguagens; a autonomia (E5) traduzida de ponta a ponta.',p:'—',fio:['s3']},
+ {id:'s5',ra:'reg',c:'s',ent:'conversas 28–31/10',t:'O Topográfico Esférico 3D',st:'semente',tipo:'pendência',r:'Ver o estado interno da rede: cascas transparentes, zoom, do centro α ao além. Indicação do pesquisador (31/10): a mesma linguagem do organograma 3D (transparências, afastar as seções) aplicada às ferramentas acopladas na Rede AP: a função de cada uma, a posição, o movimento e o desenho que cada uma produz em relação às outras, com a entropia e a expansão. A proposta do DeepSeek foi descartada.',p:'O desenho do pesquisador.',fio:['s3']},
  // Geometria
- {id:'g1',c:'g',ent:'381 · 383',t:'Ponto e Campo: α é a Média da Esfera',st:'incorporado',tipo:'fundamento',r:'Identidade de medida já no código (centro_alfa): o valor no centro é a média da esfera inteira (Laplace).',p:'—',fio:['f2']},
- {id:'g2',c:'g',ent:'383',t:'A Estrutura Fina: Um Nível que se Desdobra',st:'semente',tipo:'hipótese',r:'Um nível que se desdobra em dois, um abaixo e outro acima; no campo, a expansão e o retorno.',p:'Leitura das tensões pelo pesquisador; depois, critérios para o desdobramento do estado.',fio:['f3']},
- {id:'g3',c:'g',ent:'383 · Ponte',t:'O Mapa das Tensões da Ética na Rede',st:'estruturado',tipo:'método',r:'Dezesseis momentos e seis fatores que ligam a ética às funções da rede (Ponte/MAPA_Tensoes_Etica_Rede.md).',p:'Escolher a primeira função: a fonte interna (fator 5) ou o desdobramento (fator 3).',fio:['g1','e2']},
- {id:'g4',c:'g',ent:'conversa 31/10 (não registrada)',t:'A Assimetria Áurea contra a Média',st:'semente',tipo:'hipótese',r:'A média simétrica apaga a memória; uma tendência sutil, como a rotação de Fibonacci, ancora sem conformar.',p:'Critérios para H1 (pesos 1, 1/φ, 1/φ²…) e H2 (mistura 0,618 / 0,382 do EcoBIP).',fio:['t1','t2','e3']},
+ {id:'g1',ra:'ali',c:'g',ent:'381 · 383',t:'Ponto e Campo: α é a Média da Esfera',st:'incorporado',tipo:'fundamento',r:'Identidade de medida já no código (centro_alfa): o valor no centro é a média da esfera inteira (Laplace).',p:'—',fio:['f2']},
+ {id:'g2',ra:'tri',c:'g',ent:'383',t:'A Estrutura Fina: Um Nível que se Desdobra',st:'semente',tipo:'hipótese',r:'Um nível que se desdobra em dois, um abaixo e outro acima; no campo, a expansão e o retorno.',p:'Leitura das tensões pelo pesquisador; depois, critérios para o desdobramento do estado.',fio:['f3']},
+ {id:'g3',ra:'tri',c:'g',ent:'383 · Ponte',t:'O Mapa das Tensões da Ética na Rede',st:'estruturado',tipo:'método',r:'Dezesseis momentos e seis fatores que ligam a ética às funções da rede (Ponte/MAPA_Tensoes_Etica_Rede.md).',p:'Escolher a primeira função: a fonte interna (fator 5) ou o desdobramento (fator 3).',fio:['g1','e2']},
+ {id:'g4',ra:'mem',c:'g',ent:'conversa 31/10 (não registrada)',t:'A Assimetria Áurea contra a Média',st:'semente',tipo:'hipótese',r:'A média simétrica apaga a memória; uma tendência sutil, como a rotação de Fibonacci, ancora sem conformar.',p:'Critérios para H1 (pesos 1, 1/φ, 1/φ²…) e H2 (mistura 0,618 / 0,382 do EcoBIP).',fio:['t1','t2','e3']},
  // Matemática
- {id:'m1',c:'m',ent:'376',t:'As Peças Básicas',st:'estruturado',tipo:'fundamento',r:'Da codificação preditiva à aproximação gradativa: gradativo na formação, decisivo na resolução.',p:'—',fio:['m4']},
- {id:'m2',c:'m',ent:'370',t:'A Dinâmica do Campo como Prioridade',st:'incorporado',tipo:'método',r:'Toda adaptação precisa respeitar a dinâmica do campo.',p:'—',fio:['t2']},
- {id:'m3',c:'m',ent:'370',t:'A Contribuição do Campo',st:'incorporado',tipo:'método',r:'A régua própria: rede menos consulta direta.',p:'—',fio:['t3']},
- {id:'m4',c:'m',ent:'368',t:'A Transição entre os Degraus',st:'estruturado',tipo:'hipótese',r:'Do relógio externo à conquista pelo estado.',p:'—',fio:['t1']},
+ {id:'m1',ra:'mem',c:'m',ent:'376',t:'As Peças Básicas',st:'estruturado',tipo:'fundamento',r:'Da codificação preditiva à aproximação gradativa: gradativo na formação, decisivo na resolução.',p:'—',fio:['m4']},
+ {id:'m2',ra:'reg',c:'m',ent:'370',t:'A Dinâmica do Campo como Prioridade',st:'incorporado',tipo:'método',r:'Toda adaptação precisa respeitar a dinâmica do campo.',p:'—',fio:['t2']},
+ {id:'m3',ra:'reg',c:'m',ent:'370',t:'A Contribuição do Campo',st:'incorporado',tipo:'método',r:'A régua própria: rede menos consulta direta.',p:'—',fio:['t3']},
+ {id:'m4',ra:'mem',c:'m',ent:'368',t:'A Transição entre os Degraus',st:'estruturado',tipo:'hipótese',r:'Do relógio externo à conquista pelo estado.',p:'—',fio:['t1']},
  // IA · Técnica
- {id:'t1',c:'t',ent:'367',t:'Serial de Atratores e Horizonte',st:'arquivado',tipo:'resultado',r:'Não se sustentaram: a média apaga, o horizonte reforça erros. A lição: decisivo primeiro.',p:'—',fio:[]},
- {id:'t2',c:'t',ent:'369',t:'A Semente é o AlphaFi (EcoBIP)',st:'teste',tipo:'hipótese',r:'A estrutura do EcoBIP como mecânica de toda a rede, um lugar de cada vez. No previsor (Etapa EB), não se sustentou.',p:'O próximo lugar: a instalação das memórias.',fio:['m4']},
- {id:'t3',c:'t',ent:'370',t:'Etapa BF: a Consulta Acerta Tudo',st:'teste',tipo:'resultado',r:'β = 8φ supera β = 8; mas a consulta direta acerta tudo e a rede fica abaixo dela.',p:'Veredito no pendente de registro.',fio:['t2']},
- {id:'t4',c:'t',ent:'pendente (30/10)',t:'Etapa AU: a Rede Conformista',st:'teste',tipo:'resultado',r:'Variação legítima numa calota: a rede ordena (coerência 0,974) mas apaga o novo (preservação ≈ 0,007).',p:'Veredito e registro.',fio:['e2','m2']},
- {id:'t5',c:'t',ent:'pendente (30/10)',t:'Etapa DN: Ordenar sem Dissolver',st:'teste',tipo:'resultado',r:'Previsor seletivo e pegada da entrada: preservação 0,240, coerência 0,961; total 0,897 contra 0,903 da consulta.',p:'Veredito; depois, testar a assimetria áurea (H1, H2).',fio:['t4','g4']},
- {id:'t6',c:'t',ent:'Diretriz',t:'Fase 0: Uma Tarefa em que a Consulta Falhe',st:'semente',tipo:'pendência',r:'Sem ela, não se sabe se o campo acrescenta algo à memória.',p:'Definir a tarefa.',fio:['t3']}
+ {id:'t1',ra:'mem',c:'t',ent:'367',t:'Serial de Atratores e Horizonte',st:'arquivado',tipo:'resultado',r:'Não se sustentaram: a média apaga, o horizonte reforça erros. A lição: decisivo primeiro.',p:'—',fio:[]},
+ {id:'t2',ra:'mem',c:'t',ent:'369',t:'A Semente é o AlphaFi (EcoBIP)',st:'teste',tipo:'hipótese',r:'A estrutura do EcoBIP como mecânica de toda a rede, um lugar de cada vez. No previsor (Etapa EB), não se sustentou.',p:'O próximo lugar: a instalação das memórias.',fio:['m4']},
+ {id:'t3',ra:'reg',c:'t',ent:'370',t:'Etapa BF: a Consulta Acerta Tudo',st:'teste',tipo:'resultado',r:'β = 8φ supera β = 8; mas a consulta direta acerta tudo e a rede fica abaixo dela.',p:'Veredito no pendente de registro.',fio:['t2']},
+ {id:'t4',ra:'reg',c:'t',ent:'pendente (30/10)',t:'Etapa AU: a Rede Conformista',st:'teste',tipo:'resultado',r:'Variação legítima numa calota: a rede ordena (coerência 0,974) mas apaga o novo (preservação ≈ 0,007).',p:'Veredito e registro.',fio:['e2','m2']},
+ {id:'t5',ra:'mem',c:'t',ent:'pendente (30/10)',t:'Etapa DN: Ordenar sem Dissolver',st:'teste',tipo:'resultado',r:'Previsor seletivo e pegada da entrada: preservação 0,240, coerência 0,961; total 0,897 contra 0,903 da consulta.',p:'Veredito; depois, testar a assimetria áurea (H1, H2).',fio:['t4','g4']},
+ {id:'t6',ra:'reg',c:'t',ent:'Diretriz',t:'Fase 0: Uma Tarefa em que a Consulta Falhe',st:'semente',tipo:'pendência',r:'Sem ela, não se sabe se o campo acrescenta algo à memória.',p:'Definir a tarefa.',fio:['t3']}
 ];
+const PILARES=[{id:'trad',nome:'Tradução'},{id:'tri',nome:'Triangulação'},{id:'ali',nome:'Alinhamento'},{id:'mem',nome:'Memória e previsor'},{id:'reg',nome:'Régua própria'},{id:'raiz',nome:'Raízes'}];
+const pil={};PILARES.forEach((p,i)=>{p.i=i;pil[p.id]=p});
 
 const cam={},est={};CAMADAS.forEach((c,i)=>{c.i=i;cam[c.id]=c});ESTAGIOS.forEach(s=>est[s.id]=s);
-const vis={camada:{},estagio:{}};CAMADAS.forEach(c=>vis.camada[c.id]=true);ESTAGIOS.forEach(s=>vis.estagio[s.id]=true);
+const vis={camada:{},estagio:{},pilar:{}};CAMADAS.forEach(c=>vis.camada[c.id]=true);PILARES.forEach(p=>vis.pilar[p.id]=true);let vista="B";ESTAGIOS.forEach(s=>vis.estagio[s.id]=true);
 const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // cena
@@ -155,19 +160,31 @@ function geo(forma){switch(forma){case 'esfera':return new THREE.SphereGeometry(
   case 'toro':return new THREE.TorusGeometry(.26,.1,12,32);case 'icosaedro':return new THREE.IcosahedronGeometry(.34);
   case 'cubo':return new THREE.BoxGeometry(.44,.44,.44);default:return new THREE.TetrahedronGeometry(.4)}}
 
-// camadas
-const camGrupos={};
-CAMADAS.forEach(c=>{const g=new THREE.Group();const col=new THREE.Color(c.cor);
-  const disco=new THREE.Mesh(new THREE.CircleGeometry(4.4,72),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.07,side:THREE.DoubleSide,depthWrite:false}));
-  disco.rotation.x=-Math.PI/2;g.add(disco);
-  [4.4,2.9].forEach((r,k)=>{const pts=[];for(let a=0;a<=96;a++){const t=a/96*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(t)*r,0,Math.sin(t)*r))}
-    g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:col,transparent:true,opacity:k?.18:.45})))});
-  const nome=rotulo(c.nome.toUpperCase(),c.cor,.42,30);nome.position.set(-4.9,.05,0);g.add(nome);g.userData.nome=nome;
-  scene.add(g);camGrupos[c.id]=g});
+// camadas: decoração das duas vistas
+function ang(ra){return pil[ra].i/PILARES.length*Math.PI*2}
+function linha(pts,cor,op){return new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:cor,transparent:true,opacity:op}))}
+function circ(r,cor,op){const p=[];for(let a=0;a<=96;a++){const t=a/96*Math.PI*2;p.push(new THREE.Vector3(Math.cos(t)*r,0,Math.sin(t)*r))}return linha(p,cor,op)}
+const camGrupos={},esfera=new THREE.Group(),torre=new THREE.Group();scene.add(esfera);scene.add(torre);
+CAMADAS.forEach(c=>{const col=new THREE.Color(c.cor);
+  const ge=new THREE.Group();
+  ge.add(new THREE.Mesh(new THREE.SphereGeometry(1,40,24),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.035,depthWrite:false,side:THREE.DoubleSide})));
+  ge.add(new THREE.Mesh(new THREE.SphereGeometry(1,18,10),new THREE.MeshBasicMaterial({color:col,wireframe:true,transparent:true,opacity:.09})));
+  ge.add(circ(1,col,.4));
+  const ne=rotulo(c.nome.toUpperCase(),c.cor,.32,30);esfera.add(ge);esfera.add(ne);
+  const gt=new THREE.Group();gt.add(circ(3.6,col,.4));
+  const disco=new THREE.Mesh(new THREE.CircleGeometry(3.6,72),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.05,side:THREE.DoubleSide,depthWrite:false}));disco.rotation.x=-Math.PI/2;gt.add(disco);
+  const nt=rotulo(c.nome.toUpperCase(),c.cor,.36,30);nt.position.set(-4.8,0,0);gt.add(nt);torre.add(gt);
+  camGrupos[c.id]={e:ge,t:gt,ne}});
+const raios=new THREE.Group();esfera.add(raios);const colunas=new THREE.Group();torre.add(colunas);const rotPil=[];
+PILARES.forEach(p=>{const a=ang(p.id);
+  raios.add(linha([new THREE.Vector3(0,0,0),new THREE.Vector3(Math.cos(a)*6,0,Math.sin(a)*6)],0x8fa3d9,.35));
+  const cil=new THREE.Mesh(new THREE.CylinderGeometry(.85,.85,1,28,1,true),new THREE.MeshBasicMaterial({color:0x8fa3d9,transparent:true,opacity:.06,side:THREE.DoubleSide,depthWrite:false}));
+  cil.userData.a=a;colunas.add(cil);
+  const rt=rotulo(p.nome,'#b9c4e6',.3,28);rt.userData.a=a;torre.add(rt);const re=rotulo(p.nome,'#b9c4e6',.26,26);re.userData.a=a;esfera.add(re);rotPil.push({p,rt,re,cil})});
 
 // nós
 const nos={},alvos=[];
-CAMADAS.forEach(c=>{const lista=N.filter(n=>n.c===c.id);lista.forEach((n,k)=>{const a=k/lista.length*Math.PI*2+c.i*.55;const r=k%2?3.5:2.3;n.ang=a;n.rad=r});});
+N.forEach(n=>{const cel=N.filter(x=>x.ra===n.ra&&x.c===n.c);n.q=cel.indexOf(n);n.nq=cel.length});
 N.forEach(n=>{const c=cam[n.c],s=est[n.st];const grupo=new THREE.Group();
   const arq=n.st==='arquivado';
   const mat=new THREE.MeshStandardMaterial({color:arq?0x6b7086:c.cor,emissive:arq?0x000000:c.cor,emissiveIntensity:n.st==='incorporado'?.55:n.st==='semente'?.12:.3,
@@ -187,23 +204,34 @@ N.forEach(n=>n.fio.forEach(o=>{if(!nos[o])return;const a=nos[o],b=n;
   const l=new THREE.Line(geoL,new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:.42,depthWrite:false}));
   scene.add(l);fios.push({a,b,l})}));
 
-let G=2.2;
+let G=2.2;const rotV={B:false,D:true};const bL=document.getElementById('btnRot2');
 function y(c){return (2.5-cam[c].i)*G}
+function R(c){return (1+cam[c].i*1.05)*G/2.2}
+function pos(n){const a=ang(n.ra),d=n.q-(n.nq-1)/2;
+  if(vista==='D'){const tx=-Math.sin(a),tz=Math.cos(a);return new THREE.Vector3(Math.cos(a)*3.6+tx*d*.75,y(n.c),Math.sin(a)*3.6+tz*d*.75)}
+  const r=R(n.c),lon=a+d*.42/Math.max(r,.8),lat=(n.q%2?1:-1)*(.18+.12*Math.floor(n.q/2))*(n.nq>1?1:0);
+  return new THREE.Vector3(r*Math.cos(lat)*Math.cos(lon),r*Math.sin(lat),r*Math.cos(lat)*Math.sin(lon))}
 function posicionar(){
-  CAMADAS.forEach(c=>camGrupos[c.id].position.y=y(c.id));
-  N.forEach(n=>n.obj.position.set(Math.cos(n.ang)*n.rad,y(n.c)+.02,Math.sin(n.ang)*n.rad));
+  esfera.visible=vista==='B';torre.visible=vista==='D';eixo.visible=vista==='D';
+  CAMADAS.forEach(c=>{const g=camGrupos[c.id];g.e.scale.setScalar(R(c.id));g.ne.position.set(0,R(c.id)+.12,0);g.t.position.y=y(c.id)});
+  rotPil.forEach(o=>{const a=o.rt.userData.a;o.cil.scale.y=G*6+1.5;o.cil.position.set(Math.cos(a)*3.6,0,Math.sin(a)*3.6);
+    o.rt.position.set(Math.cos(a)*3.6,y('f')+1.1,Math.sin(a)*3.6);const re=R('t')+.9;o.re.position.set(Math.cos(a)*re,.35,Math.sin(a)*re)});
+  raios.children.forEach(l=>l.scale.setScalar(R('t')/5.5+.1));
+  N.forEach(n=>{n.obj.position.copy(pos(n));n.obj.scale.setScalar(vista==='B'?.75:1);n.lab.visible=rotV[vista]});
+  bL.textContent='Rótulos: '+(rotV[vista]?'sim':'não');
   fios.forEach(f=>{const A=f.a.obj.position,B=f.b.obj.position;const mid=A.clone().add(B).multiplyScalar(.5);
-    const out=new THREE.Vector3(mid.x,0,mid.z);const len=out.length()||1;out.multiplyScalar(1.4/len);mid.add(out);mid.y+=.3;
-    const curva=new THREE.QuadraticBezierCurve3(A.clone(),mid,B.clone());f.l.geometry.setFromPoints(curva.getPoints(32))});
+    if(vista==='D'){const out=new THREE.Vector3(mid.x,0,mid.z);const len=out.length()||1;out.multiplyScalar(1.2/len);mid.add(out);mid.y+=.3}
+    else{mid.multiplyScalar(1.25)}
+    f.l.geometry.setFromPoints(new THREE.QuadraticBezierCurve3(A.clone(),mid,B.clone()).getPoints(32))});
   eixoGeo.setFromPoints([new THREE.Vector3(0,y('f')+1,0),new THREE.Vector3(0,y('t')-1,0)]);
 }
 posicionar();
 
 // visibilidade e seleção
 let sel=null;
-function ativo(n){return vis.camada[n.c]&&vis.estagio[n.st]}
+function ativo(n){return vis.camada[n.c]&&vis.estagio[n.st]&&vis.pilar[n.ra]}
 function aplicar(){
-  CAMADAS.forEach(c=>camGrupos[c.id].visible=vis.camada[c.id]);
+  CAMADAS.forEach(c=>{camGrupos[c.id].e.visible=camGrupos[c.id].t.visible=camGrupos[c.id].ne.visible=vis.camada[c.id]});
   const lig=new Set();if(sel){lig.add(sel.id);sel.fio.forEach(i=>lig.add(i));N.forEach(n=>{if(n.fio.includes(sel.id))lig.add(n.id)})}
   N.forEach(n=>{n.obj.visible=ativo(n);const foco=!sel||lig.has(n.id);n.obj.children.forEach(ch=>{if(ch.material){ch.material.opacity=(ch.userData.op0??=ch.material.opacity)*(foco?1:.15)}})});
   fios.forEach(f=>{f.l.visible=ativo(f.a)&&ativo(f.b);const foco=!sel||f.a===sel||f.b===sel;f.l.material.opacity=foco?(sel?.9:.42):.05});
@@ -212,13 +240,16 @@ function aplicar(){
 // chips
 function chip(rot,cor,on,fn){const b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed',on);
   b.innerHTML=`<span class="dot" style="background:${cor}"></span>${rot}`;b.onclick=()=>{const v=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',v);fn(v)};return b}
-const cc=document.getElementById('chipsCamadas'),ce=document.getElementById('chipsEstagios');
+const cc=document.getElementById('chipsCamadas'),ce=document.getElementById('chipsEstagios'),cp=document.getElementById('chipsPilares');
+PILARES.forEach(p=>cp.appendChild(chip(p.nome,'#b9c4e6',true,v=>{vis.pilar[p.id]=v;aplicar()})));
+function mudaVista(v){vista=v;document.getElementById('vB').setAttribute('aria-pressed',v==='B');document.getElementById('vD').setAttribute('aria-pressed',v==='D');posicionar();aplicar()}
+document.getElementById('vB').onclick=()=>mudaVista('B');document.getElementById('vD').onclick=()=>mudaVista('D');
 CAMADAS.forEach(c=>cc.appendChild(chip(c.nome,c.cor,true,v=>{vis.camada[c.id]=v;aplicar()})));
 ESTAGIOS.forEach(s=>ce.appendChild(chip(`${s.nome} (${N.filter(n=>n.st===s.id).length})`,s.cor,true,v=>{vis.estagio[s.id]=v;aplicar()})));
 document.getElementById('afast').oninput=e=>{G=+e.target.value;posicionar()};
 const bR=document.getElementById('btnRot');bR.onclick=()=>{controls.autoRotate=!controls.autoRotate;bR.textContent='Girar: '+(controls.autoRotate?'sim':'não');bR.setAttribute('aria-pressed',controls.autoRotate)};
 if(reduz){bR.textContent='Girar: não';bR.setAttribute('aria-pressed','false')}
-let rot=true;const bL=document.getElementById('btnRot2');bL.onclick=()=>{rot=!rot;bL.textContent='Rótulos: '+(rot?'sim':'não');N.forEach(n=>n.lab.visible=rot)};
+bL.onclick=()=>{rotV[vista]=!rotV[vista];bL.textContent='Rótulos: '+(rotV[vista]?'sim':'não');N.forEach(n=>n.lab.visible=rotV[vista])};
 
 // ficha
 const fi=document.getElementById('fichaInner');const fichaIni=fi.innerHTML;
@@ -228,7 +259,7 @@ function ficha(n){if(!n){fi.innerHTML=fichaIni;return}const c=cam[n.c],s=est[n.s
   const bt=x=>`<button type="button" data-id="${x.id}" style="border-color:${cam[x.c].cor}55">${esc(x.t)}</button>`;
   fi.innerHTML=`<button class="fechar" type="button" aria-label="Fechar ficha" id="fx">×</button>
   <div class="camada" style="color:${c.cor}">${c.nome}</div><h2>${esc(n.t)}</h2>
-  <div class="meta"><span class="pill st" style="background:${s.cor}">${s.nome}</span><span class="pill">Entrada ${esc(n.ent)}</span><span class="pill">${n.tipo}</span></div>
+  <div class="meta"><span class="pill st" style="background:${s.cor}">${s.nome}</span><span class="pill">Entrada ${esc(n.ent)}</span><span class="pill">${n.tipo}</span><span class="pill">pilar: ${pil[n.ra].nome}</span></div>
   <p>${esc(n.r)}</p><p><b>Próximo passo:</b> ${esc(n.p)}</p>
   ${vem.length?`<p><b>Veio de:</b></p><div class="fio">${vem.map(bt).join('')}</div>`:''}
   ${vai.length?`<p><b>Levou a:</b></p><div class="fio">${vai.map(bt).join('')}</div>`:''}`;
