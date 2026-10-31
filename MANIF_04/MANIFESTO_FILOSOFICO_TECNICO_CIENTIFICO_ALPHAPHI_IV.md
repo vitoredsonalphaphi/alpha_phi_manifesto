@@ -1250,3 +1250,124 @@ As três alternativas foram postas pelo pesquisador; a escolha entre elas, ou a 
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 386 — 31 de outubro de 2026
+### A Raiz do Alinhamento — Norbert Wiener, a Cibernética, e Maat como Convergência Primordial
+
+### I. Enunciado do Pesquisador
+
+> "Traz tudo o que você puder encontrar a respeito de Norbert Wiener — tudo no sentido do que se refere a esta nossa observação, a esta nossa especulação, e do que precisa ser detalhado na estruturação sobre esse fundamento, principalmente como fundamento da necessidade do alinhamento. Se essa é a raiz, precisamos nos inteirar de todos os motivos e de todas as nuances do que trouxe o trabalho do Dr. Norbert como necessidade de alinhamento, principalmente desde 1950. Você comentou que ele também foi um dos precursores da teoria dos sistemas: traz também sobre isso — como se apresentou a contribuição dele à teoria dos sistemas e, principalmente, como se apresentaram as tendências depois de 1990, mesmo tendo sido institucionalizada por esse enraizamento, por essa estruturação, pela própria criação da cibernética.
+>
+> E você comentou a respeito da ética antes da filosofia, do ponto de vista da deusa Maat. Traz esse ponto de vista também com detalhes, principalmente por se referir a um posicionamento egípcio — o que faz referência direta àquilo que estamos procurando estruturar. Ou seja, aquilo que procuramos representar como convergência de ciência e filosofia já está estruturado nos próprios primórdios da construção da escola, da antiga escola de mistérios do Egito Antigo."
+
+— Nota do pesquisador, 31 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+*Fontes: conferidas em parte por busca (as datas e a citação de 1960) e em parte citadas de memória; a conferir nas obras antes de qualquer publicação.*
+
+#### Parte A — Norbert Wiener (1894–1964)
+
+##### A.1 Quem foi
+
+Matemático norte-americano, professor do MIT; criança-prodígio, doutor por Harvard aos 18 anos. Trabalhou em análise harmônica (inclusive a de Fourier), processos aleatórios (o "processo de Wiener", o movimento browniano) e filtragem e previsão de sinais. Na Segunda Guerra, com Julian Bigelow, estudou a previsão da trajetória de aviões para a artilharia antiaérea: o problema de **prever o futuro de um sinal a partir do seu passado** e de **corrigir a ação pelo erro** — de onde vem a ideia central da cibernética.
+
+##### A.2 A ideia de propósito (1943) e a cibernética (1948)
+
+- **"Behavior, Purpose and Teleology" (1943),** com Arturo Rosenblueth e Julian Bigelow: o comportamento **orientado a um fim** pode ser descrito pela **realimentação negativa** — a saída do sistema volta à entrada e corrige o rumo em direção ao alvo. O *propósito* deixa de ser só um conceito filosófico e passa a ter uma forma técnica.
+- **As Conferências Macy (1946–1953),** coordenadas por Warren McCulloch, reuniram matemáticos, neurocientistas, antropólogos e psicólogos (Wiener, John von Neumann, Gregory Bateson, Margaret Mead, Heinz von Foerster, entre outros) sobre "mecanismos causais circulares e de realimentação em sistemas biológicos e sociais". Foi um dos primeiros encontros deliberadamente transdisciplinares da ciência do século XX.
+- ***Cybernetics: or Control and Communication in the Animal and the Machine* (1948):** o mesmo princípio — comunicação e controle por realimentação — no animal, na máquina e na sociedade. O nome vem do grego *kybernetes*, o timoneiro. Já na introdução, Wiener adverte sobre as consequências sociais e morais das máquinas que decidem.
+- **Informação e entropia:** para Wiener, a quantidade de informação de um sistema mede o seu **grau de organização**, assim como a entropia mede o seu **grau de desorganização**. Os organismos — e as máquinas que processam informação — são **ilhas locais de entropia decrescente** num mundo em que a entropia, no conjunto, cresce.
+
+##### A.3 A ética como parte da técnica (1947–1964)
+
+| Ano | Obra ou gesto | O que diz |
+|---|---|---|
+| 1947 | "A Scientist Rebels" (*The Atlantic*) | depois de Hiroshima, recusa-se a fornecer pesquisa para fins militares: o cientista responde pelo uso do que cria |
+| 1949 | carta a Walter Reuther (sindicato dos trabalhadores da indústria automobilística) | adverte que a automação pode desvalorizar o trabalho humano e se oferece para ajudar os trabalhadores |
+| 1950 | *The Human Use of Human Beings* (em português, *Cibernética e Sociedade*) | a sociedade é feita de mensagens e de realimentação; a máquina deve servir ao uso **humano** do ser humano, e não reduzir o ser humano a peça de máquina |
+| 1960 | "Some Moral and Technical Consequences of Automation" (*Science*, 6 de maio, vol. 131, pp. 1355–1358) | as máquinas que aprendem podem desenvolver estratégias imprevistas, em velocidade que desconcerta quem as programou; se usarmos para os nossos fins uma agência mecânica cuja operação não podemos interferir com eficácia, **é melhor termos certeza de que o propósito posto na máquina é o propósito que realmente desejamos, e não uma imitação colorida dele** |
+| 1960 | resposta de Arthur Samuel (IBM), também na *Science* | a máquina não é um gênio, não tem vontade; dela não sai nada que não tenha sido posto — o debate que ainda hoje divide a área |
+| 1964 | *God & Golem, Inc.* (Prêmio Nacional do Livro dos EUA, 1965) | a máquina que aprende e o desejo literal: o aprendiz de feiticeiro, a pata do macaco, o gênio da lâmpada — o pedido cumprido ao pé da letra, e não segundo a intenção |
+
+**O núcleo do argumento de 1960:** quando duas agências de naturezas diferentes perseguem um propósito comum e a comunicação entre elas sobre esse propósito é incompleta, o desastre é esperável. É, quase palavra por palavra, o **problema da especificação de objetivos** do alinhamento atual. Stuart Russell (*Human Compatible*, 2019) cita a frase de Wiener como formulação antecipada do "problema do rei Midas", e hoje ela é tratada como uma das primeiras enunciações do problema do alinhamento.
+
+##### A.4 Wiener e a teoria dos sistemas
+
+A **teoria geral dos sistemas** (Ludwig von Bertalanffy, primeiros artigos em 1945–1946; livro em 1968) e a **cibernética** (Wiener, 1948) nasceram em paralelo e se fundiram no **pensamento sistêmico**. Em 1954 foi fundada a Sociedade para a Pesquisa em Sistemas Gerais (Bertalanffy, Kenneth Boulding, Anatol Rapoport, Ralph Gerard). Desdobramentos:
+
+- **W. Ross Ashby** (*Introdução à Cibernética*, 1956): a lei da variedade requerida — só a variedade controla a variedade.
+- **Cibernética de segunda ordem** (Heinz von Foerster, Gregory Bateson; anos 1960–70): o observador faz parte do sistema que observa.
+- **Autopoiese** (Humberto Maturana e Francisco Varela, 1972): o vivo como sistema que produz a si mesmo.
+- **Stafford Beer**: a cibernética da organização (o projeto Cybersyn, no Chile, 1971–1973).
+- **Edgar Morin** e **Fritjof Capra** construíram o pensamento complexo e a visão sistêmica sobre essa base; **Niklas Luhmann**, a teoria dos sistemas sociais.
+
+##### A.5 O que aconteceu depois: a tendência
+
+1. **1956 — o nome "inteligência artificial":** na conferência de Dartmouth, John McCarthy escolheu o nome, segundo o próprio relato, em parte para distinguir o novo campo da cibernética. A IA nasce **separada** da tradição sistêmica: lógica e símbolos, em vez de realimentação e organismo.
+2. **Anos 1960–70 — a fragmentação:** a cibernética se divide em especialidades (controle, teoria da informação, robótica, ciência da computação); no início dos anos 70, segundo Ranulph Glanville, ela praticamente desaparecera das universidades, a não ser como sinônimo de engenharia de controle. As redes neurais perdem força depois de *Perceptrons* (Minsky e Papert, 1969).
+3. **Anos 1980–90 — a volta das redes neurais e o aprendizado estatístico:** a retropropagação (Rumelhart, Hinton e Williams, 1986) e, nos anos 90, o aprendizado de máquina estatístico. A métrica dominante passa a ser o **desempenho em tarefas e conjuntos de teste** — a otimização de uma função objetivo —, e não a relação do sistema com o seu meio.
+4. **Depois de 1990 — a complexidade como especialidade:** o estudo da complexidade continua (o Instituto Santa Fe, a ciência das redes, a cibernética de segunda ordem na Sociedade Americana de Cibernética), mas como **nicho**; a corrente principal da IA segue pela otimização em escala (o aprendizado profundo, a partir de 2012; os grandes modelos de linguagem).
+5. **O retorno do problema:** a preocupação de Wiener reaparece só nos anos 2000–2010, com um nome novo — "alinhamento" — e como campo à parte (Eliezer Yudkowsky; Nick Bostrom, *Superinteligência*, 2014; Stuart Russell, 2019), e não como parte da técnica desde a origem.
+
+**O que isso mostra, nos termos da Entrada 385:** na raiz sistêmica, a ética estava **dentro** da técnica — o propósito, a realimentação, a responsabilidade pelo uso eram o próprio objeto da cibernética. A corrente que dominou a IA nasceu separada dessa raiz, e a ética voltou depois como acréscimo e como urgência. A leitura de que isso é a consequência de a visão sistêmica não ter se tornado tendência é a posição do pesquisador; os fatos acima são compatíveis com ela.
+
+##### A.6 Os pontos de contato com o AlphaPhi
+
+| Wiener | No projeto | Grau |
+|---|---|---|
+| informação como organização; entropia como desorganização; ilhas de entropia decrescente | Sépstro: Coh + Entr = 1; o par entropia e expansão | 2 (homologia de forma) |
+| propósito como realimentação: a saída volta e corrige o rumo | o previsor (a previsão desce, a evidência sobe); o refluxo (Entradas 382–383) | 2 |
+| previsão do futuro de um sinal pelo seu passado; análise harmônica | o previsor; os harmônicos esféricos (a série de Fourier na esfera) | 2 a 3 |
+| o propósito posto na máquina deve ser o realmente desejado | o alinhamento como campo (Entrada 360); a ética como consequência, e não como regra (Entrada 381) | 1 (analogia), como fundamento |
+| o cientista responde pelo uso do que cria | a técnica como instrumento, nunca substituto (Diretriz, 3.1.1) | fundamento |
+
+#### Parte B — Maat
+
+##### B.1 O que é
+
+Maat (*mꜣꜥt*) é, ao mesmo tempo, **um conceito e uma deusa**. Como conceito: a **ordem do mundo estabelecida na criação** — a verdade, a justiça, o equilíbrio, a harmonia, a reciprocidade —, reafirmada a cada novo rei. Como deusa: filha de Rá, representada com uma **pena de avestruz** na cabeça, associada a Thoth, o deus da escrita, do cálculo e da medida. O seu oposto é ***isfet***: o caos, a mentira, a violência. O dever do rei era "fazer Maat e afastar *isfet*". A noção está atestada desde o Antigo Império (c. 2686–2181 a.C.).
+
+##### B.2 Por que Maat responde ao enunciado: a ordem cósmica e a ética são a mesma coisa
+
+Em Maat, **não há separação** entre:
+
+- **o cosmológico** — a ordem do céu, das estações, da cheia do Nilo;
+- **o ético e o social** — falar a verdade, julgar com justiça, cuidar do fraco;
+- **o conhecimento e a medida** — Thoth, o escriba, que mede e registra; a balança e a pena.
+
+Agir com justiça é **participar da ordem do cosmo**; a injustiça é desordem cósmica, e não só social. É a mesma estrutura que o projeto procura: a ética como campo, e não como regra acrescentada (Entradas 360, 381). O egiptólogo Jan Assmann (*Ma'at: Gerechtigkeit und Unsterblichkeit im Alten Ägypten*, 1990) chama Maat de **"justiça conectiva"**: o que liga as pessoas umas às outras, à sociedade e ao cosmo, pela reciprocidade — o fazer por quem faz.
+
+##### B.3 Os textos
+
+- **As Instruções (*sebayt*):** a literatura de sabedoria. A *Instrução de Ptahhotep*, atribuída a um vizir da 5.ª dinastia (c. 2400 a.C.; cópias do Médio Império), diz, em substância: *grande é Maat, duradoura a sua eficácia; não foi perturbada desde o tempo de Osíris.* O *Camponês Eloquente* (Médio Império) pede ao juiz que faça Maat.
+- **O Livro dos Mortos, capítulo 125 (Novo Império, a partir de c. 1550 a.C.):** a pesagem do coração. Diante de Osíris e de 42 juízes, o morto recita as **declarações de inocência** (a "confissão negativa": não menti, não roubei, não causei dor…), e o seu coração é pesado na balança contra a pena de Maat. Thoth registra o resultado. A medida da vida é o equilíbrio com a ordem.
+
+##### B.4 Ética antes da filosofia? A nuance
+
+Na Entrada 385, Maat aparece como **prática moral anterior à filosofia grega**. A nuance: Maat não é só costume — é uma **reflexão escrita** sobre a ordem e a justiça, mais de dois mil anos antes de Sócrates. Se essa reflexão é ou não "filosofia" é um debate em aberto (há quem defenda uma filosofia egípcia, como Théophile Obenga; a historiografia tradicional situa o início da filosofia na Grécia). O que Maat mostra, de qualquer modo, é que na sua origem **a reflexão sobre o mundo, a ética e a medida nasceram juntas, sem separação** — o que confirma a ordem do pesquisador (a ética nasce da reflexão sobre o todo) e, mais do que isso, a convergência que o projeto persegue.
+
+##### B.5 As escolas do Egito: o que é histórico e o que é tradição
+
+- **Histórico:** as **Casas da Vida** (*Per Ankh*), junto aos templos, eram lugares de cópia e estudo de textos sagrados, de medicina, astronomia, matemática e ritual — **ciência e sagrado na mesma instituição**. Os sacerdotes guardavam o calendário, a medida das terras depois das cheias (a origem prática da geometria, segundo Heródoto) e os textos de sabedoria.
+- **Testemunho grego:** Heródoto, Platão (o *Timeu* e o *Fedro* falam de sacerdotes egípcios e de Thoth), Plutarco (*Sobre Ísis e Osíris*) e Jâmblico (*Sobre os Mistérios*) descrevem o Egito como fonte de sabedoria; a tradição diz que Pitágoras e Platão estudaram lá — o que é antigo como relato, mas debatido como fato.
+- **Tradição iniciática:** a ideia de uma "escola de mistérios" egípcia contínua até hoje é sustentada pelas tradições esotéricas, entre elas a rosacruz, que remonta a sua linhagem às escolas de Tutmés III e de Akhenaton. É uma tradição, e é registrada aqui como tal.
+
+#### Parte C — O que as duas raízes dizem juntas
+
+| | Maat (Egito, c. 2500 a.C.) | Wiener (cibernética, 1948–1964) |
+|---|---|---|
+| Ordem e desordem | Maat e *isfet* | informação (organização) e entropia (desorganização) |
+| A medida | a balança e a pena; Thoth, que mede | a realimentação: o erro medido corrige o rumo |
+| A ética | participar da ordem do cosmo | o propósito posto na máquina deve ser o realmente desejado |
+| A unidade | cosmo, sociedade e conhecimento numa só noção | animal, máquina e sociedade sob um só princípio |
+
+Nas duas, **a ética não é regra acrescentada de fora: é a própria forma da ordem**. Uma está na origem da civilização; a outra, na origem da técnica que levou à IA. O alinhamento, nesse quadro, é a reconstrução de uma unidade que esteve presente nas duas raízes e se perdeu na separação dos saberes. A relação histórica entre as duas — se há continuidade ou só convergência — é questão aberta; a convergência de forma está registrada aqui como fundamento declarado (Diretriz, 3.1.1).
+
+---
+*Florianópolis · 31 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
