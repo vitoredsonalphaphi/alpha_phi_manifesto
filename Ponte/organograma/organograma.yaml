@@ -6,12 +6,12 @@ meta:
   titulo: "A Ponte [f ○ c]"
   subtitulo: "Tradutibilidade: ética → estética <> geometria → matemática → IA"
   versao: "v1 (rascunho)"
-  data: "2026-10-30"
+  data: "2026-10-31"
 nos:
   - {id: raiz, titulo: "A Ponte [f ○ c]  (nome: \"ponto e asterisco\", grafia a confirmar)", status: hipotese, nota: "f = filosofia (origem), c = ciência, com a IA dentro de c. <> = convergência/ligação com tradução nos dois sentidos. Plano de Pesquisa v0.1."}
 
   - {id: cadeia, pai: raiz, titulo: "1. A cadeia (os elos)", status: hipotese, nota: "Entradas 177 e 261. Status dos elos conforme registrado na Entrada 177."}
-  - {id: elo1, pai: cadeia, titulo: "Ética → Filosofia", status: aberto, fonte: "E177", nota: "O elo que falta: nomeado, não conectado formalmente."}
+  - {id: elo1, pai: cadeia, titulo: "Filosofia → Ética", status: aberto, fonte: "E177", nota: "O elo que falta: nomeado, não conectado formalmente."}
   - {id: elo2, pai: cadeia, titulo: "Filosofia → Estética", status: hipotese, fonte: "E177", nota: "Articulado (linhagem Kandinsky, Klee, Schiller, Jung); não medido."}
   - {id: elo3, pai: cadeia, titulo: "Estética <> Geometria (mesmo âmbito da forma)", status: parcial, fonte: "E177; M01 E16–E17", nota: "Beep 880 Hz como caso mais concreto. A semelhança tela de 1997 × espectro é visual, sem medida."}
   - {id: elo4, pai: cadeia, titulo: "Geometria → Matemática", status: reauditar, fonte: "E177", nota: "Registrado como verificado (C_PHI = 1/φ², Fibonacci, φ³). Não reauditado."}

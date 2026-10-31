@@ -70,7 +70,7 @@ O pesquisador será o avaliador. Isso é possível e útil, mas ele também é o
 | Geometria → Matemática | **Verificado** (C_PHI = 1/φ², Fibonacci, φ³ como atrator) |
 | Estética → Geometria | **Parcialmente verificado** (Beep 880 Hz como a demonstração mais concreta) |
 | Filosofia → Estética | **Articulado** (linhagem de 165 anos: Kandinsky, Klee, Schiller, Jung) |
-| Essência ética → Filosofia | **O elo que falta** (nomeado, não formalmente conectado) |
+| Filosofia → Essência ética | **O elo que falta** (nomeado, não formalmente conectado) |
 
 **Ressalvas de auditoria (assistente, 10/10/2026):** os números "verificado" acima são os **registrados na entrada**. Eles **não foram reauditados** nesta sessão; a auditoria de 03/10 e as verificações de 08/10 mostraram que alguns resultados antigos tinham desenho circular ou sem controle. A palavra "verificado" nessa tabela deve ser lida como **"registrado como verificado", a reauditar**.
 
@@ -83,7 +83,7 @@ O pesquisador será o avaliador. Isso é possível e útil, mas ele também é o
 | **P0 — Definições** | Fixar `f`, `c`, o sentido de `[f ○ c]` e o que conta como **valor ético operacionalizável** (candidato: ΔCoh_global ≥ 0, Entrada 185) | Glossário em `diretrizes/` |
 | **P1 — Inventário** | Reunir, por elo, o que o repositório já tem e o seu status | Tabela por elo |
 | **P2 — Literatura** | Buscar e **verificar** métodos existentes de tradução (candidatos de memória, **não verificados**: medida estética de Birkhoff, estética da informação, espaços conceituais de Gärdenfors, aprendizado profundo geométrico) | Fichas em `fundamentacao/` |
-| **P3 — Hipóteses** | Para cada elo, em especial **ética→filosofia** e **estética→geometria**, propor traduções candidatas escritas como relação mensurável, com critério de falha escrito antes | Fichas em `hipoteses/` |
+| **P3 — Hipóteses** | Para cada elo, em especial **filosofia→ética** e **estética→geometria**, propor traduções candidatas escritas como relação mensurável, com critério de falha escrito antes | Fichas em `hipoteses/` |
 | **P4 — Contraditório** | Refutar cada candidata (circularidade; φ como escolha cultural, Entrada 175; analogia vazia) | Registro da refutação |
 | **P5 — Teste** | Testar o que sobreviver. **Exige juízo humano independente** (ex.: comparar a medida geométrica com julgamentos de pessoas sobre harmonia ou justiça) | Resultado com controles |
 | **P6 — Síntese** | Atualizar os rótulos e decidir o que entra nos manifestos | Entrada, se o pesquisador pedir |

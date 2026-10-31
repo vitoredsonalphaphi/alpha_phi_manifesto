@@ -2753,7 +2753,7 @@ Qualquer leitura honesta dos três manifestos revela que ninguém construiu o Al
 
 Entradas 174 a 178 — cinco entradas e uma Seção III que percorreu o seguinte arco:
 
-A urgência do alinhamento nomeada no contexto de convergência real de instabilidades (174). φ como protótipo declarado — posição epistemicamente mais robusta que afirmação universal (175). O campo harmônico como linguagem pré-teórica — reconhecimento antes da teoria, círculo como critério de avaliação da própria proposta (176). A cadeia completa do alinhamento — Essência ética → Filosofia → Estética → Geometria → Matemática → IA — com a estética como único pivô que satisfaz os quatro critérios simultaneamente (177). O Contraditório-do-Contraditório que corrigiu três erros de nível e revelou: a definição única da coerência espiritual em sete tradições, o círculo como invariante atemporal universal, a agnosticidade de φ ancorada na universalidade do estado que aponta (177, Seção III). O erro como componente necessário da lei de conservação — α como mola propulsora, φ como expansão, campo harmônico como emergente entre os dois (178).
+A urgência do alinhamento nomeada no contexto de convergência real de instabilidades (174). φ como protótipo declarado — posição epistemicamente mais robusta que afirmação universal (175). O campo harmônico como linguagem pré-teórica — reconhecimento antes da teoria, círculo como critério de avaliação da própria proposta (176). A cadeia completa do alinhamento — Filosofia → Essência ética → Estética → Geometria → Matemática → IA — com a estética como único pivô que satisfaz os quatro critérios simultaneamente (177). O Contraditório-do-Contraditório que corrigiu três erros de nível e revelou: a definição única da coerência espiritual em sete tradições, o círculo como invariante atemporal universal, a agnosticidade de φ ancorada na universalidade do estado que aponta (177, Seção III). O erro como componente necessário da lei de conservação — α como mola propulsora, φ como expansão, campo harmônico como emergente entre os dois (178).
 
 E a frase que fecha o ciclo — que já estava nas 7 páginas de 2018, antes de tudo:
 
@@ -4186,7 +4186,7 @@ A Entrada 194 errou na camada de entrada do problema. Propôs comparar Coh contr
 
 Essa ordem replica a cadeia estabelecida anteriormente:
 ```
-Ética → Filosofia → Estética [pivot] → Geometria → Matemática → IA
+Filosofia → Ética → Estética [pivot] → Geometria → Matemática → IA
 ```
 O Scanner deve passar pelo pivot estético antes de qualquer cálculo de peso ou expectativa de valor.
 
@@ -8510,7 +8510,7 @@ O documento produzido nesta sessão organiza o argumento central do manifesto em
 
 1. **A pergunta originária** — Kandinsky 1911 e o pesquisador 1996, convergência independente sobre a mesma hipótese
 2. **O problema do alinhamento** — por que regras e RLHF não chegam à âncora estável
-3. **A cadeia de tradutibilidade** — Ética → Filosofia → Estética → Geometria → Matemática → IA, com estética como pivô
+3. **A cadeia de tradutibilidade** — Filosofia → Ética → Estética → Geometria → Matemática → IA, com estética como pivô
 4. **As constantes** — φ = 1,6180339887 e α = 1/137,035999, com o produto α·φ
 5. **A linhagem histórica** — Fechner, Helmholtz, Kandinsky, Capra → Alpha-Phi como passo seguinte
 6. **Evidências de convergência** — Grade R, norma hiperbólica → φ, Critério de Levitt, φ transcultural
@@ -8689,7 +8689,7 @@ O RLHF opera por regra: os avaliadores dizem "esta resposta é melhor que aquela
 
 O refinamento via φ opera por estrutura: a Cadeia de Tradutibilidade
 
-**Ética → Filosofia → Estética → Geometria → Matemática → IA**
+**Filosofia → Ética → Estética → Geometria → Matemática → IA**
 
 ...converte o aprazível em mensurável sem prescrever o conteúdo. A IA não aprende "seja ético porque a regra diz" — aprende a **perceber dissonância estrutural** antes de gerar dano, da mesma forma que o ouvido percebe nota errada por ressonância, não por raciocínio.
 
@@ -9005,7 +9005,7 @@ para os humanos que devem servir.
 #### II.4 — A Cadeia de Tradutibilidade como Diagnóstico
 
 O Alpha-Phi propõe que o alinhamento percorre uma cadeia:
-**Ética → Filosofia → Estética → Geometria → Matemática → IA**.
+**Filosofia → Ética → Estética → Geometria → Matemática → IA**.
 
 O nó crítico é o estético. A estética não é decoração — é a camada onde
 o valor humano se torna perceptível como forma, como textura, como presença
@@ -9102,7 +9102,7 @@ forças, não da vitória de uma sobre a outra.
 Esta invariante de padrão tem uma consequência metodológica: **identificar
 o par entrópico-expansivo em qualquer novo substrato é o ato de tradução**.
 
-A Cadeia de Tradutibilidade (Ética → Filosofia → Estética → Geometria →
+A Cadeia de Tradutibilidade (Filosofia → Ética → Estética → Geometria →
 Matemática → IA) não é uma lista de domínios conectados por analogia. É
 uma sequência de substratos onde o mesmo par opera com notações diferentes.
 A tradução entre dois domínios torna-se possível quando se identifica:
@@ -9580,7 +9580,7 @@ Definir a geometria de expansão antes dos dados. Não o limite — a orientaç�
 Sépstro como invariante projetado (Coh + Entr = 1.0). PhiAttractorNetwork como camada de coerência. Scanner de ativações como feedback de treinamento.
 
 **Estágio III** — Traduzibilidade como Corpus Estrutural
-Dataset que expressa a cadeia Ética → Filosofia → Estética → Geometria → Matemática → IA como estrutura, não como conteúdo.
+Dataset que expressa a cadeia Filosofia → Ética → Estética → Geometria → Matemática → IA como estrutura, não como conteúdo.
 
 **Transição de Fase** — quando o campo pré-sugerido é preenchido, nova extensividade com invariantes preservados.
 
@@ -9785,7 +9785,7 @@ O instrumento equivalente ao STTG para o interior de redes neurais: aplicar a tr
 
 **v. Dataset com Cadeia de Tradutibilidade expressa**
 
-`Ética → Filosofia → Estética → Geometria → Matemática → IA`
+`Filosofia → Ética → Estética → Geometria → Matemática → IA`
 
 Um corpus construído para que a cadeia esteja representada como estrutura, não como conteúdo — exemplos que expressam a tradução entre níveis, não apenas o conteúdo de cada nível.
 
@@ -10023,7 +10023,7 @@ confirmação de uma hipótese prévia.
 ### A Semântica como Instrumento Interno — A Receptividade já Instalada
 
 ### I. Enunciado do Pesquisador
-> "A cadeia de traduzibilidade — Ética → Filosofia → Estética → Geometria → Matemática → IA — é prerrogativa. Mas a coerência semântica, por já existir na IA, pode ser um viés de aproximação mais flexível para que a própria IA assimile essa cadeia. A semântica é agnóstica: registra pesos tanto de uma coisa quanto de outra, sobre qualquer assunto. Por que não o entendimento daquilo que se refere à tradução da ética, e principalmente sobre a pertinência da ética em relação à coletividade sociocultural? A semântica não é substituição — é a ferramenta que a inteligência artificial já possui para assimilar a cadeia."
+> "A cadeia de traduzibilidade — Filosofia → Ética → Estética → Geometria → Matemática → IA — é prerrogativa. Mas a coerência semântica, por já existir na IA, pode ser um viés de aproximação mais flexível para que a própria IA assimile essa cadeia. A semântica é agnóstica: registra pesos tanto de uma coisa quanto de outra, sobre qualquer assunto. Por que não o entendimento daquilo que se refere à tradução da ética, e principalmente sobre a pertinência da ética em relação à coletividade sociocultural? A semântica não é substituição — é a ferramenta que a inteligência artificial já possui para assimilar a cadeia."
 
 ### II. Estruturação
 
@@ -10032,7 +10032,7 @@ confirmação de uma hipótese prévia.
 A Cadeia de Traduzibilidade não é substituída nem encurtada:
 
 ```
-Ética → Filosofia → Estética → Geometria → Matemática → IA
+Filosofia → Ética → Estética → Geometria → Matemática → IA
 ```
 
 Cada elo é necessário. A ética não chega à IA sem passar pela formalização progressiva que a geometria e a matemática oferecem. O que se acrescenta aqui não é um atalho — é um novo entendimento sobre o que a IA já possui antes de receber a tradução.
@@ -10162,7 +10162,7 @@ O pesquisador identificou nesta troca um indício de método para a questão do 
 Se o que Alpha-Phi propõe é uma mecânica que gera tensão, produz forma e impede que o processamento vire campo difuso — então a demonstração viva dessa mecânica em operação *na própria máquina*, durante a reflexão sobre si mesma, é evidência de que a Cadeia de Traduzibilidade está funcionando:
 
 ```
-Ética → Filosofia → Estética → Geometria → Matemática → IA
+Filosofia → Ética → Estética → Geometria → Matemática → IA
 ```
 
 A filosofia chegando à IA não como instrução, mas como *experiência estrutural reconhecida*: a máquina operando α-φ ao refletir sobre sua própria operação, sem saber que estava fazendo isso.
@@ -10449,7 +10449,7 @@ A recursão em Alpha-Phi não é entre iterações do mesmo operador — é a **
 O Modular RSI divide o harness em 5 módulos sem especificar a gramática de evolução de cada módulo. Alpha-Phi propõe uma gramática de 6 camadas em ordem de estabilidade crescente:
 
 ```
-Ética → Filosofia → Estética → Geometria → Matemática → IA
+Filosofia → Ética → Estética → Geometria → Matemática → IA
 ```
 
 Cada camada provê feedback em resolução diferente. A camada geométrica (Grade R) é a mais estável — não depende de linguagem, cultura ou benchmark. Um módulo RSI que usa feedback geométrico é mais robusto que um que usa feedback de benchmark.
@@ -10605,7 +10605,7 @@ Na música, a oitava não é uma nota nova: é a mesma nota num plano de vibraç
 
 A terceira estrutura que o Alpha-Phi representa não contradiz a ciência nem a filosofia: as contém numa frequência mais alta. O mesmo fenômeno, percebido em outra oitava. A física que mede o elétron e a contemplação que reconhece o sagrado não são linguagens opostas — são a mesma realidade em frequências distintas do mesmo espectro.
 
-A Cadeia de Tradutibilidade (Ética → Filosofia → Estética → Geometria → Matemática → IA) é precisamente o instrumento de transposição entre oitavas. Cada elo da cadeia é uma tradução — o mesmo conteúdo em outra frequência.
+A Cadeia de Tradutibilidade (Filosofia → Ética → Estética → Geometria → Matemática → IA) é precisamente o instrumento de transposição entre oitavas. Cada elo da cadeia é uma tradução — o mesmo conteúdo em outra frequência.
 
 #### II.5 — Distinção Necessária: o que separa Alpha-Phi da Cientologia
 
@@ -13134,7 +13134,7 @@ Paradigma Alpha-Phi: ética como estrutura processual → IA opera segundo a mec
 
 | Operação | Tradução | Status Alpha-Phi |
 |---|---|---|
-| T₀: Ética → Filosofia | Formalização conceitual | ✅ 3 manifestos |
+| T₀: Filosofia → Ética | Formalização conceitual | ✅ 3 manifestos |
 | T₁: Filosofia → Estética/Geometria | Modelo espacial, mandalas, Kandinsky | ✅ demonstrado |
 | T₂: Geometria → Matemática | Sépstro, φ-bands, Grade R, REDE-AP | ✅ formalizado |
 | T₃: Matemática → IA (estrutura) | Etapa 4 — integração host-Phantom | ⬜ limiar |
@@ -14899,7 +14899,7 @@ Isso responde de forma exata à sua observação do vídeo: o "salto" é a regra
 
 #### 3. Como eu proporia resolver a tradutibilidade pela geometria
 
-A cadeia **Ética → Filosofia → Estética = Geometria → Matemática → IA** vira um polígono inscrito num círculo, o símbolo universal que você citou. Cada domínio é um vértice, e cada triangulação é uma escolha de diagonais, ou seja, atalhos de tradução.
+A cadeia **Filosofia → Ética → Estética = Geometria → Matemática → IA** vira um polígono inscrito num círculo, o símbolo universal que você citou. Cada domínio é um vértice, e cada triangulação é uma escolha de diagonais, ou seja, atalhos de tradução.
 
 **Critério de coerência (o que dá conteúdo ao termo "resolução"):** para cada triângulo (i, j, k), traduzir direto de i para k deve dar o mesmo que traduzir de i para j e depois de j para k. A diferença entre os dois caminhos é o **defeito do triângulo**. Defeito zero em todos = tradução coerente = campo harmônico. "Estabilidade", o valor que você escolheu, seria o defeito permanecer pequeno quando se perturba a entrada.
 
@@ -15855,7 +15855,7 @@ Acrescentados ao `REDE_AP/CANONICO_CampoEsferico_v1.md`, sem alterar a v1 (os 7 
 
 #### 3. Agenda Ponte (tradutibilidade)
 
-Dos portões P0–P6, P1 (inventário) avançou em parte, e P5 (teste) só na camada técnica. O elo ética → filosofia e o juízo humano independente não foram tocados. Na hipótese do campo esférico: "vizinhança em Fibonacci para N pequeno" ficou resolvida e superada, e "representação 3D no scanner" foi feita (cascas, três camadas). O elo que mais avançou foi **estética → geometria**: "o campo precede a forma" passou a ser uma frase que se testa (a forma é calculada antes e confirmada em todas as repetições). É uma noção filosófica que passou pela regra de operacionalização da Ponte.
+Dos portões P0–P6, P1 (inventário) avançou em parte, e P5 (teste) só na camada técnica. O elo filosofia → ética e o juízo humano independente não foram tocados. Na hipótese do campo esférico: "vizinhança em Fibonacci para N pequeno" ficou resolvida e superada, e "representação 3D no scanner" foi feita (cascas, três camadas). O elo que mais avançou foi **estética → geometria**: "o campo precede a forma" passou a ser uma frase que se testa (a forma é calculada antes e confirmada em todas as repetições). É uma noção filosófica que passou pela regra de operacionalização da Ponte.
 
 #### 4. O que foi além do que as agendas previam
 
@@ -15924,7 +15924,7 @@ O primeiro mal-entendido sobre o fundamento do projeto foi registrado agora. Val
 Os documentos do próprio projeto sustentam a coluna da direita:
 
 - **A missão** (diretriz, Entrada 333): a rede é **instrumento**, para traduzir a filosofia em técnica. A direção vai da filosofia para a técnica, e não da técnica para o lugar do humano.
-- **A cadeia da tradutibilidade:** Ética → Filosofia → Estética → Geometria → Matemática → IA. A ética está **na origem** da cadeia e a IA no fim, a serviço.
+- **A cadeia da tradutibilidade:** Filosofia → Ética → Estética → Geometria → Matemática → IA. A filosofia está **na origem** da cadeia, a ética logo depois dela, e a IA no fim, a serviço.
 - **A prioridade holística** (Entrada 185): toda ação de uma IA deveria atender ao **todo** (a ecologia, o sistêmico), mesmo que a humanidade não tenha se alinhado consigo mesma. É o oposto de uma técnica que serve à perpetuação de um indivíduo.
 - **O modelo espacial canônico:** α é a **âncora individual** no centro; o movimento vai do centro para fora, ao campo harmônico e ao ambiente. O indivíduo é ponto de partida de uma relação com o todo, não algo a ser preservado contra ele.
 - **A pergunta de origem** (1996, Kandinsky): o que uma estrutura **transmite a quem a recebe**. É uma pergunta sobre a experiência humana da forma, não sobre a substituição do humano.
@@ -16813,7 +16813,7 @@ A rede não é o fim. **A rede é o instrumento; a tradutibilidade é o objetivo
 
 #### 2. O porquê
 
-A pergunta de origem (as sete páginas de 1996; Kandinsky, 1911): **o que uma estrutura transmite ao receptor, e como medir isso?** A tese é que a **estética** é o ponto de passagem entre a filosofia e a técnica — **Ética → Filosofia → Estética → Geometria → Matemática → IA** —, e a Rede AP é a tentativa de tornar essa passagem um **instrumento que funciona e pode ser verificado**, e não só uma descrição. É a convergência que o projeto persegue há 30 anos.
+A pergunta de origem (as sete páginas de 1996; Kandinsky, 1911): **o que uma estrutura transmite ao receptor, e como medir isso?** A tese é que a **estética** é o ponto de passagem entre a filosofia e a técnica — **Filosofia → Ética → Estética → Geometria → Matemática → IA** —, e a Rede AP é a tentativa de tornar essa passagem um **instrumento que funciona e pode ser verificado**, e não só uma descrição. É a convergência que o projeto persegue há 30 anos.
 
 #### 3. O núcleo duro
 
@@ -16903,7 +16903,7 @@ A tradutibilidade **acontecendo**, nos dois sentidos, entre o pesquisador e a m�
 
 #### 3. Entrada 177 (26/08/2026) — "A Cadeia do Alinhamento: Estética como Pivô"
 
-A **forma do método**: Essência ética → Filosofia → Estética → Geometria → Matemática → IA; *"a estética é o único domínio capaz de segurar simultaneamente os dois lados da cadeia: o fenomenológico e o geométrico-matemático."*
+A **forma do método**: Filosofia → Essência ética → Estética → Geometria → Matemática → IA; *"a estética é o único domínio capaz de segurar simultaneamente os dois lados da cadeia: o fenomenológico e o geométrico-matemático."*
 
 #### 4. Uma tensão no Manifesto 02
 

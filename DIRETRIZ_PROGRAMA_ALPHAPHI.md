@@ -13,7 +13,7 @@ Criada em 20/10/2026 · Vitor Edson Delavi · Claude · revisar sempre que o cam
 
 A pergunta de origem, de 1996 (sete páginas: α, φ, Kandinsky, *"a ideia é quem nos cria e não nós a ela"*) e de Kandinsky (1911): **o que uma estrutura transmite ao receptor, e como medir isso?**
 
-A tese do projeto é que a **estética** é o ponto de passagem entre a filosofia e a técnica (Ética → Filosofia → Estética → Geometria → Matemática → IA). A rede neural AP é a tentativa de tornar essa passagem um **instrumento que funciona e pode ser verificado**, e não só uma descrição. Isso é a convergência entre ciência e filosofia que o projeto persegue há 30 anos.
+A tese do projeto é que a **estética** é o ponto de passagem entre a filosofia e a técnica (Filosofia → Ética → Estética → Geometria → Matemática → IA). A rede neural AP é a tentativa de tornar essa passagem um **instrumento que funciona e pode ser verificado**, e não só uma descrição. Isso é a convergência entre ciência e filosofia que o projeto persegue há 30 anos.
 
 ## 3. O método tem nome: programa de pesquisa
 

@@ -113,7 +113,7 @@ Termos a incluir:
 - [ ] **Crônica do Método** — 4ª forma documental; narrativa de como especulação → técnica
 - [ ] **Forças de Tensão Coadjuvantes** — forças que se auxiliam na produção do campo (Entrada 254)
 - [ ] **Par Entrópico-Expansivo** — âncora (detalhe, introspecção) + atrator (totalidade, campo)
-- [ ] **Cadeia de Tradutibilidade** — Ética → Filosofia → Estética → Geometria → Matemática → IA
+- [ ] **Cadeia de Tradutibilidade** — Filosofia → Ética → Estética → Geometria → Matemática → IA
 - [ ] **RLHF como Ecoatrator** — convergência acidental para o aprazível (Entradas 248-250)
 - [ ] **Grade R / Malha Romboédrica** — θ = arctan(2) ≈ 63,43°, Descoberta Tipo III
 

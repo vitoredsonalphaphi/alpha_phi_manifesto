@@ -106,7 +106,7 @@
 
 ## 4. O que os manifestos afirmam (teses, com fonte e status)
 
-**T1 — A cadeia.** *Ética → Filosofia → Estética → Geometria → Matemática → IA* (Entradas 177 e 261, chamada de "Cadeia de Traduzibilidade"; a Entrada 254 usa "Cadeia de Tradutibilidade"). Status por elo na Entrada 177: Matemática→IA e Geometria→Matemática **verificados** (a reauditar); Estética→Geometria **parcial**; Filosofia→Estética **articulado**; **Ética→Filosofia: o elo que falta**.
+**T1 — A cadeia.** *Filosofia → Ética → Estética → Geometria → Matemática → IA* (Entradas 177 e 261, chamada de "Cadeia de Traduzibilidade"; a Entrada 254 usa "Cadeia de Tradutibilidade"). Status por elo na Entrada 177: Matemática→IA e Geometria→Matemática **verificados** (a reauditar); Estética→Geometria **parcial**; Filosofia→Estética **articulado**; **Ética→Filosofia: o elo que falta**.
 
 **T2 — A estética como pivô.** Segundo a Entrada 177, a estética é o único domínio que segura ao mesmo tempo o lado fenomenológico (o que se vive como harmônico) e o geométrico-matemático (o que se mede). **Hipótese.**
 

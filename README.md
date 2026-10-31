@@ -50,7 +50,7 @@ O Alpha-Phi propõe que sim. E que essa âncora não está no comportamento — 
 O Alpha-Phi propõe uma cadeia de tradução em que cada nível converte o anterior para um idioma mais próximo da linguagem técnica — sem comprimir o conteúdo, apenas mudar o substrato.
 
 ```
-Ética → Filosofia → Estética → Geometria → Matemática → IA
+Filosofia → Ética → Estética → Geometria → Matemática → IA
                         ↑
              pivô — único domínio que segura simultaneamente
              o fenomenológico e o matemático
