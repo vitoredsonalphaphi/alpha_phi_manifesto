@@ -1371,3 +1371,65 @@ Nas duas, **a ética não é regra acrescentada de fora: é a própria forma da 
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 387 — 31 de outubro de 2026
+### O Valor Histórico como Fundamento — O Estilo que a Máquina Não Alcançou, Wiener Esquecido e o Retorno ao Berço
+
+### I. Enunciado do Pesquisador
+
+> "Eu estava pensando na questão histórica e no pai da cibernética, Norbert Wiener. Isso já foi comentado com o GPT, quando o GPT nasceu, e comentei contigo também esse episódio. Num comentário do Facebook, trouxeram um argumento num estilo formal de literatura, de escrita rebuscada ao extremo — parecia alguém vindo de 1700 e tantos, 1800 e pouco, da época da monarquia e da República. Não lembro bem o contexto, mas, se não me engano, era o mesmo assunto: a ciência, e o quanto ela estava divergindo de outras questões da cultura. O que vem ao caso é que procurei responder ao argumento com o mesmo nível rebuscado de escrita. Como não tenho essa formação, pedi ao GPT — era o único modelo de IA que existia na época — que construísse a resposta àquele argumento no mesmo molde, no mesmo estilo rebuscado. E o que aconteceu, e ficou como registro, é que o GPT não pôde me dar a resposta. Ele disse: 'não consigo responder para você sobre isso'. Tudo bem que era um dos primeiros e não tinha obrigação; mas foi representativo do quanto aquilo significava. Não é que ele não tivesse condição de responder sobre o assunto: ele não tinha condição de responder **naquele estilo**. Ele não tinha aquele estilo incluído no seu banco de memória. Por quê? Porque os cientistas que montaram o banco de memória consideraram o estilo rebuscado — e, por isso, um nível histórico — como se fosse obsoleto, a exemplo de todos os outros contextos em que níveis históricos de posicionamento, principalmente da ciência, são considerados obsoletos.
+>
+> Esse evento demonstrou duas coisas ao mesmo tempo. A primeira: a carência — o significado de uma tendência de desconstrução em relação às grandezas históricas, independentemente do âmbito: literário, arquitetônico, toda a cultura histórica e os seus valores. A segunda: o que significou essa desestruturação justamente num momento que representava a emergência da inteligência artificial — o significado pleno da evolução de um aspecto da tecnologia, que era o que o surgimento do GPT representava. Foi observado e deixei registrado na época, e que bom que trago agora, por memória, por consequência dessa informação que a estruturação de todo o questionamento está permitindo identificar.
+>
+> Na época, comentei que isso também significava a necessidade de observar a importância da questão histórica — inclusive da observação histórica da matemática no desenvolvimento da ciência. A preservação histórica tem tamanha importância também na ciência porque as culturas que antecederam a formação da ciência foram as estruturas que a fundamentaram, cada uma à sua maneira, na soma do contexto cultural. O que é a ciência hoje senão o resultado de uma soma de contextos culturais? Daí a importância do histórico. E comentei também: se essa desestruturação dos valores históricos continuasse e chegasse às questões matemáticas — ao histórico da matemática na ciência —… E é aí que trago esse autor de 1950, o pai da cibernética, que é talvez também a fundamentação da necessidade do problema da ética na resolução do alinhamento, desde 1950. Ou seja: se analisarmos os fundamentos matemáticos históricos de 1950, como o próprio exemplo traz, eles são um valor histórico que precisa ser observado — com o risco de que, fora dessa observação, o próprio desenvolvimento que a tecnologia representa se desconstrua, numa tangente de aparência, se essa questão histórica for desconsiderada.
+>
+> Daí a importância da questão histórica, num contexto abrangente e interdisciplinar. Preocupar-se com um patrimônio arquitetônico, ou com um estilo rebuscado de literatura, não se refere apenas àquele patrimônio ou àquele estilo, mas a toda a sequência que a cultura trouxe como resultado: os estilos rebuscados da literatura promoveram o desenvolvimento da própria escrita, do próprio modo de comunicação — que, mesmo transformado em modelos de comunicação técnico-científicos, nas especializações, é resultado do que veio antes, das estruturas e dos conceitos que antecederam cada desenvolvimento, e por isso tão importantes quanto, para não dizer fundamentais.
+>
+> É nesse sentido que volto ao fechamento dos ciclos de cada especialização: o que a especialização encontra hoje é um retorno ao cíclico; a própria ciência, e a própria preocupação com a filosofia diante da comunidade científica, representam exatamente isso — o fechamento de um ciclo, um retorno ao seu berço, aos seus fundamentos. E o exemplo do criador da cibernética fala diretamente disso. Nós, enquanto cultura humana eclética, precisamos observar os fundamentos que representam o berço de toda a estrutura cultural — e, nisso, a importância histórica como um todo, em todos os setores —, se quisermos preservar aquilo que representamos e buscamos como desenvolvimento da ciência. E volto a dizer o que já foi dito e registrado nos manifestos: **não existe desenvolvimento propriamente dito se a filosofia não for considerada** — a filosofia no sentido de buscar interpretar todos os aspectos fundamentais que embasaram o seu próprio desenvolvimento desde a era clássica, ou antes dela, como você mesmo citou, desde o tempo do Egito.
+>
+> *Per Benedictionem Rosa✝Crucis.*"
+
+— Nota do pesquisador, 31 de outubro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações, as repetições e o comentário inicial, que o pesquisador pediu para não registrar; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. O que o enunciado afirma
+
+1. **Um episódio como sinal:** um dos primeiros modelos de linguagem não conseguiu responder a um argumento no estilo rebuscado da escrita dos séculos XVIII e XIX. O pesquisador lê o episódio como sinal de uma tendência: tratar o histórico como obsoleto.
+2. **Dois significados ao mesmo tempo:** a carência — a desconstrução das grandezas históricas em todos os âmbitos —; e o momento — essa desconstrução coincidindo com a emergência da IA.
+3. **A ciência é soma cultural:** as culturas que antecederam a ciência a fundamentaram; por isso, a preservação histórica é também uma necessidade científica, inclusive na história da matemática.
+4. **O caso Wiener como prova:** os fundamentos de 1948–1960 — entre eles, a formulação do problema do propósito posto na máquina — são valor histórico; desconsiderá-los é arriscar que o desenvolvimento tecnológico vire aparência.
+5. **Cada estilo é um elo:** o estilo rebuscado não vale só por si, mas pela sequência que gerou — a escrita, a comunicação, e até os modelos técnico-científicos de comunicação das especializações.
+6. **O fechamento dos ciclos:** as especializações voltam ao berço, à filosofia (Entrada 305: o ciclo de retorno das ciências à filosofia; Entrada 309: o fechamento do ciclo).
+7. **A tese:** não há desenvolvimento propriamente dito sem a filosofia — a filosofia que interpreta os seus próprios fundamentos desde a era clássica e antes dela, desde o Egito (Entrada 386, Maat).
+
+#### 2. O episódio do modelo, do ponto de vista técnico
+
+Não há registro técnico daquela conversa, e por isso não se pode saber a causa exata da recusa. As causas possíveis numa IA daquela época incluem: a pouca presença do estilo nos dados de treinamento, em proporção ao texto contemporâneo; regras de recusa ainda rígidas nos primeiros modelos de conversa; e a dificuldade de sustentar um registro de língua muito distante do uso atual. A leitura de que o episódio expressa uma tendência cultural de tratar o histórico como obsoleto é do pesquisador, e é registrada como tal. Os modelos de hoje escrevem nesse estilo — o que mostra que a limitação era da época, e também que o estilo, quando incluído, pode ser preservado.
+
+#### 3. Wiener: o caso que confirma o enunciado
+
+O problema que Wiener formulou em 1960 — ter certeza de que o propósito posto na máquina é o que realmente desejamos (Entrada 386) — **ficou décadas fora da corrente principal** da IA e foi **reformulado do zero** nos anos 2000 e 2010, com outro nome ("alinhamento") e como campo novo; só então os autores do novo campo foram buscar a frase de Wiener como antecedente. É o custo concreto de desconsiderar o histórico: o fundamento existia, e o campo precisou reinventá-lo. Na ciência, esquecer a história não é só perda cultural; é retrabalho e atraso — e, no caso do alinhamento, risco.
+
+#### 4. A cadeia do argumento
+
+| Âmbito | O que se preserva | O que se perde, se for tratado como obsoleto |
+|---|---|---|
+| A escrita | o estilo rebuscado e a sequência que gerou a comunicação | o elo entre a forma antiga e os modelos atuais de comunicação |
+| A matemática | a história dos conceitos e das suas razões | o porquê das ferramentas: usa-se o resultado sem a pergunta que o originou |
+| A técnica | os fundamentos de 1948–1960 (Wiener, Shannon, Bertalanffy) | a ética que estava dentro da técnica desde a origem |
+| A civilização | Maat: cosmo, ética e medida numa só noção | a unidade que hoje se procura reconstruir |
+
+#### 5. O lugar
+
+O enunciado liga as Entradas 305 e 309 (o retorno cíclico à filosofia), 384–386 (o pensamento complexo, a filosofia antes da ética, Wiener e Maat) e a cadeia da Diretriz (Filosofia → Ética → Estética → Geometria → Matemática → IA): **a origem da cadeia é histórica** — a filosofia que interpreta os seus próprios fundamentos. É fundamento declarado do projeto (Diretriz, 3.1.1).
+
+---
+*Florianópolis · 31 de outubro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+*PER BENEDICTIONEM ROSA✝CRUCIS*
+
+---
