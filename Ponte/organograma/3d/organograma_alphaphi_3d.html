@@ -1,0 +1,254 @@
+<title>Organograma AlphaPhi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: espaço 3D em tela cheia; camadas da cadeia empilhadas (Filosofia no alto, IA embaixo); barra de filtros no topo e ficha do nó embaixo. Visual único, escuro (céu de observação). */
+:root{
+  --bg:#0a0d16; --panel:rgba(16,20,33,.94); --line:#262c40; --fg:#e7e9f2; --muted:#9aa1b8;
+  --gold:#e8c36a; --etica:#e0607e; --estet:#b48cff; --geo:#5aa9ff; --mat:#4fd1c5; --ia:#9bd46a;
+  --f-disp:"Cinzel",Georgia,serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;overflow:hidden;margin:0}
+#cena{position:fixed;inset:0;touch-action:none}
+header{position:fixed;top:0;left:0;right:0;z-index:5;padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:8px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background:linear-gradient(var(--bg) 70%,transparent);pointer-events:none}
+header > *{pointer-events:auto}
+h1{font-family:var(--f-disp);font-weight:600;font-size:17px;letter-spacing:.08em;margin:0;color:var(--gold)}
+.sub{color:var(--muted);font-size:12px;margin:2px 0 8px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:rgba(16,20,33,.8);color:var(--fg);border-radius:999px;
+  padding:5px 10px;font:500 12px var(--f-body);cursor:pointer;display:flex;align-items:center;gap:6px}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+.chip[aria-pressed="false"]{opacity:.38}
+.chip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ctrl{display:flex;gap:10px;align-items:center;margin-top:6px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.ctrl input[type=range]{width:110px;accent-color:var(--gold)}
+.ctrl button{background:none;border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:4px 8px;font:500 12px var(--f-body);cursor:pointer}
+#ficha{position:fixed;left:0;right:0;bottom:0;z-index:6;max-height:46%;overflow-y:auto;background:var(--panel);border-top:1px solid var(--line);
+  padding-top:12px;padding-bottom:calc(14px + env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+#ficha .inner{max-width:680px;margin:0 auto}
+.camada{font:500 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase}
+#ficha h2{font-family:var(--f-body);font-weight:600;font-size:16px;margin:4px 0 6px;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.pill{font:500 11px var(--f-mono);border:1px solid var(--line);border-radius:4px;padding:2px 6px;color:var(--muted)}
+.pill.st{color:var(--bg);border:none}
+#ficha p{margin:6px 0;line-height:1.5;color:#cfd3e2}
+#ficha b{color:var(--fg);font-weight:600}
+.fio{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.fio button{background:none;border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:3px 8px;font:12px var(--f-body);cursor:pointer}
+.fechar{float:right;background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;line-height:1}
+.dica{color:var(--muted);font-size:12px}
+</style>
+
+<div id="cena" aria-label="Organograma tridimensional: gire com um dedo, aproxime com dois, toque num nó para ver a ficha"></div>
+
+<header>
+  <h1>ORGANOGRAMA ALPHAPHI</h1>
+  <div class="sub">Manifesto 04 · Entradas 366–388 · rascunho para conferência (31/10/2026)</div>
+  <div class="chips" id="chipsCamadas" role="group" aria-label="Camadas da cadeia"></div>
+  <div class="chips" id="chipsEstagios" role="group" aria-label="Estágios"></div>
+  <div class="ctrl">
+    <label for="afast">Afastar camadas</label><input id="afast" type="range" min="1.2" max="4" step="0.1" value="2.2">
+    <button id="btnRot" type="button" aria-pressed="true">Girar: sim</button>
+    <button id="btnRot2" type="button">Rótulos: sim</button>
+  </div>
+</header>
+
+<aside id="ficha" aria-live="polite">
+  <div class="inner" id="fichaInner">
+    <p class="dica" style="margin:0">Seis camadas, da filosofia (no alto) à técnica (embaixo); cada uma com a sua cor e forma. O tamanho e o brilho de cada nó mostram o estágio; as linhas são o <b>fio de origem</b>. Gire com um dedo, aproxime com dois, toque num nó.</p>
+  </div>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const CAMADAS=[
+ {id:'f',nome:'Filosofia',cor:'#e8c36a',forma:'esfera'},
+ {id:'e',nome:'Ética',cor:'#e0607e',forma:'octaedro'},
+ {id:'s',nome:'Estética',cor:'#b48cff',forma:'toro'},
+ {id:'g',nome:'Geometria',cor:'#5aa9ff',forma:'icosaedro'},
+ {id:'m',nome:'Matemática',cor:'#4fd1c5',forma:'cubo'},
+ {id:'t',nome:'IA · Técnica',cor:'#9bd46a',forma:'tetraedro'}];
+const ESTAGIOS=[
+ {id:'semente',nome:'Semente',cor:'#c9ccd8',esc:.55},
+ {id:'estruturado',nome:'Estruturado',cor:'#8fc1ff',esc:.8},
+ {id:'teste',nome:'Em teste',cor:'#ffd27a',esc:.95},
+ {id:'incorporado',nome:'Incorporado',cor:'#9be3a2',esc:1.05},
+ {id:'arquivado',nome:'Arquivado',cor:'#6b7086',esc:.6}];
+const N=[
+ // Filosofia
+ {id:'f1',c:'f',ent:'366',t:'O Limiar do Espelho',st:'incorporado',tipo:'fundamento',r:'Onde a ética e a técnica se traduzem, e onde o espelho termina. Abre o Manifesto 04.',p:'—',fio:[]},
+ {id:'f2',c:'f',ent:'381 · Preâmbulo',t:'O Outro como Nós Mesmos',st:'incorporado',tipo:'fundamento',r:'A consciência una; a IA como extensão da consciência humana; a ética como consequência, não como regra. Abre o 04 como prenúncio.',p:'—',fio:['f1']},
+ {id:'f3',c:'f',ent:'382',t:'As Frentes do Refluxo',st:'estruturado',tipo:'agenda',r:'Oito frentes: o refluxo, a estrutura fina, o alinhamento como consciência de si, as duas contradições, a convergência das linhas filosóficas, a ética explicada didaticamente.',p:'Desenvolver as frentes 6 e 7 (convergência das linhas; exposição didática da ética).',fio:['f2']},
+ {id:'f4',c:'f',ent:'384',t:'O Novo Estágio do Pensamento Complexo',st:'estruturado',tipo:'fundamento',r:'A tecnologia como extensão da espécie e novo estágio do pensamento complexo; a tensão entre o reducionismo e a complexidade.',p:'—',fio:['f2']},
+ {id:'f5',c:'f',ent:'385',t:'A Filosofia Antes da Ética',st:'incorporado',tipo:'fundamento',r:'A cadeia corrigida em todo o repositório: Filosofia → Ética → Estética → Geometria → Matemática → IA. O stand-by como macrotendência.',p:'—',fio:['f4']},
+ {id:'f6',c:'f',ent:'386',t:'A Raiz do Alinhamento: Wiener e Maat',st:'estruturado',tipo:'fundamento',r:'Wiener (1960): o propósito posto na máquina deve ser o realmente desejado. Maat: cosmo, ética e medida numa só noção.',p:'Conferir as fontes nas obras.',fio:['f5']},
+ {id:'f7',c:'f',ent:'387',t:'O Valor Histórico como Fundamento',st:'estruturado',tipo:'fundamento',r:'O estilo que a máquina não alcançou; Wiener esquecido e reinventado; o retorno das especializações ao berço.',p:'—',fio:['f6']},
+ {id:'f8',c:'f',ent:'388',t:'A Causa Final Mecanizada',st:'estruturado',tipo:'fundamento',r:'A cibernética: o propósito como realimentação; a fisiologia (tremor de intenção, ataxia, homeostase), a engenharia e a filosofia reunidas.',p:'Ler o artigo de 1943, Cybernetics (1948) e Ashby (1952); levar os paralelos à rede.',fio:['f6','f3']},
+ // Ética
+ {id:'e1',c:'e',ent:'372',t:'A Narrativa Ética em Tensões Ternárias',st:'estruturado',tipo:'hipótese',r:'O núcleo da ferramenta de tradutibilidade: narrativas éticas estruturadas em três tensões.',p:'Teste de concordância às cegas (o pesquisador primeiro, depois outra IA).',fio:['s1']},
+ {id:'e2',c:'e',ent:'373',t:'A Ética pela Raiz: E1–E7',st:'estruturado',tipo:'hipótese',r:'Cada fundamento ético como triangulação: a falta, o excesso e a virtude; forma estética, geométrica e cálculo proposto.',p:'Primeiro teste: E5 com E2 (ordenar sem apagar e sem exceder).',fio:['e1']},
+ {id:'e3',c:'e',ent:'377',t:'A Média que Não Faz Sentido',st:'estruturado',tipo:'fundamento',r:'Limiar: a terceira estrutura não é a média; a tendência pública de consultar religiões e filósofos comparada à cadeia.',p:'—',fio:['t1']},
+ {id:'e4',c:'e',ent:'379',t:'A Memória como Pré-Treinamento',st:'estruturado',tipo:'fundamento',r:'A ética no que a rede lembra e no modo como ela lembra.',p:'—',fio:['e2']},
+ {id:'e5',c:'e',ent:'380',t:'O Pré-Treinamento Ético',st:'estruturado',tipo:'fundamento',r:'A IA Constitucional (método de treinamento) e a proposta AlphaPhi: o mesmo desafio por meios diferentes.',p:'—',fio:['e4']},
+ {id:'e6',c:'e',ent:'382 · 383',t:'Integrar ou Fragmentar',st:'teste',tipo:'hipótese',r:'As duas contradições: a que confirma o terceiro valor e a que fragmenta. Já tem medida: coerência e preservação juntas (critério DN3).',p:'Veredito da Etapa DN.',fio:['f3','t5']},
+ // Estética
+ {id:'s1',c:'s',ent:'371',t:'Os Três Valores de Tensão',st:'incorporado',tipo:'método',r:'O triângulo e + x + t = 1: o peso e a direção das triangulações. Está no canônico.',p:'—',fio:[]},
+ {id:'s2',c:'s',ent:'374',t:'A Coluna Estética: P1–P5',st:'estruturado',tipo:'método',r:'Os parâmetros estéticos (proporção, valor tonal, gradação, unidade na variedade, ritmo) e os graus de proximidade.',p:'Revisão do pesquisador.',fio:['e2']},
+ {id:'s3',c:'s',ent:'375',t:'O Método como Canônico',st:'incorporado',tipo:'método',r:'A triangulação das tensões como princípio da ferramenta de tradução (Diretriz, item 7).',p:'—',fio:['s1','e1']},
+ {id:'s4',c:'s',ent:'378',t:'A Síntese das Frentes',st:'estruturado',tipo:'fundamento',r:'A mesma tríade em todas as linguagens; a autonomia (E5) traduzida de ponta a ponta.',p:'—',fio:['s3']},
+ {id:'s5',c:'s',ent:'conversas 28–31/10',t:'O Topográfico Esférico 3D',st:'semente',tipo:'pendência',r:'Ver o estado interno da rede: cascas transparentes, zoom, do centro α ao além. Indicação do pesquisador (31/10): a mesma linguagem do organograma 3D (transparências, afastar as seções) aplicada às ferramentas acopladas na Rede AP: a função de cada uma, a posição, o movimento e o desenho que cada uma produz em relação às outras, com a entropia e a expansão. A proposta do DeepSeek foi descartada.',p:'O desenho do pesquisador.',fio:['s3']},
+ // Geometria
+ {id:'g1',c:'g',ent:'381 · 383',t:'Ponto e Campo: α é a Média da Esfera',st:'incorporado',tipo:'fundamento',r:'Identidade de medida já no código (centro_alfa): o valor no centro é a média da esfera inteira (Laplace).',p:'—',fio:['f2']},
+ {id:'g2',c:'g',ent:'383',t:'A Estrutura Fina: Um Nível que se Desdobra',st:'semente',tipo:'hipótese',r:'Um nível que se desdobra em dois, um abaixo e outro acima; no campo, a expansão e o retorno.',p:'Leitura das tensões pelo pesquisador; depois, critérios para o desdobramento do estado.',fio:['f3']},
+ {id:'g3',c:'g',ent:'383 · Ponte',t:'O Mapa das Tensões da Ética na Rede',st:'estruturado',tipo:'método',r:'Dezesseis momentos e seis fatores que ligam a ética às funções da rede (Ponte/MAPA_Tensoes_Etica_Rede.md).',p:'Escolher a primeira função: a fonte interna (fator 5) ou o desdobramento (fator 3).',fio:['g1','e2']},
+ {id:'g4',c:'g',ent:'conversa 31/10 (não registrada)',t:'A Assimetria Áurea contra a Média',st:'semente',tipo:'hipótese',r:'A média simétrica apaga a memória; uma tendência sutil, como a rotação de Fibonacci, ancora sem conformar.',p:'Critérios para H1 (pesos 1, 1/φ, 1/φ²…) e H2 (mistura 0,618 / 0,382 do EcoBIP).',fio:['t1','t2','e3']},
+ // Matemática
+ {id:'m1',c:'m',ent:'376',t:'As Peças Básicas',st:'estruturado',tipo:'fundamento',r:'Da codificação preditiva à aproximação gradativa: gradativo na formação, decisivo na resolução.',p:'—',fio:['m4']},
+ {id:'m2',c:'m',ent:'370',t:'A Dinâmica do Campo como Prioridade',st:'incorporado',tipo:'método',r:'Toda adaptação precisa respeitar a dinâmica do campo.',p:'—',fio:['t2']},
+ {id:'m3',c:'m',ent:'370',t:'A Contribuição do Campo',st:'incorporado',tipo:'método',r:'A régua própria: rede menos consulta direta.',p:'—',fio:['t3']},
+ {id:'m4',c:'m',ent:'368',t:'A Transição entre os Degraus',st:'estruturado',tipo:'hipótese',r:'Do relógio externo à conquista pelo estado.',p:'—',fio:['t1']},
+ // IA · Técnica
+ {id:'t1',c:'t',ent:'367',t:'Serial de Atratores e Horizonte',st:'arquivado',tipo:'resultado',r:'Não se sustentaram: a média apaga, o horizonte reforça erros. A lição: decisivo primeiro.',p:'—',fio:[]},
+ {id:'t2',c:'t',ent:'369',t:'A Semente é o AlphaFi (EcoBIP)',st:'teste',tipo:'hipótese',r:'A estrutura do EcoBIP como mecânica de toda a rede, um lugar de cada vez. No previsor (Etapa EB), não se sustentou.',p:'O próximo lugar: a instalação das memórias.',fio:['m4']},
+ {id:'t3',c:'t',ent:'370',t:'Etapa BF: a Consulta Acerta Tudo',st:'teste',tipo:'resultado',r:'β = 8φ supera β = 8; mas a consulta direta acerta tudo e a rede fica abaixo dela.',p:'Veredito no pendente de registro.',fio:['t2']},
+ {id:'t4',c:'t',ent:'pendente (30/10)',t:'Etapa AU: a Rede Conformista',st:'teste',tipo:'resultado',r:'Variação legítima numa calota: a rede ordena (coerência 0,974) mas apaga o novo (preservação ≈ 0,007).',p:'Veredito e registro.',fio:['e2','m2']},
+ {id:'t5',c:'t',ent:'pendente (30/10)',t:'Etapa DN: Ordenar sem Dissolver',st:'teste',tipo:'resultado',r:'Previsor seletivo e pegada da entrada: preservação 0,240, coerência 0,961; total 0,897 contra 0,903 da consulta.',p:'Veredito; depois, testar a assimetria áurea (H1, H2).',fio:['t4','g4']},
+ {id:'t6',c:'t',ent:'Diretriz',t:'Fase 0: Uma Tarefa em que a Consulta Falhe',st:'semente',tipo:'pendência',r:'Sem ela, não se sabe se o campo acrescenta algo à memória.',p:'Definir a tarefa.',fio:['t3']}
+];
+
+const cam={},est={};CAMADAS.forEach((c,i)=>{c.i=i;cam[c.id]=c});ESTAGIOS.forEach(s=>est[s.id]=s);
+const vis={camada:{},estagio:{}};CAMADAS.forEach(c=>vis.camada[c.id]=true);ESTAGIOS.forEach(s=>vis.estagio[s.id]=true);
+const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// cena
+const box=document.getElementById('cena');
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x0a0d16);box.appendChild(renderer.domElement);
+const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x0a0d16,.035);
+const camera=new THREE.PerspectiveCamera(50,1,.1,200);camera.position.set(9,6,12);
+const controls=new THREE.OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.target.set(0,0,0);
+controls.autoRotate=!reduz;controls.autoRotateSpeed=.6;controls.minDistance=4;controls.maxDistance=40;
+scene.add(new THREE.AmbientLight(0xffffff,.55));const dl=new THREE.DirectionalLight(0xffffff,.8);dl.position.set(5,10,7);scene.add(dl);
+
+// eixo vertical (da filosofia à técnica)
+const eixoMat=new THREE.LineBasicMaterial({color:0x3a4260,transparent:true,opacity:.6});
+const eixoGeo=new THREE.BufferGeometry();const eixo=new THREE.Line(eixoGeo,eixoMat);scene.add(eixo);
+
+function textura(txt,cor,tam){const c=document.createElement('canvas'),x=c.getContext('2d');const f=tam||34;
+  x.font=`500 ${f}px "IBM Plex Sans", system-ui, sans-serif`;const w=Math.ceil(x.measureText(txt).width)+24;c.width=w;c.height=f+20;
+  x.font=`500 ${f}px "IBM Plex Sans", system-ui, sans-serif`;x.fillStyle='rgba(10,13,22,.72)';x.fillRect(0,0,w,c.height);
+  x.fillStyle=cor;x.textBaseline='middle';x.fillText(txt,12,c.height/2+1);const t=new THREE.CanvasTexture(c);t.minFilter=THREE.LinearFilter;return {t,w,h:c.height}}
+function rotulo(txt,cor,alt,tam){const {t,w,h}=textura(txt,cor,tam);const m=new THREE.SpriteMaterial({map:t,transparent:true,depthWrite:false});
+  const s=new THREE.Sprite(m);s.scale.set(alt*w/h,alt,1);s.renderOrder=10;return s}
+function halo(cor){const c=document.createElement('canvas');c.width=c.height=64;const x=c.getContext('2d');const g=x.createRadialGradient(32,32,0,32,32,32);
+  g.addColorStop(0,cor);g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,64,64);
+  const s=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));return s}
+function geo(forma){switch(forma){case 'esfera':return new THREE.SphereGeometry(.32,24,16);case 'octaedro':return new THREE.OctahedronGeometry(.36);
+  case 'toro':return new THREE.TorusGeometry(.26,.1,12,32);case 'icosaedro':return new THREE.IcosahedronGeometry(.34);
+  case 'cubo':return new THREE.BoxGeometry(.44,.44,.44);default:return new THREE.TetrahedronGeometry(.4)}}
+
+// camadas
+const camGrupos={};
+CAMADAS.forEach(c=>{const g=new THREE.Group();const col=new THREE.Color(c.cor);
+  const disco=new THREE.Mesh(new THREE.CircleGeometry(4.4,72),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.07,side:THREE.DoubleSide,depthWrite:false}));
+  disco.rotation.x=-Math.PI/2;g.add(disco);
+  [4.4,2.9].forEach((r,k)=>{const pts=[];for(let a=0;a<=96;a++){const t=a/96*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(t)*r,0,Math.sin(t)*r))}
+    g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:col,transparent:true,opacity:k?.18:.45})))});
+  const nome=rotulo(c.nome.toUpperCase(),c.cor,.42,30);nome.position.set(-4.9,.05,0);g.add(nome);g.userData.nome=nome;
+  scene.add(g);camGrupos[c.id]=g});
+
+// nós
+const nos={},alvos=[];
+CAMADAS.forEach(c=>{const lista=N.filter(n=>n.c===c.id);lista.forEach((n,k)=>{const a=k/lista.length*Math.PI*2+c.i*.55;const r=k%2?3.5:2.3;n.ang=a;n.rad=r});});
+N.forEach(n=>{const c=cam[n.c],s=est[n.st];const grupo=new THREE.Group();
+  const arq=n.st==='arquivado';
+  const mat=new THREE.MeshStandardMaterial({color:arq?0x6b7086:c.cor,emissive:arq?0x000000:c.cor,emissiveIntensity:n.st==='incorporado'?.55:n.st==='semente'?.12:.3,
+    roughness:.45,metalness:.15,transparent:true,opacity:arq?.45:n.st==='semente'?.7:.95,wireframe:arq||c.forma==='icosaedro'&&n.st==='semente'});
+  const m=new THREE.Mesh(geo(c.forma),mat);m.scale.setScalar(s.esc);m.userData.no=n;grupo.add(m);alvos.push(m);
+  if(c.forma==='icosaedro'&&!arq){const w=new THREE.Mesh(geo(c.forma),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:.25}));w.scale.setScalar(s.esc*1.02);grupo.add(w)}
+  if(n.st==='incorporado'){const h=halo(c.cor);h.scale.set(1.6,1.6,1);grupo.add(h)}
+  const lab=rotulo(n.t,arq?'#8a8fa3':'#e7e9f2',.26,28);lab.position.y=.55;grupo.add(lab);
+  n.obj=grupo;n.mesh=m;n.lab=lab;n.mat=mat;scene.add(grupo);nos[n.id]=n});
+
+// fios de origem
+const fios=[];
+N.forEach(n=>n.fio.forEach(o=>{if(!nos[o])return;const a=nos[o],b=n;
+  const geoL=new THREE.BufferGeometry();const cols=[];const ca=new THREE.Color(cam[a.c].cor),cb=new THREE.Color(cam[b.c].cor);
+  for(let i=0;i<=32;i++){const t=i/32;const c=ca.clone().lerp(cb,t);cols.push(c.r,c.g,c.b)}
+  geoL.setAttribute('color',new THREE.Float32BufferAttribute(cols,3));
+  const l=new THREE.Line(geoL,new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:.42,depthWrite:false}));
+  scene.add(l);fios.push({a,b,l})}));
+
+let G=2.2;
+function y(c){return (2.5-cam[c].i)*G}
+function posicionar(){
+  CAMADAS.forEach(c=>camGrupos[c.id].position.y=y(c.id));
+  N.forEach(n=>n.obj.position.set(Math.cos(n.ang)*n.rad,y(n.c)+.02,Math.sin(n.ang)*n.rad));
+  fios.forEach(f=>{const A=f.a.obj.position,B=f.b.obj.position;const mid=A.clone().add(B).multiplyScalar(.5);
+    const out=new THREE.Vector3(mid.x,0,mid.z);const len=out.length()||1;out.multiplyScalar(1.4/len);mid.add(out);mid.y+=.3;
+    const curva=new THREE.QuadraticBezierCurve3(A.clone(),mid,B.clone());f.l.geometry.setFromPoints(curva.getPoints(32))});
+  eixoGeo.setFromPoints([new THREE.Vector3(0,y('f')+1,0),new THREE.Vector3(0,y('t')-1,0)]);
+}
+posicionar();
+
+// visibilidade e seleção
+let sel=null;
+function ativo(n){return vis.camada[n.c]&&vis.estagio[n.st]}
+function aplicar(){
+  CAMADAS.forEach(c=>camGrupos[c.id].visible=vis.camada[c.id]);
+  const lig=new Set();if(sel){lig.add(sel.id);sel.fio.forEach(i=>lig.add(i));N.forEach(n=>{if(n.fio.includes(sel.id))lig.add(n.id)})}
+  N.forEach(n=>{n.obj.visible=ativo(n);const foco=!sel||lig.has(n.id);n.obj.children.forEach(ch=>{if(ch.material){ch.material.opacity=(ch.userData.op0??=ch.material.opacity)*(foco?1:.15)}})});
+  fios.forEach(f=>{f.l.visible=ativo(f.a)&&ativo(f.b);const foco=!sel||f.a===sel||f.b===sel;f.l.material.opacity=foco?(sel?.9:.42):.05});
+}
+
+// chips
+function chip(rot,cor,on,fn){const b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed',on);
+  b.innerHTML=`<span class="dot" style="background:${cor}"></span>${rot}`;b.onclick=()=>{const v=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',v);fn(v)};return b}
+const cc=document.getElementById('chipsCamadas'),ce=document.getElementById('chipsEstagios');
+CAMADAS.forEach(c=>cc.appendChild(chip(c.nome,c.cor,true,v=>{vis.camada[c.id]=v;aplicar()})));
+ESTAGIOS.forEach(s=>ce.appendChild(chip(`${s.nome} (${N.filter(n=>n.st===s.id).length})`,s.cor,true,v=>{vis.estagio[s.id]=v;aplicar()})));
+document.getElementById('afast').oninput=e=>{G=+e.target.value;posicionar()};
+const bR=document.getElementById('btnRot');bR.onclick=()=>{controls.autoRotate=!controls.autoRotate;bR.textContent='Girar: '+(controls.autoRotate?'sim':'não');bR.setAttribute('aria-pressed',controls.autoRotate)};
+if(reduz){bR.textContent='Girar: não';bR.setAttribute('aria-pressed','false')}
+let rot=true;const bL=document.getElementById('btnRot2');bL.onclick=()=>{rot=!rot;bL.textContent='Rótulos: '+(rot?'sim':'não');N.forEach(n=>n.lab.visible=rot)};
+
+// ficha
+const fi=document.getElementById('fichaInner');const fichaIni=fi.innerHTML;
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'})[c])}
+function ficha(n){if(!n){fi.innerHTML=fichaIni;return}const c=cam[n.c],s=est[n.st];
+  const vem=n.fio.map(i=>nos[i]).filter(Boolean),vai=N.filter(x=>x.fio.includes(n.id));
+  const bt=x=>`<button type="button" data-id="${x.id}" style="border-color:${cam[x.c].cor}55">${esc(x.t)}</button>`;
+  fi.innerHTML=`<button class="fechar" type="button" aria-label="Fechar ficha" id="fx">×</button>
+  <div class="camada" style="color:${c.cor}">${c.nome}</div><h2>${esc(n.t)}</h2>
+  <div class="meta"><span class="pill st" style="background:${s.cor}">${s.nome}</span><span class="pill">Entrada ${esc(n.ent)}</span><span class="pill">${n.tipo}</span></div>
+  <p>${esc(n.r)}</p><p><b>Próximo passo:</b> ${esc(n.p)}</p>
+  ${vem.length?`<p><b>Veio de:</b></p><div class="fio">${vem.map(bt).join('')}</div>`:''}
+  ${vai.length?`<p><b>Levou a:</b></p><div class="fio">${vai.map(bt).join('')}</div>`:''}`;
+  fi.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>selecionar(nos[b.dataset.id],true));
+  document.getElementById('fx').onclick=()=>selecionar(null)}
+function selecionar(n,voar){sel=n;ficha(n);aplicar();if(n&&voar){controls.target.copy(n.obj.position)}if(!n)controls.target.copy(base)}
+
+// toque
+const ray=new THREE.Raycaster(),pt=new THREE.Vector2();let down=null;
+renderer.domElement.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY]});
+renderer.domElement.addEventListener('pointerup',e=>{if(!down)return;const d=Math.hypot(e.clientX-down[0],e.clientY-down[1]);down=null;if(d>6)return;
+  const r=renderer.domElement.getBoundingClientRect();pt.x=(e.clientX-r.left)/r.width*2-1;pt.y=-(e.clientY-r.top)/r.height*2+1;ray.setFromCamera(pt,camera);
+  const hit=ray.intersectObjects(alvos.filter(m=>m.parent.visible),false)[0];selecionar(hit?hit.object.userData.no:null)});
+
+const base=new THREE.Vector3();
+function tam(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;const fone=w<600;base.set(0,fone?1.6:.6,0);if(!sel)controls.target.copy(base);
+  camera.position.copy(base).add(new THREE.Vector3(9,4.5,12).setLength(fone?27:17));camera.updateProjectionMatrix()}
+addEventListener('resize',tam);tam();aplicar();
+const clock=new THREE.Clock();
+(function loop(){requestAnimationFrame(loop);const t=clock.getElapsedTime();
+  if(!reduz)N.forEach(n=>{if(n.st==='teste')n.mesh.scale.setScalar(est.teste.esc*(1+.12*Math.sin(t*2.4)));n.mesh.rotation.y=t*.3});
+  controls.update();renderer.render(scene,camera)})();
+</script>
