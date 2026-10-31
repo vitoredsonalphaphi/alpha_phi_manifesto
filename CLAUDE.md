@@ -117,12 +117,6 @@ Claude decide por default. O pesquisador pode sempre invocar
 
 ---
 
-### Organograma AlphaFi 3D (31/10/2026)
-
-Quando o pesquisador pedir **"traz o organograma AlphaFi"**: abrir a página https://claude.ai/artifact/LaAatxQjpkAzXdcGYX5WS8 (fixada na barra lateral do pesquisador; fonte em `Ponte/organograma/3d/organograma_alphaphi_3d.html`; regras em `Ponte/organograma/3d/CANONICO_Organograma3D_v1.md`) para agregar assuntos ou observar correlações. Ao agregar, atualizar o arquivo do repositório e republicar a página no mesmo endereço.
-
----
-
 ### Modelo espacial canônico (NUNCA inverter)
 
 | Posição | Elemento |
