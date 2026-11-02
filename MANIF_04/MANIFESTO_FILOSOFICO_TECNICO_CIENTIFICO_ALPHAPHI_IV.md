@@ -1619,3 +1619,44 @@ Arquivos: `REDE_AP/EtapasEE_EcoBeepNaEsfera/`; scanner v2 em `CANONICO_SALVAGUAR
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 391 — 2 de novembro de 2026
+### Aprender é Decantar — A Distribuição de Energia como Linguagem Comum dos Substratos, e o Scanner como Instrumento Imprescindível da Rede
+
+### I. Enunciado do Pesquisador
+
+> "Deixa eu ver se entendi. Não me refiro ao ECO BEEP propriamente dito, ao sinal de áudio, mas à generalização da hipótese — minha tão ignorante hipótese: se tudo se resume à distribuição dos pesos, isso vale tanto para a esfera quanto para o euclidiano, para a rede convencional — identificar os pesos com maior energia e os com menor energia, e identificar uma determinada decantação nessa separação. A pergunta é: dá para dizer que todos os outros substratos também se referem a essa mesma busca, a identificação de diferentes energias em pesos diferentes, e a essa determinada separação?
+>
+> Se isso é generalizado, então a estrutura esférica, de certa forma, já está no caminho certo — só pelo fato de já poder representar visualmente essa distribuição dos pesos, independentemente de o resultado do processamento ser positivo ou não. Se a minha hipótese estiver certa, é mais de meio caminho andado na estruturação da rede esférica — e, com essa observação, também o topográfico na estruturação da rede esférica. Na verdade, então, o scanner topográfico é imprescindível na rede. A observação da imagem é imprescindível para identificar, independentemente do resultado matemático, como a rede se comporta nessa distribuição. Se essa distribuição dos pesos — para o dourado e para o azul, para mais energia e para menos energia — for generalizada para todo e qualquer substrato, é exatamente isso que o topográfico está demonstrando, principalmente agora, com a resolução de 33 mil pontos. Estou correto em pensar assim?"
+
+— Nota do pesquisador, 2 de novembro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. Duas coisas a separar: a energia do sinal e os pesos da rede
+
+No scanner do ECO BEEP 880, o dourado e o azul são **a energia de cada frequência do sinal**: quanto de som há em cada ponto. Isso **não** são os pesos de uma rede. Pesos são as ligações entre os neurônios: quanto um influencia o outro. Na Etapa EE, não há pesos agindo; há o eco transformando o sinal.
+
+#### 2. O que é verdadeiro na generalização
+
+- **Toda rede aprende redistribuindo pesos**, a convencional e a esférica: ao treinar, alguns pesos crescem, outros encolhem, e a informação fica guardada nessa distribuição. No sentido amplo, **"aprender é decantar"** é uma imagem fiel.
+- **Todo substrato pode ser decomposto em componentes com mais e menos energia** — o som em frequências, a imagem em detalhes largos e finos, o texto em padrões que se repetem mais ou menos —, e muitos processamentos funcionam concentrando a energia em poucos componentes (o princípio da compressão e de boa parte do processamento de sinais).
+
+#### 3. Onde é preciso cuidado
+
+- **Nem toda separação de energia é a certa.** A energia pode se concentrar no lugar errado — a rede "conformista" da Etapa AU concentrou tudo na memória e apagou o novo. A imagem mostra **onde** a energia foi; se foi para o lugar certo, dizem os critérios (o atrator, a recuperação, a escuta).
+- **Numa rede convencional grande, a decantação nem sempre é visível:** milhões de pesos, olhados diretamente, parecem ruído. A estrutura aparece quando se escolhe bem **o que medir e como dispor** — como aqui, as bandas áureas na latitude e as frequências em ordem.
+
+#### 4. O lugar do scanner e o caminho andado
+
+- **O scanner topográfico é imprescindível como instrumento de observação da rede:** ver onde a energia está e como se move a cada passo é algo que a maioria das redes não oferece. Quando as ferramentas da Rede AP agirem (a memória, o previsor), ele deverá mostrar também os **pesos** e o **estado**, e não só o sinal.
+- **O que está avançado:** a **estrutura** (a grade, os endereços, o campo cultivado) e a **observação** (o scanner de 33 059 pontos).
+- **O que ainda falta:** a **função** — a rede fazer algo que uma consulta direta não faz. A imagem orienta (a bússola da Entrada 390); o resultado confirma.
+
+---
+*Florianópolis · 2 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
