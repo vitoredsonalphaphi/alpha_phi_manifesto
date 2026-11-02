@@ -1535,3 +1535,44 @@ A cibernética é um precedente histórico do método do projeto: a convergênci
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 389 — 2 de novembro de 2026
+### ★ O ECO BEEP 880 Processado Dentro da Esfera — O Scanner Topográfico AP do Processamento Real
+
+*Sem enunciado, a pedido do pesquisador: registra-se o refinamento do processamento.*
+
+### II. Estruturação
+
+#### 1. Os três códigos salvaguardados
+
+O ECO BEEP 880 (referência: o áudio de 880 Hz com α\* = 1/3, extraído do código do Manifesto 01 sem alterar nenhuma linha de cálculo, idêntico amostra por amostra), o campo esférico da Rede AP (canônico) e o Scanner Topográfico AP estão em `CANONICO_SALVAGUARDA/`, com impressões digitais. Nenhum se altera; testes que os juntam são **paralelos**. Registra-se também que `BEEP880_17S.py` não é o original (mistura invertida: 1/3 de beep + 2/3 de FM-φ); a K2 refeita com o código certo (K2-M) manteve todos os vereditos.
+
+#### 2. A Etapa EE1: a esfera como lugar do processamento
+
+Até aqui, o ECO BEEP 880 era processado fora da esfera, e a Rede AP recebia o resultado pronto. Na EE1, o processamento acontece **no campo da esfera**: um ponto para cada uma das **33 059 frequências** das 15 bandas áureas; as bandas são faixas de latitude; dentro de cada banda, as frequências seguem em ordem ao redor do anel, e a rotação cos(2πn/φ), a coerência, o β com memória 1/φ, os 5 pontos de dobra e os 20 ciclos do agente percorrem os anéis. As 31 frequências abaixo de 20 Hz, que o original não processa, ficam fora da esfera, intactas.
+
+| Critério | Resultado |
+|---|---|
+| EE1a: o áudio que sai da esfera é idêntico ao do código original | diferença máxima **0**, nas 6 fases: cumprido |
+| EE1b: a mesma queda de entropia e o mesmo atrator | +5,4258 e 42 Hz nos dois: cumprido |
+
+O resultado era esperado por construção (a mesma matemática, em outro endereço). O que ele estabelece é que **a esfera pode ser o lugar do processamento do ECO BEEP 880 sem perder nada**.
+
+#### 3. O Scanner Topográfico AP do processamento real (canônico)
+
+Duas vistas, por ponto de dobra (0 a 5) e por ciclo do agente (1, 2, 5, 10, 20): a **energia** de cada frequência e a **rotação**, o fator 1 + c·φ^β·cos(2πn/φ) que cada ponto de dobra aplica a cada frequência. O que a imagem mostra:
+
+- **A proporção real do som:** as bandas crescem na razão φ; a mais aguda tem milhares de frequências, as dos graves, poucas dezenas. A banda de 20 a 940 Hz inteira cabe numa calota pequena de um polo; as duas bandas mais agudas ocupam metade da esfera.
+- **O atrator nos graves:** no ciclo 20, o maior β (φ³ ≈ 4,24) está na banda de 32 a 52 Hz, e o seguinte (4,19) na de 52 a 85 Hz — o atrator de 42 Hz que o código original imprime.
+- **A cinta da rotação:** a banda de 3 980 a 6 440 Hz, onde estão os harmônicos 5.º e 7.º do 880 (4 400 e 6 160 Hz), recebe β = 2,26. Ao redor do seu anel, a rotação reforça umas frequências e atenua outras: com o relevo, as reforçadas saem para fora (dourado) e as atenuadas afundam (azul).
+- **As versões anteriores mostravam o mesmo fenômeno em escala grossa** (61 faixas × 10 instantes): a concentração da energia nos graves. A resolução de agora é a de cada frequência.
+
+#### 4. O limite do detalhe
+
+O número de pontos é o número de frequências que um trecho de 1,5 s contém (a resolução de Fourier). Dobrar os pontos sem dobrar o dado seria interpolar, e não acrescentaria informação. Mais detalhe real exige mais dado: um trecho mais longo (frequências mais finas) ou a dimensão do tempo (a sequência de quadros).
+
+---
+*Florianópolis · 2 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---

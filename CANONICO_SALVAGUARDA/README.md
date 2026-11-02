@@ -33,7 +33,16 @@ dfa16b5b65ea5e6b18c829cfb35e25bfd2be1ab9c85124d3327dfc84c8244054  AlphaPhi_Grade
 d8dc24674b55d127b4e9ad1b989194c4cbfafefc3e6d5c00f3fbbf4d7bbba295  AlphaPhi_FerramentasMemoria_v1.py
 ```
 
-## 3. O Scanner Topográfico AP (versão de 02/11/2026: só o ECO BEEP 880, α* = 1/3)
+## ★ 3. O Scanner Topográfico AP — o processamento real na esfera (CANÔNICO, 02/11/2026)
+
+O ECO BEEP 880 (α\* = 1/3) **processado dentro da esfera**: um ponto para cada uma das 33 059 frequências das 15 bandas áureas; as bandas são faixas de latitude; dentro de cada banda as frequências seguem em ordem ao redor do anel, e a rotação cos(2πn/φ), a coerência, o β com memória 1/φ, os 5 pontos de dobra e os 20 ciclos do agente acontecem no campo da esfera. Etapa EE1 (teste paralelo): áudio da esfera **idêntico** ao do código original (diferença máxima 0, nas 6 fases); mesma queda de entropia (+5,4258) e mesmo atrator (42 Hz).
+
+- `esfera_ecobeep880_processamento.py`: o processamento na esfera (lê o ECO BEEP 880 desta salvaguarda e a Grade v2 canônica, só leitura).
+- `captura_esfera_ecobeep880.py`: gera os dados do scanner (energia e rotação, dobras 0–5, ciclos 1, 2, 5, 10, 20).
+- `esfera_ecobeep880_processamento_real.html`: **o scanner**, com os dados embutidos; abre em qualquer navegador.
+- SHA-256: `esfera_ecobeep880_processamento.py` 6bb49600a2517c5cce623f5a1a9233b08aeeb02aa65169379706ac9bbcf1ad76 · `captura_esfera_ecobeep880.py` 0b872423b14898469af762be662af77e9631e8e03a48319bd7303d0dfc9580cf · `esfera_ecobeep880_processamento_real.html` 56b6421b9759d2d2f266d8fee6993c98749051c050b5e2584935b0350c73cf09
+
+## 3b. As versões anteriores do scanner (02/11/2026: só o ECO BEEP 880, α* = 1/3; 61 faixas × 10 instantes)
 
 - `scanner_ap_ecobeep880.html`: o scanner (recuperação e modo livre), com os dados embutidos; abre em qualquer navegador.
 - `cascata_ecobeep880.html`: as 6 fases da cascata como cascas.
