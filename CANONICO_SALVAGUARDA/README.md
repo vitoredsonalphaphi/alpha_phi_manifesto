@@ -42,6 +42,8 @@ O ECO BEEP 880 (α\* = 1/3) **processado dentro da esfera**: um ponto para cada 
 - `esfera_ecobeep880_processamento_real.html`: **o scanner**, com os dados embutidos; abre em qualquer navegador.
 - SHA-256: `esfera_ecobeep880_processamento.py` 6bb49600a2517c5cce623f5a1a9233b08aeeb02aa65169379706ac9bbcf1ad76 · `captura_esfera_ecobeep880.py` 0b872423b14898469af762be662af77e9631e8e03a48319bd7303d0dfc9580cf · `esfera_ecobeep880_processamento_real.html` 56b6421b9759d2d2f266d8fee6993c98749051c050b5e2584935b0350c73cf09
 
+- **v2** (02/11/2026, sem alterar a v1): `esfera_ecobeep880_processamento_real_v2.html` — acrescenta a vista "Bandas: mesma área" e o Phantom (Phantom + ECO; Phantom sozinho). SHA-256 6d8728cebb9b37fa8ea2bb3eb10a09ef18dbf30a7c24a34ac1940c75eb00532d. Etapas EE em `REDE_AP/EtapasEE_EcoBeepNaEsfera/`.
+
 ## 3b. As versões anteriores do scanner (02/11/2026: só o ECO BEEP 880, α* = 1/3; 61 faixas × 10 instantes)
 
 - `scanner_ap_ecobeep880.html`: o scanner (recuperação e modo livre), com os dados embutidos; abre em qualquer navegador.

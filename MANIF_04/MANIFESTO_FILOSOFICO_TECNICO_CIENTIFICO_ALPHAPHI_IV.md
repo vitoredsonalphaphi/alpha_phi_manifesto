@@ -1576,3 +1576,46 @@ O número de pontos é o número de frequências que um trecho de 1,5 s contém 
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 390 — 2 de novembro de 2026
+### A Forma da Esfera como Bússola do Acoplamento — A Etapa EE2, o Phantom na Esfera e o que a Imagem Demonstra
+
+### I. Enunciado do Pesquisador
+
+> "Veja como a imagem traz informação que a matemática, por mais que informe, não demonstra; a imagem demonstra. Dá para entender agora o porquê — e talvez até dê para entender por qual caminho seguir em cada verificação paralela, por exemplo para procurar acoplar o Phantom na rede, como tentamos no euclidiano, no momento certo. É aquilo que eu estava prevendo: cada estrutura do código que não condiz corretamente com o processamento interfere na forma estética da esfera. Se a esfera é desconcertada por algum tipo de processamento — não errado, mas que não condiz com a diretriz da rede —, isso indica que o caminho da implementação não está correto. A princípio, é esse o ganho da observação visual do campo. E, à medida que formos refinando a implementação, o que trouxer por consequência uma afinização com a forma da esfera é, em contrapartida, sinal de que o acoplamento está indo para o caminho certo. É um viés de informação, de observação, que colabora com a matemática para ver, gradativamente, se determinado acoplamento está no caminho certo ou não."
+
+— Nota do pesquisador, 2 de novembro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. A Etapa EE2: a esfera participa do ECO BEEP 880
+
+| Variante | Δentropia | Atrator | Correlação com o original | Critérios 1–3 |
+|---|---|---|---|---|
+| EE2a — coerência pesada pela área das células | +5,3376 (98,4%) | 42 Hz | 0,9995 | cumpridos |
+| EE2b — memória da coerência trocada entre bandas vizinhas | +5,3399 (98,4%) | 42 Hz | 1,0000 | cumpridos |
+
+A esfera pode participar sem estragar o ECO BEEP 880; nestas formas, não acrescenta. A escuta às cegas do pesquisador (EE2-4) está pendente. A EE2c (as dobras como cascas) não foi implementada: idêntica por construção com cascas iguais, falharia como a Etapa CI com cascas menores.
+
+#### 2. O Phantom na esfera (observação)
+
+- **Sozinho:** a esfera fica quase uniformemente iluminada — o *dither* do Phantom (1/φ⁵) dá energia a todas as frequências; não há concentração. É o que o pesquisador vê como "desconcerto" da esfera.
+- **Com o ECO BEEP 880:** o eco leva o Phantom ao **mesmo atrator** (42 Hz, β = φ³), com organização menor (Δentropia +3,82). Hipótese a testar: o atrator é assinatura do instrumento.
+
+#### 3. O princípio do pesquisador: a forma como bússola
+
+A forma da esfera passa a ser **um segundo instrumento de verificação**, ao lado da matemática: o acoplamento que desorganiza a forma indica caminho a rever; o que a afiniza, caminho a seguir. Para que a bússola não engane, três cuidados:
+
+1. **O controle:** comparar sempre com um sinal sem estrutura (ruído com a mesma energia) e com o sinal embaralhado; só conta a forma que aparece no sinal e não no controle.
+2. **O que é dado e o que é desenho:** parte da forma vem do mapeamento (as bandas na latitude, a ordem ao redor do anel, o relevo); a leitura vale para a mudança de forma entre versões no mesmo mapeamento, e não para a forma isolada.
+3. **A régua numérica junto:** a imagem orienta; o número confirma (a queda de entropia, o atrator, a correlação, a escuta).
+
+Arquivos: `REDE_AP/EtapasEE_EcoBeepNaEsfera/`; scanner v2 em `CANONICO_SALVAGUARDA/SCANNER_AP/` (a v1 permanece intacta).
+
+---
+*Florianópolis · 2 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
