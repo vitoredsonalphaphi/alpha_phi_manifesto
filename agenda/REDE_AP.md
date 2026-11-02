@@ -315,6 +315,7 @@ No scanner do ECO BEEP 880, o dourado e o azul são **a energia de cada frequên
 ## IV. FUNDAMENTOS FILOSÓFICO-MATEMÁTICOS A INCORPORAR
 
 - [ ] **α agnóstico por substrato — Família Adaptativa de α** *(Entrada 288 + pendentes.md item 6)*
+  - **Ficha e pasta própria (02/11/2026):** `FERRAMENTAS_ADAPTATIVAS/01_Familia_Adaptativa_de_Alfa.md` (todas as ferramentas adaptativas em `FERRAMENTAS_ADAPTATIVAS/`). **Correção:** o α\* = 1/3 vem do código do Manifesto 01, e não do `BEEP880_17S.py`.
   - Não fixar o valor 1/137 — preservar a **arquitetura da tensão** (expansão/contração)
   - Em vez de um α único, construir uma **família de α adaptativos** — um por substrato,
     análogo aos parâmetros adaptativos do Scanner (que já se ajusta ao input recebido)
