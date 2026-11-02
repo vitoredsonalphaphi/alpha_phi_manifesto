@@ -139,6 +139,18 @@ No scanner do ECO BEEP 880, o dourado e o azul são **a energia de cada frequên
 
 ---
 
+### \*\*\* O Serial φ como progressão de fases da rede (02/11/2026) — para trabalhar mais tarde
+
+**Observação do pesquisador:** no Scanner Topográfico AP, o **Serial φ** (10 cones angulares do ECO-BIP 880, código original `AlphaPhi_SerialPhantom_COLAB.py`, Entrada 282) acopla-se à esfera com forma organizada — anéis concêntricos nítidos, cone a cone —, ao contrário do Phantom sem selagem, que desconcerta a forma (o *dither* ilumina a esfera por igual). Intuição: o serial pode servir à **progressão das fases** da rede, com uma **transição entre fases flexível** — usando a tensão própria do serial (o crossfade φ, a selagem, a memória 1/φ), mas adaptável a cada substrato, como α é âncora sem ser rígido.
+
+**O que a observação mostrou (02/11/2026, teste paralelo, sem critérios):** os 10 cones chegam ao campo harmônico (β = φ³); passando de novo pelo ECO BEEP 880 dentro da esfera, o atrator desce de 42 Hz para **26 Hz** em 9 dos 10 cones (uma segunda decantação, para a banda mais grave).
+
+**A trabalhar:** (a) o serial como sequência de fases da rede (um cone por fase; a transição entre cones como transição entre fases); (b) a transição flexível por substrato (o tamanho do crossfade, a profundidade da selagem, ajustados pela coerência); (c) por que o atrator desce a 26 Hz no reprocessamento; (d) o controle (o mesmo serial com os cones embaralhados ou com ruído).
+
+**Arquivos:** scanner `CANONICO_SALVAGUARDA/SCANNER_AP/serial_phi_na_esfera.html`; captura `REDE_AP/EtapasEE_EcoBeepNaEsfera/captura_serial.py`.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)
