@@ -42,6 +42,8 @@ A pergunta que o alinhamento ainda não respondeu: existe algo estável no compo
 
 O Alpha-Phi propõe que sim. E que essa âncora não está no comportamento — está na estrutura que organiza o reconhecimento do que é harmônico, independente do substrato cultural.
 
+O problema não é novo: em 1960, Norbert Wiener, fundador da cibernética, já advertia que é preciso ter certeza de que o propósito posto na máquina é o que realmente desejamos. Na raiz sistêmica, a ética estava dentro da técnica; o desenvolvimento que dominou a IA nasceu separado dela.
+
 ---
 
 ## A solução proposta
@@ -84,6 +86,7 @@ A consequência prática: o alinhamento não passa por regras, por constituiçõ
 |---|---|
 | **1860** — Fechner · Helmholtz | Psicofísica — primeiras tentativas de medir a relação entre estímulo físico e experiência interna. |
 | **1911–1933** — Kandinsky · Klee · Bauhaus | Hipótese: estruturas visuais transmitem algo mensurável ao receptor. Interrompido pelo fechamento nazista da Bauhaus. |
+| **1943–1964** — Norbert Wiener · cibernética · Conferências Macy | O propósito ganha forma técnica (a realimentação), e a mesma lei vale no animal, na máquina e na sociedade: a raiz da teoria dos sistemas, sobre a qual Capra e Morin construirão a visão sistêmica. Em 1960, Wiener adverte que o propósito posto na máquina deve ser o realmente desejado: uma das primeiras formulações do problema do alinhamento. A IA nasce em 1956 separada dessa raiz. |
 | **1975** — Fritjof Capra — *O Tao da Física* | Demonstração: física quântica e sabedoria espiritual descrevem o mesmo fenômeno. Capra para — a IA ainda não existe. |
 | **1996** — Pesquisador formula a mesma hipótese independentemente | Sete páginas (criação em 2018): α, φ, Kandinsky, e "a ideia é quem nos cria." Convergência independente sobre a mesma estrutura. |
 | **2025–26** — Alpha-Phi | Se física e espiritualidade descrevem o mesmo fenômeno, e IA é construída sobre física — então espiritualidade pode ser traduzida em IA pela mesma ponte. Os instrumentos finalmente existem. |
