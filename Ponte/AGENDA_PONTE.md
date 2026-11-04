@@ -286,3 +286,31 @@ Princípio de **tradutibilidade** entre a técnica e o sociocultural, registrado
 ## \*\*\* O enunciado bivalente — a mesma frase vale na técnica e na filosofia (04/11/2026; Entrada 396)
 
 A partir da Entrada 395, o pesquisador identifica que **a mesma estruturação narrativa serve aos dois âmbitos** — e que, se isso vale para um enunciado, deve haver uma maneira de fazer a mesma tradução em outros. Método proposto: `Ponte/METODO_Enunciado_Bivalente_v0.md` (o dicionário de pares, as duas versões, a verificação técnica, a reversibilidade; o catálogo dos candidatos já encontrados).
+
+---
+
+## \*\*\* O esquema composto de tradução entre os estágios da cadeia — a semente estética desde a leitura filosófica (04/11/2026)
+
+**Enunciado do pesquisador (revisado: retiradas as hesitações; conteúdo na íntegra):**
+
+> "Sobre a proposta da semântica como geometria — a cadeia como uma direção no espaço de significados, do filosófico ao técnico: acredito que sim, mas não de forma generalizada, do filosófico ao científico. Por intuição, existe um âmbito propício para esse acoplamento, um determinado espaço; só não sei qual é. Analisar um texto filosófico, uma narrativa filosófica, vai exigir um esquema composto de observação para traduzir do filosófico para o ético — vários esquemas de tradução que analisarão a narrativa filosófica e a traduzirão para o ético. Num primeiro estágio, esse esquema composto observaria a narrativa filosófica, e entre os seus esquemas estará a semântica como geometria. Mas não é só a semântica: a estética precisa ser inserida como uma semente. E será uma semente retroativa, porque a tradução surge do filosófico para o científico — de fora para dentro, num certo sentido. A semente da estética será proposta de fora para dentro, mas desde os primeiros estágios da interpretação da filosofia, no sentido da triangulação que o Contraditório propôs. Se é uma triangulação, já é uma semente de algo geométrico. Por mais que não se refira, no primeiro estágio, a uma percepção estética específica, é uma semente que pode progredir. A semente da triangulação é um dos fatores; a semântica, na maneira da IA de interpretar a narrativa, é outro. Precisamos observar quais são os outros fatores que irão compor esse sistema de tradução entre os estágios da cadeia."
+> — Nota do pesquisador, 4 de novembro de 2026
+
+**O princípio:** cada elo da cadeia (Filosofia → Ética → Estética → Geometria → Matemática → IA) não se traduz por um único instrumento, mas por um **esquema composto** de fatores que observam a mesma narrativa ao mesmo tempo. A estética entra como **semente** desde a primeira leitura filosófica — pela triangulação, que já é forma geométrica — e progride de estágio em estágio.
+
+**Os fatores que o projeto já tem (candidatos ao esquema composto):**
+
+| Fator | O que observa na narrativa | Onde está |
+|---|---|---|
+| A triangulação (a semente geométrica) | as três tensões: a que contrai, a que expande, a terceira estrutura; e + x + t = 1 | Entradas 178, 371–372; `CANONICO_Traducao_Triangulacao_v1.md` |
+| A semântica como geometria | o significado como direção e distância no espaço da IA | Entrada 376; item \*\*\* desta agenda (27/10) |
+| A aproximação gradativa | o ritmo: o tema que se expande ou se concretiza por graus | item \*\*\* desta agenda (27/10) |
+| Os parâmetros estéticos P1–P5 | proporção, valor claro/escuro, gradação, unidade na variedade, ritmo — aplicáveis ao texto | Entrada 374 |
+| O "térmico" do texto | a surpresa de cada palavra; a temperatura da escolha (Coh + Entr); a distância de sentido entre frases | conversa de 04/11/2026 (Kandinsky, Klee) |
+| O enunciado bivalente | a mesma frase vale nos dois âmbitos: o teste da tradução | Entrada 396; `METODO_Enunciado_Bivalente_v0.md` |
+| A codificação preditiva e o refluxo | a semente "de fora para dentro": a previsão que desce do estágio de chegada orienta a leitura do de partida | Entradas 344, 382–383, 388 (a causa final) |
+| Os graus de proximidade | a medida de quanto a tradução alcançou: analogia, homologia de forma, identidade de medida | Entrada 374 |
+
+**Hipótese a examinar — onde a semântica geométrica se acopla:** a semântica é medida *na linguagem*; por isso o seu espaço próprio seriam os elos em que **os dois lados ainda são narrativa** — sobretudo Filosofia → Ética, e a parte narrativa de Ética → Estética. A partir da Estética, o meio deixa de ser a palavra (forma, proporção, número), e outros fatores (os parâmetros estéticos, a triangulação como figura) passam a carregar a tradução. A leitura de qual é esse espaço é do pesquisador.
+
+**A trabalhar:** (a) completar a lista de fatores; (b) definir, para cada elo, quais fatores atuam; (c) um primeiro teste no elo Filosofia → Ética: um texto filosófico lido pelos fatores ao mesmo tempo, com a concordância entre eles medida, e o texto embaralhado como controle; (d) o índice de convergência acompanha este item (camada 1).
