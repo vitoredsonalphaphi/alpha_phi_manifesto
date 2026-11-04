@@ -85,7 +85,7 @@ A consequência prática: o alinhamento não passa por regras, por constituiçõ
 | **1860** — Fechner · Helmholtz | Psicofísica — primeiras tentativas de medir a relação entre estímulo físico e experiência interna. |
 | **1911–1933** — Kandinsky · Klee · Bauhaus | Hipótese: estruturas visuais transmitem algo mensurável ao receptor. Interrompido pelo fechamento nazista da Bauhaus. |
 | **1975** — Fritjof Capra — *O Tao da Física* | Demonstração: física quântica e sabedoria espiritual descrevem o mesmo fenômeno. Capra para — a IA ainda não existe. |
-| **1996 → 2018** — Pesquisador formula a mesma hipótese independentemente | Bases em 1996 ("a ideia é quem nos cria"; "a defesa de um lado não é a acusação de outro"); as sete páginas escritas em 2018: α, φ, Kandinsky. Convergência independente sobre a mesma estrutura. |
+| **1996 → 2018** — Pesquisador formula a mesma hipótese independentemente | Bases em 1996 ("a ideia é quem nos cria"; "a defesa de um lado não é a acusação de outro"); as sete páginas escritas em 2018: α, φ, Kandinsky, e "a ideia é quem nos cria." Convergência independente sobre a mesma estrutura. |
 | **2025–26** — Alpha-Phi | Se física e espiritualidade descrevem o mesmo fenômeno, e IA é construída sobre física — então espiritualidade pode ser traduzida em IA pela mesma ponte. Os instrumentos finalmente existem. |
 
 ---
