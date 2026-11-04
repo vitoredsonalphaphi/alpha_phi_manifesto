@@ -281,3 +281,8 @@ A lição técnica é a mesma do enunciado: **um processamento que só preserva 
 
 Princípio de **tradutibilidade** entre a técnica e o sociocultural, registrado na Agenda da Ponte e na Agenda da construção da Rede AP. Para a rede, sugere um **critério de projeto**: nenhuma ferramenta deve zerar o que não reconhece; deve atenuar e manter recuperável — como o eco já faz com o seu piso de 0,05.
 
+---
+
+## \*\*\* O enunciado bivalente — a mesma frase vale na técnica e na filosofia (04/11/2026; Entrada 396)
+
+A partir da Entrada 395, o pesquisador identifica que **a mesma estruturação narrativa serve aos dois âmbitos** — e que, se isso vale para um enunciado, deve haver uma maneira de fazer a mesma tradução em outros. Método proposto: `Ponte/METODO_Enunciado_Bivalente_v0.md` (o dicionário de pares, as duas versões, a verificação técnica, a reversibilidade; o catálogo dos candidatos já encontrados).

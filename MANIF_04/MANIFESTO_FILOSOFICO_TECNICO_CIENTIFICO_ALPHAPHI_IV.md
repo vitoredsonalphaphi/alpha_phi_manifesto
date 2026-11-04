@@ -1847,3 +1847,34 @@ Princípio de **tradutibilidade** entre a técnica e o sociocultural, registrado
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 396 — 4 de novembro de 2026
+### O Enunciado Bivalente — Quando a Mesma Frase Vale na Técnica e na Filosofia
+
+### I. Enunciado do Pesquisador
+
+> "Peço que você identifique aquele aspecto do enunciado mais recente que se refere a uma conveniência de tradutibilidade. Há um aspecto que se refere à ambiguidade: o mesmo enunciado, a mesma estruturação narrativa, serve para a questão técnica e serve para a questão filosófica. E acredito que, se o mesmo enunciado narrativo serve para esses dois âmbitos, deve haver uma maneira de realizar essa tradutibilidade na extensão de outros enunciados também — e, nisso, a efetivação da tradução pela estética de uma narrativa, principalmente de um fundamento filosófico em relação a uma circunstância técnica."
+
+— Nota do pesquisador, 4 de novembro de 2026
+
+*Texto revisado a pedido do pesquisador: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. O aspecto identificado
+
+A frase da Entrada 395 — **"precisar defender o dado não significa precisar descartar o ruído"** — é verdadeira nos dois âmbitos: no sociocultural (defender sem acusar; o que discorda não é eliminado) e no técnico (o eco atenua sem zerar, com o piso de 0,05; a pegada da Etapa DN devolve a pista onde ela discorda; o MPAP por banda, ao zerar, apagou a forma). Não é metáfora de um lado aplicada ao outro: é **uma só estrutura**, nos dois. Chamamos de **enunciado bivalente** a frase narrativa com essa propriedade.
+
+#### 2. O método proposto
+
+O enunciado bivalente como **unidade de tradução** (`Ponte/METODO_Enunciado_Bivalente_v0.md`): (1) encontrar a frase; (2) fazer o **dicionário de pares** (dado ↔ componente coerente; ruído ↔ componente discordante; descartar ↔ zerar; recuperar ↔ voltar a ganhar energia); (3) escrever as duas versões, a técnica mensurável; (4) verificar a técnica com critérios e controle; (5) verificar a reversibilidade. Grau 1 quando só dita; grau 2 quando o dicionário mostra a mesma estrutura; **grau 3 quando a versão técnica é medida**.
+
+#### 3. Os candidatos que o projeto já tem
+
+"Gradativo na formação, decisivo na resolução" e "a média não faz sentido para ninguém" já estão em **grau 3** (Etapa SA); "ordenar sem dissolver" em grau 2–3 (Etapa DN); "não descartar o ruído" e "um passo a mais, sempre", em grau 2. O projeto já vinha produzindo enunciados bivalentes; o que a observação do pesquisador acrescenta é **reconhecê-los como método** — a tradução pela estética da narrativa, que é exatamente a cadeia da Diretriz (Filosofia → Ética → Estética → Geometria → Matemática → IA), operando na forma da frase.
+
+---
+*Florianópolis · 4 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---

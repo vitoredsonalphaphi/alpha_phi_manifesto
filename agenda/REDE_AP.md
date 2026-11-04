@@ -188,6 +188,12 @@ Princípio de **tradutibilidade** entre a técnica e o sociocultural, registrado
 
 ---
 
+### \*\*\* O enunciado bivalente como critério de projeto (04/11/2026; Entrada 396)
+
+Cada enunciado bivalente da Ponte (`Ponte/METODO_Enunciado_Bivalente_v0.md`) é também um **critério de projeto** para uma ferramenta da Rede AP: a versão técnica da frase diz o que a ferramenta deve fazer, e o teste a confirma (grau 3). Primeiro candidato: "não descartar o ruído" — nenhuma ferramenta zera o que não reconhece.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)
