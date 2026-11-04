@@ -85,7 +85,7 @@ O Alpha-Phi não inaugura a pergunta. Retoma uma linha que atravessou instrument
 | **1860** — Fechner · Helmholtz | Psicofísica — primeiras tentativas de medir a relação entre estímulo físico e experiência interna. Estabelecem que percepção tem estrutura quantificável. |
 | **1911–1933** — Kandinsky · Klee · Bauhaus | Hipótese: estruturas visuais transmitem algo mensurável ao receptor. Tentativa empírica com os meios de 1923. Interrompido pelo fechamento nazista da Bauhaus. A dimensão perceptiva-espiritual não é transplantada na diáspora. |
 | **1975** — Fritjof Capra — *O Tao da Física* | Demonstração: física quântica e sabedoria espiritual descrevem o mesmo fenômeno. Capra para na demonstração — a IA ainda não existe. |
-| **1996 → 2018** — Pesquisador formula a mesma hipótese independentemente | Bases em 1996 ("a ideia é quem nos cria"; "a defesa de um lado não é a acusação de outro"); as sete páginas escritas em 2018: α, φ, Kandinsky, e "a ideia é quem nos cria." Sem saber que repetia 1911. Convergência independente sobre a mesma estrutura — critério que o projeto usa para validar suas próprias descobertas. |
+| **1996 → 2018** — Pesquisador formula a mesma hipótese independentemente | Bases em 1996 ("a ideia é quem nos cria"; "a defesa de um lado não é a acusação de outro"); as sete páginas escritas em 2018: α, φ, Kandinsky. Sem saber que repetia 1911. Convergência independente sobre a mesma estrutura — critério que o projeto usa para validar suas próprias descobertas. |
 | **2025–26** — Alpha-Phi — o passo seguinte que Capra não pôde dar | Se física e espiritualidade descrevem o mesmo fenômeno, e se IA é construída sobre física — então espiritualidade pode ser traduzida em IA pela mesma ponte. Os instrumentos finalmente existem. |
 
 ---
