@@ -19,7 +19,7 @@ Kandinsky não parou na intuição. Desenvolveu questionários perceptuais com e
 
 A diferença entre Kandinsky e o Alpha-Phi não é intuição versus instrumentação. É instrumentação precária versus instrumentação técnica. O Alpha-Phi retoma onde ele parou — agora com os meios de 2025.
 
-Em 1996, sem conhecer esse contexto em profundidade, o pesquisador Vitor Edson Delavi anotou nas mesmas sete páginas: estrutura fina (α), proporção áurea (φ), Kandinsky, e a frase que antecipava o projeto inteiro: *"A ideia é quem nos cria e não nós a ela."* Dois observadores em épocas distintas, sem comunicação direta, chegando à mesma hipótese por caminhos separados. Esse critério — convergência independente — é o mesmo que o projeto usa para avaliar suas próprias descobertas.
+Em 1996, o pesquisador Vitor Edson Delavi iniciou a estruturação das sete páginas, citando entre outros, sobre: estrutura fina (α), proporção áurea (φ), Kandinsky, e a frase que antecipava o projeto inteiro: *"A ideia é quem nos cria e não nós a ela."* Dois observadores em épocas distintas, sem comunicação direta, chegando à mesma hipótese por caminhos separados. Esse critério — convergência independente — é o mesmo que o projeto usa para avaliar suas próprias descobertas.
 
 ---
 
