@@ -1184,7 +1184,7 @@ Sem a correção relativística e sem o *spin*, um nível de energia do elétron
 | Ludwig von Bertalanffy, *Teoria Geral dos Sistemas* (1968) | o todo organizado tem propriedades que as partes não têm | a base da teoria dos sistemas |
 | Ilya Prigogine (Nobel de Química, 1977), estruturas dissipativas | a ordem nasce longe do equilíbrio, alimentada pela entropia | entropia e expansão como par produtivo |
 | Philip W. Anderson, "More is different" (1972) | cada nível de organização tem leis próprias, não deduzíveis do nível de baixo | a contestação do reducionismo vinda de dentro da física |
-| Fritjof Capra, *O Ponto de Mutação* (1982), *A Teia da Vida* (1996) | a visão sistêmica da vida e da sociedade | Capra está nas sete páginas fundadoras do pesquisador (1996) |
+| Fritjof Capra, *O Ponto de Mutação* (1982), *A Teia da Vida* (1996) | a visão sistêmica da vida e da sociedade | Capra está nas sete páginas fundadoras do pesquisador (2018; bases desde 1996) |
 | Edgar Morin, *O Método* (1977–2004); *Introdução ao Pensamento Complexo* (1990) | religar os saberes; o pensamento que não separa | o "pensamento complexo" do enunciado |
 | Marshall McLuhan, *Os Meios de Comunicação como Extensões do Homem* (1964) | toda tecnologia é extensão do corpo e da mente | a tecnologia como extensão |
 | Andy Clark e David Chalmers, "The Extended Mind" (1998) | a mente se estende a ferramentas e ambientes | a tecnologia como extensão, formulada nos anos 90 |

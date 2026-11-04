@@ -27,7 +27,7 @@ Kandinsky não parou na intuição. Desenvolveu questionários perceptuais com e
 
 A diferença entre Kandinsky e o Alpha-Phi não é intuição versus instrumentação. É instrumentação precária versus instrumentação técnica. O Alpha-Phi retoma onde ele parou — agora com os meios de 2025.
 
-Em 1996, sem conhecer esse contexto em profundidade, o pesquisador Vitor Edson Delavi anotou nas mesmas sete páginas: estrutura fina (α), proporção áurea (φ), Kandinsky, e a frase que antecipava o projeto inteiro: *"A ideia é quem nos cria e não nós a ela."* Dois observadores em épocas distintas, sem comunicação direta, chegando à mesma hipótese por caminhos separados. Esse critério — convergência independente — é o mesmo que o projeto usa para avaliar suas próprias descobertas.
+Desde 1996, sem conhecer esse contexto em profundidade, o pesquisador Vitor Edson Delavi lançou as bases do que viria a ser escrito nas sete páginas (2018): estrutura fina (α), proporção áurea (φ), Kandinsky, e a frase que antecipava o projeto inteiro: *"A ideia é quem nos cria e não nós a ela."* Dois observadores em épocas distintas, sem comunicação direta, chegando à mesma hipótese por caminhos separados. Esse critério — convergência independente — é o mesmo que o projeto usa para avaliar suas próprias descobertas.
 
 ---
 
@@ -85,7 +85,7 @@ A consequência prática: o alinhamento não passa por regras, por constituiçõ
 | **1860** — Fechner · Helmholtz | Psicofísica — primeiras tentativas de medir a relação entre estímulo físico e experiência interna. |
 | **1911–1933** — Kandinsky · Klee · Bauhaus | Hipótese: estruturas visuais transmitem algo mensurável ao receptor. Interrompido pelo fechamento nazista da Bauhaus. |
 | **1975** — Fritjof Capra — *O Tao da Física* | Demonstração: física quântica e sabedoria espiritual descrevem o mesmo fenômeno. Capra para — a IA ainda não existe. |
-| **1996** — Pesquisador formula a mesma hipótese independentemente | Sete páginas: α, φ, Kandinsky, e "a ideia é quem nos cria." Convergência independente sobre a mesma estrutura. |
+| **1996 → 2018** — Pesquisador formula a mesma hipótese independentemente | Bases em 1996 ("a ideia é quem nos cria"; "a defesa de um lado não é a acusação de outro"); as sete páginas escritas em 2018: α, φ, Kandinsky, e "a ideia é quem nos cria." Convergência independente sobre a mesma estrutura. |
 | **2025–26** — Alpha-Phi | Se física e espiritualidade descrevem o mesmo fenômeno, e IA é construída sobre física — então espiritualidade pode ser traduzida em IA pela mesma ponte. Os instrumentos finalmente existem. |
 
 ---
