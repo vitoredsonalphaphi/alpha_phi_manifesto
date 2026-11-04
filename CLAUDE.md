@@ -119,7 +119,7 @@ Claude decide por default. O pesquisador pode sempre invocar
 
 ### Salvaguarda dos três códigos (02/11/2026)
 
-O ECO BEEP 880 (referência: `CANONICO_SALVAGUARDA/ECO_BEEP_880/ECO_BEEP_880_alpha_1_3.py`, 880 Hz, α* = 1/3, idêntico ao código do Manifesto 01), o campo esférico da Rede AP (`REDE_AP/`, canônico) e o Scanner Topográfico AP (`CANONICO_SALVAGUARDA/SCANNER_AP/`) **não se alteram**. Testes que os juntam são **testes paralelos**: importam ou copiam, nunca editam. `BEEP880_17S.py` não é o original. Ver `CANONICO_SALVAGUARDA/README.md`.
+O ECO BEEP 880 (referência: `CANONICO_SALVAGUARDA/ECO_BEEP_880/ECO_BEEP_880_alpha_1_3.py`, 880 Hz, α* = 1/3, idêntico ao código do Manifesto 01), o campo esférico da Rede AP (`REDE_AP/`, canônico) e o Scanner Topográfico AP (`CANONICO_SALVAGUARDA/SCANNER_AP/`) **não se alteram**. Testes que os juntam são **testes paralelos**: importam ou copiam, nunca editam. `BEEP880_17S.py` não é o original. Ver `CANONICO_SALVAGUARDA/README.md`. **O Scanner Topográfico AP usa sempre a esfera de 33 059 pontos ou mais, em todo teste; o detalhe nunca diminui** (sinal curto: a lente completa com zeros até 66 150 amostras, declarado; mais detalhe real exige mais dado).
 
 ---
 

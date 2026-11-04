@@ -33,6 +33,14 @@ dfa16b5b65ea5e6b18c829cfb35e25bfd2be1ab9c85124d3327dfc84c8244054  AlphaPhi_Grade
 d8dc24674b55d127b4e9ad1b989194c4cbfafefc3e6d5c00f3fbbf4d7bbba295  AlphaPhi_FerramentasMemoria_v1.py
 ```
 
+## ★ Regra canônica do Scanner Topográfico AP (04/11/2026, decisão do pesquisador)
+
+**Todo teste usa o scanner na esfera canônica de 33 059 pontos — ou mais. O detalhe nunca diminui.**
+
+- **Sinal com 66 150 amostras ou mais** (1,5 s de áudio a 44,1 kHz): um ponto por frequência real; um sinal mais longo dá mais pontos e mais detalhe real.
+- **Sinal mais curto** (por exemplo, um texto curto): o processamento age no sinal tal como é; a **lente do scanner** completa o sinal com zeros até 66 150 amostras antes de medir as frequências, para usar a mesma esfera de 33 059 pontos. Isso afina a leitura do mesmo espectro, **sem acrescentar informação nova**, e é declarado na página. Para mais detalhe **real**, usa-se mais dado (um texto mais longo; mais tempo de sinal).
+- **Mesma esfera para tudo:** os sinais ficam comparáveis ponto a ponto, nas mesmas bandas áureas.
+
 ## ★ 3. O Scanner Topográfico AP — o processamento real na esfera (CANÔNICO, 02/11/2026)
 
 O ECO BEEP 880 (α\* = 1/3) **processado dentro da esfera**: um ponto para cada uma das 33 059 frequências das 15 bandas áureas; as bandas são faixas de latitude; dentro de cada banda as frequências seguem em ordem ao redor do anel, e a rotação cos(2πn/φ), a coerência, o β com memória 1/φ, os 5 pontos de dobra e os 20 ciclos do agente acontecem no campo da esfera. Etapa EE1 (teste paralelo): áudio da esfera **idêntico** ao do código original (diferença máxima 0, nas 6 fases); mesma queda de entropia (+5,4258) e mesmo atrator (42 Hz).
