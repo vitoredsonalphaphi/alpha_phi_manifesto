@@ -2424,7 +2424,7 @@ Não há um nome único; o termo mais próximo é **curva (ou arco) de tensão**
 | **Edgar Allan Poe, "A Filosofia da Composição" (1846)** | escolhe primeiro o efeito no leitor (em "O Corvo", a melancolia), a extensão, o tom, o refrão e o ponto de maior intensidade; só então inventa a história que leva até ali — o fim decidido primeiro |
 | **A pirâmide de Freytag (*A Técnica do Drama*, 1863)** | a curva clássica: exposição, ação ascendente, clímax, ação descendente, desfecho |
 | **As "formas das histórias" (Kurt Vonnegut)** | a sorte do personagem desenhada como gráfico no tempo ("o homem no buraco", "Cinderela") |
-| **Os seis arcos emocionais (Reagan e colegas, *EPJ Data Science*, 2016)** | o afeto das palavras medido por computador ao longo de cerca de 1 700 livros do Projeto Gutenberg: seis formas básicas — ascensão, queda, "homem no buraco", Ícaro, Cinderela, Édipo |
+| **Os seis arcos emocionais (Reagan e colegas, *EPJ Data Science*, 2016)** | o afeto das palavras medido por computador ao longo de 1 327 histórias do Projeto Gutenberg (o artigo; a imprensa citou 1 700): seis formas básicas — ascensão, queda, "homem no buraco", Ícaro, Cinderela, Édipo |
 | **Kishōtenketsu (China, Japão, Coreia)** | quatro tempos — introdução, desenvolvimento, **virada** (um contraste sem conflito), conclusão |
 | **O código hermenêutico (Roland Barthes, *S/Z*, 1970)** | o enigma proposto, adiado (falsas pistas, respostas parciais) e revelado no fim; Hitchcock: suspense (o público sabe da bomba) e surpresa (a bomba explode sem aviso) |
 | **Fábula e trama (formalismo russo, Chklóvski)** | a fábula é a ordem dos fatos; a trama, a ordem e a forma em que são apresentados — a arquitetura estética, separável do conteúdo |
