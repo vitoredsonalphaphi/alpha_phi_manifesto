@@ -340,6 +340,8 @@ A partir da Entrada 395, o pesquisador identifica que **a mesma estruturação n
 
 **O saber que o aparelho traduz:** a experiência do pesquisador com cor, composição e som é conhecimento tácito (Polanyi), verificado pela prática; o aparelho a traduz em forma que a máquina possa usar. O juízo do pesquisador continua parte da prova (a escuta às cegas; o olhar sobre P1–P5).
 
-**A trabalhar:** (a) o nome do aparelho (decisão do pesquisador); (b) o primeiro teste: os canais concordam sobre onde está o "calor" e a tensão num mesmo texto, mais do que no texto embaralhado? (c) a escala cromática gravada pelo pesquisador como portadora (Entrada 401); (d) a compressibilidade da partitura como medida da organização (Entrada 402).
+**Nome:** "aparelho de tradução da narrativa" (confirmado pelo pesquisador em 05/11/2026).
+
+**A trabalhar:** (b) o primeiro teste: os canais concordam sobre onde está o "calor" e a tensão num mesmo texto, mais do que no texto embaralhado? (c) a escala cromática gravada pelo pesquisador como portadora (Entrada 401); (d) a compressibilidade da partitura como medida da organização (Entrada 402).
 
 **As três ordens (para referência do método):** ordens de previsão (Wiener, 1943: sem previsão, 1.ª ordem — a velocidade, 2.ª — a aceleração); ordens de observação (von Foerster: 1.ª — observar o sistema; 2.ª — observar o observador; no projeto, a Chave 09 e o metaprocessador); laços de controle (Ashby: o 2.º laço muda as regras do 1.º; no projeto, o autoalinhamento).
