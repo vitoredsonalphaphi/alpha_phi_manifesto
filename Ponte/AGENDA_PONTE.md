@@ -345,3 +345,13 @@ A partir da Entrada 395, o pesquisador identifica que **a mesma estruturação n
 **A trabalhar:** (b) o primeiro teste: os canais concordam sobre onde está o "calor" e a tensão num mesmo texto, mais do que no texto embaralhado? (c) a escala cromática gravada pelo pesquisador como portadora (Entrada 401); (d) a compressibilidade da partitura como medida da organização (Entrada 402).
 
 **As três ordens (para referência do método):** ordens de previsão (Wiener, 1943: sem previsão, 1.ª ordem — a velocidade, 2.ª — a aceleração); ordens de observação (von Foerster: 1.ª — observar o sistema; 2.ª — observar o observador; no projeto, a Chave 09 e o metaprocessador); laços de controle (Ashby: o 2.º laço muda as regras do 1.º; no projeto, o autoalinhamento).
+
+---
+
+## \*\*\* A curva de tensão — os precedentes literários do aparelho de tradução (05/11/2026; Entrada 407)
+
+A literatura tem uma família de métodos que desenham primeiro a forma da tensão (o que sobe, o que desce, o contraste, o mistério) e só depois distribuem o conteúdo: Poe ("A Filosofia da Composição", 1846: o efeito decidido primeiro), Freytag (a pirâmide, 1863), Vonnegut (as formas das histórias), os **seis arcos emocionais medidos em ~1 700 livros** (Reagan e colegas, 2016), o kishōtenketsu (a virada sem conflito), o código hermenêutico de Barthes (o enigma proposto, adiado e revelado), fábula e trama (Chklóvski), a folha de batidas do roteiro, o Oulipo. O termo mais próximo: **curva de tensão** (*Spannungsbogen*).
+
+**Para a tradutibilidade:** o aparelho usa a curva no **sentido inverso** — para ler, e não para escrever: extrair a forma de tensão de um texto ético e traduzi-la em estética e geometria. A triangulação (Entrada 406) já mediu um arco: expressão, contraditório, resolução, subida de ordem até o campo harmônico. Os seis arcos são o precedente direto do canal térmico.
+
+**A trabalhar:** (a) medir o arco emocional do texto de Aristóteles e compará-lo com a triangulação; (b) verificar se o campo harmônico de um texto ético coincide com o ponto alto do arco; (c) o enigma de Barthes como forma do contraditório em aberto.

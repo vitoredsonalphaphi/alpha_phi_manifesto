@@ -201,6 +201,13 @@ Registrado na Agenda da Ponte (item \*\*\* de 05/11/2026). Para a construção d
 
 ---
 
+
+### \*\*\* A curva de tensão como forma de leitura do aparelho (05/11/2026; Entrada 407)
+
+Para a construção: o aparelho de tradução da narrativa lê a **curva de tensão** de um texto (a triangulação e o arco emocional — os seis arcos de Reagan e colegas, 2016) e a injeta na esfera como sinal. Por que traduzir em geometria, se a IA já compreende o sentido: para que a ética seja **estrutura do processamento**, e não conceito reinterpretável. Condição a medir a cada estágio: a forma ética e a eficiência do processamento andam juntas? Onde divergem (o custo do alinhamento, Etapa VL5), um sistema que otimiza eficiência pode contornar a forma (a "imitação colorida" de Wiener, Entrada 386).
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)
