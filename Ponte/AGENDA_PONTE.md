@@ -314,3 +314,32 @@ A partir da Entrada 395, o pesquisador identifica que **a mesma estruturação n
 **Hipótese a examinar — onde a semântica geométrica se acopla:** a semântica é medida *na linguagem*; por isso o seu espaço próprio seriam os elos em que **os dois lados ainda são narrativa** — sobretudo Filosofia → Ética, e a parte narrativa de Ética → Estética. A partir da Estética, o meio deixa de ser a palavra (forma, proporção, número), e outros fatores (os parâmetros estéticos, a triangulação como figura) passam a carregar a tradução. A leitura de qual é esse espaço é do pesquisador.
 
 **A trabalhar:** (a) completar a lista de fatores; (b) definir, para cada elo, quais fatores atuam; (c) um primeiro teste no elo Filosofia → Ética: um texto filosófico lido pelos fatores ao mesmo tempo, com a concordância entre eles medida, e o texto embaralhado como controle; (d) o índice de convergência acompanha este item (camada 1).
+
+---
+
+## \*\*\* O aparelho de tradução da narrativa — cinco canais isomórficos antes das fichas (05/11/2026)
+
+**Enunciado do pesquisador (revisado: retiradas as hesitações; conteúdo na íntegra):**
+
+> "Existimos enquanto diálogo, e nesse diálogo há duas frentes de entendimento. Eu me reservo naquilo que sei sobre a aerodinâmica do avião — das cores e do som —, e no quanto as experiências de 30 anos me permitiram perceber, e não apenas intuir, que essa convergência de ferramentas se relaciona verdadeiramente como eficiência de algo já experimentado; em outros momentos, êxitos que não eram resultados matemáticos, mas de construção e de expressão. Além das quatro frentes de tradução, resta a triangulação: a forma e a tensão por uma semente geométrica, como o texto do Contraditório permitiu perceber, como tensão entre tópicos narrativos e como resultado de um campo harmônico. Isto participa do índice, ou é uma ferramenta que vai instrumentalizar o índice como ferramenta de tradução na Rede AP? De qualquer maneira, precisa ser transformado num outro tipo de ferramenta, que antecede a tradução pelas fichas e pelos significados das narrativas: um aparelho, um instrumento que permita a construção por um processamento estipulado — usar essas quatro ou mais maneiras de tradutibilidade para ferramentalizar as fichas, ao ponto de criar um campo, que depois se refira à ferramenta. Há um grau de aproximação de mecânica de construção nisso."
+> — Nota do pesquisador, 5 de novembro de 2026
+
+**Os cinco canais (isomórficos entre si; cada um lê a mesma narrativa):**
+
+| Canal | O que lê | Fonte no projeto |
+|---|---|---|
+| 1. Triangulação | as três tensões (a que contrai, a que expande, a terceira estrutura); a semente geométrica | Entradas 178, 371–372; canônico de tradução |
+| 2. Semântica | o significado como direção e distância (nos dois primeiros limiares: Filosofia → Ética, Ética → Estética) | Entrada 376 |
+| 3. Térmico do texto | a ativação afetiva das palavras (calor = excita, avança; frio = acalma, recua), a valência, a surpresa de cada palavra | conversa de 04–05/11/2026 |
+| 4. Cromático (cor, som, timbre) | a temperatura de Kandinsky como movimento (o quente avança e se expande, o frio recua e se concentra); claro e escuro; cor como timbre (o amarelo e o trompete, o azul e o violoncelo — citado de memória, a conferir); a escala cromática do violão como portadora | *Do Espiritual na Arte*; Entradas 398, 401–402 |
+| 5. Ritmo | repetição e variação, a polifonia de camadas (Klee); a distância de sentido entre frases | Entrada 402; conversa de 04/11/2026 |
+
+**O isomorfismo que liga os canais:** quente / agudo / ativação alta / expansão — frio / grave / ativação baixa / entropia, retorno. É o par entrópico-expansivo do projeto lido em cinco linguagens.
+
+**O lugar do aparelho:** narrativa → aparelho (cinco canais) → "partitura" de vários canais → campo na esfera → índice e fichas posicionados → Rede AP. O índice guarda **o que** foi registrado; o aparelho define **como** uma narrativa vira campo. No índice ele entra como item, para que as convergências com ele sejam acusadas.
+
+**O saber que o aparelho traduz:** a experiência do pesquisador com cor, composição e som é conhecimento tácito (Polanyi), verificado pela prática; o aparelho a traduz em forma que a máquina possa usar. O juízo do pesquisador continua parte da prova (a escuta às cegas; o olhar sobre P1–P5).
+
+**A trabalhar:** (a) o nome do aparelho (decisão do pesquisador); (b) o primeiro teste: os canais concordam sobre onde está o "calor" e a tensão num mesmo texto, mais do que no texto embaralhado? (c) a escala cromática gravada pelo pesquisador como portadora (Entrada 401); (d) a compressibilidade da partitura como medida da organização (Entrada 402).
+
+**As três ordens (para referência do método):** ordens de previsão (Wiener, 1943: sem previsão, 1.ª ordem — a velocidade, 2.ª — a aceleração); ordens de observação (von Foerster: 1.ª — observar o sistema; 2.ª — observar o observador; no projeto, a Chave 09 e o metaprocessador); laços de controle (Ashby: o 2.º laço muda as regras do 1.º; no projeto, o autoalinhamento).

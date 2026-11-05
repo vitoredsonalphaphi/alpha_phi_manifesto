@@ -194,6 +194,13 @@ Cada enunciado bivalente da Ponte (`Ponte/METODO_Enunciado_Bivalente_v0.md`) é 
 
 ---
 
+
+### \*\*\* O aparelho de tradução da narrativa como etapa anterior ao campo de conceitos (05/11/2026)
+
+Registrado na Agenda da Ponte (item \*\*\* de 05/11/2026). Para a construção da rede: uma narrativa passa por **cinco canais** (triangulação, semântica, térmico do texto, cromático cor-som-timbre, ritmo) e vira uma "partitura" de vários canais; a partitura é injetada na esfera canônica como sinal (a escala cromática do violão como portadora, Entrada 401) e forma o **campo de conceitos** (Entrada 400, caminho 2). Critérios a escrever antes de qualquer execução: concordância entre os canais no mesmo texto contra o texto embaralhado; cada conceito acende a sua região; itens ligados no índice produzem regiões vizinhas mais que no sorteio. A esfera e a lente canônicas não se alteram: o aparelho só as usa.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)
