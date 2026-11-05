@@ -2255,7 +2255,7 @@ A Entrada 178 ("Entre o Erro e a Perfeição", 26/08/2026) registrou que o Contr
 | 3 | o terceiro valor: a revisão que abrange os dois pontos de vista; fecha o 1.º triângulo e é, ao mesmo tempo, a 2.ª expressão | expansão do campo |
 | 4 | o contraditório do contraditório: mais abrangente, vindo de outra perspectiva | entropia de 2.ª ordem |
 | 5 | o campo harmônico: a resolução mais lúcida; fecha o 2.º triângulo, que contém o primeiro | outra expansividade |
-| 6, 7… | o campo harmônico pode ser a expressão de um nível mais amplo | a progressão continua |
+| depois | a partir do campo harmônico, a progressão poderá ramificar-se como um fractal (por exemplo, três novos inícios de triangulação) | hipótese, só depois dos testes com textos reais |
 
 #### 3. A mecânica: expansão como abrangência
 
@@ -2265,7 +2265,7 @@ A Entrada 178 ("Entre o Erro e a Perfeição", 26/08/2026) registrou que o Contr
 
 #### 4. A imagem
 
-A página "A Progressão do Contraditório" (artefato, 05/11/2026) desenha a lógica: os valores numa espiral; cada triângulo une expressão, contraditório e resultado; o resultado é o vértice onde nasce o triângulo seguinte; um círculo em volta de cada resultado mostra a sua abrangência (contém os dois pontos de vista); linhas pontilhadas mostram os ganchos entre os níveis; a cada triângulo completo, a distância ao centro cresce na razão φ. A geometria da imagem (o ângulo entre os pontos e a razão φ de crescimento) é uma escolha de desenho, não uma medida; a pergunta testável é se um texto real com contraditório do contraditório produz essa forma de expansão.
+A página "A Progressão do Contraditório" (artefato, 05/11/2026) desenha a lógica até o quinto valor, o primeiro campo harmônico (por decisão do pesquisador: ir gradativamente, antes dos testes): os valores numa espiral; cada triângulo une expressão, contraditório e resultado; o resultado é o vértice onde nasce o triângulo seguinte; um círculo em volta de cada resultado mostra a sua abrangência (contém os dois pontos de vista); linhas pontilhadas mostram os ganchos entre os níveis; a cada triângulo completo, a distância ao centro cresce na razão φ. Cores: amarelo, a expressão; azul, o contraditório; verde, o terceiro valor (a soma do amarelo e do azul); pérola e ouro, o campo harmônico. A geometria da imagem (o ângulo entre os pontos e a razão φ de crescimento) é uma escolha de desenho, não uma medida; a pergunta testável é se um texto real com contraditório do contraditório produz essa forma de expansão.
 
 #### 5. A consequência para o aparelho de tradução da narrativa
 
