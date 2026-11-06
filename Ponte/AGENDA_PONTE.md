@@ -355,3 +355,20 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 **Para a tradutibilidade:** o aparelho usa a curva no **sentido inverso** — para ler, e não para escrever: extrair a forma de tensão de um texto ético e traduzi-la em estética e geometria. A triangulação (Entrada 406) já mediu um arco: expressão, contraditório, resolução, subida de ordem até o campo harmônico. Os seis arcos são o precedente direto do canal térmico.
 
 **A trabalhar:** (a) medir o arco emocional do texto de Aristóteles e compará-lo com a triangulação; (b) verificar se o campo harmônico de um texto ético coincide com o ponto alto do arco; (c) o enigma de Barthes como forma do contraditório em aberto.
+
+---
+
+## \*\*\* As cinco esferas — entropia e expansão sincronizadas, acopladas à portadora cromática do aparelho de tradução (06/11/2026)
+
+**A proposta do pesquisador:** cinco esferas concêntricas — a de fora e quatro internas —, cada uma estacionária no seu estágio, mas entropizando e expandindo em torno dele. O movimento **não é causal, é sincronizado**: enquanto uma esfera expande (a expressão do seu resultado), a seguinte entropiza; a passagem acontece por **aproximação**, sem ligação entre elas, e é nessa aproximação que os parâmetros agnósticos (α, a distribuição dos pesos) se ajustariam a cada âmbito. A imagem do bastão é só alegórica: nada passa de uma esfera à outra; elas se aproximam no tempo certo.
+
+**A demonstração do movimento** (página "Cinco Esferas", 06/11/2026; só o movimento, sem pesos nem funções): cinco cascas nos raios da Grade Esférica (1, 1/φ, 1/φ², 1/φ³, 1/φ⁴), com a mesma densidade por área (33 059 pontos na superfície, 53 055 ao todo); o revezamento vai **do centro para fora**, como no modelo canônico; a faixa de aproximação acende em verde (a soma do amarelo da expansão e do azul da entropia).
+
+**Onde o arranjo já existe (citado de memória, a conferir):** o *pipeline* da computação (estágios que trabalham ao mesmo tempo, sincronizados; ganho de vazão); a comunicação por coerência no cérebro (Pascal Fries, 2005: duas áreas trocam informação quando as suas oscilações estão em fase — o ritmo, e não a ligação); os métodos de várias escalas (*multigrid*); no próprio projeto, o Serial φ, as cascas da Grade v2, o campo cultivado por etapas e a codificação preditiva.
+
+**O acoplamento a trabalhar — as cinco esferas como forma de transição dos estágios do aparelho de tradução da narrativa:**
+- cada canal do aparelho (triangulação, semântica, térmico, cromático, ritmo) como uma casca, trabalhando em revezamento sincronizado, e não todos de uma vez nem um esperando o outro;
+- a **escala cromática do violão como portadora** (Entrada 401): o ritmo das cascas daria o tempo em que cada nota — cada conceito do texto — entra no campo;
+- o fractal: cada casca podendo conter as suas próprias cascas (a ramificação da Entrada 404).
+
+**O cuidado:** a Etapa SA mostrou que uma gradação mal posta vira média e apaga a memória; cada casca precisa ser decisiva no seu estágio, com a gradação na passagem, e não na força.

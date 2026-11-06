@@ -208,6 +208,19 @@ Para a construção: o aparelho de tradução da narrativa lê a **curva de tens
 
 ---
 
+
+### \*\*\* As cinco esferas — o interior como lugar do processamento, em revezamento sincronizado (06/11/2026)
+
+Registrado também na Agenda da Ponte (item \*\*\* de 06/11/2026), com o acoplamento à portadora cromática do aparelho de tradução da narrativa.
+
+**A distinção que motivou o item:** pelo modelo espacial canônico, o **interior é o lugar do processamento** e a **superfície é o resultado** (o campo harmônico). O código atual da Rede AP faz a dinâmica nos 610 neurônios da superfície, e o interior só recebe valores por extensão harmônica (r^L): num campo harmônico, o interior é inteiramente determinado pela superfície, sem informação própria — por isso as Etapas IN, CI e IP não acrescentaram. O código atual está, nesse ponto, em desacordo com o modelo canônico.
+
+**A proposta:** cinco cascas (raios 1, 1/φ, 1/φ², 1/φ³, 1/φ⁴), cada uma com **dinâmica própria** — uma "fonte interna", no sentido de Laplace —, entropizando e expandindo em revezamento sincronizado do centro para fora; a passagem entre cascas por aproximação no tempo, como as camadas de uma rede euclidiana passam o resultado adiante (o raio como profundidade: α → cascas → superfície). Demonstração do movimento: página "Cinco Esferas" (06/11/2026).
+
+**Teste a desenhar (critérios escritos antes):** na recuperação de memória, comparar (a) a superfície sozinha (o código atual), (b) o interior só como extensão harmônica e (c) as cascas em revezamento com dinâmica própria — qualidade e número de operações. O acoplamento com a portadora cromática (a escala do violão) e com os canais do aparelho de tradução fica para depois desse teste.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)
