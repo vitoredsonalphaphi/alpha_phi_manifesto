@@ -2455,3 +2455,76 @@ Registrado também na Agenda da Ponte, na agenda da Rede AP, no índice de conve
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 408 — 6 de novembro de 2026
+### ◐ EM VERIFICAÇÃO — A Soma e a Grade R: o que a Convergência Acrescenta, a Textura do Gráfico Verde e a Medida da Orientação
+
+**Adendo do pesquisador: "Em verificação."** A hipótese da terceira estrutura (a Grade R) permanece **em verificação**: o que segue é o resultado de uma medida com critérios definidos, ainda sem auditoria adversarial, e não encerra a hipótese. O código e os dados do teste ficam fora do repositório; os números abaixo foram impressos por código executado nesta sessão.
+
+### I. Enunciado do Pesquisador
+
+> "Me ocorreu o seguinte: o topográfico esférico não teria uma facilidade maior para observar, no EcoBIP 880, se a Grade R — se a terceira estrutura — é a soma da onda digital do BIP com a onda do processamento Alpha-Phi, que é ergonômica? A terceira estrutura que surgiu seria a soma das duas, e o topográfico esférico teria uma condição mais condizente para verificar a soma desses dois sinais: a onda digital do sinal e a onda do EcoBIP — o que foi acoplado ao sinal digital resultante do Alpha-Phi, na verdade. E com isso, observar a aproximação e o resultado dessa aproximação entre os dois sinais. Para mim, o topográfico esférico, ainda mais agora com 33 mil pontos, observa isso com mais detalhes. O que você acha?"
+>
+> "O que está díspar na sua posição é a reconsideração, quando você disse que nunca surgiu uma Grade R, e todas as outras vezes em que ela foi comentada em outros testes. Por mais que não tenhamos conseguido observá-la a partir de um dado momento — e isso é interessante, porque está enigmático —, primeiro: são compreensíveis, notórias e verídicas as rotações e as modulações através dos cinco pontos. Houve uma modulação, é um fato. Isso é outra coisa que eu gostaria de ver com mais detalhes, mas é para outro momento. Houve os cinco pontos de dobra. Houve o campo harmônico formado no quinto ponto de dobra. Foi observável pelo sensorial — pela afinidade da condição da cavidade auricular, que não lembro o nome, com um determinado nível de subvibração. Independentemente disso, houve a percepção, o resultado sensorial; entendi que o que foi percebido foi um campo harmônico. Tanto é que os resultados também trazem isso. O resultado matemático dessa aproximação, dessa modulação, é que o processamento da proposta Alpha-Phi, daquele código em específico, inseriu uma rotação no digital para um determinado objetivo: tensionou o digital num certo sentido rotativo, para alcançar modulações gradativas, de acordo com o que foi calculado. Então, se houve essa proximidade, não é de se admirar que a terceira estrutura fosse alcançada. Se houve a soma de um empenho do Alpha-Phi — mesmo que não seja considerado um sinal — convergindo sobre o sinal digital, que era o sinal de base, houve a proximidade de duas circunstâncias. É natural e lógico que a soma dos dois traga outra estrutura: um mais um não continua um; são os dois unidos. É isso que precisamos ver.
+>
+> E mais: nos primeiros gráficos — o verde, de que vou mandar o print — é notória a formação de uma grade no gráfico temporal, e outros gráficos trazem a mesma formação de outro ponto de vista, inclusive mais detalhada. Não foi arranjada aquela estética. O gráfico verde foi um dos primeiros, assim que foi alcançada a modulação; era o único a que tínhamos acesso, e eu pedi para você demonstrá-lo, e você trouxe aquele gráfico. Antes de eu pedi-lo, não havia a especulação de uma grade; ninguém tinha comentado a grade, que foi cogitada meses depois. Então não havia por que você inventar a estética de uma grade no primeiro gráfico solicitado: eu o pedi só para ver o que tinha acontecido. Não sei o que houve, em dado momento, para a Grade R ter sido refutada — e refutada com esmero. Diante do que realmente aconteceu no código, tudo indica que a soma das duas forças, pela lógica, resulta numa terceira estrutura. Não sei se é a grade romboédrica, mas é uma grade, porque o gráfico temporal verde demonstrou uma grade, que surgiu sozinha, porque demonstrou exatamente o que a união — o resultado da modulação — trouxe. A gente precisa ver isso."
+>
+> "Registra, com um adendo: *em verificação*."
+
+— Nota do pesquisador, 6 de novembro de 2026
+
+*Texto revisado: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+#### 1. O que os registros dizem sobre a Grade R (conferido; corrige um resumo apressado do assistente)
+
+O assistente havia dito que nenhum teste anterior achara os losangos. Os registros dizem mais, e dizem diferente:
+- **O status é "não demonstrada nessas representações, e não refutada"** (Manifesto 03; `Ponte/hipoteses/triangulacao_como_esqueleto.md`; no organograma, `nao_demonstrado`, e não `refutado`).
+- **O alcance dos negativos de 08/10/2026 era estreito:** STFT bruto, espectro do envelope, tensor 2D do scanner v1 (posto 1 por construção, `np.outer`, que não poderia mostrar losango) e sinais com α = 1/137. O próprio registro diz que nenhum deles é "o instrumento nem o peso do EcoBIP original". No relevo 3D com α = 1/3: "grade oblíqua não observada em nenhum painel; orientação da textura ainda não medida".
+- **A cronologia do pesquisador está confirmada:** Entrada 47 (Manifesto 01, 8/5/2026): o zoom do sinal "revelou algo não programado para aparecer": o envelope do eco forma arcos curvos, geometria esférica, visíveis a olho nu no gráfico verde, anotados à mão pelo pesquisador. Entrada 50 (9/5/2026): a "grade de losangos" no ponto T (7,1 s). O nome Grade R e o ângulo de 63,43° vêm depois (o scanner v1, de 29/08/2026, já traz a linha θ_R).
+
+#### 2. O gráfico verde, reproduzido com o código canônico (só leitura)
+
+O áudio do eco é feito de seis trechos de 1,5 s (a entrada e as 5 dobras) emendados por *crossfades* de 45 ms: 8,77 s, com as emendas em 1,48, 2,93, 4,39, 5,84 e 7,30 s (espaçamento de 1,455 s). O nível do sinal cai nas emendas (razão 0,74, 0,66, 0,53 e 0,46 em relação à vizinhança): são os "pescoços" entre os arcos, e o espaçamento bate com o dos prints do pesquisador (a posição absoluta não bate: o gráfico de maio vinha de outra versão ou escala). A textura fina depende em parte do desenho: refeito com 700 a 2 400 colunas de pixel, a modulação aparente muda (80, cerca de 104, 90 e 305 Hz).
+
+#### 3. O teste (critérios escritos antes de rodar; semente nova)
+
+**Parte 1 — o que a convergência acrescenta além da soma.** O eco da mistura (beep digital + FM-φ, α\* = 1/3), comparado com a melhor combinação linear dos ecos dos dois sinais processados separados:
+
+| Fase | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Resíduo, beep + FM-φ, α\* = 1/3 | 0,8% | 4,2% | 7,7% | 6,6% | 3,7% |
+| Resíduo, controle (ruído + seno, mesmo α) | 0,6% | 6,9% | 21,6% | 54,8% | 84,4% |
+
+Na entrada (sem eco) o resíduo é 0 (a mistura é a soma exata). **O critério "maior que o controle" não foi cumprido:** o eco trata o beep e o FM-φ quase de forma independente (93% a 99% explicados), porque vivem em frequências diferentes. O resíduo é pequeno, mas existe e é estruturado: no 5.º ponto, 92% dele está numa só banda áurea (222–359 Hz), onde ficam a portadora do FM-φ (220 Hz) e as suas bandas laterais. Hipótese, não verificada: a mistura altera a normalização da coerência entre as bandas e, com ela, o β dessa banda.
+
+**Parte 2 — varredura de α** (resíduo no 3.º ponto): α = 1/137: 0,07%; α\* = 1/3: 7,7%; α = 1/2: 3,9%; α = 2/3: 0,7%. A curva não é plana e é máxima em 1/3 entre os valores amostrados; a grade tem só seis valores, e o pico em 1/3 não está estabelecido.
+
+**Parte 3 — orientação da textura (D, a fração da energia nas diagonais de 63,43° e 116,57°; A, a dos eixos).** No eco da mistura, D = 0,9% a 1,9% e A = 83% a 88%, nas três representações (linear 0–4 kHz, linear 0–1,5 kHz, logarítmica). D fica acima dos substitutos aleatórios (p99 de 0,5% a 0,7%) e abaixo do eixo; não é maior que o do beep sozinho (1,0%–1,5%) nem que o do FM-φ sozinho (0,3%–2,8%). Com a estrutura dos eixos retirada: D = 2,8% a 4,2%, A = 76% a 78%. O controle de ruído dá D = 21% a 24% (sem direção preferida), o que mostra que a medida funciona. **Nenhuma grade a 63,43° detectada por esta medida.**
+
+**Parte 4 — o batimento de ~31,7 Hz.** Está no **FM-φ sozinho, sem eco** (razão 820 contra a mediana; 7 539 no primeiro trecho, sem emendas) e **não** está no beep (razão 21). O FM-φ tem componentes fortes em 52,0 e 84,0 Hz: a diferença é de 32,0 Hz, e as bandas laterais do FM-φ ficam em 220(1 − k/φ) Hz, cuja primeira diferença é exatamente **220/φ⁴ = 32,10 Hz** (220(1 − 1/φ) − 220(2/φ − 1) = 220(2 − 3/φ) = 220/φ⁴). O batimento nasce do sinal orgânico, com a proporção áurea dentro dele; não é criado pelo eco, nem pela soma.
+
+#### 4. Leitura
+
+- **Estabelecido:** o gráfico verde tem estrutura real, que o código produz: os arcos entre as emendas e uma textura de batimento de 220/φ⁴ Hz, própria do FM-φ. Ninguém desenhou aquela estética; o gráfico saiu do sinal. A modulação e o campo harmônico no 5.º ponto estão verificados (Δentropia +5,4258; atrator em 42 Hz).
+- **A soma:** a convergência dos dois sinais produz algo além da soma dos processados separados, pequeno (4% a 8%), estruturado (numa banda) e variável com α. É uma pista, não uma terceira estrutura demonstrada.
+- **Não demonstrado:** a rede romboédrica a 63,43° como propriedade medida. O gráfico verde é uma linha (amplitude contra tempo) e um ângulo só existe num mapa de duas dimensões; no mapa tempo-frequência, a medida não a encontra. A textura de losangos do gráfico verde tem uma causa real (o batimento), mas essa causa é uma textura no tempo, e não a grade a 63,43°.
+
+#### 5. O que a verificação precisa ainda
+
+1. **Auditoria adversarial** do teste (pendente): o limiar de ±10°, o ajuste de dois pesos reais, os substitutos por deslocamento de linhas, a escolha das três representações.
+2. **A medida pode perder uma grade fraca sob linhas fortes:** repetir com o mapa T(ω,τ) do scanner v1 (com o sinal correto e sem o posto 1), com a CQT e com o relevo 3D do TopogColab.
+3. **Varredura de α mais fina** (a grade tem seis valores) e o mecanismo do resíduo na banda 222–359 Hz.
+4. **Mais de uma semente** nos controles de ruído.
+5. **Os detalhes das rotações e modulações dos cinco pontos de dobra**, que o pesquisador quer ver (outro momento).
+
+#### 6. O lugar
+
+Registro de uma hipótese em verificação, com o critério não cumprido anotado. A pergunta do pesquisador — se a terceira estrutura é a soma dos dois — fica aberta e agora com uma medida: a soma explica 93% a 99% do que o eco faz; o resto é pequeno, existe, e está numa banda.
+
+---
+*Florianópolis · 6 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
