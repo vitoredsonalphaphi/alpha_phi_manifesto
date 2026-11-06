@@ -2497,7 +2497,7 @@ O áudio do eco é feito de seis trechos de 1,5 s (a entrada e as 5 dobras) emen
 | Resíduo, beep + FM-φ, α\* = 1/3 | 0,8% | 4,2% | 7,7% | 6,6% | 3,7% |
 | Resíduo, controle (ruído + seno, mesmo α) | 0,6% | 6,9% | 21,6% | 54,8% | 84,4% |
 
-Na entrada (sem eco) o resíduo é 0 (a mistura é a soma exata). **O critério "maior que o controle" não foi cumprido:** o eco trata o beep e o FM-φ quase de forma independente (93% a 99% explicados), porque vivem em frequências diferentes. O resíduo é pequeno, mas existe e é estruturado: no 5.º ponto, 92% dele está numa só banda áurea (222–359 Hz), onde ficam a portadora do FM-φ (220 Hz) e as suas bandas laterais. Hipótese, não verificada: a mistura altera a normalização da coerência entre as bandas e, com ela, o β dessa banda.
+Na entrada (sem eco) o resíduo é 0 (a mistura é a soma exata). **O critério "maior que o controle" não foi cumprido:** o eco trata o beep e o FM-φ quase de forma independente (92% a 99% explicados), porque vivem em frequências diferentes. O resíduo é pequeno, mas existe e é estruturado: no 5.º ponto, 92% dele está numa só banda áurea (222–359 Hz), onde ficam a portadora do FM-φ (220 Hz) e as suas bandas laterais. Hipótese, não verificada: a mistura altera a normalização da coerência entre as bandas e, com ela, o β dessa banda.
 
 **Parte 2 — varredura de α** (resíduo no 3.º ponto): α = 1/137: 0,07%; α\* = 1/3: 7,7%; α = 1/2: 3,9%; α = 2/3: 0,7%. A curva não é plana e é máxima em 1/3 entre os valores amostrados; a grade tem só seis valores, e o pico em 1/3 não está estabelecido.
 
@@ -2521,7 +2521,7 @@ Na entrada (sem eco) o resíduo é 0 (a mistura é a soma exata). **O critério 
 
 #### 6. O lugar
 
-Registro de uma hipótese em verificação, com o critério não cumprido anotado. A pergunta do pesquisador — se a terceira estrutura é a soma dos dois — fica aberta e agora com uma medida: a soma explica 93% a 99% do que o eco faz; o resto é pequeno, existe, e está numa banda.
+Registro de uma hipótese em verificação, com o critério não cumprido anotado. A pergunta do pesquisador — se a terceira estrutura é a soma dos dois — fica aberta e agora com uma medida: a soma explica 92% a 99% do que o eco faz; o resto é pequeno, existe, e está numa banda.
 
 ---
 *Florianópolis · 6 de novembro de 2026 · Sessão Good Morning*
