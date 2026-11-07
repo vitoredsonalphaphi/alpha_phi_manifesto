@@ -2552,3 +2552,28 @@ Todos os números abaixo foram impressos por código executado nesta sessão, em
 ---
 *Florianópolis · 7 de novembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
+
+## Entrada 409 — 7 de novembro de 2026
+### Prever o Êxito Também — o Equilíbrio da Previsão
+
+### I. Enunciado do Pesquisador
+> "Quando você escreve os critérios e as falhas previstas antes de rodar, você não está antecipando as falhas? Qual o risco de essas falhas previstas estarem direcionando os critérios? Será que você não está construindo falhas em vez de prevê-las? Afinal, para que prever uma falha? Tem que prever um êxito. Então, começa a prever o êxito também. Se existiu o risco de, na previsão da falha, a falha estar sendo incitada nos critérios, na previsão do êxito o êxito estará sendo incitado nos critérios. Isso equilibra."
+— Nota do pesquisador, 7 de novembro de 2026
+
+### II. Estruturação
+
+**1. Para que serve prever.** Escrever os critérios antes de rodar (o que a literatura chama de pré-registro) impede que a régua seja movida depois de ver o resultado. A lista de falhas previstas nasceu para isso: nomear de antemão os modos pelos quais o teste pode dar errado, para que nenhum deles seja depois explicado como "acaso".
+
+**2. O risco apontado é real, e já aconteceu.** No teste de fabricação desta mesma data, o arranjo deu aos chirps só 4,2% da energia da mistura e impôs uma rede tão densa (linhas a cada 0,15 s) que as cópias do eco cairiam a 27 ms e 56 ms de linhas já existentes, dentro da janela de 46 ms. O teste dificilmente poderia passar, e a leitura foi "falha prevista confirmada". A expectativa de falha entrou no desenho sem ser vista. A previsão de falha, sozinha, pode virar construção da falha.
+
+**3. A correção: simetria.** Prever o êxito com a mesma precisão — o que deve aparecer, de que tamanho, por qual mecanismo — obriga a verificar que o arranjo é capaz de mostrá-lo. Prever a falha obriga a verificar que o arranjo é capaz de negá-lo. As duas previsões juntas pedem uma terceira coisa, que é o ponto de equilíbrio: um controle que mostre, antes de rodar o caso real, que o teste distingue um mundo do outro (o controle positivo da medida D, com 79% e 91%, foi desse tipo). Na filosofia da ciência isso se aproxima do "teste severo" de Deborah Mayo (citado de memória, a confirmar): um teste só conta se a hipótese tivesse de falhar caso fosse falsa e passar caso fosse verdadeira.
+
+**4. O que muda no protocolo.** Os critérios são fixados pela pergunta, não por nenhuma das previsões. Cada teste passa a ter, escritos antes: (a) critérios; (b) êxito previsto, com mecanismo e tamanho; (c) falhas previstas; (d) verificação de que o arranjo permite as duas, por controle ou simulação. A regra de resultados do CLAUDE.md foi ajustada nessa linha.
+
+**5. Leitura.** O equilíbrio não está em torcer igual pelos dois lados; está em dar ao experimento a chance real de responder sim e de responder não. A régua se fixa pela pergunta; a previsão de êxito e a de falha são as duas mãos que testam se a régua alcança os dois extremos.
+
+---
+*Florianópolis · 7 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
