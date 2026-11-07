@@ -2531,7 +2531,7 @@ Registro de uma hipótese em verificação, com o critério não cumprido anotad
 
 ### Adendo à Entrada 408 — 7 de novembro de 2026 · ◐ EM VERIFICAÇÃO — de onde vem a estrutura do gráfico verde
 
-**Enunciado do pesquisador (revisado):** a grade romboédrica sai do escopo como objetivo; importa saber o que é a estrutura que apareceu no gráfico, se vem de esferas sobrepostas pelas rotações de Fibonacci ou de uma esfera formada aos poucos; e, como a grade R não surgiu sozinha, como ela se fabrica na literatura e como poderia ser alcançada no campo esférico. — Nota do pesquisador, 7 de novembro de 2026.
+**Enunciado do pesquisador (revisado):** a grade romboédrica sai do escopo como objetivo; importa saber o que é a estrutura que apareceu no gráfico, se vem de esferas sobrepostas pelas rotações de Fibonacci ou de uma esfera formada aos poucos;. — Nota do pesquisador, 7 de novembro de 2026.
 
 Todos os números abaixo foram impressos por código executado nesta sessão, em testes paralelos que só leem o código canônico.
 
@@ -2547,9 +2547,8 @@ Todos os números abaixo foram impressos por código executado nesta sessão, em
 
 **6. Controle positivo.** A medida de orientação detecta redes: com chirps fabricados em ±2 (eixos normalizados), D = 79% (rede em X) e 91% (listras), A ≈ 6%.
 
-**7. Literatura (sinalizada; parte de memória).** Rede romboédrica: a = b = c e ângulos iguais ≠ 90° (α = 60° dá cúbica de faces centradas; ≈109,47° dá cúbica de corpo centrado); constrói-se empilhando camadas hexagonais ABC. Graton & Fraser (1935) tratam o empacotamento romboédrico como o mais denso (porosidade ~26%, contra ~47,6% do cúbico), com permeabilidade anisotrópica. Que a estrutura romboédrica otimize fluxo de dados é analogia do projeto, não testada.
+**7. Literatura (sinalizada; parte de memória).** Rede romboédrica: a = b = c e ângulos iguais ≠ 90° (α = 60° dá cúbica de faces centradas; ≈109,47° dá cúbica de corpo centrado). Graton & Fraser (1935) tratam o empacotamento romboédrico como o mais denso (porosidade ~26%, contra ~47,6% do cúbico), com permeabilidade anisotrópica. Que a estrutura romboédrica otimize fluxo de dados é analogia do projeto, não testada.
 
-**8. Receita de fabricação (hipótese).** O eco já fornece as translações (cópias em golden delays). Falta uma entrada com duas famílias diagonais não paralelas (chirps ascendentes e descendentes), para que as cópias repliquem as duas e os cruzamentos formem losangos, com ângulo fixado pela inclinação dos chirps e pela normalização dos eixos. Próximos passos: (a) fabricar e medir D/A; (b) separar o efeito das cópias do dos ganhos de linha; (c) ver cada passo na esfera de 33 059 pontos.
-
+---
 *Florianópolis · 7 de novembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
