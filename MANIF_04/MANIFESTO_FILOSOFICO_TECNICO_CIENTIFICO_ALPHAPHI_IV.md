@@ -2615,3 +2615,14 @@ Todos os números abaixo foram impressos por código executado nesta sessão, em
 *Vitor Edson Delavi · Claude*
 
 ---
+
+### Adendo à Entrada 410 — 7 de novembro de 2026 · a pergunta reformulada
+
+**Enunciado do pesquisador (revisado):** a pergunta é se o ruído corrompe o **campo harmônico**, e não o atrator; o pesquisador se assustou com a afirmação de que o ruído pode corromper o atrator. — Nota do pesquisador, 7 de novembro de 2026.
+
+**Esclarecimento.** A frase sobre o atrator (seção 4) descreve um fato geral de sistemas dinâmicos: com ruído acima do limiar da bacia, qualquer atrator se perde. Não é um resultado sobre o Alpha-Phi: nenhum teste do projeto mediu isso. A pergunta do pesquisador é outra e mais específica: o campo harmônico (a superfície, r = 1, o campo coerente estabilizado) persiste, borra ou se perde quando há ruído? O que já está verificado no projeto é o campo harmônico da mistura sem ruído (Δentropia +5,4258; atrator em 42 Hz). Como o campo se comporta sob ruído crescente está **em aberto**, sem previsão de êxito nem de falha estabelecida; o teste da seção 7 passa a medir o campo harmônico, com o formato da Entrada 409.
+
+*Florianópolis · 7 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
