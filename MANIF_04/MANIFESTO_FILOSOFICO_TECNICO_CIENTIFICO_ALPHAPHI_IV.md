@@ -2528,3 +2528,28 @@ Registro de uma hipótese em verificação, com o critério não cumprido anotad
 *Vitor Edson Delavi · Claude*
 
 ---
+
+### Adendo à Entrada 408 — 7 de novembro de 2026 · ◐ EM VERIFICAÇÃO — de onde vem a estrutura do gráfico verde
+
+**Enunciado do pesquisador (revisado):** a grade romboédrica sai do escopo como objetivo; importa saber o que é a estrutura que apareceu no gráfico, se vem de esferas sobrepostas pelas rotações de Fibonacci ou de uma esfera formada aos poucos; e, como a grade R não surgiu sozinha, como ela se fabrica na literatura e como poderia ser alcançada no campo esférico. — Nota do pesquisador, 7 de novembro de 2026.
+
+Todos os números abaixo foram impressos por código executado nesta sessão, em testes paralelos que só leem o código canônico.
+
+**1. O mecanismo (núcleo do eco, exato; réplica idêntica ao original).** A multiplicação por cos(2π·n/φ) em cada banda equivale, no tempo, a cópias do sinal atrasadas em golden delays. O multiplicador acumulado tem picos em ±0,573 s (N − N/φ) e ±0,356 s, que crescem com as dobras: cerca de 0,5, 1,7, 3,9, 9,5 e 21% do pico central (28% sem alisamento na 5.ª). Ou seja, há ecos reais, sobrepostos ao sinal, e crescentes.
+
+**2. Ganhos de linha após 5 dobras.** 52 Hz ×3762; 84 Hz ×2666; 188 Hz ×55; 220 Hz ×23; 356 Hz ×158; beep 880 Hz ×22; 2640 Hz ×5.
+
+**3. O batimento de ~32 Hz.** Nasce do FM-φ sozinho (84,03 − 51,94 = 220/φ⁴ = 32,10 Hz), não da convergência. Profundidade: entrada 0,0127; após as dobras 0,048 → 0,087. Ablação na 5.ª dobra: só ganhos 0,0002; só rotações 0,0796; completo 0,0862. As rotações aprofundam o batimento; os ganhos de linha sozinhos não.
+
+**4. Robustez — resultado negativo.** Multiplicação da profundidade por duração (1,2/1,4/1,5/1,6/1,8/2,0 s): ×13,4, ×21,3, ×6,8, ×0,0, ×0,1, ×5,2, com o batimento da entrada estável. A rotação corre pelo índice do bin, não pela frequência em Hz.
+
+**5. Teste do item 1: rotação em Hz.** Variante paralela, em que a fase da rotação usa (f − f_início_da_banda)/Δf, com f em Hz. Profundidade do batimento na 5.ª dobra, por duração (1,2/1,4/1,5/1,6/1,8/2,0 s): 0,0003, 0,0006, 0,0018, 0,0001, 0,0002, 0,0003 (entrada 0,0085–0,0127). A correlação entre a saída por bin e a saída por Hz a 1,5 s é 0,0002. Leitura: com a rotação em Hz o batimento deixa de oscilar com a duração, mas porque desaparece (fica abaixo da entrada). A amplificação do original depende do alinhamento de fase entre o índice do bin e a borda da banda, ou seja, da discretização. Ressalvas: a variante em Hz muda a fase de partida de cada banda (não é só uma troca de eixo); uma versão ancorada de outro modo não foi testada; o teste foi rodado antes de os critérios serem gravados em arquivo, contra o protocolo, e por isso conta como exploratório.
+
+**6. Controle positivo.** A medida de orientação detecta redes: com chirps fabricados em ±2 (eixos normalizados), D = 79% (rede em X) e 91% (listras), A ≈ 6%.
+
+**7. Literatura (sinalizada; parte de memória).** Rede romboédrica: a = b = c e ângulos iguais ≠ 90° (α = 60° dá cúbica de faces centradas; ≈109,47° dá cúbica de corpo centrado); constrói-se empilhando camadas hexagonais ABC. Graton & Fraser (1935) tratam o empacotamento romboédrico como o mais denso (porosidade ~26%, contra ~47,6% do cúbico), com permeabilidade anisotrópica. Que a estrutura romboédrica otimize fluxo de dados é analogia do projeto, não testada.
+
+**8. Receita de fabricação (hipótese).** O eco já fornece as translações (cópias em golden delays). Falta uma entrada com duas famílias diagonais não paralelas (chirps ascendentes e descendentes), para que as cópias repliquem as duas e os cruzamentos formem losangos, com ângulo fixado pela inclinação dos chirps e pela normalização dos eixos. Próximos passos: (a) fabricar e medir D/A; (b) separar o efeito das cópias do dos ganhos de linha; (c) ver cada passo na esfera de 33 059 pontos.
+
+*Florianópolis · 7 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
