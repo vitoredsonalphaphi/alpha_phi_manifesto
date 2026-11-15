@@ -221,6 +221,19 @@ Registrado também na Agenda da Ponte (item \*\*\* de 06/11/2026), com o acoplam
 
 ---
 
+### \*\*\* A ética como mecânica de expressão e entropia — a atitude em estágios como forma a traduzir para a rede (15/11/2026; Entrada 412)
+
+Registrado também na Agenda da Ponte. Para a construção da Rede AP, o item propõe que a ética seja traduzida como **mecânica**, e portanto como geometria: a abstenção do que corrompe é a contração (a tensão entrópica) e a atitude é a expansão em estágios (intenção, sentimento, vontade, invólucro psíquico, circunstância), com a estética como regulador de harmonia e a proporção áurea como candidata.
+
+**Ligações com a rede, todas hipóteses:**
+- as cinco esferas (item de 06/11/2026): cinco estágios, cinco cascas, cada uma expandindo o seu resultado enquanto a seguinte se contrai (proposta do assistente);
+- as réguas éticas (E1–E7): a régua do **equilíbrio entre o que se retém e o que se expressa**, medida na dinâmica, depois de definida a variável de cada estágio;
+- cuidado de leitura: a mesma contração pode ser virtude ou omissão; a terceira estrutura decide.
+
+**Teste a desenhar (critérios antes, formato da Entrada 409):** razões entre estágios previstas (1/φ) contra controles de razão 0,5 e 0,7. Lembrete: φ na disposição dos pontos não melhorou a memória em três testes; a proporção áurea aqui é hipótese a testar, e não premissa.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)

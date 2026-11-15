@@ -372,3 +372,18 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 - o fractal: cada casca podendo conter as suas próprias cascas (a ramificação da Entrada 404).
 
 **O cuidado:** a Etapa SA mostrou que uma gradação mal posta vira média e apaga a memória; cada casca precisa ser decisiva no seu estágio, com a gradação na passagem, e não na força.
+
+---
+
+## \*\*\* A ética como mecânica de expressão e entropia — da atitude em estágios à geometria (15/11/2026; Entrada 412)
+
+**A proposta do pesquisador:** a ética é uma mecânica de entropia e de expressão, de acordo com o campo; toda mecânica tem geometria; logo, traduzir a ética em geometria é traduzir a sua mecânica. A estética entra como regulador de harmonia, com a divina proporção como candidata. A ética é atitude (expansão) e abstinência (entropia: conter ira, volúpia, vícios, maledicência, ambição, vingança, tudo o que corrompe).
+
+**Os estágios da atitude (expansão):** intenção, sentimento que a adorna, vontade que a leva ao agir, invólucro psíquico que a leva à circunstância, e a circunstância. **O contraste necessário:** no que parece bom, algo que parece contrário promove equilíbrio; o resquício do que foi entropizado estende a reflexão (a frase 27 do teste de Aristóteles, II, 6).
+
+**Cuidado:** a mesma contração pode ser virtude (conter a ira) ou falta (omitir-se diante do dever); a terceira estrutura decide, e não o sentido da contração (Registro dos Fundamentos Éticos, Parte VIII, E2).
+
+**Hipótese do assistente, a conferir:** os cinco estágios da atitude correspondem em número às cinco esferas (item de 06/11/2026); cada casca poderia ser um estágio. Grau 1 a 2.
+
+**Para testar (critérios escritos antes, formato da Entrada 409):** definir a variável de cada estágio; prever as razões entre estágios (1/φ); controles com razões 0,5 e 0,7. Precedentes de memória, a conferir: Spinoza (ética em ordem geométrica), Aristóteles (*mesotes*, continência), Leonardo (*Tratado da Pintura*; Pacioli).
+

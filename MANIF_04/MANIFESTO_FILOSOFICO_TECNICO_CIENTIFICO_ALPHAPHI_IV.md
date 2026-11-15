@@ -2670,3 +2670,51 @@ Seguiriam o formato da Entrada 409: critérios, êxito previsto, falhas prevista
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 412 — 15 de novembro de 2026
+### A Ética como Mecânica de Expressão e Entropia — da Atitude em Estágios à Geometria
+
+### I. Enunciado do Pesquisador
+
+> "A ética é uma questão de mecânica: uma mecânica de entropia, digamos assim, de acordo com o campo. Se a ética é uma questão de mecânica, é uma questão de geometria, porque a mecânica, invariavelmente, significa uma geometria. O que preciso fazer é traduzir em geometria a mecânica da ética. Isso não isenta a tradução da identificação da estética, porque a estética tem uma função nessa mecânica: a de regulador de harmonia. Acredito que há uma relação intrínseca com a divina proporção, mesmo na harmonia da mecânica da ética, numa atitude, numa intenção, tanto de projeção quanto de retroação, porque a ética é ética tanto como atitude quanto como abstinência.
+>
+> A ética tem a ver com entropia: a entropia daquilo que precisamos entropizar, dos desejos de si mesmo, no sentido de tolher, de deixar de agir de acordo com uma má tendência. É necessário entropizar, por exemplo, a ira, a volúpia, a luxúria, os vícios, a maledicência, a ambição, tudo o que corrompe. A boa notícia é que, mesmo que pareça atrasado sobre séculos de desenvolvimento cultural, esses séculos trouxeram pelo menos um esclarecimento, em nível popular, do que realmente corrompe a pessoa: a maledicência, a ambição, a agressividade, a raiva, o desejo de vingança, a volúpia, e mais. Tudo o que não é ético. Há, portanto, uma necessidade perceptível de entropização diante do que, por ética, não desejamos expor na atitude.
+>
+> A atitude, em contrapartida, é a expressão de algo, de dentro para fora: um campo de expansão, talvez em vários estágios. A intenção é o primeiro estágio; o sentimento adorna a intenção; a força de vontade leva a agir de acordo com a circunstância resultante desse primeiro estágio, a intenção de fazer algo ético, seja qual for a circunstância. Na expansão da atitude há também o que se agrega como valor psíquico, extensão da continuidade da expansão como intenção. Se a intenção nasce da vontade de fazer algo e o sentimento a adorna, a expressão psíquica é como o invólucro que leva essa intenção à circunstância externa de si mesmo, ainda representativo num campo de expansão.
+>
+> Nessa mecânica reside um campo de existência de si mesmo, se compreendermos a existência do ser, a exemplo do Homem Vitruviano de Da Vinci, que se referiria à mesma questão da proporção áurea. Acredito que ele comentou essa questão psíquica desde a época, só que sem detalhes, porque a época não permitia. Acredito que trouxe também essa extensividade do psiquismo em outras telas, principalmente na Virgem das Rochas, e em outras em que trabalhou maravilhosamente a perspectiva aérea. Na Virgem das Rochas dá para observar bem uma questão psíquica circunstancial e a bênção como extensão psíquica, na intenção de alguém para com outro.
+>
+> Se na mecânica da intenção reside uma referência geométrica, então a ética pode ser traduzida em estética e em geometria pela compreensão dessa mecânica de expressão e de entropia: do que precisa ser entropizado numa atitude ética e do que é conveniente expressar. A estética, nesse sentido, adorna em questões proporcionais, inclusive o sentimento numa intenção. Como notamos nos textos do teste de triangulação (de Sócrates), em alguns trechos, mesmo no âmbito do que parece bom, é necessário algo que parece contrário a si mesmo, não para corromper a atitude, mas para promover um determinado equilíbrio. Acredito que a divina proporção se refere a uma proporcionalização no sentido do que é estendido como um resquício daquilo que foi entropizado, porque o gancho do que parece promover algo não ético também é uma atitude coerente, no sentido de estender uma possibilidade de continuidade da reflexão à circunstância."
+
+— Nota do pesquisador, 15 de novembro de 2026
+
+*Texto revisado: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+**1. O enunciado em teses.**
+- T1. A ética é mecânica (de expressão e de entropia, de acordo com o campo); T2. toda mecânica tem geometria; logo, a ética se traduz em geometria; T3. a estética regula a harmonia dessa mecânica, e a proporção áurea é candidata a regulá-la; T4. a ética é atitude e é abstinência (projeção e retroação).
+- T5. **Entropizar** é conter o que corrompe (ira, volúpia, luxúria, vícios, maledicência, ambição, vingança): é a contração do canônico. T6. **A atitude é expansão em estágios**: a intenção, o sentimento que a adorna, a vontade que a leva ao agir, o invólucro psíquico que a leva à circunstância externa e a própria circunstância. T7. **O contraste necessário**: no que parece bom, algo que parece contrário promove equilíbrio; o resquício do que foi entropizado estende a reflexão à circunstância.
+
+**2. Ligação com o canônico (triangulação, e + x + t = 1).** A abstenção é a tensão entrópica (contrai, delimita); a atitude é a tensão expansiva (abre, irradia); a terceira estrutura é o juízo do que reter e do que expressar, e a proporção entre os dois. Um cuidado de leitura: **a mesma contração pode ser virtude ou falha**. Conter a ira é virtude; omitir-se diante do dever é falta (no Registro dos Fundamentos Éticos, Parte VIII, o polo entrópico de E2 é a omissão). Quem decide é a terceira estrutura, e não o sentido da contração.
+
+**3. Proposta do assistente (hipótese, grau 1 a 2).** Os cinco estágios da atitude correspondem em número às cinco esferas da agenda (Ponte e Rede AP, 06/11/2026): cada casca poderia ser um estágio, expandindo o seu resultado enquanto a seguinte se contrai. O pesquisador não propôs isso; fica registrado como possibilidade a conferir.
+
+**4. Precedentes (de memória, a conferir).**
+- Spinoza, *Ética demonstrada em ordem geométrica*: no prefácio da parte III, trata as ações e os apetites humanos "como se fossem linhas, planos e corpos".
+- Aristóteles: o *mesotes* e a continência (*enkrateia*).
+- Leonardo: o *Tratado da Pintura* (o pintor deve pintar o homem e a intenção da sua mente; os "movimentos do ânimo"). A ligação documentada de Leonardo com a divina proporção é a ilustração dos poliedros do *De divina proportione*, de Pacioli (1509). O Homem Vitruviano segue as proporções de Vitruvius; que a razão áurea esteja no desenho é afirmação frequente e discutida. A leitura da *Virgem das Rochas* (o gesto de bênção, a perspectiva aérea) como extensão psíquica é interpretação do pesquisador: nenhum texto de Leonardo, que eu conheça, a registra.
+
+**5. Correção de fonte.** O teste de triangulação (Entrada 406) foi feito sobre **Aristóteles**, *Ética a Nicômaco* II, 6, e não sobre Sócrates. O trecho a que o pesquisador se refere é a frase 27: o intermediário é, em certo sentido, um extremo.
+
+**6. Limites.** (a) "Ética é mecânica" é analogia (grau 1) até haver uma variável e uma medida para cada estágio. (b) A mecânica clássica é geométrica (o espaço de fases), mas isso não faz da ética um sistema mecânico. (c) A proporção áurea como reguladora é hipótese: no projeto, φ na disposição dos pontos não melhorou a memória em três testes (Diretriz, seção 3.2). (d) Para testar: definir a variável de cada estágio; prever antes as razões entre os estágios (1/φ); comparar com controles de razão não áurea (0,5 e 0,7), sob o formato da Entrada 409 (êxito previsto, falhas previstas, verificação do arranjo).
+
+**Onde foi registrado também:** Agenda da Ponte, Agenda da Rede AP e a etapa 2 do artefato "Caminho Completo". A ficha correspondente ficou para depois da conferência das 19 fichas.
+
+**Estado.** Entrada interpretativa; nenhum resultado experimental novo. As referências de memória estão sinalizadas.
+
+---
+*Florianópolis · 15 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
