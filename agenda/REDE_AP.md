@@ -234,6 +234,12 @@ Registrado também na Agenda da Ponte. Para a construção da Rede AP, o item pr
 
 ---
 
+### Nota ao item anterior (adendo de 15/11/2026; Entrada 412)
+
+A frase "φ na disposição dos pontos não melhorou a memória em três testes", no item sobre a ética como mecânica, deve ser lida assim: *φ ainda não foi testado nesta aplicação; os testes anteriores (19 e 20/10/2026), em outra aplicação e antes do canônico da triangulação (25/10/2026), não o detectaram, o que não o refuta.* "Não detectada" não é "refutada". Ver o adendo à Entrada 412.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)

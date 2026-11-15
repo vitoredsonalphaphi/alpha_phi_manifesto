@@ -2718,3 +2718,37 @@ Seguiriam o formato da Entrada 409: critérios, êxito previsto, falhas prevista
 *Vitor Edson Delavi · Claude*
 
 ---
+
+### Adendo à Entrada 412 — 15 de novembro de 2026 · A Proporção Áurea: "Não Detectada" Não É "Refutada"
+
+### I. Enunciado do Pesquisador
+
+> "Sobre φ não ter melhorado a memória em três testes, acho que, ainda assim, é uma opinião impositiva. O fato de φ não ter regulado a memória pode ser porque não refinamos a maneira de alcançar isso, e principalmente porque esses testes não foram feitos segundo a triangulação, que não foi aplicada nesse posicionamento. Foi aplicado um teste de φ para tentar regular a memória, mas não sei se da maneira correta. O fato de não ter alcançado um resultado positivo não quer dizer que não exista uma maneira correta de aplicar φ para regular a memória: quer dizer que não encontramos a maneira correta. Por isso, essa afirmação, ou afirmações parecidas, não pode ser usada como justificativa de que φ deva ser descartado enquanto aplicabilidade técnica, porque não foram verificadas todas as variáveis de aplicação e de teste. Há uma gama incomensurável de possibilidades de aplicação e de observação. E principalmente na tradutibilidade, no isomorfismo, onde grandezas da ética podem ser observadas na geometria, e as grandezas da soma dessas duas, como parcelas do processo, podem ser observadas na matemática. Vejo uma convergência: algo que se aproxima gradativamente da tradutibilidade. A cada assunto encontramos novas conveniências e novos precedentes, inclusive na literatura, como o de Spinoza, que abre um clarão imenso sobre a tradutibilidade, que até poucas semanas atrás era mera especulação."
+
+— Nota do pesquisador, 15 de novembro de 2026
+
+*Texto revisado: retiradas as hesitações e repetições da fala; conteúdo na íntegra.*
+
+### II. Estruturação
+
+**1. A correção, reconhecida.** Na Entrada 412 (seção II.6) e no item correspondente da Agenda da Rede AP, o assistente escreveu que φ "não melhorou a memória em três testes", como contrapeso à hipótese da proporção áurea. O fato é verdadeiro; a ênfase, não: soou como razão para desconfiar de φ, quando mostra apenas que um arranjo específico não funcionou. A observação do pesquisador procede.
+
+**2. O que os testes foram, e o que não foram.** A Diretriz (seção 3.2, status de 20/10/2026) registra a hipótese "φ na disposição dos pontos melhora a memória" como **não detectada**, em três testes. O escopo é o seu enunciado: φ na **disposição dos pontos**, numa tarefa de memória. Não testaram φ em outras funções (razões entre estágios, entre cascas, escalas, atrasos). A própria Diretriz registra, para outra linha da mesma tabela, que a tarefa de memória era limitada por memórias muito parecidas entre si.
+
+**3. A cronologia.** Esses testes são de 19 e 20/10/2026; o canônico da triangulação (e + x + t = 1) foi fixado em 25/10/2026. Portanto **não foram desenhados com a triangulação**, como o pesquisador suspeita.
+
+**4. A regra do próprio projeto.** Os rótulos são *demonstrado*, *não demonstrado* e *refutado*, e o projeto nunca trata "não demonstrado" como falso (portões G0–G5). **"Não detectada" não é "refutada".**
+
+**5. A formulação adotada daqui em diante:** *"φ ainda não foi testado nesta aplicação; testes anteriores, em outra (a disposição de pontos para a memória), não o detectaram, o que não o refuta."*
+
+**6. Sobre a convergência, duas ponderações do assistente.**
+- Spinoza dá **precedente e modelo formal** para a tradução da ética em geometria (Prefácio da Parte III, conferido no texto de Elwes). Precedente não é confirmação: que alguém tenha feito e sustentado não mede se vale para a Rede AP. A busca por argumentos contrários, ainda pendente, é o que converte a sensação de convergência em evidência.
+- A convergência com Spinoza apoia a **geometrização da ética**; **não apoia, nem contradiz, φ como regulador**: a razão áurea não aparece na *Ética* (busca no texto integral de Elwes, sem ocorrências). Para φ, o caminho continua sendo o teste, com razões não áureas como controle.
+
+**Estado.** Adendo de correção de formulação; nenhum resultado experimental novo.
+
+---
+*Florianópolis · 15 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
