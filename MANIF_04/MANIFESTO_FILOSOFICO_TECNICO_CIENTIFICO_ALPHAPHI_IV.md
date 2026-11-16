@@ -3148,3 +3148,54 @@ Seguiriam o formato da Entrada 409: critérios, êxito previsto, falhas prevista
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 422 — 16 de novembro de 2026
+### A Estrutura Fina na Esfera Topográfica: os Dois Sentidos, a Fonte da Representação e o Lugar em que Ela Reside
+
+### I. Enunciado do Pesquisador
+*Duas falas, na ordem em que foram ditadas.*
+
+**Primeira fala**
+> "Me ocorreu agora uma coisa. Agora nós temos um instrumento que é o topográfico 3D esférico. Diante daquilo que você tem acesso a respeito da estrutura fina na literatura, em todos os bancos de dados que você tem acesso, como que nós poderíamos nos utilizar do topográfico 3D na esfera para representar a estrutura fina na distribuição dos elétrons? Deve existir ou uma animação dessa distribuição da estrutura fina que você pode replicar, se não na íntegra, porque eu não sei qual é o nível de renderização das outras representações. No mínimo, algo que possa ser compreensível e demonstrativo, de acordo com o que a capacidade da nossa esfera topográfica permite. Eu acho que a visualização de como a mecânica da estrutura fina age, principalmente sobre a proposta das duas tensões, da entropia e convergência das 5 esferas, já são convenientes, acredito. Eu não sei, eu nunca vi uma estrutura fina por dentro, mas o que eu sei é que ela possui os dois sentidos na distribuição dos elétrons. Então, os dois sentidos que se referem às 5 esferas no nosso topográfico talvez seja conveniente nessa demonstração. O que você acha? Seria o início, além, claro, da tua proposta de observar sobre as leituras, que com certeza não é uma má ideia, mas a representação através de uma animação tridimensional no topográfico na esfera, acredito que contribuiria para compreender a mecânica e uma possível convergência com a nossa construção do instrumento de tradução. Concorda?"
+
+**Segunda fala**
+> "Voltamos à questão da estrutura fina. Me diz uma coisa, essa representação, você buscou fonte sobre qual é a fonte dessa representação? Existe essa representação na bibliografia? Existem representações ou sobre este exemplo ou exemplos parecidos como este, neste tipo de distribuição na bibliografia? Na literatura, quais as fontes que você procurou se referir? E me diz outra coisa, a estrutura fina, ela por se referir a um ambiente do átomo, né? Se ela se refere à distribuição dos elétrons, ela se refere à distribuição dos elétrons de uma molécula, é isso? De um átomo de uma determinada molécula. Se ela se refere a um átomo, ela também se refere a uma representação esférica. Confere? Se ela se refere a uma representação esférica, de acordo com o que as pesquisas que a identificaram ditam, qual é o âmbito nessa correlação com o átomo, não sei, ou com outras estruturas do átomo, com os próprios elétrons, qual o âmbito que ela ocupa em relação ao átomo e aos elétrons, por exemplo? A estrutura fina, propriamente dito, reside aonde nesta configuração? Se é do átomo que ela se refere, mas acredito que é o átomo, né? Um átomo de hidrogênio, um átomo de oxigênio, tem tal distribuição de elétrons, ou seja, se a estrutura fina se refere à distribuição dos elétrons, onde reside a estrutura fina nesse esquema, nesta representatividade do átomo? Tu pode representar isso para nós através também da esfera? Na verdade é conveniente exatamente por isso. Por gentileza."
+— Nota do pesquisador, 16 de novembro de 2026
+
+*Transcrição do ditado por voz, mantida sem alteração. A segunda fala começava com um parágrafo operacional sobre liberações de sites do ambiente, que o pesquisador pediu para deixar quieto; ele não foi transcrito.*
+
+### II. Estruturação
+
+**1. As teses.**
+- **T1.** Usar o **topográfico 3D esférico** (as cinco esferas) para representar a **estrutura fina** na distribuição dos elétrons.
+- **T2.** Procurar uma **animação existente** que se possa replicar; no mínimo, algo **compreensível e demonstrativo**, dentro do que a esfera topográfica permite.
+- **T3.** Hipótese do pesquisador: a estrutura fina "possui os dois sentidos na distribuição dos elétrons", e os **dois sentidos** corresponderiam às **duas tensões das cinco esferas** (entropia e expansão).
+- **T4.** Seria o **início**, além da leitura das fontes; contribuiria para compreender a mecânica e uma possível convergência com o instrumento de tradução.
+- **T5.** Qual é a **fonte** da representação? Existe na bibliografia, ou existem exemplos parecidos? Quais fontes foram procuradas?
+- **T6.** A estrutura fina refere-se a um **átomo**, ou a uma **molécula**?
+- **T7.** Se é do átomo, ela se refere a uma **representação esférica**?
+- **T8.** **Onde reside** a estrutura fina na configuração do átomo e dos elétrons?
+- **T9.** Pedido de **representar isso na esfera**.
+
+**2. O que foi feito em resposta (16/11/2026).** Uma página nova, **"Estrutura Fina em 3D"** (artefato privado), em quatro cenas, **separada** do scanner topográfico canônico (salvaguarda dos três códigos): (1) o **modelo vetorial** do spin-órbita em p: **j = 3/2** (L·S = +0,50 ħ², ângulo L–S de 65,9°, 4 estados) e **j = 1/2** (L·S = −1,00 ħ², 144,7°, 2 estados), com **soma ponderada igual a zero**; (2) os **níveis**, em escala exagerada; (3) a **distribuição** nas nuvens de |ψ|² (1s, 2s, 2p, 3d); (4) **onde a estrutura fina reside**: a divisão spin-órbita em p cai **exatamente com 1/n³** (n = 2: 4,528 × 10⁻⁵ eV; n = 3: 1,342 × 10⁻⁵; n = 4: 5,660 × 10⁻⁶; n = 5: 2,898 × 10⁻⁶ eV; razões (2/n)³). Os números foram impressos por código; os fatos qualitativos, confirmados em resumos de busca.
+
+**3. Respostas às perguntas (T5 a T8).**
+- **A fonte (T5).** A **visualização é do assistente**, e **não se encontrou uma figura igual**. O **conteúdo** é física padrão: o modelo vetorial aparece em notas de aula (Flammia, Universidade de Sydney; Aberystwyth; resumos de busca, textos não abertos) e nos livros-texto (Griffiths; Bransden e Joachain; de memória). Existem **visualizadores de orbitais** do hidrogênio (EJSS de Singapura; Hanson, *J. Chem. Educ.*, 2024; "Atom in a Box"), semelhantes à cena 3, não vistos funcionando. **Não se encontrou** uma representação que una os dois sentidos às cinco esferas do projeto.
+- **Átomo ou molécula (T6).** A estrutura fina é propriedade do **átomo**; em moléculas há efeitos análogos (de memória, a conferir), mas o termo clássico é atômico.
+- **Distribuição e estrutura fina.** Correção: a estrutura fina **não é a distribuição** dos elétrons. A distribuição (camadas, orbitais) é a estrutura **grosseira**; a fina é o desdobramento da **energia dos estados** dentro dela.
+- **Esfericidade (T7).** A **simetria** do átomo é esférica (o potencial central só depende da distância), e por isso se usam harmônicos esféricos, os mesmos da Grade Esférica; mas **só o orbital s tem forma de esfera**; uma subcamada completa tem densidade esférica (de memória).
+- **Onde reside (T8).** Não é um lugar da esfera: é propriedade da **energia dos estados** (o acoplamento do spin com o movimento, a correção relativística e o termo de Darwin). A **intensidade** depende da proximidade do núcleo (∝ 1/n³): **mais perto do núcleo, maior o efeito**. Isso se representou na cena 4, com as cascas do átomo (raios ∝ n²) acesas na proporção da divisão.
+
+**4. Correção à hipótese T3, e o cuidado do cinco.** Os **dois sentidos** da estrutura fina estão **no acoplamento** (o spin alinhado ou oposto ao movimento orbital, cena 1), e **não numa redistribuição visível** da nuvem de elétrons, que quase não muda. Sua relação com as duas tensões das cinco esferas **segue sendo analogia de forma** (grau 1), sem teste. Os raios das camadas do átomo são ∝ n² (1, 4, 9, 16, 25), e os das cinco esferas do projeto, 1/φ⁴ a 1: **não coincidem**, e **o "cinco" não é o mesmo cinco**. O "dois" vem do spin 1/2 e **não se generaliza**.
+
+**5. A observação sobre a "soma zero".** A soma ponderada de L·S é exatamente zero (os desvios +0,5 e −1,0, com 4 e 2 estados, se compensam em torno de uma média), o que ressoa com o centro como média da esfera e com o Sépstro; **mas** vale só para o termo de spin-órbita sozinho: a estrutura fina completa desloca o centro (a média ponderada dos desvios totais no n = 2 é −2,64 × 10⁻⁵ eV). Analogia de forma, grau 1.
+
+**6. Limites e próximo passo.** Valores do **hidrogênio**; em átomos com vários elétrons (o oxigênio, por exemplo, com os níveis ³P₂, ³P₁ e ³P₀ e linhas observadas em 63 e 145 μm, segundo resumos de busca) há estrutura fina por acoplamento dos elétrons, com outras regras. As fontes foram lidas só em **resumos de busca**; os sinais dos termos estão **de memória**. **Próximo passo:** conferir as fontes lendo-as (Sommerfeld, 1916; Dirac, 1928) e, depois, no papel, uma frase com a leitura grossa e a primeira correção.
+
+**Estado.** Enunciado e estruturação; nenhum resultado experimental novo.
+
+---
+*Florianópolis · 16 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
