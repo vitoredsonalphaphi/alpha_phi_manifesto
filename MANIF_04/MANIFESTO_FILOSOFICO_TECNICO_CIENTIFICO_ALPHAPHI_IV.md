@@ -2815,3 +2815,51 @@ Seguiriam o formato da Entrada 409: critérios, êxito previsto, falhas prevista
 *Vitor Edson Delavi · Claude*
 
 ---
+
+## Entrada 414 — 16 de novembro de 2026
+### A Revisibilidade e o Núcleo Irrevogável: o que se Pode Rever e o que é Fundamento Declarado
+
+### I. Enunciado do Pesquisador
+> "Sobre a questão da revisibilidade e a questão do núcleo duro, a questão é que a revisibilidade sugere de que todo e qualquer conceito pode ser reversível, desde que o conceito novo seja melhor que o primeiro. Sobre o núcleo duro, não existe nenhum conceito novo a princípio melhor do que o que já está estabelecido. Eu digo isso no sentido do que existe uma distinção daquilo que a gente já estabeleceu como estrutura. Eu acredito que, a princípio, o núcleo duro é reversível nesse sentido. Seria o mesmo âmbito da estrutura que já foi fundamentada, por exemplo, do alfa-fi, tendo um alfa como entropia, uma expansão e o terceiro estágio como um atrator, onde subentende-se esse atrator uma agnosticidade, onde todas as ferramentas que já existem são acopladas e todas as outras ferramentas que possam vir a existir são agregadas. Ou seja, isso é irrevogável. Essa estrutura é irrevogável e vai ser para sempre. Não existe uma outra estrutura que possa ser adaptada nisso. Pode ser adaptado outros fundamentos dentro das ferramentas que constituem a complexidade do processamento, mas a estrutura de fundamento alfa-fi é irrevogável. É nesse sentido que o núcleo duro, eu acredito que precisa ser irrevogável. E é nesse sentido também que a extensão de cada conceito daquilo que está sendo verificado por enquanto e como acréscimos de cada estágio que está sendo buscado adaptar. E nesse sentido, por ser um protótipo, cada fase ainda em estado prematuro, então nesse sentido que eu cito que cada grandeza pode estar suscetível a uma determinada mudança de acordo com uma nova informação que se refere a cada estruturação. Não sobre aquilo que é irrevogável. A estrutura alfa-fi é irrevogável, não se muda. A questão do eco-bip é irrevogável, não se muda, porque alcançou o melhor resultado até o momento. A questão do que já tem sido estruturado enquanto a triangulação e o esquema dos 5 princípios da tradutibilidade, onde contém filosofia, ética, estética, geometria, matemática e inteligência artificial, esse esquema é irrevogável. Ou seja, seria necessário observar e fazer uma nova proposta de revisão então de outras fichas sobre aquilo que pode ser considerado irrevogável e sobre os outros âmbitos que provavelmente possam ser reversíveis. Mas acredito que por enquanto não. Você perguntou sobre... Então, nesse sentido, você sugere mas a decisão é sobre o seu projeto, não mexe no núcleo nem no Claude. O núcleo duro continua assim. Então, quando você decidir, eu aplico as correções das fichas, etc, etc. Esse aviso é automático, diz, nada mudou. O que segue aguardando? A frase completa da nota ficha 01 já não está cortada, está completa. Troca uma pela outra. A decisão sobre ficha número 2, decisão sobre ficha enunciados, ficou sem marca como aceita. A leitura A ou B, número 3, a leitura A ou B para o núcleo duro. A. 4. O local das fichas no repositório, se você quiser guardá-las lá. Eu não me lembro por que não foi para o repositório. Eu não lembro se foi por uma questão de uma necessidade, de uma cautela. Eu acho que não vai para o repositório por enquanto. Você pode trabalhar com ela estando no artefato. E mesmo assim aplicar sem justificar e sem expor, realizar a aplicação na construção da RDP e na construção do instrumento de tradutibilidade, mas sem justificá-las no repositório, né? Isso você pode fazer mantendo elas ainda por enquanto no artefato, por gentileza."
+— Nota do pesquisador, 16 de novembro de 2026
+
+*Transcrição do ditado por voz, mantida sem alteração. O parágrafo inicial da mensagem do pesquisador reproduz o texto do assistente (Acréscimo 2: revisibilidade) e não foi transcrito aqui. "RDP" foi entendido como a Rede AP.*
+
+### II. Estruturação
+
+**1. O que o pesquisador estabelece.**
+
+*(a) A revisibilidade.* Todo conceito, grandeza, ponderação, correlação, enunciado ou extensão **em verificação** pode ser revisto, **desde que o novo seja melhor que o anterior**. A justificativa é a de que cada fase é um protótipo em estado inicial.
+
+*(b) O irrevogável, por declaração do pesquisador:*
+- **A estrutura α–φ:** α como entropia (contração), φ como expansão, e o terceiro estágio como atrator. O atrator é **agnóstico**: acopla todas as ferramentas que já existem e agrega as que vierem a existir. As ferramentas dentro da estrutura podem mudar (outros fundamentos, na complexidade do processamento); a estrutura, não.
+- **O ECO BEEP 880**, "porque alcançou o melhor resultado até o momento".
+- **A triangulação e o esquema da tradutibilidade:** a cadeia filosofia, ética, estética, geometria, matemática e inteligência artificial.
+
+*(c) A decisão sobre a leitura A ou B.* O núcleo duro é **irrevogável**. O mecanismo de revisão **não se aplica a ele**. Só uma nova decisão explícita do pesquisador reabriria a lista do que é irrevogável, e o pesquisador diz que, por enquanto, não. *Nota do assistente:* o pesquisador respondeu "A" e descreveu o núcleo como irrevogável "para sempre". A forma registrada cumpre as duas coisas (o núcleo fica fora do mecanismo de revisão, e a única via de reabertura é a decisão explícita do pesquisador, que ele não pretende exercer). Se isso não for o que o pesquisador quis, a correção é dele.
+
+**2. Formulação adotada do princípio de revisibilidade (para o que não é núcleo).**
+1. **Âmbito:** vale para o cinturão protetor, as extensões em verificação e as fichas. **Não vale para o núcleo.**
+2. **Nada fora do núcleo é terminal:** tem estado e versão.
+3. **Revisar é acrescentar, não apagar:** a nova versão guarda a data, o motivo, o que mudou e a versão anterior, que continua consultável.
+4. **As razões acompanham a afirmação:** se uma razão cai, sabe-se o que depende dela.
+5. **Uma estrutura melhor entra em paralelo:** "melhor" é um critério **escrito antes** (explica ou prevê mais, com custo igual); a anterior fica registrada.
+6. **Flexibilidade não é imunidade:** toda revisão registra a causa e a previsão anterior; se qualquer dado pudesse ser acomodado reorganizando a estrutura, ela deixaria de poder ser testada.
+
+*A redação é do assistente, a partir do enunciado; está aberta à revisão do pesquisador.*
+
+**3. Precedentes.** O modelo AGM de revisão de crenças (Alchourrón, Gärdenfors e Makinson, 1985) e o sistema de manutenção de razões de Doyle (1979) foram **confirmados em busca** (Stanford Encyclopedia e registros do IJCAI). Controle de versões, migrações de esquema, atualização bayesiana, Lakatos e Popper estão **de memória**. Lakatos interessa em especial: o núcleo é protegido por **decisão metodológica**, e não por demonstração (de memória; já citado na Diretriz).
+
+**4. Uma distinção que o assistente acrescenta.** "Irrevogável" aqui é **fundamento declarado**, por decisão metodológica. Isso é coerente com a seção 3.1.1 da Diretriz ("fundamento declarado não é resultado medido") e não é um resultado experimental. No caso do ECO BEEP, "o melhor resultado até o momento" descreve uma medida, do tipo que um resultado melhor poderia superar; "irrevogável" afirma que o código **não se altera**, o que é a salvaguarda dos três códigos já fixada no CLAUDE.md (testes que o juntam a outros são paralelos: importam, nunca editam). As duas coisas são compatíveis: o código de referência não é editado, e alternativas podem ser comparadas com ele sem substituí-lo.
+
+**5. Relação com os textos vigentes (nada alterado).** A seção 3.1 da Diretriz lista como núcleo: φ, α, SEAL, o Sépstro, o modelo espacial e a tradutibilidade. As declarações de irrevogabilidade do ECO BEEP, da triangulação e do esquema da cadeia vão além do que a 3.1 diz (o canônico da triangulação até afirma que não altera o núcleo duro). Por instrução do pesquisador ("o núcleo duro continua assim"; "não mexe no Claude"), a Diretriz 3.1 e o CLAUDE.md **não foram alterados**. Pendente de decisão: se essas três declarações passam a constar na 3.1.
+
+**6. Escopo do que fica fora do repositório.** Por instrução do pesquisador, as fichas, as marcas de conferência e os respaldos ficam **por ora no artefato**. Aplicam-se à construção da Rede AP e do instrumento de tradutibilidade, **sem serem justificados no repositório**. Esta entrada registra apenas o princípio e o escopo.
+
+**Estado.** Enunciado e estruturação; nenhum resultado experimental; as referências de AGM e Doyle vêm de busca, as demais estão marcadas "de memória".
+
+---
+*Florianópolis · 16 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
+---
