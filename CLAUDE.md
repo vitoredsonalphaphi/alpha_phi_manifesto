@@ -12,6 +12,20 @@
 
 ---
 
+## PANORAMA — o estágio em que estamos (atualizar a cada sessão · última atualização: 16/11/2026)
+
+*Entra automaticamente em toda sessão, inclusive depois de compactada. É um resumo; o detalhe está na Diretriz (seção 6) e no Manifesto 04.*
+
+- **Missão:** instrumento de tradutibilidade (filosofia → ética → estética → geometria → matemática → IA) na esfera da Rede AP, pela triangulação (e + x + t = 1).
+- **Irrevogável (declarado pelo pesquisador, Entrada 414):** o núcleo duro da Diretriz 3.1, a estrutura α–φ (atrator agnóstico), o ECO BEEP 880, a triangulação e o esquema da cadeia. **Todo o resto é revisável** (por versão, sem apagar o anterior, critério de "melhor" escrito antes).
+- **Ética como mecânica (Entrada 412):** a abstenção contrai, a atitude expande em cinco estágios, o juízo decide. É analogia de grau 1 até haver variável por estágio.
+- **Cinco canais do aparelho de tradução da narrativa:** triangulação, semântica, térmico, cromático, ritmo. **Só a triangulação foi testada** (Entrada 406). A convergência dos instrumentos está na Entrada 415.
+- **Índice de convergência:** camada 1 (109 itens) e camada 2 (20 fichas, 66 pontes). É o **mapa do que foi registrado**, para posicionar na esfera e acusar convergências; **não é o método de traduzir**. Está nos artefatos do pesquisador; só há no repositório o rascunho `Ponte/fundamentacao/fichario_camada2_prototipo.md` (camada 2). Não justificar o conteúdo das fichas no repositório.
+- **Regra de conveniência (pesquisador, 16/11/2026):** antes de fazer ou perguntar, verificar se a atividade é **pertinente** à construção do instrumento de tradutibilidade e ao objetivo do Manifesto. Se sim, fazer; se irrelevante, não fazer. **Continuam valendo:** a regra de resultados, o núcleo irrevogável, a salvaguarda dos três códigos, o stand-by, e confirmação para ações destrutivas, irreversíveis ou externas.
+- **Ao começar a sessão:** depois de ler a Diretriz, dizer em cinco linhas o estágio atual e a finalidade do que está em curso, para o pesquisador conferir.
+
+---
+
 ## PROTOCOLO ATIVO — Sessão Good Morning
 
 ### Regra padrão (estado ativo por default)
