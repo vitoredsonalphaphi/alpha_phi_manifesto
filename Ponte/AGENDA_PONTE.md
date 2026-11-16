@@ -520,3 +520,33 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 - **Próximo passo proposto:** conferir as fontes da estrutura fina lendo-as; escrever **no papel**, para uma frase, a leitura grossa e a primeira correção; só depois, critérios. Pendências do pesquisador: o sentido de "parâmetros da internet"; os textos do teste conjunto.
 
 ---
+
+---
+
+## \*\*\* Organograma: distribuição das ramificações nos 33 059 pontos do campo esférico (rascunho de 16/11/2026)
+
+**Status: RASCUNHO, para o pesquisador saber o que desenvolver depois.** Proposta do pesquisador, sem teste; o assistente acrescentou o estado, a comparação de resolução e as opções. Não altera o organograma (`Ponte/organograma/organograma.yaml`) nem o scanner canônico.
+
+**Enunciado do pesquisador (na íntegra, trecho sobre o organograma):**
+
+> "E outra coisa.... Exemplo da esfera com 33.000 pontos, como que está o organograma diante dessas? Houveram, acredito que várias inserções de continuidade das ramificações, né? Como ficou o organograma para atualizar? E sobre a resolução, o que você acha de aplicar o organograma na mesma estrutura do topográfico com 33.000 pontos? Por mais que... eu não sei como é que poderia distribuir. Eu tinha pensado em alguma coisa de tarde, mas é muito assunto. Só que eu me recordei agora é sobre a conveniência de tratar o campo do organograma com 33.000 pontos. Eu acho que a resolução fica mais interessante. Qual a diferença? Então, nesse sentido, analise qual a diferença entre a resolução do campo esférico e a resolução do que foi montado no organograma. Eu acho que 33.000 pontos, eu acho que permitiria... preciso deixar registrado na agenda do organograma uma proposta de distribuição de cada ramificação, sendo, como eu posso dizer, a princípio, um rascunho sendo guiado, entre aspas, por esses 33.000 pontos, onde cada uma das ramificações estariam destinadas a uma porcentagem desses 33.000 pontos. Claro que distribuída de forma equilibrada, né? No sentido quase como se permitisse um atrator dentro do organograma. Eu sei que precisa de mais desenvolvimento essa ideia, por isso que eu deixo registrado como rascunho para mim saber o que tem que desenvolver mais tarde, ok? Não sei como você pode intitular como um atrator propriamente dito do organograma, embasado nos 33.000 pontos como referência de cada ramificação."
+
+**1. O estado do organograma (árvore em `organograma.yaml`).** 68 nós em **8 ramos** (cadeia 6, triangulação 8, valor ético 12, instrumentos 8, método e agendas 10, pendências 5, a tradução 13, a régua própria 5, contados com os nós de cada ramo), versão v1 de 31/10/2026. **Não foi atualizado desde então.** Faltam as ramificações de novembro, entre elas: o aparelho de tradução da narrativa (cinco canais); o índice de convergência e as fichas; a mecânica da ética (Entrada 412); a revisibilidade e o núcleo irrevogável (Entrada 414); a convergência dos instrumentos (415); o protocolo de pontes; a estrutura fina como esquema organizador (Entradas 420 a 422). São **propostas de nós, a decidir pelo pesquisador** (o README do organograma diz que o assistente propõe e o pesquisador decide). Há também um organograma 3D, de uso pessoal e fora do repositório, que também parou em 31/10.
+
+**2. A diferença de resolução (números calculados por código nesta sessão).** O campo esférico tem **33 059 pontos** na superfície, com espaçamento angular médio de **≈ 1,12°**. A árvore tem **68 nós**: **≈ 486 pontos de campo por nó**, e, se os nós estivessem espalhados uniformemente, um espaçamento angular médio equivalente de **≈ 24,6°**. Ou seja, o campo tem **≈ 486 vezes mais pontos** e **cerca de 22 vezes mais finura angular** que o organograma.
+
+**3. A opinião do assistente sobre "a resolução fica mais interessante".** Concordo em parte. **O que a resolução maior dá:** (a) **território** para cada ramificação crescer; (b) um **substrato comum** com o topográfico, onde o scanner já lê; (c) uma forma de mostrar **densidade** (quanto conteúdo cada ramificação tem). **O que ela não dá:** mais informação. Com 68 nós, a maior parte dos 33 059 pontos não carrega nada específico do nó, só a **regra de atribuição**; qualquer padrão fino que aparecesse seria, em boa parte, **artefato da regra**, e não do conteúdo. Por isso a proposta é de **partição** (quem ocupa que parte), e não de **medida**.
+
+**4. Rascunho da proposta: a partição equilibrada.**
+- Cada ramificação recebe uma **fração f_i** dos 33 059 pontos, com **soma 1** (conservação, na forma do Sépstro, Coh + Entr = 1: analogia de forma, grau 1).
+- **Equilibrada:** f_i = 1/B. Com B = 8 ramos: 33 059 / 8 = 4 132,4; em inteiros, **3 ramos com 4 133 pontos e 5 com 4 132** (soma 33 059). Se o organograma passasse a 13 ramos, seriam **2 543 pontos cada, divisão exata** (33 059 = 13 × 2 543; **coincidência aritmética, sem significado**).
+- **Alternativa a discutir:** proporcional ao número de nós de cada ramo (mais conteúdo, mais território), o que quebra o equilíbrio de propósito.
+- **O "atrator":** na leitura do assistente, o atrator seria o **estado de equilíbrio de uma regra de redistribuição**: quando entra uma ramificação nova, os pontos são repartidos de novo, e o sistema volta a um estado em que nenhuma ramificação fica abaixo de uma fração mínima declarada. **Hoje só existe a regra fixa e equilibrada**; uma regra dinâmica é o que falta desenvolver.
+
+**5. Como intitular.** Opções, em ordem de preferência do assistente: (i) **"Partição equilibrada do campo (rascunho de atrator do organograma)"**; (ii) "Território das ramificações"; (iii) "Atrator de partição do organograma". A primeira diz o que é hoje (uma partição) e deixa o "atrator" como o que se quer desenvolver. A escolha é do pesquisador.
+
+**6. A desenvolver (para o pesquisador).** (a) **Como mapear pontos a ramificações**: faixas de latitude de mesma área, gomos (setores), ou células de Voronoi; a escolha muda o que se vê. (b) **O que cada ponto representa**, e se o raio (a camada, a cadeia) entra. (c) **Se a partição é por ramos ou por pilares.** (d) **A regra dinâmica** do atrator e a fração mínima. (e) **Critério de falha:** se a leitura do campo mostrar padrões que dependem só da regra de partição, e não da ocupação dos nós, são artefato.
+
+**7. Cuidados.** Rascunho, sem teste. A esfera de 33 059 pontos é a lente do scanner (CLAUDE.md); aqui seria só substrato de partição, **sem alterar o scanner canônico**. A resolução não é informação.
+
+---
