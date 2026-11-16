@@ -1,6 +1,6 @@
-# Fichário de convergência — camada 2 (19 fichas, 61 pontes)
+# Fichário de convergência — camada 2 (20 fichas, 66 pontes)
 
-**Status: RASCUNHO · protótipo do instrumento de tradutibilidade · camada 2 do índice de convergência (19 fichas, 61 pontes), conferida pelo pesquisador em 16/11/2026, com uma ficha sem marca; a correção da ficha O1 foi aplicada em 16/11/2026 · NÃO é a estruturação da Rede AP · não é canônico · revisável (Entrada 414) · outras fichas virão.**
+**Status: RASCUNHO · protótipo do instrumento de tradutibilidade · camada 2 do índice de convergência (20 fichas, 66 pontes), conferida pelo pesquisador em 16/11/2026; a correção da ficha O1 foi aplicada em 16/11/2026 · NÃO é a estruturação da Rede AP · não é canônico · revisável (Entrada 414) · outras fichas virão.**
 
 **Guardado em 16/11/2026, por decisão do pesquisador (opção B), para não se perder.** Mantém-se fora do repositório a camada 1 (109 itens), que ainda não foi conferida.
 
@@ -9,10 +9,10 @@
 - **Origem:** as fichas e as marcas vêm do artefato "Conferência das Fichas"; as marcas foram lidas do banco da página em 16/11/2026.
 - **Os números** das fichas são **transcritos** de documentos do repositório (a fonte vem indicada em cada um). **Não foram recalculados nesta sessão.**
 - **As pontes** são propostas do assistente. "Aceita" e "recusada" são decisões do pesquisador. O grau de proximidade (analogia, homologia de forma, identidade de medida) é o proposto, e não um resultado.
-- **Pendência desta conferência:** a ficha "Enunciados — Justiça: ponto e campo" está **sem marca**.
+- **Sem pendência de conferência:** as 20 fichas e as 66 pontes estão marcadas (a ficha "Enunciados — Justiça: ponto e campo" foi marcada depois da primeira leitura do banco).
 - **Correção aplicada em 16/11/2026:** a nota do pesquisador na ficha O1 (bioética) foi aplicada tal como escrita; a frase anterior fica preservada na própria ficha (ver a Ficha 9). O pesquisador confirmou que a nota está concluída como está.
-- **A 20.ª ficha** (a ética como mecânica, Entrada 412) existe **só no artefato**, ainda sem conferência, e não está neste arquivo.
-- **Resumo das marcas:** 18 fichas marcadas como certas; 1 sem marca; 60 pontes aceitas; 1 recusada (protocolo de medir o alinhamento → portões G0–G5).
+- **A 20.ª ficha** (a ética como mecânica, Entrada 412) foi acrescentada em 16/11/2026, depois da conferência do pesquisador (certa, sem nota; as cinco pontes aceitas).
+- **Resumo das marcas:** 20 fichas marcadas como certas; 65 pontes aceitas; 1 recusada (protocolo de medir o alinhamento → portões G0–G5).
 
 ---
 
@@ -592,6 +592,42 @@
 - Como separar os dados de terceiros das afirmações do projeto?
 
 **Fontes:** `_CHAVES/10_Ecologia_Cultural_Digital.md:4`, `_CHAVES/10_Ecologia_Cultural_Digital.md:6`, `_CHAVES/10_Ecologia_Cultural_Digital.md:16`, `_CHAVES/10_Ecologia_Cultural_Digital.md:22`, `_CHAVES/10_Ecologia_Cultural_Digital.md:26`, `_CHAVES/10_Ecologia_Cultural_Digital.md:28`, `_CHAVES/10_Ecologia_Cultural_Digital.md:30`, `_CHAVES/10_Ecologia_Cultural_Digital.md:36`, `_CHAVES/10_Ecologia_Cultural_Digital.md:55`, `_CHAVES/10_Ecologia_Cultural_Digital.md:63`, `_CHAVES/10_Ecologia_Cultural_Digital.md:73`, `_CHAVES/10_Ecologia_Cultural_Digital.md:84`, `_CHAVES/10_Ecologia_Cultural_Digital.md:90`, `_CHAVES/10_Ecologia_Cultural_Digital.md:98`, `_CHAVES/10_Ecologia_Cultural_Digital.md:109`, `_CHAVES/10_Ecologia_Cultural_Digital.md:111`
+
+---
+
+## Ficha 20 — A ética como mecânica de expressão e entropia (Entrada 412)
+
+- **Identificador:** `etica_mecanica_412` · **tipo:** item-eixo · **estado de prova:** hipotese
+- **Conferência:** conferida pelo pesquisador: certa (16/11/2026); sem nota
+
+**O que afirma.** Proposta do pesquisador (Entrada 412, 15/11/2026): a ética é uma mecânica de entropia e de expressão, de acordo com o campo; toda mecânica tem geometria; traduzir a ética em geometria é traduzir essa mecânica. A abstenção (entropizar o que corrompe: ira, volúpia, vícios, maledicência, ambição, vingança) é a contração; a atitude é a expansão em cinco estágios (intenção, sentimento que a adorna, vontade, invólucro psíquico, circunstância). A estética entra como regulador de harmonia, com a proporção áurea como candidata (hipótese: φ ainda não foi testado nesta aplicação). Na triangulação do canônico, a abstenção é a tensão entrópica, a atitude é a expansiva e a terceira estrutura é o juízo do que reter e do que expressar. Cuidado: a mesma contração pode ser virtude (conter a ira) ou omissão (faltar ao dever). É analogia de grau 1 até haver uma variável e uma medida por estágio. A correspondência dos cinco estágios com as cinco esferas é hipótese do assistente, e não proposta do pesquisador.
+
+**Estado de prova.**
+- sem resultado medido
+- **Falta:** Definir a variável de cada estágio; prever as razões entre os estágios (1/φ) contra controles de razão 0,5 e 0,7, no formato da Entrada 409; nenhum teste foi rodado.
+
+**Paralelos.**
+- Spinoza — Ética, Parte III (Prefácio), Parte IV (P7) e Parte V (P3) — grau 1 (analogia): Trata ações e desejos humanos "como se fossem linhas, planos e sólidos"; um afeto só se contém por outro contrário e mais forte (conferido no texto de Elwes em 16/11/2026).
+- Spinoza — Ética, Parte IV, P39 — grau 1 (analogia): O bem é a preservação da proporção de movimento e repouso das partes do corpo: uma proporção como critério do bem, mas não φ (conferido em 16/11/2026).
+- Aristóteles — mesotes e continência (enkrateia) — grau 1 (analogia): De memória; o teste de triangulação da Entrada 406 usou a Ética a Nicômaco II, 6.
+- Leonardo — Tratado da Pintura; Pacioli, De divina proportione — grau 1 (analogia): De memória, a conferir; a leitura da Virgem das Rochas como extensão psíquica é interpretação do pesquisador.
+- Kant — Fundamentação (contraste declarado) — grau 1 (analogia): A ética não se deriva do empírico: a mecânica descreve como a virtude se expressa, mas não funda a obrigação (conferido); ver a réplica do pesquisador na Entrada 413.
+
+**Elos da cadeia:** Filosofia→Ética, Ética→Estética, Estética→Geometria · **fatores de tradução:** triangulação, graus de proximidade
+
+**Pontes propostas.**
+- → **Fundamentos éticos E1–E7 e a sua triangulação** (`fundamentos_e1_e7`) · grau proposto 2 (homologia de forma) · **aceita** — O polo entrópico de E2 é a omissão: o cuidado de que a mesma contração pode ser virtude ou falta vem daí (Parte VIII do Registro dos Fundamentos Éticos).
+- → **Canônico do Método de Tradução — a triangulação das tensões (v1)** (`canonico_triangulacao`) · grau proposto 2 (homologia de forma) · **aceita** — A abstenção é a tensão entrópica, a atitude é a expansiva, e o juízo é a terceira estrutura (e + x + t = 1).
+- → **Os cuidados: o que a tradução da ética não faz** (`cuidados_traducao_etica`) · grau proposto 1 (analogia) · **aceita** — A mecânica descreve a expressão da virtude; não decide o que é bom nem substitui a deliberação humana (proposta).
+- → **O fluxo da ordem e da desordem na esfera — as fases do processamento AlphaPhi** (`fases_processamento_esfera`) · grau proposto 1 (analogia) · **aceita** — Cinco estágios e cinco cascas, cada uma expandindo o seu resultado enquanto a seguinte se contrai: hipótese do assistente, não testada (proposta).
+- → **Cadeia de Tradutibilidade: Filosofia → Ética → Estética → Geometria → Matemática → IA** (`cadeia_tradutibilidade`) · grau proposto 1 (analogia) · **aceita** — A ficha traduz a ética em estética e geometria pela mecânica, três elos da cadeia (proposta).
+
+**Perguntas abertas.**
+- Qual é a variável de cada estágio, e como se mede?
+- Como distinguir, na medida, a contração virtuosa da omissão?
+- Os cinco estágios correspondem um a um às cinco esferas, ou o cinco é coincidência?
+
+**Fontes:** `MANIF_04/MANIFESTO_FILOSOFICO_TECNICO_CIENTIFICO_ALPHAPHI_IV.md:2674`, `Ponte/AGENDA_PONTE.md:378`, `agenda/REDE_AP.md:224`, `Ponte/REGISTRO_FUNDAMENTOS_ETICOS.md`
 
 ---
 
