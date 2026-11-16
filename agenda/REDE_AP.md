@@ -281,6 +281,17 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 ---
 
 
+### \*\*\* O que as Entradas 419 e 420 pedem à construção da Rede AP (resumo, 16/11/2026)
+
+*Registrado também na Agenda da Ponte, onde o resumo está completo. Para a Rede AP, o estágio atual continua sendo refinar o instrumento de tradução (Entrada 417): **nada a instrumentalizar agora**.*
+
+- **Hipótese, não testada:** uma **hierarquia de correções pequenas**, cada uma refinando a anterior sem substituí-la (a forma da estrutura fina), poderia orientar, **depois**, a ordem das etapas da rede; cada camada com **valor e tolerância** escritos antes. O "dois" da estrutura fina vem do spin e não se generaliza.
+- **Requisito:** crescer (mais fichas, mais pontes, mais etapas) **sem multiplicar as regras**.
+- **Já existente na rede:** o previsor pesa as memórias por *softmax*, a mesma operação central da atenção em programas de linguagem; a ligação com as redes de Hopfield modernas (Etapa H) está na literatura (de memória).
+- **Cuidado:** só vale a hierarquia se cada camada for realmente menor e independente da anterior; se a camada fina **mudar a leitura grossa**, é substituição, e não correção.
+
+---
+
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
 
 - [ ] **Scanner de Coexistência Espectral** — S₁ (ruído branco) vs S₂ (serial φ) vs S₃ (mistura)

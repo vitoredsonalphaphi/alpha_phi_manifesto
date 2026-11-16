@@ -504,3 +504,19 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 **Estado.** Enunciado e estruturação; nenhum resultado novo. Os fatos de física e de estatística estão de memória, a conferir.
 
 ---
+
+---
+
+## \*\*\* O que as Entradas 419 e 420 trazem à agenda do instrumento de tradução (resumo, 16/11/2026)
+
+*Resumo sintetizado, a pedido do pesquisador. Texto completo e enunciados na íntegra: Manifesto 04, Entradas 419 e 420. Tudo o que está aqui é proposta ou hipótese, sem teste.*
+
+- **A semântica é a fase inevitável** (419): a ética foi demonstrada ao mundo pela linguagem, então traduzi-la passa pela semântica; não se queimam etapas. A **segunda via** é a mecânica da expressão (Entrada 412), estendida pela triangulação. A dificuldade desta fase fica registrada como ponto cronológico do Manifesto.
+- **Flexibilidade e rigidez são duas fases, e não só dois extremos** (420): a flexibilidade para propor, a rigidez para aceitar como demonstrado. A **âncora** é a terceira estrutura. Tríade de justificativa candidata (proposta do assistente): **convergência** (plausibilidade), **critério de falha** (credibilidade), **revisibilidade** (continuidade). "Não demonstrado" não é "falso".
+- **A "vírgula" (o microancoramento)** (420): um **resultado específico com margem declarada**, isto é, **valor e tolerância escritos antes**. É requisito de projeto para as previsões; os graus de proximidade e os critérios de sementes e de erro-padrão já são um começo.
+- **O programa de linguagem como semântica matemática** (420): o significado aparece como **direção e distância** em vetores (o canal da semântica já o define assim, Entrada 376); o previsor da Rede AP usa a mesma operação central da atenção (*softmax*). A AGM e o FDR **não se transferem** diretamente a esse cálculo (de memória, a conferir).
+- **A estrutura fina como modelo de organização** (420): uma **hierarquia de correções pequenas**, cada uma refinando a anterior sem substituí-la. O "dois" da estrutura fina vem do spin 1/2 e **não se generaliza**; o que se transfere é a forma. Ver `Ponte/fundamentacao/estrutura_fina_o_que_a_fisica_mostra.md` (hipóteses H1 a H4, com falhas previstas).
+- **Requisito de projeto** (420): o instrumento deve crescer (mais fichas, mais pontes) **sem multiplicar as regras**.
+- **Próximo passo proposto:** conferir as fontes da estrutura fina lendo-as; escrever **no papel**, para uma frase, a leitura grossa e a primeira correção; só depois, critérios. Pendências do pesquisador: o sentido de "parâmetros da internet"; os textos do teste conjunto.
+
+---
