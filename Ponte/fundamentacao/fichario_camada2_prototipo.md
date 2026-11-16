@@ -1,6 +1,6 @@
 # Fichário de convergência — camada 2 (19 fichas, 61 pontes)
 
-**Status: RASCUNHO · protótipo do instrumento de tradutibilidade · camada 2 do índice de convergência (19 fichas, 61 pontes), conferida pelo pesquisador em 16/11/2026, com uma ficha sem marca e uma correção pendente · NÃO é a estruturação da Rede AP · não é canônico · revisável (Entrada 414) · outras fichas virão.**
+**Status: RASCUNHO · protótipo do instrumento de tradutibilidade · camada 2 do índice de convergência (19 fichas, 61 pontes), conferida pelo pesquisador em 16/11/2026, com uma ficha sem marca; a correção da ficha O1 foi aplicada em 16/11/2026 · NÃO é a estruturação da Rede AP · não é canônico · revisável (Entrada 414) · outras fichas virão.**
 
 **Guardado em 16/11/2026, por decisão do pesquisador (opção B), para não se perder.** Mantém-se fora do repositório a camada 1 (109 itens), que ainda não foi conferida.
 
@@ -9,7 +9,9 @@
 - **Origem:** as fichas e as marcas vêm do artefato "Conferência das Fichas"; as marcas foram lidas do banco da página em 16/11/2026.
 - **Os números** das fichas são **transcritos** de documentos do repositório (a fonte vem indicada em cada um). **Não foram recalculados nesta sessão.**
 - **As pontes** são propostas do assistente. "Aceita" e "recusada" são decisões do pesquisador. O grau de proximidade (analogia, homologia de forma, identidade de medida) é o proposto, e não um resultado.
-- **Pendências desta conferência:** (1) a ficha "Enunciados — Justiça: ponto e campo" está **sem marca**; (2) a ficha O1 (bioética) tem uma **nota do pesquisador pendente de aplicação** (ver a ficha; o texto da nota está salvo no artefato e termina em "Conforme a situação ").
+- **Pendência desta conferência:** a ficha "Enunciados — Justiça: ponto e campo" está **sem marca**.
+- **Correção aplicada em 16/11/2026:** a nota do pesquisador na ficha O1 (bioética) foi aplicada tal como escrita; a frase anterior fica preservada na própria ficha (ver a Ficha 9). O pesquisador confirmou que a nota está concluída como está.
+- **A 20.ª ficha** (a ética como mecânica, Entrada 412) existe **só no artefato**, ainda sem conferência, e não está neste arquivo.
 - **Resumo das marcas:** 18 fichas marcadas como certas; 1 sem marca; 60 pontes aceitas; 1 recusada (protocolo de medir o alinhamento → portões G0–G5).
 
 ---
@@ -274,13 +276,15 @@
 - **Identificador:** `o1_bioetica` · **tipo:** ilha · **estado de prova:** fundamento
 - **Conferência:** conferida pelo pesquisador: certa
 
-**Nota do pesquisador (pendente de aplicação), tal como salva no artefato:**
+**Nota do pesquisador, tal como salva no artefato (aplicada em 16/11/2026):**
 
 > Substituir:. O que o exemplo mostra é que é possível tornar a ética do campo um procedimento, usado por comitês de ética no mundo inteiro, sem que ela perca a sua essência. É um precedente, não uma tradução proposta: não recebe forma no campo nem cálculo.
 >
 > Por:. O que o exemplo mostra é que é possível tornar a ética do campo um procedimento, usado por comitês de ética no mundo inteiro, sem que ela perca a sua essência. É um precedente, não uma tradução proposta: recebe forma no campo ou cálculo. Conforme  a situação 
 
-**O que afirma.** O registro dos fundamentos éticos traz, como ética já operacionalizada, os quatro princípios da bioética: autonomia, beneficência, não maleficência e justiça, de Beauchamp e Childress (1979). O que o exemplo mostra é que é possível tornar a ética do campo um procedimento, usado por comitês de ética no mundo inteiro, sem que ela perca a sua essência. É um precedente, não uma tradução proposta: não recebe forma no campo nem cálculo. As referências são citadas de memória e devem ser conferidas antes de publicação.
+**O que afirma.** O registro dos fundamentos éticos traz, como ética já operacionalizada, os quatro princípios da bioética: autonomia, beneficência, não maleficência e justiça, de Beauchamp e Childress (1979). O que o exemplo mostra é que é possível tornar a ética do campo um procedimento, usado por comitês de ética no mundo inteiro, sem que ela perca a sua essência. É um precedente, não uma tradução proposta: recebe forma no campo ou cálculo. Conforme a situação. As referências são citadas de memória e devem ser conferidas antes de publicação.
+
+**Versão anterior (preservada):** "…É um precedente, não uma tradução proposta: não recebe forma no campo nem cálculo." Substituída em 16/11/2026, a pedido do pesquisador.
 
 **Estado de prova.**
 - sem resultado medido
