@@ -290,6 +290,18 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 - **Já existente na rede:** o previsor pesa as memórias por *softmax*, a mesma operação central da atenção em programas de linguagem; a ligação com as redes de Hopfield modernas (Etapa H) está na literatura (de memória).
 - **Cuidado:** só vale a hierarquia se cada camada for realmente menor e independente da anterior; se a camada fina **mudar a leitura grossa**, é substituição, e não correção.
 
+
+### \*\*\* O que a proposta do atrator como repositório do consenso pede à construção da Rede AP (17/11/2026)
+
+**EM DESTAQUE, a pedido do pesquisador.** *Texto completo, com o enunciado na íntegra: `Ponte/AGENDA_PONTE.md`, mesma data. Para a Rede AP, o estágio continua sendo refinar o instrumento de tradução (Entrada 417): **nada a instrumentalizar agora**; os itens abaixo ficam para quando chegar a hora.*
+
+- **Hipótese, não testada:** uma **camada de tensão** sobre a classificação: o atrator como repositório de parâmetros, com a tensão formada pela **força que puxa** o item e pelo **produto entre a interpretação regional e o campo**.
+- **Acoplamento em graus:** a distribuição por **níveis de afinidade** com o consenso, análoga à das camadas do elétron, sobre a esfera de 33 059 pontos e as cinco cascas; o número de níveis é convenção, declarada antes. **Sem alterar** o scanner, o ECO BEEP 880 nem o campo esférico canônicos.
+- **Visualização:** a hipótese do pesquisador de que a distribuição se pareça com uma **mandala** (complexidade com equilíbrio) é estética, sem teste.
+- **Cuidados:** aplicar a textos e ações, e não a regiões ou povos; níveis de acoplamento não são níveis de valor; quem identifica o consenso é questão aberta (Entrada 423, objeção 2).
+
+---
+
 ---
 
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
