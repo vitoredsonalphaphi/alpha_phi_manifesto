@@ -1,6 +1,6 @@
 # A tensão do instrumento de tradução: as três grandezas e o exemplo da guerra (rascunho)
 
-**Status: RASCUNHO · grau 1 (analogia) · sem teste · NÃO é Entrada · revisável (Entrada 414) · 17/11/2026.**
+**Status: RASCUNHO · grau 1 (analogia) · sem teste · NÃO é Entrada · revisável (Entrada 414) · 17/11/2026 · revisado no mesmo dia, depois das respostas do pesquisador ao contraditório (seção 3-A).**
 **Estágio:** refinar o instrumento de tradução (Entrada 417). **Só papel: nenhum código, nenhum valor numérico.** Não altera o núcleo irrevogável, o ECO BEEP 880, o campo esférico, o scanner nem o Manifesto 01.
 **Origem:** proposta do pesquisador de 17/11/2026 (agendas `Ponte/AGENDA_PONTE.md` e `agenda/REDE_AP.md`, em destaque) e Entrada 423 (a verdade como atrator, com o contraditório). Tudo o que está aqui é **proposta do assistente** sobre essa proposta; o pesquisador revisa.
 
@@ -30,6 +30,15 @@ Critério proposto, para que não seja opinião: o **número de afetados** e a *
 **Regra de ação (proposta).** A tensão **só age quando o afastamento passa da margem**: dentro de M a cultura é livre (flexibilidade); fora de M, o puxão atua. O alcance faz M encolher: o mesmo afastamento pode ser livre num caso local e tenso num caso planetário.
 
 **Sinal (opcional).** A Entrada 412 diz que a abstenção contrai e a atitude expande. A tensão poderia ter sinal: **expande** para o campo, **contrai** numa parte. Fica em aberto (secção 8).
+
+## 3-A. Revisão de 17/11/2026: o que as respostas do pesquisador mudam
+
+Depois das respostas às sete objeções da Entrada 423 (Entrada 426), três correções a este rascunho e um critério novo:
+
+1. **O campo F não é um perfil único: é uma estrutura com centro e bordas.** A síntese **não é a interseção** (o mínimo comum): é "complexada", e **não retira a flexibilidade da pluralidade**. O **centro** é o que o consenso tem em comum; as **bordas** são as variantes que ele comporta, por graus. O alinhamento (seção 3) mede a leitura regional **em relação ao centro**; o **grau de acoplamento** diz em que borda ela está. (Isto corrige a seção 2, que tratava F como um só perfil.)
+2. **Duas camadas.** **Participam** do consenso as culturas que concordam; **são protegidas** por ele as que não concordaram: o consenso se estende a elas no que preserva os seus direitos, a sua extensividade e o seu acesso. Quem não concorda é **ruído que não se descarta**, e não é excluído. A margem de tolerância e a proteção são, assim, duas faces do mesmo campo. (Precedente institucional: a regra de que o direito imperativo vale "como um todo", sem o consentimento de cada Estado: ver `onu_unesco_mecanismos_de_consenso.md`.)
+3. **O campo harmônico está acima do atrator** (proposição do pesquisador): a idoneidade do atrator vem do campo harmônico, que é o consenso aceito por uma pluralidade de culturas; o atrator é o **resultado** dele. No modelo espacial, o campo harmônico é a superfície (r = 1), e o atrator é o que o processa. Por isso, falsidade e imposição seriam questão do **consenso**, e não do atrator.
+4. **Critério de consenso real (a escrever, no papel).** Como o peso agora está em saber **o que é um consenso real**, o próximo texto define as condições: (a) **independência de partida** (convergência de vias de fato independentes); (b) **ausência de coerção** (aceite livre; consenso fabricado ou forçado não conta); (c) **peso igual por cultura** (e não proporcional à população ou ao poder); (d) **proteção a quem discorda** (a segunda camada); (e) **revisão aberta** (o campo muda quando as regiões revelam disparidades); (f) **método declarado** (quem reúne as leituras, em que linguagem, com que categorias). A pesquisa sobre a ONU e a UNESCO (`onu_unesco_mecanismos_de_consenso.md`) lê cada mecanismo contra estes seis critérios.
 
 ## 4. Níveis de acoplamento
 
@@ -78,6 +87,8 @@ Perfil regional **I**: uma leitura que dá peso alto a uma tradição de defesa 
 2. **Quem identifica o consenso F** e com que regra.
 3. **O critério do alcance:** número de afetados e irreversibilidade, ou outro.
 4. **Quantas faixas** de acoplamento, e quais limites.
+5. **O método de consenso (critério f):** quem reúne as leituras regionais, em que linguagem e com que categorias; o instrumento traduz para a matemática e a IA, que vêm de uma tradição particular.
+6. **A redução** dos sete eixos E1–E7 para os três pesos do triângulo (seção 9).
 
 ## 9. Encaixe na triangulação (canônico v1, e + x + t = 1)
 
@@ -104,7 +115,7 @@ O fichário **não é alterado** (camada 2, conferida pelo pesquisador). A tabel
 
 ## 11. Próximo passo
 
-Revisão do pesquisador das decisões em aberto (secção 8 e as da secção 9). A hipótese das **mandalas** só entra com um critério estético mensurável (simetria, equilíbrio).
+Revisão do pesquisador das decisões em aberto (seção 8 e as da seção 9) e **escrita do critério de consenso real** (seção 3-A, item 4). A hipótese das **mandalas** só entra com um critério estético mensurável (simetria, equilíbrio).
 
 ---
 *Florianópolis · 17 de novembro de 2026 · Sessão Good Morning*
