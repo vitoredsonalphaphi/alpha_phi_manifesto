@@ -79,9 +79,32 @@ Perfil regional **I**: uma leitura que dá peso alto a uma tradição de defesa 
 3. **O critério do alcance:** número de afetados e irreversibilidade, ou outro.
 4. **Quantas faixas** de acoplamento, e quais limites.
 
-## 9. Próximo passo
+## 9. Encaixe na triangulação (canônico v1, e + x + t = 1)
 
-Só depois de revisado este rascunho: ver o **encaixe no fichário** (20 fichas, 66 pontes) e na **triangulação**, como mapa e sem valores. A hipótese das **mandalas** só entra com um critério estético mensurável (simetria, equilíbrio).
+**Mapa, sem valores. O canônico não se altera**; isto é uma instrumentalização proposta, que se testa à parte.
+
+- **Três pontos no mesmo triângulo.** Hoje cada estado é um ponto (e, x, t). A tensão pede três: o **caso**, a **interpretação regional** (I) e o **campo** (F, o consenso). O **alinhamento** seria a proximidade entre I e F; o **puxão**, a **direção** em que I teria de se mover para chegar a F (o canônico já diz que o movimento do ponto dá a direção).
+- **Sete eixos, três pesos.** Os perfis I e F estão em E1–E7 (sete pesos); o triângulo tem três. **A redução de sete para três não está decidida.** Duas opções, a decidir pelo pesquisador: (i) fazer o produto nos sete eixos e **projetar** no triângulo só para desenhar; (ii) reduzir antes.
+- **Sinal.** A contração é o polo entrópico (e) e a expansão é o expansivo (x); o juízo é a terceira estrutura (t), como na Entrada 412.
+- **Pergunta aberta.** A **margem de tolerância**, que depende do alcance, poderia ser a **terceira estrutura**? O canônico exige uma propriedade **ausente** nas duas primeiras e um caso em que dois polos sem terceiro expliquem pior (passo 5); sem isso, a margem é só um parâmetro.
+
+## 10. Encaixe no fichário (pontes **propostas**, estado P; nenhuma aceita)
+
+O fichário **não é alterado** (camada 2, conferida pelo pesquisador). A tabela só **nomeia** as fichas pelo identificador; novas pontes seguem o protocolo v0 (rodada nova, conjunto fixado antes).
+
+| Ficha (identificador) | O que a tensão toma ou dá | Grau proposto |
+|---|---|---|
+| `fundamentos_e1_e7` | os **eixos** dos perfis P, I e F | 2 (homologia de forma) |
+| `canonico_triangulacao` | o triângulo onde caso, I e F são pontos | 2 |
+| `etica_mecanica_412` | o **sinal** (contração e expansão) e os cinco estágios | 1 (analogia) |
+| `fases_processamento_esfera` | **níveis de acoplamento** ↔ cinco cascas | 1 |
+| `laplace_chave` e `enunciados_justica_ponto_campo` | **peso igual por cultura** ↔ média de toda a superfície | 2 |
+| `protocolo_medir_alinhamento` e `portoes_g0_g5` | os **controles** que validariam a tensão (controle positivo e negativo; efeito isolado) | 2 |
+| `plano_tradutibilidade` | candidata a compor o "valor ético operacionalizável" do portão P0 | 1 |
+
+## 11. Próximo passo
+
+Revisão do pesquisador das decisões em aberto (secção 8 e as da secção 9). A hipótese das **mandalas** só entra com um critério estético mensurável (simetria, equilíbrio).
 
 ---
 *Florianópolis · 17 de novembro de 2026 · Sessão Good Morning*
