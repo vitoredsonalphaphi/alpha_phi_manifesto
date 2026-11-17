@@ -625,3 +625,5 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 **4. A fazer, no papel (sem código, sem valores).** (a) Definir **anomalia** e **reconstituição** em palavras; (b) distinguir **sinal** (alerta de revisão) de **sanção**; (c) escrever **previsões de êxito e de falha** antes (por exemplo: a reconstituição **não pode excluir** os que discordam; falha se excluir); (d) ver se o alerta de coerência (ΔCoh_global) cabe no painel de prontidão como requisito do nível N2.
 
 **5. Onde está o resto desta fase.** Pesquisa da ONU e da UNESCO: `Ponte/fundamentacao/onu_unesco_mecanismos_de_consenso.md`. Painel de prontidão (N0 a N6) e síntese da ONU: Entrada 425. Entradas **424** (a verdade e a tensão), **425** e **426** (o contraditório do contraditório), no Manifesto 04.
+
+**Tabela de isomorfismo estético-conceitual (17/11/2026):** `Ponte/fundamentacao/isomorfismo_estetico_conceitual_rascunho.md` (dez pares esfera, ponto, raio, cascas, setores, mandala, anomalia, reconstituição, alcance e rede; teste de preservação de ordem; progressão por etapas; decisões em aberto). Grau 1 a 2, sem teste.
