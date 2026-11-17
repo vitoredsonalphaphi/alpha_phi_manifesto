@@ -586,3 +586,5 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 - **A hipótese das mandalas** é estética, sem teste; só poderia vir depois, como critério mensurável (simetria, equilíbrio).
 
 **4. A fazer, no papel (sem código, sem valores).** (a) Definir as três grandezas (posição, alcance do efeito, margem de tolerância) e a tensão; (b) escrever **um exemplo** (o da guerra: uma cultura não promove guerra contra o campo todo por ser contrária às outras), com **previsão de êxito e de falha antes** de qualquer cálculo; (c) decidir se a tensão tem sinal (contração/expansão); (d) só depois, ver o encaixe no fichário e na triangulação.
+
+**Rascunho das três grandezas (17/11/2026):** `Ponte/fundamentacao/tensao_tres_grandezas_rascunho.md` (posição, alcance do efeito, margem de tolerância; o exemplo da guerra; previsões de êxito e de falha; decisões em aberto). Grau 1, sem teste.
