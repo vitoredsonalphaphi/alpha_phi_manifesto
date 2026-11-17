@@ -302,6 +302,18 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 
 ---
 
+
+### \*\*\* A esfera de consenso e a anomalia como candidato a alerta de coerência do processamento (17/11/2026)
+
+**EM DESTAQUE.** *Texto completo, com o enunciado na íntegra e o contraditório: `Ponte/AGENDA_PONTE.md`, mesma data. Para a Rede AP, o estágio continua sendo refinar o instrumento de tradução (Entrada 417): **nada a instrumentalizar agora**; fica para quando chegar a hora.*
+
+- **Hipótese, não testada (do pesquisador, em rascunho):** a discordância de parte das regiões seria uma **anomalia** na esfera de consenso, e os pontos que concordam **reconstituiriam** o equilíbrio do campo; para a IA, um nível de processamento que se desvia seria **identificado e revisto**, com a eficiência condicionada ao campo harmônico preservado.
+- **Candidato técnico:** a coerência global não decrescer (ΔCoh_global ≥ 0, Entrada 185), a ser lido contra o critério de consenso real (`Ponte/fundamentacao/criterio_consenso_real_rascunho.md`). **Sem alterar** o scanner, o ECO BEEP 880 nem o campo esférico canônicos.
+- **Cuidados:** o alerta é **sinal**, e não sanção; a reconstituição **não pode excluir** quem discorda; o limiar (como 30%) é escolha a justificar.
+- **Onde está o resto:** Entradas 424, 425 e 426 (Manifesto 04) e `Ponte/fundamentacao/onu_unesco_mecanismos_de_consenso.md`.
+
+---
+
 ---
 
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
