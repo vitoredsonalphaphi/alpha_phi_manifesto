@@ -293,6 +293,26 @@ com a mesma formulação que aparece em utils_phi.py (2026):
 
 ALPHA = 1 / 137.035999084  # constante de estrutura fina
 
+---
+
+## Acréscimo à Página 1 das sete páginas fundadoras
+
+*Texto aprovado pelo pesquisador em 17/11/2026. Acompanha a Página 1 das sete páginas fundadoras **sem alterá-la**; não é Entrada.*
+
+**O que permanece.** A preocupação de fundo das sete páginas fundadoras, expressa na Página 1, permanece: os arranjos de poder que servem a uma parte à custa do todo.
+
+**O que se revê.** Revê-se a justificativa feita pelo rótulo, seja ele imperialismo, capitalismo ou qualquer outra nomenclatura que designe uma tendência específica de algum sistema que participou do desenvolvimento sociocultural, independentemente da interpretação sobre o seu nível de eficiência ou de aceitação. O imperialismo serve de exemplo: é um conceito de época. Nasceu na crítica do início do século XX (Hobson, 1902; Lênin, 1916), foi discutido desde então e continua mutável, e os historiadores ainda divergem sobre o que ele foi e a quem o termo se aplica. Na leitura do pesquisador, parcelas do que se chamou assim, e de outros sistemas, também participaram da construção sociocultural de uma geopolítica, ainda que de forma nociva. Algumas delas ocuparam mais de um lugar ao mesmo tempo, por serem convenientes em ambos. Por isso nenhum rótulo serve como critério estável.
+
+**O critério, sem rótulo.** O Manifesto formula a preocupação pelo **campo inteiro**: servir só a uma parte é tendência, e não ética (Entrada 363). O critério vale para qualquer ator, seja Estado, empresa ou ideia, e não depende de nome geopolítico.
+
+**O paralelo.** O imperialismo foi a crítica de uma época. O capitalismo foi a crítica de outra, e também ele se transforma. Na leitura do pesquisador, a passagem do capitalismo selvagem para o capitalismo consciente é um exemplo dessa evolução sociocultural. O capitalismo consciente (Mackey e Sisodia, 2013) se apoia na teoria dos *stakeholders* (Freeman, 1984): a empresa passa a considerar todos os afetados, e não só os investidores. É o critério do campo inteiro aplicado dentro de um sistema que antes o ignorava. Cada época tem a sua crítica, e cada crítica é **situada no seu tempo, e não negada**.
+
+**Por que isto pertence ao Manifesto.** O Manifesto busca a **tradutibilidade**: traduzir a ética, do seu contexto filosófico e sociocultural, para uma mecânica técnica, hoje digital. Essa necessidade é também sociocultural. Na leitura do pesquisador, a digitalização em curso é uma neorrevolução digital, e ela passa a regrar não só a cultura, mas também o sistema financeiro e a geopolítica. Nesse quadro, o **alinhamento** da inteligência artificial faz a mesma pergunta do critério: alinhar a quê, e a quem? Uma hipótese do pesquisador, ainda sem teste, é que parte do travamento do alinhamento esteja numa objetividade que serve a uma parcela, e não ao todo. Isto não é um juízo sobre as empresas de tecnologia nem sobre o capitalismo. É a mesma observação feita para qualquer sistema, em qualquer época.
+
+**O efeito.** O Manifesto não depende de condenar ou absolver um rótulo. Depende de perguntar, de cada ator e de cada época: a quem serve, e quem fica de fora do campo?
+
+---
+
 
 # Segundo Manifesto Alpha-Phi — Estrutura de Organização
 
