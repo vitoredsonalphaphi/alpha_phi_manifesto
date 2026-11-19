@@ -3575,6 +3575,10 @@ O **método** do consenso (objeção 5); o **teste de coerção e de autosseleç
 
 *Texto revisado e condensado a pedido do pesquisador (19/11/2026). A fala original, de improviso, às 3h30 da madrugada, foi reestruturada em seções, sem as repetições, as marcas de conversa e as hesitações; os tópicos e as correlações permanecem. Nomes de pessoas e cargos foram substituídos por circunstâncias. Por correções do pesquisador: (1) o episódio da audiência foi reescrito, pois a Polícia Federal **não foi tratada como ré**, e a imagem de ré veio da cobertura; (2) a instituição passou a ser citada pelo nome; (3) a extrapolação de protocolo foi atribuída a **dois agentes afastados**, e não à instituição (leitura do pesquisador, não verificada); (4) o ruído foi definido por escala, e o que alcança uma parte considerável do campo é **perturbação sistêmica**. A abertura e a conclusão foram redigidas pelo assistente e aprovadas pelo pesquisador. A fala anterior (revisada só de gaguejos e concordância) está no histórico do git (commit `8973fd0`) e na sessão.*
 
+*Epígrafe, a pedido do pesquisador (19/11/2026): trecho da resposta do assistente sobre Baudelaire e a dissonância, adotado como abertura deste texto.*
+
+> **“A dissonância está dentro do campo, e não fora dele. Uma nota só é dissonante em relação a um quadro de consonância. No uso musical, de memória, o trítono do acorde dominante cria tensão que pede resolução: é o movimento da harmonia. Por isso a contestação do harmônico é uma tensão interna dele. Nos termos do projeto, é uma anomalia que carrega informação.”**
+
 ## Abertura
 
 Este texto parte de um episódio institucional recente para observar um princípio do projeto: o campo harmônico age por si mesmo. O episódio é um escândalo financeiro de grande porte, a reação que o seguiu e a persistência da instituição apesar dos intercalços. Ele serve apenas como ilustração.
