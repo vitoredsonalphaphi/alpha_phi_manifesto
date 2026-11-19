@@ -314,6 +314,21 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 
 ---
 
+
+### \*\*\* A definição operacional de "atrator em ação" e o limiar de tolerância da perturbação sistêmica (19/11/2026)
+
+**EM DESTAQUE.** *Texto completo, com o enunciado na íntegra: `Ponte/AGENDA_PONTE.md`, mesma data. A **casa principal** deste tópico é a construção da Rede AP, porque aqui há campo a medir. Para a Rede AP, o estágio continua sendo refinar o instrumento de tradução (Entrada 417): **nada a instrumentalizar agora**; fica para quando chegar a hora.*
+
+- **(a) Definição operacional de "atrator em ação":** o que se mede (candidato: a coerência global não decrescer, ΔCoh_global ≥ 0, Entrada 185), em que escala e com que controle. Sem ela, o exemplo da Entrada 427 é leitura, e não teste.
+- **(b) Limiar de tolerância da perturbação sistêmica:** a fração do campo perturbada a partir da qual a perturbação deixa de ser ruído. **O limiar deve vir da tolerância do próprio sistema**, e não de um percentual arbitrário. Analogias, de memória, a conferir: o consenso distribuído, o ponto de ruptura de estimadores robustos e a percolação.
+- **(c) Casos de controle:** um sistema que **não** se reequilibra, para que o critério possa falhar.
+- **(d) Varredura de perturbação, como teste paralelo:** perturbar uma fração crescente do campo esférico e ver onde a coerência se rompe e se a rede se fragmenta. **Instrumento novo, paralelo**: importa ou copia, **nunca edita** o Scanner Topográfico AP, o ECO BEEP 880 nem o campo esférico canônicos.
+- **(e) Vizinhança já existente:** a ressonância estocástica (um pouco de ruído pode ajudar) e "atenuar, sem excluir" nesta agenda.
+- **Pergunta aberta:** a relação entre o campo aninhado e o **meta-atrator** (Manifesto 01, Entrada 48): o mesmo conceito, ou duas faces?
+- **Ligações:** Entrada 427 (a conclusão); critério de consenso real; tabela de isomorfismo (linha 10: a mesma definição, duas instâncias).
+
+---
+
 ---
 
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
