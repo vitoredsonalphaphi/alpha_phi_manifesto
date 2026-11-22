@@ -626,6 +626,8 @@ Nasceram da tela. O código foi o substrato que encontraram depois.
 
 ## Anterioridade — Publicação de 31 de janeiro de 2019
 
+*Ressalva (22/11/2026, a pedido do pesquisador). Esta seção e as quatro imagens abaixo foram acrescentadas ao Manifesto 01 em 05/10/2026, depois do pedido de registro do Manifesto 01 na Biblioteca Nacional (Rio de Janeiro). O Manifesto 01 registrado, o original, não contém esta seção nem estas quatro imagens. Os prints foram encontrados em data posterior ao registro e estão aqui apenas como prova de anterioridade das Páginas 1 e 2; não fazem parte do escopo do que foi registrado.*
+
 O texto das Páginas 1 e 2 foi publicado publicamente no Facebook em **31 de janeiro de 2019**, no grupo "DIALOGANDO ARTE......", do qual o autor é administrador. Os prints abaixo mostram o nome do autor, a data original da publicação e o ícone de visibilidade pública; a lembrança compartilhada pelo Facebook em 31 de janeiro de 2021 ("Há 7 anos") confirma a data pelo próprio sistema da plataforma.
 
 O documento físico que se segue é o mesmo texto em versão revisada e refinada — registro do desenvolvimento da obra entre a publicação de 2019 e a transcrição das Sete Páginas.
