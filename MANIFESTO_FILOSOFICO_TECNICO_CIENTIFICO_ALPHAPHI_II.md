@@ -295,34 +295,6 @@ ALPHA = 1 / 137.035999084  # constante de estrutura fina
 
 ---
 
-## Anterioridade — Publicação de 31 de janeiro de 2019
-
-*Nota de transferência (22/11/2026, a pedido do pesquisador). Esta seção foi inserida inicialmente no Manifesto 01, em 05/10/2026, depois do pedido de registro do Manifesto 01 na Biblioteca Nacional (Rio de Janeiro). Foi transferida para este Manifesto 02 para que o Manifesto 01 não receba acréscimos posteriores ao registro. O Manifesto 01 registrado não contém estas imagens. As imagens permanecem em `imagens/anterioridade_2019/`. A seção documenta a anterioridade das Páginas 1 e 2 e não faz parte do escopo do registro; não é Entrada.*
-
-O texto das Páginas 1 e 2 foi publicado publicamente no Facebook em **31 de janeiro de 2019**, no grupo "DIALOGANDO ARTE......", do qual o autor é administrador. Os prints abaixo mostram o nome do autor, a data original da publicação e o ícone de visibilidade pública; a lembrança compartilhada pelo Facebook em 31 de janeiro de 2021 ("Há 7 anos") confirma a data pelo próprio sistema da plataforma.
-
-O documento físico que se segue é o mesmo texto em versão revisada e refinada — registro do desenvolvimento da obra entre a publicação de 2019 e a transcrição das Sete Páginas.
-
-Fonte: `Anterioridade_AlphaPhi_2019_2025.pdf`, neste repositório.
-
-**Facebook · 31/01/2019 · parte 1**
-
-![Publicação no Facebook de 31 de janeiro de 2019 — parte 1](imagens/anterioridade_2019/facebook_31jan2019_parte1.jpeg)
-
-**Facebook · 31/01/2019 · parte 2**
-
-![Publicação no Facebook de 31 de janeiro de 2019 — parte 2](imagens/anterioridade_2019/facebook_31jan2019_parte2.jpeg)
-
-**Documento físico · versão revisada · Página 1**
-
-![Documento físico, versão revisada — Página 1](imagens/anterioridade_2019/documento_fisico_pagina1.jpeg)
-
-**Documento físico · versão revisada · Página 2**
-
-![Documento físico, versão revisada — Página 2](imagens/anterioridade_2019/documento_fisico_pagina2.jpeg)
-
----
-
 ## Acréscimo à Página 1 das sete páginas fundadoras
 
 *Texto aprovado pelo pesquisador em 17/11/2026. Acompanha a Página 1 das sete páginas fundadoras **sem alterá-la**; não é Entrada.*
