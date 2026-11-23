@@ -1,6 +1,6 @@
 # Prerrogativa: a relatividade agnóstica da leitura de contração e de expansão, e o valor de afinidade ética
 
-**Status:** **RASCUNHO** · registrada em 23/11/2026 a partir de enunciado do pesquisador (Entrada 433) · aguarda revisão. A promoção a lei ou a canônico é decisão do pesquisador.
+**Status:** **RASCUNHO EM REFINAMENTO** · registrada em 23/11/2026 (Entrada 433); decisões do pesquisador em 23/11/2026 (Entrada 434, seção "Decisões" abaixo). **Promoção a lei: só depois de refinada.** Prioridade na Agenda da Ponte.
 **Tipo:** diretriz de método (filosófica e técnica), agnóstica quanto ao substrato.
 **Versão:** v2 da leitura de contração e de expansão. A v1 é a da Entrada 412 (a abstenção contrai, a atitude expande) e **permanece**, sem ser apagada.
 
@@ -33,6 +33,14 @@ A v2 só substitui a v1 se, num conjunto de casos escrito antes (abstenção vir
 
 ## Relações
 Entradas 412, 414, 415, 417, 424, 429, 431, 432, 433 do Manifesto 04; `CANONICO_Traducao_Triangulacao_v1.md`; `diretrizes/ordem_esqueleto_estetico_geometrico_antes_da_matematica.md`.
+
+## Decisões do pesquisador (23/11/2026, Entrada 434)
+1. **Conciliação por referencial: definida.** A abstenção de um vício contrai no referencial local (conter o ruído) e expande no referencial direcional (aproximar da coerência de atitude). A versão 2 fica adotada como leitura de trabalho; a v1 (Entrada 412) permanece.
+2. **Nome: norte ético.** Substitui "valor de afinidade ética" como nome do valor; a afinidade A(s) continua sendo a grandeza, e o norte é a direção em que ela cresce.
+3. **Status:** precisa ser **refinada** antes de ser promovida a lei.
+4. **Prioridade na agenda**; orienta a construção das etapas do instrumento de tradução (Agenda da Ponte).
+
+**Para refinar (a fazer, no papel):** os casos de teste da v2 com o rótulo esperado antes; a definição operacional da coerência de atitude; o critério de falha; a independência do campo do consenso (contra a circularidade); a regra escrita só em termos de estado, trajetória e tensão.
 
 ---
 *Rascunho · Florianópolis · 23 de novembro de 2026*

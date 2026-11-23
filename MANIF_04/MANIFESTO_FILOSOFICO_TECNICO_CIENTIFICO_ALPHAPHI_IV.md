@@ -4142,6 +4142,40 @@ Entradas 412 (a ética como mecânica), 414 (a revisibilidade e o núcleo irrevo
 *Florianópolis · 23 de novembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
 
+## Entrada 434 — 23 de novembro de 2026
+### O Norte Ético: Decisões sobre a Conciliação, o Nome e a Prioridade
+
+### I. Enunciado do Pesquisador
+
+*Contexto: o enunciado responde às três decisões pedidas ao final da Entrada 433. Texto revisado (23/11/2026): retirados os gaguejos e os recomeços de frase; o conteúdo e a ordem permanecem.*
+
+> "Defina a conciliação por referencial; o nome, norte ético. Precisamos refiná-la, depois promovemos a lei. Fica como prioridade na agenda, e orienta a construção das etapas que estamos observando na construção do instrumento de tradução."
+
+— Nota do pesquisador, 23 de novembro de 2026
+
+### II. Estruturação
+
+#### 1. As decisões
+1. **A conciliação por referencial está definida.** A abstenção de um vício **contrai** no referencial local (conter o ruído) e **expande** no referencial direcional (aproximar da coerência de atitude). A leitura da Entrada 433 (versão 2) passa a ser a **leitura de trabalho**; a da Entrada 412 (versão 1) **permanece**, sem ser apagada.
+2. **O nome é "norte ético".** É a direção em que cresce a afinidade A(s) de um estado ou trajetória com o campo do consenso, depois da tradução para a linguagem comum. A generalização do puxão (Entradas 424 e 429) tem agora este nome.
+3. **A prerrogativa ainda não é lei.** Primeiro se refina; depois se promove.
+4. **Prioridade na Agenda da Ponte**, como régua para as etapas do instrumento de tradução.
+
+#### 2. O que "refinar" quer dizer (proposta do assistente, a confirmar)
+Os cinco pontos que a Entrada 433 deixou em aberto, na ordem sugerida: (a) os **casos de teste da versão 2** com o rótulo esperado, escritos antes de qualquer leitura (o critério de "melhor" da Entrada 414); (b) a **definição operacional da coerência de atitude**; (c) o **critério de falha** (o que mostraria o norte ético errado); (d) a **independência do campo do consenso** (C1 a C6), contra a circularidade; (e) a regra escrita **só em termos de estado, trajetória e tensão**, para ser agnóstica.
+
+#### 3. Como o norte orienta as etapas
+Pergunta-guia para cada etapa em construção (ética, estética, geometria; fichas, semântica, triangulação): **esta etapa aproxima ou afasta do norte ético?** É uma régua de orientação, **sem valores numéricos** e sem teste; só vale como lei depois do refinamento. Não altera o núcleo irrevogável (Entrada 414).
+
+#### 4. Onde ficou registrado
+Agenda da Ponte (`Ponte/AGENDA_PONTE.md`, item de prioridade); seção "Decisões" da diretriz em `Ponte/diretrizes/`.
+
+**Estado.** Decisão e estruturação; nenhum resultado experimental; nenhum código.
+
+---
+*Florianópolis · 23 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
 ---
 
 ## Acréscimo à Página 1 das sete páginas fundadoras (conclusão)
