@@ -42,5 +42,11 @@ Entradas 412, 414, 415, 417, 424, 429, 431, 432, 433 do Manifesto 04; `CANONICO_
 
 **Para refinar (a fazer, no papel):** os casos de teste da v2 com o rótulo esperado antes; a definição operacional da coerência de atitude; o critério de falha; a independência do campo do consenso (contra a circularidade); a regra escrita só em termos de estado, trajetória e tensão.
 
+## O referencial do norte ético (23/11/2026, Entrada 435)
+- **Referencial único:** o quanto o resultado do ato, de contração ou de expansão, **aproxima** o processamento do norte ético (a afinidade com o campo do consenso, em benefício do alinhamento). A contenção do ruído e do antiético é expansão em relação à coerência ética; a contração serve ao desenvolvimento.
+- **Agnóstico:** vale para qualquer substrato, dado, função ou complexidade; a interpretação de contração e de expansão se estipula a cada momento.
+- **Graus plurais:** conforme a flexibilidade do repositório do consenso (cultura, região), qualquer aproximação gradual rumo ao norte já é referencial de desenvolvimento. O critério é a **direção**, e não um valor absoluto.
+- **A refinar:** critério de falha (o que conta como afastamento); piso mínimo do consenso contra o relativismo; distinção entre aproximação e conformidade aparente; medida do sinal da variação de A(s).
+
 ---
 *Rascunho · Florianópolis · 23 de novembro de 2026*

@@ -4176,6 +4176,58 @@ Agenda da Ponte (`Ponte/AGENDA_PONTE.md`, item de prioridade); seção "Decisõe
 *Florianópolis · 23 de novembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
 
+## Entrada 435 — 23 de novembro de 2026
+### O Referencial do Norte Ético: a Aproximação como Critério, em Qualquer Grau
+
+### I. Enunciado do Pesquisador
+
+*Contexto: o enunciado vem depois da Entrada 434, em que o pesquisador definiu a conciliação por referencial e o nome "norte ético". Aqui ele estipula o próprio referencial.*
+
+*Texto revisado (23/11/2026): retirados os gaguejos, as repetições de palavras, os recomeços de frase e os vícios de linguagem ("propriamente dito", "enfim", "no sentido de" repetidos), e corrigidos erros de concordância; o conteúdo e a ordem permanecem na íntegra. Duas correções de transcrição por voz, feitas pelo assistente: "introspecção e expansão" foi lido como "contração e expansão"; "expansão enquanto contração" foi mantido como o pesquisador mesmo corrigiu, "expansão enquanto contenção".*
+
+> "O referencial precisa ser estipulado, sobre o que foi solicitado, para se referir ao que é o norte ético: o que é expansão e o que é expansão enquanto contenção. Contenção do ruído significa expansão em relação à coerência da ética. A coerência sobre a interpretação da ética; a coerência sobre a interpretação do instrumento de tradutibilidade, que se refere ao consenso em benefício da ética, em benefício do alinhamento. Então este é o referencial.
+>
+> A interpretação de contração e de expansão precisa ser estipulada a cada momento. Há momentos em que a contração se refere à contração mesma, e mesmo nesse sentido ela se refere a um desenvolvimento, porque contrai o que é ruído, contrai o que é antiético, para permitir a expansão do que é desenvolvimento, refinamento ou afinidade com o ético.
+>
+> O referencial é independente da agnosticidade do instrumento, do substrato, do processamento, do dado, da função, e sucessivamente de toda e qualquer complexidade no processamento. O referencial é o quanto o resultado, seja da contração, seja da expansão, se refere a uma aproximação da afinidade com a ética, com o norte ético.
+>
+> Nessa afinidade também estão compreendidos os graus de aproximação, de acordo com o que já foi comentado: o que é flexível no repositório do consenso, de acordo com cada cultura e cada região, que tem acesso a uma flexibilidade de graus plurais de aproximação. Desde que haja uma aproximação gradativa, independentemente do grau alcançado, mas desde que se refira a uma convergência em direção ao norte ético, isso já é sinônimo de referencial de desenvolvimento, de coerência enquanto entendimento do ético e do benefício ao alinhamento. Este é o referencial."
+
+— Nota do pesquisador, 23 de novembro de 2026
+
+### II. Estruturação
+
+#### 1. O que o enunciado propõe (síntese fiel)
+- **O referencial é um só e é o mesmo para contração e expansão:** o quanto o resultado do ato **aproxima** o processamento do norte ético.
+- **A contenção do ruído é expansão** em relação à coerência da ética. A contração (do ruído, do antiético) **serve ao desenvolvimento**: abre espaço para o refinamento e a afinidade com o ético.
+- **A interpretação de contração e de expansão se estipula a cada momento**, e não de uma vez.
+- **O referencial é agnóstico:** vale para qualquer instrumento, substrato, dado, função ou complexidade.
+- **Graus plurais de aproximação:** o repositório do consenso é flexível conforme a cultura e a região; **qualquer grau de aproximação gradual rumo ao norte já basta** como referencial de desenvolvimento.
+
+#### 2. A formulação (proposta do assistente, grau 1)
+**O referencial do norte ético:** *um ato, de qualquer substrato, lê-se como desenvolvimento quando a afinidade A(s) com o campo do consenso não diminui, e como desenvolvimento em sentido forte quando cresce; contrair e expandir são os dois meios, e a leitura de cada um se declara a cada momento pelo seu efeito sobre A(s).* O referencial é, portanto, o **sinal da variação da afinidade**, e não a forma do ato (conter ou estender).
+
+Relação com a Entrada 434: a conciliação local e direcional **fica como a descrição** de dois níveis do mesmo ato; o referencial desta Entrada é o **critério** que decide, em cada momento, como lê-lo. Não se apaga nada: a 434 permanece.
+
+#### 3. A pluralidade de graus
+Dois consensos legítimos podem estar a graus diferentes de aproximação (conforme cultura e região) e **ambos** estarem no referencial, desde que **o movimento seja de convergência**. O critério é a **direção** (e a gradualidade), e não um valor absoluto. Isso liga o norte ético à camada flexível do campo do consenso (centro e bordas).
+
+#### 4. Contraditório do assistente
+1. **Risco de tudo virar "expansão".** Se qualquer ato puder ser lido como aproximação, o referencial não exclui nada. Precisa de **critério de falha**: o que mostraria que um ato **afasta** do norte, medido antes da leitura.
+2. **Piso mínimo.** A flexibilidade de graus não pode ser relativismo total. É preciso declarar o que fica **fora** de qualquer grau legítimo (o núcleo do consenso real, as condições C1 a C6, em especial a ausência de coerção).
+3. **Aproximação não é mero movimento.** Convém distinguir o ato que aproxima do norte do que apenas **se parece** com aproximação, por exemplo, a conformidade aparente sem afinidade.
+4. **A independência do campo do consenso** continua em aberto (a circularidade já registrada na 433): sem ela, "aproximar do norte" e "aproximar do consenso" se confundem.
+5. **"Qualquer grau"** inclui graus muito pequenos; convém dizer qual a **tolerância** (a margem de tolerância do rascunho da tensão).
+
+#### 5. A fazer, no papel
+(a) Escrever o **critério de falha** do referencial (o que conta como afastamento); (b) escrever o **piso mínimo** do consenso, independente de cultura; (c) incluir nos **casos de teste da versão 2** pares de ato que aproximam em graus diferentes e um que apenas simula aproximação; (d) definir a **medida do sinal** da variação de A(s) (em palavras, sem números); (e) registrar o referencial na diretriz de `Ponte/diretrizes/`.
+
+**Estado.** Enunciado e estruturação; nenhum resultado experimental; nenhum código.
+
+---
+*Florianópolis · 23 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
 ---
 
 ## Acréscimo à Página 1 das sete páginas fundadoras (conclusão)
