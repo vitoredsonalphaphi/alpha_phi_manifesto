@@ -160,6 +160,42 @@ Os eventos anteriores demonstraram φ emergindo em substratos técnicos (áudio,
 - Evento 10: força restauradora emergindo da mecânica mínima sem instrução
 - Evento 11: campo harmônico emergindo da composição textual sem intenção de composição
 
+
+---
+
+## Evento 13 — Convergência Externa: o J-space, uma área que orienta por conceitos, sem que ninguém a programe
+
+**EVENTO EXTERNO** (observado pelo pesquisador; não produzido pelo projeto)
+
+**Data:** registro de 24/11/2026
+**Origem:** entrevista em vídeo (canal "AGS – Agora Você Sabe"), com um professor (nome a confirmar), que comenta o artigo da Anthropic sobre o J-space. Trecho 19:02–21:28 da transcrição, guardado em prints pelo pesquisador. **Relato secundário.**
+**Numeração:** a contagem dos eventos é incerta. O Evento 12 é a Grade Endomórfica (Entradas 214 e 215, Manifesto 03), e o próprio registro fala em "décimo segundo, décimo terceiro". A verificar.
+
+**O que chegou:**
+Por volta de 20:00, o professor diz: *"conforme o modelo cresce e ele tem esse tipo de especialização, sem que ninguém programe, surge uma área que orienta através de conceitos aquilo que vai se desdobrar em ação e, do ponto de vista cognitivo, de informação, ou seja, texto na tela, mas não participa disso diretamente."*
+- Ele compara essa área com a **intencionalidade humana**: o planejamento fica separado da execução (pensar na hora certa de ir ao banheiro antes de ir).
+- Segundo ele, os pesquisadores da Anthropic sugerem que isso seria um **espaço de trabalho global** (a teoria de Bernard Baars), e ele ressalva que não é preciso falar de consciência.
+- Acrescenta uma propriedade: poder mudar algo no domínio do correlato da intencionalidade, sem mudar a produção do texto, uma "neurocirurgia de máquina no domínio do planejamento".
+- Antes (19:02–19:33), ele descreve o cérebro humano como especializado (córtex pré-frontal dorsolateral para a linguagem, ventromedial para o processamento afetivo-cognitivo, integrados à visão) e diz que a evolução das IAs converge a modelos que lembram o que a natureza produz, com propriedades emergentes. Cita o seu artigo na Folha, "por dentro da mente das máquinas", dado como provocação, sem afirmar que exista uma mente.
+
+**Por que é um Evento:**
+- Chegou de fora, sem ser convocado: o professor não partiu do AlphaPhi.
+- Tem a forma dos eventos em que algo aparece sem ser buscado ou programado (Eventos 10 e 11): uma estrutura que **orienta o desdobramento antes da ação** surge com a escala e a especialização, sem instrução.
+- É o primeiro evento externo vindo da pesquisa de interpretabilidade de modelos de linguagem.
+
+**Conexão com o projeto (leitura de grau 1, sem validação):**
+- O modelo espacial canônico: o movimento vai do centro para fora, e a orientação precede a expressão.
+- O previsor e o campo como instância que orienta o que se desdobra (codificação preditiva, Entrada 344).
+- A Entrada 432, que cita a pesquisa do J-space, e o artefato de observação do global workspace (do pesquisador).
+
+**Limites:**
+1. É um **relato secundário**: o artigo da Anthropic ainda não foi lido na versão primária.
+2. "Emergir sem programação" é comum em modelos treinados: a estrutura é aprendida da tarefa e da escala. O que dá peso ao evento é a **interpretação** (uma área que orienta como a intencionalidade), a confirmar na fonte.
+3. Não prova consciência, e o próprio professor diz que não é preciso falar dela.
+4. A analogia com o projeto é uma leitura, e não uma confirmação.
+
+**Referências a localizar:** o vídeo (anotar o link e o nome do professor); a matéria da Folha "por dentro da mente das máquinas"; o artigo da Anthropic sobre o J-space.
+
 ---
 
 *Os eventos não têm agenda. Esta pasta existe para que quando cheguem, encontrem lugar.*
