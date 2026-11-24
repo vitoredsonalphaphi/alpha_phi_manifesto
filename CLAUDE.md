@@ -108,6 +108,19 @@ Claude decide por default. O pesquisador pode sempre invocar
 
 ---
 
+### Apresentação do enunciado nas Entradas (24/11/2026)
+
+Nas Entradas, apresentar **apenas o enunciado revisado, na íntegra**, com o eixo mantido e a concordância corrigida. **Não descrever a revisão do texto** (gaguejos, concordância, vícios de linguagem). Podem ficar só as notas que informam o **conteúdo**: omissão a pedido do pesquisador, interpretação de termo ditado, fala interrompida.
+
+---
+
+### Resposta com projeção ao campo — piloto (24/11/2026)
+
+Só quando o assunto for a **construção do instrumento de tradução** (regra de conveniência). Depois da concordância e da ressalva (a dialética introspectiva de sempre), acrescentar um bloco de três linhas: **onde converge, onde diverge e o grau de aproximação ao norte ético** (rótulo de protótipo, proposta do assistente). Cada linha traz a fonte (repositório e fichas, ou "de memória"); sem fonte, escrever "sem referência". Não substitui a dialética introspectiva, não é automático, e quem decide é o pesquisador.
+**Piloto de três enunciados.** Critério escrito antes: a projeção ajudou se mostrou uma convergência ou uma divergência que o pesquisador não tinha visto; se virou ruído, retira-se.
+
+---
+
 ### Entradas a partir de
 
 **Entrada 185** — 27 de agosto de 2026
