@@ -19,6 +19,7 @@
 
 - **`diretrizes/ordem_esqueleto_estetico_geometrico_antes_da_matematica.md`**: a forma (estética e geometria) vem antes da matemática (rascunho)
 - **`diretrizes/relatividade_agnostica_contracao_expansao_e_valor_de_afinidade_etica.md`**: a leitura de contração e de expansão relativa à circunstância e ao referencial, a coerência técnica distinta da de atitude, e o valor de afinidade ética como norte generalizado do puxão (rascunho; Entrada 433)
+- **`fundamentacao/inventario_rede_ap_tres_estagios_rascunho.md`**: inventário da construção da Rede AP em três listas (construído e sustentado; parcial, negativo ou arquivado; cogitado), organizado pelos três estágios-raiz (campo, α, atrator; os dois últimos a confirmar); só reorganiza o já registrado (rascunho)
 - **`hipoteses/triangulacao_como_esqueleto.md`**: a triangulação como esqueleto comum (hipótese, rascunho)
 - **`hipoteses/campo_esferico_e_preservacao_do_campo.md`**: preservação do campo como diretriz de auto-alinhamento e acoplamento com a esfera de memória (hipótese, rascunho; especulação e respostas de 14/10/2026 na íntegra; simulação não auditada fora)
 - **`fundamentacao/modelo_de_referencia_rede_neural.md`**: modelo de referência da rede neural em seis estágios, com dupla leitura (matemática e em palavras) e análogos Alpha-Phi como hipóteses (rascunho; enunciado do pesquisador na íntegra)
