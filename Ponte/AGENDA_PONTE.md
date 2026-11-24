@@ -662,3 +662,9 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 **A fazer, no papel:** (a) escrever os casos de teste da versão 2 (abstenção virtuosa, abstenção culposa por omissão, ação virtuosa, ação corruptora) com o rótulo esperado antes; (b) definir de forma operacional a coerência de atitude (o que se mede, em que escala, com que controle); (c) escrever o critério de falha; (d) garantir a independência do campo do consenso (condições C1 a C6); (e) usar o norte como régua de cada etapa já em construção (ética, estética, geometria; fichas, semântica, triangulação), perguntando de cada uma se ela aproxima ou afasta do norte; (f) só então decidir a promoção a lei.
 
 **Acréscimo (23/11/2026, Entrada 435):** o **referencial do norte ético** foi estipulado pelo pesquisador: o quanto o resultado do ato (contração ou expansão) aproxima do norte ético, em qualquer grau plural conforme o consenso. Itens novos para o refinamento do item acima: critério de falha do referencial; piso mínimo do consenso; aproximação versus conformidade aparente; medida do sinal da variação da afinidade.
+
+---
+
+## \*\*\* O desambiguador de sentidos: a mesma palavra, sentidos diferentes por circunstância (24/11/2026)
+
+**Proposta do pesquisador (24/11/2026):** uma ferramenta que, para cada termo ambíguo (coerência, entropia, introspecção e contração, abstenção, decantação, triangulação, campo, atrator), indique o **sentido** e a **circunstância**, para evitar discordâncias de leitura entre o pesquisador e o assistente. Estágio: refinar o instrumento no papel (Entrada 417). Ficha em `Ponte/instrumentos/FICHA_Desambiguador_de_Sentidos.md` (rascunho). **A fazer:** o pesquisador revisa os sentidos e os marcadores; usar a tabela em conversa real e contar as discordâncias por sentido de palavra; só então decidir se a ferramenta merece forma mais elaborada.
