@@ -13,7 +13,7 @@ Uma pré-função que recebe a **proposta** (o plano, descrito por inteiro), faz
 
 ## 3. Onde fica e como a informação circula (proposta)
 - A **referência** reside perto da borda (a coerência ética e o campo harmônico); a **ação** do batedor ocorre na **origem**, perto do α (a intenção, Entrada 412), e não no próprio α.
-- O processamento continua do ponto para o campo (do centro para fora). O que volta ao início é a **informação do norte**, como consulta (o retorno que o pesquisador chama de entropia), seguida de uma nova expansão. Não é um fluxo que inverte o movimento (modelo canônico).
+- O processamento continua do ponto para o campo (do centro para fora). O que volta ao início é a **informação do norte**, depois da seleção da membrana dual. **Correção do pesquisador (25/11/2026):** esse retorno **não é a entropia**. A entropia e a expansão ocupam o **mesmo raio** (a entropia ancora e estabiliza, inclusive o ruído, que não é descartado); o retorno é um **terceiro movimento**, **rotacional** (como uma elíptica, parecida com as rotações do EcoBIP), que leva o resultado da seleção ao início do processamento, **fora do raio**. Assim também não se inverte o movimento canônico.
 - Relação com o **batedor da Rede AP** (Entrada 344): o mesmo esquema (emitir, escutar, e só então agir); muda a referência: em vez da frequência do dado, o valor em relação ao norte ético.
 
 ## 4. O sentido de "tênue" (pergunta do pesquisador, 25/11/2026)
