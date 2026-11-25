@@ -12,7 +12,7 @@
 
 ---
 
-## PANORAMA — o estágio em que estamos (atualizar a cada sessão · última atualização: 16/11/2026)
+## PANORAMA — o estágio em que estamos (atualizar a cada sessão · última atualização: 25/11/2026)
 
 *Entra automaticamente em toda sessão, inclusive depois de compactada. É um resumo; o detalhe está na Diretriz (seção 6) e no Manifesto 04.*
 
@@ -23,6 +23,10 @@
 - **Índice de convergência:** camada 1 (109 itens) e camada 2 (20 fichas, 66 pontes). É o **mapa do que foi registrado**, para posicionar na esfera e acusar convergências; **não é o método de traduzir**. Está nos artefatos do pesquisador; só há no repositório o rascunho `Ponte/fundamentacao/fichario_camada2_prototipo.md` (camada 2). Não justificar o conteúdo das fichas no repositório.
 - **Regra de conveniência (pesquisador, 16/11/2026):** antes de fazer ou perguntar, verificar se a atividade é **pertinente** à construção do instrumento de tradutibilidade e ao objetivo do Manifesto. Se sim, fazer; se irrelevante, não fazer. **Continuam valendo:** a regra de resultados, o núcleo irrevogável, a salvaguarda dos três códigos, o stand-by, e confirmação para ações destrutivas, irreversíveis ou externas.
 - **Escopo do estágio (16/11/2026):** o estágio atual é **refinar o instrumento de tradução** (ética → estética → geometria; fichas, semântica, triangulação), **anterior** a instrumentalizar a Rede AP ou a rodar testes numéricos. Se um pedido puder ser lido de mais de um jeito (por exemplo, "testa" como verificar o método ou como rodar código), confirmar em **uma linha** antes de qualquer trabalho pesado.
+- **Norte ético (Entradas 433 a 435; prioridade na Agenda da Ponte):** a direção em que cresce a afinidade com o campo do consenso; o referencial é a aproximação, em qualquer grau plural; **rascunho em refinamento antes de virar lei**. **O rotulador é um parâmetro** (o pesquisador no protótipo; depois corpus e painel); o consenso real é um segundo estágio (Entradas 437 e 438).
+- **Distribuição em rascunho (25/11/2026):** o **campo harmônico dourado** (irrevogável, declaração do pesquisador) na superfície; logo abaixo a **membrana dual** azul e vermelha, que alterna de posição conforme o resultado da classificação; abaixo, as **membranas intermediárias aninhadas**. O repositório do consenso é referência consultada, **não é o atrator**. O índice **T1 a T26** está nas agendas da Ponte e da Rede AP: ler antes de trabalhar nisso.
+- **Organogramas e inventário:** 3D (107 nós) e v2 (33 059 pontos), artefatos privados do pesquisador; inventário da Rede AP em três listas em `Ponte/fundamentacao/`. Esfera do campo harmônico: artefato privado.
+- **Vocabulário:** dizer **"membranas"** (intermediárias, aninhadas), e não "cascas". **Em andamento:** o desambiguador de sentidos (stand-by) e o piloto da projeção ao campo (aguarda a avaliação).
 - **Ao começar a sessão:** depois de ler a Diretriz, dizer em cinco linhas o estágio atual e a finalidade do que está em curso, para o pesquisador conferir.
 
 ---

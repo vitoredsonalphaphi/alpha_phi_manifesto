@@ -705,3 +705,5 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 - **T26:** na visualização, o campo harmônico fica sempre igual (irrevogável); quem barra a passagem é a membrana, e não o campo.
 
 **A fazer, no papel:** o pesquisador responde aos seis pontos em aberto da membrana (a regra do vermelho, o âmbito neutro, o limite do ciclo, a posição em relação ao repositório, a leitura "por fora é o resultado vigente" e o nome); completar a fala cortada (T14); escrever previsão de êxito e de falha antes de qualquer mecanização (T7, T10, T11).
+
+**Acréscimo ao item acima (25/11/2026), a pedido do pesquisador:** **T27 (a completar, para outro estágio):** a possibilidade de **adaptar às membranas** (as intermediárias, aninhadas) **funções de interpretação** e outras funções (a fala foi interrompida em "funções de…"). Registrada para não se perder; o pesquisador a considera de um estágio posterior. **Vocabulário:** usar "membranas" em vez de "cascas" (a esfera publicada ainda diz "cascas" e pode ser ajustada).
