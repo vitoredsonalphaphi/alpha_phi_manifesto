@@ -359,6 +359,8 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 
 **A fazer, no papel:** confirmar onde reside o ciclo de retroação (T12) e se o atrator é o lugar da verificação ou apenas encaminha ao instrumento (T5); detalhar as cinco cascas do bastão com a ambiguidade entre entropia e expansão (T15); **sem código nem testes neste estágio** (Entrada 417).
 
+**Atualização (25/11/2026, Entrada 439):** **T14 concluído:** a terceira fala completa a frase cortada (as cascas do organograma correspondem a estágios de processamento e de intercambiabilidade, inclusive neutros). **T10 atualizado:** o pesquisador indica que a **maioria** define a membrana (60% de conduta alinhada já é ganho); proposta do assistente, a confirmar: proporção **ponderada pelo peso de classificação**, com **veto** para itens de gravidade máxima. **Novos:** a reavaliação em quatro perguntas (contexto, pesos, objetivo, neutralidade), com a abstenção como opção de primeira classe e o recomeço do centro; limite de ciclos e revisão humana.
+
 ---
 
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
