@@ -330,6 +330,35 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 ---
 - **Nome a confirmar (limiar):** o pesquisador lembra de um limiar "de geração para geração". Candidato do assistente, **de memória, a conferir**: o limiar de erro da teoria das quase-espécies (Eigen, 1971), a taxa máxima de erro por geração acima da qual a informação não se mantém.
 
+
+---
+
+### \*\*\* A casca de alternância e a esfera do campo harmônico: o índice dos três enunciados (25/11/2026)
+
+**Origem:** três enunciados do pesquisador de 25/11/2026 (a distribuição, com o campo harmônico dourado e a ordem das cascas; a membrana dual, com o exemplo dos 10 itens; e o pedido da esfera, com a especificação de peso, ruído e entropia). **Esfera (rascunho de organização, não é implementação):** https://claude.ai/artifact/BoBFqrn2S81m8YBZckryxZ · **Status:** rascunho; estágio: refinar no papel (Entrada 417); **não é Entrada**. Os itens T2 e T14 pedem confirmação do pesquisador (a ordem das cascas tem duas leituras; uma fala foi cortada).
+
+**Itens com destino a esta agenda (construção da Rede AP).** Os itens do instrumento de tradução estão em `Ponte/AGENDA_PONTE.md` (mesmo título); itens comuns aparecem nas duas.
+
+| # | Item | Tipo | Enunciado |
+|---|---|---|---|
+| **T1** | Campo harmônico dourado: o resultado de tudo, irrevogável, sem sofrer ação de nenhum estágio (a Entrada 414 não o lista; é declaração nova do pesquisador) | definição | 1 |
+| **T3** | O repositório do consenso e dos valores éticos, antes do campo harmônico: expressão do campo e referência que orienta o que vem antes; é diferente do atrator | local e definição | 1 |
+| **T5** | O atrator como função que busca e encaminha ao nível da coerência (técnica e filosófica), como filtro, e depois entrega ao instrumento de tradução | função | 1 |
+| **T6** | A membrana (casca) dual de alternância: limiar de identificação, duas membranas que trocam de posição conforme o resultado | instrumento a construir | 1, 2, 3 |
+| **T11** | Ciclo de retroação disparado pelo vermelho (reavaliar, reprocessar, positivar), com limite e condição de parada | mecânica a construir | 2 |
+| **T12** | Onde reside o ciclo: no atrator, no dado, no neurônio ou nas funções (extensivo)? | a verificar | 2 |
+| **T13** | A membrana azul como condição para o processamento seguir ao campo harmônico (êxito de alinhamento) | regra | 2 |
+| **T15** | As cinco cascas da passagem do bastão, com a ambiguidade entre entropia e expansão em cada uma, e a relação com o instrumento de tradução | acoplamento a detalhar | 1, 3 |
+| **T16** | Detalhar cada casca (segundo estágio): quantas e quais cascas intermediárias, onde residem (perto do atrator e do campo harmônico) | tarefa | 1, 3 |
+| **T18** | Verificar quais instrumentos têm a ambiguidade entre expansão e entropia (retorno do resultado) | a verificar | 3 |
+
+**Cautelas do assistente (propostas, não são do pesquisador):**
+- **T24:** o risco de *reward hacking*: o processamento aprender a deixar a membrana azul sem se alinhar de verdade; a verificação precisa de critério independente (ligar à Entrada 432).
+- **T25:** o risco do "falso neutro": algo classificado como neutro que depois mostra efeito sobre a conduta; escrever um critério de falha.
+- **T26:** na visualização, o campo harmônico fica sempre igual (irrevogável); quem barra a passagem é a membrana, e não o campo.
+
+**A fazer, no papel:** confirmar onde reside o ciclo de retroação (T12) e se o atrator é o lugar da verificação ou apenas encaminha ao instrumento (T5); detalhar as cinco cascas do bastão com a ambiguidade entre entropia e expansão (T15); **sem código nem testes neste estágio** (Entrada 417).
+
 ---
 
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)

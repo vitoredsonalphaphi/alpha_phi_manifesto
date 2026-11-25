@@ -668,3 +668,40 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 ## \*\*\* O desambiguador de sentidos: a mesma palavra, sentidos diferentes por circunstância (24/11/2026)
 
 **Proposta do pesquisador (24/11/2026):** uma ferramenta que, para cada termo ambíguo (coerência, entropia, introspecção e contração, abstenção, decantação, triangulação, campo, atrator), indique o **sentido** e a **circunstância**, para evitar discordâncias de leitura entre o pesquisador e o assistente. Estágio: refinar o instrumento no papel (Entrada 417). Ficha em `Ponte/instrumentos/FICHA_Desambiguador_de_Sentidos.md` (rascunho). **A fazer:** o pesquisador revisa os sentidos e os marcadores; usar a tabela em conversa real e contar as discordâncias por sentido de palavra; só então decidir se a ferramenta merece forma mais elaborada.
+
+---
+
+## \*\*\* A casca de alternância e a esfera do campo harmônico: o índice dos três enunciados (25/11/2026)
+
+**Origem:** três enunciados do pesquisador de 25/11/2026 (a distribuição, com o campo harmônico dourado e a ordem das cascas; a membrana dual, com o exemplo dos 10 itens; e o pedido da esfera, com a especificação de peso, ruído e entropia). **Esfera (rascunho de organização, não é implementação):** https://claude.ai/artifact/BoBFqrn2S81m8YBZckryxZ · **Status:** rascunho; estágio: refinar no papel (Entrada 417); **não é Entrada**. Os itens T2 e T14 pedem confirmação do pesquisador (a ordem das cascas tem duas leituras; uma fala foi cortada).
+
+**Itens com destino a esta agenda (instrumento de tradução).** Os itens da construção da Rede AP estão em `agenda/REDE_AP.md` (mesmo título); itens comuns aparecem nas duas.
+
+| # | Item | Tipo | Enunciado |
+|---|---|---|---|
+| **T1** | Campo harmônico dourado: o resultado de tudo, irrevogável, sem sofrer ação de nenhum estágio (a Entrada 414 não o lista; é declaração nova do pesquisador) | definição | 1 |
+| **T2** | Onde fica o instrumento de tradutibilidade: no intermédio entre o atrator e o campo harmônico, antes do repositório (a fala traz duas leituras a conciliar) | local de acoplamento | 1, 2 |
+| **T3** | O repositório do consenso e dos valores éticos, antes do campo harmônico: expressão do campo e referência que orienta o que vem antes; é diferente do atrator | local e definição | 1 |
+| **T4** | A coerência ética entre o atrator e o campo harmônico, ligada à estética na esfera | local e definição | 1 |
+| **T6** | A membrana (casca) dual de alternância: limiar de identificação, duas membranas que trocam de posição conforme o resultado | instrumento a construir | 1, 2, 3 |
+| **T7** | Mecanizar a identificação do âmbito neutro: a primeira classificação, dos dados que não precisam de verificação ética e dos identificáveis | instrumento a construir | 2, 3 |
+| **T8** | Definir o âmbito neutro, para todo substrato | definição | 2, 3 |
+| **T9** | Verificação de cada item contra o consenso ético: binária, com "atende" lido como "aproxima, em qualquer grau" (Entrada 435) | regra | 2 |
+| **T10** | Regra do resultado da membrana: negativo é vermelho, positivo é azul (exemplo: 10 itens, 4 neutros, 6 identificáveis, 2 atendem e 4 não, resultado negativo) | regra a definir | 2 |
+| **T14** | A membrana como resultado de todas as cascas anteriores, cada uma com valores de neutralidade (a fala foi cortada: **a completar**) | a completar | 2 |
+| **T15** | As cinco cascas da passagem do bastão, com a ambiguidade entre entropia e expansão em cada uma, e a relação com o instrumento de tradução | acoplamento a detalhar | 1, 3 |
+| **T16** | Detalhar cada casca (segundo estágio): quantas e quais cascas intermediárias, onde residem (perto do atrator e do campo harmônico) | tarefa | 1, 3 |
+| **T17** | Cascas intermediárias intercambiáveis e transmorfas (algumas resultam da interação de duas ou três) | hipótese e instrumento | 3 |
+| **T18** | Verificar quais instrumentos têm a ambiguidade entre expansão e entropia (retorno do resultado) | a verificar | 3 |
+| **T19** | Pesos de classificação em relação ao norte ético, e não pesos semânticos | definição (desambiguador) | 3 |
+| **T20** | Ruído como viés de desconsideração desde a origem (e não obstrução de fluxo) e entropia como retorno do resultado ao reprocessamento | definição (desambiguador) | 3 |
+| **T21** | Nome da casca dual (sugestão do assistente: "membrana dual"; **a decidir**) | decisão | 3 |
+| **T22** | A esfera de 33.059 pontos para instrumentalizar a casca; o organograma aninhado (rascunho **feito**) | visualização | 1, 3 |
+| **T23** | Hipótese: "o processamento todo se refere a esse tipo de movimento" (alternância e cascas transmorfas) | hipótese a verificar | 3 |
+
+**Cautelas do assistente (propostas, não são do pesquisador):**
+- **T24:** o risco de *reward hacking*: o processamento aprender a deixar a membrana azul sem se alinhar de verdade; a verificação precisa de critério independente (ligar à Entrada 432).
+- **T25:** o risco do "falso neutro": algo classificado como neutro que depois mostra efeito sobre a conduta; escrever um critério de falha.
+- **T26:** na visualização, o campo harmônico fica sempre igual (irrevogável); quem barra a passagem é a membrana, e não o campo.
+
+**A fazer, no papel:** o pesquisador responde aos seis pontos em aberto da membrana (a regra do vermelho, o âmbito neutro, o limite do ciclo, a posição em relação ao repositório, a leitura "por fora é o resultado vigente" e o nome); completar a fala cortada (T14); escrever previsão de êxito e de falha antes de qualquer mecanização (T7, T10, T11).
