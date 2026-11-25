@@ -371,6 +371,13 @@ A frase "φ na disposição dos pontos não melhorou a memória em três testes"
 | **T31** | Onde reside a seleção e se o atrator define o início do processamento: **distinguir atrator, previsor e pré-função** (o repositório do consenso como referência consultada desde o início). | a verificar |
 | **T32** | Cautelas (do assistente): o **falso neutro na origem** (reverificar uma amostra dos neutros no resultado); a proposta que aprende a passar na pré-função (*reward hacking*); a origem só vê a proposta, e não as consequências. | cautela |
 
+**Acréscimo (25/11/2026), a pedido do pesquisador (dúvida sobre o retorno e a entropia):**
+
+| # | Item | Tipo |
+|---|---|---|
+| **T35** | O **caminho do retorno** da informação da seleção ao início do processamento: via própria, rotacional (A), ou pela tensão da entropia (B); decidir com critério escrito antes (fidelidade da informação, interferência com o ruído, complexidade); ligação com as conexões de salto (P02). O pesquisador retirou o sentido "retorno" da entropia (a entrada é pela borda; o recolhimento leva ao α). | decisão do pesquisador |
+| **T36** | **Rever os sentidos de "entropia"** no projeto (Sépstro Coh + Entr = 1; α como tensão entrópica; o par entrópico-expansivo por substrato, Entrada 254; o ruído como matéria, Entradas 395 e 410; a família adaptativa de α), registrando o sentido de retorno retirado em 25/11; para a ficha do desambiguador (em stand-by). | verificação de fonte |
+
 ---
 
 ## I. EXECUÇÕES PENDENTES (código pronto, aguarda Colab)
