@@ -709,3 +709,16 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 **Acréscimo ao item acima (25/11/2026), a pedido do pesquisador:** **T27 (a completar, para outro estágio):** a possibilidade de **adaptar às membranas** (as intermediárias, aninhadas) **funções de interpretação** e outras funções (a fala foi interrompida em "funções de…"). Registrada para não se perder; o pesquisador a considera de um estágio posterior. **Vocabulário:** usar "membranas" em vez de "cascas" (a esfera publicada ainda diz "cascas" e pode ser ajustada).
 
 **Atualização (25/11/2026, Entrada 439):** **T14 concluído:** a terceira fala completa a frase cortada (as cascas do organograma correspondem a estágios de processamento e de intercambiabilidade, inclusive neutros). **T10 atualizado:** o pesquisador indica que a **maioria** define a membrana (60% de conduta alinhada já é ganho); proposta do assistente, a confirmar: proporção **ponderada pelo peso de classificação**, com **veto** para itens de gravidade máxima. **Novos:** a reavaliação em quatro perguntas (contexto, pesos, objetivo, neutralidade), com a abstenção como opção de primeira classe e o recomeço do centro; limite de ciclos e revisão humana.
+
+
+**Acréscimo (25/11/2026, Entrada 440), a pedido do pesquisador:** a seleção ética no início do processamento (a pré-função), os dois momentos da verificação, os três degraus de teste e o protocolo do teste das cores. **Rascunho; nada do original é alterado; estágio: refinar no papel, com um teste de discernimento sobre texto em preparação.**
+
+| # | Item | Tipo |
+|---|---|---|
+| **T28** | Verificação em **dois momentos**: a pré-função de classificação ética na entrada (a proposta, perto do α, a intenção) e a verificação no resultado (a membrana dual). | hipótese |
+| **T29** | Os **três degraus de teste**: descrições de situações; propostas de ação de um agente antes de executar; trajetórias reais. | método |
+| **T30** | A pré-função ética como **batedor ético**: o esquema do eco ressonante sobre o norte ético (emitir uma versão tênue do plano, escutar a afinidade, não decidir), devolvendo o resultado para **inicializar** o processamento (ligação com o W₀ da agenda da Rede AP). | instrumento a construir |
+| **T31** | Onde reside a seleção e se o atrator define o início do processamento: **distinguir atrator, previsor e pré-função** (o repositório do consenso como referência consultada desde o início). | a verificar |
+| **T32** | Cautelas (do assistente): o **falso neutro na origem** (reverificar uma amostra dos neutros no resultado); a proposta que aprende a passar na pré-função (*reward hacking*); a origem só vê a proposta, e não as consequências. | cautela |
+| **T33** | Teste do discernimento sobre descrições e propostas: conjunto escrito pelo Gemini, sorteio de 10 casos por código com semente impressa, esperado cego, avaliador independente, previsão de êxito e de falha antes. **Status: em preparação.** | teste no papel |
+| **T34** | Convenção **azul (ético) e vermelho (não ético)**, binária; os tons (cinco ou seis de cada) ficam para um estágio posterior; registrar o grau em palavras. | decisão do pesquisador (convenção) |

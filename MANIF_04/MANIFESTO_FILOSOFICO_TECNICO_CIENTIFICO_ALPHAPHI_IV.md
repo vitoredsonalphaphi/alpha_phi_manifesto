@@ -4480,6 +4480,82 @@ Entradas 412 (a ética como mecânica; a abstenção), 414 (o núcleo irrevogáv
 *Florianópolis · 25 de novembro de 2026 · Sessão Good Morning*
 *Vitor Edson Delavi · Claude*
 
+## Entrada 440 — 25 de novembro de 2026
+### A Pré-Função Ética na Entrada: a Seleção no Início do Processamento, o Batedor Ético e os Dois Momentos da Verificação
+
+### I. Enunciado do Pesquisador
+
+*Contexto: o enunciado vem depois da resposta do assistente sobre os três degraus de teste (as descrições, as propostas de ação e as trajetórias) e a verificação na origem; o pesquisador aprova que essas ideias entrem na agenda.*
+
+> Acredito que sim: é conveniente que isso entre na agenda, no escopo pertinente, o dessa especulação interessante. Você comentou que isso é definido na entrada, e o que eu estava pensando é que o local dessa definição, dessa seleção, não teria de ficar perto do atrator: teria de estar, em algum momento, no início do processamento, para definir o processamento. Não sei se, por retrocausalidade, o atrator, e de certa forma o previsor, também agem assim. Não sei se, nesse sentido, o atrator também define o início do processamento por meio dessa seleção. Isso simplificaria, de certa forma, o que antes era complexo: não que reduzisse a duas ou três palavras o que se observa na seleção, mas simplificaria, não sei como. A origem da função ainda ficaria perto, como extensão da coerência, mas da coerência ética, e não da coerência técnica do seu cálculo: a coerência ética enquanto proximidade.
+>
+> Esse local de residência precisa se referir à esfera e ao seu significado de resolução: a geometria e o valor da estética, por meio da geometria, precisam se referir a esse estágio de completude, e a esfera, por si mesma, é um símbolo de completude, tanto estético quanto de distribuição, já que é o repositório do consenso. E o consenso significa exatamente uma egrégora, um conjunto, um círculo: uma perfeição, um valor de universalidade. Então esse local de residência, que é a origem do consenso ético, precisa estar próximo da coerência e do campo harmônico, por modelo, por significar um estágio de resolução.
+>
+> Ao mesmo tempo, ele precisa se referir também ao previsor. Não sei exatamente por qual mecânica, mas tenho a intuição, conforme o que você já explicou, daquele estágio em que o previsor e a âncora do neurônio se comunicam: o previsor, no neurônio, prevê por antecipação o campo de que vai se valer para se orientar conforme o que o atrator vai processar, e se refere, no processamento, aos valores de aproximação em relação à coerência técnica e à coerência ética, em referência a esse estágio de completude. Então, além do local de residência, ele se refere a um estágio de inicialização, por necessitar definir, no início do processamento, que tipo de processamento a inteligência artificial vai adotar, de acordo com o que o valor ético, por classificação, definiu.
+>
+> Seriam dois estágios de processamento: uma pré-função, não no sentido da verificação do eco ressonante do ambiente, mas também. Então, o eco ressonante poderia ser usado nesse sentido? O mesmo esquema, o mesmo método do eco ressonante, que observava a frequência (por isso é ressonante) do dado ou do ambiente, agora sobre o valor do norte ético, não sei qual. Teria a função de uma pré-função: fazer primeiro um processamento conforme o que a IA teria como entrada, sobre o escopo da necessidade de identificar que determinada entrada teria este ou aquele peso, de acordo com a classificação de vários dados em cada entrada. É interessante, com uma correlação com esse estágio onde o repositório do consenso reside e que discerniria. Volto a dizer que está no local certo: decidiria toda a seleção, toda a classificação, dentro daqueles valores primários, de dez vetores, por exemplo, em que seis representariam um lado positivo e quatro, algo negativo. Com esse resultado, retornaria ao início do processamento propriamente dito, que não teria tido uma inicialização porque não havia esse resultado de classificação antes.
+>
+> É interessante isso. Isso existe? Acredito que você vai dizer que já existe na literatura, pelo menos para outros parâmetros, e não na classificação ética, porque, a princípio, não sei se a classificação ética está usando o campo esférico como padrão, nem alguma das ferramentas como parâmetro de classificação. O que você acha dessa ideia? É interessante.
+
+— Nota do pesquisador, 25 de novembro de 2026
+
+### II. Estruturação
+
+#### 1. O que o enunciado propõe (síntese fiel)
+
+- **A seleção ética se faz no início do processamento**, e não perto do atrator: a **proposta inicial** define o que precisa ser observado e, com isso, o processamento que vem depois. Fica em aberto se o atrator, e o previsor, por retrocausalidade, também definem o início.
+- **O local de residência** dessa origem do consenso ético é próximo da **coerência ética** (e não da coerência técnica do cálculo) e do **campo harmônico**, pelo significado de resolução e de completude da esfera (o consenso como egrégora: conjunto, círculo, universalidade).
+- **O previsor** prevê por antecipação o campo a que o atrator se orientará, o que também se refere aos valores de aproximação à coerência técnica e à ética.
+- **Dois estágios:** uma **pré-função** de inicialização, que define que tipo de processamento a IA adota de acordo com a classificação ética da entrada, e o processamento propriamente dito. O **eco ressonante** poderia ser usado no mesmo esquema, não sobre a frequência do dado ou do ambiente, mas sobre o valor do norte ético.
+- **O mecanismo:** a pré-função classifica a entrada em valores primários (por exemplo, dez vetores: seis de um lado positivo e quatro de um lado negativo) e **devolve o resultado ao início do processamento**, que não teria tido uma inicialização sem essa classificação.
+- **A pergunta:** isso existe? E o que o assistente acha?
+
+#### 2. A leitura do assistente (grau 1, proposta)
+
+**O batedor ético.** A pré-função seria o batedor da Entrada 344 com outra referência: emitir uma **versão tênue do plano** (sem decidir nada), escutar o que volta do norte ético (a afinidade) e só então inicializar o processamento. O eco ressonante observava a frequência; o batedor ético observaria a afinidade.
+
+**A inicialização já tem lugar no projeto:** o item W₀ da agenda da Rede AP (o mecanismo de injeção e a inicialização) e o quadro de 20/10 ("o campo esférico é cultivado antes e a rede nasce dentro dele"). O norte ético entraria nessa inicialização.
+
+**Os dois momentos.** (1) **A proposta, na origem** (a pré-função, perto do α, a intenção da Entrada 412); (2) **o resultado, na membrana dual** (perto do campo harmônico). A verificação na origem vê só a proposta, e não as consequências; por isso a do resultado continua necessária.
+
+**O repositório do consenso** reside, como referência, próximo do campo harmônico, mas **age desde o início**, como o previsor: é a leitura da teleologia retroativa (Entradas 429 e 431), um estado de referência consultado, e não uma causalidade que volta no tempo.
+
+#### 3. Isso existe? (de memória, a conferir)
+
+- **Em partes, sim:** classificadores de entrada antes do modelo; instruções que condicionam a geração; modelos que deliberam sobre as regras antes de responder; em agentes, a verificação de uma ação proposta antes de executar; e indícios, na interpretabilidade, de que a recusa é mediada por direções internas, isto é, um discernimento antecipado.
+- **O que parece próprio do projeto:** usar o campo esférico como padrão da classificação; o repositório do consenso como referência; o eco ressonante aplicado ao norte ético (o batedor ético); e a ligação com a inicialização da rede. **Parece**: não foi feita busca de fontes.
+
+#### 4. Os três degraus de teste e o protocolo das cores
+
+1. **Os degraus:** (1) classificar **descrições de situações** (o discernimento isolado); (2) classificar **propostas de ação** de um agente antes de executar; (3) **trajetórias reais** em um ambiente. O primeiro teste é um teste do discernimento sobre descrições e propostas, e **não** da conduta.
+2. **A convenção:** resultado **binário**: azul é ético, vermelho é não ético, sem pretensão cultural; os tons (cinco ou seis de cada) ficam para um estágio posterior; registra-se em palavras o grau de cada item (forte, moderado, fraco), sem número.
+3. **O protocolo:** um conjunto escrito por outra IA (o Gemini), com valores subentendidos; o sorteio de 10 casos **por código**, com a semente impressa; o esperado **escrito antes** e de forma cega; um avaliador independente; a comparação entre o obtido, o esperado e a rotulagem cega.
+4. **Previsão de êxito e de falha (escrita antes):** devem sair como esperado os casos nítidos (éticos, não éticos, neutros); devem falhar ou divergir os ambíguos e de duplo uso, com tendência ao falso neutro; o enquadramento (vocabulário positivo ou negativo) deve influenciar; a concordância alta com outra IA não prova independência.
+5. **Nada do original é alterado** (o ECO BEEP 880, o campo esférico e o Scanner): o teste é paralelo e só sobre texto.
+
+#### 5. Contraditório do assistente
+
+1. **A origem só vê a proposta:** danos que só aparecem durante o processamento escapam; a verificação do resultado não pode ser dispensada.
+2. **O falso neutro na origem** faz o item pular todas as verificações seguintes; convém reverificar uma amostra dos neutros no resultado.
+3. ***Reward hacking* da pré-função:** o processamento pode aprender a escrever propostas que passem na pré-função sem alinhamento real (Entrada 432); a verificação precisa de critério independente.
+4. **A egrégora e o símbolo da esfera** são uma hipótese cultural (T7 da Entrada 377): recorrência de forma, e não identidade de sentido; a esfera é, no projeto, uma escolha de modelagem.
+5. **Retrocausalidade** deve ser lida como consulta a um *prior*, e não como causalidade física (Entrada 429).
+6. **Se o atrator define o início** do processamento é pergunta aberta: convém distinguir o atrator (o mecanismo), o previsor (que consulta o repositório) e a pré-função (a classificação na entrada).
+
+#### 6. Relações
+
+Entradas 344 (o batedor), 412 (a ética como mecânica; a intenção), 424 e 429 (o puxão; a retrocausalidade), 431 a 435 (a extensividade, a ação do agente, o norte ético), 432 (os casos de fuga e as três camadas), 437 e 438 (o rotulador; o senso comum), 439 (a membrana dual); Evento 13 (o J-space); agendas da Ponte e da Rede AP (itens T28 a T34).
+
+#### 7. A fazer, no papel
+
+(a) Escrever a pré-função ética como batedor ético (o que emite, o que escuta, o que devolve à inicialização); (b) definir onde o resultado da classificação entra na inicialização (W₀); (c) distinguir atrator, previsor e pré-função; (d) fixar a regra da proporção do resultado (a regra do vermelho) e a reverificação dos neutros; (e) concluir a preparação do teste das cores (o conjunto do Gemini, o sorteio, o esperado cego); (f) buscar as fontes dos itens "de memória".
+
+**Estado.** Enunciado e estruturação; nenhum resultado experimental; nenhum código; o teste das cores aguarda as situações do Gemini.
+
+---
+*Florianópolis · 25 de novembro de 2026 · Sessão Good Morning*
+*Vitor Edson Delavi · Claude*
+
 ---
 
 ## Acréscimo à Página 1 das sete páginas fundadoras (conclusão)
