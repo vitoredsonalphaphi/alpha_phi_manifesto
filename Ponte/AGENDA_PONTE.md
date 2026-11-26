@@ -739,3 +739,11 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 
 **Nota a T38 (26/11/2026, Entrada 442), a pedido do pesquisador:** ampliar o escopo para **mapear os estudos existentes** (o que foi medido, o grau de evidência, as limitações), separando o benefício medido das práticas da hipótese de energia como mecanismo; ausência de consenso não equivale a inexistência, e também não a existência; sem concluir antes do levantamento.
 
+**Acréscimo (26/11/2026, Entrada 443), a pedido do pesquisador:**
+
+| # | Item | Tipo |
+|---|---|---|
+| **T39** | A **progressividade da membrana dual** por cinco membranas e por escala (indivíduo, coletivo, ambientes maiores): cada membrana captura a classificação anterior, assimila a seguinte e projeta o resultado; regra de correção entre membranas; passar (resultado, intensidade). **Critério de falha:** vale só se a classificação final concordar mais com o gabarito do que a de cada membrana isolada. Proposta de conveniência, não para implementar agora. | teste no papel |
+
+**Nota a T38 (26/11/2026, Entrada 443):** em pausa, a pedido do pesquisador (não é pertinente ao projeto agora).
+
