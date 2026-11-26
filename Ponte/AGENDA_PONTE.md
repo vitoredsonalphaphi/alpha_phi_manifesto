@@ -736,3 +736,6 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 |---|---|---|
 | **T37** | A **comparação do indivíduo com a membrana dual** (estabilidade e instabilidade interna, a alternância), como **modelo simbólico**, com critério de falha escrito antes (o que mostraria que o análogo não vale). Comparação do pesquisador, declarada como não afirmativa; não é proposição do instrumento. | teste no papel |
 | **T38** | Verificar na literatura, **com fontes**, o **consenso entre tradições** sobre uma energia que afeta o ser humano, separando tradição, leitura psicológica (Jung, 1932) e o que foi medido; pedido do pesquisador. O consenso é entre tradições, e não científico. | verificação de fonte |
+
+**Nota a T38 (26/11/2026, Entrada 442), a pedido do pesquisador:** ampliar o escopo para **mapear os estudos existentes** (o que foi medido, o grau de evidência, as limitações), separando o benefício medido das práticas da hipótese de energia como mecanismo; ausência de consenso não equivale a inexistência, e também não a existência; sem concluir antes do levantamento.
+
