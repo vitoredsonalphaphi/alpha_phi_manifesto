@@ -729,3 +729,10 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 |---|---|---|
 | **T35** | O **caminho do retorno** da informação da seleção ao início do processamento: via própria, rotacional (A), ou pela tensão da entropia (B); decidir com critério escrito antes (fidelidade da informação, interferência com o ruído, complexidade); ligação com as conexões de salto (P02). O pesquisador retirou o sentido "retorno" da entropia (a entrada é pela borda; o recolhimento leva ao α). | decisão do pesquisador |
 | **T36** | **Rever os sentidos de "entropia"** no projeto (Sépstro Coh + Entr = 1; α como tensão entrópica; o par entrópico-expansivo por substrato, Entrada 254; o ruído como matéria, Entradas 395 e 410; a família adaptativa de α), registrando o sentido de retorno retirado em 25/11; para a ficha do desambiguador (em stand-by). | verificação de fonte |
+
+**Acréscimo (26/11/2026, Entrada 441), a pedido do pesquisador:**
+
+| # | Item | Tipo |
+|---|---|---|
+| **T37** | A **comparação do indivíduo com a membrana dual** (estabilidade e instabilidade interna, a alternância), como **modelo simbólico**, com critério de falha escrito antes (o que mostraria que o análogo não vale). Comparação do pesquisador, declarada como não afirmativa; não é proposição do instrumento. | teste no papel |
+| **T38** | Verificar na literatura, **com fontes**, o **consenso entre tradições** sobre uma energia que afeta o ser humano, separando tradição, leitura psicológica (Jung, 1932) e o que foi medido; pedido do pesquisador. O consenso é entre tradições, e não científico. | verificação de fonte |
