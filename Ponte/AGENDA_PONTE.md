@@ -747,3 +747,9 @@ A literatura tem uma família de métodos que desenham primeiro a forma da tens�
 
 **Nota a T38 (26/11/2026, Entrada 443):** em pausa, a pedido do pesquisador (não é pertinente ao projeto agora).
 
+**Acréscimo (26/11/2026, Entrada 444), a pedido do pesquisador:**
+
+| # | Item | Tipo |
+|---|---|---|
+| **T40** | O **paralelo entre as mecânicas de transição entre etapas** (cascata, classificadores intermediários, grosso ao fino, conexão residual, estado recorrente) e o **instrumento candidato "transição dual residual com confiança"** (cada membrana: resultado, intensidade e correção sobre a anterior; a posição da membrana dual como portão). **Critério de falha:** vale só se a classificação final concordar mais com o gabarito do que cada mecânica isolada e se uma membrana puder desfazer um erro da anterior. Liga-se ao T39. Fontes conferidas na Entrada 444; só no papel. | teste no papel |
+
